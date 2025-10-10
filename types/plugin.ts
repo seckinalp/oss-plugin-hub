@@ -1,5 +1,25 @@
 export type Platform = 'obsidian' | 'vscode' | 'jetbrains' | 'sublime' | 'atom' | 'vim' | 'other';
 
+export interface GitHubStats {
+  stars: number;
+  forks: number;
+  openIssues: number;
+  watchers: number;
+  lastUpdated: string;
+  createdAt: string;
+  license: string | null;
+  homepage: string | null;
+  topics: string[];
+  language: string | null;
+  size: number;
+  defaultBranch: string;
+  archived: boolean;
+  disabled: boolean;
+  hasWiki: boolean;
+  hasPages: boolean;
+  description: string | null;
+}
+
 export interface BasePlugin {
   id: string;
   name: string;
@@ -10,6 +30,7 @@ export interface BasePlugin {
   branch?: string;
   authorUrl?: string;
   fundingUrl?: string;
+  github?: GitHubStats; // GitHub statistics (Phase 2)
 }
 
 // Legacy type for Obsidian plugins

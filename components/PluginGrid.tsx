@@ -13,8 +13,10 @@ interface PluginGridProps {
 
 export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'author'>('name');
+  const [sortBy, setSortBy] = useState<'name' | 'author' | 'stars' | 'forks' | 'updated' | 'created'>('name');
   const [selectedPlatform, setSelectedPlatform] = useState<Platform | 'all'>('all');
+  const [minStars, setMinStars] = useState<number>(0);
+  const [showFilters, setShowFilters] = useState(false);
 
   // Get available platforms from the data
   const availablePlatforms = useMemo(() => {
@@ -42,17 +44,36 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
       );
     }
 
+    // Stars filter
+    if (minStars > 0) {
+      filtered = filtered.filter(plugin => (plugin.github?.stars || 0) >= minStars);
+    }
+
     // Sort
     filtered = [...filtered].sort((a, b) => {
-      if (sortBy === 'name') {
-        return a.name.localeCompare(b.name);
-      } else {
-        return a.author.localeCompare(b.author);
+      switch (sortBy) {
+        case 'stars':
+          return (b.github?.stars || 0) - (a.github?.stars || 0);
+        case 'forks':
+          return (b.github?.forks || 0) - (a.github?.forks || 0);
+        case 'updated':
+          if (!a.github?.lastUpdated) return 1;
+          if (!b.github?.lastUpdated) return -1;
+          return new Date(b.github.lastUpdated).getTime() - new Date(a.github.lastUpdated).getTime();
+        case 'created':
+          if (!a.github?.createdAt) return 1;
+          if (!b.github?.createdAt) return -1;
+          return new Date(b.github.createdAt).getTime() - new Date(a.github.createdAt).getTime();
+        case 'author':
+          return a.author.localeCompare(b.author);
+        case 'name':
+        default:
+          return a.name.localeCompare(b.name);
       }
     });
 
     return filtered;
-  }, [plugins, searchQuery, sortBy, selectedPlatform]);
+  }, [plugins, searchQuery, sortBy, selectedPlatform, minStars]);
 
   return (
     <div className="space-y-6">
@@ -80,12 +101,22 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
             <select
               id="sort"
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'name' | 'author')}
+              onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
               className="px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
-              <option value="name">Name</option>
+              <option value="name">Name (A-Z)</option>
               <option value="author">Author</option>
+              <option value="stars">Most Stars</option>
+              <option value="forks">Most Forks</option>
+              <option value="updated">Recently Updated</option>
+              <option value="created">Newest</option>
             </select>
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white text-sm hover:bg-slate-50 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              {showFilters ? 'Hide Filters' : 'Show Filters'}
+            </button>
           </div>
         </div>
 
@@ -123,6 +154,42 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
             })}
           </div>
         </div>
+
+        {/* Advanced Filters */}
+        {showFilters && (
+          <div className="mb-4 p-4 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h3 className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+              Advanced Filters
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="minStars" className="text-sm text-slate-600 dark:text-slate-400 mb-1 block">
+                  Minimum Stars:
+                </label>
+                <input
+                  id="minStars"
+                  type="number"
+                  min="0"
+                  value={minStars}
+                  onChange={(e) => setMinStars(parseInt(e.target.value) || 0)}
+                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  placeholder="e.g., 100"
+                />
+              </div>
+              <div className="flex items-end">
+                <button
+                  onClick={() => {
+                    setMinStars(0);
+                    setShowFilters(false);
+                  }}
+                  className="px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white text-sm hover:bg-slate-50 dark:hover:bg-slate-600"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         <SearchBar
           value={searchQuery}

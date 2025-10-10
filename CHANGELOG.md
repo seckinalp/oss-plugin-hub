@@ -97,12 +97,11 @@ All notable changes to this project will be documented in this file.
 - Cross-platform plugin discovery
 
 ### Planned for v1.0.0 - Advanced Features
-- User favorites/bookmarks
 - Plugin comparison feature
 - Trending plugins dashboard
 - Category/tag filtering
-- Community ratings and reviews
 - API endpoint for developers
+- Advanced analytics and insights
 
 ---
 

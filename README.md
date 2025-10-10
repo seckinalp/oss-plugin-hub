@@ -68,7 +68,7 @@ oss-plugin-hub/
 - **Phase 1 (MVP)** ✅ Completed - Basic plugin discovery with search, filter, export
 - **Phase 2 (Planned)** 🔜 GitHub API integration, advanced metrics, detail pages
 - **Phase 3 (Future)** Multi-platform expansion (VS Code, JetBrains, etc.)
-- **Phase 4 (Future)** Advanced features (favorites, comparisons, ratings)
+- **Phase 4 (Future)** Advanced features (comparisons, trending, analytics, API)
 
 See [roadmap.md](./roadmap.md) for the high-level plan and [ROADMAP_DETAILED.md](./ROADMAP_DETAILED.md) for detailed implementation specs.
 

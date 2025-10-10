@@ -381,43 +381,107 @@ function getPluginHealth(plugin: BasePlugin) {
 ## Phase 3: Multi-Platform Expansion
 
 **Status:** Future  
-**Target Platforms:**
-- VS Code Extensions
-- JetBrains Plugins
+**Estimated Timeline:** TBD  
+**Priority:** Medium
+
+### Goals
+Expand the platform to support plugin discovery across multiple development tools and platforms.
+
+### Target Platforms
+
+#### VS Code Extensions
+- Fetch from VS Code Marketplace API
+- ~30,000+ extensions
+- Additional metrics: install count, rating (from marketplace)
+
+#### JetBrains Plugins
+- Fetch from JetBrains Plugin Repository
+- Support all JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.)
+- ~15,000+ plugins
+
+#### Additional Platforms
 - Sublime Text Packages
 - Vim/Neovim Plugins
+- Atom Packages
+
+### Implementation Approach
+See [ADDING_PLATFORMS.md](./ADDING_PLATFORMS.md) for detailed instructions on adding new platforms.
 
 ---
 
 ## Phase 4: Advanced Features
 
-**Potential Features:**
-- User accounts and favorites
-- Plugin comparison tool
-- Trending plugins dashboard
-- Category/tag system
-- Plugin recommendations
-- API for developers
-- Community ratings and reviews
+**Status:** Future  
+**Estimated Timeline:** TBD  
+**Priority:** Low
+
+### Features (No User Accounts Required)
+
+#### 4.1 Plugin Comparison Tool
+Compare multiple plugins side-by-side:
+- GitHub statistics comparison
+- Feature comparison
+- Performance metrics
+- Update frequency comparison
+
+#### 4.2 Trending Dashboard
+Show trending plugins based on:
+- Recent star growth
+- Commit activity
+- Issue resolution rate
+- Fork growth
+
+#### 4.3 Category & Tag System
+Organize plugins by:
+- Functionality (editor, productivity, markdown, etc.)
+- Programming language
+- Use case
+- Auto-generated from GitHub topics
+
+#### 4.4 Developer API
+Provide REST API endpoints:
+```
+GET /api/plugins
+GET /api/plugins/:id
+GET /api/platforms
+GET /api/stats
+GET /api/trending
+```
+
+#### 4.5 Analytics Dashboard
+Advanced insights:
+- Plugin ecosystem overview
+- Growth trends over time
+- Most active developers
+- Language distribution
+- License distribution
 
 ---
 
 ## Implementation Priority
 
-### High Priority (Phase 2)
+### Phase 2 Priority
+**High Priority:**
 1. GitHub API integration (core metrics)
 2. Enhanced sorting (stars, updated)
 3. Basic detail pages
 
-### Medium Priority (Phase 2)
+**Medium Priority:**
 1. Advanced filtering
 2. README rendering
 3. Activity charts
 
-### Low Priority (Later)
-1. Full analytics
-2. Historical data
-3. Predictive features
+**Low Priority:**
+1. Additional GitHub metrics
+2. Performance indicators
+
+### Phase 3 Priority
+**Focus:** Platform expansion (VS Code, JetBrains)
+
+### Phase 4 Priority
+**Focus:** Advanced features (comparison, trending, API)
+
+**Note:** No user accounts, authentication, or social features planned. This keeps the project simple, privacy-focused, and easy to maintain.
 
 ---
 
