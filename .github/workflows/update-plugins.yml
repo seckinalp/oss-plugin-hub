@@ -1,0 +1,64 @@
+name: Update Plugin Data
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch latest plugin data
+        run: npm run fetch-plugins
+
+      - name: Generate RSS feed
+        run: npm run generate-rss
+        env:
+          SITE_URL: ${{ secrets.SITE_URL || 'https://plugin-hub.vercel.app' }}
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code data/plugins.json public/rss.xml || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/plugins.json data/plugins-previous.json public/rss.xml
+          git commit -m "chore: update plugin data [skip ci]"
+          git push
+
+      - name: Build static site
+        if: steps.git-check.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Upload build artifacts
+        if: steps.git-check.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: out/
+          retention-days: 7
+
