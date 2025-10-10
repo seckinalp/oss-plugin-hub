@@ -1,12 +1,13 @@
 # Plugin Discovery Hub
 
-A modern web application for discovering and exploring open-source plugins, starting with Obsidian.
+A modern web application for discovering and exploring open-source plugins across multiple platforms, starting with Obsidian.
 
 🌐 **Live Site**: [https://oss-plugin-hub.vercel.app/](https://oss-plugin-hub.vercel.app/)
 
 ## Features
 
-- 🔍 Browse and search Obsidian plugins
+- 🔍 Browse and search plugins across multiple platforms
+- 🎯 Filter by platform (Obsidian, VS Code, JetBrains, and more)
 - 📊 Filter by categories, authors, and more
 - 🔔 RSS feed for new plugin notifications
 - 🌙 Dark mode support
@@ -61,9 +62,25 @@ See [roadmap.md](./roadmap.md) for the detailed development plan.
 - **Styling:** Tailwind CSS
 - **Deployment:** Vercel
 
+## Supported Platforms
+
+- ✅ **Obsidian** - Currently supported (2,636+ plugins)
+- 🔜 **VS Code** - Ready to add
+- 🔜 **JetBrains** - Ready to add
+- 🔜 **Sublime Text** - Ready to add
+- 🔜 **More platforms** - Submit a request!
+
+The app is designed to support multiple platforms! See [ADDING_PLATFORMS.md](./ADDING_PLATFORMS.md) to learn how to add a new platform.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+**Want to add a new platform?** Check out [ADDING_PLATFORMS.md](./ADDING_PLATFORMS.md) for a step-by-step guide.
+
+## Author
+
+Created by [@seckinalp](https://github.com/seckinalp)
 
 ## License
 

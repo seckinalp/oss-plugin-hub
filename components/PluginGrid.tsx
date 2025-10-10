@@ -1,22 +1,34 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { ObsidianPlugin } from '@/types/plugin';
+import { BasePlugin, Platform, PLATFORM_LABELS } from '@/types/plugin';
 import PluginCard from './PluginCard';
 import SearchBar from './SearchBar';
 
 interface PluginGridProps {
-  plugins: ObsidianPlugin[];
+  plugins: BasePlugin[];
   lastUpdated?: string;
 }
 
 export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'author'>('name');
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | 'all'>('all');
+
+  // Get available platforms from the data
+  const availablePlatforms = useMemo(() => {
+    const platforms = new Set(plugins.map(p => p.platform));
+    return Array.from(platforms).sort();
+  }, [plugins]);
 
   // Filter and sort plugins
   const filteredPlugins = useMemo(() => {
     let filtered = plugins;
+
+    // Platform filter
+    if (selectedPlatform !== 'all') {
+      filtered = filtered.filter(plugin => plugin.platform === selectedPlatform);
+    }
 
     // Search filter
     if (searchQuery) {
@@ -39,7 +51,7 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
     });
 
     return filtered;
-  }, [plugins, searchQuery, sortBy]);
+  }, [plugins, searchQuery, sortBy, selectedPlatform]);
 
   return (
     <div className="space-y-6">
@@ -48,7 +60,7 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-              Obsidian Plugins
+              {selectedPlatform === 'all' ? 'All Plugins' : `${PLATFORM_LABELS[selectedPlatform]} Plugins`}
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
               {filteredPlugins.length} of {plugins.length} plugins
@@ -60,7 +72,7 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
             </p>
           </div>
           
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <label htmlFor="sort" className="text-sm text-slate-600 dark:text-slate-400">
               Sort by:
             </label>
@@ -73,6 +85,41 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
               <option value="name">Name</option>
               <option value="author">Author</option>
             </select>
+          </div>
+        </div>
+
+        {/* Platform Filter */}
+        <div className="mb-4">
+          <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
+            Platform:
+          </label>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={() => setSelectedPlatform('all')}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                selectedPlatform === 'all'
+                  ? 'bg-indigo-600 text-white'
+                  : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
+              }`}
+            >
+              All Platforms ({plugins.length})
+            </button>
+            {availablePlatforms.map((platform) => {
+              const count = plugins.filter(p => p.platform === platform).length;
+              return (
+                <button
+                  key={platform}
+                  onClick={() => setSelectedPlatform(platform)}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    selectedPlatform === platform
+                      ? 'bg-indigo-600 text-white'
+                      : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
+                  }`}
+                >
+                  {PLATFORM_LABELS[platform]} ({count})
+                </button>
+              );
+            })}
           </div>
         </div>
 

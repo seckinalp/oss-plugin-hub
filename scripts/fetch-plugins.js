@@ -80,8 +80,14 @@ async function main() {
 
     // Fetch plugin data
     console.log('📥 Fetching plugin data from Obsidian repository...');
-    const plugins = await fetchJSON(OBSIDIAN_PLUGINS_URL);
-    console.log(`✓ Fetched ${plugins.length} plugins\n`);
+    const obsidianPlugins = await fetchJSON(OBSIDIAN_PLUGINS_URL);
+    console.log(`✓ Fetched ${obsidianPlugins.length} Obsidian plugins\n`);
+    
+    // Add platform field to all plugins
+    const plugins = obsidianPlugins.map(plugin => ({
+      ...plugin,
+      platform: 'obsidian'
+    }));
 
     // Load previous data for comparison
     let previousPlugins = [];

@@ -124,9 +124,21 @@ Before submitting a PR:
    - How to test them
 5. Link any related issues
 
+## Adding New Platforms
+
+Want to add support for VS Code, JetBrains, Sublime Text, or other platforms?
+
+Check out **[ADDING_PLATFORMS.md](./ADDING_PLATFORMS.md)** for a complete guide!
+
+The app is designed to make adding new platforms easy:
+1. Create a fetch script for the platform
+2. Add it to the main fetch script
+3. Done! The UI automatically adapts
+
 ## Areas for Contribution
 
-- **Features**: Add new plugin platforms, advanced filtering, analytics
+- **New Platforms**: Add VS Code, JetBrains, Sublime Text, etc.
+- **Features**: Advanced filtering, analytics, trending plugins
 - **UI/UX**: Improve design, accessibility, mobile experience
 - **Performance**: Optimize build size, loading times
 - **Documentation**: Improve guides, add examples
