@@ -47,18 +47,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/plugins.json data/plugins-previous.json public/rss.xml
-          git commit -m "chore: update plugin data [skip ci]"
+          git commit -m "chore: update plugin data"
           git push
-
-      - name: Build static site
-        if: steps.git-check.outputs.changed == 'true'
-        run: npm run build
-
-      - name: Upload build artifacts
-        if: steps.git-check.outputs.changed == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: static-site
-          path: out/
-          retention-days: 7
+      
+      # Vercel automatically deploys when changes are pushed to main branch
+      # No need to build or deploy here
 
