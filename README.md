@@ -2,6 +2,8 @@
 
 A modern web application for discovering and exploring open-source plugins, starting with Obsidian.
 
+🌐 **Live Site**: [https://oss-plugin-hub.vercel.app/](https://oss-plugin-hub.vercel.app/)
+
 ## Features
 
 - 🔍 Browse and search Obsidian plugins
@@ -57,7 +59,7 @@ See [roadmap.md](./roadmap.md) for the detailed development plan.
 - **Framework:** Next.js 14 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
-- **Deployment:** Vercel/Netlify/GitHub Pages
+- **Deployment:** Vercel
 
 ## Contributing
 

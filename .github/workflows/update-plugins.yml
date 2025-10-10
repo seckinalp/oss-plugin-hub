@@ -34,7 +34,7 @@ jobs:
       - name: Generate RSS feed
         run: npm run generate-rss
         env:
-          SITE_URL: ${{ secrets.SITE_URL || 'https://plugin-hub.vercel.app' }}
+          SITE_URL: ${{ secrets.SITE_URL || 'https://oss-plugin-hub.vercel.app' }}
 
       - name: Check for changes
         id: git-check

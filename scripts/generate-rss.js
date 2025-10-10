@@ -5,7 +5,7 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, '../data');
 const PLUGINS_FILE = path.join(DATA_DIR, 'plugins.json');
 const RSS_OUTPUT = path.join(__dirname, '../public/rss.xml');
-const SITE_URL = process.env.SITE_URL || 'https://plugin-hub.example.com';
+const SITE_URL = process.env.SITE_URL || 'https://oss-plugin-hub.vercel.app';
 const MAX_ITEMS = 50; // Maximum number of items in RSS feed
 
 /**

@@ -4,6 +4,8 @@
 
 All Phase 1 tasks from the roadmap have been successfully implemented.
 
+🌐 **Live Site**: [https://oss-plugin-hub.vercel.app/](https://oss-plugin-hub.vercel.app/)
+
 ## ✅ Completed Features
 
 ### 1. Initial Scaffolding ✓
@@ -51,12 +53,12 @@ All Phase 1 tasks from the roadmap have been successfully implemented.
 - Dependabot for dependency updates
 
 ### 7. Initial Deployment ✓
-- Vercel deployment configuration
-- GitHub Pages workflow
-- Netlify compatibility
+- Vercel deployment (live at https://oss-plugin-hub.vercel.app/)
+- Automatic deployments on push
 - Static site export
 - Environment variable support
 - Build optimization
+- Global CDN delivery
 
 ## 📁 Project Structure
 
@@ -64,8 +66,7 @@ All Phase 1 tasks from the roadmap have been successfully implemented.
 oss-plugin-hub/
 ├── .github/
 │   ├── workflows/
-│   │   ├── deploy.yml          # GitHub Pages deployment
-│   │   └── update-plugins.yml  # Daily data updates
+│   │   └── update-plugins.yml  # Daily data updates & auto-deploy
 │   └── dependabot.yml          # Dependency updates
 ├── app/
 │   ├── layout.tsx              # Root layout with metadata
@@ -108,7 +109,7 @@ oss-plugin-hub/
 - **Styling**: Tailwind CSS
 - **Build**: Static Site Generation (SSG)
 - **CI/CD**: GitHub Actions
-- **Deployment**: Vercel / Netlify / GitHub Pages
+- **Deployment**: Vercel
 - **Data Source**: Obsidian GitHub Repository
 
 ## 📊 Key Metrics

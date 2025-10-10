@@ -68,17 +68,19 @@ Get your Plugin Discovery Hub up and running in minutes!
 
 ## 🌐 Deployment
 
-Deploy to Vercel (recommended):
+Deploy to Vercel:
 
 ```bash
 # Install Vercel CLI
 npm install -g vercel
 
 # Deploy
-vercel
+vercel --prod
 ```
 
-Or see [DEPLOYMENT.md](./DEPLOYMENT.md) for other options (Netlify, GitHub Pages).
+Or use the Vercel Dashboard to import from GitHub. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+
+🌐 **Live Example**: [https://oss-plugin-hub.vercel.app/](https://oss-plugin-hub.vercel.app/)
 
 ## 🔄 Keeping Data Updated
 
@@ -100,7 +102,7 @@ Push your code to GitHub - the GitHub Action will:
 ## 📡 RSS Feed
 
 After deployment, users can subscribe to updates:
-- Feed URL: `https://your-domain.com/rss.xml`
+- Feed URL: `https://oss-plugin-hub.vercel.app/rss.xml`
 
 ## 🛠️ Customization
 

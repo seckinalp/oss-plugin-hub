@@ -4,6 +4,8 @@ Thank you for your interest in contributing! This document provides guidelines a
 
 ## Getting Started
 
+🌐 **Live Site**: [https://oss-plugin-hub.vercel.app/](https://oss-plugin-hub.vercel.app/)
+
 1. **Fork the repository**
 2. **Clone your fork**:
    ```bash
