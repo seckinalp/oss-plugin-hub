@@ -8,7 +8,8 @@ A modern web application for discovering and exploring open-source plugins acros
 
 - 🔍 Browse and search plugins across multiple platforms
 - 🎯 Filter by platform (Obsidian, VS Code, JetBrains, and more)
-- 📊 Filter by categories, authors, and more
+- 📊 Sort by name or author
+- 📥 Export filtered results as JSON, SQL, or CSV
 - 🔔 RSS feed for new plugin notifications
 - 🌙 Dark mode support
 - 📱 Responsive design
@@ -50,6 +51,15 @@ oss-plugin-hub/
 ├── public/          # Static assets
 └── types/           # TypeScript type definitions
 ```
+
+## Documentation
+
+- 📖 **[QUICK_START.md](./QUICK_START.md)** - Get started in 5 minutes
+- 🚀 **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deploy to Vercel
+- 🤝 **[CONTRIBUTING.md](./CONTRIBUTING.md)** - Contribution guidelines
+- ➕ **[ADDING_PLATFORMS.md](./ADDING_PLATFORMS.md)** - Add new platforms
+- 📥 **[EXPORT_GUIDE.md](./EXPORT_GUIDE.md)** - Export data guide
+- 📋 **[CHANGELOG.md](./CHANGELOG.md)** - Version history
 
 ## Development Roadmap
 

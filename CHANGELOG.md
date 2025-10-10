@@ -4,13 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [0.2.0] - 2025-10-10
 
-### 🎉 Major Updates - Multi-Platform Support
+### 🎉 Major Updates - Multi-Platform Support & Export
 
 #### Added
 - **Multi-platform support** - App now supports multiple plugin platforms
 - **Platform filter** - Interactive platform selector with plugin counts
 - **Platform badges** - Color-coded badges on each plugin card showing the platform
 - **Platform types** - 7 predefined platforms (Obsidian, VS Code, JetBrains, Sublime, Atom, Vim, Other)
+- **Export functionality** - Export filtered/searched results as JSON, SQL, or CSV
+- **Export utils** - New utility functions for data export in multiple formats
 - **ADDING_PLATFORMS.md** - Comprehensive guide for adding new platforms
 - **GitHub link** - Footer now includes link to @seckinalp
 
@@ -36,6 +38,9 @@ All notable changes to this project will be documented in this file.
 - Color-coded platform badges for easy visual identification
 - Dynamic plugin counts per platform
 - Responsive platform filter layout
+- Export buttons with icons (JSON, SQL, CSV)
+- Export section shows count of filtered plugins
+- Color-coded export buttons (Indigo for JSON, Green for SQL, Emerald for CSV)
 
 ### 📚 Documentation
 - Added detailed guide for adding new platforms
