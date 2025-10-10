@@ -120,6 +120,9 @@ Set in Vercel Dashboard → Settings → Environment Variables:
 | Variable | Value | Description |
 |----------|-------|-------------|
 | `SITE_URL` | `https://your-project.vercel.app` | Your site URL for RSS feed |
+| `GH_TOKEN` | `ghp_xxxxxxxxxxxxx` | (Optional) GitHub Personal Access Token for API access |
+
+**Note:** For Phase 2 GitHub API integration, you'll need a GitHub Personal Access Token. Don't name it `GITHUB_TOKEN` - that's reserved by GitHub. Use `GH_TOKEN` instead.
 
 ## Vercel Features
 

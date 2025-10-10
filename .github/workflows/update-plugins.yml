@@ -30,6 +30,8 @@ jobs:
 
       - name: Fetch latest plugin data
         run: npm run fetch-plugins
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Generate RSS feed
         run: npm run generate-rss

@@ -76,17 +76,32 @@ All notable changes to this project will be documented in this file.
 
 ## Future Plans
 
-### Planned for v0.3.0
+### Planned for v0.3.0 - GitHub Integration
+- GitHub API integration for repository metrics
+- Advanced sorting (stars, forks, last updated)
+- Enhanced filtering (minimum stars, update date, license)
+- Plugin health indicators (active/maintained/stale/archived)
+- Rate limiting and caching system
+
+### Planned for v0.4.0 - Plugin Detail Pages
+- Dedicated plugin detail pages
+- README.md rendering
+- Repository statistics and charts
+- Activity graphs
+- Installation instructions
+
+### Planned for v0.5.0 - Multi-Platform
 - Add VS Code plugin support
 - Add JetBrains plugin support
-- Enhanced analytics and statistics
-- Plugin trending/popularity indicators
-- Category/tag filtering
+- Platform-specific metrics
+- Cross-platform plugin discovery
 
-### Planned for v0.4.0
+### Planned for v1.0.0 - Advanced Features
 - User favorites/bookmarks
 - Plugin comparison feature
-- Advanced search with filters
+- Trending plugins dashboard
+- Category/tag filtering
+- Community ratings and reviews
 - API endpoint for developers
 
 ---

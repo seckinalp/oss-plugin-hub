@@ -56,6 +56,8 @@ oss-plugin-hub/
 
 - 📖 **[QUICK_START.md](./QUICK_START.md)** - Get started in 5 minutes
 - 🚀 **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deploy to Vercel
+- ⚙️ **[VERCEL_SETUP.md](./VERCEL_SETUP.md)** - Vercel environment variables setup
+- 🔑 **[GITHUB_TOKEN_SETUP.md](./GITHUB_TOKEN_SETUP.md)** - GitHub token setup (for Phase 2)
 - 🤝 **[CONTRIBUTING.md](./CONTRIBUTING.md)** - Contribution guidelines
 - ➕ **[ADDING_PLATFORMS.md](./ADDING_PLATFORMS.md)** - Add new platforms
 - 📥 **[EXPORT_GUIDE.md](./EXPORT_GUIDE.md)** - Export data guide
@@ -63,7 +65,12 @@ oss-plugin-hub/
 
 ## Development Roadmap
 
-See [roadmap.md](./roadmap.md) for the detailed development plan.
+- **Phase 1 (MVP)** ✅ Completed - Basic plugin discovery with search, filter, export
+- **Phase 2 (Planned)** 🔜 GitHub API integration, advanced metrics, detail pages
+- **Phase 3 (Future)** Multi-platform expansion (VS Code, JetBrains, etc.)
+- **Phase 4 (Future)** Advanced features (favorites, comparisons, ratings)
+
+See [roadmap.md](./roadmap.md) for the high-level plan and [ROADMAP_DETAILED.md](./ROADMAP_DETAILED.md) for detailed implementation specs.
 
 ## Tech Stack
 
