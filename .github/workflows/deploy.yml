@@ -43,7 +43,7 @@ jobs:
           NEXT_PUBLIC_SITE_URL: ${{ secrets.SITE_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./out
 
