@@ -87,7 +87,7 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
             <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
               {filteredPlugins.length} of {plugins.length} plugins
               {lastUpdated && (
-                <span className="ml-2">
+                <span className="ml-2" suppressHydrationWarning>
                   • Last updated: {new Date(lastUpdated).toLocaleDateString()}
                 </span>
               )}
