@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BasePlugin, PLATFORM_LABELS, PLATFORM_COLORS } from '@/types/plugin';
-import { formatNumber, formatRelativeTime, getPluginHealth } from '@/utils/github';
+import { formatNumber, getPluginHealth } from '@/utils/github';
+import RelativeTime from './RelativeTime';
 
 interface PluginCardProps {
   plugin: BasePlugin;
@@ -47,7 +48,7 @@ export default function PluginCard({ plugin }: PluginCardProps) {
               🍴 {formatNumber(plugin.github.forks)}
             </span>
             <span className="flex items-center gap-1">
-              📅 {formatRelativeTime(plugin.github.lastUpdated)}
+              📅 <RelativeTime dateString={plugin.github.lastUpdated} />
             </span>
           </div>
         )}

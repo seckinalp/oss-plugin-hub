@@ -4,9 +4,10 @@ import fs from 'fs';
 import path from 'path';
 import { BasePlugin } from '@/types/plugin';
 import { PLATFORM_LABELS, PLATFORM_COLORS } from '@/types/plugin';
-import { parseRepo, fetchRepoStats, fetchReadme, getPluginHealth, formatNumber, formatRelativeTime } from '@/utils/github';
+import { parseRepo, fetchRepoStats, fetchReadme, getPluginHealth, formatNumber } from '@/utils/github';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import RelativeTime from '@/components/RelativeTime';
 
 // Generate static paths for all plugins
 export async function generateStaticParams() {
@@ -208,12 +209,12 @@ export default async function PluginPage({ params }: { params: { id: string } })
                     <div>
                       <dt className="text-sm text-slate-600 dark:text-slate-400">Last Updated</dt>
                       <dd className="text-sm font-medium text-slate-900 dark:text-white">
-                        {formatRelativeTime(plugin.github.lastUpdated)}
+                        <RelativeTime dateString={plugin.github.lastUpdated} />
                       </dd>
                     </div>
                     <div>
                       <dt className="text-sm text-slate-600 dark:text-slate-400">Created</dt>
-                      <dd className="text-sm font-medium text-slate-900 dark:text-white">
+                      <dd className="text-sm font-medium text-slate-900 dark:text-white" suppressHydrationWarning>
                         {new Date(plugin.github.createdAt).toLocaleDateString()}
                       </dd>
                     </div>
