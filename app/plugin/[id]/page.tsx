@@ -64,9 +64,8 @@ async function getPlugin(id: string): Promise<BasePlugin | null> {
   }
 }
 
-export default async function PluginPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  const plugin = await getPlugin(id);
+export default async function PluginPage({ params }: { params: { id: string } }) {
+  const plugin = await getPlugin(params.id);
 
   if (!plugin) {
     notFound();
