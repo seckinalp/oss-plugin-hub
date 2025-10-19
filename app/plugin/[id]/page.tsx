@@ -657,7 +657,7 @@ export default async function PluginPage({ params }: { params: { id: string } })
                     <div className="flex gap-1 items-end h-32">
                       {plugin.github.codeFrequency.recentWeeks.map((week, i) => {
                         const total = week.additions + week.deletions;
-                        const maxHeight = Math.max(...plugin.github.codeFrequency!.recentWeeks.map(w => w.additions + w.deletions));
+                        const maxHeight = Math.max(...(plugin.github?.codeFrequency?.recentWeeks || []).map(w => w.additions + w.deletions));
                         const height = maxHeight > 0 ? (total / maxHeight) * 100 : 0;
                         return (
                           <div key={i} className="flex-1 flex flex-col justify-end items-center gap-0.5">

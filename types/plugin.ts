@@ -106,6 +106,52 @@ export interface GitHubStats {
   
   // Health Metrics
   healthMetrics?: HealthMetrics;
+  
+  // New enhanced data
+  recentCommits?: Array<{
+    sha: string;
+    message: string;
+    author: string;
+    date: string;
+    url: string;
+  }>;
+  tags?: Array<{
+    name: string;
+    sha: string;
+    zipball_url: string;
+    tarball_url: string;
+  }>;
+  tagsCount?: number;
+  communityProfile?: {
+    healthPercentage: number;
+    description: string | null;
+    documentation: string | null;
+    files: any;
+  };
+  codeFrequency?: {
+    recentWeeks: Array<{
+      week: string;
+      additions: number;
+      deletions: number;
+    }>;
+    totalAdditions: number;
+    totalDeletions: number;
+  };
+  participation?: {
+    allCommits: number[];
+    ownerCommits: number[];
+    communityCommits: number[];
+    ownerPercentage: number;
+  };
+  stargazersSample?: {
+    sample: Array<{
+      user: string;
+      starred_at: string;
+    }>;
+    recentStars30Days: number;
+    recentStars90Days: number;
+    sampleSize: number;
+  };
 }
 
 export interface BasePlugin {
