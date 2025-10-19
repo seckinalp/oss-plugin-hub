@@ -13,7 +13,7 @@ import path from 'path';
 import { checkRateLimit, fetchRepoStats, parseRepo } from '@/utils/github';
 import type { BasePlugin } from '@/types/plugin';
 
-const PLUGINS_PER_RUN = 150; // Update up to 150 plugins per run
+const PLUGINS_PER_RUN = 200; // Update up to 150 plugins per run
 const MAX_AGE_DAYS = 7; // Re-fetch if data is older than 7 days
 const DELAY_MS = 50; // Delay between API calls
 
