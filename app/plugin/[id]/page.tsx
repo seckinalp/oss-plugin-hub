@@ -529,6 +529,221 @@ export default async function PluginPage({ params }: { params: { id: string } })
                     </div>
                   </div>
                 )}
+
+                {/* Trending - Star Growth */}
+                {plugin.github?.stargazersSample && plugin.github.stargazersSample.recentStars30Days > 0 && (
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-lg shadow-md p-6 border border-orange-200 dark:border-orange-800">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      🔥 Trending
+                    </h2>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">
+                          +{formatNumber(plugin.github.stargazersSample.recentStars30Days)}
+                        </div>
+                        <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                          Stars (Last 30 Days)
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-red-600 dark:text-red-400">
+                          +{formatNumber(plugin.github.stargazersSample.recentStars90Days)}
+                        </div>
+                        <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                          Stars (Last 90 Days)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Community Health Score */}
+                {plugin.github?.communityProfile && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      💚 Community Health Score
+                    </h2>
+                    <div className="mb-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                          Overall Health
+                        </span>
+                        <span className="text-2xl font-bold text-green-600 dark:text-green-400">
+                          {plugin.github.communityProfile.healthPercentage}%
+                        </span>
+                      </div>
+                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+                        <div
+                          className={`h-4 rounded-full transition-all ${
+                            plugin.github.communityProfile.healthPercentage >= 80 ? 'bg-green-500' :
+                            plugin.github.communityProfile.healthPercentage >= 60 ? 'bg-yellow-500' :
+                            plugin.github.communityProfile.healthPercentage >= 40 ? 'bg-orange-500' :
+                            'bg-red-500'
+                          }`}
+                          style={{ width: `${plugin.github.communityProfile.healthPercentage}%` }}
+                        />
+                      </div>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                        Based on documentation, community files, and project governance
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Participation - Owner vs Community */}
+                {plugin.github?.participation && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      👥 Contribution Distribution
+                    </h2>
+                    <div className="mb-6">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm text-slate-600 dark:text-slate-400">Owner</span>
+                        <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
+                          {plugin.github.participation.ownerPercentage}%
+                        </span>
+                      </div>
+                      <div className="flex h-6 rounded-full overflow-hidden">
+                        <div
+                          className="bg-indigo-500 flex items-center justify-center text-white text-xs font-medium"
+                          style={{ width: `${plugin.github.participation.ownerPercentage}%` }}
+                        >
+                          {plugin.github.participation.ownerPercentage > 15 && 'Owner'}
+                        </div>
+                        <div
+                          className="bg-green-500 flex items-center justify-center text-white text-xs font-medium"
+                          style={{ width: `${100 - plugin.github.participation.ownerPercentage}%` }}
+                        >
+                          {100 - plugin.github.participation.ownerPercentage > 15 && 'Community'}
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center mt-2">
+                        <span className="text-sm text-slate-600 dark:text-slate-400">Community</span>
+                        <span className="text-lg font-bold text-green-600 dark:text-green-400">
+                          {100 - plugin.github.participation.ownerPercentage}%
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      Last 12 weeks of commit activity
+                    </p>
+                  </div>
+                )}
+
+                {/* Code Frequency */}
+                {plugin.github?.codeFrequency && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      📊 Code Activity (Last 12 Weeks)
+                    </h2>
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="text-center p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                        <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                          +{formatNumber(plugin.github.codeFrequency.totalAdditions)}
+                        </div>
+                        <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                          Lines Added
+                        </div>
+                      </div>
+                      <div className="text-center p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                        <div className="text-2xl font-bold text-red-600 dark:text-red-400">
+                          -{formatNumber(plugin.github.codeFrequency.totalDeletions)}
+                        </div>
+                        <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                          Lines Removed
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex gap-1 items-end h-32">
+                      {plugin.github.codeFrequency.recentWeeks.map((week, i) => {
+                        const total = week.additions + week.deletions;
+                        const maxHeight = Math.max(...plugin.github.codeFrequency!.recentWeeks.map(w => w.additions + w.deletions));
+                        const height = maxHeight > 0 ? (total / maxHeight) * 100 : 0;
+                        return (
+                          <div key={i} className="flex-1 flex flex-col justify-end items-center gap-0.5">
+                            <div
+                              className="w-full bg-green-500 rounded-t"
+                              style={{ height: `${(week.additions / total) * height}%` }}
+                              title={`Week ${i + 1}: +${week.additions}`}
+                            />
+                            <div
+                              className="w-full bg-red-500 rounded-b"
+                              style={{ height: `${(week.deletions / total) * height}%` }}
+                              title={`Week ${i + 1}: -${week.deletions}`}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Recent Commits */}
+                {plugin.github?.recentCommits && plugin.github.recentCommits.length > 0 && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      📝 Recent Commits
+                    </h2>
+                    <div className="space-y-3">
+                      {plugin.github.recentCommits.slice(0, 5).map((commit) => (
+                        <a
+                          key={commit.sha}
+                          href={commit.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-600"
+                        >
+                          <div className="flex items-start gap-3">
+                            <code className="text-xs font-mono text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1 rounded">
+                              {commit.sha}
+                            </code>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-sm text-slate-900 dark:text-white font-medium truncate">
+                                {commit.message}
+                              </p>
+                              <div className="flex items-center gap-2 mt-1 text-xs text-slate-500 dark:text-slate-400">
+                                <span>{commit.author}</span>
+                                <span>•</span>
+                                <RelativeTime dateString={commit.date} />
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Tags */}
+                {plugin.github?.tags && plugin.github.tags.length > 0 && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      🏷️ Version Tags ({plugin.github.tagsCount})
+                    </h2>
+                    <div className="flex flex-wrap gap-2">
+                      {plugin.github.tags.slice(0, 15).map((tag) => (
+                        <a
+                          key={tag.name}
+                          href={tag.zipball_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-700 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-medium transition-colors border border-slate-200 dark:border-slate-600"
+                          title={`Download ${tag.name}`}
+                        >
+                          <span>{tag.name}</span>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                          </svg>
+                        </a>
+                      ))}
+                      {plugin.github.tagsCount && plugin.github.tagsCount > 15 && (
+                        <span className="inline-flex items-center px-3 py-1.5 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 rounded-lg text-sm">
+                          +{plugin.github.tagsCount - 15} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
