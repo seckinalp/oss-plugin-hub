@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
 import { BasePlugin } from '@/types/plugin';
@@ -233,10 +234,12 @@ export default async function PluginPage({ params }: { params: { id: string } })
                           rel="noopener noreferrer"
                           className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
                         >
-                          <img
+                          <Image
                             src={contributor.avatar_url}
                             alt={contributor.login}
-                            className="w-10 h-10 rounded-full"
+                            width={40}
+                            height={40}
+                            className="rounded-full"
                           />
                           <div className="flex-1">
                             <div className="font-medium text-slate-900 dark:text-white">
