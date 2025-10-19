@@ -536,7 +536,13 @@ export async function fetchRepoStats(owner: string, repo: string, comprehensive:
         workflows,
         funding,
         closedIssues,
-        prCounts
+        prCounts,
+        recentCommits,
+        tags,
+        communityProfile,
+        codeFrequency,
+        participation,
+        stargazersSample
       ] = await Promise.all([
         fetchReleases(owner, repo),
         fetchContributors(owner, repo),
@@ -547,7 +553,13 @@ export async function fetchRepoStats(owner: string, repo: string, comprehensive:
         fetchWorkflows(owner, repo),
         fetchFunding(owner, repo),
         fetchClosedIssuesCount(owner, repo),
-        fetchPRCounts(owner, repo)
+        fetchPRCounts(owner, repo),
+        fetchRecentCommits(owner, repo),
+        fetchTags(owner, repo),
+        fetchCommunityProfile(owner, repo),
+        fetchCodeFrequency(owner, repo),
+        fetchParticipation(owner, repo),
+        fetchStargazersSample(owner, repo)
       ]);
 
       // Calculate health metrics after we have issue/PR counts
@@ -579,13 +591,191 @@ export async function fetchRepoStats(owner: string, repo: string, comprehensive:
         closedIssues,
         openPullRequests: prCounts.open,
         closedPullRequests: prCounts.closed,
-        healthMetrics
+        healthMetrics,
+        recentCommits: recentCommits || undefined,
+        tags: tags || undefined,
+        tagsCount: tags?.length || 0,
+        communityProfile: communityProfile || undefined,
+        codeFrequency: codeFrequency || undefined,
+        participation: participation || undefined,
+        stargazersSample: stargazersSample || undefined
       };
     }
 
     return basicStats;
   } catch (error) {
     console.error(`Error fetching stats for ${owner}/${repo}:`, error);
+    return null;
+  }
+}
+
+/**
+ * Fetch recent commits
+ */
+export async function fetchRecentCommits(owner: string, repo: string) {
+  try {
+    const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/commits?per_page=10`, {
+      headers: getHeaders(),
+      next: { revalidate: 3600 }
+    });
+
+    if (!response.ok) return [];
+
+    const data = await response.json();
+    return data.map((commit: any) => ({
+      sha: commit.sha.substring(0, 7),
+      message: commit.commit.message.split('\n')[0],
+      author: commit.commit.author.name,
+      date: commit.commit.author.date,
+      url: commit.html_url
+    }));
+  } catch (error) {
+    return [];
+  }
+}
+
+/**
+ * Fetch tags
+ */
+export async function fetchTags(owner: string, repo: string) {
+  try {
+    const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/tags?per_page=20`, {
+      headers: getHeaders(),
+      next: { revalidate: 3600 }
+    });
+
+    if (!response.ok) return [];
+
+    const data = await response.json();
+    return data.map((tag: any) => ({
+      name: tag.name,
+      sha: tag.commit.sha.substring(0, 7),
+      zipball_url: tag.zipball_url,
+      tarball_url: tag.tarball_url
+    }));
+  } catch (error) {
+    return [];
+  }
+}
+
+/**
+ * Fetch community profile
+ */
+export async function fetchCommunityProfile(owner: string, repo: string) {
+  try {
+    const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/community/profile`, {
+      headers: { ...getHeaders(), 'Accept': 'application/vnd.github.v3+json' },
+      next: { revalidate: 3600 }
+    });
+
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    return {
+      healthPercentage: data.health_percentage,
+      description: data.description,
+      documentation: data.documentation,
+      files: data.files
+    };
+  } catch (error) {
+    return null;
+  }
+}
+
+/**
+ * Fetch code frequency stats
+ */
+export async function fetchCodeFrequency(owner: string, repo: string) {
+  try {
+    const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/stats/code_frequency`, {
+      headers: getHeaders(),
+      next: { revalidate: 3600 }
+    });
+
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    if (!Array.isArray(data) || data.length === 0) return null;
+
+    const recent = data.slice(-12);
+    const totalAdditions = recent.reduce((sum: number, week: any) => sum + week[1], 0);
+    const totalDeletions = recent.reduce((sum: number, week: any) => sum + Math.abs(week[2]), 0);
+
+    return {
+      recentWeeks: recent.map((week: any) => ({
+        week: new Date(week[0] * 1000).toISOString(),
+        additions: week[1],
+        deletions: Math.abs(week[2])
+      })),
+      totalAdditions,
+      totalDeletions
+    };
+  } catch (error) {
+    return null;
+  }
+}
+
+/**
+ * Fetch participation stats
+ */
+export async function fetchParticipation(owner: string, repo: string) {
+  try {
+    const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/stats/participation`, {
+      headers: getHeaders(),
+      next: { revalidate: 3600 }
+    });
+
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    if (!data || !data.all) return null;
+
+    const recentAll = data.all.slice(-12);
+    const recentOwner = data.owner.slice(-12);
+    
+    return {
+      allCommits: recentAll,
+      ownerCommits: recentOwner,
+      communityCommits: recentAll.map((all: number, i: number) => all - recentOwner[i]),
+      ownerPercentage: Math.round((recentOwner.reduce((a: number, b: number) => a + b, 0) / recentAll.reduce((a: number, b: number) => a + b, 0)) * 100) || 0
+    };
+  } catch (error) {
+    return null;
+  }
+}
+
+/**
+ * Fetch stargazers with timestamps (sample for trending)
+ */
+export async function fetchStargazersSample(owner: string, repo: string) {
+  try {
+    const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/stargazers?per_page=100`, {
+      headers: { ...getHeaders(), 'Accept': 'application/vnd.github.v3.star+json' },
+      next: { revalidate: 3600 }
+    });
+
+    if (!response.ok) return null;
+
+    const data = await response.json();
+    if (!Array.isArray(data) || data.length === 0) return null;
+
+    const now = new Date();
+    const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+    const ninetyDaysAgo = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
+
+    const recentStars = data.filter((s: any) => new Date(s.starred_at) > thirtyDaysAgo).length;
+    const last90DaysStars = data.filter((s: any) => new Date(s.starred_at) > ninetyDaysAgo).length;
+
+    return {
+      sample: data.slice(0, 10).map((s: any) => ({
+        user: s.user.login,
+        starred_at: s.starred_at
+      })),
+      recentStars30Days: recentStars,
+      recentStars90Days: last90DaysStars,
+      sampleSize: data.length
+    };
+  } catch (error) {
     return null;
   }
 }

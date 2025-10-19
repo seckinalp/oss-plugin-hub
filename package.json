@@ -8,11 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fetch-plugins": "node scripts/fetch-plugins.js",
-    "update-github-stats": "node scripts/update-github-stats.js",
-    "update-github-incremental": "node scripts/incremental-github-update.js",
-    "update-data": "npm run fetch-plugins && npm run update-github-stats",
-    "update-data-incremental": "npm run fetch-plugins && npm run update-github-incremental"
+    "fetch-plugins": "node scripts/fetch-plugins.js"
   },
   "dependencies": {
     "next": "^14.2.0",

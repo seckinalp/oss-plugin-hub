@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { BasePlugin } from '@/types/plugin';
 import { PLATFORM_LABELS, PLATFORM_COLORS } from '@/types/plugin';
-import { parseRepo, fetchRepoStats, fetchReadme, getPluginHealth, formatNumber } from '@/utils/github';
+import { parseRepo, fetchReadme, getPluginHealth, formatNumber } from '@/utils/github';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import RelativeTime from '@/components/RelativeTime';
@@ -48,17 +48,8 @@ async function getPlugin(id: string): Promise<BasePlugin | null> {
       return null;
     }
 
-    // Fetch GitHub stats if not already present
-    if (!plugin.github && plugin.repo) {
-      const parsed = parseRepo(plugin.repo);
-      if (parsed) {
-        const stats = await fetchRepoStats(parsed.owner, parsed.repo, true); // Fetch comprehensive stats
-        if (stats) {
-          plugin.github = stats;
-        }
-      }
-    }
-
+    // Use only cached data from plugins.json
+    // The cron job keeps data fresh automatically
     return plugin;
   } catch (error) {
     console.error('Error loading plugin:', error);
