@@ -38,6 +38,14 @@ export interface CommitActivity {
   recentActivity?: number[]; // last 4 weeks
 }
 
+export interface HealthMetrics {
+  issueCloseRate?: number; // percentage of issues that get closed
+  avgIssueCloseTimeDays?: number; // average days to close an issue
+  avgPRMergeTimeDays?: number; // average days to merge a PR
+  maintenanceScore?: number; // 0-100 score based on activity
+  responseRate?: number; // percentage of issues with responses
+}
+
 export interface FundingLink {
   platform: string;
   url: string;
@@ -95,6 +103,9 @@ export interface GitHubStats {
   
   // Sponsorship
   fundingLinks?: FundingLink[];
+  
+  // Health Metrics
+  healthMetrics?: HealthMetrics;
 }
 
 export interface BasePlugin {
@@ -108,6 +119,7 @@ export interface BasePlugin {
   authorUrl?: string;
   fundingUrl?: string;
   github?: GitHubStats; // GitHub statistics (Phase 2)
+  githubDataFetchedAt?: string; // ISO timestamp of when GitHub data was last fetched
 }
 
 // Legacy type for Obsidian plugins

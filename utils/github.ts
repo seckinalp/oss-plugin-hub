@@ -67,6 +67,15 @@ export interface GitHubRepoStats {
   
   // Sponsorship
   fundingLinks?: FundingLink[];
+  
+  // Health Metrics
+  healthMetrics?: {
+    issueCloseRate?: number;
+    avgIssueCloseTimeDays?: number;
+    avgPRMergeTimeDays?: number;
+    maintenanceScore?: number;
+    responseRate?: number;
+  };
 }
 
 export interface RateLimitInfo {
@@ -404,6 +413,79 @@ export async function fetchPRCounts(owner: string, repo: string): Promise<{ open
 }
 
 /**
+ * Calculate health metrics including issue close rate, response times, etc.
+ */
+export async function fetchHealthMetrics(owner: string, repo: string, openIssues: number, closedIssues: number, openPRs: number, closedPRs: number): Promise<any> {
+  try {
+    // Calculate issue close rate
+    const totalIssues = openIssues + closedIssues;
+    const issueCloseRate = totalIssues > 0 ? Math.round((closedIssues / totalIssues) * 100) : 0;
+
+    // Fetch recent closed issues to calculate average close time
+    const recentClosedIssuesResponse = await fetch(
+      `${GITHUB_API}/repos/${owner}/${repo}/issues?state=closed&sort=updated&direction=desc&per_page=30`,
+      { headers: getHeaders(), next: { revalidate: 3600 } }
+    );
+
+    let avgIssueCloseTimeDays = 0;
+    let avgPRMergeTimeDays = 0;
+
+    if (recentClosedIssuesResponse.ok) {
+      const recentClosed = await recentClosedIssuesResponse.json();
+      
+      // Separate issues and PRs
+      const issues = recentClosed.filter((item: any) => !item.pull_request);
+      const prs = recentClosed.filter((item: any) => item.pull_request);
+
+      // Calculate average issue close time
+      if (issues.length > 0) {
+        const issueTimes = issues.map((issue: any) => {
+          const created = new Date(issue.created_at).getTime();
+          const closed = new Date(issue.closed_at).getTime();
+          return (closed - created) / (1000 * 60 * 60 * 24); // Convert to days
+        });
+        avgIssueCloseTimeDays = Math.round(issueTimes.reduce((a: number, b: number) => a + b, 0) / issueTimes.length);
+      }
+
+      // Calculate average PR merge time
+      if (prs.length > 0) {
+        const prTimes = prs.map((pr: any) => {
+          const created = new Date(pr.created_at).getTime();
+          const closed = new Date(pr.closed_at).getTime();
+          return (closed - created) / (1000 * 60 * 60 * 24); // Convert to days
+        });
+        avgPRMergeTimeDays = Math.round(prTimes.reduce((a: number, b: number) => a + b, 0) / prTimes.length);
+      }
+    }
+
+    // Calculate maintenance score (0-100)
+    // Based on: issue close rate (40%), recent activity (30%), PR merge rate (30%)
+    const prTotal = openPRs + closedPRs;
+    const prMergeRate = prTotal > 0 ? (closedPRs / prTotal) * 100 : 0;
+    
+    const maintenanceScore = Math.round(
+      (issueCloseRate * 0.4) + 
+      (Math.min(issueCloseRate, 100) * 0.3) + 
+      (prMergeRate * 0.3)
+    );
+
+    return {
+      issueCloseRate,
+      avgIssueCloseTimeDays: avgIssueCloseTimeDays > 0 ? avgIssueCloseTimeDays : undefined,
+      avgPRMergeTimeDays: avgPRMergeTimeDays > 0 ? avgPRMergeTimeDays : undefined,
+      maintenanceScore: Math.min(maintenanceScore, 100),
+      responseRate: issueCloseRate // Simplified - could be enhanced with comment data
+    };
+  } catch (error) {
+    console.error(`Error calculating health metrics for ${owner}/${repo}:`, error);
+    return {
+      issueCloseRate: 0,
+      maintenanceScore: 0
+    };
+  }
+}
+
+/**
  * Fetch comprehensive repository statistics from GitHub API
  */
 export async function fetchRepoStats(owner: string, repo: string, comprehensive: boolean = false): Promise<GitHubRepoStats | null> {
@@ -468,6 +550,16 @@ export async function fetchRepoStats(owner: string, repo: string, comprehensive:
         fetchPRCounts(owner, repo)
       ]);
 
+      // Calculate health metrics after we have issue/PR counts
+      const healthMetrics = await fetchHealthMetrics(
+        owner, 
+        repo, 
+        basicStats.openIssues, 
+        closedIssues, 
+        prCounts.open, 
+        prCounts.closed
+      );
+
       return {
         ...basicStats,
         releaseCount: releases.count,
@@ -486,7 +578,8 @@ export async function fetchRepoStats(owner: string, repo: string, comprehensive:
         fundingLinks: funding,
         closedIssues,
         openPullRequests: prCounts.open,
-        closedPullRequests: prCounts.closed
+        closedPullRequests: prCounts.closed,
+        healthMetrics
       };
     }
 
@@ -500,23 +593,31 @@ export async function fetchRepoStats(owner: string, repo: string, comprehensive:
 /**
  * Fetch README content for a repository
  */
-export async function fetchReadme(owner: string, repo: string, branch: string = 'main'): Promise<string | null> {
+export async function fetchReadme(owner: string, repo: string, branch?: string): Promise<string | null> {
   try {
-    const headers: HeadersInit = {
-      'Accept': 'application/vnd.github.v3.raw',
-    };
+    const headers = getHeaders();
 
-    if (GH_TOKEN) {
-      headers['Authorization'] = `token ${GH_TOKEN}`;
+    // First try without specifying branch (let GitHub find the default README)
+    let response = await fetch(
+      `${GITHUB_API}/repos/${owner}/${repo}/readme`,
+      { 
+        headers: { ...headers, 'Accept': 'application/vnd.github.v3.raw' },
+        next: { revalidate: 3600 } 
+      }
+    );
+
+    if (response.ok) {
+      return await response.text();
     }
 
-    // Try main branch first, then master
-    const branches = [branch, 'main', 'master'];
-    
-    for (const branchName of branches) {
-      const response = await fetch(
-        `${GITHUB_API}/repos/${owner}/${repo}/readme?ref=${branchName}`,
-        { headers, next: { revalidate: 3600 } }
+    // If that fails and we have a branch, try with the branch
+    if (branch) {
+      response = await fetch(
+        `${GITHUB_API}/repos/${owner}/${repo}/readme?ref=${branch}`,
+        { 
+          headers: { ...headers, 'Accept': 'application/vnd.github.v3.raw' },
+          next: { revalidate: 3600 } 
+        }
       );
 
       if (response.ok) {
@@ -524,6 +625,7 @@ export async function fetchReadme(owner: string, repo: string, branch: string = 
       }
     }
 
+    console.log(`README not found for ${owner}/${repo}`);
     return null;
   } catch (error) {
     console.error(`Error fetching README for ${owner}/${repo}:`, error);

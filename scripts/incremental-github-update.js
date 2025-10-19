@@ -1,12 +1,17 @@
 /**
- * Update plugin data with GitHub statistics
- * This script fetches GitHub repository stats for all plugins and updates the data file.
+ * Incremental GitHub Stats Update Script
+ * 
+ * This script updates GitHub statistics for a limited number of plugins per run,
+ * designed to work around GitHub API rate limits by:
+ * - Only fetching data for plugins that haven't been updated recently
+ * - Prioritizing new plugins and oldest-updated plugins
+ * - Limiting the number of API calls per run
  * 
  * Usage:
- *   node scripts/update-github-stats.js
+ *   node scripts/incremental-github-update.js [--limit=50] [--max-age-days=7]
  * 
  * Environment Variables:
- *   GH_TOKEN - GitHub Personal Access Token (optional but recommended to avoid rate limits)
+ *   GH_TOKEN - GitHub Personal Access Token (optional but recommended)
  */
 
 const fs = require('fs');
@@ -15,12 +20,19 @@ const path = require('path');
 // Configuration
 const DATA_DIR = path.join(__dirname, '../data');
 const PLUGINS_FILE = path.join(DATA_DIR, 'plugins.json');
-const BACKUP_FILE = path.join(DATA_DIR, 'plugins-before-github-stats.json');
 
 const GH_TOKEN = process.env.GH_TOKEN;
 const GITHUB_API = 'https://api.github.com';
-const BATCH_SIZE = 100; // Process in batches
-const DELAY_MS = 1000; // Delay between batches (1 second)
+
+// Parse command line arguments
+const args = process.argv.slice(2);
+const limitArg = args.find(arg => arg.startsWith('--limit='));
+const maxAgeDaysArg = args.find(arg => arg.startsWith('--max-age-days='));
+
+const PLUGINS_PER_RUN = limitArg ? parseInt(limitArg.split('=')[1]) : 150; // Fetch up to 150 plugins per run
+const MAX_AGE_DAYS = maxAgeDaysArg ? parseInt(maxAgeDaysArg.split('=')[1]) : 7; // Re-fetch if older than 7 days
+const DELAY_MS = 50; // Delay between requests (50ms)
+const MAX_API_CALLS_PER_PLUGIN = 10; // Approximate API calls per plugin (for rate limit estimation)
 
 /**
  * Get headers for GitHub API requests
@@ -35,6 +47,34 @@ function getHeaders() {
   }
 
   return headers;
+}
+
+/**
+ * Check GitHub API rate limit
+ */
+async function checkRateLimit() {
+  try {
+    const response = await fetch(`${GITHUB_API}/rate_limit`, { 
+      headers: getHeaders() 
+    });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const data = await response.json();
+    const core = data.resources.core;
+
+    return {
+      limit: core.limit,
+      remaining: core.remaining,
+      reset: new Date(core.reset * 1000),
+      used: core.used,
+    };
+  } catch (error) {
+    console.error('Error checking rate limit:', error.message);
+    return null;
+  }
 }
 
 /**
@@ -425,39 +465,6 @@ async function fetchRepoStats(owner, repo) {
 }
 
 /**
- * Check GitHub API rate limit
- */
-async function checkRateLimit() {
-  try {
-    const headers = {
-      'Accept': 'application/vnd.github.v3+json',
-    };
-
-    if (GH_TOKEN) {
-      headers['Authorization'] = `token ${GH_TOKEN}`;
-    }
-
-    const response = await fetch(`${GITHUB_API}/rate_limit`, { headers });
-
-    if (!response.ok) {
-      return null;
-    }
-
-    const data = await response.json();
-    const core = data.resources.core;
-
-    return {
-      limit: core.limit,
-      remaining: core.remaining,
-      reset: new Date(core.reset * 1000),
-    };
-  } catch (error) {
-    console.error('Error checking rate limit:', error.message);
-    return null;
-  }
-}
-
-/**
  * Parse repository string into owner and repo
  */
 function parseRepo(repoString) {
@@ -476,10 +483,63 @@ function delay(ms) {
 }
 
 /**
+ * Determine which plugins need updating
+ */
+function getPluginsToUpdate(plugins, maxAgeDays, limit) {
+  const now = new Date();
+  const maxAgeMs = maxAgeDays * 24 * 60 * 60 * 1000;
+
+  // Categorize plugins
+  const neverFetched = [];
+  const outdated = [];
+  const upToDate = [];
+
+  for (const plugin of plugins) {
+    if (!plugin.repo) continue;
+
+    if (!plugin.githubDataFetchedAt) {
+      // Never fetched - highest priority
+      neverFetched.push(plugin);
+    } else {
+      const fetchedAt = new Date(plugin.githubDataFetchedAt);
+      const age = now - fetchedAt;
+
+      if (age > maxAgeMs) {
+        // Outdated - needs refresh
+        outdated.push({ plugin, age });
+      } else {
+        // Up to date
+        upToDate.push(plugin);
+      }
+    }
+  }
+
+  // Sort outdated by age (oldest first)
+  outdated.sort((a, b) => b.age - a.age);
+
+  // Combine: never fetched first, then outdated (oldest first)
+  const toUpdate = [
+    ...neverFetched,
+    ...outdated.map(item => item.plugin)
+  ];
+
+  // Limit the number of plugins to update
+  const limited = toUpdate.slice(0, limit);
+
+  return {
+    toUpdate: limited,
+    neverFetchedCount: neverFetched.length,
+    outdatedCount: outdated.length,
+    upToDateCount: upToDate.length,
+    totalCount: plugins.length
+  };
+}
+
+/**
  * Main script
  */
 async function main() {
-  console.log('🚀 Starting GitHub stats update...\n');
+  console.log('🚀 Starting incremental GitHub stats update...\n');
 
   // Check if GH_TOKEN is set
   if (!GH_TOKEN) {
@@ -493,7 +553,16 @@ async function main() {
   if (rateLimit) {
     console.log(`📊 GitHub API Rate Limit:`);
     console.log(`   Remaining: ${rateLimit.remaining}/${rateLimit.limit}`);
-    console.log(`   Resets at: ${rateLimit.reset.toLocaleString()}\n`);
+    console.log(`   Resets at: ${rateLimit.reset.toLocaleString()}`);
+    
+    // Estimate if we have enough quota
+    const estimatedCalls = PLUGINS_PER_RUN * MAX_API_CALLS_PER_PLUGIN;
+    if (rateLimit.remaining < estimatedCalls) {
+      console.log(`   ⚠️  Warning: May not have enough quota for ${PLUGINS_PER_RUN} plugins (need ~${estimatedCalls} calls)`);
+      console.log(`   Consider reducing --limit or waiting until rate limit resets\n`);
+    } else {
+      console.log(`   ✓ Sufficient quota for ${PLUGINS_PER_RUN} plugins\n`);
+    }
   }
 
   // Load plugin data
@@ -506,65 +575,53 @@ async function main() {
   const data = JSON.parse(fs.readFileSync(PLUGINS_FILE, 'utf8'));
   console.log(`   Loaded ${data.plugins.length} plugins\n`);
 
-  // Create backup
-  console.log('💾 Creating backup...');
-  fs.writeFileSync(BACKUP_FILE, JSON.stringify(data, null, 2));
-  console.log(`   Backup saved to ${path.relative(process.cwd(), BACKUP_FILE)}\n`);
+  // Determine which plugins to update
+  console.log(`📋 Analyzing plugins (max age: ${MAX_AGE_DAYS} days, limit: ${PLUGINS_PER_RUN})...`);
+  const updateInfo = getPluginsToUpdate(data.plugins, MAX_AGE_DAYS, PLUGINS_PER_RUN);
 
-  // Filter plugins that need GitHub stats
-  const pluginsNeedingStats = data.plugins.filter(plugin => !plugin.github);
-  const totalPlugins = pluginsNeedingStats.length;
+  console.log(`   Never fetched: ${updateInfo.neverFetchedCount}`);
+  console.log(`   Outdated: ${updateInfo.outdatedCount}`);
+  console.log(`   Up to date: ${updateInfo.upToDateCount}`);
+  console.log(`   Plugins to update this run: ${updateInfo.toUpdate.length}\n`);
 
-  if (totalPlugins === 0) {
-    console.log('✅ All plugins already have GitHub stats!');
+  if (updateInfo.toUpdate.length === 0) {
+    console.log('✅ All plugins are up to date! No updates needed.');
     process.exit(0);
   }
 
-  console.log(`🔄 Updating GitHub stats for ${totalPlugins} plugins...\n`);
+  console.log(`🔄 Updating GitHub stats for ${updateInfo.toUpdate.length} plugins...\n`);
 
   let updated = 0;
   let failed = 0;
   let skipped = 0;
 
-  // Process in batches
-  for (let i = 0; i < pluginsNeedingStats.length; i += BATCH_SIZE) {
-    const batch = pluginsNeedingStats.slice(i, Math.min(i + BATCH_SIZE, pluginsNeedingStats.length));
-    const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-    const totalBatches = Math.ceil(pluginsNeedingStats.length / BATCH_SIZE);
-
-    console.log(`📦 Processing batch ${batchNum}/${totalBatches} (${batch.length} plugins)...`);
-
-    for (const plugin of batch) {
-      if (!plugin.repo) {
-        skipped++;
-        continue;
-      }
-
-      const parsed = parseRepo(plugin.repo);
-      if (!parsed) {
-        console.log(`   ⚠️  Invalid repo format: ${plugin.repo}`);
-        skipped++;
-        continue;
-      }
-
-      const stats = await fetchRepoStats(parsed.owner, parsed.repo);
-      if (stats) {
-        plugin.github = stats;
-        updated++;
-        console.log(`   ✓ ${plugin.name} (${stats.stars} ⭐)`);
-      } else {
-        failed++;
-      }
-
-      // Small delay to avoid rate limits
-      await delay(100);
+  for (const plugin of updateInfo.toUpdate) {
+    if (!plugin.repo) {
+      skipped++;
+      continue;
     }
 
-    // Delay between batches
-    if (i + BATCH_SIZE < pluginsNeedingStats.length) {
-      console.log(`   ⏸️  Waiting ${DELAY_MS}ms before next batch...\n`);
-      await delay(DELAY_MS);
+    const parsed = parseRepo(plugin.repo);
+    if (!parsed) {
+      console.log(`   ⚠️  Invalid repo format: ${plugin.repo}`);
+      skipped++;
+      continue;
     }
+
+    const stats = await fetchRepoStats(parsed.owner, parsed.repo);
+    if (stats) {
+      plugin.github = stats;
+      plugin.githubDataFetchedAt = new Date().toISOString();
+      updated++;
+      console.log(`   ✓ ${plugin.name} (${stats.stars} ⭐)`);
+    } else {
+      // Even if it failed, mark as attempted to avoid retrying immediately
+      plugin.githubDataFetchedAt = new Date().toISOString();
+      failed++;
+    }
+
+    // Small delay to avoid rate limits
+    await delay(DELAY_MS);
   }
 
   // Save updated data
@@ -578,16 +635,18 @@ async function main() {
   console.log(`   ✅ Updated: ${updated}`);
   console.log(`   ❌ Failed: ${failed}`);
   console.log(`   ⏭️  Skipped: ${skipped}`);
-  console.log(`   📈 Total: ${totalPlugins}`);
+  console.log(`   📈 Total processed: ${updateInfo.toUpdate.length}`);
+  console.log(`   🔄 Remaining to update: ${updateInfo.neverFetchedCount + updateInfo.outdatedCount - updateInfo.toUpdate.length}`);
 
   // Final rate limit check
   const finalRateLimit = await checkRateLimit();
   if (finalRateLimit) {
     console.log(`\n📊 Final Rate Limit:`);
     console.log(`   Remaining: ${finalRateLimit.remaining}/${finalRateLimit.limit}`);
+    console.log(`   Used this run: ${rateLimit ? rateLimit.remaining - finalRateLimit.remaining : 'N/A'}`);
   }
 
-  console.log('\n✅ GitHub stats update complete!');
+  console.log('\n✅ Incremental update complete!');
 }
 
 main().catch(error => {

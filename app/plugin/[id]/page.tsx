@@ -395,6 +395,105 @@ export default async function PluginPage({ params }: { params: { id: string } })
                   </div>
                 )}
 
+                {/* Health Metrics */}
+                {plugin.github.healthMetrics && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      📊 Project Health Metrics
+                    </h2>
+                    
+                    {/* Maintenance Score */}
+                    {plugin.github.healthMetrics.maintenanceScore !== undefined && (
+                      <div className="mb-6">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                            Maintenance Score
+                          </span>
+                          <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                            {plugin.github.healthMetrics.maintenanceScore}/100
+                          </span>
+                        </div>
+                        <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+                          <div
+                            className={`h-3 rounded-full ${
+                              plugin.github.healthMetrics.maintenanceScore >= 80 ? 'bg-green-500' :
+                              plugin.github.healthMetrics.maintenanceScore >= 60 ? 'bg-yellow-500' :
+                              plugin.github.healthMetrics.maintenanceScore >= 40 ? 'bg-orange-500' :
+                              'bg-red-500'
+                            }`}
+                            style={{ width: `${plugin.github.healthMetrics.maintenanceScore}%` }}
+                          />
+                        </div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                          Based on issue resolution, PR activity, and community engagement
+                        </p>
+                      </div>
+                    )}
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {/* Issue Close Rate */}
+                      {plugin.github.healthMetrics.issueCloseRate !== undefined && (
+                        <div className="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">
+                            Issue Close Rate
+                          </div>
+                          <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                            {plugin.github.healthMetrics.issueCloseRate}%
+                          </div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                            {Math.round((plugin.github.healthMetrics.issueCloseRate / 100) * ((plugin.github.openIssues || 0) + (plugin.github.closedIssues || 0)))} of {(plugin.github.openIssues || 0) + (plugin.github.closedIssues || 0)} issues resolved
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Average Issue Close Time */}
+                      {plugin.github.healthMetrics.avgIssueCloseTimeDays !== undefined && (
+                        <div className="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">
+                            Avg Issue Close Time
+                          </div>
+                          <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                            {plugin.github.healthMetrics.avgIssueCloseTimeDays} days
+                          </div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                            Based on last 30 closed issues
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Average PR Merge Time */}
+                      {plugin.github.healthMetrics.avgPRMergeTimeDays !== undefined && (
+                        <div className="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">
+                            Avg PR Merge Time
+                          </div>
+                          <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                            {plugin.github.healthMetrics.avgPRMergeTimeDays} days
+                          </div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                            Based on recent merged PRs
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Response Rate */}
+                      {plugin.github.healthMetrics.responseRate !== undefined && (
+                        <div className="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">
+                            Response Rate
+                          </div>
+                          <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                            {plugin.github.healthMetrics.responseRate}%
+                          </div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                            Issues receiving responses
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Governance & Quality */}
                 {plugin.github.governance && (
                   <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
