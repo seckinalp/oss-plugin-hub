@@ -1,30 +1,14 @@
 /**
- * Update plugin data with GitHub statistics
- * This script fetches GitHub repository stats for all plugins and updates the data file.
- * 
- * Usage:
- *   node scripts/update-github-stats.js
- * 
- * Environment Variables:
- *   GH_TOKEN - GitHub Personal Access Token (optional but recommended to avoid rate limits)
+ * Test script to fetch comprehensive GitHub data for a single plugin
+ * Usage: node scripts/test-single-plugin.js obsidian-tasks-group obsidian-tasks
  */
 
 const fs = require('fs');
 const path = require('path');
 
-// Configuration
-const DATA_DIR = path.join(__dirname, '../data');
-const PLUGINS_FILE = path.join(DATA_DIR, 'plugins.json');
-const BACKUP_FILE = path.join(DATA_DIR, 'plugins-before-github-stats.json');
-
 const GH_TOKEN = process.env.GH_TOKEN;
 const GITHUB_API = 'https://api.github.com';
-const BATCH_SIZE = 100; // Process in batches
-const DELAY_MS = 1000; // Delay between batches (1 second)
 
-/**
- * Get headers for GitHub API requests
- */
 function getHeaders() {
   const headers = {
     'Accept': 'application/vnd.github.v3+json',
@@ -37,9 +21,6 @@ function getHeaders() {
   return headers;
 }
 
-/**
- * Fetch releases
- */
 async function fetchReleases(owner, repo) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/releases?per_page=10`, {
@@ -63,13 +44,11 @@ async function fetchReleases(owner, repo) {
       latest: releases[0] || null
     };
   } catch (error) {
+    console.error('Error fetching releases:', error.message);
     return { releases: [], count: 0, latest: null };
   }
 }
 
-/**
- * Fetch contributors
- */
 async function fetchContributors(owner, repo) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/contributors?per_page=10`, {
@@ -91,13 +70,11 @@ async function fetchContributors(owner, repo) {
       top: contributors.slice(0, 5)
     };
   } catch (error) {
+    console.error('Error fetching contributors:', error.message);
     return { total: 0, top: [] };
   }
 }
 
-/**
- * Fetch commit activity
- */
 async function fetchCommitActivity(owner, repo) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/stats/commit_activity`, {
@@ -119,13 +96,11 @@ async function fetchCommitActivity(owner, repo) {
       recentActivity
     };
   } catch (error) {
+    console.error('Error fetching commit activity:', error.message);
     return null;
   }
 }
 
-/**
- * Fetch language distribution
- */
 async function fetchLanguageDistribution(owner, repo) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/languages`, {
@@ -136,13 +111,11 @@ async function fetchLanguageDistribution(owner, repo) {
 
     return await response.json();
   } catch (error) {
+    console.error('Error fetching languages:', error.message);
     return null;
   }
 }
 
-/**
- * Check if file exists
- */
 async function fileExists(owner, repo, path) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/contents/${path}`, {
@@ -154,10 +127,8 @@ async function fileExists(owner, repo, path) {
   }
 }
 
-/**
- * Fetch governance files status
- */
 async function fetchGovernance(owner, repo) {
+  console.log('   Checking governance files...');
   const checks = await Promise.all([
     fileExists(owner, repo, 'CONTRIBUTING.md').catch(() => fileExists(owner, repo, '.github/CONTRIBUTING.md')),
     fileExists(owner, repo, 'CODE_OF_CONDUCT.md').catch(() => fileExists(owner, repo, '.github/CODE_OF_CONDUCT.md')),
@@ -173,9 +144,6 @@ async function fetchGovernance(owner, repo) {
   };
 }
 
-/**
- * Fetch dependencies from package.json
- */
 async function fetchDependencies(owner, repo) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/contents/package.json`, {
@@ -199,13 +167,11 @@ async function fetchDependencies(owner, repo) {
 
     return { deps, scripts };
   } catch (error) {
+    console.error('Error fetching dependencies:', error.message);
     return { deps: null, scripts: [] };
   }
 }
 
-/**
- * Fetch workflows
- */
 async function fetchWorkflows(owner, repo) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/contents/.github/workflows`, {
@@ -224,13 +190,11 @@ async function fetchWorkflows(owner, repo) {
       count: workflowFiles.length
     };
   } catch (error) {
+    console.error('Error fetching workflows:', error.message);
     return { hasWorkflows: false, count: 0 };
   }
 }
 
-/**
- * Fetch funding information
- */
 async function fetchFunding(owner, repo) {
   try {
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}/contents/.github/FUNDING.yml`, {
@@ -279,13 +243,11 @@ async function fetchFunding(owner, repo) {
 
     return fundingLinks;
   } catch (error) {
+    console.error('Error fetching funding:', error.message);
     return [];
   }
 }
 
-/**
- * Fetch closed issues count
- */
 async function fetchClosedIssuesCount(owner, repo) {
   try {
     const response = await fetch(
@@ -298,13 +260,11 @@ async function fetchClosedIssuesCount(owner, repo) {
     const data = await response.json();
     return data.total_count || 0;
   } catch (error) {
+    console.error('Error fetching closed issues:', error.message);
     return 0;
   }
 }
 
-/**
- * Fetch PR counts
- */
 async function fetchPRCounts(owner, repo) {
   try {
     const [openResponse, closedResponse] = await Promise.all([
@@ -326,33 +286,29 @@ async function fetchPRCounts(owner, repo) {
       closed: closedData.total_count || 0
     };
   } catch (error) {
+    console.error('Error fetching PR counts:', error.message);
     return { open: 0, closed: 0 };
   }
 }
 
-/**
- * Fetch comprehensive repository statistics from GitHub API
- */
-async function fetchRepoStats(owner, repo) {
+async function fetchComprehensiveStats(owner, repo) {
+  console.log(`\n🔍 Fetching comprehensive GitHub stats for ${owner}/${repo}...\n`);
+
   try {
+    // Fetch main repo data
+    console.log('1. Fetching repository metadata...');
     const response = await fetch(`${GITHUB_API}/repos/${owner}/${repo}`, {
       headers: getHeaders(),
     });
 
     if (!response.ok) {
-      if (response.status === 404) {
-        console.log(`   Repository not found: ${owner}/${repo}`);
-      } else if (response.status === 429) {
-        console.log(`   Rate limit exceeded for ${owner}/${repo}`);
-      } else {
-        console.log(`   Error ${response.status} for ${owner}/${repo}`);
-      }
+      console.error(`❌ Failed to fetch repository: ${response.status}`);
       return null;
     }
 
     const data = await response.json();
+    console.log('   ✓ Repository metadata fetched');
 
-    // Basic stats from main endpoint
     const basicStats = {
       stars: data.stargazers_count || 0,
       forks: data.forks_count || 0,
@@ -373,30 +329,49 @@ async function fetchRepoStats(owner, repo) {
       description: data.description || null,
     };
 
-    // Fetch comprehensive data in parallel
-    const [
-      releases,
-      contributors,
-      commitActivity,
-      languageDistribution,
-      governance,
-      dependencies,
-      workflows,
-      funding,
-      closedIssues,
-      prCounts
-    ] = await Promise.all([
-      fetchReleases(owner, repo),
-      fetchContributors(owner, repo),
-      fetchCommitActivity(owner, repo),
-      fetchLanguageDistribution(owner, repo),
-      fetchGovernance(owner, repo),
-      fetchDependencies(owner, repo),
-      fetchWorkflows(owner, repo),
-      fetchFunding(owner, repo),
-      fetchClosedIssuesCount(owner, repo),
-      fetchPRCounts(owner, repo)
-    ]);
+    console.log(`   ⭐ Stars: ${basicStats.stars}`);
+    console.log(`   🍴 Forks: ${basicStats.forks}`);
+
+    // Fetch comprehensive data
+    console.log('\n2. Fetching releases...');
+    const releases = await fetchReleases(owner, repo);
+    console.log(`   ✓ Found ${releases.count} releases`);
+
+    console.log('\n3. Fetching contributors...');
+    const contributors = await fetchContributors(owner, repo);
+    console.log(`   ✓ Found ${contributors.total} contributors`);
+
+    console.log('\n4. Fetching commit activity...');
+    const commitActivity = await fetchCommitActivity(owner, repo);
+    console.log(`   ✓ Commit activity: ${commitActivity ? 'available' : 'unavailable'}`);
+
+    console.log('\n5. Fetching language distribution...');
+    const languageDistribution = await fetchLanguageDistribution(owner, repo);
+    console.log(`   ✓ Languages: ${languageDistribution ? Object.keys(languageDistribution).length : 0}`);
+
+    console.log('\n6. Checking governance files...');
+    const governance = await fetchGovernance(owner, repo);
+    console.log(`   ✓ Governance checked`);
+
+    console.log('\n7. Fetching dependencies...');
+    const dependencies = await fetchDependencies(owner, repo);
+    console.log(`   ✓ Dependencies: ${dependencies.deps ? 'found' : 'not found'}`);
+
+    console.log('\n8. Checking CI/CD workflows...');
+    const workflows = await fetchWorkflows(owner, repo);
+    console.log(`   ✓ Workflows: ${workflows.count}`);
+
+    console.log('\n9. Fetching funding information...');
+    const funding = await fetchFunding(owner, repo);
+    console.log(`   ✓ Funding links: ${funding.length}`);
+
+    console.log('\n10. Fetching closed issues count...');
+    const closedIssues = await fetchClosedIssuesCount(owner, repo);
+    console.log(`   ✓ Closed issues: ${closedIssues}`);
+
+    console.log('\n11. Fetching PR counts...');
+    const prCounts = await fetchPRCounts(owner, repo);
+    console.log(`   ✓ PRs - Open: ${prCounts.open}, Closed: ${prCounts.closed}`);
 
     return {
       ...basicStats,
@@ -419,179 +394,71 @@ async function fetchRepoStats(owner, repo) {
       closedPullRequests: prCounts.closed
     };
   } catch (error) {
-    console.error(`   Exception fetching ${owner}/${repo}:`, error.message);
+    console.error(`❌ Error:`, error.message);
     return null;
   }
 }
 
-/**
- * Check GitHub API rate limit
- */
-async function checkRateLimit() {
-  try {
-    const headers = {
-      'Accept': 'application/vnd.github.v3+json',
-    };
+async function updatePluginData(pluginId, githubStats) {
+  const pluginsFile = path.join(__dirname, '../data/plugins.json');
+  const data = JSON.parse(fs.readFileSync(pluginsFile, 'utf8'));
 
-    if (GH_TOKEN) {
-      headers['Authorization'] = `token ${GH_TOKEN}`;
-    }
-
-    const response = await fetch(`${GITHUB_API}/rate_limit`, { headers });
-
-    if (!response.ok) {
-      return null;
-    }
-
-    const data = await response.json();
-    const core = data.resources.core;
-
-    return {
-      limit: core.limit,
-      remaining: core.remaining,
-      reset: new Date(core.reset * 1000),
-    };
-  } catch (error) {
-    console.error('Error checking rate limit:', error.message);
-    return null;
+  const pluginIndex = data.plugins.findIndex(p => p.id === pluginId);
+  if (pluginIndex === -1) {
+    console.error(`\n❌ Plugin "${pluginId}" not found in plugins.json`);
+    return;
   }
+
+  data.plugins[pluginIndex].github = githubStats;
+  data.lastUpdated = new Date().toISOString();
+
+  fs.writeFileSync(pluginsFile, JSON.stringify(data, null, 2));
+  console.log(`\n✅ Updated plugins.json with comprehensive GitHub stats!`);
 }
 
-/**
- * Parse repository string into owner and repo
- */
-function parseRepo(repoString) {
-  const parts = repoString.split('/');
-  if (parts.length !== 2) {
-    return null;
-  }
-  return { owner: parts[0], repo: parts[1] };
-}
-
-/**
- * Delay execution
- */
-function delay(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-/**
- * Main script
- */
 async function main() {
-  console.log('🚀 Starting GitHub stats update...\n');
+  const owner = process.argv[2] || 'obsidian-tasks-group';
+  const repo = process.argv[3] || 'obsidian-tasks';
+  const pluginId = 'obsidian-tasks-plugin';
 
-  // Check if GH_TOKEN is set
+  console.log('🚀 Testing Comprehensive GitHub API Data Fetching');
+  console.log('================================================\n');
+
   if (!GH_TOKEN) {
     console.log('⚠️  Warning: GH_TOKEN not set. Rate limits will be lower.');
-    console.log('   Authenticated: 5,000 requests/hour');
-    console.log('   Unauthenticated: 60 requests/hour\n');
   }
 
-  // Check rate limit
-  const rateLimit = await checkRateLimit();
-  if (rateLimit) {
-    console.log(`📊 GitHub API Rate Limit:`);
-    console.log(`   Remaining: ${rateLimit.remaining}/${rateLimit.limit}`);
-    console.log(`   Resets at: ${rateLimit.reset.toLocaleString()}\n`);
-  }
+  const stats = await fetchComprehensiveStats(owner, repo);
 
-  // Load plugin data
-  if (!fs.existsSync(PLUGINS_FILE)) {
-    console.error('❌ Error: plugins.json not found. Run fetch-plugins.js first.');
+  if (stats) {
+    console.log('\n📊 Summary:');
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    console.log(`Repository: ${owner}/${repo}`);
+    console.log(`Stars: ${stats.stars}`);
+    console.log(`Forks: ${stats.forks}`);
+    console.log(`Open Issues: ${stats.openIssues}`);
+    console.log(`Closed Issues: ${stats.closedIssues}`);
+    console.log(`Contributors: ${stats.totalContributors}`);
+    console.log(`Latest Version: ${stats.currentVersion || 'N/A'}`);
+    console.log(`Has CI/CD: ${stats.hasWorkflows ? 'Yes' : 'No'} (${stats.workflowCount} workflows)`);
+    console.log(`Funding Links: ${stats.fundingLinks?.length || 0}`);
+    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+
+    await updatePluginData(pluginId, stats);
+
+    console.log('\n🎉 Done! Now you can:');
+    console.log('1. Commit the changes to plugins.json');
+    console.log('2. Push to GitHub');
+    console.log('3. Vercel will automatically deploy');
+    console.log('4. Visit: /plugin/obsidian-tasks-plugin to see all the data!\n');
+  } else {
+    console.error('\n❌ Failed to fetch comprehensive stats');
     process.exit(1);
   }
-
-  console.log('📥 Loading plugin data...');
-  const data = JSON.parse(fs.readFileSync(PLUGINS_FILE, 'utf8'));
-  console.log(`   Loaded ${data.plugins.length} plugins\n`);
-
-  // Create backup
-  console.log('💾 Creating backup...');
-  fs.writeFileSync(BACKUP_FILE, JSON.stringify(data, null, 2));
-  console.log(`   Backup saved to ${path.relative(process.cwd(), BACKUP_FILE)}\n`);
-
-  // Filter plugins that need GitHub stats
-  const pluginsNeedingStats = data.plugins.filter(plugin => !plugin.github);
-  const totalPlugins = pluginsNeedingStats.length;
-
-  if (totalPlugins === 0) {
-    console.log('✅ All plugins already have GitHub stats!');
-    process.exit(0);
-  }
-
-  console.log(`🔄 Updating GitHub stats for ${totalPlugins} plugins...\n`);
-
-  let updated = 0;
-  let failed = 0;
-  let skipped = 0;
-
-  // Process in batches
-  for (let i = 0; i < pluginsNeedingStats.length; i += BATCH_SIZE) {
-    const batch = pluginsNeedingStats.slice(i, Math.min(i + BATCH_SIZE, pluginsNeedingStats.length));
-    const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-    const totalBatches = Math.ceil(pluginsNeedingStats.length / BATCH_SIZE);
-
-    console.log(`📦 Processing batch ${batchNum}/${totalBatches} (${batch.length} plugins)...`);
-
-    for (const plugin of batch) {
-      if (!plugin.repo) {
-        skipped++;
-        continue;
-      }
-
-      const parsed = parseRepo(plugin.repo);
-      if (!parsed) {
-        console.log(`   ⚠️  Invalid repo format: ${plugin.repo}`);
-        skipped++;
-        continue;
-      }
-
-      const stats = await fetchRepoStats(parsed.owner, parsed.repo);
-      if (stats) {
-        plugin.github = stats;
-        updated++;
-        console.log(`   ✓ ${plugin.name} (${stats.stars} ⭐)`);
-      } else {
-        failed++;
-      }
-
-      // Small delay to avoid rate limits
-      await delay(100);
-    }
-
-    // Delay between batches
-    if (i + BATCH_SIZE < pluginsNeedingStats.length) {
-      console.log(`   ⏸️  Waiting ${DELAY_MS}ms before next batch...\n`);
-      await delay(DELAY_MS);
-    }
-  }
-
-  // Save updated data
-  console.log('\n💾 Saving updated plugin data...');
-  data.lastUpdated = new Date().toISOString();
-  fs.writeFileSync(PLUGINS_FILE, JSON.stringify(data, null, 2));
-  console.log(`   Saved to ${path.relative(process.cwd(), PLUGINS_FILE)}`);
-
-  // Summary
-  console.log('\n📊 Summary:');
-  console.log(`   ✅ Updated: ${updated}`);
-  console.log(`   ❌ Failed: ${failed}`);
-  console.log(`   ⏭️  Skipped: ${skipped}`);
-  console.log(`   📈 Total: ${totalPlugins}`);
-
-  // Final rate limit check
-  const finalRateLimit = await checkRateLimit();
-  if (finalRateLimit) {
-    console.log(`\n📊 Final Rate Limit:`);
-    console.log(`   Remaining: ${finalRateLimit.remaining}/${finalRateLimit.limit}`);
-  }
-
-  console.log('\n✅ GitHub stats update complete!');
 }
 
 main().catch(error => {
-  console.error('\n❌ Error:', error);
+  console.error('\n❌ Fatal error:', error);
   process.exit(1);
 });
 

@@ -58,10 +58,9 @@ All notable changes to this project will be documented in this file.
 - Search and filter functionality
 - Responsive grid layout
 - Dark mode support
-- RSS feed generation for new plugins
 - GitHub Actions for daily automated updates
 - Vercel deployment configuration
-- Comprehensive documentation (README, QUICK_START, DEPLOYMENT, CONTRIBUTING)
+- Comprehensive documentation
 
 #### Features
 - Browse 2,636+ Obsidian plugins
@@ -70,7 +69,6 @@ All notable changes to this project will be documented in this file.
 - Beautiful, modern UI with gradient background
 - Plugin cards with GitHub repository links
 - Daily automated data updates
-- RSS feed for plugin notifications
 
 ---
 

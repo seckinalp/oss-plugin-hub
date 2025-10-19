@@ -82,7 +82,7 @@ oss-plugin-hub/
 ├── types/           # TypeScript type definitions
 ├── scripts/         # Data fetching and processing scripts
 ├── data/            # Plugin data storage (JSON files)
-├── public/          # Static assets (RSS feed, etc.)
+├── public/          # Static assets
 └── .github/         # GitHub Actions workflows
 ```
 
@@ -111,7 +111,6 @@ Before submitting a PR:
 2. Build production version: `npm run build`
 3. Run linter: `npm run lint`
 4. Test data fetching: `npm run fetch-plugins`
-5. Test RSS generation: `npm run generate-rss`
 
 ## Pull Request Process
 
@@ -128,12 +127,11 @@ Before submitting a PR:
 
 Want to add support for VS Code, JetBrains, Sublime Text, or other platforms?
 
-Check out **[ADDING_PLATFORMS.md](./ADDING_PLATFORMS.md)** for a complete guide!
-
 The app is designed to make adding new platforms easy:
 1. Create a fetch script for the platform
 2. Add it to the main fetch script
-3. Done! The UI automatically adapts
+3. Update the plugin types if needed
+4. Done! The UI automatically adapts
 
 ## Areas for Contribution
 

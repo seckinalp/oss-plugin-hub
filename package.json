@@ -9,9 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "fetch-plugins": "node scripts/fetch-plugins.js",
-    "generate-rss": "node scripts/generate-rss.js",
     "update-github-stats": "node scripts/update-github-stats.js",
-    "update-data": "npm run fetch-plugins && npm run generate-rss"
+    "update-data": "npm run fetch-plugins && npm run update-github-stats"
   },
   "dependencies": {
     "next": "^14.2.0",

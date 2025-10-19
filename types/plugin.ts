@@ -1,16 +1,66 @@
 export type Platform = 'obsidian' | 'vscode' | 'jetbrains' | 'sublime' | 'atom' | 'vim' | 'other';
 
+export interface Contributor {
+  login: string;
+  contributions: number;
+  avatar_url: string;
+  html_url: string;
+}
+
+export interface Release {
+  tag_name: string;
+  name: string;
+  published_at: string;
+  html_url: string;
+  body?: string;
+}
+
+export interface LanguageDistribution {
+  [language: string]: number; // bytes of code
+}
+
+export interface GovernanceFiles {
+  hasContributingGuide: boolean;
+  hasCodeOfConduct: boolean;
+  hasSecurityPolicy: boolean;
+  hasLicense: boolean;
+}
+
+export interface Dependencies {
+  dependencies?: Record<string, string>;
+  devDependencies?: Record<string, string>;
+  peerDependencies?: Record<string, string>;
+}
+
+export interface CommitActivity {
+  totalCommits?: number;
+  commitFrequency?: number; // commits per week (last 52 weeks average)
+  recentActivity?: number[]; // last 4 weeks
+}
+
+export interface FundingLink {
+  platform: string;
+  url: string;
+}
+
 export interface GitHubStats {
+  // Basic metrics
   stars: number;
   forks: number;
   openIssues: number;
+  closedIssues?: number;
+  openPullRequests?: number;
+  closedPullRequests?: number;
   watchers: number;
   lastUpdated: string;
   createdAt: string;
+  
+  // Repository info
   license: string | null;
   homepage: string | null;
   topics: string[];
   language: string | null;
+  languageDistribution?: LanguageDistribution;
   size: number;
   defaultBranch: string;
   archived: boolean;
@@ -18,6 +68,33 @@ export interface GitHubStats {
   hasWiki: boolean;
   hasPages: boolean;
   description: string | null;
+  
+  // Release information
+  releaseCount?: number;
+  currentVersion?: string;
+  latestReleaseDate?: string;
+  latestRelease?: Release;
+  
+  // Contributors
+  totalContributors?: number;
+  topContributors?: Contributor[];
+  
+  // Commit activity
+  commitActivity?: CommitActivity;
+  
+  // Governance
+  governance?: GovernanceFiles;
+  
+  // Dependencies (from package.json)
+  dependencies?: Dependencies;
+  buildScripts?: string[];
+  
+  // CI/CD
+  hasWorkflows?: boolean;
+  workflowCount?: number;
+  
+  // Sponsorship
+  fundingLinks?: FundingLink[];
 }
 
 export interface BasePlugin {

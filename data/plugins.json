@@ -1374,7 +1374,166 @@
       "author": "Clare Macrae and Ilyas Landikov (created by Martin Schenck)",
       "description": "Track tasks across your vault. Supports due dates, recurring tasks, done dates, sub-set of checklist items, and filtering.",
       "repo": "obsidian-tasks-group/obsidian-tasks",
-      "platform": "obsidian"
+      "platform": "obsidian",
+      "github": {
+        "stars": 3192,
+        "forks": 300,
+        "openIssues": 254,
+        "watchers": 3192,
+        "lastUpdated": "2025-10-14T17:04:10Z",
+        "createdAt": "2021-03-19T19:42:53Z",
+        "license": "MIT License",
+        "homepage": "https://publish.obsidian.md/tasks/",
+        "topics": [
+          "obsidian-plugin",
+          "obsidian-tasks",
+          "task-management",
+          "task-manager",
+          "todo"
+        ],
+        "language": "TypeScript",
+        "size": 49531,
+        "defaultBranch": "main",
+        "archived": false,
+        "disabled": false,
+        "hasWiki": true,
+        "hasPages": true,
+        "description": "Task management for the Obsidian knowledge base.",
+        "releaseCount": 10,
+        "currentVersion": "7.22.0",
+        "latestReleaseDate": "2025-09-28T10:08:25Z",
+        "latestRelease": {
+          "tag_name": "7.22.0",
+          "name": "7.22.0: Korean translation; Streamline handling edits of Global Filter and Global Query; bug fixes",
+          "published_at": "2025-09-28T10:08:25Z",
+          "html_url": "https://github.com/obsidian-tasks-group/obsidian-tasks/releases/tag/7.22.0",
+          "body": "# 7.22.0 Release Notes\r\n\r\n## What's Changed\r\n\r\nPlease run the **Reload app without saving** command or **quit and restart Obsidian** after updating the plugin. Thank you.\r\n\r\nHere are the most notable user-visible changes.\r\n\r\n**🌟 Features**\r\n\r\n* feat: redraw search results after global query is edited by @ilandikov and @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3596\r\n* feat: re-read vault and redraw search results after global filter is edited by @ilandikov and @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3597\r\n\r\n**💪 Fixes**\r\n\r\n* fix: No longer break recurring tasks if scheduled dates are removed by @chmac in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3592\r\n* fix: Enable themes to modify indentation in Live Preview (#3603) by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3610\r\n* fix: Update code & docs for new ITS Theme docs & status by @Happypig375 in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3611\r\n* fix: prevent mouse cursor becoming stuck in \"scroll\" mode when middle clicking a task backlink by @NatKarmios in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3628\r\n* fix: Prevent native menu hiding Status context menu (#2739,#3582) by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3629\r\n\r\n**🌍 Translations**\r\n\r\n* i18n: add Korean localization support by @Hong-Seungmin in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3609\r\n\r\n**📖 Documentation**\r\n\r\n* docs: Document access to nested and object properties by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3581\r\n* docs: Refine 'Priority of Dates' section for recurring tasks by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3598\r\n* docs: String \"return\" in function returns \"undefined\" (#3625) by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3626\r\n\r\n**🛠️ Behind the scenes**\r\n\r\n* refactor: Add failing test and prepare to fix #3553 by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3558\r\n* refactor: reduce memory usage with dynamic destination path by @ilandikov in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3586\r\n* refactor: Remove repetition from menu-handling code by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3630\r\n* test: Refactor loading of test data, to simplify code by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3631\r\n* test: Remove uses of a singleton in mocked Obsidian functions by @claremacrae in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3633\r\n\r\n## New Contributors\r\n\r\n* @Hong-Seungmin made their first contribution in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3609\r\n* @Happypig375 made their first contribution in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3611\r\n* @NatKarmios made their first contribution in https://github.com/obsidian-tasks-group/obsidian-tasks/pull/3628\r\n\r\n**Full Changelog** (including changes too small to note above, and that do not affect the behaviour of the plugin itself):\r\n- <https://github.com/obsidian-tasks-group/obsidian-tasks/compare/7.21.0...7.22.0>\r\n\r\n**🙏 Support Tasks development**\r\n- <https://github.com/sponsors/claremacrae>\r\n"
+        },
+        "totalContributors": 10,
+        "topContributors": [
+          {
+            "login": "claremacrae",
+            "contributions": 6414,
+            "avatar_url": "https://avatars.githubusercontent.com/u/4840096?v=4",
+            "html_url": "https://github.com/claremacrae"
+          },
+          {
+            "login": "ilandikov",
+            "contributions": 1580,
+            "avatar_url": "https://avatars.githubusercontent.com/u/93825870?v=4",
+            "html_url": "https://github.com/ilandikov"
+          },
+          {
+            "login": "schemar",
+            "contributions": 192,
+            "avatar_url": "https://avatars.githubusercontent.com/u/1196244?v=4",
+            "html_url": "https://github.com/schemar"
+          },
+          {
+            "login": "dependabot[bot]",
+            "contributions": 113,
+            "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+            "html_url": "https://github.com/apps/dependabot"
+          },
+          {
+            "login": "kedestin",
+            "contributions": 59,
+            "avatar_url": "https://avatars.githubusercontent.com/u/26238343?v=4",
+            "html_url": "https://github.com/kedestin"
+          }
+        ],
+        "commitActivity": null,
+        "languageDistribution": {
+          "TypeScript": 2156003,
+          "HTML": 54406,
+          "Svelte": 27971,
+          "JavaScript": 17096,
+          "SCSS": 14230,
+          "CSS": 3961,
+          "Shell": 3645,
+          "PowerShell": 1636,
+          "Python": 1328,
+          "Batchfile": 349
+        },
+        "governance": {
+          "hasContributingGuide": true,
+          "hasCodeOfConduct": true,
+          "hasSecurityPolicy": false,
+          "hasLicense": true
+        },
+        "dependencies": {
+          "dependencies": {
+            "@floating-ui/dom": "^1.6.12",
+            "boon-js": "^2.0.5",
+            "chrono-node": "2.3.9",
+            "eventemitter2": "^6.4.5",
+            "flatpickr": "^4.6.13",
+            "i18next": "^24.2.1",
+            "mustache": "^4.2.0",
+            "mustache-validator": "^0.2.0",
+            "rrule": "^2.8.1"
+          },
+          "devDependencies": {
+            "@codemirror/view": "^6.2.0",
+            "@evilmartians/lefthook": "^1.7.2",
+            "@testing-library/jest-dom": "^6.5.0",
+            "@testing-library/svelte": "^3.2.2",
+            "@tsconfig/svelte": "^3.0.0",
+            "@types/jest": "^29.5.8",
+            "@types/mustache": "^4.2.5",
+            "@types/prettier": "^2.7.3",
+            "@typescript-eslint/eslint-plugin": "^5.59.8",
+            "@typescript-eslint/parser": "^5.59.8",
+            "approvals": "^6.2.4",
+            "async-mutex": "^0.5.0",
+            "builtin-modules": "^3.3.0",
+            "esbuild": "0.15.6",
+            "esbuild-sass-plugin": "^3.2.0",
+            "esbuild-svelte": "^0.8.2",
+            "eslint": "^8.57.0",
+            "eslint-config-prettier": "^8.8.0",
+            "eslint-plugin-import": "^2.27.5",
+            "eslint-plugin-prettier": "^4.2.1",
+            "eslint-plugin-svelte3": "^4.0.0",
+            "i18next-parser": "^9.1.0",
+            "jest": "^29.7.0",
+            "jest-environment-jsdom": "^30.0.4",
+            "madge": "^8.0.0",
+            "markdownlint-cli2": "^0.13.0",
+            "moment": "^2.29.4",
+            "obsidian": "^1.4.0",
+            "obsidian-typings": "^2.11.1",
+            "prettier": "^2.8.8",
+            "prettier-plugin-svelte": "^2.10.1",
+            "svelte": "^3.59.1",
+            "svelte-check": "^3.8.4",
+            "svelte-eslint-parser": "^0.43.0",
+            "svelte-jester": "^2.3.2",
+            "svelte-preprocess": "^5.0.4",
+            "ts-jest": "^29.2.5",
+            "tslib": "^2.5.2",
+            "typedoc": "^0.27.3",
+            "typedoc-plugin-mdn-links": "^4.0.4",
+            "typedoc-umlclass": "^0.10.1",
+            "typescript": "^5.0.4"
+          }
+        },
+        "buildScripts": [
+          "build",
+          "build:dev"
+        ],
+        "hasWorkflows": true,
+        "workflowCount": 3,
+        "fundingLinks": [
+          {
+            "platform": "github",
+            "url": "https://github.com/sponsors/[claremacrae]"
+          }
+        ],
+        "closedIssues": 1030,
+        "openPullRequests": 19,
+        "closedPullRequests": 1476
+      }
     },
     {
       "id": "readwise-mirror",
@@ -21105,7 +21264,7 @@
       "platform": "obsidian"
     }
   ],
-  "lastUpdated": "2025-10-11T01:47:01.485Z",
+  "lastUpdated": "2025-10-19T12:33:38.863Z",
   "totalCount": 2638,
   "newPlugins": [
     "tasks-map",

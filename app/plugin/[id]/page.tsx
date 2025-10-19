@@ -51,7 +51,7 @@ async function getPlugin(id: string): Promise<BasePlugin | null> {
     if (!plugin.github && plugin.repo) {
       const parsed = parseRepo(plugin.repo);
       if (parsed) {
-        const stats = await fetchRepoStats(parsed.owner, parsed.repo);
+        const stats = await fetchRepoStats(parsed.owner, parsed.repo, true); // Fetch comprehensive stats
         if (stats) {
           plugin.github = stats;
         }
@@ -110,37 +110,333 @@ export default async function PluginPage({ params }: { params: { id: string } })
           <div className="lg:col-span-2 space-y-6">
             {/* Stats */}
             {plugin.github && (
-              <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
-                <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
-                  Repository Statistics
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
-                      {formatNumber(plugin.github.stars)}
+              <>
+                <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                  <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                    Repository Statistics
+                  </h2>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
+                        {formatNumber(plugin.github.stars)}
+                      </div>
+                      <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">⭐ Stars</div>
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">⭐ Stars</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
-                      {formatNumber(plugin.github.forks)}
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
+                        {formatNumber(plugin.github.forks)}
+                      </div>
+                      <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">🍴 Forks</div>
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">🍴 Forks</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
-                      {plugin.github.openIssues}
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
+                        {plugin.github.openIssues}
+                      </div>
+                      <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">🐛 Open Issues</div>
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">🐛 Issues</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
-                      {formatNumber(plugin.github.watchers)}
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
+                        {formatNumber(plugin.github.watchers)}
+                      </div>
+                      <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">👀 Watchers</div>
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">👀 Watchers</div>
                   </div>
+                  
+                  {/* Additional Stats Row */}
+                  {(plugin.github.closedIssues || plugin.github.openPullRequests || plugin.github.closedPullRequests || plugin.github.totalContributors) && (
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+                      {plugin.github.closedIssues !== undefined && (
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                            {formatNumber(plugin.github.closedIssues)}
+                          </div>
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">✅ Closed Issues</div>
+                        </div>
+                      )}
+                      {plugin.github.openPullRequests !== undefined && (
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                            {formatNumber(plugin.github.openPullRequests)}
+                          </div>
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">🔄 Open PRs</div>
+                        </div>
+                      )}
+                      {plugin.github.closedPullRequests !== undefined && (
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                            {formatNumber(plugin.github.closedPullRequests)}
+                          </div>
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">✔️ Closed PRs</div>
+                        </div>
+                      )}
+                      {plugin.github.totalContributors !== undefined && plugin.github.totalContributors > 0 && (
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                            {formatNumber(plugin.github.totalContributors)}
+                          </div>
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">👥 Contributors</div>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
-              </div>
+
+                {/* Releases */}
+                {plugin.github.latestRelease && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      Latest Release
+                    </h2>
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3 className="text-lg font-medium text-slate-900 dark:text-white">
+                            {plugin.github.latestRelease.name}
+                          </h3>
+                          <p className="text-sm text-slate-600 dark:text-slate-400">
+                            Version {plugin.github.currentVersion}
+                          </p>
+                        </div>
+                        <a
+                          href={plugin.github.latestRelease.html_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 text-sm"
+                        >
+                          View Release →
+                        </a>
+                      </div>
+                      <p className="text-sm text-slate-600 dark:text-slate-400">
+                        Released <RelativeTime dateString={plugin.github.latestReleaseDate!} />
+                      </p>
+                      {plugin.github.releaseCount && plugin.github.releaseCount > 1 && (
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
+                          {plugin.github.releaseCount} total releases
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Contributors */}
+                {plugin.github.topContributors && plugin.github.topContributors.length > 0 && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      Top Contributors
+                    </h2>
+                    <div className="space-y-3">
+                      {plugin.github.topContributors.map((contributor) => (
+                        <a
+                          key={contributor.login}
+                          href={contributor.html_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                        >
+                          <img
+                            src={contributor.avatar_url}
+                            alt={contributor.login}
+                            className="w-10 h-10 rounded-full"
+                          />
+                          <div className="flex-1">
+                            <div className="font-medium text-slate-900 dark:text-white">
+                              {contributor.login}
+                            </div>
+                            <div className="text-sm text-slate-600 dark:text-slate-400">
+                              {contributor.contributions} contributions
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Commit Activity */}
+                {plugin.github.commitActivity && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      Commit Activity
+                    </h2>
+                    <div className="grid grid-cols-2 gap-4">
+                      {plugin.github.commitActivity.totalCommits && (
+                        <div>
+                          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                            {formatNumber(plugin.github.commitActivity.totalCommits)}
+                          </div>
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                            Total Commits (52 weeks)
+                          </div>
+                        </div>
+                      )}
+                      {plugin.github.commitActivity.commitFrequency && (
+                        <div>
+                          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                            {plugin.github.commitActivity.commitFrequency}
+                          </div>
+                          <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                            Commits/Week (Average)
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    {plugin.github.commitActivity.recentActivity && (
+                      <div className="mt-4">
+                        <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
+                          Recent Activity (Last 4 Weeks)
+                        </p>
+                        <div className="flex gap-2">
+                          {plugin.github.commitActivity.recentActivity.map((count, i) => (
+                            <div
+                              key={i}
+                              className="flex-1 bg-slate-100 dark:bg-slate-700 rounded"
+                              style={{ height: `${Math.max(20, Math.min(100, count * 2))}px` }}
+                              title={`Week ${i + 1}: ${count} commits`}
+                            >
+                              <div className="w-full h-full bg-indigo-500 rounded flex items-end justify-center">
+                                <span className="text-xs text-white mb-1">{count}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Language Distribution */}
+                {plugin.github.languageDistribution && Object.keys(plugin.github.languageDistribution).length > 0 && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      Language Distribution
+                    </h2>
+                    <div className="space-y-3">
+                      {(() => {
+                        const total = Object.values(plugin.github.languageDistribution!).reduce((a, b) => a + b, 0);
+                        return Object.entries(plugin.github.languageDistribution!)
+                          .sort(([, a], [, b]) => b - a)
+                          .map(([lang, bytes]) => {
+                            const percentage = ((bytes / total) * 100).toFixed(1);
+                            return (
+                              <div key={lang}>
+                                <div className="flex justify-between text-sm mb-1">
+                                  <span className="text-slate-900 dark:text-white">{lang}</span>
+                                  <span className="text-slate-600 dark:text-slate-400">{percentage}%</span>
+                                </div>
+                                <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                  <div
+                                    className="bg-indigo-600 dark:bg-indigo-400 h-2 rounded-full"
+                                    style={{ width: `${percentage}%` }}
+                                  />
+                                </div>
+                              </div>
+                            );
+                          });
+                      })()}
+                    </div>
+                  </div>
+                )}
+
+                {/* Dependencies */}
+                {plugin.github.dependencies && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      Dependencies
+                    </h2>
+                    <div className="space-y-4">
+                      {plugin.github.dependencies.dependencies && Object.keys(plugin.github.dependencies.dependencies).length > 0 && (
+                        <div>
+                          <h3 className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                            Production Dependencies ({Object.keys(plugin.github.dependencies.dependencies).length})
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {Object.entries(plugin.github.dependencies.dependencies).slice(0, 10).map(([name, version]) => (
+                              <span
+                                key={name}
+                                className="inline-block px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs"
+                              >
+                                {name}@{version}
+                              </span>
+                            ))}
+                            {Object.keys(plugin.github.dependencies.dependencies).length > 10 && (
+                              <span className="inline-block px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 rounded text-xs">
+                                +{Object.keys(plugin.github.dependencies.dependencies).length - 10} more
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                      {plugin.github.dependencies.devDependencies && Object.keys(plugin.github.dependencies.devDependencies).length > 0 && (
+                        <div>
+                          <h3 className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+                            Dev Dependencies ({Object.keys(plugin.github.dependencies.devDependencies).length})
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {Object.entries(plugin.github.dependencies.devDependencies).slice(0, 10).map(([name, version]) => (
+                              <span
+                                key={name}
+                                className="inline-block px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-xs"
+                              >
+                                {name}@{version}
+                              </span>
+                            ))}
+                            {Object.keys(plugin.github.dependencies.devDependencies).length > 10 && (
+                              <span className="inline-block px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 rounded text-xs">
+                                +{Object.keys(plugin.github.dependencies.devDependencies).length - 10} more
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Governance & Quality */}
+                {plugin.github.governance && (
+                  <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                    <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+                      Repository Health
+                    </h2>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="flex items-center gap-2">
+                        <span className={plugin.github.governance.hasLicense ? 'text-green-600' : 'text-slate-400'}>
+                          {plugin.github.governance.hasLicense ? '✅' : '❌'}
+                        </span>
+                        <span className="text-sm text-slate-700 dark:text-slate-300">License</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className={plugin.github.governance.hasContributingGuide ? 'text-green-600' : 'text-slate-400'}>
+                          {plugin.github.governance.hasContributingGuide ? '✅' : '❌'}
+                        </span>
+                        <span className="text-sm text-slate-700 dark:text-slate-300">Contributing Guide</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className={plugin.github.governance.hasCodeOfConduct ? 'text-green-600' : 'text-slate-400'}>
+                          {plugin.github.governance.hasCodeOfConduct ? '✅' : '❌'}
+                        </span>
+                        <span className="text-sm text-slate-700 dark:text-slate-300">Code of Conduct</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className={plugin.github.governance.hasSecurityPolicy ? 'text-green-600' : 'text-slate-400'}>
+                          {plugin.github.governance.hasSecurityPolicy ? '✅' : '❌'}
+                        </span>
+                        <span className="text-sm text-slate-700 dark:text-slate-300">Security Policy</span>
+                      </div>
+                      {plugin.github.hasWorkflows !== undefined && (
+                        <div className="flex items-center gap-2">
+                          <span className={plugin.github.hasWorkflows ? 'text-green-600' : 'text-slate-400'}>
+                            {plugin.github.hasWorkflows ? '✅' : '❌'}
+                          </span>
+                          <span className="text-sm text-slate-700 dark:text-slate-300">
+                            CI/CD Workflows {plugin.github.workflowCount ? `(${plugin.github.workflowCount})` : ''}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </>
             )}
 
             {/* README */}
@@ -278,6 +574,31 @@ export default async function PluginPage({ params }: { params: { id: string } })
                 )}
               </div>
             </div>
+
+            {/* Funding/Sponsorship */}
+            {plugin.github?.fundingLinks && plugin.github.fundingLinks.length > 0 && (
+              <div className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 border border-slate-200 dark:border-slate-700">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+                  💝 Support this Project
+                </h3>
+                <div className="space-y-2">
+                  {plugin.github.fundingLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 text-sm"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                      {link.platform.charAt(0).toUpperCase() + link.platform.slice(1).replace('_', ' ')}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Topics */}
             {plugin.github?.topics && plugin.github.topics.length > 0 && (
