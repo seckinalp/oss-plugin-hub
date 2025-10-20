@@ -152,6 +152,9 @@ export interface GitHubStats {
     recentStars90Days: number;
     sampleSize: number;
   };
+  
+  // README content
+  readme?: string;
 }
 
 export interface BasePlugin {

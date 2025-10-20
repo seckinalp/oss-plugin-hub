@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { BasePlugin } from '@/types/plugin';
 import { PLATFORM_LABELS, PLATFORM_COLORS } from '@/types/plugin';
-import { parseRepo, fetchReadme, getPluginHealth, formatNumber } from '@/utils/github';
+import { getPluginHealth, formatNumber } from '@/utils/github';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import RelativeTime from '@/components/RelativeTime';
@@ -67,14 +67,8 @@ export default async function PluginPage({ params }: { params: { id: string } })
   const platformLabel = PLATFORM_LABELS[plugin.platform];
   const platformColor = PLATFORM_COLORS[plugin.platform];
 
-  // Fetch README
-  let readme: string | null = null;
-  if (plugin.repo) {
-    const parsed = parseRepo(plugin.repo);
-    if (parsed) {
-      readme = await fetchReadme(parsed.owner, parsed.repo, plugin.branch || plugin.github?.defaultBranch);
-    }
-  }
+  // Get README from plugin data (fetched by script)
+  const readme = plugin.github?.readme || null;
 
   // Get health status
   const health = plugin.github ? getPluginHealth(plugin.github.lastUpdated) : null;

@@ -8,9 +8,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fetch-plugins": "node scripts/fetch-plugins.js"
+    "fetch-plugins": "node scripts/fetch-plugins.js",
+    "update-stats": "node scripts/update-github-stats.js",
+    "update-stats:force": "node scripts/update-github-stats.js --force",
+    "fetch-all": "npm run fetch-plugins && npm run update-stats"
   },
   "dependencies": {
+    "dotenv": "17.2.3",
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
@@ -33,4 +37,3 @@
     "npm": ">=9.0.0"
   }
 }
-
