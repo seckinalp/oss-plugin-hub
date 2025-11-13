@@ -1,11 +1,6 @@
 import PluginGrid from '@/components/PluginGrid';
 import { getAllPluginData } from '@/utils/data-cache';
 
-// Force dynamic rendering to avoid ISR fallback size limit
-// This prevents the 88MB pre-rendered page issue on Vercel
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
 export default async function Home() {
   const pluginData = await getAllPluginData();
 
