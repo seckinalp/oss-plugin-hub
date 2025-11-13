@@ -1,4 +1,4 @@
-export type Platform = 'obsidian' | 'vscode' | 'jetbrains' | 'sublime' | 'atom' | 'vim' | 'other';
+export type Platform = 'obsidian' | 'vscode' | 'firefox' | 'jetbrains' | 'sublime' | 'atom' | 'vim' | 'homeassistant' | 'wordpress' | 'minecraft' | 'other';
 
 export interface Contributor {
   login: string;
@@ -167,8 +167,29 @@ export interface BasePlugin {
   branch?: string;
   authorUrl?: string;
   fundingUrl?: string;
-  github?: GitHubStats; // GitHub statistics (Phase 2)
+  githubStats?: GitHubStats; // GitHub statistics (Phase 2)
   githubDataFetchedAt?: string; // ISO timestamp of when GitHub data was last fetched
+}
+
+// Minecraft-specific plugin interface
+export interface MinecraftPlugin extends BasePlugin {
+  platform: 'minecraft';
+  contentType?: 'mod' | 'resourcepack' | 'datapack' | 'shader' | 'modpack' | 'plugin';
+  modType?: 'client' | 'server' | 'both'; // client-side mod, server plugin, or both
+  loader?: 'fabric' | 'forge' | 'quilt' | 'spigot' | 'paper' | 'bukkit'; // mod loader or server platform
+  minecraftVersions?: string[]; // supported Minecraft versions
+  downloadCount?: number; // total downloads
+  rating?: number; // average rating
+  ratingCount?: number; // number of ratings
+  categories?: string[]; // mod/plugin categories
+  tags?: string[]; // additional tags
+  source?: 'modrinth' | 'curseforge' | 'spiget'; // primary source platform
+  sources?: ('modrinth' | 'curseforge' | 'spiget')[]; // all platforms where this plugin exists (for deduplication)
+  sourceId?: string; // ID on the source platform
+  downloadUrl?: string; // direct download URL
+  projectUrl?: string; // project page URL
+  publishedDate?: string; // when it was first published
+  lastUpdated?: string; // when it was last updated
 }
 
 // Legacy type for Obsidian plugins
@@ -184,20 +205,28 @@ export interface PluginData {
 export const PLATFORM_LABELS: Record<Platform, string> = {
   obsidian: 'Obsidian',
   vscode: 'VS Code',
+  firefox: 'Firefox',
   jetbrains: 'JetBrains',
   sublime: 'Sublime Text',
   atom: 'Atom',
   vim: 'Vim/Neovim',
+  homeassistant: 'Home Assistant',
+  wordpress: 'WordPress',
+  minecraft: 'Minecraft',
   other: 'Other',
 };
 
 export const PLATFORM_COLORS: Record<Platform, string> = {
   obsidian: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
   vscode: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+  firefox: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
   jetbrains: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
   sublime: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
   atom: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
   vim: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200',
+  homeassistant: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
+  wordpress: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200',
+  minecraft: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
   other: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200',
 };
 

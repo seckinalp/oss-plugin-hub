@@ -1,31 +1,8 @@
 import PluginGrid from '@/components/PluginGrid';
-import { PluginData } from '@/types/plugin';
-import fs from 'fs';
-import path from 'path';
-
-async function getPluginData(): Promise<PluginData | null> {
-  try {
-    const filePath = path.join(process.cwd(), 'data', 'plugins.json');
-    
-    if (!fs.existsSync(filePath)) {
-      return null;
-    }
-
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(fileContents);
-    
-    return {
-      plugins: data.plugins || [],
-      lastUpdated: data.lastUpdated || new Date().toISOString(),
-    };
-  } catch (error) {
-    console.error('Error loading plugin data:', error);
-    return null;
-  }
-}
+import { getAllPluginData } from '@/utils/data-cache';
 
 export default async function Home() {
-  const pluginData = await getPluginData();
+  const pluginData = await getAllPluginData();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -67,11 +44,11 @@ export default async function Home() {
               No Plugin Data Available
             </h2>
             <p className="text-slate-600 dark:text-slate-400 mb-6 max-w-md mx-auto">
-              Run the data fetching script to download the latest plugin information from the Obsidian repository.
+              Run the data fetching script to download the latest plugin information from all platforms.
             </p>
             <div className="bg-slate-100 dark:bg-slate-900 rounded-md p-4 text-left max-w-md mx-auto">
               <code className="text-sm text-slate-800 dark:text-slate-200">
-                npm run fetch-plugins
+                npm run fetch-all-sources
               </code>
             </div>
           </div>

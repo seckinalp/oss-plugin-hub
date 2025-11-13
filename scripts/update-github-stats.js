@@ -7,7 +7,7 @@ require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 // Configuration
 const DATA_DIR = path.join(__dirname, '../data');
-const PLUGINS_FILE = path.join(DATA_DIR, 'plugins.json');
+const PLATFORMS = ['obsidian', 'vscode']; // Supported platforms
 const GITHUB_API = 'https://api.github.com';
 const GH_TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
 
@@ -16,6 +16,9 @@ const DELAY_MS = GH_TOKEN ? 100 : 1000; // Faster with token, slower without
 
 // Command line arguments
 const FORCE_REFETCH = process.argv.includes('--force') || process.argv.includes('-f');
+const PLATFORM_ARG = process.argv.find(arg => arg.startsWith('--platform='))?.split('=')[1] || 
+                    (process.argv.includes('--platform') ? process.argv[process.argv.indexOf('--platform') + 1] : null);
+const TARGET_PLATFORMS = PLATFORM_ARG ? [PLATFORM_ARG] : PLATFORMS;
 
 // API call tracking
 let apiCallStats = {
@@ -716,6 +719,60 @@ function displayApiStats() {
 }
 
 /**
+ * Load platform data
+ */
+function loadPlatformData(platform) {
+  const platformDir = path.join(DATA_DIR, platform);
+  const pluginsFile = path.join(platformDir, 'plugins.json');
+  const metadataFile = path.join(platformDir, 'metadata.json');
+  
+  if (!fs.existsSync(pluginsFile)) {
+    return null;
+  }
+  
+  const pluginsData = JSON.parse(fs.readFileSync(pluginsFile, 'utf8'));
+  const metadata = fs.existsSync(metadataFile) 
+    ? JSON.parse(fs.readFileSync(metadataFile, 'utf8'))
+    : {};
+  
+  return {
+    plugins: pluginsData.plugins || [],
+    metadata,
+    pluginsFile,
+    metadataFile
+  };
+}
+
+/**
+ * Save platform data
+ */
+function savePlatformData(platform, plugins, stats) {
+  const platformDir = path.join(DATA_DIR, platform);
+  const pluginsFile = path.join(platformDir, 'plugins.json');
+  const metadataFile = path.join(platformDir, 'metadata.json');
+  
+  // Update metadata
+  const pluginsWithStats = plugins.filter(p => p.githubStats);
+  const metadata = {
+    platform,
+    totalCount: plugins.length,
+    lastUpdated: new Date().toISOString(),
+    lastStatsUpdate: new Date().toISOString(),
+    pluginsWithGitHubStats: pluginsWithStats.length,
+    stats: {
+      totalStars: stats.totalStars,
+      totalForks: stats.totalForks,
+      totalWatchers: pluginsWithStats.reduce((sum, p) => sum + (p.githubStats?.watchers || 0), 0),
+      openIssues: pluginsWithStats.reduce((sum, p) => sum + (p.githubStats?.openIssues || 0), 0),
+    }
+  };
+  
+  // Save files
+  fs.writeFileSync(pluginsFile, JSON.stringify({ plugins }, null, 2));
+  fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
+}
+
+/**
  * Main function
  */
 async function main() {
@@ -735,11 +792,23 @@ async function main() {
   }
   console.log('');
 
-  // Check if plugins.json exists
-  if (!fs.existsSync(PLUGINS_FILE)) {
-    console.error('❌ plugins.json not found. Run "npm run fetch-plugins" first.');
+  // Load all platform data
+  const platformData = {};
+  for (const platform of TARGET_PLATFORMS) {
+    const data = loadPlatformData(platform);
+    if (data) {
+      platformData[platform] = data;
+      console.log(`✓ Loaded ${platform}: ${data.plugins.length} plugins`);
+    } else {
+      console.log(`⚠️  No data found for ${platform}`);
+    }
+  }
+  
+  if (Object.keys(platformData).length === 0) {
+    console.error('❌ No platform data found. Run "npm run fetch-all-sources" first.');
     process.exit(1);
   }
+  console.log('');
 
   // Check rate limit before starting
   console.log('📡 Checking GitHub API status...');
@@ -758,18 +827,21 @@ async function main() {
     console.log(`✓ GitHub token found. Rate limit: ${initialRateLimit?.limit || 5000} requests/hour\n`);
   }
 
-  // Load plugins data
-  const pluginsData = JSON.parse(fs.readFileSync(PLUGINS_FILE, 'utf8'));
-  const plugins = pluginsData.plugins || [];
+  // Collect all plugins from all platforms
+  const allPlugins = [];
+  for (const platform in platformData) {
+    allPlugins.push(...platformData[platform].plugins);
+  }
 
   // Count plugins that need fetching
   const pluginsNeedingFetch = FORCE_REFETCH 
-    ? plugins.length 
-    : plugins.filter(p => !p.githubStats).length;
-  const pluginsWithStats = plugins.filter(p => p.githubStats).length;
+    ? allPlugins.length 
+    : allPlugins.filter(p => !p.githubStats).length;
+  const pluginsWithStats = allPlugins.filter(p => p.githubStats).length;
 
   console.log('═'.repeat(60));
-  console.log(`📦 Total plugins: ${plugins.length}`);
+  console.log(`📦 Total plugins across target platforms: ${allPlugins.length}`);
+  console.log(`🎯 Target platforms: ${TARGET_PLATFORMS.join(', ')}`);
   if (!FORCE_REFETCH) {
     console.log(`   Already have stats: ${pluginsWithStats}`);
     console.log(`   Need to fetch: ${pluginsNeedingFetch}`);
@@ -790,10 +862,10 @@ async function main() {
     archivedPlugins: 0
   };
 
-  for (let i = 0; i < plugins.length; i++) {
-    const plugin = plugins[i];
-    const progress = `[${i + 1}/${plugins.length}]`;
-    const percentage = Math.round((i / plugins.length) * 100);
+  for (let i = 0; i < allPlugins.length; i++) {
+    const plugin = allPlugins[i];
+    const progress = `[${i + 1}/${allPlugins.length}]`;
+    const percentage = Math.round((i / allPlugins.length) * 100);
     
     console.log(`\n${progress} (${percentage}%) ${plugin.name}`);
     console.log(`   Repo: ${plugin.repo}`);
@@ -856,34 +928,26 @@ async function main() {
     }
 
     // Rate limiting delay
-    if (i < plugins.length - 1) {
+    if (i < allPlugins.length - 1) {
       await delay(DELAY_MS);
     }
 
     // Show progress every 10 plugins
     if ((i + 1) % 10 === 0) {
       console.log(`\n${'─'.repeat(60)}`);
-      console.log(`Progress: ${i + 1}/${plugins.length} plugins processed`);
+      console.log(`Progress: ${i + 1}/${allPlugins.length} plugins processed`);
       console.log(`API Calls so far: ${apiCallStats.total}`);
       console.log(`${'─'.repeat(60)}`);
     }
   }
 
-  // Update the plugins data
-  pluginsData.plugins = plugins;
-  pluginsData.lastStatsUpdate = new Date().toISOString();
-  pluginsData.statsMetadata = {
-    totalPlugins: plugins.length,
-    pluginsWithStats: updated,
-    totalStars: pluginStats.totalStars,
-    totalForks: pluginStats.totalForks,
-    activePlugins: pluginStats.activePlugins,
-    archivedPlugins: pluginStats.archivedPlugins,
-    apiCallsMade: apiCallStats.total
-  };
-
-  // Save back to file
-  fs.writeFileSync(PLUGINS_FILE, JSON.stringify(pluginsData, null, 2));
+  // Save each platform's data separately
+  console.log('\n💾 Saving updated data for each platform...');
+  for (const platform in platformData) {
+    const platformPlugins = platformData[platform].plugins;
+    savePlatformData(platform, platformPlugins, pluginStats);
+    console.log(`   ✓ Saved ${platform}/plugins.json and metadata.json`);
+  }
 
   const endTime = Date.now();
   const duration = ((endTime - startTime) / 1000).toFixed(2);
@@ -906,7 +970,7 @@ async function main() {
   console.log(`║  Archived Plugins:     ${pluginStats.archivedPlugins.toString().padEnd(35)} ║`);
   console.log(`║  ${'─'.repeat(56)} ║`);
   console.log(`║  Time Taken:           ${duration}s${' '.repeat(35 - duration.length - 1)} ║`);
-  console.log(`║  Data Saved To:        ${path.basename(PLUGINS_FILE).padEnd(35)} ║`);
+  console.log(`║  Platforms Updated:    ${Object.keys(platformData).join(', ').padEnd(35)} ║`);
   console.log('╚' + '═'.repeat(58) + '╝');
 
   // Display API statistics
@@ -916,7 +980,7 @@ async function main() {
   console.log('\n📡 Final rate limit check...');
   await checkRateLimit();
 
-  console.log('\n✅ All done! You can now commit and push the updated plugins.json\n');
+  console.log('\n✅ All done! You can now commit and push the updated platform data\n');
 }
 
 // Run the script

@@ -11,7 +11,7 @@ export default function PluginCard({ plugin }: PluginCardProps) {
   const repoUrl = `https://github.com/${plugin.repo}`;
   const platformLabel = PLATFORM_LABELS[plugin.platform];
   const platformColor = PLATFORM_COLORS[plugin.platform];
-  const health = plugin.github ? getPluginHealth(plugin.github.lastUpdated) : null;
+  const health = plugin.githubStats ? getPluginHealth(plugin.githubStats.lastUpdated) : null;
 
   return (
     <Link href={`/plugin/${plugin.id}`}>
@@ -39,16 +39,16 @@ export default function PluginCard({ plugin }: PluginCardProps) {
         </p>
 
         {/* GitHub Stats */}
-        {plugin.github && (
+        {plugin.githubStats && (
           <div className="flex items-center gap-4 mb-3 text-xs text-slate-600 dark:text-slate-400">
             <span className="flex items-center gap-1">
-              ⭐ {formatNumber(plugin.github.stars)}
+              ⭐ {formatNumber(plugin.githubStats.stars)}
             </span>
             <span className="flex items-center gap-1">
-              🍴 {formatNumber(plugin.github.forks)}
+              🍴 {formatNumber(plugin.githubStats.forks)}
             </span>
             <span className="flex items-center gap-1">
-              📅 <RelativeTime dateString={plugin.github.lastUpdated} />
+              📅 <RelativeTime dateString={plugin.githubStats.lastUpdated} />
             </span>
           </div>
         )}
