@@ -165,6 +165,8 @@ export interface BasePlugin {
   repo: string;
   platform: Platform;
   branch?: string;
+  publishedDate?: string;
+  lastUpdated?: string;
   authorUrl?: string;
   fundingUrl?: string;
   githubStats?: GitHubStats; // GitHub statistics (Phase 2)
@@ -249,4 +251,3 @@ export const PLATFORM_COLORS: Record<Platform, string> = {
   minecraft: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
   other: 'bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-200',
 };
-
