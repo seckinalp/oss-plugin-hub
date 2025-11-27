@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { BasePlugin } from '@/types/plugin';
 import { PLATFORM_LABELS, PLATFORM_COLORS } from '@/types/plugin';
 import { getPluginHealth, formatNumber } from '@/utils/github';
-import { getAllPluginIds, getPluginById } from '@/utils/data-cache';
+import { getAllPluginIds, getPluginById, loadPlatformData } from '@/utils/data-cache';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import RelativeTime from '@/components/RelativeTime';
@@ -32,6 +32,10 @@ export default async function PluginPage({ params }: { params: Promise<{ id: str
     notFound();
   }
 
+  // Load platform metadata for star concentration (platform size)
+  const platformData = loadPlatformData(plugin.platform);
+  const platformTotalCount = platformData?.metadata?.totalCount ?? 0;
+
   const platformLabel = PLATFORM_LABELS[plugin.platform];
   const platformColor = PLATFORM_COLORS[plugin.platform];
 
@@ -40,6 +44,50 @@ export default async function PluginPage({ params }: { params: Promise<{ id: str
 
   // Get health status
   const health = plugin.githubStats ? getPluginHealth(plugin.githubStats.lastUpdated) : null;
+
+  // Research metrics
+  const governanceScore = (() => {
+    const gov = plugin.githubStats?.governance;
+    if (!gov) return 0;
+    return (gov.hasLicense ? 1 : 0) + (gov.hasCodeOfConduct ? 1 : 0) + (gov.hasSecurityPolicy ? 1 : 0) + (gov.hasContributingGuide ? 1 : 0);
+  })();
+  const coreTeamRatio = (() => {
+    const top = plugin.githubStats?.topContributors;
+    const total = plugin.githubStats?.commitActivity?.totalCommits ?? 0;
+    if (!top || total === 0) return 0;
+    const top3 = top.slice(0, 3).reduce((s, c) => s + (c.contributions || 0), 0);
+    return top3 / total;
+  })();
+  const issueEfficiency = (() => {
+    const open = plugin.githubStats?.openIssues ?? 0;
+    const closed = plugin.githubStats?.closedIssues ?? 0;
+    const total = open + closed;
+    if (total === 0) return 0;
+    return closed / total;
+  })();
+  const isAbandoned = (() => {
+    const last = plugin.githubStats?.lastUpdated ?? plugin.lastUpdated;
+    if (!last) return false;
+    const days = (Date.now() - new Date(last).getTime()) / (1000 * 60 * 60 * 24);
+    return days > 365;
+  })();
+  const starConcentration = (() => {
+    const stars = plugin.githubStats?.stars ?? 0;
+    const size = platformTotalCount || 1;
+    return size > 1 ? stars / Math.log10(size) : stars;
+  })();
+  const ownerShare = plugin.githubStats?.participation?.ownerPercentage ?? null;
+  const dependencyCounts = (() => {
+    const deps = plugin.githubStats?.dependencies || plugin.dependencies || {};
+    const prod = deps.dependencies ? Object.keys(deps.dependencies).length : 0;
+    const dev = deps.devDependencies ? Object.keys(deps.devDependencies).length : 0;
+    const peer = deps.peerDependencies ? Object.keys(deps.peerDependencies).length : 0;
+    return { prod, dev, peer };
+  })();
+  const workflowCount = plugin.githubStats?.workflowCount ?? 0;
+  const commitFrequency = plugin.githubStats?.commitActivity?.commitFrequency ?? null;
+  const repoSizeKb = plugin.githubStats?.size ?? null;
+  const staleDepRatio = 0; // placeholder until dependency release dates are available
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -740,6 +788,53 @@ export default async function PluginPage({ params }: { params: Promise<{ id: str
                 Information
               </h3>
               <dl className="space-y-3">
+                {/* Research metrics */}
+                <div className="pb-3 border-b border-slate-200 dark:border-slate-700">
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white mb-2">Research Metrics</p>
+                  <div className="grid grid-cols-2 gap-2 text-xs text-slate-700 dark:text-slate-300">
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2">
+                      <div className="font-semibold text-indigo-600 dark:text-indigo-300">Gov Score</div>
+                      <div>{governanceScore} / 4</div>
+                    </div>
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2">
+                      <div className="font-semibold text-amber-600 dark:text-amber-300">Core Ratio</div>
+                      <div>{coreTeamRatio.toFixed(3)}</div>
+                    </div>
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2">
+                      <div className="font-semibold text-emerald-600 dark:text-emerald-300">Issue Eff.</div>
+                      <div>{issueEfficiency.toFixed(3)}</div>
+                    </div>
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2">
+                      <div className="font-semibold text-rose-600 dark:text-rose-300">Abandoned?</div>
+                      <div>{isAbandoned ? 'Yes' : 'No'}</div>
+                    </div>
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2 col-span-2">
+                      <div className="font-semibold text-blue-600 dark:text-blue-300">Star Conc.</div>
+                      <div>{starConcentration.toFixed(2)}</div>
+                    </div>
+                    {ownerShare !== null && (
+                      <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2 col-span-2">
+                        <div className="font-semibold text-slate-700 dark:text-slate-200">Owner % (12w)</div>
+                        <div>{ownerShare.toFixed(1)}%</div>
+                      </div>
+                    )}
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2 col-span-2">
+                      <div className="font-semibold text-slate-700 dark:text-slate-200">Dependencies</div>
+                      <div className="text-xs text-slate-600 dark:text-slate-300">
+                        Prod: {dependencyCounts.prod} • Dev: {dependencyCounts.dev} • Peer: {dependencyCounts.peer}
+                      </div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                        Stale dep ratio: {staleDepRatio.toFixed(2)} (placeholder)
+                      </div>
+                    </div>
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-md p-2 col-span-2">
+                      <div className="font-semibold text-slate-700 dark:text-slate-200">CI / Activity</div>
+                      <div className="text-xs text-slate-600 dark:text-slate-300">
+                        Workflows: {workflowCount} • Commits/week: {commitFrequency !== null ? commitFrequency : 'N/A'} • Size: {repoSizeKb !== null ? `${formatNumber(repoSizeKb)} KB` : 'N/A'}
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 {plugin.isTop100 && (
                   <div className="pb-3 border-b border-slate-200 dark:border-slate-700">
                     <span className="inline-flex items-center gap-2 px-3 py-2 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-md text-sm font-semibold">

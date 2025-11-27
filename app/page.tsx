@@ -1,5 +1,4 @@
 import PluginGrid from '@/components/PluginGrid';
-import QuickStats from '@/components/QuickStats';
 import { getAllPluginData } from '@/utils/data-cache';
 
 export default async function Home() {
@@ -12,27 +11,23 @@ export default async function Home() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
-                🏆 Top 100 Open Source Plugins
+                🌐 Top Plugins by Platform
               </h1>
               <p className="mt-2 text-slate-600 dark:text-slate-400">
-                Discover the most popular open-source plugins across 9 platforms
+                Explore the top 100 GitHub-hosted plugins per platform (900 plugins across 9 ecosystems)
               </p>
             </div>
             <a
               href="/analytics"
-              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors font-medium"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-indigo-200 text-indigo-700 bg-indigo-50 hover:bg-indigo-100 dark:border-indigo-800 dark:text-indigo-200 dark:bg-indigo-900/30 dark:hover:bg-indigo-900/40 transition-colors text-sm font-medium"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-              Analytics
+              View All-Platforms Analytics
             </a>
           </div>
         </div>
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <QuickStats />
         {pluginData && pluginData.plugins.length > 0 ? (
           <PluginGrid
             plugins={pluginData.plugins}
@@ -74,7 +69,7 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col items-center gap-3">
             <p className="text-center text-slate-600 dark:text-slate-400 text-sm">
-              Built with ❤️ for the open-source community
+              Built with 🌟 for the open-source community
             </p>
             <a
               href="https://github.com/seckinalp"
@@ -93,3 +88,4 @@ export default async function Home() {
     </div>
   );
 }
+

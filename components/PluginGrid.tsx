@@ -255,25 +255,17 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
             {availablePlatforms.map((platform) => {
               const count = plugins.filter(p => p.platform === platform).length;
               return (
-                <div key={platform} className="flex items-center gap-1">
-                  <button
-                    onClick={() => setSelectedPlatform(platform)}
-                    className={`px-4 py-2 rounded-l-md text-sm font-medium transition-colors ${
-                      selectedPlatform === platform
-                        ? 'bg-indigo-600 text-white'
-                        : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
-                    }`}
-                  >
-                    {PLATFORM_LABELS[platform]} ({count})
-                  </button>
-                  <a
-                    href={`/analytics/${platform}`}
-                    className="px-3 py-2 bg-slate-300 dark:bg-slate-600 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-500 rounded-r-md text-sm font-medium transition-colors text-slate-700 dark:text-slate-300"
-                    title={`View ${PLATFORM_LABELS[platform]} analytics`}
-                  >
-                    📊
-                  </a>
-                </div>
+                <button
+                  key={platform}
+                  onClick={() => setSelectedPlatform(platform)}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                    selectedPlatform === platform
+                      ? 'bg-indigo-600 text-white'
+                      : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
+                  }`}
+                >
+                  {PLATFORM_LABELS[platform]} ({count})
+                </button>
               );
             })}
           </div>

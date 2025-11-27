@@ -52,6 +52,8 @@ export interface PlatformAnalytics {
   // Activity metrics
   recentlyUpdated: Array<{ name: string; lastUpdated: string; repo: string }>;
   mostActive: Array<{ name: string; stars: number; forks: number; repo: string }>;
+  topIssueDensity: Array<{ name: string; repo: string; openIssues: number; stars: number; density: number }>;
+  topForked: Array<{ name: string; repo: string; forks: number; stars: number }>;
   
   // Engagement metrics
   highEngagement: Array<{ name: string; stars: number; downloads: number; repo: string }>;
@@ -77,20 +79,40 @@ function calculateMedian(values: number[]): number {
 
 export async function getPlatformAnalytics(platform: SupportedPlatform): Promise<PlatformAnalytics | null> {
   try {
+    const pluginsPath = getDataPath(platform, 'plugins.json');
     const top100Path = getDataPath(platform, 'top100.json');
-    const top100Data = JSON.parse(fs.readFileSync(top100Path, 'utf8'));
-    
-    const plugins: Top100Plugin[] = top100Data.top100;
+
+    let plugins: Top100Plugin[] = [];
+
+    // Prefer rich plugin data (with githubStats) from plugins.json, filtered to Top 100
+    if (fs.existsSync(pluginsPath)) {
+      const allPluginsData = JSON.parse(fs.readFileSync(pluginsPath, 'utf8'));
+      if (Array.isArray(allPluginsData.plugins)) {
+        plugins = allPluginsData.plugins.filter((p: any) => p.isTop100 === true);
+      }
+    }
+
+    // Fallback to top100.json if needed
+    if (plugins.length === 0 && fs.existsSync(top100Path)) {
+      const top100Data = JSON.parse(fs.readFileSync(top100Path, 'utf8'));
+      plugins = top100Data.top100 || [];
+    }
     
     if (!plugins || plugins.length === 0) {
       return null;
     }
     
+    // Helper accessors to prioritize githubStats when present
+    const getStars = (p: any) => p.githubStats?.stars ?? p.stars ?? 0;
+    const getForks = (p: any) => p.githubStats?.forks ?? p.forks ?? 0;
+    const getIssues = (p: any) => p.githubStats?.openIssues ?? p.openIssues ?? 0;
+    const getDownloads = (p: any) => p.downloads ?? 0;
+
     // Calculate basic stats
-    const stars = plugins.map(p => p.stars || 0);
-    const downloads = plugins.map(p => p.downloads || 0);
-    const forks = plugins.map(p => p.forks || 0);
-    const issues = plugins.map(p => p.openIssues || 0);
+    const stars = plugins.map(getStars);
+    const downloads = plugins.map(getDownloads);
+    const forks = plugins.map(getForks);
+    const issues = plugins.map(getIssues);
     
     const totalStars = stars.reduce((sum, s) => sum + s, 0);
     const totalDownloads = downloads.reduce((sum, d) => sum + d, 0);
@@ -98,13 +120,13 @@ export async function getPlatformAnalytics(platform: SupportedPlatform): Promise
     const totalIssues = issues.reduce((sum, i) => sum + i, 0);
     
     // Find max/min
-    const sortedByStars = [...plugins].sort((a, b) => (b.stars || 0) - (a.stars || 0));
-    const sortedByDownloads = [...plugins].sort((a, b) => (b.downloads || 0) - (a.downloads || 0));
+    const sortedByStars = [...plugins].sort((a, b) => getStars(b) - getStars(a));
+    const sortedByDownloads = [...plugins].sort((a, b) => getDownloads(b) - getDownloads(a));
     
     // Language distribution
     const languageCount: Record<string, number> = {};
     plugins.forEach(p => {
-      const lang = (p as any).language || 'Unknown';
+      const lang = (p as any).githubStats?.language || (p as any).language || 'Unknown';
       languageCount[lang] = (languageCount[lang] || 0) + 1;
     });
     const topLanguages = Object.entries(languageCount)
@@ -119,7 +141,7 @@ export async function getPlatformAnalytics(platform: SupportedPlatform): Promise
     // License distribution
     const licenseCount: Record<string, number> = {};
     plugins.forEach(p => {
-      const license = (p as any).license || 'No License';
+      const license = (p as any).githubStats?.license || (p as any).license || 'No License';
       licenseCount[license] = (licenseCount[license] || 0) + 1;
     });
     const topLicenses = Object.entries(licenseCount)
@@ -134,7 +156,7 @@ export async function getPlatformAnalytics(platform: SupportedPlatform): Promise
     // Topics
     const topicCount: Record<string, number> = {};
     plugins.forEach(p => {
-      const topics = (p as any).topics || [];
+      const topics = (p as any).githubStats?.topics || (p as any).topics || [];
       topics.forEach((topic: string) => {
         topicCount[topic] = (topicCount[topic] || 0) + 1;
       });
@@ -156,27 +178,51 @@ export async function getPlatformAnalytics(platform: SupportedPlatform): Promise
     
     // Most active (stars + forks)
     const mostActive = [...plugins]
-      .sort((a, b) => ((b.stars || 0) + (b.forks || 0)) - ((a.stars || 0) + (a.forks || 0)))
+      .sort((a, b) => (getStars(b) + getForks(b)) - (getStars(a) + getForks(a)))
       .slice(0, 10)
       .map(p => ({
         name: p.name,
-        stars: p.stars || 0,
-        forks: p.forks || 0,
+        stars: getStars(p),
+        forks: getForks(p),
         repo: p.repo
       }));
     
     // High engagement (high stars relative to downloads)
     const highEngagement = [...plugins]
-      .filter(p => (p.downloads || 0) > 0)
+      .filter(p => getDownloads(p) > 0)
       .map(p => ({
         name: p.name,
-        stars: p.stars || 0,
-        downloads: p.downloads || 0,
+        stars: getStars(p),
+        downloads: getDownloads(p),
         repo: p.repo,
-        ratio: (p.stars || 0) / Math.log10((p.downloads || 1))
+        ratio: getStars(p) / Math.log10(getDownloads(p) || 1)
       }))
       .sort((a, b) => b.ratio - a.ratio)
       .slice(0, 10);
+
+    // Issue density (open issues per star)
+    const topIssueDensity = [...plugins]
+      .filter(p => getStars(p) > 0)
+      .map(p => ({
+        name: p.name,
+        repo: p.repo,
+        openIssues: getIssues(p),
+        stars: getStars(p),
+        density: getIssues(p) / (getStars(p) || 1),
+      }))
+      .sort((a, b) => b.density - a.density)
+      .slice(0, 10);
+
+    // Fork leaders
+    const topForked = [...plugins]
+      .sort((a, b) => getForks(b) - getForks(a))
+      .slice(0, 10)
+      .map(p => ({
+        name: p.name,
+        repo: p.repo,
+        forks: getForks(p),
+        stars: getStars(p),
+      }));
     
     return {
       platform,
@@ -187,12 +233,12 @@ export async function getPlatformAnalytics(platform: SupportedPlatform): Promise
       medianStars: calculateMedian(stars),
       maxStars: {
         name: sortedByStars[0].name,
-        stars: sortedByStars[0].stars || 0,
+        stars: getStars(sortedByStars[0]),
         repo: sortedByStars[0].repo
       },
       minStars: {
         name: sortedByStars[sortedByStars.length - 1].name,
-        stars: sortedByStars[sortedByStars.length - 1].stars || 0,
+        stars: getStars(sortedByStars[sortedByStars.length - 1]),
         repo: sortedByStars[sortedByStars.length - 1].repo
       },
       
@@ -201,7 +247,7 @@ export async function getPlatformAnalytics(platform: SupportedPlatform): Promise
       medianDownloads: calculateMedian(downloads),
       maxDownloads: {
         name: sortedByDownloads[0].name,
-        downloads: sortedByDownloads[0].downloads || 0,
+        downloads: getDownloads(sortedByDownloads[0]),
         repo: sortedByDownloads[0].repo
       },
       
@@ -217,6 +263,8 @@ export async function getPlatformAnalytics(platform: SupportedPlatform): Promise
       recentlyUpdated,
       mostActive,
       highEngagement,
+      topIssueDensity,
+      topForked,
       topTopics,
       
       plugins
