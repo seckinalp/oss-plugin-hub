@@ -169,6 +169,7 @@ export interface BasePlugin {
   lastUpdated?: string;
   authorUrl?: string;
   fundingUrl?: string;
+  dependencies?: Dependencies;
   githubStats?: GitHubStats; // GitHub statistics (Phase 2)
   githubDataFetchedAt?: string; // ISO timestamp of when GitHub data was last fetched
   
