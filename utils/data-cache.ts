@@ -120,14 +120,16 @@ export function getAllPluginData(): PluginData | null {
       }
     }
     
-    // Load fresh data
+    // Load fresh data - only Top 100 plugins
     const allPlugins: BasePlugin[] = [];
     let latestUpdate = '';
     
     for (const platform of platforms) {
       const platformData = loadPlatformData(platform);
       if (platformData) {
-        allPlugins.push(...platformData.plugins);
+        // Filter for Top 100 only
+        const top100Plugins = platformData.plugins.filter(p => p.isTop100 === true);
+        allPlugins.push(...top100Plugins);
         
         if (platformData.metadata?.lastUpdated && platformData.metadata.lastUpdated > latestUpdate) {
           latestUpdate = platformData.metadata.lastUpdated;

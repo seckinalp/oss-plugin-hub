@@ -11,7 +11,8 @@ export const SUPPORTED_PLATFORMS = [
   'wordpress',
   'jetbrains',
   'sublime',
-  'minecraft'
+  'minecraft',
+  'chrome'
 ] as const;
 
 export type SupportedPlatform = typeof SUPPORTED_PLATFORMS[number];
@@ -47,7 +48,7 @@ export const PLATFORM_CONFIG = {
   wordpress: {
     label: 'WordPress',
     color: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200',
-    icon: '🌐',
+    icon: '📰',
     description: 'WordPress plugins and themes'
   },
   jetbrains: {
@@ -64,9 +65,15 @@ export const PLATFORM_CONFIG = {
   },
   minecraft: {
     label: 'Minecraft',
-    color: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200',
+    color: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
     icon: '🎮',
     description: 'Minecraft mods and plugins'
+  },
+  chrome: {
+    label: 'Chrome',
+    color: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200',
+    icon: '🌐',
+    description: 'Chrome browser extensions'
   }
 } as const;
 

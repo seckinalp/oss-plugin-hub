@@ -1,4 +1,4 @@
-export type Platform = 'obsidian' | 'vscode' | 'firefox' | 'jetbrains' | 'sublime' | 'atom' | 'vim' | 'homeassistant' | 'wordpress' | 'minecraft' | 'other';
+export type Platform = 'obsidian' | 'vscode' | 'firefox' | 'chrome' | 'opera' | 'jetbrains' | 'sublime' | 'atom' | 'vim' | 'homeassistant' | 'wordpress' | 'minecraft' | 'other';
 
 export interface Contributor {
   login: string;
@@ -169,6 +169,22 @@ export interface BasePlugin {
   fundingUrl?: string;
   githubStats?: GitHubStats; // GitHub statistics (Phase 2)
   githubDataFetchedAt?: string; // ISO timestamp of when GitHub data was last fetched
+  
+  // Download/Install metrics (for top 100 analysis)
+  downloads?: number;           // Total downloads/installs
+  downloadStatsUpdated?: string; // ISO timestamp
+  weeklyDownloads?: number;     // Weekly download rate
+  averageDailyUsers?: number;   // Average daily active users (for browsers)
+  activeInstalls?: number;      // Currently active installations
+  installs?: number;            // VS Code specific - total installs
+  
+  // Top 100 indicators
+  isTop100?: boolean;           // Is this plugin in top 100 for its platform?
+  top100Rank?: number;          // Rank within top 100 (1-100)
+  
+  // Popularity metrics
+  popularityScore?: number;     // Composite popularity score
+  trendingScore?: number;       // Recent growth indicator
 }
 
 // Minecraft-specific plugin interface
@@ -206,6 +222,8 @@ export const PLATFORM_LABELS: Record<Platform, string> = {
   obsidian: 'Obsidian',
   vscode: 'VS Code',
   firefox: 'Firefox',
+  chrome: 'Chrome',
+  opera: 'Opera',
   jetbrains: 'JetBrains',
   sublime: 'Sublime Text',
   atom: 'Atom',
@@ -220,13 +238,15 @@ export const PLATFORM_COLORS: Record<Platform, string> = {
   obsidian: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
   vscode: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
   firefox: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
-  jetbrains: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
+  chrome: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200',
+  opera: 'bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200',
+  jetbrains: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
   sublime: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
-  atom: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+  atom: 'bg-lime-100 text-lime-800 dark:bg-lime-900 dark:text-lime-200',
   vim: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200',
-  homeassistant: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
+  homeassistant: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
   wordpress: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200',
-  minecraft: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-  other: 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200',
+  minecraft: 'bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200',
+  other: 'bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-200',
 };
 

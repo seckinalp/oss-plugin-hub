@@ -21,7 +21,7 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
   const [selectedPlatform, setSelectedPlatform] = useState<Platform | 'all'>('all');
   const [showFilters, setShowFilters] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(50);
+  const [itemsPerPage, setItemsPerPage] = useState(15);
   
   // GitHub stats filters
   const [minStars, setMinStars] = useState<number>(0);
@@ -193,7 +193,7 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-              {selectedPlatform === 'all' ? 'All Plugins' : `${PLATFORM_LABELS[selectedPlatform]} Plugins`}
+              🏆 {selectedPlatform === 'all' ? 'Top 100 Plugins - All Platforms' : `${PLATFORM_LABELS[selectedPlatform]} - Top 100`}
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
               Showing {startIndex + 1}-{Math.min(endIndex, filteredPlugins.length)} of {filteredPlugins.length} plugins
@@ -236,9 +236,11 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
 
         {/* Platform Filter */}
         <div className="mb-4">
-          <label className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-2 block">
-            Platform:
-          </label>
+          <div className="flex items-center justify-between mb-2">
+            <label className="text-sm font-medium text-slate-700 dark:text-slate-300">
+              Platform: <span className="text-xs font-normal text-slate-500 dark:text-slate-400">(Showing Top 100 per platform)</span>
+            </label>
+          </div>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedPlatform('all')}
@@ -556,6 +558,7 @@ export default function PluginGrid({ plugins, lastUpdated }: PluginGridProps) {
                 }}
                 className="px-3 py-1.5 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
+                <option value="15">15</option>
                 <option value="25">25</option>
                 <option value="50">50</option>
                 <option value="100">100</option>

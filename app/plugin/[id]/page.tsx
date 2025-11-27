@@ -740,6 +740,23 @@ export default async function PluginPage({ params }: { params: Promise<{ id: str
                 Information
               </h3>
               <dl className="space-y-3">
+                {plugin.isTop100 && (
+                  <div className="pb-3 border-b border-slate-200 dark:border-slate-700">
+                    <span className="inline-flex items-center gap-2 px-3 py-2 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-md text-sm font-semibold">
+                      🏆 Top 100 Plugin
+                    </span>
+                  </div>
+                )}
+                {plugin.downloads !== undefined && plugin.downloads > 0 && (
+                  <div>
+                    <dt className="text-sm text-slate-600 dark:text-slate-400">
+                      {plugin.platform === 'firefox' || plugin.platform === 'chrome' ? 'Users' : 'Downloads'}
+                    </dt>
+                    <dd className="text-lg font-bold text-green-600 dark:text-green-400">
+                      📥 {formatNumber(plugin.downloads)}
+                    </dd>
+                  </div>
+                )}
                 <div>
                   <dt className="text-sm text-slate-600 dark:text-slate-400">Author</dt>
                   <dd className="text-sm font-medium text-slate-900 dark:text-white">

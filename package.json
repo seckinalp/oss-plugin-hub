@@ -17,6 +17,8 @@
     "fetch-obsidian": "node scripts/fetch-obsidian-plugins.js",
     "fetch-vscode": "node scripts/fetch-vscode-plugins.js",
     "fetch-firefox": "node scripts/fetch-firefox-addons.js",
+    "fetch-chrome": "node scripts/fetch-chrome-extensions.js",
+    "fetch-opera": "node scripts/fetch-opera-extensions.js",
     "fetch-homeassistant": "node scripts/fetch-homeassistant-components.js",
     "fetch-wordpress": "node scripts/fetch-wordpress-plugins.js",
     "fetch-jetbrains": "node scripts/fetch-jetbrains-plugins.js",
@@ -27,6 +29,8 @@
     "fetch-minecraft": "npm run fetch-minecraft-modrinth && npm run fetch-minecraft-spiget",
     "deduplicate-minecraft": "node scripts/deduplicate-minecraft-plugins.js",
     "fetch-all-sources": "node scripts/fetch-obsidian-plugins.js && node scripts/fetch-vscode-plugins.js && node scripts/fetch-firefox-addons.js && node scripts/fetch-homeassistant-components.js && node scripts/fetch-wordpress-plugins.js && node scripts/fetch-jetbrains-plugins.js && node scripts/fetch-sublime-plugins.js && npm run fetch-minecraft",
+    "fetch-download-stats": "node scripts/fetch-download-stats.js",
+    "fetch-download-stats:obsidian": "node scripts/fetch-download-stats.js obsidian",
     "update-stats": "node scripts/update-github-stats.js",
     "update-stats:force": "node scripts/update-github-stats.js --force",
     "update-stats:obsidian": "node scripts/update-github-stats.js --platform obsidian",
@@ -44,6 +48,8 @@
     "update-stats:sublime:force": "node scripts/update-github-stats.js --platform sublime --force",
     "update-stats:minecraft": "node scripts/update-github-stats.js --platform minecraft",
     "update-stats:minecraft:force": "node scripts/update-github-stats.js --platform minecraft --force",
+    "update-stats:chrome": "node scripts/update-github-stats.js --platform chrome",
+    "update-stats:chrome:force": "node scripts/update-github-stats.js --platform chrome --force",
     "fetch-all": "npm run fetch-all-sources && npm run update-stats"
   },
   "dependencies": {

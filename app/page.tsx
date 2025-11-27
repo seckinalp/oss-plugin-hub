@@ -9,10 +9,10 @@ export default async function Home() {
       <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
-            🔌 Plugin Discovery Hub
+            🏆 Top 100 Open Source Plugins
           </h1>
           <p className="mt-2 text-slate-600 dark:text-slate-400">
-            Discover and explore open-source plugins across multiple platforms
+            Discover the most popular open-source plugins across 9 platforms
           </p>
         </div>
       </header>

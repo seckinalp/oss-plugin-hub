@@ -1,13 +1,18 @@
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
+import https from 'https';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load environment variables from .env file
-require('dotenv').config({ path: path.join(__dirname, '../.env') });
+dotenv.config({ path: path.join(__dirname, '../.env') });
 
 // Configuration
 const DATA_DIR = path.join(__dirname, '../data');
-const PLATFORMS = ['obsidian', 'vscode']; // Supported platforms
+const PLATFORMS = ['obsidian', 'vscode', 'minecraft', 'firefox', 'wordpress', 'homeassistant', 'jetbrains', 'sublime', 'chrome']; // All 9 platforms
 const GITHUB_API = 'https://api.github.com';
 const GH_TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
 
@@ -827,11 +832,14 @@ async function main() {
     console.log(`✓ GitHub token found. Rate limit: ${initialRateLimit?.limit || 5000} requests/hour\n`);
   }
 
-  // Collect all plugins from all platforms
+  // Collect only top 100 plugins from each platform
   const allPlugins = [];
   for (const platform in platformData) {
-    allPlugins.push(...platformData[platform].plugins);
+    const top100 = platformData[platform].plugins.filter(p => p.isTop100 === true);
+    allPlugins.push(...top100);
+    console.log(`   ${platform}: ${top100.length} top 100 plugins`);
   }
+  console.log('');
 
   // Count plugins that need fetching
   const pluginsNeedingFetch = FORCE_REFETCH 

@@ -26,6 +26,11 @@ export default function PluginCard({ plugin }: PluginCardProps) {
             <span className={`px-2 py-1 rounded-md text-xs font-medium ${platformColor}`}>
               {platformLabel}
             </span>
+            {plugin.isTop100 && (
+              <span className="px-2 py-1 rounded-md text-xs font-medium bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200">
+                🏆 Top 100
+              </span>
+            )}
             {health && (
               <span className={`px-2 py-1 rounded-md text-xs font-medium ${health.color} ${health.textColor}`}>
                 {health.label}
@@ -37,6 +42,13 @@ export default function PluginCard({ plugin }: PluginCardProps) {
         <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
           {plugin.description}
         </p>
+
+        {/* Download Count */}
+        {plugin.downloads !== undefined && plugin.downloads > 0 && (
+          <div className="mb-3 text-xs font-semibold text-green-600 dark:text-green-400">
+            📥 {formatNumber(plugin.downloads)} {plugin.platform === 'firefox' || plugin.platform === 'chrome' ? 'users' : 'downloads'}
+          </div>
+        )}
 
         {/* GitHub Stats */}
         {plugin.githubStats && (
