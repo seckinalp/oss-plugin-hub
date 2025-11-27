@@ -1,4 +1,5 @@
 import PluginGrid from '@/components/PluginGrid';
+import QuickStats from '@/components/QuickStats';
 import { getAllPluginData } from '@/utils/data-cache';
 
 export default async function Home() {
@@ -8,16 +9,30 @@ export default async function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
-            🏆 Top 100 Open Source Plugins
-          </h1>
-          <p className="mt-2 text-slate-600 dark:text-slate-400">
-            Discover the most popular open-source plugins across 9 platforms
-          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
+                🏆 Top 100 Open Source Plugins
+              </h1>
+              <p className="mt-2 text-slate-600 dark:text-slate-400">
+                Discover the most popular open-source plugins across 9 platforms
+              </p>
+            </div>
+            <a
+              href="/analytics"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors font-medium"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              Analytics
+            </a>
+          </div>
         </div>
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <QuickStats />
         {pluginData && pluginData.plugins.length > 0 ? (
           <PluginGrid
             plugins={pluginData.plugins}

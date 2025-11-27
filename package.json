@@ -50,7 +50,8 @@
     "update-stats:minecraft:force": "node scripts/update-github-stats.js --platform minecraft --force",
     "update-stats:chrome": "node scripts/update-github-stats.js --platform chrome",
     "update-stats:chrome:force": "node scripts/update-github-stats.js --platform chrome --force",
-    "fetch-all": "npm run fetch-all-sources && npm run update-stats"
+    "fetch-all": "npm run fetch-all-sources && npm run update-stats",
+    "generate-analytics": "node scripts/generate-analytics-summary.js"
   },
   "dependencies": {
     "dotenv": "17.2.3",
