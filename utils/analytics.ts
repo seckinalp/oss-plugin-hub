@@ -90,6 +90,13 @@ function getDataPath(platform: string, filename: string): string {
 }
 
 export async function getAnalyticsData(): Promise<AnalyticsData> {
+  const analyticsSummaryPath = path.join(process.cwd(), 'data', 'analytics-summary.json');
+  const analyticsSummary = JSON.parse(fs.readFileSync(analyticsSummaryPath, 'utf8'));
+  const summaryByPlatform: Record<string, any> = {};
+  (analyticsSummary.platforms || []).forEach((p: any) => {
+    summaryByPlatform[p.platform] = p;
+  });
+
   const platformMetrics: PlatformMetrics[] = [];
   
   const getStars = (p: any) => p.githubStats?.stars ?? p.stars ?? 0;
@@ -137,18 +144,6 @@ export async function getAnalyticsData(): Promise<AnalyticsData> {
   const getRepoSize = (p: any) => p.githubStats?.size ?? 0;
   const getTop100WithGithub = (platform: string): any[] => {
     try {
-      const pluginsPath = getDataPath(platform, 'plugins.json');
-      if (fs.existsSync(pluginsPath)) {
-        const allPlugins = JSON.parse(fs.readFileSync(pluginsPath, 'utf8'));
-        if (Array.isArray(allPlugins.plugins)) {
-          const top = allPlugins.plugins.filter((p: any) => p.isTop100 === true);
-          if (top.length > 0) return top;
-        }
-      }
-    } catch (e) {
-      // fall back below
-    }
-    try {
       const top100Path = getDataPath(platform, 'top100.json');
       if (fs.existsSync(top100Path)) {
         const top100 = JSON.parse(fs.readFileSync(top100Path, 'utf8'));
@@ -164,10 +159,7 @@ export async function getAnalyticsData(): Promise<AnalyticsData> {
   
   for (const platform of SUPPORTED_PLATFORMS) {
     try {
-      const metadataPath = getDataPath(platform, 'metadata.json');
-      const top100Path = getDataPath(platform, 'top100.json');
-      
-      const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
+      const summary = summaryByPlatform[platform] || {};
       const top100 = getTop100WithGithub(platform);
       
       const stars = top100.reduce((sum: number, p: any) => sum + getStars(p), 0);
@@ -189,7 +181,7 @@ export async function getAnalyticsData(): Promise<AnalyticsData> {
       let commitFreqSum = 0;
       let repoSizeSum = 0;
       // Stale dependency ratio not available in current data; placeholder 0
-      const platformSize = metadata.totalCount || top100.length || 1;
+      const platformSize = summary.osTotalPlugins || top100.length || 1;
       top100.forEach((p: any) => {
         const lang = getLanguage(p);
         languageCount[lang] = (languageCount[lang] || 0) + 1;
@@ -214,7 +206,7 @@ export async function getAnalyticsData(): Promise<AnalyticsData> {
       
       platformMetrics.push({
         platform,
-        totalPlugins: metadata.totalCount,
+        totalPlugins: summary.osTotalPlugins ?? top100.length,
         top100Count: top100.length,
         totalStars: stars,
         avgStars: top100.length > 0 ? stars / top100.length : 0,

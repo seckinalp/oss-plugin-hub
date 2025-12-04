@@ -79,21 +79,12 @@ function calculateMedian(values: number[]): number {
 
 export async function getPlatformAnalytics(platform: SupportedPlatform): Promise<PlatformAnalytics | null> {
   try {
-    const pluginsPath = getDataPath(platform, 'plugins.json');
     const top100Path = getDataPath(platform, 'top100.json');
 
     let plugins: Top100Plugin[] = [];
 
-    // Prefer rich plugin data (with githubStats) from plugins.json, filtered to Top 100
-    if (fs.existsSync(pluginsPath)) {
-      const allPluginsData = JSON.parse(fs.readFileSync(pluginsPath, 'utf8'));
-      if (Array.isArray(allPluginsData.plugins)) {
-        plugins = allPluginsData.plugins.filter((p: any) => p.isTop100 === true);
-      }
-    }
-
-    // Fallback to top100.json if needed
-    if (plugins.length === 0 && fs.existsSync(top100Path)) {
+    // Use top100.json as the single source
+    if (fs.existsSync(top100Path)) {
       const top100Data = JSON.parse(fs.readFileSync(top100Path, 'utf8'));
       plugins = top100Data.top100 || [];
     }

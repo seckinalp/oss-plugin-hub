@@ -15,7 +15,8 @@ const METADATA_FILE = path.join(WORDPRESS_DIR, 'metadata.json');
 // Set to fetch ALL plugins with pagination
 const MAX_PAGES = parseInt(process.env.WORDPRESS_MAX_PAGES) || 600; // 600 pages = 60,000 plugins (all)
 const PAGE_SIZE = 700; // Max allowed by API
-const GITHUB_ONLY = process.env.WORDPRESS_GITHUB_ONLY !== 'false'; // Default: only fetch plugins with GitHub repos
+// Default to fetching all plugins (GitHub or not). Set WORDPRESS_GITHUB_ONLY=true to limit to open source.
+const GITHUB_ONLY = process.env.WORDPRESS_GITHUB_ONLY === 'true';
 
 // Ensure directories exist
 if (!fs.existsSync(DATA_DIR)) {
@@ -249,7 +250,7 @@ async function main() {
   console.log(`   - GitHub only: ${GITHUB_ONLY ? 'YES' : 'NO'} (${GITHUB_ONLY ? 'will filter to plugins with GitHub repos' : 'will include all plugins'})`);
   console.log(`   - Note: WordPress has 60,000+ total plugins`);
   console.log(`   - Set WORDPRESS_MAX_PAGES env var to limit pages (default: 600 for all)`);
-  console.log(`   - Set WORDPRESS_GITHUB_ONLY=false to include plugins without GitHub repos\n`);
+  console.log(`   - Set WORDPRESS_GITHUB_ONLY=true to limit to plugins with GitHub repos\n`);
   
   try {
     // Fetch WordPress plugins
