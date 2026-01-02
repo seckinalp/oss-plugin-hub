@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.zam1024t/LocalizedMenu",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/44659dfa-74f5-476f-bdb2-e75863bbbbc7",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:41Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.zam1024t/LocalizedMenu",
+      "SPDXID": "SPDXRef-github-zam1024t-LocalizedMenu-master-ec4201",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/zam1024t/LocalizedMenu",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/zam1024t/LocalizedMenu@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-zam1024t-LocalizedMenu-master-ec4201",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,579 @@
+{
+  "analyzedAt": "2025-12-17T20:07:20.836Z",
+  "source": "alandtse__tesla.osv.json",
+  "summary": {
+    "totalVulnerabilities": 7,
+    "uniqueVulnerabilities": 7,
+    "affectedPackages": 5,
+    "stalePackages": 7,
+    "stalePackagesOldFix": 0,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 5,
+      "LOW": 2
+    },
+    "recentVulnerabilities": 7,
+    "hasFixAvailable": 7
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-mq77-rv97-285m",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-62172"
+      ],
+      "summary": "Home Assistant has Stored XSS vulnerability in Energy dashboard from Energy Entity Name",
+      "details": "### Summary\nAn authenticated party can add a malicious name to the Energy entity, allowing for Cross-Site Scripting attacks against anyone who can see the Energy dashboard, when they hover over any information point (The blue bar in the picture below)\n<img width=\"955\" height=\"568\" alt=\"1_cens\" src=\"https://github.com/user-attachments/assets/ed855216-c306-4b50-affc-cda100e72b74\" />\n\n\nAn alternative, and more impactful scenario, is that the entity gets a malicious name from the provider of the Entity (in this case the energy provider: Tibber), and gets exploited that way, through the default name.\n\n\n### Details\nThe incriminating entity in my scenario is from the Tibber integration, as shown in the screenshot below:\n<img width=\"822\" height=\"309\" alt=\"2_cens\" src=\"https://github.com/user-attachments/assets/d0d5a7aa-8d0c-4dcb-825b-e4cb8ea8885b\" />\n\n\nThe exploit should be possible regardless of the Energy integration, as the user can name the entity themselves and as such pick a malicious name. The default name given by the Energy integration can also be taken directly from their system, and be vulnerable that way. The execution happens within the energy dashboard, when hovering over a data point:\n\n<img width=\"1547\" height=\"575\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6e5880c2-cde4-4a96-b573-73756c69d0d8\" />\n\n\n**Update found after issue was reported:**\nI found that the issue presents itself for any entity with a html-entity in the name, which is included and rendered in the graph view. Following is an example for a speaker:\n<img width=\"423\" height=\"96\" alt=\"11_cens\" src=\"https://github.com/user-attachments/assets/3b4d43dd-d9e0-466b-85c0-277af3195acf\" />\n\n##### Source code\nThe relevant source code is added in a comment, but copy pasted here as well:\n\nThe offending line of code rendering the payload appears to be:\nhttps://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-devices-graph-card.ts#L110\nWhere the parameter marked with bold and italic is the vulnerable value:\nreturn \\`${title}${params.marker} **_${params.seriesName}_**: ${value}\\`;\n\n\nFrom the trace below, we can see that the only change done to the friendly_name of an entity is replacing underscores with spaces (_computeObjectId(entityId).replace(/_/g, \" \")_).\nWe can also determine that any power entity will have it's name used if there is one, and fall back to the friendly name if it cannot find one:\n```\ndata.push({\n  id: `${compare ? \"compare-\" : \"\"}${statId}-${type}`,\n  type: \"bar\",\n  cursor: \"default\",\n  name:\n    type in labels\n      ? labels[type]\n      : getStatisticLabel(\n          this.hass,\n          statId,\n          statisticsMetaData[statId]\n        ),\n```\n(https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-usage-graph-card.ts#L467-L478)\n\n\nThe value comes from:\n\n1. https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-usage-graph-card.ts#L467-L478 \n(This is the relevant call: _getStatisticLabel(this.hass, statId, statisticsMetaData[statId];_)\n\n2. getStatisticLabel is defined here: https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/data/recorder.ts#L329-L339 (This is the relevant call: _computeStateName(entity);_)\n\n3. computeStateName is defined here: https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/common/entity/compute_state_name.ts\n\n\n-----\n\n### PoC\n1. Set up a new energy provider with a price sensor.\n2. Give the price sensor a malicious name \n<img width=\"814\" height=\"100\" alt=\"4_cens\" src=\"https://github.com/user-attachments/assets/64bf7a00-47a2-46db-ae0f-b93e328837d2\" />\n<img width=\"459\" height=\"325\" alt=\"5_cens\" src=\"https://github.com/user-attachments/assets/e43e1c4f-bb4e-45b4-b46a-a6fc32b689ba\" />\n\n\n3. Configure the energy dashboard to get data from the price sensor\n<img width=\"582\" height=\"394\" alt=\"image\" src=\"https://github.com/user-attachments/assets/74c99ab8-0842-4c1b-b2e9-994827d89609\" />\n\n<img width=\"1678\" height=\"241\" alt=\"7_cens\" src=\"https://github.com/user-attachments/assets/24f4c83a-3c0a-4dea-9e1c-9c6b070fb28f\" />\n\n\n<img width=\"329\" height=\"497\" alt=\"8_cens\" src=\"https://github.com/user-attachments/assets/ccb7f90a-4745-4fb4-9efa-f30b3324cb3a\" />\n\n\n5. Look at the data and hover the data point for code to execute. (You may have to trigger data ingestion or add a false data point to be able to hover a data point when testing, you need at least one datapoint to trigger the vulnerability)\n<img width=\"1547\" height=\"575\" alt=\"9_cens\" src=\"https://github.com/user-attachments/assets/087cdf78-a503-427d-8e0c-bb5db24de5c8\" />\n\n\n### Impact\nIt is possible to exploit this over the internet, by using an energy provider, like Tibber, with a malicious name, and relying on the default naming in Home Assistant being used. This is actually how I found this bug:\n<img width=\"453\" height=\"152\" alt=\"10_cens\" src=\"https://github.com/user-attachments/assets/45451efb-2688-4589-a988-88d1fc0b4e25\" />\n\nThis means that a malicious employee or someone with access to your electricity provider can attack your Home Assistant instance from your electricity provider. I am unsure if you consider this a sanitization and escaping issue in the respective integrations or not, but I believe a central fix in the form of fixing the Energy Dashboard is more appropriate, rather than to rely on every integration properly handling user input.",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-14T19:36:53Z",
+        "modifiedDate": "2025-10-22T19:01:00.313854Z",
+        "daysSincePublished": 64
+      },
+      "affected": {
+        "package": "homeassistant",
+        "version": "2025.10.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2025.10.1",
+        "fixedIn": "2025.10.2",
+        "recommendation": "Upgrade to 2025.10.2 or later",
+        "fixAvailableSince": "2025-10-22T19:01:00.313Z",
+        "daysSinceFix": 56,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/core/security/advisories/GHSA-mq77-rv97-285m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62172"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/home-assistant/core"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/common/entity/compute_state_name.ts"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/data/recorder.ts#L329-L339"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-devices-graph-card.ts#L110"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-usage-graph-card.ts#L467-L478"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4xh5-x5gv-qwph",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "BIT-pip-2025-8869",
+        "CVE-2025-8869"
+      ],
+      "summary": "pip's fallback tar extraction doesn't check symbolic links point to extraction directory",
+      "details": "### Summary\n\nIn the fallback extraction path for source distributions, `pip` used Python’s `tarfile` module without verifying that symbolic/hard link targets resolve inside the intended extraction directory. A malicious sdist can include links that escape the target directory and overwrite arbitrary files on the invoking host during `pip install`.\n\n### Impact\n\nSuccessful exploitation enables arbitrary file overwrite outside the build/extraction directory on the machine running `pip`. This can be leveraged to tamper with configuration or startup files and may lead to further code execution depending on the environment, but the direct, guaranteed impact is integrity compromise on the vulnerable system.\n\n### Conditions\n\nThe issue is triggered when installing an attacker-controlled sdist (e.g., from an index or URL) and the fallback extraction code path is used. No special privileges are required beyond running `pip install`; active user action is necessary.\n\n### Remediation\n\nThe [fix](https://github.com/pypa/pip/pull/13550) is available starting in pip `25.3`. Using a Python interpreter that implements the safe-extraction behavior described by **PEP 706** provides additional defense in depth for other `tarfile` issues but is not a substitute for upgrading pip for this specific flaw.",
+      "cwes": [
+        {
+          "id": "CWE-59",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-24T15:31:14Z",
+        "modifiedDate": "2025-11-03T19:51:02.757999Z",
+        "daysSincePublished": 84
+      },
+      "affected": {
+        "package": "pip",
+        "version": "25.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "25.2",
+        "fixedIn": "25.3",
+        "recommendation": "Upgrade to 25.3 or later",
+        "fixAvailableSince": "2025-11-03T19:51:02.757Z",
+        "daysSinceFix": 44,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8869"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/pip/pull/13550"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/pip/commit/f2b92314da012b9fffa36b3f3e67748a37ef464a"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pypa/pip"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/10/msg00028.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/IF5A3GCJY3VH7BVHJKOWOJFKTW7VFQEN"
+        },
+        {
+          "type": "WEB",
+          "url": "https://pip.pypa.io/en/stable/news/#v25-2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2xpw-w6gg-jr37",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-66471"
+      ],
+      "summary": "urllib3 streaming API improperly handles highly compressed data",
+      "details": "### Impact\n\nurllib3's [streaming API](https://urllib3.readthedocs.io/en/2.5.0/advanced-usage.html#streaming-and-i-o) is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once.\n\nWhen streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP `Content-Encoding` header (e.g., `gzip`, `deflate`, `br`, or `zstd`). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation.\n\nThe decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data; CWE-409) on the client side, even if the application only requested a small chunk of data.\n\n\n### Affected usages\n\nApplications and libraries using urllib3 version 2.5.0 and earlier to stream large compressed responses or content from untrusted sources.\n\n`stream()`, `read(amt=256)`, `read1(amt=256)`, `read_chunked(amt=256)`, `readinto(b)` are examples of `urllib3.HTTPResponse` method calls using the affected logic unless decoding is disabled explicitly.\n\n\n### Remediation\n\nUpgrade to at least urllib3 v2.6.0 in which the library avoids decompressing data that exceeds the requested amount.\n\nIf your environment contains a package facilitating the Brotli encoding, upgrade to at least Brotli 1.2.0 or brotlicffi 1.2.0.0 too. These versions are enforced by the `urllib3[brotli]` extra in the patched versions of urllib3.\n\n\n### Credits\n\nThe issue was reported by @Cycloctane.\nSupplemental information was provided by @stamparm during a security audit performed by [7ASecurity](https://7asecurity.com/) and facilitated by [OSTIF](https://ostif.org/).",
+      "cwes": [
+        {
+          "id": "CWE-409",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-05T18:15:54Z",
+        "modifiedDate": "2025-12-05T18:52:26.581492Z",
+        "daysSincePublished": 12
+      },
+      "affected": {
+        "package": "urllib3",
+        "version": "2.5.0",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.5.0",
+        "fixedIn": "2.6.0",
+        "recommendation": "Upgrade to 2.6.0 or later",
+        "fixAvailableSince": "2025-12-05T18:52:26.581Z",
+        "daysSinceFix": 12,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66471"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/urllib3/urllib3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gm62-xv2j-4w53",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-66418"
+      ],
+      "summary": "urllib3 allows an unbounded number of links in the decompression chain",
+      "details": "## Impact\n\nurllib3 supports chained HTTP encoding algorithms for response content according to RFC 9110 (e.g., `Content-Encoding: gzip, zstd`).\n\nHowever, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data.\n\n\n## Affected usages\n\nApplications and libraries using urllib3 version 2.5.0 and earlier for HTTP requests to untrusted sources unless they disable content decoding explicitly.\n\n\n## Remediation\n\nUpgrade to at least urllib3 v2.6.0 in which the library limits the number of links to 5.\n\nIf upgrading is not immediately possible, use [`preload_content=False`](https://urllib3.readthedocs.io/en/2.5.0/advanced-usage.html#streaming-and-i-o) and ensure that `resp.headers[\"content-encoding\"]` contains a safe number of encodings before reading the response content.",
+      "cwes": [
+        {
+          "id": "CWE-770",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-05T18:15:19Z",
+        "modifiedDate": "2025-12-05T18:52:50.341818Z",
+        "daysSincePublished": 12
+      },
+      "affected": {
+        "package": "urllib3",
+        "version": "2.5.0",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.5.0",
+        "fixedIn": "2.6.0",
+        "recommendation": "Upgrade to 2.6.0 or later",
+        "fixAvailableSince": "2025-12-05T18:52:50.341Z",
+        "daysSinceFix": 12,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66418"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/urllib3/urllib3"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pqhf-p39g-3x64",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [],
+      "summary": "uv allows ZIP payload obfuscation through parsing differentials",
+      "details": "### Impact\n\nIn versions 0.9.5 and earlier of uv, ZIP archives were handled in a manner that enabled two parsing differentials against other components of the Python packaging ecosystem:\n\n1. Central directory entries in a ZIP archive can contain comment fields. However, uv would assume that these fields were not present, since they aren't widely used. Consequently, a ZIP archive could be constructed where uv would interpret the contents of a central directory comment field as ZIP control structures (such as a new central directory entry), rather than skipping over them.\n2. Both local file entries and central directory entries contain filename fields, which are used to place archive members on disk. These fields are arbitrary sequences of bytes, and may therefore be invalid or ambiguous. For example, they may contain ASCII null bytes, in which case different ZIP extractors behave differently: Python's `zipfile` module truncates the filename at the first null, while uv would skip (not extract) any archive members whose filenames contained nulls. Because of this difference, a ZIP archive could be constructed that would extract differently across different Python package installers.\n\nIn both cases, the outcome is that an attacker may be able to produce a ZIP with a consistent digest that expands differently with different Python package installers.\n\nLike with GHSA-8qf3-x8v5-2pj8, the impact of these differentials is limited by a number of factors:\n\n- To be compromised via this vulnerability, user interaction of some sort is required. In particular, the user must run `uv pip install $package` or similar with an attacker-controlled $package.\nWhen using wheel distributions, installation of the malicious package is not sufficient for execution of malicious code, the vicim would need to perform a separate invocation, e.g., `python -c \"import $package\"`.\n- If a ZIP-based source distribution (which are less common than tarball source distributions), is encountered, malicious code can be executed during package resolution or installation. uv may invoke the malicious code when building the source distribution into a wheel.\n\n### Patches\n\nVersions 0.9.6 and newer of uv address both of the parser differentials above, by properly handling comments in central directory entries and by refusing to process ZIPs that contain filename fields that are unlikely to be interpreted consistently across other ZIP parser implementations.\n\n### Workarounds\n\nUsers are advised to upgrade to 0.9.6 or newer to address this advisory.\n\nMost users should experience no breaking changes as a result of the patch above. However, users who do experience breakage should carefully review their distributions for signs of malicious intent. Users may choose to set `UV_INSECURE_NO_ZIP_VALIDATION=1` to revert to the previous behavior.\n\n### Attribution\n\nThis vulnerability was disclosed by Caleb Brown (Google).",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-436",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-29T22:12:57Z",
+        "modifiedDate": "2025-10-29T22:21:31.266626Z",
+        "daysSincePublished": 48
+      },
+      "affected": {
+        "package": "uv",
+        "version": "0.8.9",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.8.9",
+        "fixedIn": "0.9.6",
+        "recommendation": "Upgrade to 0.9.6 or later",
+        "fixAvailableSince": "2025-10-29T22:21:31.266Z",
+        "daysSinceFix": 48,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/astral-sh/uv/security/advisories/GHSA-pqhf-p39g-3x64"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/astral-sh/uv/commit/da659fee4898a73dbc75070f3e82d49f745e4628"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/astral-sh/uv"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w853-jp5j-5j7f",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-68146"
+      ],
+      "summary": "filelock has a TOCTOU race condition which allows symlink attacks during lock file creation",
+      "details": "### Impact\n\nA Time-of-Check-Time-of-Use (TOCTOU) race condition allows local attackers to corrupt or truncate arbitrary user files through symlink attacks. The vulnerability exists in both Unix and Windows lock file creation where filelock checks if a file exists before opening it with O_TRUNC. An attacker can create a symlink pointing to a victim file in the time gap between the check and open, causing os.open() to follow the symlink and truncate the target file.\n\n**Who is impacted:**\n\nAll users of filelock on Unix, Linux, macOS, and Windows systems. The vulnerability cascades to dependent libraries:\n\n- **virtualenv users**: Configuration files can be overwritten with virtualenv metadata, leaking sensitive paths\n- **PyTorch users**: CPU ISA cache or model checkpoints can be corrupted, causing crashes or ML pipeline failures\n- **poetry/tox users**: through using virtualenv or filelock on their own.\n\nAttack requires local filesystem access and ability to create symlinks (standard user permissions on Unix; Developer Mode on Windows 10+). Exploitation succeeds within 1-3 attempts when lock file paths are predictable.\n\n### Patches\n\nFixed in version **3.20.1**.\n\n**Unix/Linux/macOS fix:** Added O_NOFOLLOW flag to os.open() in UnixFileLock.\\_acquire() to prevent symlink following.\n\n**Windows fix:** Added GetFileAttributesW API check to detect reparse points (symlinks/junctions) before opening files in WindowsFileLock.\\_acquire().\n\n**Users should upgrade to filelock 3.20.1 or later immediately.**\n\n### Workarounds\n\nIf immediate upgrade is not possible:\n\n1. Use SoftFileLock instead of UnixFileLock/WindowsFileLock (note: different locking semantics, may not be suitable for all use cases)\n2. Ensure lock file directories have restrictive permissions (chmod 0700) to prevent untrusted users from creating symlinks\n3. Monitor lock file directories for suspicious symlinks before running trusted applications\n\n**Warning:** These workarounds provide only partial mitigation. The race condition remains exploitable. Upgrading to version 3.20.1 is strongly recommended.\n\n______________________________________________________________________\n\n## Technical Details: How the Exploit Works\n\n### The Vulnerable Code Pattern\n\n**Unix/Linux/macOS** (`src/filelock/_unix.py:39-44`):\n\n```python\ndef _acquire(self) -> None:\n    ensure_directory_exists(self.lock_file)\n    open_flags = os.O_RDWR | os.O_TRUNC  # (1) Prepare to truncate\n    if not Path(self.lock_file).exists():  # (2) CHECK: Does file exist?\n        open_flags |= os.O_CREAT\n    fd = os.open(self.lock_file, open_flags, ...)  # (3) USE: Open and truncate\n```\n\n**Windows** (`src/filelock/_windows.py:19-28`):\n\n```python\ndef _acquire(self) -> None:\n    raise_on_not_writable_file(self.lock_file)  # (1) Check writability\n    ensure_directory_exists(self.lock_file)\n    flags = os.O_RDWR | os.O_CREAT | os.O_TRUNC  # (2) Prepare to truncate\n    fd = os.open(self.lock_file, flags, ...)  # (3) Open and truncate\n```\n\n### The Race Window\n\nThe vulnerability exists in the gap between operations:\n\n**Unix variant:**\n\n```\nTime    Victim Thread                          Attacker Thread\n----    -------------                          ---------------\nT0      Check: lock_file exists? → False\nT1                                             ↓ RACE WINDOW\nT2                                             Create symlink: lock → victim_file\nT3      Open lock_file with O_TRUNC\n        → Follows symlink\n        → Opens victim_file\n        → Truncates victim_file to 0 bytes! ☠️\n```\n\n**Windows variant:**\n\n```\nTime    Victim Thread                          Attacker Thread\n----    -------------                          ---------------\nT0      Check: lock_file writable?\nT1                                             ↓ RACE WINDOW\nT2                                             Create symlink: lock → victim_file\nT3      Open lock_file with O_TRUNC\n        → Follows symlink/junction\n        → Opens victim_file\n        → Truncates victim_file to 0 bytes! ☠️\n```\n\n### Step-by-Step Attack Flow\n\n**1. Attacker Setup:**\n\n```python\n# Attacker identifies target application using filelock\nlock_path = \"/tmp/myapp.lock\"  # Predictable lock path\nvictim_file = \"/home/victim/.ssh/config\"  # High-value target\n```\n\n**2. Attacker Creates Race Condition:**\n\n```python\nimport os\nimport threading\n\n\ndef attacker_thread():\n    # Remove any existing lock file\n    try:\n        os.unlink(lock_path)\n    except FileNotFoundError:\n        pass\n\n    # Create symlink pointing to victim file\n    os.symlink(victim_file, lock_path)\n    print(f\"[Attacker] Created: {lock_path} → {victim_file}\")\n\n\n# Launch attack\nthreading.Thread(target=attacker_thread).start()\n```\n\n**3. Victim Application Runs:**\n\n```python\nfrom filelock import UnixFileLock\n\n# Normal application code\nlock = UnixFileLock(\"/tmp/myapp.lock\")\nlock.acquire()  # ← VULNERABILITY TRIGGERED HERE\n# At this point, /home/victim/.ssh/config is now 0 bytes!\n```\n\n**4. What Happens Inside os.open():**\n\nOn Unix systems, when `os.open()` is called:\n\n```c\n// Linux kernel behavior (simplified)\nint open(const char *pathname, int flags) {\n    struct file *f = path_lookup(pathname);  // Resolves symlinks by default!\n\n    if (flags & O_TRUNC) {\n        truncate_file(f);  // ← Truncates the TARGET of the symlink\n    }\n\n    return file_descriptor;\n}\n```\n\nWithout `O_NOFOLLOW` flag, the kernel follows the symlink and truncates the target file.\n\n### Why the Attack Succeeds Reliably\n\n**Timing Characteristics:**\n\n- **Check operation** (Path.exists()): ~100-500 nanoseconds\n- **Symlink creation** (os.symlink()): ~1-10 microseconds\n- **Race window**: ~1-5 microseconds (very small but exploitable)\n- **Thread scheduling quantum**: ~1-10 milliseconds\n\n**Success factors:**\n\n1. **Tight loop**: Running attack in a loop hits the race window within 1-3 attempts\n2. **CPU scheduling**: Modern OS thread schedulers frequently context-switch during I/O operations\n3. **No synchronization**: No atomic file creation prevents the race\n4. **Symlink speed**: Creating symlinks is extremely fast (metadata-only operation)\n\n### Real-World Attack Scenarios\n\n**Scenario 1: virtualenv Exploitation**\n\n```python\n# Victim runs: python -m venv /tmp/myenv\n# Attacker racing to create:\nos.symlink(\"/home/victim/.bashrc\", \"/tmp/myenv/pyvenv.cfg\")\n\n# Result: /home/victim/.bashrc overwritten with:\n# home = /usr/bin/python3\n# include-system-site-packages = false\n# version = 3.11.2\n# ← Original .bashrc contents LOST + virtualenv metadata LEAKED to attacker\n```\n\n**Scenario 2: PyTorch Cache Poisoning**\n\n```python\n# Victim runs: import torch\n# PyTorch checks CPU capabilities, uses filelock on cache\n# Attacker racing to create:\nos.symlink(\"/home/victim/.torch/compiled_model.pt\", \"/home/victim/.cache/torch/cpu_isa_check.lock\")\n\n# Result: Trained ML model checkpoint truncated to 0 bytes\n# Impact: Weeks of training lost, ML pipeline DoS\n```\n\n### Why Standard Defenses Don't Help\n\n**File permissions don't prevent this:**\n\n- Attacker doesn't need write access to victim_file\n- os.open() with O_TRUNC follows symlinks using the *victim's* permissions\n- The victim process truncates its own file\n\n**Directory permissions help but aren't always feasible:**\n\n- Lock files often created in shared /tmp directory (mode 1777)\n- Applications may not control lock file location\n- Many apps use predictable paths in user-writable directories\n\n**File locking doesn't prevent this:**\n\n- The truncation happens *during* the open() call, before any lock is acquired\n- fcntl.flock() only prevents concurrent lock acquisition, not symlink attacks\n\n### Exploitation Proof-of-Concept Results\n\nFrom empirical testing with the provided PoCs:\n\n**Simple Direct Attack** (`filelock_simple_poc.py`):\n\n- Success rate: 33% per attempt (1 in 3 tries)\n- Average attempts to success: 2.1\n- Target file reduced to 0 bytes in \\<100ms\n\n**virtualenv Attack** (`weaponized_virtualenv.py`):\n\n- Success rate: ~90% on first attempt (deterministic timing)\n- Information leaked: File paths, Python version, system configuration\n- Data corruption: Complete loss of original file contents\n\n**PyTorch Attack** (`weaponized_pytorch.py`):\n\n- Success rate: 25-40% per attempt\n- Impact: Application crashes, model loading failures\n- Recovery: Requires cache rebuild or model retraining\n\n**Discovered and reported by:** George Tsigourakos (@tsigouris007)",
+      "cwes": [
+        {
+          "id": "CWE-362",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-367",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-59",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-16T20:52:55Z",
+        "modifiedDate": "2025-12-16T21:22:37.339159Z",
+        "daysSincePublished": 0
+      },
+      "affected": {
+        "package": "filelock",
+        "version": "3.20.0",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.20.0",
+        "fixedIn": "3.20.1",
+        "recommendation": "Upgrade to 3.20.1 or later",
+        "fixAvailableSince": "2025-12-16T21:22:37.339Z",
+        "daysSinceFix": 0,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/tox-dev/filelock/security/advisories/GHSA-w853-jp5j-5j7f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/tox-dev/filelock/commit/4724d7f8c3393ec1f048c93933e6e3e6ec321f0e"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/tox-dev/filelock"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/tox-dev/filelock/releases/tag/3.20.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants"
+        },
+        {
+          "type": "WEB",
+          "url": "https://pubs.opengroup.org/onlinepubs/9699919799/functions/open.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w476-p2h3-79g9",
+      "severity": "LOW",
+      "severityScore": 2.5,
+      "cvssScores": [],
+      "aliases": [],
+      "summary": "uv has differential in tar extraction with PAX headers",
+      "details": "### Impact\n\nIn versions 0.9.4 and earlier of uv, tar archives containing PAX headers with file size overrides were not handled properly. As a result, an attacker could contrive a source distribution (as a tar archive) that would extract differently when installed via uv versus other Python package installers.\n\nThe underlying parsing differential here originates with astral-tokio-tar, which disclosed this vulnerability as CVE-2025-62518.\n\nIn practice, the impact of this vulnerability is **low**: only source distributions can be formatted as tar archives, and source distributions execute arbitrary code at build/installation time by definition. Consequently, a parser differential in tar extraction is strictly less powerful than the capabilities already exposed to an attacker who has the ability to control source distributions. \n\nHowever, this particular source of malleability in source distributions is unintentional and not operating by design, and therefore we consider it a vulnerability despite its overlap in capabilities with intended behavior.\n\n### Patches\n\nVersions 0.9.5 and newer of uv address the vulnerability above. Users should upgrade to 0.9.5 or newer.\n\n### Workarounds\n\nUsers are advised to upgrade to version 0.9.5 or newer to address this advisory.\n\nUsers should experience no breaking changes as a result of the patch above.\n\n### References\n\n* See CVE-2025-62518 for the corresponding advisory against astral-tokio-tar",
+      "cwes": [
+        {
+          "id": "CWE-843",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-21T18:53:27Z",
+        "modifiedDate": "2025-10-22T18:39:40.696435Z",
+        "daysSincePublished": 57
+      },
+      "affected": {
+        "package": "uv",
+        "version": "0.8.9",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.8.9",
+        "fixedIn": "0.9.5",
+        "recommendation": "Upgrade to 0.9.5 or later",
+        "fixAvailableSince": "2025-10-22T18:39:40.696Z",
+        "daysSinceFix": 56,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/astral-sh/uv/security/advisories/GHSA-w476-p2h3-79g9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/astral-sh/uv/pull/16387"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/astral-sh/uv/commit/ae450662d1546e9853f67a8c61a506d3a892d963"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-j5gw-2vrg-8fgx"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/astral-sh/uv"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/astral-sh/uv/releases/tag/0.9.5"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "filelock",
+      "currentVersion": "3.20.0",
+      "fixedIn": "3.20.1",
+      "vulnerabilities": [
+        "GHSA-w853-jp5j-5j7f"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.20.1 or later",
+      "fixAvailableSince": "2025-12-16T21:22:37.339Z",
+      "daysSinceFix": 0,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "homeassistant",
+      "currentVersion": "2025.10.1",
+      "fixedIn": "2025.10.2",
+      "vulnerabilities": [
+        "GHSA-mq77-rv97-285m"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 2025.10.2 or later",
+      "fixAvailableSince": "2025-10-22T19:01:00.313Z",
+      "daysSinceFix": 56,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "pip",
+      "currentVersion": "25.2",
+      "fixedIn": "25.3",
+      "vulnerabilities": [
+        "GHSA-4xh5-x5gv-qwph"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 25.3 or later",
+      "fixAvailableSince": "2025-11-03T19:51:02.757Z",
+      "daysSinceFix": 44,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "urllib3",
+      "currentVersion": "2.5.0",
+      "fixedIn": "2.6.0",
+      "vulnerabilities": [
+        "GHSA-2xpw-w6gg-jr37",
+        "GHSA-gm62-xv2j-4w53"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 2.6.0 or later",
+      "fixAvailableSince": "2025-12-05T18:52:26.581Z",
+      "daysSinceFix": 12,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "uv",
+      "currentVersion": "0.8.9",
+      "fixedIn": "0.9.6",
+      "vulnerabilities": [
+        "GHSA-pqhf-p39g-3x64",
+        "GHSA-w476-p2h3-79g9"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 0.9.6 or later",
+      "fixAvailableSince": "2025-10-29T22:21:31.266Z",
+      "daysSinceFix": 48,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "7 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "7 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

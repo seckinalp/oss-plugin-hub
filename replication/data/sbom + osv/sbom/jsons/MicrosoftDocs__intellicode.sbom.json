@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.MicrosoftDocs/intellicode",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/c60e0a39-7513-4774-be69-6a7e59b0308b",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T12:00:23Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.MicrosoftDocs/intellicode",
+      "SPDXID": "SPDXRef-github-MicrosoftDocs-intellicode-main-1b7e8e",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/MicrosoftDocs/intellicode",
+      "filesAnalyzed": false,
+      "licenseDeclared": "CC-BY-4.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/MicrosoftDocs/intellicode@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-MicrosoftDocs-intellicode-main-1b7e8e",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

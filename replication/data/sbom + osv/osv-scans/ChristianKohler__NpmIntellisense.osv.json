@@ -1,0 +1,1136 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/ChristianKohler__NpmIntellisense.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "brace-expansion",
+            "version": "1.1.11",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "aliases": [
+                "CVE-2025-5889",
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "max_severity": "3.1"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.1.11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.1.12"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-5889"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-10T22:51:59Z",
+                "nvd_published_at": "2025-06-09T19:15:25Z",
+                "severity": "LOW"
+              },
+              "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+              "id": "GHSA-v6h2-p8h4-qcjw",
+              "modified": "2025-06-11T20:54:10Z",
+              "published": "2025-06-09T21:30:51Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/juliangruber/brace-expansion"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?ctiid.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?submit.585717"
+                }
+              ],
+              "related": [
+                "CGA-48f6-2xrx-cxvw",
+                "CGA-53f7-rx58-5rx6",
+                "CGA-5489-g42r-jj95",
+                "CGA-6q97-x38p-2v36",
+                "CGA-8v3m-9726-pcqj",
+                "CGA-9w98-92pm-h3wg",
+                "CGA-gwp3-55v6-p25f",
+                "CGA-hvx5-j33w-wf72",
+                "CGA-jq8h-hpf9-qxxv",
+                "CGA-jv3c-567r-7fr7",
+                "CGA-mvmv-c4pf-vgpr",
+                "CGA-p2f9-h939-jv5f",
+                "CGA-vr9h-m8qm-5mj9",
+                "CGA-x49c-f2g9-2gqg",
+                "CGA-x9mj-gpvv-mx29",
+                "CGA-xc8g-m7h6-2rp6",
+                "CGA-xqvv-5w52-gqqq"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "brace-expansion Regular Expression Denial of Service vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "braces",
+            "version": "3.0.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "aliases": [
+                "CVE-2024-4068",
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-grv7-fg5c-xmjg/GHSA-grv7-fg5c-xmjg.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "braces",
+                    "purl": "pkg:npm/braces"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4068"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1050",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-10T20:17:26Z",
+                "nvd_published_at": "2024-05-14T15:42:48Z",
+                "severity": "HIGH"
+              },
+              "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+              "id": "GHSA-grv7-fg5c-xmjg",
+              "modified": "2024-07-15T22:12:28.795792Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/issues/35"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/37"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/40"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/braces"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+                }
+              ],
+              "related": [
+                "CGA-g3x5-7mr7-wr8m",
+                "CGA-hq78-8245-675v",
+                "CGA-jrqh-c82g-rxvm",
+                "CGA-p4gw-wx75-2mg4",
+                "CGA-w95g-rrw2-66h4",
+                "CGA-wr9w-hw24-rqg5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Uncontrolled resource consumption in braces"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "js-yaml",
+            "version": "4.1.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "aliases": [
+                "CVE-2025-64718",
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.14.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64718"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-14T14:29:48Z",
+                "nvd_published_at": "2025-11-13T16:15:57Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+              "id": "GHSA-mh29-5h37-fv8m",
+              "modified": "2025-11-17T15:20:43Z",
+              "published": "2025-11-14T14:29:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml has prototype pollution in merge (\u003c\u003c)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "minimatch",
+            "version": "3.0.4",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-f8q6-p94x-37v3"
+              ],
+              "aliases": [
+                "CVE-2022-3517",
+                "GHSA-f8q6-p94x-37v3"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-f8q6-p94x-37v3/GHSA-f8q6-p94x-37v3.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimatch",
+                    "purl": "pkg:npm/minimatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-3517"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-10-20T18:21:03Z",
+                "nvd_published_at": "2022-10-17T20:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.",
+              "id": "GHSA-f8q6-p94x-37v3",
+              "modified": "2024-02-14T18:15:16Z",
+              "published": "2022-10-18T12:00:32Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3517"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grafana/grafana-image-renderer/issues/329"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodejs/node/issues/42510"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/minimatch/commit/a8763f4388e51956be62dc6025cec1126beeb5e6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/minimatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00011.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "minimatch ReDoS vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "minimist",
+            "version": "1.2.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-xvch-5gv4-984h"
+              ],
+              "aliases": [
+                "CVE-2021-44906",
+                "GHSA-xvch-5gv4-984h"
+              ],
+              "max_severity": "9.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.2.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2021-44906"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-18T23:13:40Z",
+                "nvd_published_at": "2022-03-17T16:15:00Z",
+                "severity": "CRITICAL"
+              },
+              "details": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+              "id": "GHSA-xvch-5gv4-984h",
+              "modified": "2025-01-14T10:12:15.693708Z",
+              "published": "2022-03-18T00:01:09Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/issues/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/issues/164"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/pull/24"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/substack/minimist"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Prototype Pollution in minimist"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "nanoid",
+            "version": "3.1.25",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mwcw-c2x4-8c55"
+              ],
+              "aliases": [
+                "CVE-2024-55565",
+                "GHSA-mwcw-c2x4-8c55"
+              ],
+              "max_severity": "4.3"
+            },
+            {
+              "ids": [
+                "GHSA-qrpm-p2h7-hrv2"
+              ],
+              "aliases": [
+                "CVE-2021-23566",
+                "GHSA-qrpm-p2h7-hrv2"
+              ],
+              "max_severity": "5.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/12/GHSA-mwcw-c2x4-8c55/GHSA-mwcw-c2x4-8c55.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nanoid",
+                    "purl": "pkg:npm/nanoid"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "5.0.9"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/12/GHSA-mwcw-c2x4-8c55/GHSA-mwcw-c2x4-8c55.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nanoid",
+                    "purl": "pkg:npm/nanoid"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-55565"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-12-09T22:42:43Z",
+                "nvd_published_at": "2024-12-09T02:15:19Z",
+                "severity": "MODERATE"
+              },
+              "details": "When nanoid is called with a fractional value, there were a number of undesirable effects:\n\n1. in browser and non-secure, the code infinite loops on while (size--)\n2. in node, the value of poolOffset becomes fractional, causing calls to nanoid to return zeroes until the pool is next filled\n3. if the first call in node is a fractional argument, the initial buffer allocation fails with an error\n\nVersion 3.3.8 and 5.0.9 are fixed.",
+              "id": "GHSA-mwcw-c2x4-8c55",
+              "modified": "2025-11-04T16:54:54Z",
+              "published": "2024-12-09T03:30:59Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55565"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/pull/510"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ai/nanoid"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/compare/3.3.7...3.3.8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/releases/tag/5.0.9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+                }
+              ],
+              "related": [
+                "CGA-7vvh-vj96-x4xv",
+                "CGA-8vh7-wwpf-5f4g",
+                "CGA-cr3m-qfmj-rhf8",
+                "CGA-q99g-63m8-c4r8"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Predictable results in nanoid generation when given non-integer values"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-qrpm-p2h7-hrv2/GHSA-qrpm-p2h7-hrv2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nanoid",
+                    "purl": "pkg:npm/nanoid"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.31"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2021-23566"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200",
+                  "CWE-704"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-18T21:54:04Z",
+                "nvd_published_at": "2022-01-14T20:15:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "The package nanoid from 3.0.0, before 3.1.31, are vulnerable to Information Exposure via the valueOf() function which allows to reproduce the last id generated.",
+              "id": "GHSA-qrpm-p2h7-hrv2",
+              "modified": "2025-11-04T16:35:00Z",
+              "published": "2022-01-21T23:57:06Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23566"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/pull/328"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/commit/2b7bd9332bc49b6330c7ddb08e5c661833db2575"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/artalar/bc6d1eb9a3477d15d2772e876169a444"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ai/nanoid"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2332550"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-NANOID-2332193"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Exposure of Sensitive Information to an Unauthorized Actor in nanoid"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "serialize-javascript",
+            "version": "6.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-76p7-773f-r4q5"
+              ],
+              "aliases": [
+                "CVE-2024-11831",
+                "GHSA-76p7-773f-r4q5"
+              ],
+              "max_severity": "5.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-76p7-773f-r4q5/GHSA-76p7-773f-r4q5.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "serialize-javascript",
+                    "purl": "pkg:npm/serialize-javascript"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-11831"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T21:19:59Z",
+                "nvd_published_at": "2025-02-10T16:15:37Z",
+                "severity": "MODERATE"
+              },
+              "details": "A flaw was found in npm-serialize-javascript. The vulnerability occurs because the serialize-javascript module does not properly sanitize certain inputs, such as regex or other JavaScript object types, allowing an attacker to inject malicious code. This code could be executed when deserialized by a web browser, causing Cross-site scripting (XSS) attacks. This issue is critical in environments where serialized data is sent to web clients, potentially compromising the security of the website or web application using this package.",
+              "id": "GHSA-76p7-773f-r4q5",
+              "modified": "2025-11-28T21:46:28.307741Z",
+              "published": "2025-02-10T18:30:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/pull/173"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/commit/f27d65d3de42affe2aac14607066c293891cec4e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/commit/7f3ac252d86b802454cb43782820aea2e0f6dc25"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/yahoo/serialize-javascript"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2312579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2024-11831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:9294"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8551"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8544"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8512"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8479"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8233"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8078"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8059"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:4511"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:3870"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:21203"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:21068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:1468"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:1334"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:10853"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:0381"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHBA-2025:0304"
+                }
+              ],
+              "related": [
+                "CGA-72hf-gjp2-m4hx"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Cross-site Scripting (XSS) in serialize-javascript"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

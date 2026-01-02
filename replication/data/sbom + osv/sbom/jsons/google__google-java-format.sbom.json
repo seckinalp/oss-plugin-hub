@@ -1,0 +1,913 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.google/google-java-format",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/2950cddc-8b74-4e3b-a402-328926c66850",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:40Z"
+  },
+  "packages": [
+    {
+      "name": "org.apache.felix:maven-bundle-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.felix-maven-bundle-plugin-5.1.4-75c946",
+      "versionInfo": "5.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.felix/maven-bundle-plugin@5.1.4"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-gpg-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-gpg-plugin-3.0.1-75c946",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-gpg-plugin@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "com.google.auto.value:auto-value-annotations",
+      "SPDXID": "SPDXRef-maven-com.google.auto.value-auto-value-annotations-1.9-75c946",
+      "versionInfo": "1.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2012 Google LLC",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.auto.value/auto-value-annotations@1.9"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-javadoc-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-javadoc-plugin-3.6.3-75c946",
+      "versionInfo": "3.6.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2004-2023 The Apache Software Foundation, Copyright 2005, a http://www.mycompany.com MyCompany, Inc. a Note:If the project",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-javadoc-plugin@3.6.3"
+        }
+      ]
+    },
+    {
+      "name": "org.jspecify:jspecify",
+      "SPDXID": "SPDXRef-maven-org.jspecify-jspecify-1.0.0-75c946",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jspecify/jspecify@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "junit:junit",
+      "SPDXID": "SPDXRef-maven-junit-junit-4.13.2-75c946",
+      "versionInfo": "4.13.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "EPL-1.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/junit/junit@4.13.2"
+        }
+      ]
+    },
+    {
+      "name": "com.google.guava:guava-testlib",
+      "SPDXID": "SPDXRef-maven-com.google.guava-guava-testlib-32.1.3-jre-75c946",
+      "versionInfo": "32.1.3-jre",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.guava/guava-testlib@32.1.3-jre"
+        }
+      ]
+    },
+    {
+      "name": "com.google.truth.extensions:truth-java8-extension",
+      "SPDXID": "SPDXRef-maven-com.google.truth.extensions-truth-java8-extension-1.4.0-75c946",
+      "versionInfo": "1.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.truth.extensions/truth-java8-extension@1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "org.sonatype.central:central-publishing-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.sonatype.central-central-publishing-maven-plugin-0.8.0-75c946",
+      "versionInfo": "0.8.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.sonatype.central/central-publishing-maven-plugin@0.8.0"
+        }
+      ]
+    },
+    {
+      "name": "com.google.errorprone:maven-compiler-plugin",
+      "SPDXID": "SPDXRef-maven-com.google.errorprone-maven-compiler-plugin-2.45.0-75c946",
+      "versionInfo": "2.45.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.errorprone/maven-compiler-plugin@2.45.0"
+        }
+      ]
+    },
+    {
+      "name": "com.google.truth:truth",
+      "SPDXID": "SPDXRef-maven-com.google.truth-truth-1.4.0-75c946",
+      "versionInfo": "1.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.truth/truth@1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "com.google.errorprone:error_prone_annotations",
+      "SPDXID": "SPDXRef-maven-com.google.errorprone-errorproneannotations-2.45.0-75c946",
+      "versionInfo": "2.45.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.errorprone/error_prone_annotations@2.45.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-jar-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-jar-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-jar-plugin"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-source-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-source-plugin-3.2.1-75c946",
+      "versionInfo": "3.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2002-2019 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-source-plugin@3.2.1"
+        }
+      ]
+    },
+    {
+      "name": "com.google.auto.service:auto-service-annotations",
+      "SPDXID": "SPDXRef-maven-com.google.auto.service-auto-service-annotations-1.0.1-75c946",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2013 Google LLC",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.auto.service/auto-service-annotations@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-surefire-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-surefire-plugin-2.22.2-75c946",
+      "versionInfo": "2.22.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2004-2019 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-surefire-plugin@2.22.2"
+        }
+      ]
+    },
+    {
+      "name": "com.google.guava:guava",
+      "SPDXID": "SPDXRef-maven-com.google.guava-guava-32.1.3-jre-75c946",
+      "versionInfo": "32.1.3-jre",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.guava/guava@32.1.3-jre"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-source-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-source-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-source-plugin"
+        }
+      ]
+    },
+    {
+      "name": "com.google.truth:truth",
+      "SPDXID": "SPDXRef-maven-com.google.truth-truth-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.truth/truth"
+        }
+      ]
+    },
+    {
+      "name": "com.google.guava:guava-testlib",
+      "SPDXID": "SPDXRef-maven-com.google.guava-guava-testlib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.guava/guava-testlib"
+        }
+      ]
+    },
+    {
+      "name": "com.google.truth.extensions:truth-java8-extension",
+      "SPDXID": "SPDXRef-maven-com.google.truth.extensions-truth-java8-extension-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.truth.extensions/truth-java8-extension"
+        }
+      ]
+    },
+    {
+      "name": "org.jspecify:jspecify",
+      "SPDXID": "SPDXRef-maven-org.jspecify-jspecify-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jspecify/jspecify"
+        }
+      ]
+    },
+    {
+      "name": "org.graalvm.buildtools:native-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.graalvm.buildtools-native-maven-plugin-0.10.0-75c946",
+      "versionInfo": "0.10.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2020, 2021 Oracle and/or its affiliates",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.graalvm.buildtools/native-maven-plugin@0.10.0"
+        }
+      ]
+    },
+    {
+      "name": "com.google.auto.value:auto-value-annotations",
+      "SPDXID": "SPDXRef-maven-com.google.auto.value-auto-value-annotations-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.auto.value/auto-value-annotations"
+        }
+      ]
+    },
+    {
+      "name": "com.google.errorprone:error_prone_annotations",
+      "SPDXID": "SPDXRef-maven-com.google.errorprone-errorproneannotations-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.errorprone/error_prone_annotations"
+        }
+      ]
+    },
+    {
+      "name": "com.google.auto.service:auto-service-annotations",
+      "SPDXID": "SPDXRef-maven-com.google.auto.service-auto-service-annotations-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.auto.service/auto-service-annotations"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-compiler-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-compiler-plugin"
+        }
+      ]
+    },
+    {
+      "name": "org.codehaus.mojo:build-helper-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.codehaus.mojo-build-helper-maven-plugin-3.3.0-75c946",
+      "versionInfo": "3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.codehaus.mojo/build-helper-maven-plugin@3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "com.google.code.maven-replacer-plugin:replacer",
+      "SPDXID": "SPDXRef-maven-com.google.code.maven-replacer-plugin-replacer-1.5.3-75c946",
+      "versionInfo": "1.5.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.code.maven-replacer-plugin/replacer@1.5.3"
+        }
+      ]
+    },
+    {
+      "name": "com.google.testing.compile:compile-testing",
+      "SPDXID": "SPDXRef-maven-com.google.testing.compile-compile-testing-0.19-75c946",
+      "versionInfo": "0.19",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.testing.compile/compile-testing@0.19"
+        }
+      ]
+    },
+    {
+      "name": "junit:junit",
+      "SPDXID": "SPDXRef-maven-junit-junit-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/junit/junit"
+        }
+      ]
+    },
+    {
+      "name": "com.google.guava:guava",
+      "SPDXID": "SPDXRef-maven-com.google.guava-guava-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.guava/guava"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-shade-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-shade-plugin-3.2.4-75c946",
+      "versionInfo": "3.2.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2002-2020 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-shade-plugin@3.2.4"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-compiler-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-3.7.0-75c946",
+      "versionInfo": "3.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-compiler-plugin@3.7.0"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.tycho:target-platform-configuration",
+      "SPDXID": "SPDXRef-maven-org.eclipse.tycho-target-platform-configuration-3.0.5-75c946",
+      "versionInfo": "3.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008, 2011 Sonatype Inc. and others",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.tycho/target-platform-configuration@3.0.5"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.tycho:tycho-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.eclipse.tycho-tycho-maven-plugin-3.0.5-75c946",
+      "versionInfo": "3.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008, 2011 Sonatype Inc. and others",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.tycho/tycho-maven-plugin@3.0.5"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.tycho:tycho-versions-plugin",
+      "SPDXID": "SPDXRef-maven-org.eclipse.tycho-tycho-versions-plugin-3.0.5-75c946",
+      "versionInfo": "3.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "EPL-1.0",
+      "copyrightText": "Copyright (c) 2008, 2011 Sonatype Inc. and others",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.tycho/tycho-versions-plugin@3.0.5"
+        }
+      ]
+    },
+    {
+      "name": "com.google.googlejavaformat:google-java-format",
+      "SPDXID": "SPDXRef-maven-com.google.googlejavaformat-google-java-format-1.31.0-75c946",
+      "versionInfo": "1.31.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.googlejavaformat/google-java-format@1.31.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-dependency-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-dependency-plugin-3.3.0-75c946",
+      "versionInfo": "3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2002-2022 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-dependency-plugin@3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "styfle/cancel-workflow-action",
+      "SPDXID": "SPDXRef-githubactions-styfle-cancel-workflow-action-0.9.1-75c946",
+      "versionInfo": "0.9.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/styfle/cancel-workflow-action@0.9.1"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "graalvm/setup-graalvm",
+      "SPDXID": "SPDXRef-githubactions-graalvm-setup-graalvm-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/graalvm/setup-graalvm@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "oracle-actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-oracle-actions-setup-java-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/oracle-actions/setup-java@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-0.1.14-75c946",
+      "versionInfo": "0.1.14",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@0.1.14"
+        }
+      ]
+    },
+    {
+      "name": "com.github.google/google-java-format",
+      "SPDXID": "SPDXRef-github-google-google-java-format-master-601112",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/google/google-java-format",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/google/google-java-format@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.errorprone-errorproneannotations-2.45.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-githubactions-styfle-cancel-workflow-action-0.9.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.felix-maven-bundle-plugin-5.1.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.code.maven-replacer-plugin-replacer-1.5.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.tycho-tycho-versions-plugin-3.0.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.googlejavaformat-google-java-format-1.31.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-githubactions-oracle-actions-setup-java-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-junit-junit-4.13.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.auto.service-auto-service-annotations-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-3.7.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.tycho-target-platform-configuration-3.0.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-dependency-plugin-3.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-0.1.14-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-gpg-plugin-3.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-source-plugin-3.2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-surefire-plugin-2.22.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.truth-truth-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.truth.extensions-truth-java8-extension-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.jspecify-jspecify-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.auto.value-auto-value-annotations-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.guava-guava-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.auto.value-auto-value-annotations-1.9-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-javadoc-plugin-3.6.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.errorprone-maven-compiler-plugin-2.45.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.guava-guava-testlib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.graalvm.buildtools-native-maven-plugin-0.10.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.errorprone-errorproneannotations-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.testing.compile-compile-testing-0.19-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-junit-junit-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.auto.service-auto-service-annotations-1.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.guava-guava-32.1.3-jre-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.codehaus.mojo-build-helper-maven-plugin-3.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.tycho-tycho-maven-plugin-3.0.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.guava-guava-testlib-32.1.3-jre-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.truth.extensions-truth-java8-extension-1.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-jar-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-source-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-githubactions-graalvm-setup-graalvm-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.sonatype.central-central-publishing-maven-plugin-0.8.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.truth-truth-1.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-shade-plugin-3.2.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-google-google-java-format-master-601112",
+      "relatedSpdxElement": "SPDXRef-maven-org.jspecify-jspecify-1.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-google-google-java-format-master-601112",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

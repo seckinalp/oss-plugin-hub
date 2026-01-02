@@ -1,0 +1,1066 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/DominikPieper__obsidian-ReadItLater.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "brace-expansion",
+            "version": "1.1.11",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "aliases": [
+                "CVE-2025-5889",
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "max_severity": "3.1"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.1.11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.1.12"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-5889"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-10T22:51:59Z",
+                "nvd_published_at": "2025-06-09T19:15:25Z",
+                "severity": "LOW"
+              },
+              "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+              "id": "GHSA-v6h2-p8h4-qcjw",
+              "modified": "2025-06-11T20:54:10Z",
+              "published": "2025-06-09T21:30:51Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/juliangruber/brace-expansion"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?ctiid.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?submit.585717"
+                }
+              ],
+              "related": [
+                "CGA-48f6-2xrx-cxvw",
+                "CGA-53f7-rx58-5rx6",
+                "CGA-5489-g42r-jj95",
+                "CGA-6q97-x38p-2v36",
+                "CGA-8v3m-9726-pcqj",
+                "CGA-9w98-92pm-h3wg",
+                "CGA-gwp3-55v6-p25f",
+                "CGA-hvx5-j33w-wf72",
+                "CGA-jq8h-hpf9-qxxv",
+                "CGA-jv3c-567r-7fr7",
+                "CGA-mvmv-c4pf-vgpr",
+                "CGA-p2f9-h939-jv5f",
+                "CGA-vr9h-m8qm-5mj9",
+                "CGA-x49c-f2g9-2gqg",
+                "CGA-x9mj-gpvv-mx29",
+                "CGA-xc8g-m7h6-2rp6",
+                "CGA-xqvv-5w52-gqqq"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "brace-expansion Regular Expression Denial of Service vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "cross-spawn",
+            "version": "7.0.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "aliases": [
+                "CVE-2024-21538",
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.0.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-21538"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-11-15T22:25:53Z",
+                "nvd_published_at": "2024-11-08T05:15:06Z",
+                "severity": "HIGH"
+              },
+              "details": "Versions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+              "id": "GHSA-3xgq-45jj-v275",
+              "modified": "2025-05-19T19:56:26Z",
+              "published": "2024-11-08T06:30:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21538"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/issues/165"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/pull/160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/d35c865b877d2f9ded7c1ed87521c2fdb689c8dd"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moxystudio/node-cross-spawn"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
+                }
+              ],
+              "related": [
+                "CGA-3wmj-q542-x56g",
+                "CGA-49x5-fp72-pvgg",
+                "CGA-56f7-wq2j-gqhc",
+                "CGA-58mw-hm95-x9xv",
+                "CGA-7c7p-r8cv-2pj4",
+                "CGA-8hpc-g49m-34cc",
+                "CGA-8j64-28x2-ggxv",
+                "CGA-8rv2-6965-grc6",
+                "CGA-m347-mh8c-rhf4"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in cross-spawn"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "dompurify",
+            "version": "2.5.6",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vhxf-7vqr-mrjg"
+              ],
+              "aliases": [
+                "CVE-2025-26791",
+                "GHSA-vhxf-7vqr-mrjg"
+              ],
+              "max_severity": "4.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-vhxf-7vqr-mrjg/GHSA-vhxf-7vqr-mrjg.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "dompurify",
+                    "purl": "pkg:npm/dompurify"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-26791"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-14T18:05:08Z",
+                "nvd_published_at": "2025-02-14T09:15:08Z",
+                "severity": "MODERATE"
+              },
+              "details": "DOMPurify before 3.2.4 has an incorrect template literal regular expression when SAFE_FOR_TEMPLATES is set to true, sometimes leading to mutation cross-site scripting (mXSS).",
+              "id": "GHSA-vhxf-7vqr-mrjg",
+              "modified": "2025-06-30T14:24:13Z",
+              "published": "2025-02-14T09:31:22Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26791"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cure53/DOMPurify/commit/d18ffcb554e0001748865da03ac75dd7829f0f02"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://ensy.zip/posts/dompurify-323-bypass"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/cure53/DOMPurify"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cure53/DOMPurify/releases/tag/3.2.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://nsysean.github.io/posts/dompurify-323-bypass"
+                }
+              ],
+              "related": [
+                "CGA-3gr4-2xr6-89vr",
+                "CGA-62f7-r46p-jjcw"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "DOMPurify allows Cross-site Scripting (XSS)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "esbuild",
+            "version": "0.21.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "aliases": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.24.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-67mh-4wv8-2f99/GHSA-67mh-4wv8-2f99.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "esbuild",
+                    "purl": "pkg:npm/esbuild"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.25.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-346"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T17:48:07Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e =\u003e console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r =\u003e r.text()).then(content =\u003e console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+              "id": "GHSA-67mh-4wv8-2f99",
+              "modified": "2025-02-10T17:48:08Z",
+              "published": "2025-02-10T17:48:07Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/evanw/esbuild"
+                }
+              ],
+              "related": [
+                "CGA-4v28-58cf-ggx7",
+                "CGA-5qqq-3383-mhjr",
+                "CGA-75rh-2q2q-wm52",
+                "CGA-m983-9xr3-349j",
+                "CGA-mhg6-chj9-5v88",
+                "CGA-rjff-7jch-vw6j",
+                "CGA-w25f-r54p-vh94"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "esbuild enables any website to send any requests to the development server and read the response"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "form-data",
+            "version": "4.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "aliases": [
+                "CVE-2025-7783",
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "max_severity": "9.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-7783"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-330"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-07-21T19:04:54Z",
+                "nvd_published_at": "2025-07-18T17:15:44Z",
+                "severity": "CRITICAL"
+              },
+              "details": "### Summary\n\nform-data uses `Math.random()` to select a boundary value for multipart form-encoded data. This can lead to a security issue if an attacker:\n1. can observe other values produced by Math.random in the target application, and\n2. can control one field of a request made using form-data\n\nBecause the values of Math.random() are pseudo-random and predictable (see: https://blog.securityevaluators.com/hacking-the-javascript-lottery-80cc437e3b7f), an attacker who can observe a few sequential values can determine the state of the PRNG and predict future values, includes those used to generate form-data's boundary value. The allows the attacker to craft a value that contains a boundary value, allowing them to inject additional parameters into the request.\n\nThis is largely the same vulnerability as was [recently found in `undici`](https://hackerone.com/reports/2913312) by [`parrot409`](https://hackerone.com/parrot409?type=user) -- I'm not affiliated with that researcher but want to give credit where credit is due! My PoC is largely based on their work.\n\n### Details\n\nThe culprit is this line here: https://github.com/form-data/form-data/blob/426ba9ac440f95d1998dac9a5cd8d738043b048f/lib/form_data.js#L347\n\nAn attacker who is able to predict the output of Math.random() can predict this boundary value, and craft a payload that contains the boundary value, followed by another, fully attacker-controlled field. This is roughly equivalent to any sort of improper escaping vulnerability, with the caveat that the attacker must find a way to observe other Math.random() values generated by the application to solve for the state of the PRNG. However, Math.random() is used in all sorts of places that might be visible to an attacker (including by form-data itself, if the attacker can arrange for the vulnerable application to make a request to an attacker-controlled server using form-data, such as a user-controlled webhook -- the attacker could observe the boundary values from those requests to observe the Math.random() outputs). A common example would be a `x-request-id` header added by the server. These sorts of headers are often used for distributed tracing, to correlate errors across the frontend and backend. `Math.random()` is a fine place to get these sorts of IDs (in fact, [opentelemetry uses Math.random for this purpose](https://github.com/open-telemetry/opentelemetry-js/blob/2053f0d3a44631ade77ea04f656056a2c8a2ae76/packages/opentelemetry-sdk-trace-base/src/platform/node/RandomIdGenerator.ts#L22))\n\n### PoC\n\nPoC here: https://github.com/benweissmann/CVE-2025-7783-poc\n\nInstructions are in that repo. It's based on the PoC from https://hackerone.com/reports/2913312 but simplified somewhat; the vulnerable application has a more direct side-channel from which to observe Math.random() values (a separate endpoint that happens to include a randomly-generated request ID). \n\n### Impact\n\nFor an application to be vulnerable, it must:\n- Use `form-data` to send data including user-controlled data to some other system. The attacker must be able to do something malicious by adding extra parameters (that were not intended to be user-controlled) to this request. Depending on the target system's handling of repeated parameters, the attacker might be able to overwrite values in addition to appending values (some multipart form handlers deal with repeats by overwriting values instead of representing them as an array)\n- Reveal values of Math.random(). It's easiest if the attacker can observe multiple sequential values, but more complex math could recover the PRNG state to some degree of confidence with non-sequential values. \n\nIf an application is vulnerable, this allows an attacker to make arbitrary requests to internal systems.",
+              "id": "GHSA-fjxv-7rqg-78g4",
+              "modified": "2025-11-03T21:34:08Z",
+              "published": "2025-07-21T19:04:54Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7783"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benweissmann/CVE-2025-7783-poc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/form-data/form-data"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
+                }
+              ],
+              "related": [
+                "CGA-35hh-78jw-8mmq",
+                "CGA-9m6x-qcrx-9xfj",
+                "CGA-cvhq-qgx3-vfx9",
+                "CGA-g2fp-rgfq-2hjj",
+                "CGA-h6v7-23w8-2vw8",
+                "CGA-mp9r-pq3p-q3qc",
+                "CGA-pgwm-362h-3mjh",
+                "CGA-qvfw-fcfj-g5xq",
+                "CGA-rvcj-gcgm-25q3",
+                "CGA-xvgg-cqm9-vxh5",
+                "CVE-2025-7783"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "form-data uses unsafe random function in form-data for choosing boundary"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "js-yaml",
+            "version": "4.1.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "aliases": [
+                "CVE-2025-64718",
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.14.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64718"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-14T14:29:48Z",
+                "nvd_published_at": "2025-11-13T16:15:57Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+              "id": "GHSA-mh29-5h37-fv8m",
+              "modified": "2025-11-17T15:20:43Z",
+              "published": "2025-11-14T14:29:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml has prototype pollution in merge (\u003c\u003c)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "micromatch",
+            "version": "4.0.7",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "aliases": [
+                "CVE-2024-4067",
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-952p-6rrq-rcjv/GHSA-952p-6rrq-rcjv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "micromatch",
+                    "purl": "pkg:npm/micromatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4067"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-21T22:58:52Z",
+                "nvd_published_at": "2024-05-14T15:42:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+              "id": "GHSA-952p-6rrq-rcjv",
+              "modified": "2024-08-28T13:12:26Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/issues/243"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/266"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/micromatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+                }
+              ],
+              "related": [
+                "CGA-6q83-777j-gp5r",
+                "CGA-7j2f-jxvw-gx52",
+                "CGA-9hv5-rmvp-37vw",
+                "CGA-9qj8-ph43-6pq5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in micromatch"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@mozilla/readability",
+            "version": "0.5.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3p6v-hrg8-8qj7"
+              ],
+              "aliases": [
+                "CVE-2025-2792",
+                "GHSA-3p6v-hrg8-8qj7"
+              ],
+              "max_severity": "2.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-3p6v-hrg8-8qj7/GHSA-3p6v-hrg8-8qj7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@mozilla/readability",
+                    "purl": "pkg:npm/%40mozilla/readability"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.6.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-2792"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-03-26T14:08:48Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              },
+              "details": "Specially crafted titles may have caused a regular expression to excessively backtrack and cause a local denial of service.\n\nAdditional Details are [available at Bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1948833)\n\nCredit: DayShift",
+              "id": "GHSA-3p6v-hrg8-8qj7",
+              "modified": "2025-03-26T14:30:14.211850Z",
+              "published": "2025-03-26T14:08:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mozilla/readability/security/advisories/GHSA-3p6v-hrg8-8qj7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mozilla/readability/commit/1c4d63be3e7344c3dfdf76ebb05fd0d32de93eb3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1948833"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mozilla/readability"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "@mozilla/readability Denial of Service through Regex"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.joethei/obsidian-plantuml",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/26c59986-99f2-4199-9e74-c6d5762ae015",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:27Z"
+  },
+  "packages": [
+    {
+      "name": "esbuild",
+      "SPDXID": "SPDXRef-npm-esbuild-0.14.2-4d0a59",
+      "versionInfo": "0.14.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esbuild@0.14.2"
+        }
+      ]
+    },
+    {
+      "name": "@types/uuid",
+      "SPDXID": "SPDXRef-npm-types-uuid-8.3.3-ec7bb4",
+      "versionInfo": "^8.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/uuid@%5E8.3.3"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-4.5.3-76d33c",
+      "versionInfo": "^4.5.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E4.5.3"
+        }
+      ]
+    },
+    {
+      "name": "localforage",
+      "SPDXID": "SPDXRef-npm-localforage-1.10.0-06aef6",
+      "versionInfo": "1.10.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "(c) 2013-2017 Mozilla, Apache, Copyright (c) 2012 Niklas von Hertzen, Copyright (c) 2013-2016 Mozilla (https://mozilla.org), Copyright 2014 Mozilla",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/localforage@1.10.0"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/view",
+      "SPDXID": "SPDXRef-npm-codemirror-view-6.0.0-bd0b67",
+      "versionInfo": "6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2018-2021 by Marijn Haverbeke <marijnh@gmail.com> and others",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40codemirror/view@6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "builtin-modules",
+      "SPDXID": "SPDXRef-npm-builtin-modules-3.2.0-4e32ad",
+      "versionInfo": "^3.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/builtin-modules@%5E3.2.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-14.14.2-4b143d",
+      "versionInfo": "^14.14.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E14.14.2"
+        }
+      ]
+    },
+    {
+      "name": "@types/plantuml-encoder",
+      "SPDXID": "SPDXRef-npm-types-plantuml-encoder-1.4.0-e4e1ed",
+      "versionInfo": "^1.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/plantuml-encoder@%5E1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "uuid",
+      "SPDXID": "SPDXRef-npm-uuid-8.3.2-5622c5",
+      "versionInfo": "^8.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/uuid@%5E8.3.2"
+        }
+      ]
+    },
+    {
+      "name": "plantuml-encoder",
+      "SPDXID": "SPDXRef-npm-plantuml-encoder-1.4.0-b483ee",
+      "versionInfo": "^1.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/plantuml-encoder@%5E1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "node",
+      "SPDXID": "SPDXRef-npm-node-17.2.0-fb6426",
+      "versionInfo": "^17.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/node@%5E17.2.0"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-parser-5.6.0-159656",
+      "versionInfo": "^5.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/parser@%5E5.6.0"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-npm-tslib-2.3.1-d8e636",
+      "versionInfo": "^2.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@%5E2.3.1"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/commands",
+      "SPDXID": "SPDXRef-npm-codemirror-commands-6.0.0-ebdc1f",
+      "versionInfo": "6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2018-2021 by Marijn Haverbeke <marijnh@gmail.com> and others",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40codemirror/commands@6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/search",
+      "SPDXID": "SPDXRef-npm-codemirror-search-6.0.0-04864f",
+      "versionInfo": "6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2018-2021 by Marijn Haverbeke <marijnh@gmail.com> and others",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40codemirror/search@6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/binary-split",
+      "SPDXID": "SPDXRef-npm-types-binary-split-1.0.0-aea033",
+      "versionInfo": "^1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/binary-split@%5E1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint",
+      "SPDXID": "SPDXRef-npm-eslint-7.22.0-ec90a7",
+      "versionInfo": "^7.22.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint@%5E7.22.0"
+        }
+      ]
+    },
+    {
+      "name": "obsidian",
+      "SPDXID": "SPDXRef-npm-obsidian-1.5.7-1-eeeacc",
+      "versionInfo": "1.5.7-1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian@1.5.7-1"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.6.0-1a8017",
+      "versionInfo": "^5.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/eslint-plugin@%5E5.6.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-node",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-node-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-node@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/create-release",
+      "SPDXID": "SPDXRef-githubactions-actions-create-release-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/create-release@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-release-asset",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-release-asset-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-release-asset@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.joethei/obsidian-plantuml",
+      "SPDXID": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/joethei/obsidian-plantuml",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/joethei/obsidian-plantuml@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-esbuild-0.14.2-4d0a59",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-types-uuid-8.3.3-ec7bb4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-4.5.3-76d33c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-localforage-1.10.0-06aef6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-codemirror-view-6.0.0-bd0b67",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-builtin-modules-3.2.0-4e32ad",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-14.14.2-4b143d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-types-plantuml-encoder-1.4.0-e4e1ed",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-uuid-8.3.2-5622c5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-plantuml-encoder-1.4.0-b483ee",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-node-17.2.0-fb6426",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-parser-5.6.0-159656",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-tslib-2.3.1-d8e636",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-codemirror-commands-6.0.0-ebdc1f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-codemirror-search-6.0.0-04864f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-types-binary-split-1.0.0-aea033",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-7.22.0-ec90a7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-1.5.7-1-eeeacc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.6.0-1a8017",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-create-release-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-release-asset-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-joethei-obsidian-plantuml-master-b4b05d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

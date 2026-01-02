@@ -1,0 +1,425 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/dempfi__ayu.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "cross-spawn",
+            "version": "7.0.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "aliases": [
+                "CVE-2024-21538",
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.0.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-21538"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-11-15T22:25:53Z",
+                "nvd_published_at": "2024-11-08T05:15:06Z",
+                "severity": "HIGH"
+              },
+              "details": "Versions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+              "id": "GHSA-3xgq-45jj-v275",
+              "modified": "2025-05-19T19:56:26Z",
+              "published": "2024-11-08T06:30:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21538"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/issues/165"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/pull/160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/d35c865b877d2f9ded7c1ed87521c2fdb689c8dd"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moxystudio/node-cross-spawn"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
+                }
+              ],
+              "related": [
+                "CGA-3wmj-q542-x56g",
+                "CGA-49x5-fp72-pvgg",
+                "CGA-56f7-wq2j-gqhc",
+                "CGA-58mw-hm95-x9xv",
+                "CGA-7c7p-r8cv-2pj4",
+                "CGA-8hpc-g49m-34cc",
+                "CGA-8j64-28x2-ggxv",
+                "CGA-8rv2-6965-grc6",
+                "CGA-m347-mh8c-rhf4"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in cross-spawn"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "merge",
+            "version": "1.2.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7wpw-2hjm-89gp"
+              ],
+              "aliases": [
+                "CVE-2020-28499",
+                "GHSA-7wpw-2hjm-89gp"
+              ],
+              "max_severity": "7.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-7wpw-2hjm-89gp/GHSA-7wpw-2hjm-89gp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "merge",
+                    "purl": "pkg:npm/merge"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2020-28499"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-915"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-18T22:54:25Z",
+                "nvd_published_at": "2021-02-18T16:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "All versions of package merge \u003c2.1.1 are vulnerable to Prototype Pollution via _recursiveMerge .",
+              "id": "GHSA-7wpw-2hjm-89gp",
+              "modified": "2025-01-14T08:56:59.158906Z",
+              "published": "2021-05-04T20:18:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28499"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yeikos/js.merge/commit/7b0ddc2701d813f2ba289b32d6a4b9d4cc235fb4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yeikos/js.merge/blob/56ca75b2dd0f2820f1e08a49f62f04bbfb8c5f8f/src/index.ts#L64"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yeikos/js.merge/blob/master/src/index.ts#L64"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1071049"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-MERGE-1042987"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.170146"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Prototype Pollution in merge"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "minimist",
+            "version": "1.2.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-xvch-5gv4-984h"
+              ],
+              "aliases": [
+                "CVE-2021-44906",
+                "GHSA-xvch-5gv4-984h"
+              ],
+              "max_severity": "9.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.2.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2021-44906"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-18T23:13:40Z",
+                "nvd_published_at": "2022-03-17T16:15:00Z",
+                "severity": "CRITICAL"
+              },
+              "details": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+              "id": "GHSA-xvch-5gv4-984h",
+              "modified": "2025-01-14T10:12:15.693708Z",
+              "published": "2022-03-18T00:01:09Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/issues/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/issues/164"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/pull/24"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/substack/minimist"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Prototype Pollution in minimist"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

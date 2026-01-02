@@ -1,0 +1,114 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.mustafauysal/yandex-metrica",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/480a429d-bf16-4731-a478-2e2d6c94820d",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:47Z"
+  },
+  "packages": [
+    {
+      "name": "composer/installers",
+      "SPDXID": "SPDXRef-composer-composer-installers-75c946",
+      "versionInfo": "~> 1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/composer/installers"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@master"
+        }
+      ]
+    },
+    {
+      "name": "10up/action-wordpress-plugin-deploy",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-deploy@stable"
+        }
+      ]
+    },
+    {
+      "name": "10up/action-wordpress-plugin-asset-update",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-asset-update-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-asset-update@stable"
+        }
+      ]
+    },
+    {
+      "name": "com.github.mustafauysal/yandex-metrica",
+      "SPDXID": "SPDXRef-github-mustafauysal-yandex-metrica-develop-ce695a",
+      "versionInfo": "develop",
+      "downloadLocation": "git+https://github.com/mustafauysal/yandex-metrica",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/mustafauysal/yandex-metrica@develop"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-mustafauysal-yandex-metrica-develop-ce695a",
+      "relatedSpdxElement": "SPDXRef-composer-composer-installers-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mustafauysal-yandex-metrica-develop-ce695a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mustafauysal-yandex-metrica-develop-ce695a",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mustafauysal-yandex-metrica-develop-ce695a",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-asset-update-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-mustafauysal-yandex-metrica-develop-ce695a",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

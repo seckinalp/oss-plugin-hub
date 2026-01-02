@@ -1,0 +1,114 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.RaphiMC/ImmediatelyFast",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/fad327f9-8868-4b47-bbda-508383c4691f",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:29Z"
+  },
+  "packages": [
+    {
+      "name": "gradle/actions/setup-gradle",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-setup-gradle-4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2-75c946",
+      "versionInfo": "4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/setup-gradle@4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-330a01c490aca151604b8cf639adc76d48f6c5d4-75c946",
+      "versionInfo": "330a01c490aca151604b8cf639adc76d48f6c5d4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-8e8c483db84b4bee98b60c0593521ed34d9990e8-75c946",
+      "versionInfo": "8e8c483db84b4bee98b60c0593521ed34d9990e8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-f2beeb24e141e01a676f977032f5a29d81c9e27e-75c946",
+      "versionInfo": "f2beeb24e141e01a676f977032f5a29d81c9e27e",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@f2beeb24e141e01a676f977032f5a29d81c9e27e"
+        }
+      ]
+    },
+    {
+      "name": "com.github.RaphiMC/ImmediatelyFast",
+      "SPDXID": "SPDXRef-github-RaphiMC-ImmediatelyFast-1.21.9-c3377d",
+      "versionInfo": "1.21.9",
+      "downloadLocation": "git+https://github.com/RaphiMC/ImmediatelyFast",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/RaphiMC/ImmediatelyFast@1.21.9"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-RaphiMC-ImmediatelyFast-1.21.9-c3377d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-8e8c483db84b4bee98b60c0593521ed34d9990e8-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-RaphiMC-ImmediatelyFast-1.21.9-c3377d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-f2beeb24e141e01a676f977032f5a29d81c9e27e-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-RaphiMC-ImmediatelyFast-1.21.9-c3377d",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-setup-gradle-4d9f0ba0025fe599b4ebab900eb7f3a1d93ef4c2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-RaphiMC-ImmediatelyFast-1.21.9-c3377d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-330a01c490aca151604b8cf639adc76d48f6c5d4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-RaphiMC-ImmediatelyFast-1.21.9-c3377d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

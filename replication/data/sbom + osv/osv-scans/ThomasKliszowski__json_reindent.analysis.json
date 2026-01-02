@@ -1,0 +1,370 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.848Z",
+  "source": "ThomasKliszowski__json_reindent.osv.json",
+  "summary": {
+    "totalVulnerabilities": 4,
+    "uniqueVulnerabilities": 4,
+    "affectedPackages": 1,
+    "stalePackages": 4,
+    "stalePackagesOldFix": 4,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 4
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 4
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-8q59-q68h-6hv4",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2020-14343",
+        "PYSEC-2021-142"
+      ],
+      "summary": "Improper Input Validation in PyYAML",
+      "details": "A vulnerability was discovered in the PyYAML library in versions before 5.4, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. This flaw allows an attacker to execute arbitrary code on the system by abusing the python/object/new constructor. This flaw is due to an incomplete fix for CVE-2020-1747.",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-03-25T21:26:26Z",
+        "modifiedDate": "2024-10-25T21:40:41.950343Z",
+        "daysSincePublished": 1727
+      },
+      "affected": {
+        "package": "pyyaml",
+        "version": "3.11",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.11",
+        "fixedIn": "5.4",
+        "recommendation": "Upgrade to 5.4 or later",
+        "fixAvailableSince": "2024-10-25T21:40:41.950Z",
+        "daysSinceFix": 417,
+        "monthsSinceFix": 13,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14343"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/SeldonIO/seldon-core/issues/2252"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/issues/420"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/issues/420#issuecomment-663673966"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/commit/a001f2782501ad2d24986959f0239a354675f9dc"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1860466"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-8q59-q68h-6hv4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pyyaml/PYSEC-2021-142.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/yaml/pyyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://pypi.org/project/PyYAML"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rprw-h62v-c2w7",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2017-18342",
+        "PYSEC-2018-49"
+      ],
+      "summary": "PyYAML insecurely deserializes YAML strings leading to arbitrary code execution",
+      "details": "In PyYAML before 4.1, the `yaml.load()` API could execute arbitrary code. In other words, `yaml.safe_load` is not used.",
+      "cwes": [
+        {
+          "id": "CWE-502",
+          "name": "Deserialization of Untrusted Data"
+        }
+      ],
+      "age": {
+        "age": "6 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2019-01-04T17:45:26Z",
+        "modifiedDate": "2024-10-16T21:07:52.015750Z",
+        "daysSincePublished": 2539
+      },
+      "affected": {
+        "package": "pyyaml",
+        "version": "3.11",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.11",
+        "fixedIn": "4.1",
+        "recommendation": "Upgrade to 4.1 or later",
+        "fixAvailableSince": "2024-10-16T21:07:52.015Z",
+        "daysSinceFix": 426,
+        "monthsSinceFix": 14,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-18342"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/marshmallow-code/apispec/issues/278"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/issues/193"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/pull/74"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/commit/7b68405c81db889f83c32846462b238ccae5be80"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pyyaml/PYSEC-2018-49.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/yaml/pyyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/blob/master/CHANGES"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JEX7IPV5P2QJITAMA5Z63GQCZA5I6NVZ"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSQQMRUQSXBSUXLCRD3TSZYQ7SEZRKCE"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M6JCFGEIEOFMWWIXGHSELMKQDD4CV2BA"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202003-45"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2018-49",
+      "severity": "LOW",
+      "severityScore": 0,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2017-18342",
+        "GHSA-rprw-h62v-c2w7"
+      ],
+      "summary": "No summary available",
+      "details": "In PyYAML before 5.1, the yaml.load() API could execute arbitrary code if used with untrusted data. The load() function has been deprecated in version 5.1 and the 'UnsafeLoader' has been introduced for backward compatibility with the function.",
+      "cwes": [],
+      "age": {
+        "age": "7 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2018-06-27T12:29:00Z",
+        "modifiedDate": "2023-11-08T03:59:15.614863Z",
+        "daysSincePublished": 2730
+      },
+      "affected": {
+        "package": "pyyaml",
+        "version": "3.11",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.11",
+        "fixedIn": "5.1",
+        "recommendation": "Upgrade to 5.1 or later",
+        "fixAvailableSince": "2023-11-08T03:59:15.614Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/pull/74"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/blob/master/CHANGES"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M6JCFGEIEOFMWWIXGHSELMKQDD4CV2BA/"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSQQMRUQSXBSUXLCRD3TSZYQ7SEZRKCE/"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JEX7IPV5P2QJITAMA5Z63GQCZA5I6NVZ/"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation"
+        },
+        {
+          "type": "REPORT",
+          "url": "https://github.com/marshmallow-code/apispec/issues/278"
+        },
+        {
+          "type": "REPORT",
+          "url": "https://github.com/yaml/pyyaml/issues/193"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://security.gentoo.org/glsa/202003-45"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-rprw-h62v-c2w7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2021-142",
+      "severity": "LOW",
+      "severityScore": 0,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2020-14343",
+        "GHSA-8q59-q68h-6hv4"
+      ],
+      "summary": "No summary available",
+      "details": "A vulnerability was discovered in the PyYAML library in versions before 5.4, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. This flaw allows an attacker to execute arbitrary code on the system by abusing the python/object/new constructor. This flaw is due to an incomplete fix for CVE-2020-1747.",
+      "cwes": [],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-02-09T21:15:00Z",
+        "modifiedDate": "2023-11-08T04:02:26.414885Z",
+        "daysSincePublished": 1771
+      },
+      "affected": {
+        "package": "pyyaml",
+        "version": "3.11",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.11",
+        "fixedIn": "5.4",
+        "recommendation": "Upgrade to 5.4 or later",
+        "fixAvailableSince": "2023-11-08T04:02:26.414Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "REPORT",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1860466"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-8q59-q68h-6hv4"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "pyyaml",
+      "currentVersion": "3.11",
+      "fixedIn": "5.1",
+      "vulnerabilities": [
+        "PYSEC-2018-49",
+        "PYSEC-2021-142",
+        "GHSA-8q59-q68h-6hv4",
+        "GHSA-rprw-h62v-c2w7"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.1 or later",
+      "fixAvailableSince": "2023-11-08T03:59:15.614Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "4 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "4 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

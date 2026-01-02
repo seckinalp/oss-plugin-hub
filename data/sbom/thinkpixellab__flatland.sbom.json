@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.thinkpixellab/flatland",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/eeec9a02-1938-4c6b-b55e-db6a19a17668",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:56Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.thinkpixellab/flatland",
+      "SPDXID": "SPDXRef-github-thinkpixellab-flatland-master-e0d305",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/thinkpixellab/flatland",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/thinkpixellab/flatland@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-thinkpixellab-flatland-master-e0d305",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.asciidoctor/asciidoctor-intellij-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d0ef7bdf-6617-4f17-b54c-005f58372bc0",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:29Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/github-script",
+      "SPDXID": "SPDXRef-githubactions-actions-github-script-8..-75c946",
+      "versionInfo": "8.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/github-script@8.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/download-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/download-artifact@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/setup-gradle",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-setup-gradle-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/setup-gradle@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-5.1.0-75c946",
+      "versionInfo": "5.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@5.1.0"
+        }
+      ]
+    },
+    {
+      "name": "JetBrains/qodana-action",
+      "SPDXID": "SPDXRef-githubactions-JetBrains-qodana-action-2025.2.3-75c946",
+      "versionInfo": "2025.2.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/JetBrains/qodana-action@2025.2.3"
+        }
+      ]
+    },
+    {
+      "name": "actions/deploy-pages",
+      "SPDXID": "SPDXRef-githubactions-actions-deploy-pages-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/deploy-pages@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-pages-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-pages-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-pages-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/upload-sarif",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-upload-sarif-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/upload-sarif@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/configure-pages",
+      "SPDXID": "SPDXRef-githubactions-actions-configure-pages-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/configure-pages@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/cache",
+      "SPDXID": "SPDXRef-githubactions-actions-cache-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/cache@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "getsentry/action-release",
+      "SPDXID": "SPDXRef-githubactions-getsentry-action-release-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/getsentry/action-release@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.asciidoctor/asciidoctor-intellij-plugin",
+      "SPDXID": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/asciidoctor/asciidoctor-intellij-plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/asciidoctor/asciidoctor-intellij-plugin@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-github-script-8..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-5.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-pages-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-getsentry-action-release-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-setup-gradle-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-JetBrains-qodana-action-2025.2.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-deploy-pages-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-upload-sarif-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-configure-pages-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-cache-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-asciidoctor-asciidoctor-intellij-plugin-main-fb9156",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

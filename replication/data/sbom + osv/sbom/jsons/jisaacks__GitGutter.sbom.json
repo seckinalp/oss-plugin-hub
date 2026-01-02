@@ -1,0 +1,167 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.jisaacks/GitGutter",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/97c66aa9-64e4-4fc2-9566-e635baa4c7cb",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:31Z"
+  },
+  "packages": [
+    {
+      "name": "mkdocs",
+      "SPDXID": "SPDXRef-pypi-mkdocs-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mkdocs"
+        }
+      ]
+    },
+    {
+      "name": "pymdown-extensions",
+      "SPDXID": "SPDXRef-pypi-pymdown-extensions-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pymdown-extensions"
+        }
+      ]
+    },
+    {
+      "name": "mkdocs-git-revision-date-localized-plugin",
+      "SPDXID": "SPDXRef-pypi-mkdocs-git-revision-date-localized-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mkdocs-git-revision-date-localized-plugin"
+        }
+      ]
+    },
+    {
+      "name": "mkdocs-material",
+      "SPDXID": "SPDXRef-pypi-mkdocs-material-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mkdocs-material"
+        }
+      ]
+    },
+    {
+      "name": "mkdocs-minify-plugin",
+      "SPDXID": "SPDXRef-pypi-mkdocs-minify-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mkdocs-minify-plugin"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-python",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-python-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-python@3"
+        }
+      ]
+    },
+    {
+      "name": "com.github.jisaacks/GitGutter",
+      "SPDXID": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/jisaacks/GitGutter",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/jisaacks/GitGutter@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relatedSpdxElement": "SPDXRef-pypi-mkdocs-minify-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-python-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relatedSpdxElement": "SPDXRef-pypi-mkdocs-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relatedSpdxElement": "SPDXRef-pypi-pymdown-extensions-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relatedSpdxElement": "SPDXRef-pypi-mkdocs-git-revision-date-localized-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relatedSpdxElement": "SPDXRef-pypi-mkdocs-material-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-jisaacks-GitGutter-master-9c826f",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

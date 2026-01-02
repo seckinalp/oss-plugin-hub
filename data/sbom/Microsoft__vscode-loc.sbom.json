@@ -1,0 +1,75 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.microsoft/vscode-loc",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a3950999-6ea4-4b2a-bd5f-6f2ee64162ee",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T12:00:37Z"
+  },
+  "packages": [
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.microsoft/vscode-loc",
+      "SPDXID": "SPDXRef-github-microsoft-vscode-loc-main-ab1060",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/microsoft/vscode-loc",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/microsoft/vscode-loc@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-vscode-loc-main-ab1060",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-vscode-loc-main-ab1060",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-microsoft-vscode-loc-main-ab1060",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

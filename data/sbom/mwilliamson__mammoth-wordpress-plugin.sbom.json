@@ -1,0 +1,3175 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.mwilliamson/mammoth-wordpress-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a38dc93e-4e95-442c-a976-d738e4cb479d",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:38Z"
+  },
+  "packages": [
+    {
+      "name": "readable-stream",
+      "SPDXID": "SPDXRef-npm-readable-stream-1.0.34-d64307",
+      "versionInfo": "1.0.34",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors, Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/readable-stream@1.0.34"
+        }
+      ]
+    },
+    {
+      "name": "through",
+      "SPDXID": "SPDXRef-npm-through-2.3.8-ca1817",
+      "versionInfo": "2.3.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND MIT",
+      "copyrightText": "Copyright (c) 2011 Dominic Tarr",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/through@2.3.8"
+        }
+      ]
+    },
+    {
+      "name": "escope",
+      "SPDXID": "SPDXRef-npm-escope-0.0.16-5ce3b7",
+      "versionInfo": "0.0.16",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2012-2013 Yusuke Suzuki (http://github.com/Constellation), Copyright (c) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>, Copyright (c) 2013 Alex Seville <hi@alexanderseville.com>, Copyright (c) 2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/escope@0.0.16"
+        }
+      ]
+    },
+    {
+      "name": "parents",
+      "SPDXID": "SPDXRef-npm-parents-0.0.2-63b22f",
+      "versionInfo": "0.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/parents@0.0.2"
+        }
+      ]
+    },
+    {
+      "name": "window-size",
+      "SPDXID": "SPDXRef-npm-window-size-0.1.0-016513",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 Jon Schlinkert",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/window-size@0.1.0"
+        }
+      ]
+    },
+    {
+      "name": "isarray",
+      "SPDXID": "SPDXRef-npm-isarray-0.0.1-8035e8",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/isarray@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "os-browserify",
+      "SPDXID": "SPDXRef-npm-os-browserify-0.1.2-2559c6",
+      "versionInfo": "0.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 Drew Young",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/os-browserify@0.1.2"
+        }
+      ]
+    },
+    {
+      "name": "browser-pack",
+      "SPDXID": "SPDXRef-npm-browser-pack-2.0.1-f571d5",
+      "versionInfo": "2.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/browser-pack@2.0.1"
+        }
+      ]
+    },
+    {
+      "name": "wordwrap",
+      "SPDXID": "SPDXRef-npm-wordwrap-0.0.2-e32954",
+      "versionInfo": "0.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/wordwrap@0.0.2"
+        }
+      ]
+    },
+    {
+      "name": "esprima",
+      "SPDXID": "SPDXRef-npm-esprima-1.0.4-4d4238",
+      "versionInfo": "1.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2011 Ariya Hidayat <ariya.hidayat@gmail.com>, Copyright (c) 2011 Arpad Borsos <arpad.borsos@googlemail.com>, Copyright (c) 2011 Yusuke Suzuki <utatane.tea@gmail.com>, Copyright (c) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>, Copyright (c) 2012 Arpad Borsos <arpad.borsos@googlemail.com>, Copyright (c) 2012 Joost-Wim Boekesteijn <joost-wim@boekesteijn.nl>, Copyright (c) 2012 Kris Kowal <kris.kowal@cixar.com>, Copyright (c) 2012 Mathias Bynens <mathias@qiwi.be>, Copyright (c) 2012 Yusuke Suzuki <utatane.tea@gmail.com>, Copyright (c) 2012, 2011 Ariya Hidayat (http://ariya.ofilabs.com/about) and other contributors, Copyright (c) 2012, 2011 Ariya Hidayat (http://ariya.ofilabs.com/about) and other contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esprima@1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "xmlbuilder",
+      "SPDXID": "SPDXRef-npm-xmlbuilder-10.1.1-508eba",
+      "versionInfo": "10.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Ozgur Ozcitak",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/xmlbuilder@10.1.1"
+        }
+      ]
+    },
+    {
+      "name": "deps-sort",
+      "SPDXID": "SPDXRef-npm-deps-sort-0.1.2-5bf713",
+      "versionInfo": "0.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/deps-sort@0.1.2"
+        }
+      ]
+    },
+    {
+      "name": "url",
+      "SPDXID": "SPDXRef-npm-url-0.10.3-f3391a",
+      "versionInfo": "0.10.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2002-2008 Kris Kowal <http://cixar.com/~kris.kowal>, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/url@0.10.3"
+        }
+      ]
+    },
+    {
+      "name": "derequire",
+      "SPDXID": "SPDXRef-npm-derequire-0.8.0-532f66",
+      "versionInfo": "0.8.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Steven Levithan, Copyright (c) 2010 Robert Kieffer",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/derequire@0.8.0"
+        }
+      ]
+    },
+    {
+      "name": "immediate",
+      "SPDXID": "SPDXRef-npm-immediate-3.0.6-5ea705",
+      "versionInfo": "3.0.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, Domenic Denicola, Brian Cavalier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/immediate@3.0.6"
+        }
+      ]
+    },
+    {
+      "name": "assert",
+      "SPDXID": "SPDXRef-npm-assert-1.1.2-c06184",
+      "versionInfo": "1.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2009 Thomas Robinson <280north.com>, Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/assert@1.1.2"
+        }
+      ]
+    },
+    {
+      "name": "uglify-to-browserify",
+      "SPDXID": "SPDXRef-npm-uglify-to-browserify-1.0.2-4b20ff",
+      "versionInfo": "1.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Forbes Lindesay",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/uglify-to-browserify@1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "domain-browser",
+      "SPDXID": "SPDXRef-npm-domain-browser-1.1.7-21741c",
+      "versionInfo": "1.1.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/domain-browser@1.1.7"
+        }
+      ]
+    },
+    {
+      "name": "escodegen",
+      "SPDXID": "SPDXRef-npm-escodegen-1.1.0-731dfe",
+      "versionInfo": "1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2009-2011, Mozilla Foundation and contributors, Copyright (c) 2011-2012 Ariya Hidayat <ariya.hidayat@gmail.com>, Copyright (c) 2012 Arpad Borsos <arpad.borsos@googlemail.com>, Copyright (c) 2012 John Freeman <jfreeman08@gmail.com>, Copyright (c) 2012 Joost-Wim Boekesteijn <joost-wim@boekesteijn.nl>, Copyright (c) 2012 Kris Kowal <kris.kowal@cixar.com>, Copyright (c) 2012 Robert Gust-Bardon <donate@robert.gust-bardon.org>, Copyright (c) 2012 Yusuke Suzuki (http://github.com/Constellation), Copyright (c) 2012 Yusuke Suzuki <utatane.tea@gmail.com>, Copyright (c) 2012-2013 Mathias Bynens <mathias@qiwi.be>, Copyright (c) 2012-2013 Michael Ficarra <escodegen.copyright@michael.ficarra.me>, Copyright (c) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>, Copyright (c) 2013 Irakli Gozalishvili <rfobic@gmail.com>, Copyright (c) 2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/escodegen@1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "builtins",
+      "SPDXID": "SPDXRef-npm-builtins-0.0.7-8d7676",
+      "versionInfo": "0.0.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/builtins@0.0.7"
+        }
+      ]
+    },
+    {
+      "name": "duplexer",
+      "SPDXID": "SPDXRef-npm-duplexer-0.1.1-6a201c",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 Raynos.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/duplexer@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "ruglify",
+      "SPDXID": "SPDXRef-npm-ruglify-1.0.0-3a4e24",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2005, 2012 jQuery Foundation, Inc. and other contributors, Copyright 2012 jQuery Foundation and other contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/ruglify@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "core-util-is",
+      "SPDXID": "SPDXRef-npm-core-util-is-1.0.2-23aff6",
+      "versionInfo": "1.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/core-util-is@1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "pako",
+      "SPDXID": "SPDXRef-npm-pako-0.2.9-ac01ef",
+      "versionInfo": "0.2.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2016 by Vitaly Puzrin",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/pako@0.2.9"
+        }
+      ]
+    },
+    {
+      "name": "sprintf-js",
+      "SPDXID": "SPDXRef-npm-sprintf-js-1.0.3-7ce1ac",
+      "versionInfo": "1.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2007-2014, Alexandru Marasteanu",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/sprintf-js@1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "esprima-fb",
+      "SPDXID": "SPDXRef-npm-esprima-fb-3001.1.0-dev-harmony-fb-2ed35a",
+      "versionInfo": "3001.1.0-dev-harmony-fb",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esprima-fb@3001.1.0-dev-harmony-fb"
+        }
+      ]
+    },
+    {
+      "name": "path-browserify",
+      "SPDXID": "SPDXRef-npm-path-browserify-0.0.0-b19e23",
+      "versionInfo": "0.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/path-browserify@0.0.0"
+        }
+      ]
+    },
+    {
+      "name": "uglify-js",
+      "SPDXID": "SPDXRef-npm-uglify-js-2.2.5-a4d48b",
+      "versionInfo": "2.2.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/uglify-js@2.2.5"
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "SPDXID": "SPDXRef-npm-process-0.7.0-91bd35",
+      "versionInfo": "0.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/process@0.7.0"
+        }
+      ]
+    },
+    {
+      "name": "convert-source-map",
+      "SPDXID": "SPDXRef-npm-convert-source-map-0.3.5-8079fb",
+      "versionInfo": "0.3.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2013 Thorsten Lorenz, Copyright 2013 Thorsten Lorenz.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/convert-source-map@0.3.5"
+        }
+      ]
+    },
+    {
+      "name": "wordwrap",
+      "SPDXID": "SPDXRef-npm-wordwrap-0.0.3-c10e05",
+      "versionInfo": "0.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/wordwrap@0.0.3"
+        }
+      ]
+    },
+    {
+      "name": "resolve",
+      "SPDXID": "SPDXRef-npm-resolve-0.3.1-59e406",
+      "versionInfo": "0.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/resolve@0.3.1"
+        }
+      ]
+    },
+    {
+      "name": "callsite",
+      "SPDXID": "SPDXRef-npm-callsite-1.0.0-219a50",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/callsite@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "acorn",
+      "SPDXID": "SPDXRef-npm-acorn-4.0.13-d2b601",
+      "versionInfo": "4.0.13",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2016 by various contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/acorn@4.0.13"
+        }
+      ]
+    },
+    {
+      "name": "punycode",
+      "SPDXID": "SPDXRef-npm-punycode-1.3.2-bbb638",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Mathias Bynens <https://mathiasbynens.be/>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/punycode@1.3.2"
+        }
+      ]
+    },
+    {
+      "name": "string_decoder",
+      "SPDXID": "SPDXRef-npm-stringdecoder-1.1.1-ce9836",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors, Copyright Node.js contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/string_decoder@1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "deep-equal",
+      "SPDXID": "SPDXRef-npm-deep-equal-0.1.2-229da8",
+      "versionInfo": "0.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/deep-equal@0.1.2"
+        }
+      ]
+    },
+    {
+      "name": "module-deps",
+      "SPDXID": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "versionInfo": "2.0.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/module-deps@2.0.6"
+        }
+      ]
+    },
+    {
+      "name": "safe-buffer",
+      "SPDXID": "SPDXRef-npm-safe-buffer-5.1.2-ef51f6",
+      "versionInfo": "5.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Feross Aboukhadijeh, Copyright (c) Feross Aboukhadijeh (http://feross.org)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/safe-buffer@5.1.2"
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "SPDXID": "SPDXRef-npm-events-1.0.2-cb7b23",
+      "versionInfo": "1.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/events@1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "optimist",
+      "SPDXID": "SPDXRef-npm-optimist-0.3.7-2d3fb4",
+      "versionInfo": "0.3.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2010 James Halliday (mail@substack.net)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/optimist@0.3.7"
+        }
+      ]
+    },
+    {
+      "name": "duck",
+      "SPDXID": "SPDXRef-npm-duck-0.1.12-a0ffa7",
+      "versionInfo": "0.1.12",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2013, Michael Williamson",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/duck@0.1.12"
+        }
+      ]
+    },
+    {
+      "name": "path-is-absolute",
+      "SPDXID": "SPDXRef-npm-path-is-absolute-1.0.1-a8be45",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Sindre Sorhus (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/path-is-absolute@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "inline-source-map",
+      "SPDXID": "SPDXRef-npm-inline-source-map-0.3.1-f590af",
+      "versionInfo": "0.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2013 Thorsten Lorenz.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/inline-source-map@0.3.1"
+        }
+      ]
+    },
+    {
+      "name": "JSONStream",
+      "SPDXID": "SPDXRef-npm-jsonstream-0.7.4-2ea24d",
+      "versionInfo": "0.7.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND MIT",
+      "copyrightText": "Copyright (c) 2011 Dominic Tarr",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/jsonstream@0.7.4"
+        }
+      ]
+    },
+    {
+      "name": "argparse",
+      "SPDXID": "SPDXRef-npm-argparse-1.0.10-fdc5d9",
+      "versionInfo": "1.0.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 by Vitaly Puzrin, Copyright (c) 2012 Vitaly Puzrin (https://github.com/puzrin)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/argparse@1.0.10"
+        }
+      ]
+    },
+    {
+      "name": "xtend",
+      "SPDXID": "SPDXRef-npm-xtend-2.1.2-f041ea",
+      "versionInfo": "2.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 Raynos.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/xtend@2.1.2"
+        }
+      ]
+    },
+    {
+      "name": "dingbat-to-unicode",
+      "SPDXID": "SPDXRef-npm-dingbat-to-unicode-1.0.1-92755a",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/dingbat-to-unicode@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "JSONStream",
+      "SPDXID": "SPDXRef-npm-jsonstream-0.6.4-3a7623",
+      "versionInfo": "0.6.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND MIT",
+      "copyrightText": "Copyright (c) 2011 Dominic Tarr",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/jsonstream@0.6.4"
+        }
+      ]
+    },
+    {
+      "name": "duplexer2",
+      "SPDXID": "SPDXRef-npm-duplexer2-0.0.2-b8bc50",
+      "versionInfo": "0.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2013, Deoxxa Development",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/duplexer2@0.0.2"
+        }
+      ]
+    },
+    {
+      "name": "querystring",
+      "SPDXID": "SPDXRef-npm-querystring-0.2.0-a64ac4",
+      "versionInfo": "0.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2012 Irakli Gozalishvili, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/querystring@0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "through2",
+      "SPDXID": "SPDXRef-npm-through2-0.4.2-483e46",
+      "versionInfo": "0.4.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Rod Vagg rvagg (https://twitter.com/rvagg), Copyright 2013, Rod Vagg",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/through2@0.4.2"
+        }
+      ]
+    },
+    {
+      "name": "https-browserify",
+      "SPDXID": "SPDXRef-npm-https-browserify-0.0.1-14d8fa",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/https-browserify@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "querystring-es3",
+      "SPDXID": "SPDXRef-npm-querystring-es3-0.2.0-8d6f48",
+      "versionInfo": "0.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2012 Irakli Gozalishvili., Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/querystring-es3@0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "browserify-zlib",
+      "SPDXID": "SPDXRef-npm-browserify-zlib-0.1.4-e85f46",
+      "versionInfo": "0.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors, Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/browserify-zlib@0.1.4"
+        }
+      ]
+    },
+    {
+      "name": "object-keys",
+      "SPDXID": "SPDXRef-npm-object-keys-0.4.0-0cfc05",
+      "versionInfo": "0.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/object-keys@0.4.0"
+        }
+      ]
+    },
+    {
+      "name": "util-deprecate",
+      "SPDXID": "SPDXRef-npm-util-deprecate-1.0.2-9f723d",
+      "versionInfo": "1.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/util-deprecate@1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "typedarray",
+      "SPDXID": "SPDXRef-npm-typedarray-0.0.6-d47e6b",
+      "versionInfo": "0.0.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2010, Linden Research, Inc., Copyright (c) 2012, Joshua Bell",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typedarray@0.0.6"
+        }
+      ]
+    },
+    {
+      "name": "acorn",
+      "SPDXID": "SPDXRef-npm-acorn-2.7.0-764112",
+      "versionInfo": "2.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2014 by various contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/acorn@2.7.0"
+        }
+      ]
+    },
+    {
+      "name": "yargs",
+      "SPDXID": "SPDXRef-npm-yargs-3.5.4-2a5844",
+      "versionInfo": "3.5.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2010 James Halliday (mail@substack.net), copyright 2015",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/yargs@3.5.4"
+        }
+      ]
+    },
+    {
+      "name": "browserify",
+      "SPDXID": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "versionInfo": "3.46.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2008, Fair Oaks Labs, Inc., Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/browserify@3.46.1"
+        }
+      ]
+    },
+    {
+      "name": "shell-quote",
+      "SPDXID": "SPDXRef-npm-shell-quote-0.0.1-def50a",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/shell-quote@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "minimist",
+      "SPDXID": "SPDXRef-npm-minimist-0.0.10-a78899",
+      "versionInfo": "0.0.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/minimist@0.0.10"
+        }
+      ]
+    },
+    {
+      "name": "underscore",
+      "SPDXID": "SPDXRef-npm-underscore-1.13.1-60379c",
+      "versionInfo": "1.13.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/underscore@1.13.1"
+        }
+      ]
+    },
+    {
+      "name": "esutils",
+      "SPDXID": "SPDXRef-npm-esutils-1.0.0-20c3d9",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2013 Yusuke Suzuki (http://github.com/Constellation), Copyright (c) 2013 Yusuke Suzuki (http://github.com/Constellation) (twitter @Constellation (http://twitter.com/Constellation)) and other contributors, Copyright (c) 2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esutils@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "base64-js",
+      "SPDXID": "SPDXRef-npm-base64-js-1.5.1-9fc3cc",
+      "versionInfo": "1.5.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 Jameson Little",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/base64-js@1.5.1"
+        }
+      ]
+    },
+    {
+      "name": "constants-browserify",
+      "SPDXID": "SPDXRef-npm-constants-browserify-0.0.1-6718fa",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/constants-browserify@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "concat-stream",
+      "SPDXID": "SPDXRef-npm-concat-stream-1.4.11-04b3c7",
+      "versionInfo": "1.4.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Max Ogden",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/concat-stream@1.4.11"
+        }
+      ]
+    },
+    {
+      "name": "combine-source-map",
+      "SPDXID": "SPDXRef-npm-combine-source-map-0.3.0-cfb3d8",
+      "versionInfo": "0.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2013 Thorsten Lorenz.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/combine-source-map@0.3.0"
+        }
+      ]
+    },
+    {
+      "name": "resolve",
+      "SPDXID": "SPDXRef-npm-resolve-0.6.3-52b322",
+      "versionInfo": "0.6.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/resolve@0.6.3"
+        }
+      ]
+    },
+    {
+      "name": "timers-browserify",
+      "SPDXID": "SPDXRef-npm-timers-browserify-1.0.3-b3ef0e",
+      "versionInfo": "1.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 J. Ryan Stinnett <jryans@gmail.com>, Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/timers-browserify@1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "mammoth",
+      "SPDXID": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "versionInfo": "1.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "(c) 2009-2016 Stuart Knightley, (c) 2009-2021 Jeremy Ashkenas, Julian Gonggrijp, and DocumentCloud and Investigative Reporters & Editors Underscore, Copyright (c) 2013, Michael Williamson, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mammoth@1.7.0"
+        }
+      ]
+    },
+    {
+      "name": "subarg",
+      "SPDXID": "SPDXRef-npm-subarg-0.0.1-489cba",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/subarg@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "source-map",
+      "SPDXID": "SPDXRef-npm-source-map-0.1.34-ce8421",
+      "versionInfo": "0.1.34",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2009-2011, Mozilla Foundation and contributors, Copyright 2009-2011 Mozilla Foundation and contributors, Copyright 2011 Mozilla Foundation and contributors, Copyright 2011 The Closure Compiler, Copyright 2012 Mozilla Foundation and contributors, Copyright 2014 Mozilla Foundation and contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/source-map@0.1.34"
+        }
+      ]
+    },
+    {
+      "name": "defined",
+      "SPDXID": "SPDXRef-npm-defined-0.0.0-b17a19",
+      "versionInfo": "0.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/defined@0.0.0"
+        }
+      ]
+    },
+    {
+      "name": "pako",
+      "SPDXID": "SPDXRef-npm-pako-1.0.11-d2300b",
+      "versionInfo": "1.0.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT AND Zlib",
+      "copyrightText": "(c) 1995-2013 Jean-loup Gailly and Mark Adler, (c) 2014-2017 Vitaly Puzrin and Andrey Tupitsin, Copyright (c) 1995-2013 Jean-loup Gailly and Mark Adler, Copyright (c) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/pako@1.0.11"
+        }
+      ]
+    },
+    {
+      "name": "lru-cache",
+      "SPDXID": "SPDXRef-npm-lru-cache-2.7.3-54cf7a",
+      "versionInfo": "2.7.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "ISC",
+      "copyrightText": "Copyright (c) Isaac Z. Schlueter and Contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lru-cache@2.7.3"
+        }
+      ]
+    },
+    {
+      "name": "shallow-copy",
+      "SPDXID": "SPDXRef-npm-shallow-copy-0.0.1-804e4a",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/shallow-copy@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "lop",
+      "SPDXID": "SPDXRef-npm-lop-0.4.1-c6869b",
+      "versionInfo": "0.4.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2013, Michael Williamson",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lop@0.4.1"
+        }
+      ]
+    },
+    {
+      "name": "http-browserify",
+      "SPDXID": "SPDXRef-npm-http-browserify-1.3.2-3e939a",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2011 Dominic Tarr, Copyright (c) 2011-2012 Tim Caswell, Copyright (c) 2012 Tim Caswell, Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/http-browserify@1.3.2"
+        }
+      ]
+    },
+    {
+      "name": "through",
+      "SPDXID": "SPDXRef-npm-through-2.2.7-6354f5",
+      "versionInfo": "2.2.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND MIT",
+      "copyrightText": "Copyright (c) 2011 Dominic Tarr",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/through@2.2.7"
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "SPDXID": "SPDXRef-npm-process-0.5.2-3333a2",
+      "versionInfo": "0.5.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/process@0.5.2"
+        }
+      ]
+    },
+    {
+      "name": "punycode",
+      "SPDXID": "SPDXRef-npm-punycode-1.2.4-9572a0",
+      "versionInfo": "1.2.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT OR GPL-2.0-only",
+      "copyrightText": "Copyright (c) 1989, 1991 Free Software Foundation, Inc., Copyright Mathias Bynens <http://mathiasbynens.be/>, copyrighted by the Free Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/punycode@1.2.4"
+        }
+      ]
+    },
+    {
+      "name": "stream-combiner",
+      "SPDXID": "SPDXRef-npm-stream-combiner-0.1.0-b01ca9",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 Dominic Tarr",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/stream-combiner@0.1.0"
+        }
+      ]
+    },
+    {
+      "name": "option",
+      "SPDXID": "SPDXRef-npm-option-0.2.4-ce4e60",
+      "versionInfo": "0.2.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2013, Michael Williamson",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/option@0.2.4"
+        }
+      ]
+    },
+    {
+      "name": "rfile",
+      "SPDXID": "SPDXRef-npm-rfile-1.0.0-1cad92",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rfile@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "readable-stream",
+      "SPDXID": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "versionInfo": "2.3.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors, Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/readable-stream@2.3.7"
+        }
+      ]
+    },
+    {
+      "name": "path-platform",
+      "SPDXID": "SPDXRef-npm-path-platform-0.0.1-208f30",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/path-platform@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "jszip",
+      "SPDXID": "SPDXRef-npm-jszip-3.7.1-526b5c",
+      "versionInfo": "3.7.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "(GPL-3.0-only AND GPL-3.0-or-later AND MIT) OR (GPL-3.0-only AND MIT)",
+      "copyrightText": "(c) 1995-2013 Jean-loup Gailly and Mark Adler, (c) 2009-2016 Stuart Knightley, (c) 2014-2017 Vitaly Puzrin and Andrey Tupitsin, Copyright (c) 2007 Free Software Foundation, Inc. <http://fsf.org/>, Copyright (c) 2009-2016 Stuart Knightley, David Duponchel, Franz Buchinger, Antonio Afonso",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/jszip@3.7.1"
+        }
+      ]
+    },
+    {
+      "name": "inherits",
+      "SPDXID": "SPDXRef-npm-inherits-2.0.1-4972ba",
+      "versionInfo": "2.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "ISC",
+      "copyrightText": "Copyright (c) Isaac Z. Schlueter",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/inherits@2.0.1"
+        }
+      ]
+    },
+    {
+      "name": "jsonparse",
+      "SPDXID": "SPDXRef-npm-jsonparse-0.0.5-41eebd",
+      "versionInfo": "0.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2011-2012 Tim Caswell, Copyright (c) 2012 Tim Caswell",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/jsonparse@0.0.5"
+        }
+      ]
+    },
+    {
+      "name": "async",
+      "SPDXID": "SPDXRef-npm-async-0.2.10-1cf765",
+      "versionInfo": "0.2.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2010 Caolan McMahon",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/async@0.2.10"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "SPDXID": "SPDXRef-npm-minimatch-0.3.0-90eea9",
+      "versionInfo": "0.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2009, 2010, 2011 Isaac Z. Schlueter.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/minimatch@0.3.0"
+        }
+      ]
+    },
+    {
+      "name": "glob",
+      "SPDXID": "SPDXRef-npm-glob-3.2.11-47b11a",
+      "versionInfo": "3.2.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) Isaac Z. Schlueter",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/glob@3.2.11"
+        }
+      ]
+    },
+    {
+      "name": "vm-browserify",
+      "SPDXID": "SPDXRef-npm-vm-browserify-0.0.4-66ab63",
+      "versionInfo": "0.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/vm-browserify@0.0.4"
+        }
+      ]
+    },
+    {
+      "name": "inherits",
+      "SPDXID": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "versionInfo": "2.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "ISC",
+      "copyrightText": "Copyright (c) Isaac Z. Schlueter",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/inherits@2.0.3"
+        }
+      ]
+    },
+    {
+      "name": "lexical-scope",
+      "SPDXID": "SPDXRef-npm-lexical-scope-1.1.1-88b9a5",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lexical-scope@1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "SPDXID": "SPDXRef-npm-process-0.6.0-251113",
+      "versionInfo": "0.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/process@0.6.0"
+        }
+      ]
+    },
+    {
+      "name": "syntax-error",
+      "SPDXID": "SPDXRef-npm-syntax-error-1.1.6-e1c472",
+      "versionInfo": "1.1.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/syntax-error@1.1.6"
+        }
+      ]
+    },
+    {
+      "name": "buffer",
+      "SPDXID": "SPDXRef-npm-buffer-2.1.13-6460f3",
+      "versionInfo": "2.1.13",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2009 Thomas Robinson <280north.com>, Copyright (c) 2013 Feross Aboukhadijeh, and other contributors., Copyright (c) Feross Aboukhadijeh (http://feross.org), and other contributors., Copyright 2010-2012 Mathias Bynens <http://mths.be/>, Copyright Joyent, Inc. and other Node contributors., copyright Robert Kieffer <http://broofa.com/>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/buffer@2.1.13"
+        }
+      ]
+    },
+    {
+      "name": "stream-browserify",
+      "SPDXID": "SPDXRef-npm-stream-browserify-0.1.3-8aeddd",
+      "versionInfo": "0.1.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/stream-browserify@0.1.3"
+        }
+      ]
+    },
+    {
+      "name": "base64-js",
+      "SPDXID": "SPDXRef-npm-base64-js-0.0.8-59e57d",
+      "versionInfo": "0.0.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/base64-js@0.0.8"
+        }
+      ]
+    },
+    {
+      "name": "process-nextick-args",
+      "SPDXID": "SPDXRef-npm-process-nextick-args-2.0.1-ba7e69",
+      "versionInfo": "2.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2015 Calvin Metcalf",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/process-nextick-args@2.0.1"
+        }
+      ]
+    },
+    {
+      "name": "parents",
+      "SPDXID": "SPDXRef-npm-parents-0.0.3-fe8b10",
+      "versionInfo": "0.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/parents@0.0.3"
+        }
+      ]
+    },
+    {
+      "name": "isarray",
+      "SPDXID": "SPDXRef-npm-isarray-1.0.0-6eedbc",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/isarray@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "console-browserify",
+      "SPDXID": "SPDXRef-npm-console-browserify-1.0.3-e883f4",
+      "versionInfo": "1.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 Raynos.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/console-browserify@1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "detective",
+      "SPDXID": "SPDXRef-npm-detective-3.1.0-e7439a",
+      "versionInfo": "3.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/detective@3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "tty-browserify",
+      "SPDXID": "SPDXRef-npm-tty-browserify-0.0.1-af8910",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tty-browserify@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "astw",
+      "SPDXID": "SPDXRef-npm-astw-2.2.0-77177e",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/astw@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "lie",
+      "SPDXID": "SPDXRef-npm-lie-3.3.0-e727db",
+      "versionInfo": "3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2018 Calvin Metcalf, Jordan Harband",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lie@3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "insert-module-globals",
+      "SPDXID": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "versionInfo": "6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/insert-module-globals@6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "decamelize",
+      "SPDXID": "SPDXRef-npm-decamelize-1.2.0-8952f5",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Sindre Sorhus (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/decamelize@1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "indexof",
+      "SPDXID": "SPDXRef-npm-indexof-0.0.1-c8eb10",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/indexof@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "source-map",
+      "SPDXID": "SPDXRef-npm-source-map-0.3.0-86f6c0",
+      "versionInfo": "0.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2009-2011, Mozilla Foundation and contributors, Copyright 2009-2011 Mozilla Foundation and contributors, Copyright 2011 Mozilla Foundation and contributors, Copyright 2011 The Closure Compiler, Copyright 2012 Mozilla Foundation and contributors, Copyright 2014 Mozilla Foundation and contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/source-map@0.3.0"
+        }
+      ]
+    },
+    {
+      "name": "umd",
+      "SPDXID": "SPDXRef-npm-umd-2.0.0-972eba",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Forbes Lindesay",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/umd@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "readable-stream",
+      "SPDXID": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "versionInfo": "1.1.14",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/readable-stream@1.1.14"
+        }
+      ]
+    },
+    {
+      "name": "esrefactor",
+      "SPDXID": "SPDXRef-npm-esrefactor-0.1.0-564382",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>, Copyright (c) 2013 Ariya Hidayat <ariya.hidayat@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esrefactor@0.1.0"
+        }
+      ]
+    },
+    {
+      "name": "source-map",
+      "SPDXID": "SPDXRef-npm-source-map-0.1.43-3a51be",
+      "versionInfo": "0.1.43",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2009-2011, Mozilla Foundation and contributors, Copyright 2009-2011 Mozilla Foundation and contributors, Copyright 2011 Mozilla Foundation and contributors, Copyright 2011 The Closure Compiler Authors, Copyright 2012 Mozilla Foundation and contributors, Copyright 2014 Mozilla Foundation and contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/source-map@0.1.43"
+        }
+      ]
+    },
+    {
+      "name": "estraverse",
+      "SPDXID": "SPDXRef-npm-estraverse-1.5.1-212425",
+      "versionInfo": "1.5.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>, Copyright (c) 2012-2013 Yusuke Suzuki (http://github.com/Constellation), Copyright (c) 2012-2013 Yusuke Suzuki (http://github.com/Constellation) (twitter @Constellation (http://twitter.com/Constellation)) and other contributors, Copyright (c) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/estraverse@1.5.1"
+        }
+      ]
+    },
+    {
+      "name": "stream-combiner",
+      "SPDXID": "SPDXRef-npm-stream-combiner-0.0.4-e6d367",
+      "versionInfo": "0.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 Dominic Tarr",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/stream-combiner@0.0.4"
+        }
+      ]
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "SPDXID": "SPDXRef-npm-xmldom-xmldom-0.8.10-641515",
+      "versionInfo": "0.8.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright 2012 - 2017 @jindw <jindw@xidea.org> and other contributors, Copyright 2012 - 2017 jindw <jindw@xidea.org> and other contributors, Copyright 2019 - present Christopher J. Brody and other contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40xmldom/xmldom@0.8.10"
+        }
+      ]
+    },
+    {
+      "name": "uglify-js",
+      "SPDXID": "SPDXRef-npm-uglify-js-2.4.24-ea50a0",
+      "versionInfo": "2.4.24",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>, Copyright 2012-2013 (c) Mihai Bazon <mihai.bazon@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/uglify-js@2.4.24"
+        }
+      ]
+    },
+    {
+      "name": "commondir",
+      "SPDXID": "SPDXRef-npm-commondir-0.0.1-da1c22",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/commondir@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "amdefine",
+      "SPDXID": "SPDXRef-npm-amdefine-1.0.1-30234d",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause OR MIT OR (BSD-3-Clause AND MIT)",
+      "copyrightText": "Copyright (c) 2011-2016, The Dojo Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/amdefine@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "xtend",
+      "SPDXID": "SPDXRef-npm-xtend-3.0.0-3bf18c",
+      "versionInfo": "3.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2014 Raynos.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/xtend@3.0.0"
+        }
+      ]
+    },
+    {
+      "name": "util",
+      "SPDXID": "SPDXRef-npm-util-0.10.3-234a55",
+      "versionInfo": "0.10.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/util@0.10.3"
+        }
+      ]
+    },
+    {
+      "name": "ieee754",
+      "SPDXID": "SPDXRef-npm-ieee754-1.1.11-881a28",
+      "versionInfo": "1.1.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2008, Fair Oaks Labs, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/ieee754@1.1.11"
+        }
+      ]
+    },
+    {
+      "name": "bluebird",
+      "SPDXID": "SPDXRef-npm-bluebird-3.4.7-919a71",
+      "versionInfo": "3.4.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013-2015 Petka Antonov, Copyright (c) 2013-2016 Petka Antonov",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/bluebird@3.4.7"
+        }
+      ]
+    },
+    {
+      "name": "sigmund",
+      "SPDXID": "SPDXRef-npm-sigmund-1.0.1-e58aa6",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "ISC",
+      "copyrightText": "Copyright (c) Isaac Z. Schlueter and Contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/sigmund@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "string_decoder",
+      "SPDXID": "SPDXRef-npm-stringdecoder-0.0.1-1bec47",
+      "versionInfo": "0.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/string_decoder@0.0.1"
+        }
+      ]
+    },
+    {
+      "name": "string_decoder",
+      "SPDXID": "SPDXRef-npm-stringdecoder-0.10.31-a46285",
+      "versionInfo": "0.10.31",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/string_decoder@0.10.31"
+        }
+      ]
+    },
+    {
+      "name": "set-immediate-shim",
+      "SPDXID": "SPDXRef-npm-set-immediate-shim-1.0.1-967368",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Sindre Sorhus (http://sindresorhus.com)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/set-immediate-shim@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "camelcase",
+      "SPDXID": "SPDXRef-npm-camelcase-1.2.1-4f1f2e",
+      "versionInfo": "1.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Sindre Sorhus (http://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/camelcase@1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "estraverse",
+      "SPDXID": "SPDXRef-npm-estraverse-0.0.4-39615e",
+      "versionInfo": "0.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>, Copyright (c) 2012 Yusuke Suzuki (http://github.com/Constellation), Copyright (c) 2012 Yusuke Suzuki <utatane.tea@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/estraverse@0.0.4"
+        }
+      ]
+    },
+    {
+      "name": "crypto-browserify",
+      "SPDXID": "SPDXRef-npm-crypto-browserify-1.0.9-eaa09a",
+      "versionInfo": "1.0.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Dominic Tarr, Copyright (c) Paul Johnston 1999 - 2002. Other contributors Greg Holt, Andrew Kepert, Ydnar, Lostinet, Copyright Angel Marin, Paul Johnston 2000 - 2009. Other contributors Greg Holt, Andrew Kepert, Ydnar, Lostinet, Copyright Paul Johnston 2000 - 2002. Other contributors Greg Holt, Andrew Kepert, Ydnar, Lostinet",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/crypto-browserify@1.0.9"
+        }
+      ]
+    },
+    {
+      "name": "Base64",
+      "SPDXID": "SPDXRef-npm-base64-0.2.1-6468ee",
+      "versionInfo": "0.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "WTFPL",
+      "copyrightText": "Copyright (c) 2011..2012 David Chambers <dc@hashify.me>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/base64@0.2.1"
+        }
+      ]
+    },
+    {
+      "name": "browser-resolve",
+      "SPDXID": "SPDXRef-npm-browser-resolve-1.2.4-0f3715",
+      "versionInfo": "1.2.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/browser-resolve@1.2.4"
+        }
+      ]
+    },
+    {
+      "name": "pytest",
+      "SPDXID": "SPDXRef-pypi-pytest-3.7.1-75c946",
+      "versionInfo": "3.7.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2004-2017 Holger Krekel and others, Copyright (c) 2010 by Armin Ronacher., Copyright 2010 by Armin Ronacher. :license Flask Design License, Copyright Holger Krekel and others, 2004-2017., Copyright Holger Krekel and others, 2004-2018., copyright u'2015-2018",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest@3.7.1"
+        }
+      ]
+    },
+    {
+      "name": "requests",
+      "SPDXID": "SPDXRef-pypi-requests-75c946",
+      "versionInfo": ">= 1,< 2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/requests"
+        }
+      ]
+    },
+    {
+      "name": "selenium",
+      "SPDXID": "SPDXRef-pypi-selenium-75c946",
+      "versionInfo": ">= 3.12.0,< 4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/selenium"
+        }
+      ]
+    },
+    {
+      "name": "com.github.mwilliamson/mammoth-wordpress-plugin",
+      "SPDXID": "SPDXRef-github-mwilliamson-mammoth-wordpress-plugin-master-040a82",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/mwilliamson/mammoth-wordpress-plugin",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/mwilliamson/mammoth-wordpress-plugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.0.34-d64307",
+      "relatedSpdxElement": "SPDXRef-npm-core-util-is-1.0.2-23aff6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.0.34-d64307",
+      "relatedSpdxElement": "SPDXRef-npm-stringdecoder-0.10.31-a46285",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.0.34-d64307",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.0.34-d64307",
+      "relatedSpdxElement": "SPDXRef-npm-isarray-0.0.1-8035e8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-escope-0.0.16-5ce3b7",
+      "relatedSpdxElement": "SPDXRef-npm-estraverse-1.5.1-212425",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browser-pack-2.0.1-f571d5",
+      "relatedSpdxElement": "SPDXRef-npm-combine-source-map-0.3.0-cfb3d8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browser-pack-2.0.1-f571d5",
+      "relatedSpdxElement": "SPDXRef-npm-jsonstream-0.6.4-3a7623",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browser-pack-2.0.1-f571d5",
+      "relatedSpdxElement": "SPDXRef-npm-through-2.3.8-ca1817",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-deps-sort-0.1.2-5bf713",
+      "relatedSpdxElement": "SPDXRef-npm-minimist-0.0.10-a78899",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-deps-sort-0.1.2-5bf713",
+      "relatedSpdxElement": "SPDXRef-npm-jsonstream-0.6.4-3a7623",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-deps-sort-0.1.2-5bf713",
+      "relatedSpdxElement": "SPDXRef-npm-through-2.3.8-ca1817",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-url-0.10.3-f3391a",
+      "relatedSpdxElement": "SPDXRef-npm-querystring-0.2.0-a64ac4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-url-0.10.3-f3391a",
+      "relatedSpdxElement": "SPDXRef-npm-punycode-1.3.2-bbb638",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-derequire-0.8.0-532f66",
+      "relatedSpdxElement": "SPDXRef-npm-esrefactor-0.1.0-564382",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-derequire-0.8.0-532f66",
+      "relatedSpdxElement": "SPDXRef-npm-estraverse-1.5.1-212425",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-derequire-0.8.0-532f66",
+      "relatedSpdxElement": "SPDXRef-npm-esprima-fb-3001.1.0-dev-harmony-fb-2ed35a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-assert-1.1.2-c06184",
+      "relatedSpdxElement": "SPDXRef-npm-util-0.10.3-234a55",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-escodegen-1.1.0-731dfe",
+      "relatedSpdxElement": "SPDXRef-npm-esprima-1.0.4-4d4238",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-escodegen-1.1.0-731dfe",
+      "relatedSpdxElement": "SPDXRef-npm-estraverse-1.5.1-212425",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-escodegen-1.1.0-731dfe",
+      "relatedSpdxElement": "SPDXRef-npm-esutils-1.0.0-20c3d9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-ruglify-1.0.0-3a4e24",
+      "relatedSpdxElement": "SPDXRef-npm-rfile-1.0.0-1cad92",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-ruglify-1.0.0-3a4e24",
+      "relatedSpdxElement": "SPDXRef-npm-uglify-js-2.2.5-a4d48b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-uglify-js-2.2.5-a4d48b",
+      "relatedSpdxElement": "SPDXRef-npm-source-map-0.1.43-3a51be",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-uglify-js-2.2.5-a4d48b",
+      "relatedSpdxElement": "SPDXRef-npm-optimist-0.3.7-2d3fb4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-stringdecoder-1.1.1-ce9836",
+      "relatedSpdxElement": "SPDXRef-npm-safe-buffer-5.1.2-ef51f6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-concat-stream-1.4.11-04b3c7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-jsonstream-0.7.4-2ea24d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-through2-0.4.2-483e46",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-minimist-0.0.10-a78899",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-resolve-0.6.3-52b322",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-parents-0.0.2-63b22f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-stream-combiner-0.1.0-b01ca9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-browser-resolve-1.2.4-0f3715",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-duplexer2-0.0.2-b8bc50",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relatedSpdxElement": "SPDXRef-npm-detective-3.1.0-e7439a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-optimist-0.3.7-2d3fb4",
+      "relatedSpdxElement": "SPDXRef-npm-wordwrap-0.0.3-c10e05",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-duck-0.1.12-a0ffa7",
+      "relatedSpdxElement": "SPDXRef-npm-underscore-1.13.1-60379c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-inline-source-map-0.3.1-f590af",
+      "relatedSpdxElement": "SPDXRef-npm-source-map-0.3.0-86f6c0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jsonstream-0.7.4-2ea24d",
+      "relatedSpdxElement": "SPDXRef-npm-jsonparse-0.0.5-41eebd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jsonstream-0.7.4-2ea24d",
+      "relatedSpdxElement": "SPDXRef-npm-through-2.3.8-ca1817",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-argparse-1.0.10-fdc5d9",
+      "relatedSpdxElement": "SPDXRef-npm-sprintf-js-1.0.3-7ce1ac",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-xtend-2.1.2-f041ea",
+      "relatedSpdxElement": "SPDXRef-npm-object-keys-0.4.0-0cfc05",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jsonstream-0.6.4-3a7623",
+      "relatedSpdxElement": "SPDXRef-npm-through-2.2.7-6354f5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jsonstream-0.6.4-3a7623",
+      "relatedSpdxElement": "SPDXRef-npm-jsonparse-0.0.5-41eebd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-duplexer2-0.0.2-b8bc50",
+      "relatedSpdxElement": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-through2-0.4.2-483e46",
+      "relatedSpdxElement": "SPDXRef-npm-xtend-2.1.2-f041ea",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-through2-0.4.2-483e46",
+      "relatedSpdxElement": "SPDXRef-npm-readable-stream-1.0.34-d64307",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-zlib-0.1.4-e85f46",
+      "relatedSpdxElement": "SPDXRef-npm-pako-0.2.9-ac01ef",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-yargs-3.5.4-2a5844",
+      "relatedSpdxElement": "SPDXRef-npm-wordwrap-0.0.2-e32954",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-yargs-3.5.4-2a5844",
+      "relatedSpdxElement": "SPDXRef-npm-decamelize-1.2.0-8952f5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-yargs-3.5.4-2a5844",
+      "relatedSpdxElement": "SPDXRef-npm-camelcase-1.2.1-4f1f2e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-yargs-3.5.4-2a5844",
+      "relatedSpdxElement": "SPDXRef-npm-window-size-0.1.0-016513",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-concat-stream-1.4.11-04b3c7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-defined-0.0.0-b17a19",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-browser-pack-2.0.1-f571d5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-jsonstream-0.7.4-2ea24d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-tty-browserify-0.0.1-af8910",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-domain-browser-1.1.7-21741c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-syntax-error-1.1.6-e1c472",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-deep-equal-0.1.2-229da8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-parents-0.0.3-fe8b10",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-stringdecoder-0.0.1-1bec47",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-shell-quote-0.0.1-def50a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-through2-0.4.2-483e46",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-module-deps-2.0.6-c1c74d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-shallow-copy-0.0.1-804e4a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-assert-1.1.2-c06184",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-buffer-2.1.13-6460f3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-duplexer-0.1.1-6a201c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-events-1.0.2-cb7b23",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-http-browserify-1.3.2-3e939a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-glob-3.2.11-47b11a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-https-browserify-0.0.1-14d8fa",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-punycode-1.2.4-9572a0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-console-browserify-1.0.3-e883f4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-resolve-0.6.3-52b322",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-deps-sort-0.1.2-5bf713",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-querystring-es3-0.2.0-8d6f48",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-vm-browserify-0.0.4-66ab63",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-browserify-zlib-0.1.4-e85f46",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-process-0.7.0-91bd35",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-timers-browserify-1.0.3-b3ef0e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-umd-2.0.0-972eba",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-stream-browserify-0.1.3-8aeddd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-browser-resolve-1.2.4-0f3715",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-stream-combiner-0.0.4-e6d367",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-path-browserify-0.0.0-b19e23",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-commondir-0.0.1-da1c22",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-url-0.10.3-f3391a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-xtend-3.0.0-3bf18c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-builtins-0.0.7-8d7676",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-derequire-0.8.0-532f66",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-os-browserify-0.1.2-2559c6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-subarg-0.0.1-489cba",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-crypto-browserify-1.0.9-eaa09a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-constants-browserify-0.0.1-6718fa",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relatedSpdxElement": "SPDXRef-npm-util-0.10.3-234a55",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-concat-stream-1.4.11-04b3c7",
+      "relatedSpdxElement": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-concat-stream-1.4.11-04b3c7",
+      "relatedSpdxElement": "SPDXRef-npm-typedarray-0.0.6-d47e6b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-concat-stream-1.4.11-04b3c7",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-combine-source-map-0.3.0-cfb3d8",
+      "relatedSpdxElement": "SPDXRef-npm-source-map-0.1.43-3a51be",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-combine-source-map-0.3.0-cfb3d8",
+      "relatedSpdxElement": "SPDXRef-npm-inline-source-map-0.3.1-f590af",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-combine-source-map-0.3.0-cfb3d8",
+      "relatedSpdxElement": "SPDXRef-npm-convert-source-map-0.3.5-8079fb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-timers-browserify-1.0.3-b3ef0e",
+      "relatedSpdxElement": "SPDXRef-npm-process-0.5.2-3333a2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-argparse-1.0.10-fdc5d9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-underscore-1.13.1-60379c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-lop-0.4.1-c6869b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-path-is-absolute-1.0.1-a8be45",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-dingbat-to-unicode-1.0.1-92755a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-xmlbuilder-10.1.1-508eba",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-jszip-3.7.1-526b5c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-bluebird-3.4.7-919a71",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-base64-js-1.5.1-9fc3cc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relatedSpdxElement": "SPDXRef-npm-xmldom-xmldom-0.8.10-641515",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-subarg-0.0.1-489cba",
+      "relatedSpdxElement": "SPDXRef-npm-minimist-0.0.10-a78899",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-source-map-0.1.34-ce8421",
+      "relatedSpdxElement": "SPDXRef-npm-amdefine-1.0.1-30234d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-lop-0.4.1-c6869b",
+      "relatedSpdxElement": "SPDXRef-npm-duck-0.1.12-a0ffa7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-lop-0.4.1-c6869b",
+      "relatedSpdxElement": "SPDXRef-npm-underscore-1.13.1-60379c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-lop-0.4.1-c6869b",
+      "relatedSpdxElement": "SPDXRef-npm-option-0.2.4-ce4e60",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-http-browserify-1.3.2-3e939a",
+      "relatedSpdxElement": "SPDXRef-npm-base64-0.2.1-6468ee",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-http-browserify-1.3.2-3e939a",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-stream-combiner-0.1.0-b01ca9",
+      "relatedSpdxElement": "SPDXRef-npm-duplexer-0.1.1-6a201c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-stream-combiner-0.1.0-b01ca9",
+      "relatedSpdxElement": "SPDXRef-npm-through-2.3.8-ca1817",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-rfile-1.0.0-1cad92",
+      "relatedSpdxElement": "SPDXRef-npm-resolve-0.3.1-59e406",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-rfile-1.0.0-1cad92",
+      "relatedSpdxElement": "SPDXRef-npm-callsite-1.0.0-219a50",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relatedSpdxElement": "SPDXRef-npm-stringdecoder-1.1.1-ce9836",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relatedSpdxElement": "SPDXRef-npm-process-nextick-args-2.0.1-ba7e69",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relatedSpdxElement": "SPDXRef-npm-isarray-1.0.0-6eedbc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relatedSpdxElement": "SPDXRef-npm-core-util-is-1.0.2-23aff6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relatedSpdxElement": "SPDXRef-npm-safe-buffer-5.1.2-ef51f6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relatedSpdxElement": "SPDXRef-npm-util-deprecate-1.0.2-9f723d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jszip-3.7.1-526b5c",
+      "relatedSpdxElement": "SPDXRef-npm-pako-1.0.11-d2300b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jszip-3.7.1-526b5c",
+      "relatedSpdxElement": "SPDXRef-npm-readable-stream-2.3.7-e69eae",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jszip-3.7.1-526b5c",
+      "relatedSpdxElement": "SPDXRef-npm-set-immediate-shim-1.0.1-967368",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-jszip-3.7.1-526b5c",
+      "relatedSpdxElement": "SPDXRef-npm-lie-3.3.0-e727db",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-minimatch-0.3.0-90eea9",
+      "relatedSpdxElement": "SPDXRef-npm-lru-cache-2.7.3-54cf7a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-minimatch-0.3.0-90eea9",
+      "relatedSpdxElement": "SPDXRef-npm-sigmund-1.0.1-e58aa6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-glob-3.2.11-47b11a",
+      "relatedSpdxElement": "SPDXRef-npm-minimatch-0.3.0-90eea9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-glob-3.2.11-47b11a",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-vm-browserify-0.0.4-66ab63",
+      "relatedSpdxElement": "SPDXRef-npm-indexof-0.0.1-c8eb10",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-lexical-scope-1.1.1-88b9a5",
+      "relatedSpdxElement": "SPDXRef-npm-astw-2.2.0-77177e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-syntax-error-1.1.6-e1c472",
+      "relatedSpdxElement": "SPDXRef-npm-acorn-2.7.0-764112",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-buffer-2.1.13-6460f3",
+      "relatedSpdxElement": "SPDXRef-npm-ieee754-1.1.11-881a28",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-buffer-2.1.13-6460f3",
+      "relatedSpdxElement": "SPDXRef-npm-base64-js-0.0.8-59e57d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-stream-browserify-0.1.3-8aeddd",
+      "relatedSpdxElement": "SPDXRef-npm-process-0.5.2-3333a2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-stream-browserify-0.1.3-8aeddd",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-parents-0.0.3-fe8b10",
+      "relatedSpdxElement": "SPDXRef-npm-path-platform-0.0.1-208f30",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-detective-3.1.0-e7439a",
+      "relatedSpdxElement": "SPDXRef-npm-escodegen-1.1.0-731dfe",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-detective-3.1.0-e7439a",
+      "relatedSpdxElement": "SPDXRef-npm-esprima-fb-3001.1.0-dev-harmony-fb-2ed35a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-astw-2.2.0-77177e",
+      "relatedSpdxElement": "SPDXRef-npm-acorn-4.0.13-d2b601",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-lie-3.3.0-e727db",
+      "relatedSpdxElement": "SPDXRef-npm-immediate-3.0.6-5ea705",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "relatedSpdxElement": "SPDXRef-npm-concat-stream-1.4.11-04b3c7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "relatedSpdxElement": "SPDXRef-npm-jsonstream-0.7.4-2ea24d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "relatedSpdxElement": "SPDXRef-npm-process-0.6.0-251113",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "relatedSpdxElement": "SPDXRef-npm-xtend-3.0.0-3bf18c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "relatedSpdxElement": "SPDXRef-npm-lexical-scope-1.1.1-88b9a5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-insert-module-globals-6.0.0-309479",
+      "relatedSpdxElement": "SPDXRef-npm-through-2.3.8-ca1817",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-source-map-0.3.0-86f6c0",
+      "relatedSpdxElement": "SPDXRef-npm-amdefine-1.0.1-30234d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-umd-2.0.0-972eba",
+      "relatedSpdxElement": "SPDXRef-npm-rfile-1.0.0-1cad92",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-umd-2.0.0-972eba",
+      "relatedSpdxElement": "SPDXRef-npm-uglify-js-2.4.24-ea50a0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-umd-2.0.0-972eba",
+      "relatedSpdxElement": "SPDXRef-npm-through-2.3.8-ca1817",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-umd-2.0.0-972eba",
+      "relatedSpdxElement": "SPDXRef-npm-ruglify-1.0.0-3a4e24",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "relatedSpdxElement": "SPDXRef-npm-core-util-is-1.0.2-23aff6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "relatedSpdxElement": "SPDXRef-npm-stringdecoder-0.10.31-a46285",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.3-6de80c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-readable-stream-1.1.14-edc8fb",
+      "relatedSpdxElement": "SPDXRef-npm-isarray-0.0.1-8035e8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-esrefactor-0.1.0-564382",
+      "relatedSpdxElement": "SPDXRef-npm-esprima-1.0.4-4d4238",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-esrefactor-0.1.0-564382",
+      "relatedSpdxElement": "SPDXRef-npm-escope-0.0.16-5ce3b7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-esrefactor-0.1.0-564382",
+      "relatedSpdxElement": "SPDXRef-npm-estraverse-0.0.4-39615e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-source-map-0.1.43-3a51be",
+      "relatedSpdxElement": "SPDXRef-npm-amdefine-1.0.1-30234d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-stream-combiner-0.0.4-e6d367",
+      "relatedSpdxElement": "SPDXRef-npm-duplexer-0.1.1-6a201c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-uglify-js-2.4.24-ea50a0",
+      "relatedSpdxElement": "SPDXRef-npm-uglify-to-browserify-1.0.2-4b20ff",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-uglify-js-2.4.24-ea50a0",
+      "relatedSpdxElement": "SPDXRef-npm-async-0.2.10-1cf765",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-uglify-js-2.4.24-ea50a0",
+      "relatedSpdxElement": "SPDXRef-npm-yargs-3.5.4-2a5844",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-uglify-js-2.4.24-ea50a0",
+      "relatedSpdxElement": "SPDXRef-npm-source-map-0.1.34-ce8421",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-util-0.10.3-234a55",
+      "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.1-4972ba",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-npm-browser-resolve-1.2.4-0f3715",
+      "relatedSpdxElement": "SPDXRef-npm-resolve-0.6.3-52b322",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mwilliamson-mammoth-wordpress-plugin-master-040a82",
+      "relatedSpdxElement": "SPDXRef-npm-browserify-3.46.1-2dde93",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mwilliamson-mammoth-wordpress-plugin-master-040a82",
+      "relatedSpdxElement": "SPDXRef-npm-mammoth-1.7.0-3f46b8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mwilliamson-mammoth-wordpress-plugin-master-040a82",
+      "relatedSpdxElement": "SPDXRef-pypi-pytest-3.7.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mwilliamson-mammoth-wordpress-plugin-master-040a82",
+      "relatedSpdxElement": "SPDXRef-pypi-requests-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mwilliamson-mammoth-wordpress-plugin-master-040a82",
+      "relatedSpdxElement": "SPDXRef-pypi-selenium-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-mwilliamson-mammoth-wordpress-plugin-master-040a82",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

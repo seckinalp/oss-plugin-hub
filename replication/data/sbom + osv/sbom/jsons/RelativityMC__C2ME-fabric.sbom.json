@@ -1,0 +1,133 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.RelativityMC/C2ME-fabric",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/5af25036-17ca-40f8-9e8b-4e57435cd8a4",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:00Z"
+  },
+  "packages": [
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/setup-gradle",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-setup-gradle-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/setup-gradle@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "KyleMayes/install-llvm-action",
+      "SPDXID": "SPDXRef-githubactions-KyleMayes-install-llvm-action-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/KyleMayes/install-llvm-action@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.RelativityMC/C2ME-fabric",
+      "SPDXID": "SPDXRef-github-RelativityMC-C2ME-fabric-dev1.21.10-13f3af",
+      "versionInfo": "dev/1.21.10",
+      "downloadLocation": "git+https://github.com/RelativityMC/C2ME-fabric",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/RelativityMC/C2ME-fabric@dev%2F1.21.10"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-RelativityMC-C2ME-fabric-dev1.21.10-13f3af",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-RelativityMC-C2ME-fabric-dev1.21.10-13f3af",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-RelativityMC-C2ME-fabric-dev1.21.10-13f3af",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-RelativityMC-C2ME-fabric-dev1.21.10-13f3af",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-setup-gradle-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-RelativityMC-C2ME-fabric-dev1.21.10-13f3af",
+      "relatedSpdxElement": "SPDXRef-githubactions-KyleMayes-install-llvm-action-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-RelativityMC-C2ME-fabric-dev1.21.10-13f3af",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

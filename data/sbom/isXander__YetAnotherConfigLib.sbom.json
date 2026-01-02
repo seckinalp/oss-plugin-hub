@@ -1,0 +1,171 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.isXander/YetAnotherConfigLib",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/907da3c8-fe09-4f6e-b6de-a418eab3b6f3",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:30Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/cache",
+      "SPDXID": "SPDXRef-githubactions-actions-cache-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/cache@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "Wandalen/wretry.action",
+      "SPDXID": "SPDXRef-githubactions-Wandalen-wretry.action-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/Wandalen/wretry.action@master"
+        }
+      ]
+    },
+    {
+      "name": "com.github.isXander/YetAnotherConfigLib",
+      "SPDXID": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "versionInfo": "multiversion/dev",
+      "downloadLocation": "git+https://github.com/isXander/YetAnotherConfigLib",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/isXander/YetAnotherConfigLib@multiversion%2Fdev"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-cache-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relatedSpdxElement": "SPDXRef-githubactions-Wandalen-wretry.action-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-isXander-YetAnotherConfigLib-multiversiondev-60e64c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

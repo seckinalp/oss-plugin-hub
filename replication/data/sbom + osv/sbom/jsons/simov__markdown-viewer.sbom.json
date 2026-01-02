@@ -1,0 +1,1272 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.simov/markdown-viewer",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/f13e266d-c89a-4a0e-888e-c0bca83cb313",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:58Z"
+  },
+  "packages": [
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-3.29.4-db30a3",
+      "versionInfo": "3.29.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker, Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2012-2020 by various contributors, Copyright (c) 2012-2022 by various contributors, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2015 Rich Harris, Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016, Contributors, Copyright (c) 2017 these people (https://github.com/rollup/rollup/graphs/contributors), Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com), Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com), Copyright (c) Jorge Bucaran <https://jorgebucaran.com>, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright 2018 Rich Harris",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@3.29.4"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-23.0.4-fbec5c",
+      "versionInfo": "23.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@23.0.4"
+        }
+      ]
+    },
+    {
+      "name": "marked-linkify-it",
+      "SPDXID": "SPDXRef-npm-marked-linkify-it-3.1.9-a4ec5b",
+      "versionInfo": "3.1.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/marked-linkify-it@3.1.9"
+        }
+      ]
+    },
+    {
+      "name": "marked-smartypants",
+      "SPDXID": "SPDXRef-npm-marked-smartypants-1.1.6-0d47ea",
+      "versionInfo": "1.1.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2021 markedjs",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/marked-smartypants@1.1.6"
+        }
+      ]
+    },
+    {
+      "name": "terser",
+      "SPDXID": "SPDXRef-npm-terser-5.30.3-869205",
+      "versionInfo": "5.30.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>, Copyright 2012-2018 (c) Mihai Bazon <mihai.bazon@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/terser@5.30.3"
+        }
+      ]
+    },
+    {
+      "name": "marked-gfm-heading-id",
+      "SPDXID": "SPDXRef-npm-marked-gfm-heading-id-3.1.3-bf8d0e",
+      "versionInfo": "3.1.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2021 markedjs",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/marked-gfm-heading-id@3.1.3"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-polyfill-node",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-polyfill-node-0.13.0-fad14c",
+      "versionInfo": "0.13.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2008, Fair Oaks Labs, Inc., Copyright (c) 2009 Thomas Robinson <280north.com>, Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, and Domenic Denicola https://github.com/YuzuJS/setImmediate/blob/f1ccbfdf09cb93aadf77c4aa749ea554503b9234/LICENSE.txt, Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>, Copyright (c) 2014-2016 by Vitaly Puzrin, Copyright (c) 2015 John Hiesey, Copyright (c) 2016 CoderPuppy, Copyright (c) 2016 John Hiesey, Copyright (c) 2019 these people, Copyright (c) 2020 Fred K. Schott, Copyright (c) Feross Aboukhadijeh, and other contributors, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-polyfill-node@0.13.0"
+        }
+      ]
+    },
+    {
+      "name": "marked",
+      "SPDXID": "SPDXRef-npm-marked-12.0.1-411108",
+      "versionInfo": "12.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2004, John Gruber http://daringfireball.net, Copyright (c) 2011 -2014, Christopher Jeffrey, Copyright (c) 2011-2013, Christopher Jeffrey, Copyright (c) 2011-2014, Christopher Jeffrey, Copyright (c) 2011-2018, Christopher Jeffrey (https://github.com/chjj/), Copyright (c) 2011-2022, Christopher Jeffrey, Copyright (c) 2011-2024, Christopher Jeffrey. (MIT Licensed) https://github.com/markedjs/marked, Copyright (c) 2018+, MarkedJS (https://github.com/markedjs/)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/marked@12.0.1"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-6deea5",
+      "versionInfo": "15.2.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@15.2.3"
+        }
+      ]
+    },
+    {
+      "name": "mermaid",
+      "SPDXID": "SPDXRef-npm-mermaid-10.8.0-996695",
+      "versionInfo": "10.8.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) b.Vg, (c) Cure53 and other contributors, (c) s.info(c, o.type, o.diff), o.type group, (c), Z1 Z1, Copyright (c) 2013-2014 Ralf S. Engelschall (http://engelschall.com), Copyright (c) 2014 - 2022 Knut Sveidqvist, Copyright Gaetan Renaudeau, copyright Koen Bok, Gg (c), U5 (c), MKb (c) OKb (c), TAe (c), LOe (c)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mermaid@10.8.0"
+        }
+      ]
+    },
+    {
+      "name": "terser",
+      "SPDXID": "SPDXRef-npm-terser-5.30.3-390971",
+      "versionInfo": "5.30.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>, Copyright 2012-2018 (c) Mihai Bazon <mihai.bazon@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/terser@5.30.3"
+        }
+      ]
+    },
+    {
+      "name": "prismjs",
+      "SPDXID": "SPDXRef-npm-prismjs-1.29.0-6b0e06",
+      "versionInfo": "1.29.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 Lea Verou, copyright year 69cbf7a (https://github.com/PrismJS/prism/commit/69cbf7a)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prismjs@1.29.0"
+        }
+      ]
+    },
+    {
+      "name": "csso-cli",
+      "SPDXID": "SPDXRef-npm-csso-cli-4.0.2-c07ac2",
+      "versionInfo": "4.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2017-2022 by Roman Dvornov",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/csso-cli@4.0.2"
+        }
+      ]
+    },
+    {
+      "name": "terser",
+      "SPDXID": "SPDXRef-npm-terser-5.30.3-7346e9",
+      "versionInfo": "5.30.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>, Copyright 2012-2018 (c) Mihai Bazon <mihai.bazon@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/terser@5.30.3"
+        }
+      ]
+    },
+    {
+      "name": "remark-breaks",
+      "SPDXID": "SPDXRef-npm-remark-breaks-4.0.0-7ee2a8",
+      "versionInfo": "4.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Titus Wormer, Copyright (c) 2017 Titus Wormer <tituswormer@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/remark-breaks@4.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-2a5362",
+      "versionInfo": "15.2.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@15.2.3"
+        }
+      ]
+    },
+    {
+      "name": "remark-html",
+      "SPDXID": "SPDXRef-npm-remark-html-16.0.1-a0563f",
+      "versionInfo": "16.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Titus Wormer, Copyright (c) 2015 Titus Wormer",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/remark-html@16.0.1"
+        }
+      ]
+    },
+    {
+      "name": "remark-slug",
+      "SPDXID": "SPDXRef-npm-remark-slug-7.0.1-2158c3",
+      "versionInfo": "7.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Titus Wormer, Copyright (c) 2015 Titus Wormer <tituswormer@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/remark-slug@7.0.1"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-25.0.7-37bb20",
+      "versionInfo": "25.0.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@25.0.7"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-3.29.4-d84ea2",
+      "versionInfo": "3.29.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker, Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2012-2020 by various contributors, Copyright (c) 2012-2022 by various contributors, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2015 Rich Harris, Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016, Contributors, Copyright (c) 2017 these people (https://github.com/rollup/rollup/graphs/contributors), Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com), Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com), Copyright (c) Jorge Bucaran <https://jorgebucaran.com>, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright 2018 Rich Harris",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@3.29.4"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-polyfill-node",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-polyfill-node-0.13.0-d1e957",
+      "versionInfo": "0.13.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2008, Fair Oaks Labs, Inc., Copyright (c) 2009 Thomas Robinson <280north.com>, Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, and Domenic Denicola https://github.com/YuzuJS/setImmediate/blob/f1ccbfdf09cb93aadf77c4aa749ea554503b9234/LICENSE.txt, Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>, Copyright (c) 2014-2016 by Vitaly Puzrin, Copyright (c) 2015 John Hiesey, Copyright (c) 2016 CoderPuppy, Copyright (c) 2016 John Hiesey, Copyright (c) 2019 these people, Copyright (c) 2020 Fred K. Schott, Copyright (c) Feross Aboukhadijeh, and other contributors, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-polyfill-node@0.13.0"
+        }
+      ]
+    },
+    {
+      "name": "remark",
+      "SPDXID": "SPDXRef-npm-remark-15.0.1-8b9686",
+      "versionInfo": "15.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Titus Wormer, Copyright (c) 2014 Titus Wormer <tituswormer@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/remark@15.0.1"
+        }
+      ]
+    },
+    {
+      "name": "remark-gfm",
+      "SPDXID": "SPDXRef-npm-remark-gfm-4.0.0-8193b7",
+      "versionInfo": "4.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Titus Wormer, Copyright (c) 2020 Titus Wormer <tituswormer@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/remark-gfm@4.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github-markdown-css",
+      "SPDXID": "SPDXRef-npm-github-markdown-css-5.5.1-47a0fa",
+      "versionInfo": "5.5.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/github-markdown-css@5.5.1"
+        }
+      ]
+    },
+    {
+      "name": "csso-cli",
+      "SPDXID": "SPDXRef-npm-csso-cli-4.0.2-e77598",
+      "versionInfo": "4.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2017-2022 by Roman Dvornov",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/csso-cli@4.0.2"
+        }
+      ]
+    },
+    {
+      "name": "bootstrap",
+      "SPDXID": "SPDXRef-npm-bootstrap-5.3.3-ea2dce",
+      "versionInfo": "5.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "CC-BY-3.0 AND MIT",
+      "copyrightText": "Copyright (c) 2011-2024 The Bootstrap Authors, Copyright 2011-2024 The Bootstrap Authors, copyright 2011-2024 the Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors), Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/bootstrap@5.3.3"
+        }
+      ]
+    },
+    {
+      "name": "csso",
+      "SPDXID": "SPDXRef-npm-csso-5.0.5-a80af2",
+      "versionInfo": "5.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2011-2015 by Sergey Kryzhanovsky, Copyright (c) 2015-2021 by Roman Dvornov",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/csso@5.0.5"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-ins",
+      "SPDXID": "SPDXRef-npm-markdown-it-ins-3.0.1-197d37",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-ins@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-sup",
+      "SPDXID": "SPDXRef-npm-markdown-it-sup-1.0.0-78e1e6",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin, Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-sup@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "terser",
+      "SPDXID": "SPDXRef-npm-terser-5.30.3-351766",
+      "versionInfo": "5.30.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>, Copyright 2012-2018 (c) Mihai Bazon <mihai.bazon@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/terser@5.30.3"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-25.0.7-2f9f6f",
+      "versionInfo": "25.0.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@25.0.7"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-mark",
+      "SPDXID": "SPDXRef-npm-markdown-it-mark-3.0.1-a77523",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin, Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-mark@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-anchor",
+      "SPDXID": "SPDXRef-npm-markdown-it-anchor-8.6.7-f4b5d9",
+      "versionInfo": "8.6.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Unlicense",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-anchor@8.6.7"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-task-lists",
+      "SPDXID": "SPDXRef-npm-markdown-it-task-lists-2.1.1-d523cb",
+      "versionInfo": "2.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "ISC",
+      "copyrightText": "Copyright (c) 2016, Revin Guillen",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-task-lists@2.1.1"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-sub",
+      "SPDXID": "SPDXRef-npm-markdown-it-sub-1.0.0-899c62",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin, Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-sub@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-footnote",
+      "SPDXID": "SPDXRef-npm-markdown-it-footnote-3.0.3-64aa63",
+      "versionInfo": "3.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin, Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-footnote@3.0.3"
+        }
+      ]
+    },
+    {
+      "name": "github-slugger",
+      "SPDXID": "SPDXRef-npm-github-slugger-2.0.0-fa93c1",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "ISC",
+      "copyrightText": "Copyright (c) 2015, Dan Flettre <fletd01@yahoo.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/github-slugger@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-cjk-breaks",
+      "SPDXID": "SPDXRef-npm-markdown-it-cjk-breaks-1.1.3-402227",
+      "versionInfo": "1.1.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-cjk-breaks@1.1.3"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-abbr",
+      "SPDXID": "SPDXRef-npm-markdown-it-abbr-1.0.4-b201c7",
+      "versionInfo": "1.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin, Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-abbr@1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-attrs",
+      "SPDXID": "SPDXRef-npm-markdown-it-attrs-4.1.6-30c62e",
+      "versionInfo": "4.1.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Arve Seljebu (http://arve0.github.io/), Copyright (c) Arve Seljebu <arve.seljebu@gmail.com> (arve0.github.io)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-attrs@4.1.6"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it-deflist",
+      "SPDXID": "SPDXRef-npm-markdown-it-deflist-2.1.0-50a5d0",
+      "versionInfo": "2.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin, Copyright (c) 2014-2015 Vitaly Puzrin, Alex Kocharin.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it-deflist@2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-e86ba2",
+      "versionInfo": "15.2.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@15.2.3"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-json",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-json-6.1.0-f015eb",
+      "versionInfo": "6.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-json@6.1.0"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-polyfill-node",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-polyfill-node-0.13.0-a4e7e0",
+      "versionInfo": "0.13.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2008, Fair Oaks Labs, Inc., Copyright (c) 2009 Thomas Robinson <280north.com>, Copyright (c) 2012 Barnesandnoble.com, llc, Donavon West, and Domenic Denicola https://github.com/YuzuJS/setImmediate/blob/f1ccbfdf09cb93aadf77c4aa749ea554503b9234/LICENSE.txt, Copyright (c) 2013 Roman Shtylman <shtylman@gmail.com>, Copyright (c) 2014-2016 by Vitaly Puzrin, Copyright (c) 2015 John Hiesey, Copyright (c) 2016 CoderPuppy, Copyright (c) 2016 John Hiesey, Copyright (c) 2019 these people, Copyright (c) 2020 Fred K. Schott, Copyright (c) Feross Aboukhadijeh, and other contributors, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-polyfill-node@0.13.0"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-3.29.4-88bcc7",
+      "versionInfo": "3.29.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker, Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2012-2020 by various contributors, Copyright (c) 2012-2022 by various contributors, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2015 Rich Harris, Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016, Contributors, Copyright (c) 2017 these people (https://github.com/rollup/rollup/graphs/contributors), Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com), Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com), Copyright (c) Jorge Bucaran <https://jorgebucaran.com>, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright 2018 Rich Harris",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@3.29.4"
+        }
+      ]
+    },
+    {
+      "name": "markdown-it",
+      "SPDXID": "SPDXRef-npm-markdown-it-13.0.1-2d6724",
+      "versionInfo": "13.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) (tm), Copyright (c) 2014 Vitaly Puzrin, Alex Kocharin, Copyright Joyent, Inc. and other Node contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/markdown-it@13.0.1"
+        }
+      ]
+    },
+    {
+      "name": "csso-cli",
+      "SPDXID": "SPDXRef-npm-csso-cli-4.0.2-8f8f1c",
+      "versionInfo": "4.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2017-2022 by Roman Dvornov",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/csso-cli@4.0.2"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-23.0.2-ee4e26",
+      "versionInfo": "23.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@23.0.2"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-15.0.1-d7bb12",
+      "versionInfo": "15.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 RollupJS",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@15.0.1"
+        }
+      ]
+    },
+    {
+      "name": "node-sass",
+      "SPDXID": "SPDXRef-npm-node-sass-9.0.0-c55915",
+      "versionInfo": "9.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2008 Benjamin Kosnik <bkoz@redhat.com>, Copyright (c) 2011 Joseph A. Adams (joeyadams3.14159@gmail.com), Copyright (c) 2011-2013 Free Software Foundation, Inc., Copyright (c) 2012 by Hampton Catlin, Copyright (c) 2012 Zack Weinberg <zackw@panix.com>, Copyright (c) 2012-2016 by the Sass, Copyright (c) 2012-2016 by the Sass Open Source Foundation, Copyright (c) 2013 Roy Stogner <roystgnr@ices.utexas.edu>, Copyright (c) 2013-2016 Andrew Nesbitt, Copyright (c) 2014, 2015 Google Inc., Copyright (c) 2015 Andrew Nesbitt, Copyright (c) Marcel Greter, Copyright 2006 Nemanja Trifunovic, copyright Hampton Catlin, Nathan Weizenbaum, and Chris Eppstein",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/node-sass@9.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@material/switch",
+      "SPDXID": "SPDXRef-npm-material-switch-0.36.1-ab7e7b",
+      "versionInfo": "0.36.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright (c) 2018 Google Inc., Copyright 2016 Google Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/switch@0.36.1"
+        }
+      ]
+    },
+    {
+      "name": "@material/tabs",
+      "SPDXID": "SPDXRef-npm-material-tabs-0.37.1-5c9b0e",
+      "versionInfo": "0.37.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright (c) 2018 Google Inc., Copyright 2016 Google Inc., Copyright 2017 Google Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/tabs@0.37.1"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-3.29.4-b19631",
+      "versionInfo": "3.29.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker, Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2012-2020 by various contributors, Copyright (c) 2012-2022 by various contributors, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2015 Rich Harris, Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016, Contributors, Copyright (c) 2017 these people (https://github.com/rollup/rollup/graphs/contributors), Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com), Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com), Copyright (c) Jorge Bucaran <https://jorgebucaran.com>, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright 2018 Rich Harris",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@3.29.4"
+        }
+      ]
+    },
+    {
+      "name": "terser",
+      "SPDXID": "SPDXRef-npm-terser-5.30.3-62d822",
+      "versionInfo": "5.30.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>, Copyright 2012-2018 (c) Mihai Bazon <mihai.bazon@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/terser@5.30.3"
+        }
+      ]
+    },
+    {
+      "name": "@material/textfield",
+      "SPDXID": "SPDXRef-npm-material-textfield-0.37.1-87e356",
+      "versionInfo": "0.37.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright (c) 2018 Google Inc., Copyright 2016 Google Inc., Copyright 2017 Google Inc., Copyright 2018 Google Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/textfield@0.37.1"
+        }
+      ]
+    },
+    {
+      "name": "@material/button",
+      "SPDXID": "SPDXRef-npm-material-button-0.37.1-5943d8",
+      "versionInfo": "0.37.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2018 Google Inc., Copyright 2016 Google Inc., Copyright 2017 Google Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/button@0.37.1"
+        }
+      ]
+    },
+    {
+      "name": "@material/ripple",
+      "SPDXID": "SPDXRef-npm-material-ripple-0.37.1-b44ca3",
+      "versionInfo": "0.37.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright (c) 2018 Google Inc., Copyright 2016 Google Inc., Copyright 2017 Google Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/ripple@0.37.1"
+        }
+      ]
+    },
+    {
+      "name": "mithril",
+      "SPDXID": "SPDXRef-npm-mithril-1.1.7-c55c83",
+      "versionInfo": "1.1.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Leo Horie., Copyright (c) 2017 Jason Miller, Copyright (c) 2017 Leo Horie",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mithril@1.1.7"
+        }
+      ]
+    },
+    {
+      "name": "@panzoom/panzoom",
+      "SPDXID": "SPDXRef-npm-panzoom-panzoom-4.5.1-d7901a",
+      "versionInfo": "4.5.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40panzoom/panzoom@4.5.1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.simov/markdown-viewer",
+      "SPDXID": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/simov/markdown-viewer",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/simov/markdown-viewer@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-3.29.4-db30a3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-23.0.4-fbec5c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-marked-linkify-it-3.1.9-a4ec5b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-marked-smartypants-1.1.6-0d47ea",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-terser-5.30.3-869205",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-marked-gfm-heading-id-3.1.3-bf8d0e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-polyfill-node-0.13.0-fad14c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-marked-12.0.1-411108",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-6deea5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-mermaid-10.8.0-996695",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-terser-5.30.3-390971",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-prismjs-1.29.0-6b0e06",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-csso-cli-4.0.2-c07ac2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-terser-5.30.3-7346e9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-remark-breaks-4.0.0-7ee2a8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-2a5362",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-remark-html-16.0.1-a0563f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-remark-slug-7.0.1-2158c3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-25.0.7-37bb20",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-3.29.4-d84ea2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-polyfill-node-0.13.0-d1e957",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-remark-15.0.1-8b9686",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-remark-gfm-4.0.0-8193b7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-github-markdown-css-5.5.1-47a0fa",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-csso-cli-4.0.2-e77598",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-bootstrap-5.3.3-ea2dce",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-csso-5.0.5-a80af2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-ins-3.0.1-197d37",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-sup-1.0.0-78e1e6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-terser-5.30.3-351766",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-25.0.7-2f9f6f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-mark-3.0.1-a77523",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-anchor-8.6.7-f4b5d9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-task-lists-2.1.1-d523cb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-sub-1.0.0-899c62",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-footnote-3.0.3-64aa63",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-github-slugger-2.0.0-fa93c1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-cjk-breaks-1.1.3-402227",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-abbr-1.0.4-b201c7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-attrs-4.1.6-30c62e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-deflist-2.1.0-50a5d0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-e86ba2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-json-6.1.0-f015eb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-polyfill-node-0.13.0-a4e7e0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-3.29.4-88bcc7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-markdown-it-13.0.1-2d6724",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-csso-cli-4.0.2-8f8f1c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-23.0.2-ee4e26",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-15.0.1-d7bb12",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-node-sass-9.0.0-c55915",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-material-switch-0.36.1-ab7e7b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-material-tabs-0.37.1-5c9b0e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-3.29.4-b19631",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-terser-5.30.3-62d822",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-material-textfield-0.37.1-87e356",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-material-button-0.37.1-5943d8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-material-ripple-0.37.1-b44ca3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-mithril-1.1.7-c55c83",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relatedSpdxElement": "SPDXRef-npm-panzoom-panzoom-4.5.1-d7901a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-simov-markdown-viewer-main-c368fc",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

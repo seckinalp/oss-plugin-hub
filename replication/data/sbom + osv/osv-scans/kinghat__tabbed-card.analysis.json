@@ -1,0 +1,357 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.361Z",
+  "source": "kinghat__tabbed-card.osv.json",
+  "summary": {
+    "totalVulnerabilities": 4,
+    "uniqueVulnerabilities": 4,
+    "affectedPackages": 2,
+    "stalePackages": 4,
+    "stalePackagesOldFix": 1,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 3,
+      "LOW": 1
+    },
+    "recentVulnerabilities": 3,
+    "hasFixAvailable": 4
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-93m4-6634-74q7",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-62522"
+      ],
+      "summary": "vite allows server.fs.deny bypass via backslash on Windows",
+      "details": "### Summary\nFiles denied by [`server.fs.deny`](https://vitejs.dev/config/server-options.html#server-fs-deny) were sent if the URL ended with `\\` when the dev server is running on Windows.\n\n### Impact\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host))\n- running the dev server on Windows\n\n### Details\n`server.fs.deny` can contain patterns matching against files (by default it includes `.env`, `.env.*`, `*.{crt,pem}` as such patterns). These patterns were able to bypass by using a back slash(`\\`). The root cause is that `fs.readFile('/foo.png/')` loads `/foo.png`.\n\n### PoC\n```shell\nnpm create vite@latest\ncd vite-project/\ncat \"secret\" > .env\nnpm install\nnpm run dev\ncurl --request-target /.env\\ http://localhost:5173\n```\n<img width=\"1593\" height=\"616\" alt=\"image\" src=\"https://github.com/user-attachments/assets/36212f4e-1d3c-4686-b16f-16b35ca9e175\" />",
+      "cwes": [
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-20T19:54:28Z",
+        "modifiedDate": "2025-10-21T14:51:26Z",
+        "daysSincePublished": 58
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.5.14",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.5.14",
+        "fixedIn": "7.1.11",
+        "recommendation": "Upgrade to 7.1.11 or later",
+        "fixAvailableSince": "2025-10-21T14:51:26.000Z",
+        "daysSinceFix": 57,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-93m4-6634-74q7"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62522"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/f479cc57c425ed41ceb434fecebd63931b1ed4ed"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g4jq-h2w9-997c",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-58751"
+      ],
+      "summary": "Vite middleware may serve files starting with the same name with the public directory",
+      "details": "### Summary\nFiles starting with the same name with the public directory were served bypassing the `server.fs` settings.\n\n### Impact\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host))\n- uses [the public directory feature](https://vite.dev/guide/assets.html#the-public-directory) (enabled by default)\n- a symlink exists in the public directory\n\n### Details\nThe [servePublicMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L79) function is in charge of serving public files from the server. It returns the [viteServePublicMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L106) function which runs the needed tests and serves the page. The viteServePublicMiddleware function [checks if the publicFiles variable is defined](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L111), and then uses it to determine if the requested page is public. In the case that the publicFiles is undefined, the code will treat the requested page as a public page, and go on with the serving function. [publicFiles may be undefined if there is a symbolic link anywhere inside the public directory](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/publicDir.ts#L21). In that case, every requested page will be passed to the public serving function. The serving function is based on the [sirv](https://github.com/lukeed/sirv) library. Vite patches the library to add the possibility to test loading access to pages, but when the public page middleware [disables this functionality](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L89) since public pages are meant to be available always, regardless of whether they are in the allow or deny list.\n\nIn the case of public pages, the serving function is [provided with the path to the public directory](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L85) as a root directory. The code of the sirv library [uses the join function to get the full path to the requested file](https://github.com/lukeed/sirv/blob/d061616827dd32d53b61ec9530c9445c8f592620/packages/sirv/index.mjs#L42). For example, if the public directory is \"/www/public\", and the requested file is \"myfile\", the code will join them to the string \"/www/public/myfile\". The code will then pass this string to the normalize function. Afterwards, the code will [use the string's startsWith function](https://github.com/lukeed/sirv/blob/d061616827dd32d53b61ec9530c9445c8f592620/packages/sirv/index.mjs#L43) to determine whether the created path is within the given directory or not. Only if it is, it will be served.\n\nSince [sirv trims the trailing slash of the public directory](https://github.com/lukeed/sirv/blob/d061616827dd32d53b61ec9530c9445c8f592620/packages/sirv/index.mjs#L119), the string's startsWith function may return true even if the created path is not within the public directory. For example, if the server's root is at \"/www\", and the public directory is at \"/www/p\", if the created path will be \"/www/private.txt\", the startsWith function will still return true, because the string \"/www/private.txt\" starts with  \"/www/p\". To achieve this, the attacker will use \"..\" to ask for the file \"../private.txt\". The code will then join it to the \"/www/p\" string, and will receive \"/www/p/../private.txt\". Then, the normalize function will return \"/www/private.txt\", which will then be passed to the startsWith function, which will return true, and the processing of the page will continue without checking the deny list (since this is the public directory middleware which doesn't check that).\n\n### PoC\nExecute the following shell commands:\n\n```\nnpm  create  vite@latest\ncd vite-project/\nmkdir p\ncd p\nln -s a b\ncd ..\necho  'import path from \"node:path\"; import { defineConfig } from \"vite\"; export default defineConfig({publicDir: path.resolve(__dirname, \"p/\"), server: {fs: {deny: [path.resolve(__dirname, \"private.txt\")]}}})' > vite.config.js\necho  \"secret\" > private.txt\nnpm install\nnpm run dev\n```\n\nThen, in a different shell, run the following command:\n\n`curl -v --path-as-is 'http://localhost:5173/private.txt'`\n\nYou will receive a 403 HTTP Response,  because private.txt is denied.\n\nNow in the same shell run the following command:\n\n`curl -v --path-as-is 'http://localhost:5173/../private.txt'`\n\nYou will receive the contents of private.txt.\n\n### Related links\n- https://github.com/lukeed/sirv/commit/f0113f3f8266328d804ee808f763a3c11f8997eb",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-09T20:55:56Z",
+        "modifiedDate": "2025-09-09T21:42:24.933704Z",
+        "daysSincePublished": 98
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.5.14",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.5.14",
+        "fixedIn": "7.1.5",
+        "recommendation": "Upgrade to 7.1.5 or later",
+        "fixAvailableSince": "2025-09-09T21:42:24.933Z",
+        "daysSinceFix": 98,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-g4jq-h2w9-997c"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58751"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/lukeed/sirv/commit/f0113f3f8266328d804ee808f763a3c11f8997eb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/09f2b52e8d5907f26602653caf41b3a56692600d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/4f1c35bcbb5830290c694aa14b6789e07450f069"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/63e2a5d232218f3f8d852056751e609a5367aaec"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/e11d24008b97d4ca731ecc1a3b95260a6d12e7e0"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jqfw-vq24-v9c3",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-58752"
+      ],
+      "summary": "Vite's `server.fs` settings were not applied to HTML files",
+      "details": "### Summary\nAny HTML files on the machine were served regardless of the `server.fs` settings.\n\n### Impact\n\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [server.host config option](https://vitejs.dev/config/server-options.html#server-host))\n- `appType: 'spa'` (default) or `appType: 'mpa'` is used\n\nThis vulnerability also affects the preview server. The preview server allowed HTML files not under the output directory to be served.\n\n### Details\nThe [serveStaticMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L123) function is in charge of serving static files from the server. It returns the [viteServeStaticMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L136) function which runs the needed tests and serves the page. The viteServeStaticMiddleware function [checks if the extension of the requested file is \".html\"](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L144). If so, it doesn't serve the page. Instead, the server will go on to the next middlewares, in this case [htmlFallbackMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/htmlFallback.ts#L14), and then to [indexHtmlMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/indexHtml.ts#L438). These middlewares don't perform any test against allow or deny rules, and they don't make sure that the accessed file is in the root directory of the server. They just find the file and send back its contents to the client.\n\n### PoC\nExecute the following shell commands:\n\n```\nnpm  create  vite@latest\ncd vite-project/\necho  \"secret\" > /tmp/secret.html\nnpm install\nnpm run dev\n```\n\nThen, in a different shell, run the following command:\n\n`curl  -v  --path-as-is  'http://localhost:5173/../../../../../../../../../../../tmp/secret.html'`\n\nThe contents of /tmp/secret.html will be returned.\n\nThis will also work for HTML files that are in the root directory of the project, but are in the deny list (or not in the allow list). Test that by stopping the running server (CTRL+C), and running the following commands in the server's shell:\n\n```\necho  'import path from \"node:path\"; import { defineConfig } from \"vite\"; export default defineConfig({server: {fs: {deny: [path.resolve(__dirname, \"secret_files/*\")]}}})'  >  [vite.config.js](http://vite.config.js)\nmkdir secret_files\necho \"secret txt\" > secret_files/secret.txt\necho \"secret html\" > secret_files/secret.html\nnpm run dev\n\n```\n\nThen, in a different shell, run the following command:\n\n`curl  -v  --path-as-is  'http://localhost:5173/secret_files/secret.txt'`\n\nYou will receive a 403 HTTP Response,  because everything in the secret_files directory is denied.\n\nNow in the same shell run the following command:\n\n`curl  -v  --path-as-is  'http://localhost:5173/secret_files/secret.html'`\n\nYou will receive the contents of secret_files/secret.html.",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-23",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-09T20:54:42Z",
+        "modifiedDate": "2025-09-09T21:42:25.007022Z",
+        "daysSincePublished": 98
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.5.14",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.5.14",
+        "fixedIn": "7.1.5",
+        "recommendation": "Upgrade to 7.1.5 or later",
+        "fixAvailableSince": "2025-09-09T21:42:25.007Z",
+        "daysSinceFix": 98,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-jqfw-vq24-v9c3"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58752"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/0ab19ea9fcb66f544328f442cf6e70f7c0528d5f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/14015d794f69accba68798bd0e15135bc51c9c1e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/482000f57f56fe6ff2e905305100cfe03043ddea"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/6f01ff4fe072bcfcd4e2a84811772b818cd51fe6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/blob/v7.1.5/packages/vite/CHANGELOG.md"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-67mh-4wv8-2f99",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [],
+      "summary": "esbuild enables any website to send any requests to the development server and read the response",
+      "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e => console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r => r.text()).then(content => console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+      "cwes": [
+        {
+          "id": "CWE-346",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-10T17:48:07Z",
+        "modifiedDate": "2025-02-10T17:48:08Z",
+        "daysSincePublished": 310
+      },
+      "affected": {
+        "package": "esbuild",
+        "version": "0.18.20",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.18.20",
+        "fixedIn": "0.25.0",
+        "recommendation": "Upgrade to 0.25.0 or later",
+        "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+        "daysSinceFix": 310,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/evanw/esbuild"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "esbuild",
+      "currentVersion": "0.18.20",
+      "fixedIn": "0.25.0",
+      "vulnerabilities": [
+        "GHSA-67mh-4wv8-2f99"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.25.0 or later",
+      "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+      "daysSinceFix": 310,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "vite",
+      "currentVersion": "4.5.14",
+      "fixedIn": "7.1.11",
+      "vulnerabilities": [
+        "GHSA-93m4-6634-74q7",
+        "GHSA-g4jq-h2w9-997c",
+        "GHSA-jqfw-vq24-v9c3"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 7.1.11 or later",
+      "fixAvailableSince": "2025-10-21T14:51:26.000Z",
+      "daysSinceFix": 57,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "3 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "1 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "4 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

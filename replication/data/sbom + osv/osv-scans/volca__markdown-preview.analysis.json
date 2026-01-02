@@ -1,0 +1,180 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.970Z",
+  "source": "volca__markdown-preview.osv.json",
+  "summary": {
+    "totalVulnerabilities": 2,
+    "uniqueVulnerabilities": 2,
+    "affectedPackages": 1,
+    "stalePackages": 2,
+    "stalePackagesOldFix": 0,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 0
+    },
+    "recentVulnerabilities": 2,
+    "hasFixAvailable": 2
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-7rqq-prvp-x9jh",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-54881"
+      ],
+      "summary": "Mermaid improperly sanitizes sequence diagram labels leading to XSS",
+      "details": "### Summary\nIn the default configuration of mermaid 11.9.0, user supplied input for sequence diagram labels is passed to `innerHTML` during calculation of element size, causing XSS.\n\n### Details\nSequence diagram node labels with KaTeX delimiters are passed through `calculateMathMLDimensions`. This method passes the full label to `innerHTML` which allows allows malicious users to inject arbitrary HTML and cause XSS when mermaid-js is used in it's default configuration (with KaTeX support enabled). \n\nThe vulnerability lies here:\n\n```ts\nexport const calculateMathMLDimensions = async (text: string, config: MermaidConfig) => {\n  text = await renderKatex(text, config);\n  const divElem = document.createElement('div');\n  divElem.innerHTML = text; // XSS sink, text has not been sanitized.\n  divElem.id = 'katex-temp';\n  divElem.style.visibility = 'hidden';\n  divElem.style.position = 'absolute';\n  divElem.style.top = '0';\n  const body = document.querySelector('body');\n  body?.insertAdjacentElement('beforeend', divElem);\n  const dim = { width: divElem.clientWidth, height: divElem.clientHeight };\n  divElem.remove();\n  return dim;\n};\n```\n\nThe `calculateMathMLDimensions` method was introduced in 5c69e5fdb004a6d0a2abe97e23d26e223a059832 two years ago, which was released in [Mermaid 10.9.0](https://github.com/mermaid-js/mermaid/releases/tag/v10.9.0).\n\n### PoC\nRender the following diagram and observe the modified DOM.\n\n```\nsequenceDiagram\n    participant A as Alice<img src=\"x\" onerror=\"document.write(`xss on ${document.domain}`)\">$$\\\\text{Alice}$$\n    A->>John: Hello John, how are you?\n    Alice-)John: See you later!\n```\n\nHere is a PoC on mermaid.live: https://mermaid.live/edit#pako:eNpVUMtOwzAQ_BWzyoFKaRTyaFILiio4IK7ckA-1km1iKbaLY6spUf4dJ0AF68uOZ2dm7REqXSNQ6PHDoarwWfDGcMkUudaJGysqceLKkj3hPdl3osJ7IRvSm-qBwcCAaIXGaONRrSsnUdnobITF28PQ954lwXglai25UNNhxWAXBMyXxcGOi-3kL_5k79e73atuFSUv2HWazH1IWn0m3CC5aPf4b3p2WK--BW-4DJCOWzQ3TM0HQmiMqIFa4zAEicZv4iGMsw0D26JEBtS3NR656ywDpiYv869_11r-Ko12TQv0yLveI3eqfcjP111HUNVonrRTFuhdsVgAHWEAmuRxlG7SuEzKMi-yJAnhAjTLIk_EcbFJtuk2y9MphM8lM47KIp--AOZghtU\n\n### Impact\nXSS on all sites that use mermaid and render user supplied diagrams without further sanitization.\n\n### Remediation\nThe value of the `text` argument for the `calculateMathMLDimensions` method needs to be sanitized before getting passed on to `innerHTML`.",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-08-19T20:16:58Z",
+        "modifiedDate": "2025-08-22T22:52:04Z",
+        "daysSincePublished": 119
+      },
+      "affected": {
+        "package": "mermaid",
+        "version": "11.6.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "11.6.0",
+        "fixedIn": "11.10.0",
+        "recommendation": "Upgrade to 11.10.0 or later",
+        "fixAvailableSince": "2025-08-22T22:52:04.000Z",
+        "daysSinceFix": 116,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/mermaid-js/mermaid/security/advisories/GHSA-7rqq-prvp-x9jh"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54881"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mermaid-js/mermaid/commit/5c69e5fdb004a6d0a2abe97e23d26e223a059832"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mermaid-js/mermaid/commit/685516a85ec1df64cefd4fd15f26533be87d458e"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/mermaid-js/mermaid"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8gwm-58g9-j8pw",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-54880"
+      ],
+      "summary": "Mermaid does not properly sanitize architecture diagram iconText leading to XSS",
+      "details": "### Summary\nIn the default configuration of mermaid 11.9.0, user supplied input for architecture diagram icons is passed to the d3 `html()` method, creating a sink for cross site scripting.\n\n### Details\nArchitecture diagram service `iconText` values are passed to the d3 `html()` method, allowing malicious users to inject arbitrary HTML and cause XSS when mermaid-js is used in it's default configuration. \n\nThe vulnerability lies here:\n\n```ts\nexport const drawServices = async function (\n  db: ArchitectureDB,\n  elem: D3Element,\n  services: ArchitectureService[]\n): Promise<number> {\n  for (const service of services) {\n    /** ... **/\n    } else if (service.iconText) {\n      bkgElem.html(\n        `<g>${await getIconSVG('blank', { height: iconSize, width: iconSize, fallbackPrefix: architectureIcons.prefix })}</g>`\n      );\n      const textElemContainer = bkgElem.append('g');\n      const fo = textElemContainer\n        .append('foreignObject')\n        .attr('width', iconSize)\n        .attr('height', iconSize);\n      const divElem = fo\n        .append('div')\n        .attr('class', 'node-icon-text')\n        .attr('style', `height: ${iconSize}px;`)\n        .append('div')\n        .html(service.iconText); // <- iconText passed into innerHTML\n       /** ... **/\n};\n};\n```\n\nThis issue was introduced with 734bde38777c9190a5a72e96421c83424442d4e4, around 15 months ago, which was released in [v11.1.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.1.0).\n\n### PoC\nRender the following diagram and observe the modified DOM.\n\n```\narchitecture-beta\n    group api(cloud)[API]\n    service db \"<img src=x onerror=\\\"document.write(`xss on ${document.domain}`)\\\">\" [Database] in api\n```\n\nHere is a PoC on mermaid.live: https://mermaid.live/edit#pako:eNo9T8FOwzAM_ZXI4rBJpWrpRtuIISF24caZZdKyxOsiLUnlJjCo-u9kQ8wX-_n5-dkjKK8ROEhSRxNQhUh4v8cghWMpOvKxZ7I3M3XyUc83L-9v2z9qQPo0CpneMwFPxnZsILU6M--QyNNKCAHaq2jRhfyL0vLZ7jwMiWd3443Q3krjpt38Mv4sgG3WMsi9HHDLjLs4CwcZdGQ08EARM7BISZMgjJdLBIQjWhTAU6nxIOMpCBBuSrJeug_v7b8yPdMdgR_kaUgo9loGXBvZkbS3LqHTSK8-ugC8LMrrEuAjnIEvlnlVL9q6rZu6Lh-rRQbfwKuyyZuybcvqIaWiqKcMfq6uRd7Uy-kXhYFzcA\n\n### Impact\nXSS on all sites that use mermaid and render user supplied diagrams without further sanitization.\n\n### Remediation\nSanitize the value of `iconText` before passing it to `html()`.",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-08-19T20:16:45Z",
+        "modifiedDate": "2025-08-20T19:13:27Z",
+        "daysSincePublished": 119
+      },
+      "affected": {
+        "package": "mermaid",
+        "version": "11.6.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "11.6.0",
+        "fixedIn": "11.10.0",
+        "recommendation": "Upgrade to 11.10.0 or later",
+        "fixAvailableSince": "2025-08-20T19:13:27.000Z",
+        "daysSinceFix": 119,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/mermaid-js/mermaid/security/advisories/GHSA-8gwm-58g9-j8pw"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54880"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mermaid-js/mermaid/commit/2aa83302795183ea5c65caec3da1edd6cb4791fc"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mermaid-js/mermaid/commit/734bde38777c9190a5a72e96421c83424442d4e4"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/mermaid-js/mermaid"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "mermaid",
+      "currentVersion": "11.6.0",
+      "fixedIn": "11.10.0",
+      "vulnerabilities": [
+        "GHSA-7rqq-prvp-x9jh",
+        "GHSA-8gwm-58g9-j8pw"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 11.10.0 or later",
+      "fixAvailableSince": "2025-08-22T22:52:04.000Z",
+      "daysSinceFix": 116,
+      "monthsSinceFix": 3,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "2 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "2 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

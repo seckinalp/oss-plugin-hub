@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.animeshkundu/youtube-audio",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/315b946d-ce11-4a32-8c59-ed27bce5f0dc",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:17Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.animeshkundu/youtube-audio",
+      "SPDXID": "SPDXRef-github-animeshkundu-youtube-audio-master-526fe3",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/animeshkundu/youtube-audio",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/animeshkundu/youtube-audio@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-animeshkundu-youtube-audio-master-526fe3",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

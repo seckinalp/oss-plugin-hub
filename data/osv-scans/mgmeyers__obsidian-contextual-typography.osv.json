@@ -1,0 +1,1349 @@
+Warning: --sbom has been deprecated in favor of -L
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/mgmeyers__obsidian-contextual-typography.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "brace-expansion",
+            "version": "1.1.11",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "aliases": [
+                "CVE-2025-5889",
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "max_severity": "3.1"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.1.11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.1.12"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-5889"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-10T22:51:59Z",
+                "nvd_published_at": "2025-06-09T19:15:25Z",
+                "severity": "LOW"
+              },
+              "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+              "id": "GHSA-v6h2-p8h4-qcjw",
+              "modified": "2025-06-11T20:54:10Z",
+              "published": "2025-06-09T21:30:51Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/juliangruber/brace-expansion"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?ctiid.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?submit.585717"
+                }
+              ],
+              "related": [
+                "CGA-48f6-2xrx-cxvw",
+                "CGA-53f7-rx58-5rx6",
+                "CGA-5489-g42r-jj95",
+                "CGA-6q97-x38p-2v36",
+                "CGA-8v3m-9726-pcqj",
+                "CGA-9w98-92pm-h3wg",
+                "CGA-gwp3-55v6-p25f",
+                "CGA-hvx5-j33w-wf72",
+                "CGA-jq8h-hpf9-qxxv",
+                "CGA-jv3c-567r-7fr7",
+                "CGA-mvmv-c4pf-vgpr",
+                "CGA-p2f9-h939-jv5f",
+                "CGA-vr9h-m8qm-5mj9",
+                "CGA-x49c-f2g9-2gqg",
+                "CGA-x9mj-gpvv-mx29",
+                "CGA-xc8g-m7h6-2rp6",
+                "CGA-xqvv-5w52-gqqq"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "brace-expansion Regular Expression Denial of Service vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "braces",
+            "version": "3.0.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "aliases": [
+                "CVE-2024-4068",
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-grv7-fg5c-xmjg/GHSA-grv7-fg5c-xmjg.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "braces",
+                    "purl": "pkg:npm/braces"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4068"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1050",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-10T20:17:26Z",
+                "nvd_published_at": "2024-05-14T15:42:48Z",
+                "severity": "HIGH"
+              },
+              "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+              "id": "GHSA-grv7-fg5c-xmjg",
+              "modified": "2024-07-15T22:12:28.795792Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/issues/35"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/37"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/40"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/braces"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+                }
+              ],
+              "related": [
+                "CGA-g3x5-7mr7-wr8m",
+                "CGA-hq78-8245-675v",
+                "CGA-jrqh-c82g-rxvm",
+                "CGA-p4gw-wx75-2mg4",
+                "CGA-w95g-rrw2-66h4",
+                "CGA-wr9w-hw24-rqg5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Uncontrolled resource consumption in braces"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "micromatch",
+            "version": "4.0.4",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "aliases": [
+                "CVE-2024-4067",
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-952p-6rrq-rcjv/GHSA-952p-6rrq-rcjv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "micromatch",
+                    "purl": "pkg:npm/micromatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4067"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-21T22:58:52Z",
+                "nvd_published_at": "2024-05-14T15:42:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+              "id": "GHSA-952p-6rrq-rcjv",
+              "modified": "2024-08-28T13:12:26Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/issues/243"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/266"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/micromatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+                }
+              ],
+              "related": [
+                "CGA-6q83-777j-gp5r",
+                "CGA-7j2f-jxvw-gx52",
+                "CGA-9hv5-rmvp-37vw",
+                "CGA-9qj8-ph43-6pq5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in micromatch"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "minimatch",
+            "version": "3.0.4",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-f8q6-p94x-37v3"
+              ],
+              "aliases": [
+                "CVE-2022-3517",
+                "GHSA-f8q6-p94x-37v3"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-f8q6-p94x-37v3/GHSA-f8q6-p94x-37v3.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimatch",
+                    "purl": "pkg:npm/minimatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-3517"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-10-20T18:21:03Z",
+                "nvd_published_at": "2022-10-17T20:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.",
+              "id": "GHSA-f8q6-p94x-37v3",
+              "modified": "2024-02-14T18:15:16Z",
+              "published": "2022-10-18T12:00:32Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3517"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grafana/grafana-image-renderer/issues/329"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodejs/node/issues/42510"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/minimatch/commit/a8763f4388e51956be62dc6025cec1126beeb5e6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/minimatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00011.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "minimatch ReDoS vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "moment",
+            "version": "2.29.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8hfj-j24r-96c4"
+              ],
+              "aliases": [
+                "CVE-2022-24785",
+                "GHSA-8hfj-j24r-96c4"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-wc69-rhjr-hc9g"
+              ],
+              "aliases": [
+                "CVE-2022-31129",
+                "GHSA-wc69-rhjr-hc9g"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-8hfj-j24r-96c4/GHSA-8hfj-j24r-96c4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "moment",
+                    "purl": "pkg:npm/moment"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.29.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-8hfj-j24r-96c4/GHSA-8hfj-j24r-96c4.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Moment.js",
+                    "purl": "pkg:nuget/Moment.js"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.29.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.2.0",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "2.0.0",
+                    "2.1.0",
+                    "2.10.0",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.10.5",
+                    "2.10.6",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.14.3",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.15.2",
+                    "2.16.0",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.19.2",
+                    "2.19.3",
+                    "2.19.4",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.22.1",
+                    "2.22.2",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.25.2",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.28.0",
+                    "2.29.0",
+                    "2.29.1",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.6.0",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.8.3",
+                    "2.8.4",
+                    "2.9.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-24785"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-27"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-04-04T21:25:48Z",
+                "nvd_published_at": "2022-04-04T17:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\nThis vulnerability impacts npm (server) users of moment.js, especially if user provided locale string, eg `fr` is directly used to switch moment locale.\n\n### Patches\nThis problem is patched in 2.29.2, and the patch can be applied to all affected versions (from 1.0.1 up until 2.29.1, inclusive).\n\n### Workarounds\nSanitize user-provided locale name before passing it to moment.js.\n\n### References\n_Are there any links users can visit to find out more?_\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [moment repo](https://github.com/moment/moment)",
+              "id": "GHSA-8hfj-j24r-96c4",
+              "modified": "2025-11-04T17:01:47.910754Z",
+              "published": "2022-04-04T21:25:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24785"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moment/moment"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220513-0006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20241108-0002"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.tenable.com/security/tns-2022-09"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Path Traversal: 'dir/../../filename' in moment.locale"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wc69-rhjr-hc9g/GHSA-wc69-rhjr-hc9g.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "moment",
+                    "purl": "pkg:npm/moment"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.18.0"
+                        },
+                        {
+                          "fixed": "2.29.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wc69-rhjr-hc9g/GHSA-wc69-rhjr-hc9g.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Moment.js",
+                    "purl": "pkg:nuget/Moment.js"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.18.0"
+                        },
+                        {
+                          "fixed": "2.29.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.19.2",
+                    "2.19.3",
+                    "2.19.4",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.22.1",
+                    "2.22.2",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.25.2",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.28.0",
+                    "2.29.0",
+                    "2.29.1",
+                    "2.29.2",
+                    "2.29.3"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-31129"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T18:38:49Z",
+                "nvd_published_at": "2022-07-06T18:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n* using string-to-date parsing in moment (more specifically rfc2822 parsing, which is tried by default) has quadratic (N^2) complexity on specific inputs\n* noticeable slowdown is observed with inputs above 10k characters\n* users who pass user-provided strings without sanity length checks to moment constructor are vulnerable to (Re)DoS attacks\n\n### Patches\nThe problem is patched in 2.29.4, the patch can be applied to all affected versions with minimal tweaking.\n\n### Workarounds\nIn general, given the proliferation of ReDoS attacks, it makes sense to limit the length of the user input to something sane, like 200 characters or less. I haven't seen legitimate cases of date-time strings longer than that, so all moment users who do pass a user-originating string to constructor are encouraged to apply such a rudimentary filter, that would help with this but also most future ReDoS vulnerabilities.\n\n### References\nThere is an excellent writeup of the issue here: https://github.com/moment/moment/pull/6015#issuecomment-1152961973=\n\n### Details\nThe issue is rooted in the code that removes legacy comments (stuff inside parenthesis) from strings during rfc2822 parsing. `moment(\"(\".repeat(500000))` will take a few minutes to process, which is unacceptable.",
+              "id": "GHSA-wc69-rhjr-hc9g",
+              "modified": "2025-11-04T17:01:02.311117Z",
+              "published": "2022-07-06T18:38:49Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/security/advisories/GHSA-wc69-rhjr-hc9g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31129"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015#issuecomment-1152961973"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/4bbb9f3ccbe231de40207503f344fe5ce97584f4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/bfd4f2375d5c1a2106246721d693a9611dddfbfe"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/dc0d180e90d8a84f7ff13572363330a22b3ea504"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/commit/9a3b5894f3d5d602948ac8a02e4ee528a49ca3a3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20241108-0002"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20221014-0003"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZMX5YHELQVCGKKQVFXIYOTBMN23YYSRO"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IWY24RJA3SBJGA5N4CU4VBPHJPPPJL5O"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZMX5YHELQVCGKKQVFXIYOTBMN23YYSRO"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/IWY24RJA3SBJGA5N4CU4VBPHJPPPJL5O"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/f0952b67-f2ff-44a9-a9cd-99e0a87cb633"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moment/moment"
+                }
+              ],
+              "related": [
+                "CVE-2023-22467"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Moment.js vulnerable to Inefficient Regular Expression Complexity"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "obsidian",
+            "version": "0.12.11",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-45mx-g85m-wwm3"
+              ],
+              "aliases": [
+                "CVE-2021-38148",
+                "GHSA-45mx-g85m-wwm3"
+              ],
+              "max_severity": "9.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-45mx-g85m-wwm3/GHSA-45mx-g85m-wwm3.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "obsidian",
+                    "purl": "pkg:npm/obsidian"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.12.12"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2021-38148"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-285"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-22T23:22:17Z",
+                "nvd_published_at": "2021-08-07T03:15:00Z",
+                "severity": "CRITICAL"
+              },
+              "details": "Obsidian before 0.12.12 does not require user confirmation for non-http/https URLs.",
+              "id": "GHSA-45mx-g85m-wwm3",
+              "modified": "2024-04-22T23:44:02.794621Z",
+              "published": "2022-05-24T19:10:22Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-38148"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/obsidianmd/obsidian-api"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20210807011714/https://forum.obsidian.md/t/obsidian-release-v0-12-12/21564"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Obsidian does not require user confirmation for non-http/https URLs."
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "path-parse",
+            "version": "1.0.6",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-hj48-42vr-x3v9"
+              ],
+              "aliases": [
+                "CVE-2021-23343",
+                "GHSA-hj48-42vr-x3v9"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-hj48-42vr-x3v9/GHSA-hj48-42vr-x3v9.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "path-parse",
+                    "purl": "pkg:npm/path-parse"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.0.7"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2021-23343"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-05-19T21:02:21Z",
+                "nvd_published_at": "2021-05-04T09:15:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "Affected versions of npm package `path-parse` are vulnerable to Regular Expression Denial of Service (ReDoS) via splitDeviceRe, splitTailRe, and splitPathRe regular expressions. ReDoS exhibits polynomial worst-case time complexity.",
+              "id": "GHSA-hj48-42vr-x3v9",
+              "modified": "2025-01-14T08:57:22.791123Z",
+              "published": "2021-08-10T15:33:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23343"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jbgutierrez/path-parse/issues/8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jbgutierrez/path-parse/pull/10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jbgutierrez/path-parse/commit/eca63a7b9a473bf6978a2f5b7b3343662d1506f7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jbgutierrez/path-parse"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6a32cb3eda3b19096ad48ef1e7aa8f26e005f2f63765abb69ce08b85@%3Cdev.myfaces.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1279028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-PATHPARSE-1077067"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service in path-parse"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rollup",
+            "version": "2.45.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-gcx4-mw62-g8wm"
+              ],
+              "aliases": [
+                "CVE-2024-47068",
+                "GHSA-gcx4-mw62-g8wm"
+              ],
+              "max_severity": "8.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-gcx4-mw62-g8wm/GHSA-gcx4-mw62-g8wm.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "rollup",
+                    "purl": "pkg:npm/rollup"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.29.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-gcx4-mw62-g8wm/GHSA-gcx4-mw62-g8wm.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "rollup",
+                    "purl": "pkg:npm/rollup"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.22.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-gcx4-mw62-g8wm/GHSA-gcx4-mw62-g8wm.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "rollup",
+                    "purl": "pkg:npm/rollup"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.79.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-47068"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-23T22:11:02Z",
+                "nvd_published_at": "2024-09-23T16:15:06Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in rollup when bundling scripts that use `import.meta.url` or with plugins that emit and reference asset files from code  in `cjs`/`umd`/`iife` format. The DOM Clobbering gadget can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an `img` tag with an unsanitized `name` attribute) are present.\n\nIt's worth noting that we’ve identifed similar issues in other popular bundlers like Webpack ([CVE-2024-43788](https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986)), which might serve as a good reference.\n\n### Details\n\n#### Backgrounds\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n#### Gadget found in `rollup`\n\nWe have identified a DOM Clobbering vulnerability in `rollup` bundled scripts, particularly when the scripts uses `import.meta` and set output in format of  `cjs`/`umd`/`iife`. In such cases, `rollup` replaces meta property with the URL retrieved from `document.currentScript`.\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185\n\nHowever, this implementation is vulnerable to a DOM Clobbering attack. The `document.currentScript` lookup can be shadowed by an attacker via the browser's named DOM tree element access mechanism. This manipulation allows an attacker to replace the intended script element with a malicious HTML element. When this happens, the `src` attribute of the attacker-controlled element (e.g., an `img` tag ) is used as the URL for importing scripts, potentially leading to the dynamic loading of scripts from an attacker-controlled server.\n\n### PoC\n\nConsidering a website that contains the following `main.js` script, the devloper decides to use the `rollup` to bundle up the program: `rollup main.js --format cjs --file bundle.js`.\n\n```\nvar s = document.createElement('script')\ns.src = import.meta.url + 'extra.js'\ndocument.head.append(s)\n```\n\nThe output `bundle.js` is shown in the following code snippet.\n\n```\n'use strict';\n\nvar _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;\nvar s = document.createElement('script');\ns.src = (typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript \u0026\u0026 False \u0026\u0026 _documentCurrentScript.src || new URL('bundle.js', document.baseURI).href)) + 'extra.js';\ndocument.head.append(s);\n```\n\nAdding the `rollup` bundled script, `bundle.js`, as part of the web page source code, the page could load the `extra.js` file from the attacker's domain, `attacker.controlled.server` due to the introduced gadget during bundling. The attacker only needs to insert an `img` tag with the name attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n```\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003ctitle\u003erollup Example\u003c/title\u003e\n  \u003c!-- Attacker-controlled Script-less HTML Element starts--!\u003e\n  \u003cimg name=\"currentScript\" src=\"https://attacker.controlled.server/\"\u003e\u003c/img\u003e\n  \u003c!-- Attacker-controlled Script-less HTML Element ends--!\u003e\n\u003c/head\u003e\n\u003cscript type=\"module\" crossorigin src=\"bundle.js\"\u003e\u003c/script\u003e\n\u003cbody\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n```\n\n### Impact\n\nThis vulnerability can result in cross-site scripting (XSS) attacks on websites that include rollup-bundled files (configured with an output format of `cjs`, `iife`, or `umd` and use `import.meta`) and allow users to inject certain scriptless HTML tags without properly sanitizing the `name` or `id` attributes.\n\n### Patch\n\nPatching the following two functions with type checking would be effective mitigations against DOM Clobbering attack.\n\n```\nconst getRelativeUrlFromDocument = (relativePath: string, umd = false) =\u003e\n\tgetResolveUrl(\n\t\t`'${escapeId(relativePath)}', ${\n\t\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t\t}document.currentScript \u0026\u0026 document.currentScript.tagName.toUpperCase() === 'SCRIPT' \u0026\u0026 document.currentScript.src || document.baseURI`\n\t);\n```\n\n```\nconst getUrlFromDocument = (chunkId: string, umd = false) =\u003e\n\t`${\n\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t}(${DOCUMENT_CURRENT_SCRIPT} \u0026\u0026 ${DOCUMENT_CURRENT_SCRIPT}.tagName.toUpperCase() === 'SCRIPT' \u0026\u0026${DOCUMENT_CURRENT_SCRIPT}.src || new URL('${escapeId(\n\t\tchunkId\n\t)}', document.baseURI).href)`;\n```\n",
+              "id": "GHSA-gcx4-mw62-g8wm",
+              "modified": "2024-09-26T21:11:53Z",
+              "published": "2024-09-23T22:11:02Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/security/advisories/GHSA-gcx4-mw62-g8wm"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/commit/2ef77c00ec2635d42697cff2c0567ccc8db34fb4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/commit/e2552c9e955e0a61f70f508200ee9f752f85a541"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rollup/rollup"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185"
+                }
+              ],
+              "related": [
+                "CGA-h8jq-gmpr-v5fp",
+                "CGA-w3cq-r6w2-f8xg"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.mezz/JustEnoughItems",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/ac033485-8c0e-4b87-a1ca-a01ae5d90dd7",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:44Z"
+  },
+  "packages": [
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/setup-gradle",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-setup-gradle-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/setup-gradle@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/wrapper-validation",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-wrapper-validation-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/wrapper-validation@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/stale",
+      "SPDXID": "SPDXRef-githubactions-actions-stale-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/stale@main"
+        }
+      ]
+    },
+    {
+      "name": "dessant/lock-threads",
+      "SPDXID": "SPDXRef-githubactions-dessant-lock-threads-5.0.1-75c946",
+      "versionInfo": "5.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/dessant/lock-threads@5.0.1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.mezz/JustEnoughItems",
+      "SPDXID": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "versionInfo": "1.21.10",
+      "downloadLocation": "git+https://github.com/mezz/JustEnoughItems",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/mezz/JustEnoughItems@1.21.10"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-stale-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relatedSpdxElement": "SPDXRef-githubactions-dessant-lock-threads-5.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-setup-gradle-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-wrapper-validation-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-mezz-JustEnoughItems-1.21.10-82ec72",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

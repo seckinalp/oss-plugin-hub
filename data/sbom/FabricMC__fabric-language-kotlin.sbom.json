@@ -1,0 +1,190 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.FabricMC/fabric-language-kotlin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a43927fc-8dbe-4e5f-af1e-9567e1073b78",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:30Z"
+  },
+  "packages": [
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@3"
+        }
+      ]
+    },
+    {
+      "name": "stefanzweifel/git-auto-commit-action",
+      "SPDXID": "SPDXRef-githubactions-stefanzweifel-git-auto-commit-action-4-75c946",
+      "versionInfo": "4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/stefanzweifel/git-auto-commit-action@4"
+        }
+      ]
+    },
+    {
+      "name": "FabricMC/fabric-action-scripts",
+      "SPDXID": "SPDXRef-githubactions-FabricMC-fabric-action-scripts-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/FabricMC/fabric-action-scripts@2"
+        }
+      ]
+    },
+    {
+      "name": "peter-evans/create-pull-request",
+      "SPDXID": "SPDXRef-githubactions-peter-evans-create-pull-request-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/peter-evans/create-pull-request@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.FabricMC/fabric-language-kotlin",
+      "SPDXID": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/FabricMC/fabric-language-kotlin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/FabricMC/fabric-language-kotlin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-stefanzweifel-git-auto-commit-action-4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-FabricMC-fabric-action-scripts-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-peter-evans-create-pull-request-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-FabricMC-fabric-language-kotlin-master-033ee7",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

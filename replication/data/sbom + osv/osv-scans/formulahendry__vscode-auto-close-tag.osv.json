@@ -1,0 +1,1094 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/formulahendry__vscode-auto-close-tag.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "debug",
+            "version": "2.2.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9vvw-cc9w-f27h"
+              ],
+              "aliases": [
+                "CVE-2017-20165",
+                "GHSA-9vvw-cc9w-f27h"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-gxpj-cx7g-858c"
+              ],
+              "aliases": [
+                "CVE-2017-16137",
+                "GHSA-gxpj-cx7g-858c"
+              ],
+              "max_severity": "3.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-9vvw-cc9w-f27h/GHSA-9vvw-cc9w-f27h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "debug",
+                    "purl": "pkg:npm/debug"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-9vvw-cc9w-f27h/GHSA-9vvw-cc9w-f27h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "debug",
+                    "purl": "pkg:npm/debug"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.9"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2017-20165"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-01-10T21:49:01Z",
+                "nvd_published_at": "2023-01-09T10:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "A vulnerability classified as problematic has been found in debug-js debug up to 3.0.x. This affects the function useColors of the file src/node.js. The manipulation of the argument str leads to inefficient regular expression complexity. Upgrading to version 3.1.0 is able to address this issue. The name of the patch is c38a0166c266a679c8de012d4eaccec3f944e685. It is recommended to upgrade the affected component. The identifier VDB-217665 was assigned to this vulnerability. The patch has been backported to the 2.6.x branch in version 2.6.9.",
+              "id": "GHSA-9vvw-cc9w-f27h",
+              "modified": "2023-11-08T03:59:17.780578Z",
+              "published": "2023-01-09T12:30:19Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20165"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/pull/504"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/commit/c38a0166c266a679c8de012d4eaccec3f944e685"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/commit/f53962e944a87e6ca9bb622a2a12dffc22a9bb5a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/debug-js/debug"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/releases/tag/2.6.9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/releases/tag/3.1.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?ctiid.217665"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.217665"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "debug Inefficient Regular Expression Complexity vulnerability"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/08/GHSA-gxpj-cx7g-858c/GHSA-gxpj-cx7g-858c.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "debug",
+                    "purl": "pkg:npm/debug"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.9"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/08/GHSA-gxpj-cx7g-858c/GHSA-gxpj-cx7g-858c.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "debug",
+                    "purl": "pkg:npm/debug"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/08/GHSA-gxpj-cx7g-858c/GHSA-gxpj-cx7g-858c.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "debug",
+                    "purl": "pkg:npm/debug"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.2.0"
+                        },
+                        {
+                          "fixed": "3.2.7"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/08/GHSA-gxpj-cx7g-858c/GHSA-gxpj-cx7g-858c.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "debug",
+                    "purl": "pkg:npm/debug"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.3.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2017-16137"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:38:18Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              },
+              "details": "Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. \n\nAs it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.\n\nThis was later re-introduced in version v3.2.0, and then repatched in versions 3.2.7 and 4.3.1.\n\n## Recommendation\n\nVersion 2.x.x: Update to version 2.6.9 or later.\nVersion 3.1.x: Update to version 3.1.0 or later.\nVersion 3.2.x: Update to version 3.2.7 or later.\nVersion 4.x.x: Update to version 4.3.1 or later.",
+              "id": "GHSA-gxpj-cx7g-858c",
+              "modified": "2024-03-25T19:01:23Z",
+              "published": "2018-08-09T20:18:07Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16137"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/issues/797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/visionmedia/debug/issues/501"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/visionmedia/debug/pull/504"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/commit/4e2150207c568adb9ead8f4c4528016081c88020"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/commit/71169065b5262f9858ac78cc0b688c84a438f290"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/commit/b6d12fdbc63b483e5c969da33ea6adc09946b5ac"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/debug-js/debug/commit/f53962e944a87e6ca9bb622a2a12dffc22a9bb5a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/visionmedia/debug"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3@%3Ccommits.netbeans.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63@%3Cnotifications.netbeans.apache.org%3E"
+                }
+              ],
+              "related": [
+                "CGA-j9cp-p46h-5p44"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service in debug"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "diff",
+            "version": "1.4.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h6ch-v84p-w6p9"
+              ],
+              "aliases": [
+                "GHSA-h6ch-v84p-w6p9"
+              ],
+              "max_severity": ""
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/06/GHSA-h6ch-v84p-w6p9/GHSA-h6ch-v84p-w6p9.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "diff",
+                    "purl": "pkg:npm/diff"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.5.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-06-13T18:54:38Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              },
+              "details": "A vulnerability was found in diff before v3.5.0, the affected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) attacks.",
+              "id": "GHSA-h6ch-v84p-w6p9",
+              "modified": "2021-02-24T19:27:02Z",
+              "published": "2019-06-13T18:58:54Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/kpdecker/jsdiff/commit/2aec4298639bf30fb88a00b356bf404d3551b8c0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1552148"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/npm:diff:20180305"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1631"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.whitesourcesoftware.com/vulnerability-database/WS-2018-0590"
+                }
+              ],
+              "related": [
+                "CGA-5cqv-mm6m-mf38",
+                "CGA-5mc2-7mmg-hm4f",
+                "CGA-6292-xfg3-c39h",
+                "CGA-c4qh-jfrh-49m7",
+                "CGA-f5r7-qrx9-rxrx",
+                "CGA-v24c-cq4m-759w",
+                "CGA-v9cq-gwgg-6x89",
+                "CGA-vrj4-44qq-4856"
+              ],
+              "schema_version": "1.7.3",
+              "summary": "Regular Expression Denial of Service (ReDoS)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "growl",
+            "version": "1.9.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qh2h-chj9-jffq"
+              ],
+              "aliases": [
+                "CVE-2017-16042",
+                "GHSA-qh2h-chj9-jffq"
+              ],
+              "max_severity": "9.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/06/GHSA-qh2h-chj9-jffq/GHSA-qh2h-chj9-jffq.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "growl",
+                    "purl": "pkg:npm/growl"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.10.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2017-16042"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78",
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:51:54Z",
+                "nvd_published_at": null,
+                "severity": "CRITICAL"
+              },
+              "details": "Affected versions of `growl` do not properly sanitize input prior to passing it into a shell command, allowing for arbitrary command execution.\n\n\n## Recommendation\n\nUpdate to version 1.10.0 or later.",
+              "id": "GHSA-qh2h-chj9-jffq",
+              "modified": "2023-11-08T03:59:01.241655Z",
+              "published": "2018-06-08T12:43:43Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16042"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tj/node-growl/issues/60"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tj/node-growl/pull/61"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tj/node-growl/pull/62"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tj/node-growl/commit/d71177d5331c9de4658aca62e0ac921f178b0669"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/tj/node-growl"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/146"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Growl before 1.10.0 vulnerable to Command Injection"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "minimatch",
+            "version": "0.3.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-f8q6-p94x-37v3"
+              ],
+              "aliases": [
+                "CVE-2022-3517",
+                "GHSA-f8q6-p94x-37v3"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-hxm2-r34f-qmc5"
+              ],
+              "aliases": [
+                "CVE-2016-10540",
+                "GHSA-hxm2-r34f-qmc5"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-f8q6-p94x-37v3/GHSA-f8q6-p94x-37v3.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimatch",
+                    "purl": "pkg:npm/minimatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-3517"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-10-20T18:21:03Z",
+                "nvd_published_at": "2022-10-17T20:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.",
+              "id": "GHSA-f8q6-p94x-37v3",
+              "modified": "2024-02-14T18:15:16Z",
+              "published": "2022-10-18T12:00:32Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3517"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grafana/grafana-image-renderer/issues/329"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodejs/node/issues/42510"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/minimatch/commit/a8763f4388e51956be62dc6025cec1126beeb5e6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/minimatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00011.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "minimatch ReDoS vulnerability"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-hxm2-r34f-qmc5/GHSA-hxm2-r34f-qmc5.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimatch",
+                    "purl": "pkg:npm/minimatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2016-10540"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:41:28Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              },
+              "details": "Affected versions of `minimatch` are vulnerable to regular expression denial of service attacks when user input is passed into the `pattern` argument of `minimatch(path, pattern)`.\n\n\n## Proof of Concept\n```js\nvar minimatch = require(“minimatch”);\n\n// utility function for generating long strings\nvar genstr = function (len, chr) {\n  var result = “”;\n  for (i=0; i\u003c=len; i++) {\n    result = result + chr;\n  }\n  return result;\n}\n\nvar exploit = “[!” + genstr(1000000, “\\\\”) + “A”;\n\n// minimatch exploit.\nconsole.log(“starting minimatch”);\nminimatch(“foo”, exploit);\nconsole.log(“finishing minimatch”);\n```\n\n\n## Recommendation\n\nUpdate to version 3.0.2 or later.",
+              "id": "GHSA-hxm2-r34f-qmc5",
+              "modified": "2023-11-08T03:58:11.455886Z",
+              "published": "2018-10-09T00:40:41Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10540"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-hxm2-r34f-qmc5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/118"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service in minimatch"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "minimist",
+            "version": "0.0.8",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vh95-rmgr-6w4m"
+              ],
+              "aliases": [
+                "CVE-2020-7598",
+                "GHSA-vh95-rmgr-6w4m"
+              ],
+              "max_severity": "5.6"
+            },
+            {
+              "ids": [
+                "GHSA-xvch-5gv4-984h"
+              ],
+              "aliases": [
+                "CVE-2021-44906",
+                "GHSA-xvch-5gv4-984h"
+              ],
+              "max_severity": "9.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/04/GHSA-vh95-rmgr-6w4m/GHSA-vh95-rmgr-6w4m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/04/GHSA-vh95-rmgr-6w4m/GHSA-vh95-rmgr-6w4m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.2.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2020-7598"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-04-03T21:42:08Z",
+                "nvd_published_at": "2020-03-11T23:15:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "Affected versions of `minimist` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  \nParsing the argument `--__proto__.y=Polluted` adds a `y` property with value `Polluted` to all objects. The argument `--__proto__=Polluted` raises and uncaught error and crashes the application.  \nThis is exploitable if attackers have control over the arguments being passed to `minimist`.\n\n\n## Recommendation\n\nUpgrade to versions 0.2.1, 1.2.3 or later.",
+              "id": "GHSA-vh95-rmgr-6w4m",
+              "modified": "2025-01-14T08:57:16.325412Z",
+              "published": "2020-04-03T21:48:32Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7598"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/10bd4cdf49d9686d48214be9d579a9cdfda37c68"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/38a4d1caead72ef99e824bb420a2528eec03d9ab"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/substack/minimist"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1179"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Prototype Pollution in minimist"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.2.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2021-44906"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-18T23:13:40Z",
+                "nvd_published_at": "2022-03-17T16:15:00Z",
+                "severity": "CRITICAL"
+              },
+              "details": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+              "id": "GHSA-xvch-5gv4-984h",
+              "modified": "2025-01-14T10:12:15.693708Z",
+              "published": "2022-03-18T00:01:09Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/issues/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/issues/164"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/pull/24"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/substack/minimist"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Prototype Pollution in minimist"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ms",
+            "version": "0.7.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-w9mr-4mfr-499f"
+              ],
+              "aliases": [
+                "CVE-2017-20162",
+                "GHSA-w9mr-4mfr-499f"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-w9mr-4mfr-499f/GHSA-w9mr-4mfr-499f.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ms",
+                    "purl": "pkg:npm/ms"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.0.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2017-20162"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-01-10T21:45:33Z",
+                "nvd_published_at": "2023-01-05T12:15:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The name of the patch is caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+              "id": "GHSA-w9mr-4mfr-499f",
+              "modified": "2025-11-04T16:42:14Z",
+              "published": "2023-01-05T12:30:27Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20162"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vercel/ms/pull/89"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/vercel/ms"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vercel/ms/releases/tag/2.0.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20241108-0002"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?ctiid.217451"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.217451"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Vercel ms Inefficient Regular Expression Complexity vulnerability"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

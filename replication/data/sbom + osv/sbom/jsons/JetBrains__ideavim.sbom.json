@@ -1,0 +1,433 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.JetBrains/ideavim",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/efc7f217-2c4a-4e75-bb4d-157a076ef2c5",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:14Z"
+  },
+  "packages": [
+    {
+      "name": "org.jetbrains.kotlin:kotlin-script-runtime",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-script-runtime-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-script-runtime"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-maven-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-maven-plugin"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-stdlib-jdk8-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib-jdk8"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.teamcity:configs-dsl-kotlin",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.teamcity-configs-dsl-kotlin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.teamcity:configs-dsl-kotlin-plugins",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.teamcity-configs-dsl-kotlin-plugins-1.0-SNAPSHOT-75c946",
+      "versionInfo": "1.0-SNAPSHOT",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.teamcity/configs-dsl-kotlin-plugins@1.0-SNAPSHOT"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.teamcity:teamcity-configs-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.teamcity-teamcity-configs-maven-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.teamcity/teamcity-configs-maven-plugin"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "anthropics/claude-code-action",
+      "SPDXID": "SPDXRef-githubactions-anthropics-claude-code-action-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/anthropics/claude-code-action@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/analyze",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/autobuild",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-autobuild-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/autobuild@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/init",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/init@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "stefanzweifel/git-auto-commit-action",
+      "SPDXID": "SPDXRef-githubactions-stefanzweifel-git-auto-commit-action-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/stefanzweifel/git-auto-commit-action@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "codecov/codecov-action",
+      "SPDXID": "SPDXRef-githubactions-codecov-codecov-action-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/codecov/codecov-action@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "jtalk/url-health-check-action",
+      "SPDXID": "SPDXRef-githubactions-jtalk-url-health-check-action-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/jtalk/url-health-check-action@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-python",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-python-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-python@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "findologic/intellij-format-action",
+      "SPDXID": "SPDXRef-githubactions-findologic-intellij-format-action-1.0.1-75c946",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/findologic/intellij-format-action@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.JetBrains/ideavim",
+      "SPDXID": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/JetBrains/ideavim",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/JetBrains/ideavim@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-python-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-maven-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.teamcity-teamcity-configs-maven-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-autobuild-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-stefanzweifel-git-auto-commit-action-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-jtalk-url-health-check-action-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-findologic-intellij-format-action-1.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.teamcity-configs-dsl-kotlin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.teamcity-configs-dsl-kotlin-plugins-1.0-SNAPSHOT-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-codecov-codecov-action-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-anthropics-claude-code-action-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-script-runtime-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-stdlib-jdk8-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-JetBrains-ideavim-master-4412d7",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

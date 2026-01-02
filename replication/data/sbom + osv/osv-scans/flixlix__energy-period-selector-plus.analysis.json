@@ -1,0 +1,109 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.151Z",
+  "source": "flixlix__energy-period-selector-plus.osv.json",
+  "summary": {
+    "totalVulnerabilities": 1,
+    "uniqueVulnerabilities": 1,
+    "affectedPackages": 1,
+    "stalePackages": 1,
+    "stalePackagesOldFix": 1,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 1
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 1
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-5j4c-8p2g-v4jx",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-9506"
+      ],
+      "summary": "ReDoS vulnerability in vue package that is exploitable through inefficient regex evaluation in the parseHTML function",
+      "details": "The ReDoS can be exploited through the `parseHTML` function in the `html-parser.ts` file. This flaw allows attackers to slow down the application by providing specially crafted input that causes inefficient processing of regular expressions, leading to excessive resource consumption.\n\nTo demonstrate this vulnerability, here's an example. In a Vue client-side application, create a new Vue instance with a template string that includes a `<script>` tag but closes it incorrectly with something like `</textarea>`.\n\n```javascript\nnew Vue({\n  el: '#app',\n  template: '\n    <div>\n      Hello, world!\n      <script>${'<'.repeat(1000000)}</textarea>\n    </div>'\n});\n```\nNext, set up a basic HTML page (e.g., index.html) to load this JavaScript and mount the Vue instance:\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n  <title>My first Vue app</title>\n</head>\n<body>\n  <div id=\\\"app\\\">Loading...</div>\n</body>\n</html>\n```\n\nWhen you visit the app in your browser at http://localhost:3000, you'll notice that the time taken to parse and mount the Vue application increases significantly due to the ReDoS vulnerability, demonstrating how the flaw can affect performance.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-10-15T18:30:50Z",
+        "modifiedDate": "2024-10-24T19:12:14.925352Z",
+        "daysSincePublished": 428
+      },
+      "affected": {
+        "package": "vue",
+        "version": "2.7.14",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.7.14",
+        "fixedIn": "3.0.0-alpha.0",
+        "recommendation": "Upgrade to 3.0.0-alpha.0 or later",
+        "fixAvailableSince": "2024-10-24T19:12:14.925Z",
+        "daysSinceFix": 419,
+        "monthsSinceFix": 13,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9506"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vuejs/core"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.herodevs.com/vulnerability-directory/cve-2024-9506"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "vue",
+      "currentVersion": "2.7.14",
+      "fixedIn": "3.0.0-alpha.0",
+      "vulnerabilities": [
+        "GHSA-5j4c-8p2g-v4jx"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.0-alpha.0 or later",
+      "fixAvailableSince": "2024-10-24T19:12:14.925Z",
+      "daysSinceFix": 419,
+      "monthsSinceFix": 13,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "1 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "1 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

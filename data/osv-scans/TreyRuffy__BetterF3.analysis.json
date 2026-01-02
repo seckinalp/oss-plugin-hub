@@ -1,0 +1,3166 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.887Z",
+  "source": "TreyRuffy__BetterF3.osv.json",
+  "summary": {
+    "totalVulnerabilities": 32,
+    "uniqueVulnerabilities": 30,
+    "affectedPackages": 17,
+    "stalePackages": 32,
+    "stalePackagesOldFix": 19,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 5,
+      "LOW": 27
+    },
+    "recentVulnerabilities": 10,
+    "hasFixAvailable": 32
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-h46c-h94j-95f3",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-52999"
+      ],
+      "summary": "jackson-core can throw a StackoverflowError when processing deeply nested data",
+      "details": "### Impact\nWith older versions  of jackson-core, if you parse an input file and it has deeply nested data, Jackson could end up throwing a StackoverflowError if the depth is particularly large.\n\n### Patches\njackson-core 2.15.0 contains a configurable limit for how deep Jackson will traverse in an input document, defaulting to an allowable depth of 1000. Change is in https://github.com/FasterXML/jackson-core/pull/943. jackson-core will throw a StreamConstraintsException if the limit is reached.\njackson-databind also benefits from this change because it uses jackson-core to parse JSON inputs.\n\n### Workarounds\nUsers should avoid parsing input files from untrusted sources.",
+      "cwes": [
+        {
+          "id": "CWE-121",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-06-27T15:22:22Z",
+        "modifiedDate": "2025-06-27T16:03:13.670847Z",
+        "daysSincePublished": 173
+      },
+      "affected": {
+        "package": "com.fasterxml.jackson.core:jackson-core",
+        "version": "2.13.4",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.13.4",
+        "fixedIn": "2.15.0",
+        "recommendation": "Upgrade to 2.15.0 or later",
+        "fixAvailableSince": "2025-06-27T16:03:13.670Z",
+        "daysSinceFix": 173,
+        "monthsSinceFix": 5,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/FasterXML/jackson-core/security/advisories/GHSA-h46c-h94j-95f3"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52999"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FasterXML/jackson-core/pull/943"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/FasterXML/jackson-core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cmp6-m4wj-q63q",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-66566"
+      ],
+      "summary": "yawkat LZ4 Java has a possible information leak in Java safe decompressor",
+      "details": "### Summary\n\nInsufficient clearing of the output buffer in Java-based decompressor implementations in lz4-java 1.10.0 and earlier allows remote attackers to read previous buffer contents via crafted compressed input. In applications where the output buffer is reused without being cleared, this may lead to disclosure of sensitive data.\n\nJNI-based implementations are *not* affected.\n\n### Details\n\nDuring the decompression process, the lz4 algorithm may have to repeat data that was previously decompressed in the same input frame. In the Java implementation, this is implemented by copy operations within the output buffer.\n\nWith a crafted input, an attacker may induce the Java implementation to copy from a region in the output buffer that does not contain decompressed data yet. If that region contains sensitive information because the output buffer was not cleared prior to decompression, that data will then be copied to the decompressed output.\n\n- `LZ4Factory.nativeInstance().safeDecompressor()` *is not* affected.\n- `LZ4Factory.nativeInstance().fastDecompressor()` *is* affected because it actually uses `safeInstance()` since 1.8.1. In 1.8.0 and earlier versions, this implementation is instead vulnerable to the more severe [CVE‐2025‐12183](https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-12183), so downgrading is not a solution.\n- Both decompressors of `LZ4Factory.safeInstance()`, `LZ4Factory.unsafeInstance()` and `LZ4Factory.fastestJavaInstance()` are affected.\n- `LZ4Factory.fastestInstance()` uses the `nativeInstance` or `fastestJavaInstance` depending on platform. `LZ4Factory.fastestInstance().fastDecompressor()` is always affected, while `LZ4Factory.fastestInstance().safeDecompressor()` is affected only when JNI cannot be used (e.g. on unsupported platforms).\n\nIndependent of this vulnerability, it is recommended that users migrate from `fastDecompressor` to `safeDecompressor`, as the latter is more performant (despite the name).\n\nThe impact of this vulnerability depends on how user code interacts with the decompression API. Users that allocate a new destination buffer each time, or use only zeroed buffers, are not impacted. When the buffer is reused, however, the confidentiality impact can be severe. This vulnerability is marked as VC:H out of caution.\n\n### Mitigation\n\nlz4-java 1.10.1 fixes this issue without requiring changes in user code.\n\nIf you cannot upgrade to 1.10.1, you can mitigate this vulnerability by zeroing the output buffer before passing it to the decompression function.\n\n### Relation to CVE‐2025‐12183\n\nThis CVE is a different attack than [CVE‐2025‐12183](https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-12183), affecting different implementations with different impact. This new vulnerability was discovered by [CodeIntelligence](https://www.code-intelligence.com/) during research that followed up on CVE‐2025‐12183. Users are recommended to upgrade to 1.10.1 to fix both vulnerabilities.",
+      "cwes": [
+        {
+          "id": "CWE-201",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-05T18:54:55Z",
+        "modifiedDate": "2025-12-05T19:12:47.200202Z",
+        "daysSincePublished": 12
+      },
+      "affected": {
+        "package": "org.lz4:lz4-java",
+        "version": "1.8.0",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.8.0",
+        "fixedIn": "1.10.1",
+        "recommendation": "Upgrade to 1.10.1 or later",
+        "fixAvailableSince": "2025-12-05T19:12:47.200Z",
+        "daysSinceFix": 12,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/yawkat/lz4-java/security/advisories/GHSA-cmp6-m4wj-q63q"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66566"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yawkat/lz4-java/commit/33d180cb70c4d93c80fb0dc3ab3002f457e93840"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/yawkat/lz4-java"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vqf4-7m7x-wgfc",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-12183"
+      ],
+      "summary": "LZ4 Java Compression has Out-of-bounds memory operations which can cause DoS",
+      "details": "Out-of-bounds memory operations in org.lz4:lz4-java 1.8.0 and earlier allow remote attackers to cause denial of service and read adjacent memory via untrusted compressed input.\n\nThis is fixed in a forked release: at.yawk.lz4:lz4-java version 1.8.1. The original project has been archived: https://github.com/lz4/lz4-java, and Sonatype has added a redirect from org.lz4:lz4-java:1.8.1 to the new group ID.",
+      "cwes": [
+        {
+          "id": "CWE-125",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-11-28T18:30:23Z",
+        "modifiedDate": "2025-12-03T14:28:55.687689Z",
+        "daysSincePublished": 19
+      },
+      "affected": {
+        "package": "org.lz4:lz4-java",
+        "version": "1.8.0",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.8.0",
+        "fixedIn": "1.8.1",
+        "recommendation": "Upgrade to 1.8.1 or later",
+        "fixAvailableSince": "2025-12-03T14:28:55.687Z",
+        "daysSinceFix": 14,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12183"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/yawkat/lz4-java"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yawkat/lz4-java/releases/tag/v1.8.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-12183"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3p8m-j85q-pgmj",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-58057"
+      ],
+      "summary": "Netty's decoders vulnerable to DoS via zip bomb style attack",
+      "details": "### Summary\n\nWith specially crafted input, `BrotliDecoder` and some other decompressing decoders will allocate a large number of reachable byte buffers, which can lead to denial of service.\n\n### Details\n\n`BrotliDecoder.decompress` has no limit in how often it calls `pull`, decompressing data 64K bytes at a time. The buffers are saved in the output list, and remain reachable until OOM is hit. This is basically a zip bomb.\n\nTested on 4.1.118, but there were no changes to the decoder since.\n\n### PoC\n\nRun this test case with `-Xmx1G`:\n\n```java\nimport io.netty.buffer.Unpooled;\nimport io.netty.channel.embedded.EmbeddedChannel;\n\nimport java.util.Base64;\n\npublic class T {\n    public static void main(String[] args) {\n        EmbeddedChannel channel = new EmbeddedChannel(new BrotliDecoder());\n        channel.writeInbound(Unpooled.wrappedBuffer(Base64.getDecoder().decode(\"aPpxD1tETigSAGj6cQ8vRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROKBIAaPpxD1tETigSAGj6cQ9bRE4oEgBo+nEPW0ROMBIAEgIaHwBETlQQVFcXlgA=\")));\n    }\n}\n```\n\nError:\n\n```\nException in thread \"main\" java.lang.OutOfMemoryError: Cannot reserve 4194304 bytes of direct buffer memory (allocated: 1069580289, limit: 1073741824)\n\tat java.base/java.nio.Bits.reserveMemory(Bits.java:178)\n\tat java.base/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:121)\n\tat java.base/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:332)\n\tat io.netty.buffer.PoolArena$DirectArena.allocateDirect(PoolArena.java:718)\n\tat io.netty.buffer.PoolArena$DirectArena.newChunk(PoolArena.java:693)\n\tat io.netty.buffer.PoolArena.allocateNormal(PoolArena.java:213)\n\tat io.netty.buffer.PoolArena.tcacheAllocateNormal(PoolArena.java:195)\n\tat io.netty.buffer.PoolArena.allocate(PoolArena.java:137)\n\tat io.netty.buffer.PoolArena.allocate(PoolArena.java:127)\n\tat io.netty.buffer.PooledByteBufAllocator.newDirectBuffer(PooledByteBufAllocator.java:403)\n\tat io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:188)\n\tat io.netty.buffer.AbstractByteBufAllocator.directBuffer(AbstractByteBufAllocator.java:179)\n\tat io.netty.buffer.AbstractByteBufAllocator.buffer(AbstractByteBufAllocator.java:116)\n\tat io.netty.handler.codec.compression.BrotliDecoder.pull(BrotliDecoder.java:70)\n\tat io.netty.handler.codec.compression.BrotliDecoder.decompress(BrotliDecoder.java:101)\n\tat io.netty.handler.codec.compression.BrotliDecoder.decode(BrotliDecoder.java:137)\n\tat io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530)\n\tat io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)\n\tat io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)\n\tat io.netty.channel.embedded.EmbeddedChannel.writeInbound(EmbeddedChannel.java:348)\n\tat io.netty.handler.codec.compression.T.main(T.java:11)\n```\n\n### Impact\n\nDoS for anyone using `BrotliDecoder` on untrusted input.",
+      "cwes": [
+        {
+          "id": "CWE-409",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-03T18:00:55Z",
+        "modifiedDate": "2025-09-04T14:30:07.795314Z",
+        "daysSincePublished": 105
+      },
+      "affected": {
+        "package": "io.netty:netty-codec",
+        "version": "4.1.118.Final",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.118.Final",
+        "fixedIn": "4.2.5.Final",
+        "recommendation": "Upgrade to 4.2.5.Final or later",
+        "fixAvailableSince": "2025-09-04T14:30:07.795Z",
+        "daysSinceFix": 104,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/security/advisories/GHSA-3p8m-j85q-pgmj"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58057"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/commit/9d804c54ce962408ae6418255a83a13924f7145d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/netty/netty"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vrpq-qp53-qv56",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:A/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/S:N/AU:Y/R:U/V:D/RE:L/U:Green",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-4949"
+      ],
+      "summary": "Eclipse JGit XML External Entity (XXE) Vulnerability",
+      "details": "In Eclipse JGit versions 7.2.0.202503040940-r and older, the ManifestParser class used by the repo command and the AmazonS3 class used to implement the experimental amazons3 git transport protocol allowing to store git pack files in an Amazon S3 bucket, are vulnerable to XML External Entity (XXE) attacks when parsing XML files. This vulnerability can lead to information disclosure, denial of service, and other security issues.",
+      "cwes": [
+        {
+          "id": "CWE-611",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-05-21T21:31:37Z",
+        "modifiedDate": "2025-11-27T09:16:06.708891Z",
+        "daysSincePublished": 209
+      },
+      "affected": {
+        "package": "org.eclipse.jgit:org.eclipse.jgit",
+        "version": "5.13.0.202109080827-r",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.13.0.202109080827-r",
+        "fixedIn": "7.2.1.202505142326-r",
+        "recommendation": "Upgrade to 7.2.1.202505142326-r or later",
+        "fixAvailableSince": "2025-11-27T09:16:06.708Z",
+        "daysSinceFix": 20,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4949"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/eclipse-jgit/jgit"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/64"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/281"
+        },
+        {
+          "type": "WEB",
+          "url": "https://projects.eclipse.org/projects/technology.jgit/releases/5.13.4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://projects.eclipse.org/projects/technology.jgit/releases/6.10.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://projects.eclipse.org/projects/technology.jgit/releases/7.0.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://projects.eclipse.org/projects/technology.jgit/releases/7.1.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://projects.eclipse.org/projects/technology.jgit/releases/7.2.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wxr5-93ph-8wr9",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-48734"
+      ],
+      "summary": "Apache Commons Improper Access Control vulnerability",
+      "details": "Improper Access Control vulnerability in Apache Commons.\n\n\n\nA special BeanIntrospector class was added in version 1.9.2. This can be used to stop attackers from using the declared class property of Java enum objects to get access to the classloader. However this protection was not enabled by default. PropertyUtilsBean (and consequently BeanUtilsBean) now disallows declared class level property access by default.\n\n\n\n\n\nReleases 1.11.0 and 2.0.0-M2 address a potential security issue when accessing enum properties in an uncontrolled way. If an application using Commons BeanUtils passes property paths from an external source directly to the getProperty() method of PropertyUtilsBean, an attacker can access the enum’s class loader via the “declaredClass” property available on all Java “enum” objects. Accessing the enum’s “declaredClass” allows remote attackers to access the ClassLoader and execute arbitrary code. The same issue exists with PropertyUtilsBean.getNestedProperty().\nStarting in versions 1.11.0 and 2.0.0-M2 a special BeanIntrospector suppresses the “declaredClass” property. Note that this new BeanIntrospector is enabled by default, but you can disable it to regain the old behavior; see section 2.5 of the user's guide and the unit tests.\n\nThis issue affects Apache Commons BeanUtils 1.x before 1.11.0, and 2.x before 2.0.0-M2.Users of the artifact commons-beanutils:commons-beanutils\n\n 1.x are recommended to upgrade to version 1.11.0, which fixes the issue.\n\n\nUsers of the artifact org.apache.commons:commons-beanutils2\n\n 2.x are recommended to upgrade to version 2.0.0-M2, which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-05-28T15:34:34Z",
+        "modifiedDate": "2025-11-03T22:02:52.251771Z",
+        "daysSincePublished": 203
+      },
+      "affected": {
+        "package": "commons-beanutils:commons-beanutils",
+        "version": "1.9.4",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.9.4",
+        "fixedIn": "1.11.0",
+        "recommendation": "Upgrade to 1.11.0 or later",
+        "fixAvailableSince": "2025-11-03T22:02:52.251Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48734"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/commons-beanutils/commit/bd20740da25b69552ddef8523beec0837297eaf9"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-beanutils"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/s0hb3jkfj5f3ryx6c57zqtfohb0of1g9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/06/msg00027.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2025/05/28/6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4g9r-vxhx-9pgx",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CGA-6rmf-ffqm-f8vv",
+        "CVE-2024-25710"
+      ],
+      "summary": "Apache Commons Compress: Denial of service caused by an infinite loop for a corrupted DUMP file",
+      "details": "Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in Apache Commons Compress. This issue affects Apache Commons Compress: from 1.3 through 1.25.0.\n\nUsers are recommended to upgrade to version 1.26.0 which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-02-19T09:30:50Z",
+        "modifiedDate": "2025-11-04T21:07:59.755805Z",
+        "daysSincePublished": 667
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-compress",
+        "version": "1.18",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.18",
+        "fixedIn": "1.26.0",
+        "recommendation": "Upgrade to 1.26.0 or later",
+        "fixAvailableSince": "2025-11-04T21:07:59.755Z",
+        "daysSinceFix": 42,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-25710"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-compress"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/cz8qkcwphy4cx8gltn932ln51cbtq6kf"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240307-0010"
+        },
+        {
+          "type": "WEB",
+          "url": "http://seclists.org/fulldisclosure/2024/Aug/37"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2024/02/19/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7hfm-57qf-j43q",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-35515"
+      ],
+      "summary": "Excessive Iteration in Compress",
+      "details": "When reading a specially crafted 7Z archive, the construction of the list of codecs that decompress an entry can result in an infinite loop. This could be used to mount a denial of service attack against services that use Compress' sevenz package.",
+      "cwes": [
+        {
+          "id": "CWE-834",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-08-02T16:55:07Z",
+        "modifiedDate": "2024-03-08T05:18:24.619639Z",
+        "daysSincePublished": 1598
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-compress",
+        "version": "1.18",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.18",
+        "fixedIn": "1.21",
+        "recommendation": "Upgrade to 1.21 or later",
+        "fixAvailableSince": "2024-03-08T05:18:24.619Z",
+        "daysSinceFix": 649,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-35515"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20211022-0001"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rfba19167efc785ad3561e7ef29f340d65ac8f0d897aed00e0731e742@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rf2f4d7940371a7c7c5b679f50e28fc7fcc82cd00670ced87e013ac88@%3Ccommits.druid.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rd4332baaf6debd03d60deb7ec93bee49e5fdbe958cb6800dff7fb00e@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rbe91c512c5385181149ab087b6c909825d34299f5c491c6482a2ed57@%3Ccommits.druid.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rbaea15ddc5a7c0c6b66660f1d6403b28595e2561bb283eade7d7cd69@%3Cannounce.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rba65ed5ddb0586f5b12598f55ec7db3633e7b7fede60466367fbf86a@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb7adf3e55359819e77230b4586521e5c6874ce5ed93384bdc14d6aee@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb6e1fa80d34e5ada45f72655d84bfd90db0ca44ef19236a49198c88c@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb064d705fdfa44b5dae4c366b369ef6597951083196321773b983e71@%3Ccommits.pulsar.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/racd0c0381c8404f298b226cd9db2eaae965b14c9c568224aa3f437ae@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rab292091eadd1ecc63c516e9541a7f241091cf2e652b8185a6059945@%3Ccommits.druid.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r9f54c0caa462267e0cc68b49f141e91432b36b23348d18c65bd0d040@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r67ef3c07fe3b8c1b02d48012149d280ad6da8e4cec253b527520fb2b@%3Cdev.poi.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r19ebfd71770ec0617a9ea180e321ef927b3fefb4c81ec5d1902d20ab%40%3Cuser.commons.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://commons.apache.org/proper/commons-compress/security-reports.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2021/07/13/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-crv7-7245-f45f",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-35516"
+      ],
+      "summary": "Improper Handling of Length Parameter Inconsistency in Compress",
+      "details": "When reading a specially crafted 7Z archive, Compress can be made to allocate large amounts of memory that finally leads to an out of memory error even for very small inputs. This could be used to mount a denial of service attack against services that use Compress' sevenz package.",
+      "cwes": [
+        {
+          "id": "CWE-130",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-770",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-08-02T16:55:15Z",
+        "modifiedDate": "2024-03-08T05:19:35.252507Z",
+        "daysSincePublished": 1598
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-compress",
+        "version": "1.18",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.18",
+        "fixedIn": "1.21",
+        "recommendation": "Upgrade to 1.21 or later",
+        "fixAvailableSince": "2024-03-08T05:19:35.252Z",
+        "daysSinceFix": 649,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-35516"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20211022-0001"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rfba19167efc785ad3561e7ef29f340d65ac8f0d897aed00e0731e742@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rf68442d67eb166f4b6cf0bbbe6c7f99098c12954f37332073c9822ca%40%3Cuser.commons.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rf5b1016fb15b7118b9a5e16bb0b78cb4f1dfcf7821eb137ab5757c91@%3Cannounce.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rd4332baaf6debd03d60deb7ec93bee49e5fdbe958cb6800dff7fb00e@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rba65ed5ddb0586f5b12598f55ec7db3633e7b7fede60466367fbf86a@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb7adf3e55359819e77230b4586521e5c6874ce5ed93384bdc14d6aee@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb6e1fa80d34e5ada45f72655d84bfd90db0ca44ef19236a49198c88c@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb064d705fdfa44b5dae4c366b369ef6597951083196321773b983e71@%3Ccommits.pulsar.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/racd0c0381c8404f298b226cd9db2eaae965b14c9c568224aa3f437ae@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r9f54c0caa462267e0cc68b49f141e91432b36b23348d18c65bd0d040@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r67ef3c07fe3b8c1b02d48012149d280ad6da8e4cec253b527520fb2b@%3Cdev.poi.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://commons.apache.org/proper/commons-compress/security-reports.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2021/07/13/2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mc84-pj99-q6hh",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-36090"
+      ],
+      "summary": "Improper Handling of Length Parameter Inconsistency in Compress",
+      "details": "When reading a specially crafted ZIP archive, Compress can be made to allocate large amounts of memory that finally leads to an out of memory error even for very small inputs. This could be used to mount a denial of service attack against services that use Compress' zip package.",
+      "cwes": [
+        {
+          "id": "CWE-130",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-08-02T16:55:53Z",
+        "modifiedDate": "2024-03-08T05:19:48.954731Z",
+        "daysSincePublished": 1598
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-compress",
+        "version": "1.18",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.18",
+        "fixedIn": "1.21",
+        "recommendation": "Upgrade to 1.21 or later",
+        "fixAvailableSince": "2024-03-08T05:19:48.954Z",
+        "daysSinceFix": 649,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-36090"
+        },
+        {
+          "type": "WEB",
+          "url": "https://commons.apache.org/proper/commons-compress/security-reports.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rbbf42642c3e4167788a7c13763d192ee049604d099681f765385d99d@%3Cdev.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rbe91c512c5385181149ab087b6c909825d34299f5c491c6482a2ed57@%3Ccommits.druid.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rc4134026d7d7b053d4f9f2205531122732405012c8804fd850a9b26f%40%3Cuser.commons.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rc7df4c2f0bbe2028a1498a46d322c91184f7a369e3e4c57d9518cacf@%3Cdev.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rd4332baaf6debd03d60deb7ec93bee49e5fdbe958cb6800dff7fb00e@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rdd5412a5b9a25aed2a02c3317052d38a97128314d50bc1ed36e81d38@%3Cuser.ant.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rf2f4d7940371a7c7c5b679f50e28fc7fcc82cd00670ced87e013ac88@%3Ccommits.druid.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rf3f0a09fee197168a813966c5816157f6c600a47313a0d6813148ea6@%3Cissues.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rf93b6bb267580e01deb7f3696f7eaca00a290c66189a658cf7230a1a@%3Cissues.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rfba19167efc785ad3561e7ef29f340d65ac8f0d897aed00e0731e742@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20211022-0001"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r0e87177f8e78b4ee453cd4d3d8f4ddec6f10d2c27707dd71e12cafc9@%3Cannounce.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r25f4c44616045085bc3cf901bb7e68e445eee53d1966fc08998fc456@%3Cdev.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r3227b1287e5bd8db6523b862c22676b046ad8f4fc96433225f46a2bd@%3Cissues.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r4f03c5de923e3f2a8c316248681258125140514ef3307bfe1538e1ab@%3Cdev.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r54049b66afbca766b6763c7531e9fe7a20293a112bcb65462a134949@%3Ccommits.drill.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r67ef3c07fe3b8c1b02d48012149d280ad6da8e4cec253b527520fb2b@%3Cdev.poi.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r75ffc7a461e7e7ae77690fa75bd47bb71365c732e0fbcc44da4f8ff5@%3Cdev.tomcat.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r9a23d4dbf4e34d498664080bff59f2893b855eb16dae33e4aa92fa53@%3Cannounce.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r9f54c0caa462267e0cc68b49f141e91432b36b23348d18c65bd0d040@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rab292091eadd1ecc63c516e9541a7f241091cf2e652b8185a6059945@%3Ccommits.druid.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/racd0c0381c8404f298b226cd9db2eaae965b14c9c568224aa3f437ae@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb064d705fdfa44b5dae4c366b369ef6597951083196321773b983e71@%3Ccommits.pulsar.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb5fa2ee61828fa2e42361b58468717e84902dd71c4aea8dc0b865df7@%3Cnotifications.james.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb6e1fa80d34e5ada45f72655d84bfd90db0ca44ef19236a49198c88c@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb7adf3e55359819e77230b4586521e5c6874ce5ed93384bdc14d6aee@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rba65ed5ddb0586f5b12598f55ec7db3633e7b7fede60466367fbf86a@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2021/07/13/4"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2021/07/13/6"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xqfj-vm6h-2x34",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-35517"
+      ],
+      "summary": "Improper Handling of Length Parameter Inconsistency in Compress",
+      "details": "When reading a specially crafted TAR archive, Compress can be made to allocate large amounts of memory that finally leads to an out of memory error even for very small inputs. This could be used to mount a denial of service attack against services that use Compress' tar package.",
+      "cwes": [
+        {
+          "id": "CWE-130",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-770",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-08-02T16:55:39Z",
+        "modifiedDate": "2024-03-08T05:19:25.295269Z",
+        "daysSincePublished": 1598
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-compress",
+        "version": "1.18",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.18",
+        "fixedIn": "1.21",
+        "recommendation": "Upgrade to 1.21 or later",
+        "fixAvailableSince": "2024-03-08T05:19:25.295Z",
+        "daysSinceFix": 649,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-35517"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20211022-0001"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rfba19167efc785ad3561e7ef29f340d65ac8f0d897aed00e0731e742@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rd4332baaf6debd03d60deb7ec93bee49e5fdbe958cb6800dff7fb00e@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rba65ed5ddb0586f5b12598f55ec7db3633e7b7fede60466367fbf86a@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb7adf3e55359819e77230b4586521e5c6874ce5ed93384bdc14d6aee@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb6e1fa80d34e5ada45f72655d84bfd90db0ca44ef19236a49198c88c@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb064d705fdfa44b5dae4c366b369ef6597951083196321773b983e71@%3Ccommits.pulsar.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/racd0c0381c8404f298b226cd9db2eaae965b14c9c568224aa3f437ae@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/ra393ffdc7c90a4a37ea023946f390285693795013a642d80fba20203@%3Cannounce.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r9f54c0caa462267e0cc68b49f141e91432b36b23348d18c65bd0d040@%3Cnotifications.skywalking.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r67ef3c07fe3b8c1b02d48012149d280ad6da8e4cec253b527520fb2b@%3Cdev.poi.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r605d906b710b95f1bbe0036a53ac6968f667f2c249b6fbabada9a940%40%3Cuser.commons.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r54afdab05e01de970649c2d91a993f68a6b00cd73e6e34e16c832d46@%3Cuser.ant.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r457b2ed564860996b20d938566fe8bd4bfb7c37be8e205448ccb5975@%3Cannounce.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r31f75743ac173b0a606f8ea6ea53f351f386c44e7bcf78ae04007c29@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://commons.apache.org/proper/commons-compress/security-reports.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2021/07/13/3"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2021/07/13/5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-78wr-2p64-hpwj",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-47554"
+      ],
+      "summary": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+      "details": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-10-03T12:30:48Z",
+        "modifiedDate": "2025-01-31T15:38:02.141931Z",
+        "daysSincePublished": 440
+      },
+      "affected": {
+        "package": "commons-io:commons-io",
+        "version": "2.11.0",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.11.0",
+        "fixedIn": "2.14.0",
+        "recommendation": "Upgrade to 2.14.0 or later",
+        "fixAvailableSince": "2025-01-31T15:38:02.141Z",
+        "daysSinceFix": 320,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47554"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-io"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/6ozr91rr9cj5lm0zyhv30bsp317hk5z1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20250131-0010"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2024/10/03/2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j288-q9x7-2f5v",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-48924"
+      ],
+      "summary": "Apache Commons Lang is vulnerable to Uncontrolled Recursion when processing long inputs",
+      "details": "Uncontrolled Recursion vulnerability in Apache Commons Lang.\n\nThis issue affects Apache Commons Lang: Starting with commons-lang:commons-lang 2.0 to 2.6, and, from org.apache.commons:commons-lang3 3.0 before 3.18.0.\n\nThe methods ClassUtils.getClass(...) can throw StackOverflowError on very long inputs. Because an Error is usually not handled by applications and libraries, a StackOverflowError could cause an application to stop.\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-674",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-11T15:31:37Z",
+        "modifiedDate": "2025-11-05T20:34:04.566048Z",
+        "daysSincePublished": 159
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-lang3",
+        "version": "3.12.0",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.12.0",
+        "fixedIn": "3.18.0",
+        "recommendation": "Upgrade to 3.18.0 or later",
+        "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+        "daysSinceFix": 41,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48924"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/commons-lang/commit/b424803abdb2bec818e4fbcb251ce031c22aca53"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-lang"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/bgv0lpswokgol11tloxnjfzdl7yrc1g1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00000.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00026.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00032.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00036.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2025/07/11/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j288-q9x7-2f5v",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-48924"
+      ],
+      "summary": "Apache Commons Lang is vulnerable to Uncontrolled Recursion when processing long inputs",
+      "details": "Uncontrolled Recursion vulnerability in Apache Commons Lang.\n\nThis issue affects Apache Commons Lang: Starting with commons-lang:commons-lang 2.0 to 2.6, and, from org.apache.commons:commons-lang3 3.0 before 3.18.0.\n\nThe methods ClassUtils.getClass(...) can throw StackOverflowError on very long inputs. Because an Error is usually not handled by applications and libraries, a StackOverflowError could cause an application to stop.\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-674",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-11T15:31:37Z",
+        "modifiedDate": "2025-11-05T20:34:04.566048Z",
+        "daysSincePublished": 159
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-lang3",
+        "version": "3.17.0",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.17.0",
+        "fixedIn": "3.18.0",
+        "recommendation": "Upgrade to 3.18.0 or later",
+        "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+        "daysSinceFix": 41,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48924"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/commons-lang/commit/b424803abdb2bec818e4fbcb251ce031c22aca53"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-lang"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/bgv0lpswokgol11tloxnjfzdl7yrc1g1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00000.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00026.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00032.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00036.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2025/07/11/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j288-q9x7-2f5v",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-48924"
+      ],
+      "summary": "Apache Commons Lang is vulnerable to Uncontrolled Recursion when processing long inputs",
+      "details": "Uncontrolled Recursion vulnerability in Apache Commons Lang.\n\nThis issue affects Apache Commons Lang: Starting with commons-lang:commons-lang 2.0 to 2.6, and, from org.apache.commons:commons-lang3 3.0 before 3.18.0.\n\nThe methods ClassUtils.getClass(...) can throw StackOverflowError on very long inputs. Because an Error is usually not handled by applications and libraries, a StackOverflowError could cause an application to stop.\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-674",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-11T15:31:37Z",
+        "modifiedDate": "2025-11-05T20:34:04.566048Z",
+        "daysSincePublished": 159
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-lang3",
+        "version": "3.8.1",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.8.1",
+        "fixedIn": "3.18.0",
+        "recommendation": "Upgrade to 3.18.0 or later",
+        "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+        "daysSinceFix": 41,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48924"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/commons-lang/commit/b424803abdb2bec818e4fbcb251ce031c22aca53"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-lang"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/bgv0lpswokgol11tloxnjfzdl7yrc1g1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00000.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00026.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00032.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00036.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2025/07/11/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-599f-7c49-w659",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-42889"
+      ],
+      "summary": "Arbitrary code execution in Apache Commons Text",
+      "details": "Apache Commons Text performs variable interpolation, allowing properties to be dynamically evaluated and expanded. The standard format for interpolation is \"${prefix:name}\", where \"prefix\" is used to locate an instance of org.apache.commons.text.lookup.StringLookup that performs the interpolation. Starting with version 1.5 and continuing through 1.9, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers. These lookups are: - \"script\" - execute expressions using the JVM script execution engine (javax.script) - \"dns\" - resolve dns records - \"url\" - load values from urls, including from remote servers Applications using the interpolation defaults in the affected versions may be vulnerable to remote code execution or unintentional contact with remote servers if untrusted configuration values are used. Users are recommended to upgrade to Apache Commons Text 1.10.0, which disables the problematic interpolators by default.",
+      "cwes": [
+        {
+          "id": "CWE-94",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-10-13T19:00:17Z",
+        "modifiedDate": "2024-02-16T08:09:06.872889Z",
+        "daysSincePublished": 1161
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-text",
+        "version": "1.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.9",
+        "fixedIn": "1.10.0",
+        "recommendation": "Upgrade to 1.10.0 or later",
+        "fixAvailableSince": "2024-02-16T08:09:06.872Z",
+        "daysSinceFix": 670,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://arxiv.org/pdf/2306.05534"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-text"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/n2bd4vdsgkqh2tm14l1wyc3jyol7s1om"
+        },
+        {
+          "type": "WEB",
+          "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2022-0022"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202301-05"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20221020-0004"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://securitylab.github.com/advisories/GHSL-2022-018_Apache_Commons_Text"
+        },
+        {
+          "type": "WEB",
+          "url": "http://packetstormsecurity.com/files/171003/OX-App-Suite-Cross-Site-Scripting-Server-Side-Request-Forgery.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://packetstormsecurity.com/files/176650/Apache-Commons-Text-1.9-Remote-Code-Execution.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://seclists.org/fulldisclosure/2023/Feb/3"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2022/10/13/4"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2022/10/18/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4jrv-ppp4-jm57",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25647"
+      ],
+      "summary": "Deserialization of Untrusted Data in Gson",
+      "details": "The package `com.google.code.gson:gson` before 2.8.9 is vulnerable to Deserialization of Untrusted Data via the `writeReplace()` method in internal classes, which may lead to denial of service attacks.",
+      "cwes": [
+        {
+          "id": "CWE-502",
+          "name": "Deserialization of Untrusted Data"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-05-03T00:00:44Z",
+        "modifiedDate": "2025-01-14T10:57:11.550318Z",
+        "daysSincePublished": 1324
+      },
+      "affected": {
+        "package": "com.google.code.gson:gson",
+        "version": "2.8.1",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.8.1",
+        "fixedIn": "2.8.9",
+        "recommendation": "Upgrade to 2.8.9 or later",
+        "fixAvailableSince": "2025-01-14T10:57:11.550Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25647"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/google/gson/pull/1991"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/google/gson/pull/1991/commits"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/google/gson"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00015.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/09/msg00009.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20220901-0009"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-COMGOOGLECODEGSON-1730327"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.debian.org/security/2022/dsa-5227"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pq2g-wx69-c263",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-57699"
+      ],
+      "summary": "Netplex Json-smart Uncontrolled Recursion vulnerability",
+      "details": "A security issue was found in Netplex Json-smart 2.5.0 through 2.5.1. When loading a specially crafted JSON input, containing a large number of ’{’, a stack exhaustion can be trigger, which could allow an attacker to cause a Denial of Service (DoS). This issue exists because of an incomplete fix for CVE-2023-1370.\n\nThe fixed version only addresses the default modes provided by [JSONParser](https://github.com/netplex/json-smart-v2/blob/master/json-smart/src/main/java/net/minidev/json/parser/JSONParser.java#L118), such as `MODE_RFC4627`. If you create the JSONParser manually or with custom options, make sure to set the `LIMIT_JSON_DEPTH` option.",
+      "cwes": [
+        {
+          "id": "CWE-674",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-06T06:31:26Z",
+        "modifiedDate": "2025-03-12T15:14:15.507977Z",
+        "daysSincePublished": 314
+      },
+      "affected": {
+        "package": "net.minidev:json-smart",
+        "version": "2.5.1",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.5.1",
+        "fixedIn": "2.5.2",
+        "recommendation": "Upgrade to 2.5.2 or later",
+        "fixAvailableSince": "2025-03-12T15:14:15.507Z",
+        "daysSinceFix": 280,
+        "monthsSinceFix": 9,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57699"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netplex/json-smart-v2/issues/232"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netplex/json-smart-v2/issues/233"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netplex/json-smart-v2/issues/236"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/TurtleLiu/Vul_PoC/tree/main/CVE-2024-57699"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/netplex/json-smart-v2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netplex/json-smart-v2/releases/tag/2.5.2"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/cve-2023-1370"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2qp4-g3q3-f92w",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-24329"
+      ],
+      "summary": "Improper Locking in JetBrains Kotlin",
+      "details": "In JetBrains Kotlin before 1.6.0, it was not possible to lock dependencies for Multiplatform Gradle Projects.",
+      "cwes": [
+        {
+          "id": "CWE-667",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-829",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-02-26T00:00:43Z",
+        "modifiedDate": "2024-10-29T20:09:41.798262Z",
+        "daysSincePublished": 1390
+      },
+      "affected": {
+        "package": "org.jetbrains.kotlin:kotlin-stdlib",
+        "version": "1.3.72",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.3.72",
+        "fixedIn": "1.6.0",
+        "recommendation": "Upgrade to 1.6.0 or later",
+        "fixAvailableSince": "2024-10-29T20:09:41.798Z",
+        "daysSinceFix": 413,
+        "monthsSinceFix": 13,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24329"
+        },
+        {
+          "type": "WEB",
+          "url": "https://blog.jetbrains.com"
+        },
+        {
+          "type": "WEB",
+          "url": "https://blog.jetbrains.com/blog/2022/02/08/jetbrains-security-bulletin-q4-2021"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/JetBrains/kotlin"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cqj8-47ch-rvvq",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2020-29582"
+      ],
+      "summary": "Incorrect Default Permissions in JetBrains Kotlin",
+      "details": "In JetBrains Kotlin before 1.4.21, a vulnerable Java API was used for temporary file and folder creation. An attacker was able to read data from such files and list directories due to insecure permissions.",
+      "cwes": [
+        {
+          "id": "CWE-276",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-05-24T17:40:48Z",
+        "modifiedDate": "2024-02-21T05:32:16.598661Z",
+        "daysSincePublished": 1303
+      },
+      "affected": {
+        "package": "org.jetbrains.kotlin:kotlin-stdlib",
+        "version": "1.3.72",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.3.72",
+        "fixedIn": "1.4.21",
+        "recommendation": "Upgrade to 1.4.21 or later",
+        "fixAvailableSince": "2024-02-21T05:32:16.598Z",
+        "daysSinceFix": 665,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-29582"
+        },
+        {
+          "type": "WEB",
+          "url": "https://blog.jetbrains.com"
+        },
+        {
+          "type": "WEB",
+          "url": "https://blog.jetbrains.com/blog/2021/02/03/jetbrains-security-bulletin-q4-2020"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r2721aba31a8562639c4b937150897e24f78f747cdbda8641c0f659fe@%3Cusers.kafka.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-84h7-rjj3-6jx4",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-67735"
+      ],
+      "summary": "Netty has a CRLF Injection vulnerability in io.netty.handler.codec.http.HttpRequestEncoder",
+      "details": "### Summary\n\nThe `io.netty.handler.codec.http.HttpRequestEncoder` CRLF injection with the request uri when constructing a request. This leads to request smuggling when `HttpRequestEncoder` is used without proper sanitization of the uri.\n\n### Details\n\nThe `HttpRequestEncoder` simply UTF8 encodes the `uri` without sanitization (`buf.writeByte(SP).writeCharSequence(uriCharSequence, CharsetUtil.UTF_8);`)\n\nThe default implementation of HTTP headers guards against such possibility already with a validator making it impossible with headers.\n\n### PoC\n\nSimple reproducer:\n\n```java\npublic static void main(String[] args) {\n\n  EmbeddedChannel client = new EmbeddedChannel();\n  client.pipeline().addLast(new HttpClientCodec());\n\n  EmbeddedChannel server = new EmbeddedChannel();\n  server.pipeline().addLast(new HttpServerCodec());\n  server.pipeline().addLast(new ChannelInboundHandlerAdapter() {\n    @Override\n    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {\n      System.out.println(\"Processing msg \" + msg);\n    }\n  });\n\n  DefaultHttpRequest request = new DefaultHttpRequest(\n    HttpVersion.HTTP_1_1,\n    HttpMethod.GET,\n    \"/s1 HTTP/1.1\\r\\n\" +\n      \"\\r\\n\" +\n      \"POST /s2 HTTP/1.1\\r\\n\" +\n      \"content-length: 11\\r\\n\\r\\n\" +\n      \"Hello World\" +\n      \"GET /s1\"\n  );\n  client.writeAndFlush(request);\n  ByteBuf tmp;\n  while ((tmp = client.readOutbound()) != null) {\n    server.writeInbound(tmp);\n  }\n}\n```\n\n### Impact\n\nAny application / framework using `HttpRequestEncoder` can be subject to be abused to perform request smuggling using CRLF injection.",
+      "cwes": [
+        {
+          "id": "CWE-93",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-15T23:28:49Z",
+        "modifiedDate": "2025-12-15T23:56:18.697866Z",
+        "daysSincePublished": 1
+      },
+      "affected": {
+        "package": "io.netty:netty-codec-http",
+        "version": "4.1.118.Final",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.118.Final",
+        "fixedIn": "4.2.8.Final",
+        "recommendation": "Upgrade to 4.2.8.Final or later",
+        "fixAvailableSince": "2025-12-15T23:56:18.697Z",
+        "daysSinceFix": 1,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/security/advisories/GHSA-84h7-rjj3-6jx4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/commit/77e81f1e5944d98b3acf887d3aa443b252752e94"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/netty/netty"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xwmg-2g98-w7v9",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-53864"
+      ],
+      "summary": "Nimbus JOSE + JWT is vulnerable to DoS attacks when processing deeply nested JSON",
+      "details": "Connect2id Nimbus JOSE + JWT before 10.0.2 allows a remote attacker to cause a denial of service via a deeply nested JSON object supplied in a JWT claim set, because of uncontrolled recursion. NOTE: this is independent of the Gson 2.11.0 issue because the Connect2id product could have checked the JSON object nesting depth, regardless of what limits (if any) were imposed by Gson.",
+      "cwes": [
+        {
+          "id": "CWE-674",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-11T03:30:34Z",
+        "modifiedDate": "2025-09-19T21:45:11.861171Z",
+        "daysSincePublished": 159
+      },
+      "affected": {
+        "package": "com.nimbusds:nimbus-jose-jwt",
+        "version": "9.40",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "9.40",
+        "fixedIn": "10.0.2",
+        "recommendation": "Upgrade to 10.0.2 or later",
+        "fixAvailableSince": "2025-09-19T21:45:11.861Z",
+        "daysSinceFix": 88,
+        "monthsSinceFix": 2,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53864"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/google/gson/commit/1039427ff0100293dd3cf967a53a55282c0fef6b"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://bitbucket.org/connect2id/nimbus-jose-jwt"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/connect2id/nimbus-jose-jwt/commits/f7fb882cc08f027c9ceb874acec3b51c6222861c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/connect2id/nimbus-jose-jwt/issues/583/stackoverflowerror-due-to-deeply-nested"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/connect2id/nimbus-jose-jwt/issues/593/back-port-cve-2025-53864-fix-to-9x-branch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/google/gson/compare/gson-parent-2.11.0...gson-parent-2.12.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3p86-9955-h393",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-4759"
+      ],
+      "summary": "Arbitrary File Overwrite in Eclipse JGit ",
+      "details": "Arbitrary File Overwrite in Eclipse JGit <= 6.6.0\n\nIn Eclipse JGit, all versions <= 6.6.0.202305301015-r, a symbolic link present in a specially crafted git repository can be used to write a file to locations outside the working tree when this repository is cloned with JGit to a case-insensitive filesystem, or when a checkout from a clone of such a repository is performed on a case-insensitive filesystem.\n\nThis can happen on checkout (DirCacheCheckout), merge (ResolveMerger via its WorkingTreeUpdater), pull (PullCommand using merge), and when applying a patch (PatchApplier). This can be exploited for remote code execution (RCE), for instance if the file written outside the working tree is a git filter that gets executed on a subsequent git command.\n\nThe issue occurs only on case-insensitive filesystems, like the default filesystems on Windows and macOS. The user performing the clone or checkout must have the rights to create symbolic links for the problem to occur, and symbolic links must be enabled in the git configuration.\n\nSetting git configuration option core.symlinks = false before checking out avoids the problem.\n\nThe issue was fixed in Eclipse JGit version 6.6.1.202309021850-r and 6.7.0.202309050840-r, available via  Maven Central https://repo1.maven.org/maven2/org/eclipse/jgit/  and  repo.eclipse.org https://repo.eclipse.org/content/repositories/jgit-releases/ . A backport is available in 5.13.3 starting from 5.13.3.202401111512-r.\n\nThe JGit maintainers would like to thank RyotaK for finding and reporting this issue.\n\n\n\n",
+      "cwes": [
+        {
+          "id": "CWE-178",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-09-18T15:30:18Z",
+        "modifiedDate": "2024-04-11T19:46:07.697031Z",
+        "daysSincePublished": 821
+      },
+      "affected": {
+        "package": "org.eclipse.jgit:org.eclipse.jgit",
+        "version": "5.13.0.202109080827-r",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.13.0.202109080827-r",
+        "fixedIn": "6.6.1.202309021850-r",
+        "recommendation": "Upgrade to 6.6.1.202309021850-r or later",
+        "fixAvailableSince": "2024-04-11T19:46:07.697Z",
+        "daysSinceFix": 615,
+        "monthsSinceFix": 20,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4759"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/eclipse-jgit/jgit/issues/30"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://git.eclipse.org/c/jgit/jgit.git"
+        },
+        {
+          "type": "WEB",
+          "url": "https://git.eclipse.org/c/jgit/jgit.git/commit/?id=9072103f3b3cf64dd12ad2949836ab98f62dabf1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gitlab.eclipse.org/security/vulnerability-reports/-/issues/11"
+        },
+        {
+          "type": "WEB",
+          "url": "https://projects.eclipse.org/projects/technology.jgit/releases/5.13.3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://projects.eclipse.org/projects/technology.jgit/releases/6.6.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3mc7-4q67-w48m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25857"
+      ],
+      "summary": "Uncontrolled Resource Consumption in snakeyaml",
+      "details": "The package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        },
+        {
+          "id": "CWE-776",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-08-31T00:00:24Z",
+        "modifiedDate": "2024-03-15T19:20:56.900754Z",
+        "daysSincePublished": 1204
+      },
+      "affected": {
+        "package": "org.yaml:snakeyaml",
+        "version": "1.27",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.27",
+        "fixedIn": "1.31",
+        "recommendation": "Upgrade to 1.31 or later",
+        "fixAvailableSince": "2024-03-15T19:20:56.900Z",
+        "daysSinceFix": 642,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25857"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/snakeyaml/snakeyaml/commit/fc300780da21f4bb92c148bc90257201220cf174"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/commits/fc300780da21f4bb92c148bc90257201220cf174"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/525"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/snakeyaml/snakeyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240315-0010"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGYAML-2806360"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-98wm-3w3q-mw94",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-38751"
+      ],
+      "summary": "snakeYAML before 1.31 vulnerable to Denial of Service due to Out-of-bounds Write",
+      "details": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+      "cwes": [
+        {
+          "id": "CWE-121",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-787",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-09-06T00:00:27Z",
+        "modifiedDate": "2024-03-15T12:49:11.748743Z",
+        "daysSincePublished": 1198
+      },
+      "affected": {
+        "package": "org.yaml:snakeyaml",
+        "version": "1.27",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.27",
+        "fixedIn": "1.31",
+        "recommendation": "Upgrade to 1.31 or later",
+        "fixAvailableSince": "2024-03-15T12:49:11.748Z",
+        "daysSinceFix": 642,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38751"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/530/stackoverflow-oss-fuzz-47039"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/src/master/src/test/java/org/yaml/snakeyaml/issues/issue530/Fuzzy47039Test.java"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47039"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202305-28"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240315-0010"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9w3m-gqgf-c4p9",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-38752"
+      ],
+      "summary": "snakeYAML before 1.32 vulnerable to Denial of Service due to Out-of-bounds Write",
+      "details": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DoS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack-overflow.",
+      "cwes": [
+        {
+          "id": "CWE-121",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-787",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-09-06T00:00:27Z",
+        "modifiedDate": "2024-03-15T12:59:23.253312Z",
+        "daysSincePublished": 1198
+      },
+      "affected": {
+        "package": "org.yaml:snakeyaml",
+        "version": "1.27",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.27",
+        "fixedIn": "1.32",
+        "recommendation": "Upgrade to 1.32 or later",
+        "fixAvailableSince": "2024-03-15T12:59:23.253Z",
+        "daysSinceFix": 642,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38752"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/531/stackoverflow-oss-fuzz-47081"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47081"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202305-28"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240315-0009"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c4r9-r8fh-9vj2",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-38749"
+      ],
+      "summary": "snakeYAML before 1.31 vulnerable to Denial of Service due to Out-of-bounds Write",
+      "details": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+      "cwes": [
+        {
+          "id": "CWE-121",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-787",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-09-06T00:00:27Z",
+        "modifiedDate": "2024-03-15T12:49:34.373482Z",
+        "daysSincePublished": 1198
+      },
+      "affected": {
+        "package": "org.yaml:snakeyaml",
+        "version": "1.27",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.27",
+        "fixedIn": "1.31",
+        "recommendation": "Upgrade to 1.31 or later",
+        "fixAvailableSince": "2024-03-15T12:49:34.373Z",
+        "daysSinceFix": 642,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38749"
+        },
+        {
+          "type": "WEB",
+          "url": "https://arxiv.org/pdf/2306.05534.pdf"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/525/got-stackoverflowerror-for-many-open"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47024"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202305-28"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240315-0010"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hhhw-99gj-p3c3",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-38750"
+      ],
+      "summary": "snakeYAML before 1.31 vulnerable to Denial of Service due to Out-of-bounds Write",
+      "details": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+      "cwes": [
+        {
+          "id": "CWE-121",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-787",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-09-06T00:00:27Z",
+        "modifiedDate": "2024-03-15T12:49:06.729862Z",
+        "daysSincePublished": 1198
+      },
+      "affected": {
+        "package": "org.yaml:snakeyaml",
+        "version": "1.27",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.27",
+        "fixedIn": "1.31",
+        "recommendation": "Upgrade to 1.31 or later",
+        "fixAvailableSince": "2024-03-15T12:49:06.729Z",
+        "daysSinceFix": 642,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38750"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/526/stackoverflow-oss-fuzz-47027"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47027"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202305-28"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240315-0010"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mjmj-j48q-9wg2",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-1471"
+      ],
+      "summary": "SnakeYaml Constructor Deserialization Remote Code Execution",
+      "details": "### Summary\nSnakeYaml's `Constructor` class, which inherits from `SafeConstructor`, allows\nany type be deserialized given the following line:\n\nnew Yaml(new Constructor(TestDataClass.class)).load(yamlContent);\n\nTypes do not have to match the types of properties in the\ntarget class. A `ConstructorException` is thrown, but only after a malicious\npayload is deserialized.\n\n### Severity\nHigh, lack of type checks during deserialization allows remote code execution.\n\n### Proof of Concept\nExecute `bash run.sh`. The PoC uses Constructor to deserialize a payload\nfor RCE. RCE is demonstrated by using a payload which performs a http request to\nhttp://127.0.0.1:8000.\n\nExample output of successful run of proof of concept:\n\n```\n$ bash run.sh\n\n[+] Downloading snakeyaml if needed\n[+] Starting mock HTTP server on 127.0.0.1:8000 to demonstrate RCE\nnc: no process found\n[+] Compiling and running Proof of Concept, which a payload that sends a HTTP request to mock web server.\n[+] An exception is expected.\nException:\nCannot create property=payload for JavaBean=Main$TestDataClass@3cbbc1e0\n in 'string', line 1, column 1:\n    payload: !!javax.script.ScriptEn ... \n    ^\nCan not set java.lang.String field Main$TestDataClass.payload to javax.script.ScriptEngineManager\n in 'string', line 1, column 10:\n    payload: !!javax.script.ScriptEngineManag ... \n             ^\n\n\tat org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:291)\n\tat org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct(Constructor.java:172)\n\tat org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:332)\n\tat org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:230)\n\tat org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)\n\tat org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)\n\tat org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:158)\n\tat org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:491)\n\tat org.yaml.snakeyaml.Yaml.load(Yaml.java:416)\n\tat Main.main(Main.java:37)\nCaused by: java.lang.IllegalArgumentException: Can not set java.lang.String field Main$TestDataClass.payload to javax.script.ScriptEngineManager\n\tat java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:167)\n\tat java.base/jdk.internal.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(UnsafeFieldAccessorImpl.java:171)\n\tat java.base/jdk.internal.reflect.UnsafeObjectFieldAccessorImpl.set(UnsafeObjectFieldAccessorImpl.java:81)\n\tat java.base/java.lang.reflect.Field.set(Field.java:780)\n\tat org.yaml.snakeyaml.introspector.FieldProperty.set(FieldProperty.java:44)\n\tat org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:286)\n\t... 9 more\n[+] Dumping Received HTTP Request. Will not be empty if PoC worked\nGET /proof-of-concept HTTP/1.1\nUser-Agent: Java/11.0.14\nHost: localhost:8000\nAccept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\nConnection: keep-alive\n```\n\n### Further Analysis\nPotential mitigations include, leveraging SnakeYaml's SafeConstructor while parsing untrusted content.\n\nSee https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64581479 for discussion on the subject.\n\n### Timeline\n**Date reported**: 4/11/2022\n**Date fixed**:  [30/12/2022](https://bitbucket.org/snakeyaml/snakeyaml/pull-requests/44)\n**Date disclosed**: 10/13/2022",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-502",
+          "name": "Deserialization of Untrusted Data"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-12-12T21:19:47Z",
+        "modifiedDate": "2025-06-18T18:37:13.356609Z",
+        "daysSincePublished": 1100
+      },
+      "affected": {
+        "package": "org.yaml:snakeyaml",
+        "version": "1.27",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.27",
+        "fixedIn": "2.0",
+        "recommendation": "Upgrade to 2.0 or later",
+        "fixAvailableSince": "2025-06-18T18:37:13.356Z",
+        "daysSinceFix": 182,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/google/security-research/security/advisories/GHSA-mjmj-j48q-9wg2"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1471"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf?raw=true"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/blog/unsafe-deserialization-snakeyaml-java-cve-2022-1471"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20230818-0015"
+        },
+        {
+          "type": "WEB",
+          "url": "https://infosecwriteups.com/%EF%B8%8F-inside-the-160-comment-fight-to-fix-snakeyamls-rce-default-1a20c5ca4d4c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://groups.google.com/g/kubernetes-security-announce/c/mwrakFaEdnc"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mbechler/marshalsec"
+        },
+        {
+          "type": "WEB",
+          "url": "https://confluence.atlassian.com/security/cve-2022-1471-snakeyaml-library-rce-vulnerability-in-multiple-products-1296171009.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/wiki/CVE-2022-1471"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64876314"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64634374"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64581479"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/commits/acc44099f5f4af26ff86b4e4e4cc1c874e2dc5c4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/commits/5014df1a36f50aca54405bb8433bc99a8847f758"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "http://packetstormsecurity.com/files/175095/PyTorch-Model-Server-Registration-Deserialization-Remote-Code-Execution.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2023/11/19/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w37g-rhq8-7m4j",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-41854"
+      ],
+      "summary": "Snakeyaml vulnerable to Stack overflow leading to denial of service",
+      "details": "Those using Snakeyaml to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack overflow. This effect may support a denial of service attack.",
+      "cwes": [
+        {
+          "id": "CWE-121",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-787",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-11-11T19:00:31Z",
+        "modifiedDate": "2024-06-25T02:34:20.451152Z",
+        "daysSincePublished": 1132
+      },
+      "affected": {
+        "package": "org.yaml:snakeyaml",
+        "version": "1.27",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.27",
+        "fixedIn": "1.32",
+        "recommendation": "Upgrade to 1.32 or later",
+        "fixAvailableSince": "2024-06-25T02:34:20.451Z",
+        "daysSinceFix": 540,
+        "monthsSinceFix": 18,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-41854"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/commits/e230a1758842beec93d28eddfde568c21774780a"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bitbucket.org/snakeyaml/snakeyaml/issues/531"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50355"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3DDXEXXWAZGF5AVHIPGFPXIWL6TSMKJE"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7MKE4XWRXTH32757H7QJU4ACS67DYDCR"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KSPAJ5Y45A4ZDION2KN5RDWLHK4XKY2J"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3DDXEXXWAZGF5AVHIPGFPXIWL6TSMKJE"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7MKE4XWRXTH32757H7QJU4ACS67DYDCR"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSPAJ5Y45A4ZDION2KN5RDWLHK4XKY2J"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240315-0009"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-53x6-4x5p-rrvv",
+      "severity": "LOW",
+      "severityScore": 3,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2019-12402"
+      ],
+      "summary": "Denial of Service in Apache Commons Compress",
+      "details": "The file name encoding algorithm used internally in Apache Commons Compress 1.15 to 1.18 can get into an infinite loop when faced with specially crafted inputs. This can lead to a denial of service attack if an attacker can choose the file names inside of an archive created by Compress.",
+      "cwes": [
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "6 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2019-10-11T18:41:08Z",
+        "modifiedDate": "2024-03-16T05:19:51.255480Z",
+        "daysSincePublished": 2259
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-compress",
+        "version": "1.18",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.18",
+        "fixedIn": "1.19",
+        "recommendation": "Upgrade to 1.19 or later",
+        "fixAvailableSince": "2024-03-16T05:19:51.255Z",
+        "daysSinceFix": 641,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12402"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20230818-0001"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WZB3GB7YXIOUKIOQ27VTIP6KKGJJ3CKL"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QLJIK2AUOZOWXR3S5XXBUNMOF3RTHTI7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rf5230a049d989dbfdd404b4320a265dceeeba459a4d04ec21873bd55@%3Csolr-user.lucene.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/re13bd219dd4b651134f6357f12bd07a0344eea7518c577bbdd185265@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rdebc1830d6c09c11d5a4804ca26769dbd292d17d361c61dea50915f0@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rd3f99d732baed459b425fb0a9e9e14f7843c9459b12037e4a9d753b5@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rcc35ab6be300365de5ff9587e0479d10d7d7c79070921837e3693162@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r972f82d821b805d04602976a9736c01b6bf218cfe0c3f48b472db488@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r7af60fbd8b2350d49d14e53a3ab2801998b9d1af2d6fcac60b060a53@%3Cdev.brooklyn.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r5caf4fcb69d2749225391e61db7216282955204849ba94f83afe011f@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r590c15cebee9b8e757e2f738127a9a71e48ede647a3044c504e050a4@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r5103b1c9242c0f812ac96e524344144402cbff9b6e078d1557bc7b1e@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r4363c994c8bca033569a98da9218cc0c62bb695c1e47a98e5084e5a0@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r25422df9ad22fec56d9eeca3ab8bd6d66365e9f6bfe311b64730edf5@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r233267e24519bacd0f9fb9f61a1287cb9f4bcb6e75d83f34f405c521@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r21d64797914001119d2fc766b88c6da181dc2308d20f14e7a7f46117@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r204ba2a9ea750f38d789d2bb429cc0925ad6133deea7cbc3001d96b5@%3Csolr-user.lucene.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r05cf37c1e1e662e968cfece1102fcd50fe207181fdbf2c30aadfafd3@%3Cissues.flink.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/9317fd092b257a0815434b116a8af8daea6e920b6673f4fd5583d5fe@%3Ccommits.druid.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/54cc4e9fa6b24520135f6fa4724dfb3465bc14703c7dc7e52353a0ea@%3Ccommits.creadur.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/308cc15f1f1dc53e97046fddbac240e6cd16de89a2746cf257be7f5b@%3Cdev.commons.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jensdietrich/xshady-release/tree/main/CVE-2019-12402"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fghv-69vj-qj49",
+      "severity": "LOW",
+      "severityScore": 2.5,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2025-58056"
+      ],
+      "summary": "Netty vulnerable to request smuggling due to incorrect parsing of chunk extensions",
+      "details": "## Summary\nA flaw in netty's parsing of chunk extensions in HTTP/1.1 messages with chunked encoding can lead to request smuggling issues with some reverse proxies.\n\n## Details\nWhen encountering a newline character (LF) while parsing a chunk extension, netty interprets the newline as the end of the chunk-size line regardless of whether a preceding carriage return (CR) was found. This is in violation of the HTTP 1.1 standard which specifies that the chunk extension is terminated by a CRLF sequence (see the [RFC](https://datatracker.ietf.org/doc/html/rfc9112#name-chunked-transfer-coding)).\n\nThis is by itself harmless, but consider an intermediary with a similar parsing flaw: while parsing a chunk extension, the intermediary interprets an LF without a preceding CR as simply part of the chunk extension (this is also in violation of the RFC, because whitespace characters are not allowed in chunk extensions). We can use this discrepancy to construct an HTTP request that the intermediary will interpret as one request but netty will interpret as two (all lines ending with CRLF, notice the LFs in the chunk extension):\n\n```\nPOST /one HTTP/1.1\nHost: localhost:8080\nTransfer-Encoding: chunked\n\n48;\\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\\n0\n\nPOST /two HTTP/1.1\nHost: localhost:8080\nTransfer-Encoding: chunked\n\n0\n\n```\n\nThe intermediary will interpret this as a single request. Once forwarded to netty, netty will interpret it as two separate requests. This is a problem, because attackers can then the intermediary, as well as perform standard request smuggling attacks against other live users (see [this Portswigger article](https://portswigger.net/web-security/request-smuggling/exploiting)).\n\n## Impact\nThis is a request smuggling issue which can be exploited for bypassing front-end access control rules as well as corrupting the responses served to other live clients.\n\nThe impact is high, but it only affects setups that use a front-end which:\n1. Interprets LF characters (without preceding CR) in chunk extensions as part of the chunk extension.\n2. Forwards chunk extensions without normalization.\n\n## Disclosure\n\n - This vulnerability was disclosed on June 18th, 2025 here: https://w4ke.info/2025/06/18/funky-chunks.html\n\n## Discussion\nDiscussion for this vulnerability can be found here:\n - https://github.com/netty/netty/issues/15522\n - https://github.com/JLLeitschuh/unCVEed/issues/1\n\n## Credit\n\n - Credit to @JeppW for uncovering this vulnerability.\n - Credit to @JLLeitschuh at [Socket](https://socket.dev/) for coordinating the vulnerability disclosure.",
+      "cwes": [
+        {
+          "id": "CWE-444",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-04T17:35:20Z",
+        "modifiedDate": "2025-09-10T21:04:43.669719Z",
+        "daysSincePublished": 104
+      },
+      "affected": {
+        "package": "io.netty:netty-codec-http",
+        "version": "4.1.118.Final",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.118.Final",
+        "fixedIn": "4.1.125.Final",
+        "recommendation": "Upgrade to 4.1.125.Final or later",
+        "fixAvailableSince": "2025-09-10T21:04:43.669Z",
+        "daysSinceFix": 97,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/security/advisories/GHSA-fghv-69vj-qj49"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58056"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/JLLeitschuh/unCVEed/issues/1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/issues/15522"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/github/advisory-database/pull/6092"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/pull/15611"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/netty/netty/commit/edb55fd8e0a3bcbd85881e423464f585183d1284"
+        },
+        {
+          "type": "WEB",
+          "url": "https://datatracker.ietf.org/doc/html/rfc9112#name-chunked-transfer-coding"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/netty/netty"
+        },
+        {
+          "type": "WEB",
+          "url": "https://w4ke.info/2025/06/18/funky-chunks.html"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "commons-beanutils:commons-beanutils",
+      "currentVersion": "1.9.4",
+      "fixedIn": "1.11.0",
+      "vulnerabilities": [
+        "GHSA-wxr5-93ph-8wr9"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.11.0 or later",
+      "fixAvailableSince": "2025-11-03T22:02:52.251Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "org.apache.commons:commons-compress",
+      "currentVersion": "1.18",
+      "fixedIn": "1.26.0",
+      "vulnerabilities": [
+        "GHSA-4g9r-vxhx-9pgx",
+        "GHSA-53x6-4x5p-rrvv",
+        "GHSA-7hfm-57qf-j43q",
+        "GHSA-crv7-7245-f45f",
+        "GHSA-mc84-pj99-q6hh",
+        "GHSA-xqfj-vm6h-2x34"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.26.0 or later",
+      "fixAvailableSince": "2025-11-04T21:07:59.755Z",
+      "daysSinceFix": 42,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "commons-io:commons-io",
+      "currentVersion": "2.11.0",
+      "fixedIn": "2.14.0",
+      "vulnerabilities": [
+        "GHSA-78wr-2p64-hpwj"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.14.0 or later",
+      "fixAvailableSince": "2025-01-31T15:38:02.141Z",
+      "daysSinceFix": 320,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "org.apache.commons:commons-lang3",
+      "currentVersion": "3.12.0",
+      "fixedIn": "3.18.0",
+      "vulnerabilities": [
+        "GHSA-j288-q9x7-2f5v"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.18.0 or later",
+      "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+      "daysSinceFix": 41,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "org.apache.commons:commons-lang3",
+      "currentVersion": "3.17.0",
+      "fixedIn": "3.18.0",
+      "vulnerabilities": [
+        "GHSA-j288-q9x7-2f5v"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.18.0 or later",
+      "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+      "daysSinceFix": 41,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "org.apache.commons:commons-lang3",
+      "currentVersion": "3.8.1",
+      "fixedIn": "3.18.0",
+      "vulnerabilities": [
+        "GHSA-j288-q9x7-2f5v"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.18.0 or later",
+      "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+      "daysSinceFix": 41,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "org.apache.commons:commons-text",
+      "currentVersion": "1.9",
+      "fixedIn": "1.10.0",
+      "vulnerabilities": [
+        "GHSA-599f-7c49-w659"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.10.0 or later",
+      "fixAvailableSince": "2024-02-16T08:09:06.872Z",
+      "daysSinceFix": 670,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "com.google.code.gson:gson",
+      "currentVersion": "2.8.1",
+      "fixedIn": "2.8.9",
+      "vulnerabilities": [
+        "GHSA-4jrv-ppp4-jm57"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.8.9 or later",
+      "fixAvailableSince": "2025-01-14T10:57:11.550Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "currentVersion": "2.13.4",
+      "fixedIn": "2.15.0",
+      "vulnerabilities": [
+        "GHSA-h46c-h94j-95f3"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 2.15.0 or later",
+      "fixAvailableSince": "2025-06-27T16:03:13.670Z",
+      "daysSinceFix": 173,
+      "monthsSinceFix": 5,
+      "isOldFix": false
+    },
+    {
+      "package": "net.minidev:json-smart",
+      "currentVersion": "2.5.1",
+      "fixedIn": "2.5.2",
+      "vulnerabilities": [
+        "GHSA-pq2g-wx69-c263"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.5.2 or later",
+      "fixAvailableSince": "2025-03-12T15:14:15.507Z",
+      "daysSinceFix": 280,
+      "monthsSinceFix": 9,
+      "isOldFix": true
+    },
+    {
+      "package": "org.jetbrains.kotlin:kotlin-stdlib",
+      "currentVersion": "1.3.72",
+      "fixedIn": "1.6.0",
+      "vulnerabilities": [
+        "GHSA-2qp4-g3q3-f92w",
+        "GHSA-cqj8-47ch-rvvq"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.6.0 or later",
+      "fixAvailableSince": "2024-10-29T20:09:41.798Z",
+      "daysSinceFix": 413,
+      "monthsSinceFix": 13,
+      "isOldFix": true
+    },
+    {
+      "package": "org.lz4:lz4-java",
+      "currentVersion": "1.8.0",
+      "fixedIn": "1.10.1",
+      "vulnerabilities": [
+        "GHSA-cmp6-m4wj-q63q",
+        "GHSA-vqf4-7m7x-wgfc"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 1.10.1 or later",
+      "fixAvailableSince": "2025-12-05T19:12:47.200Z",
+      "daysSinceFix": 12,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "io.netty:netty-codec",
+      "currentVersion": "4.1.118.Final",
+      "fixedIn": "4.2.5.Final",
+      "vulnerabilities": [
+        "GHSA-3p8m-j85q-pgmj"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 4.2.5.Final or later",
+      "fixAvailableSince": "2025-09-04T14:30:07.795Z",
+      "daysSinceFix": 104,
+      "monthsSinceFix": 3,
+      "isOldFix": false
+    },
+    {
+      "package": "io.netty:netty-codec-http",
+      "currentVersion": "4.1.118.Final",
+      "fixedIn": "4.2.8.Final",
+      "vulnerabilities": [
+        "GHSA-84h7-rjj3-6jx4",
+        "GHSA-fghv-69vj-qj49"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.2.8.Final or later",
+      "fixAvailableSince": "2025-12-15T23:56:18.697Z",
+      "daysSinceFix": 1,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "com.nimbusds:nimbus-jose-jwt",
+      "currentVersion": "9.40",
+      "fixedIn": "10.0.2",
+      "vulnerabilities": [
+        "GHSA-xwmg-2g98-w7v9"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 10.0.2 or later",
+      "fixAvailableSince": "2025-09-19T21:45:11.861Z",
+      "daysSinceFix": 88,
+      "monthsSinceFix": 2,
+      "isOldFix": false
+    },
+    {
+      "package": "org.eclipse.jgit:org.eclipse.jgit",
+      "currentVersion": "5.13.0.202109080827-r",
+      "fixedIn": "6.6.1.202309021850-r",
+      "vulnerabilities": [
+        "GHSA-3p86-9955-h393",
+        "GHSA-vrpq-qp53-qv56"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 6.6.1.202309021850-r or later",
+      "fixAvailableSince": "2024-04-11T19:46:07.697Z",
+      "daysSinceFix": 615,
+      "monthsSinceFix": 20,
+      "isOldFix": true
+    },
+    {
+      "package": "org.yaml:snakeyaml",
+      "currentVersion": "1.27",
+      "fixedIn": "1.31",
+      "vulnerabilities": [
+        "GHSA-3mc7-4q67-w48m",
+        "GHSA-98wm-3w3q-mw94",
+        "GHSA-9w3m-gqgf-c4p9",
+        "GHSA-c4r9-r8fh-9vj2",
+        "GHSA-hhhw-99gj-p3c3",
+        "GHSA-mjmj-j48q-9wg2",
+        "GHSA-w37g-rhq8-7m4j"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.31 or later",
+      "fixAvailableSince": "2024-03-15T19:20:56.900Z",
+      "daysSinceFix": 642,
+      "monthsSinceFix": 21,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "10 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "19 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "32 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

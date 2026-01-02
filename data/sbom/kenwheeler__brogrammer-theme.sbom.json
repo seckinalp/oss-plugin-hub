@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.kenwheeler/brogrammer-theme",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/ebfbcc03-a992-4083-bc96-7e37c1e3dbb7",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:55Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.kenwheeler/brogrammer-theme",
+      "SPDXID": "SPDXRef-github-kenwheeler-brogrammer-theme-master-68ce01",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/kenwheeler/brogrammer-theme",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/kenwheeler/brogrammer-theme@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-kenwheeler-brogrammer-theme-master-68ce01",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

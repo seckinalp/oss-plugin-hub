@@ -1,0 +1,646 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.368Z",
+  "source": "krasa__StringManipulation.osv.json",
+  "summary": {
+    "totalVulnerabilities": 7,
+    "uniqueVulnerabilities": 7,
+    "affectedPackages": 1,
+    "stalePackages": 7,
+    "stalePackagesOldFix": 7,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 7
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 7
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-2rmj-mq67-h97g",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-38809"
+      ],
+      "summary": "Spring Framework DoS via conditional HTTP request",
+      "details": "### Description\nApplications that parse ETags from `If-Match` or `If-None-Match` request headers are vulnerable to DoS attack.\n\n### Affected Spring Products and Versions\norg.springframework:spring-web in versions \n\n6.1.0 through 6.1.11\n6.0.0 through 6.0.22\n5.3.0 through 5.3.37\n\nOlder, unsupported versions are also affected\n\n### Mitigation\nUsers of affected versions should upgrade to the corresponding fixed version.\n6.1.x -> 6.1.12\n6.0.x -> 6.0.23\n5.3.x -> 5.3.38\nNo other mitigation steps are necessary.\n\nUsers of older, unsupported versions could enforce a size limit on `If-Match` and `If-None-Match` headers, e.g. through a Filter.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-24T18:34:43Z",
+        "modifiedDate": "2025-02-21T15:43:05.420193Z",
+        "daysSincePublished": 449
+      },
+      "affected": {
+        "package": "org.springframework:spring-web",
+        "version": "4.3.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.3.9",
+        "fixedIn": "5.3.38",
+        "recommendation": "Upgrade to 5.3.38 or later",
+        "fixAvailableSince": "2025-02-21T15:43:05.420Z",
+        "daysSinceFix": 299,
+        "monthsSinceFix": 9,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38809"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/33372"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/582bfccbb72e5c8959a0b472d1dc7d03a20520f3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/8d16a50907c11f7e6b407d878a26e84eba08a533"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/bb17ad8314b81850a939fd265fb53b3361705e85"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/spring-projects/spring-framework"
+        },
+        {
+          "type": "WEB",
+          "url": "https://spring.io/security/cve-2024-38809"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2wrp-6fg6-hmc5",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-22262"
+      ],
+      "summary": "Spring Framework URL Parsing with Host Validation",
+      "details": "Applications that use UriComponentsBuilder to parse an externally provided URL (e.g. through a query parameter) AND perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect https://cwe.mitre.org/data/definitions/601.html  attack or to a SSRF attack if the URL is used after passing validation checks.\n\nThis is the same as  CVE-2024-22259 https://spring.io/security/cve-2024-22259  and  CVE-2024-22243 https://spring.io/security/cve-2024-22243 , but with different input.",
+      "cwes": [
+        {
+          "id": "CWE-601",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-04-16T06:30:28Z",
+        "modifiedDate": "2025-02-13T19:11:22.164031Z",
+        "daysSincePublished": 610
+      },
+      "affected": {
+        "package": "org.springframework:spring-web",
+        "version": "4.3.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.3.9",
+        "fixedIn": "5.3.34",
+        "recommendation": "Upgrade to 5.3.34 or later",
+        "fixAvailableSince": "2025-02-13T19:11:22.164Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22262"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/spring-projects/spring-framework"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/blob/main/spring-web/src/main/java/org/springframework/web/util/UriComponentsBuilder.java"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240524-0003"
+        },
+        {
+          "type": "WEB",
+          "url": "https://spring.io/security/cve-2024-22262"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4gc7-5j7h-4qph",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-38820"
+      ],
+      "summary": "Spring Framework DataBinder Case Sensitive Match Exception",
+      "details": "The fix for CVE-2022-22968 made disallowedFields patterns in DataBinder case insensitive. However, String.toLowerCase() has some Locale dependent exceptions that could potentially result in fields not protected as expected.",
+      "cwes": [
+        {
+          "id": "CWE-178",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-10-18T06:30:32Z",
+        "modifiedDate": "2025-05-29T23:41:36.219637Z",
+        "daysSincePublished": 425
+      },
+      "affected": {
+        "package": "org.springframework:spring-web",
+        "version": "4.3.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.3.9",
+        "fixedIn": "6.1.14",
+        "recommendation": "Upgrade to 6.1.14 or later",
+        "fixAvailableSince": "2025-05-29T23:41:36.219Z",
+        "daysSinceFix": 201,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38820"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/spring-projects/spring-framework"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commits/v6.2.0-RC2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241129-0003"
+        },
+        {
+          "type": "WEB",
+          "url": "https://spring.io/security/cve-2024-38820"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4wrc-f8pq-fpqp",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2016-1000027"
+      ],
+      "summary": "Pivotal Spring Framework contains unsafe Java deserialization methods",
+      "details": "Pivotal Spring Framework before 6.0.0 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required.\n\nMaintainers recommend investigating alternative components or a potential mitigating control. Version 4.2.6 and 3.2.17 contain [enhanced documentation](https://github.com/spring-projects/spring-framework/commit/5cbe90b2cd91b866a5a9586e460f311860e11cfa) advising users to take precautions against unsafe Java deserialization, version 5.3.0 [deprecate the impacted classes](https://github.com/spring-projects/spring-framework/issues/25379) and version 6.0.0 [removed it entirely](https://github.com/spring-projects/spring-framework/issues/27422).",
+      "cwes": [
+        {
+          "id": "CWE-502",
+          "name": "Deserialization of Untrusted Data"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-05-24T17:05:30Z",
+        "modifiedDate": "2025-01-19T23:00:38.251808Z",
+        "daysSincePublished": 1303
+      },
+      "affected": {
+        "package": "org.springframework:spring-web",
+        "version": "4.3.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.3.9",
+        "fixedIn": "6.0.0",
+        "recommendation": "Upgrade to 6.0.0 or later",
+        "fixAvailableSince": "2025-01-19T23:00:38.251Z",
+        "daysSinceFix": 331,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1000027"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/21680"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/24434"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-1231625331"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-579669626"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-582313417"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-744519525"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/2b051b8b321768a4cfef83077db65c6328ffd60f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/5cbe90b2cd91b866a5a9586e460f311860e11cfa"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.tenable.com/security/research/tra-2016-20"
+        },
+        {
+          "type": "WEB",
+          "url": "https://support.contrastsecurity.com/hc/en-us/articles/4402400830612-Spring-web-Java-Deserialization-CVE-2016-1000027"
+        },
+        {
+          "type": "WEB",
+          "url": "https://spring.io/blog/2022/05/11/spring-framework-5-3-20-and-5-2-22-available-now"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20230420-0009"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security-tracker.debian.org/tracker/CVE-2016-1000027"
+        },
+        {
+          "type": "WEB",
+          "url": "https://jira.spring.io/browse/SPR-17143?redirect=false"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/spring-projects/spring-framework"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2016-1000027"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9gcm-f4x3-8jpw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2018-11039"
+      ],
+      "summary": "Spring Framework Cross Site Tracing (XST)",
+      "details": "Spring Framework (versions 5.0.x prior to 5.0.7, versions 4.3.x prior to 4.3.18, and older unsupported versions) allow web applications to change the HTTP request method to any HTTP method (including TRACE) using the HiddenHttpMethodFilter in Spring MVC. If an application has a pre-existing XSS vulnerability, a malicious user (or attacker) can use this filter to escalate to an XST (Cross Site Tracing) attack.",
+      "cwes": [],
+      "age": {
+        "age": "7 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2018-10-16T17:35:54Z",
+        "modifiedDate": "2024-12-02T05:43:15.118408Z",
+        "daysSincePublished": 2619
+      },
+      "affected": {
+        "package": "org.springframework:spring-web",
+        "version": "4.3.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.3.9",
+        "fixedIn": "5.0.7",
+        "recommendation": "Upgrade to 5.0.7 or later",
+        "fixAvailableSince": "2024-12-02T05:43:15.118Z",
+        "daysSinceFix": 380,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-11039"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/issues/21376"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/323ccf99e575343f63d56e229c25c35c170b7ec1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/a5cd01a4c857aaaba7ccc51545fc73dd25b5cba5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/dac97f1b7dac3e70ff603fb6fc9f205b95dd6b01"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/f2694a8ed93f1f63f87ce45d0bb638478b426acd"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/f64fa3dea10af125d612d3a997aece93d21bc875"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://spring.io/security/cve-2018-11039"
+        },
+        {
+          "type": "WEB",
+          "url": "https://pivotal.io/security/cve-2018-11039"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2021/04/msg00022.html"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/spring-projects/spring-framework"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-9gcm-f4x3-8jpw"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.securityfocus.com/bid/107984"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-ccgv-vj62-xf9h",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-22243"
+      ],
+      "summary": "Spring Web vulnerable to Open Redirect or Server Side Request Forgery",
+      "details": "Applications that use UriComponentsBuilder to parse an externally provided URL (e.g. through a query parameter) AND perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect attack or to a SSRF attack if the URL is used after passing validation checks.",
+      "cwes": [
+        {
+          "id": "CWE-601",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-02-23T06:30:31Z",
+        "modifiedDate": "2025-02-13T19:37:25.844757Z",
+        "daysSincePublished": 663
+      },
+      "affected": {
+        "package": "org.springframework:spring-web",
+        "version": "4.3.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.3.9",
+        "fixedIn": "6.1.4",
+        "recommendation": "Upgrade to 6.1.4 or later",
+        "fixAvailableSince": "2025-02-13T19:37:25.844Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22243"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/spring-projects/spring-framework"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/blob/main/spring-web/src/main/java/org/springframework/web/util/UriComponentsBuilder.java"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240524-0001"
+        },
+        {
+          "type": "WEB",
+          "url": "https://spring.io/security/cve-2024-22243"
+        },
+        {
+          "type": "WEB",
+          "url": "http://seclists.org/fulldisclosure/2024/Sep/24"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hgjh-9rj2-g67j",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-22259"
+      ],
+      "summary": "Spring Framework URL Parsing with Host Validation Vulnerability",
+      "details": "Applications that use UriComponentsBuilder in Spring Framework to parse an externally provided URL (e.g. through a query parameter) AND perform validation checks on the host of the parsed URL may be vulnerable to a  open redirect https://cwe.mitre.org/data/definitions/601.html  attack or to a SSRF attack if the URL is used after passing validation checks.\n\nThis is the same as  CVE-2024-22243 https://spring.io/security/cve-2024-22243, but with different input.",
+      "cwes": [
+        {
+          "id": "CWE-601",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-03-16T06:30:27Z",
+        "modifiedDate": "2025-02-13T19:11:00.946278Z",
+        "daysSincePublished": 641
+      },
+      "affected": {
+        "package": "org.springframework:spring-web",
+        "version": "4.3.9",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.3.9",
+        "fixedIn": "6.1.5",
+        "recommendation": "Upgrade to 6.1.5 or later",
+        "fixAvailableSince": "2025-02-13T19:11:00.946Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22259"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/297cbae2990e1413537c55845a7e0ea0ffd9f9bb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/381f790329a48b74c2a49fc1384dd68ca9153501"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework/commit/f2fd2f12269c6a781c5b2c20b3c24141055a3d68"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/spring-projects/spring-framework"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240524-0002"
+        },
+        {
+          "type": "WEB",
+          "url": "https://spring.io/security/cve-2024-22259"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "org.springframework:spring-web",
+      "currentVersion": "4.3.9",
+      "fixedIn": "5.3.38",
+      "vulnerabilities": [
+        "GHSA-2rmj-mq67-h97g",
+        "GHSA-2wrp-6fg6-hmc5",
+        "GHSA-4gc7-5j7h-4qph",
+        "GHSA-4wrc-f8pq-fpqp",
+        "GHSA-9gcm-f4x3-8jpw",
+        "GHSA-ccgv-vj62-xf9h",
+        "GHSA-hgjh-9rj2-g67j"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.3.38 or later",
+      "fixAvailableSince": "2025-02-21T15:43:05.420Z",
+      "daysSinceFix": 299,
+      "monthsSinceFix": 9,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "7 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "7 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

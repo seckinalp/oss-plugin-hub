@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.vektah/CodeGlance",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a014b482-49b5-47e0-8b15-5fc1dad1d889",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:31Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.vektah/CodeGlance",
+      "SPDXID": "SPDXRef-github-vektah-CodeGlance-master-a01d21",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/vektah/CodeGlance",
+      "filesAnalyzed": false,
+      "licenseDeclared": "BSD-2-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/vektah/CodeGlance@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-vektah-CodeGlance-master-a01d21",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

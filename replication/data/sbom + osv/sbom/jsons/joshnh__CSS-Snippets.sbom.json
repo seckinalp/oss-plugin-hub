@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.joshnh/CSS-Snippets",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/fc0329f2-a641-4112-86e5-9dde5705e9de",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:28Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.joshnh/CSS-Snippets",
+      "SPDXID": "SPDXRef-github-joshnh-CSS-Snippets-master-0f983e",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/joshnh/CSS-Snippets",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/joshnh/CSS-Snippets@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-joshnh-CSS-Snippets-master-0f983e",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

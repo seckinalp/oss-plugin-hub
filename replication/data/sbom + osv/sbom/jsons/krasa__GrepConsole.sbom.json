@@ -1,0 +1,152 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.krasa/GrepConsole",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/4fbdd72e-1c06-424a-835d-fb65fb49f54d",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:16Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/analyze",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@1"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/autobuild",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-autobuild-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/autobuild@1"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/init",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/init@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.krasa/GrepConsole",
+      "SPDXID": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/krasa/GrepConsole",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/krasa/GrepConsole@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-autobuild-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-krasa-GrepConsole-master-d18643",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

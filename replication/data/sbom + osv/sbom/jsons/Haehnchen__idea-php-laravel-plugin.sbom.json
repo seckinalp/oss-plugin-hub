@@ -1,0 +1,133 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Haehnchen/idea-php-laravel-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/f05862cf-8ec5-45d2-9260-e10f1ce2d350",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:40Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/cache",
+      "SPDXID": "SPDXRef-githubactions-actions-cache-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/cache@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@1"
+        }
+      ]
+    },
+    {
+      "name": "gradle/wrapper-validation-action",
+      "SPDXID": "SPDXRef-githubactions-gradle-wrapper-validation-action-1.0.3-75c946",
+      "versionInfo": "1.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/wrapper-validation-action@1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "com.github.Haehnchen/idea-php-laravel-plugin",
+      "SPDXID": "SPDXRef-github-Haehnchen-idea-php-laravel-plugin-master-886582",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/Haehnchen/idea-php-laravel-plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Haehnchen/idea-php-laravel-plugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-Haehnchen-idea-php-laravel-plugin-master-886582",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-cache-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Haehnchen-idea-php-laravel-plugin-master-886582",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Haehnchen-idea-php-laravel-plugin-master-886582",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Haehnchen-idea-php-laravel-plugin-master-886582",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradle-wrapper-validation-action-1.0.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Haehnchen-idea-php-laravel-plugin-master-886582",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Haehnchen-idea-php-laravel-plugin-master-886582",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

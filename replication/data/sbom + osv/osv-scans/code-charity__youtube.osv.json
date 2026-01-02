@@ -1,0 +1,413 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/code-charity__youtube.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "@babel/helpers",
+            "version": "7.24.7",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-968p-4wvh-cqc8"
+              ],
+              "aliases": [
+                "CVE-2025-27789",
+                "GHSA-968p-4wvh-cqc8"
+              ],
+              "max_severity": "6.2"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/helpers",
+                    "purl": "pkg:npm/%40babel/helpers"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "7.26.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/runtime",
+                    "purl": "pkg:npm/%40babel/runtime"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "7.26.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/runtime-corejs2",
+                    "purl": "pkg:npm/%40babel/runtime-corejs2"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "7.26.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/runtime-corejs3",
+                    "purl": "pkg:npm/%40babel/runtime-corejs3"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "7.26.10"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 8.0.0-alpha.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/helpers",
+                    "purl": "pkg:npm/%40babel/helpers"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "8.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "8.0.0-alpha.17"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 8.0.0-alpha.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/runtime",
+                    "purl": "pkg:npm/%40babel/runtime"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "8.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "8.0.0-alpha.17"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 8.0.0-alpha.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/runtime-corejs2",
+                    "purl": "pkg:npm/%40babel/runtime-corejs2"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "8.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "8.0.0-alpha.17"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 8.0.0-alpha.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-968p-4wvh-cqc8/GHSA-968p-4wvh-cqc8.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/runtime-corejs3",
+                    "purl": "pkg:npm/%40babel/runtime-corejs3"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "8.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "8.0.0-alpha.17"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-27789"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-03-11T20:30:18Z",
+                "nvd_published_at": "2025-03-11T20:15:18Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nWhen using Babel to compile [regular expression named capturing groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group), Babel will generate a polyfill for the `.replace` method that has quadratic complexity on some specific replacement pattern strings (i.e. the second argument passed to `.replace`).\n\nYour generated code is vulnerable if _all_ the following conditions are true:\n- You use Babel to compile [regular expression named capturing groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)\n- You use the `.replace` method on a regular expression that contains named capturing groups\n- **Your code uses untrusted strings as the second argument of `.replace`**\n\nIf you are using `@babel/preset-env` with the [`targets`](https://babeljs.io/docs/options#targets) option, the transform that injects the vulnerable code is automatically enabled if:\n- you use [_duplicated_ named capturing groups](https://github.com/tc39/proposal-duplicate-named-capturing-groups), and target any browser older than Chrome/Edge 126, Opera 112, Firefox 129, Safari 17.4, or Node.js 23\n- you use any [named capturing groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group), and target any browser older than Chrome 64, Opera 71, Edge 79, Firefox 78, Safari 11.1, or Node.js 10\n\nYou can verify what transforms `@babel/preset-env` is using by enabling the [`debug` option](https://babeljs.io/docs/babel-preset-env#debug).\n\n\n### Patches\n\nThis problem has been fixed in `@babel/helpers` and `@babel/runtime` 7.26.10 and 8.0.0-alpha.17, please upgrade. It's likely that you do not directly depend on `@babel/helpers`, and instead you depend on `@babel/core` (which itself depends on `@babel/helpers`). Upgrading to `@babel/core` 7.26.10 is not required, but it guarantees that you are on a new enough `@babel/helpers` version.\n\nPlease note that just updating your Babel dependencies is not enough: you will also need to re-compile your code.\n\n### Workarounds\n\nIf you are passing user-provided strings as the second argument of `.replace` on regular expressions that contain named capturing groups, validate the input and make sure it does not contain the substring `$\u003c` if it's then not followed by `\u003e` (possibly with other characters in between).\n\n### References\n\nThis vulnerability was reported and fixed in https://github.com/babel/babel/pull/17173.",
+              "id": "GHSA-968p-4wvh-cqc8",
+              "modified": "2025-04-16T15:39:50Z",
+              "published": "2025-03-11T20:30:18Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/security/advisories/GHSA-968p-4wvh-cqc8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27789"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/pull/17173"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/commit/d5952e80c0faa5ec20e35085531b6e572d31dad4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/babel/babel"
+                }
+              ],
+              "related": [
+                "CGA-3phx-qxx7-8vqw",
+                "CGA-46ch-ch69-qmcw",
+                "CGA-g6rv-q8mg-pp3f",
+                "CGA-g7xj-r4gh-6jhr",
+                "CGA-j8cm-jvwv-37vw",
+                "CGA-m6wq-wmrx-cp34",
+                "CGA-mwpg-44pj-qpj8",
+                "CGA-qgr4-9ff9-9j58",
+                "CGA-rh34-93h2-vxqh",
+                "CGA-v5pv-jcc5-rq8m"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Babel has inefficient RegExp complexity in generated code with .replace when transpiling named capturing groups"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "micromatch",
+            "version": "4.0.7",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "aliases": [
+                "CVE-2024-4067",
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-952p-6rrq-rcjv/GHSA-952p-6rrq-rcjv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "micromatch",
+                    "purl": "pkg:npm/micromatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4067"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-21T22:58:52Z",
+                "nvd_published_at": "2024-05-14T15:42:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+              "id": "GHSA-952p-6rrq-rcjv",
+              "modified": "2024-08-28T13:12:26Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/issues/243"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/266"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/micromatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+                }
+              ],
+              "related": [
+                "CGA-6q83-777j-gp5r",
+                "CGA-7j2f-jxvw-gx52",
+                "CGA-9hv5-rmvp-37vw",
+                "CGA-9qj8-ph43-6pq5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in micromatch"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

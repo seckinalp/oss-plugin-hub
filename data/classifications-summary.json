@@ -1,0 +1,2053 @@
+{
+  "generatedAt": "2025-12-24T16:37:24.267Z",
+  "source": {
+    "classificationsFile": "data/classifications_groq.json",
+    "top100Dir": "data/*/top100.json"
+  },
+  "notes": {
+    "categoryCountBasis": "uniqueRepo",
+    "coverageRateEntries": "classifiedCount / top100Total",
+    "coverageRateUniqueRepo": "classifiedUniqueRepoCount / top100WithGithubRepo",
+    "repoNormalization": "owner/repo (github only, suffix .git removed)"
+  },
+  "overall": {
+    "entryCount": 842,
+    "uniqueRepoCount": 822,
+    "duplicateEntryCount": 20,
+    "top100Total": 900,
+    "top100WithRepo": 900,
+    "top100WithGithubRepo": 842,
+    "top100UniqueGithubRepoCount": 822,
+    "coverageRateEntries": 0.9356,
+    "coverageRateWithRepoEntries": 0.9356,
+    "coverageRateUniqueRepo": 1,
+    "readmeMissingCountEntries": 31,
+    "readmeMissingRateEntries": 0.0368,
+    "readmeMissingCountUniqueRepo": 29,
+    "readmeMissingRateUniqueRepo": 0.0353,
+    "avgConfidenceEntries": 0.8849,
+    "avgConfidenceUniqueRepo": 0.8848,
+    "genericCategories": [
+      {
+        "name": "productivity_workflow",
+        "count": 403,
+        "percentage": 49.0268
+      },
+      {
+        "name": "ui_customization",
+        "count": 327,
+        "percentage": 39.781
+      },
+      {
+        "name": "developer_tools",
+        "count": 295,
+        "percentage": 35.8881
+      },
+      {
+        "name": "utilities_misc",
+        "count": 132,
+        "percentage": 16.0584
+      },
+      {
+        "name": "language_support",
+        "count": 76,
+        "percentage": 9.2457
+      },
+      {
+        "name": "integrations_connectors",
+        "count": 76,
+        "percentage": 9.2457
+      },
+      {
+        "name": "privacy_security",
+        "count": 64,
+        "percentage": 7.7859
+      },
+      {
+        "name": "code_quality_linting",
+        "count": 41,
+        "percentage": 4.9878
+      },
+      {
+        "name": "performance_optimization",
+        "count": 39,
+        "percentage": 4.7445
+      },
+      {
+        "name": "navigation_search",
+        "count": 32,
+        "percentage": 3.8929
+      },
+      {
+        "name": "automation_workflow",
+        "count": 29,
+        "percentage": 3.528
+      },
+      {
+        "name": "content_media",
+        "count": 17,
+        "percentage": 2.0681
+      },
+      {
+        "name": "data_storage_backup",
+        "count": 13,
+        "percentage": 1.5815
+      },
+      {
+        "name": "testing_debugging",
+        "count": 12,
+        "percentage": 1.4599
+      },
+      {
+        "name": "monitoring_observability",
+        "count": 10,
+        "percentage": 1.2165
+      },
+      {
+        "name": "device_integration",
+        "count": 7,
+        "percentage": 0.8516
+      },
+      {
+        "name": "accessibility",
+        "count": 5,
+        "percentage": 0.6083
+      },
+      {
+        "name": "media_entertainment",
+        "count": 5,
+        "percentage": 0.6083
+      },
+      {
+        "name": "task_project_management",
+        "count": 5,
+        "percentage": 0.6083
+      },
+      {
+        "name": "world_generation",
+        "count": 4,
+        "percentage": 0.4866
+      },
+      {
+        "name": "education_reference",
+        "count": 3,
+        "percentage": 0.365
+      },
+      {
+        "name": "documentation_templates",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "security_safety",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "ide_productivity",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "data_visualization",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "seo_marketing",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "ecommerce_payments",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "ad_blocking_content_filtering",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "time_management",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "gaming_modding",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "build_ci_cd",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "mobs_entities",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "mod_framework_library",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "learning_memory",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "development_tools",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "media_storage_backup",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "shipping_logistics",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "social_media",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "security_privacy",
+        "count": 1,
+        "percentage": 0.1217
+      }
+    ],
+    "specificCategories": [
+      {
+        "name": "productivity_workflow",
+        "count": 258,
+        "percentage": 31.3869
+      },
+      {
+        "name": "utilities_misc",
+        "count": 205,
+        "percentage": 24.9392
+      },
+      {
+        "name": "developer_tools",
+        "count": 133,
+        "percentage": 16.18
+      },
+      {
+        "name": "integrations_connectors",
+        "count": 87,
+        "percentage": 10.5839
+      },
+      {
+        "name": "language_support",
+        "count": 84,
+        "percentage": 10.219
+      },
+      {
+        "name": "dashboard_ui_cards",
+        "count": 74,
+        "percentage": 9.0024
+      },
+      {
+        "name": "ui_customization",
+        "count": 66,
+        "percentage": 8.0292
+      },
+      {
+        "name": "ide_productivity",
+        "count": 53,
+        "percentage": 6.4477
+      },
+      {
+        "name": "code_quality_linting",
+        "count": 49,
+        "percentage": 5.9611
+      },
+      {
+        "name": "customization_theming",
+        "count": 45,
+        "percentage": 5.4745
+      },
+      {
+        "name": "ui_quality_of_life",
+        "count": 45,
+        "percentage": 5.4745
+      },
+      {
+        "name": "ui_theming",
+        "count": 32,
+        "percentage": 3.8929
+      },
+      {
+        "name": "snippets_templates",
+        "count": 30,
+        "percentage": 3.6496
+      },
+      {
+        "name": "mod_framework_library",
+        "count": 29,
+        "percentage": 3.528
+      },
+      {
+        "name": "design_themes_ui",
+        "count": 28,
+        "percentage": 3.4063
+      },
+      {
+        "name": "device_integration",
+        "count": 27,
+        "percentage": 3.2847
+      },
+      {
+        "name": "privacy_security",
+        "count": 23,
+        "percentage": 2.7981
+      },
+      {
+        "name": "automation_workflow",
+        "count": 23,
+        "percentage": 2.7981
+      },
+      {
+        "name": "security_authentication",
+        "count": 22,
+        "percentage": 2.6764
+      },
+      {
+        "name": "testing_debugging",
+        "count": 22,
+        "percentage": 2.6764
+      },
+      {
+        "name": "ui_ux_theming",
+        "count": 21,
+        "percentage": 2.5547
+      },
+      {
+        "name": "performance_optimization",
+        "count": 21,
+        "percentage": 2.5547
+      },
+      {
+        "name": "media_entertainment",
+        "count": 19,
+        "percentage": 2.3114
+      },
+      {
+        "name": "content_editor_blocks",
+        "count": 19,
+        "percentage": 2.3114
+      },
+      {
+        "name": "navigation_search",
+        "count": 15,
+        "percentage": 1.8248
+      },
+      {
+        "name": "build_run_tools",
+        "count": 15,
+        "percentage": 1.8248
+      },
+      {
+        "name": "ad_blocking_privacy",
+        "count": 14,
+        "percentage": 1.7032
+      },
+      {
+        "name": "tabs_bookmarks_management",
+        "count": 14,
+        "percentage": 1.7032
+      },
+      {
+        "name": "task_project_management",
+        "count": 14,
+        "percentage": 1.7032
+      },
+      {
+        "name": "graphics_visuals",
+        "count": 11,
+        "percentage": 1.3382
+      },
+      {
+        "name": "world_generation",
+        "count": 7,
+        "percentage": 0.8516
+      },
+      {
+        "name": "formatting_styling",
+        "count": 7,
+        "percentage": 0.8516
+      },
+      {
+        "name": "security_privacy",
+        "count": 7,
+        "percentage": 0.8516
+      },
+      {
+        "name": "translation_language",
+        "count": 6,
+        "percentage": 0.7299
+      },
+      {
+        "name": "organization_tagging",
+        "count": 6,
+        "percentage": 0.7299
+      },
+      {
+        "name": "performance_caching",
+        "count": 6,
+        "percentage": 0.7299
+      },
+      {
+        "name": "data_visualization",
+        "count": 4,
+        "percentage": 0.4866
+      },
+      {
+        "name": "templates_snippets",
+        "count": 4,
+        "percentage": 0.4866
+      },
+      {
+        "name": "ad_blocking_content_filtering",
+        "count": 3,
+        "percentage": 0.365
+      },
+      {
+        "name": "energy_environment",
+        "count": 3,
+        "percentage": 0.365
+      },
+      {
+        "name": "monitoring_alerting",
+        "count": 3,
+        "percentage": 0.365
+      },
+      {
+        "name": "vcs_collaboration",
+        "count": 3,
+        "percentage": 0.365
+      },
+      {
+        "name": "ecommerce_payments",
+        "count": 3,
+        "percentage": 0.365
+      },
+      {
+        "name": "accessibility",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "social_communication",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "security_safety",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "data_storage_backup",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "build_ci_cd",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "mobs_entities",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "gameplay_mechanics",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "items_blocks",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "note_taking_writing",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "cloud_remote_dev",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "seo_marketing",
+        "count": 2,
+        "percentage": 0.2433
+      },
+      {
+        "name": "privacy-security",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "search-tools",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "download-management",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "multiplayer_server",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "autocomplete",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "notebook_support",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "publishing_sharing",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "documentation_templates",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "debugging",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "forms_leads",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "backups_migration",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "shipping_logistics",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "social_media",
+        "count": 1,
+        "percentage": 0.1217
+      },
+      {
+        "name": "analytics_tracking",
+        "count": 1,
+        "percentage": 0.1217
+      }
+    ]
+  },
+  "platforms": [
+    {
+      "platform": "chrome",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 95,
+      "classifiedCount": 95,
+      "classifiedUniqueRepoCount": 95,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 0.95,
+      "coverageRateWithRepoEntries": 0.95,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 2,
+      "readmeMissingRateEntries": 0.0211,
+      "readmeMissingCountUniqueRepo": 2,
+      "readmeMissingRateUniqueRepo": 0.0211,
+      "avgConfidenceEntries": 0.8695,
+      "avgConfidenceUniqueRepo": 0.8695,
+      "genericCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 47,
+          "percentage": 49.4737
+        },
+        {
+          "name": "developer_tools",
+          "count": 38,
+          "percentage": 40
+        },
+        {
+          "name": "privacy_security",
+          "count": 27,
+          "percentage": 28.4211
+        },
+        {
+          "name": "utilities_misc",
+          "count": 24,
+          "percentage": 25.2632
+        },
+        {
+          "name": "ui_customization",
+          "count": 22,
+          "percentage": 23.1579
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 7,
+          "percentage": 7.3684
+        },
+        {
+          "name": "performance_optimization",
+          "count": 4,
+          "percentage": 4.2105
+        },
+        {
+          "name": "accessibility",
+          "count": 4,
+          "percentage": 4.2105
+        },
+        {
+          "name": "language_support",
+          "count": 3,
+          "percentage": 3.1579
+        },
+        {
+          "name": "data_storage_backup",
+          "count": 2,
+          "percentage": 2.1053
+        },
+        {
+          "name": "automation_workflow",
+          "count": 2,
+          "percentage": 2.1053
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 1,
+          "percentage": 1.0526
+        },
+        {
+          "name": "testing_debugging",
+          "count": 1,
+          "percentage": 1.0526
+        },
+        {
+          "name": "navigation_search",
+          "count": 1,
+          "percentage": 1.0526
+        },
+        {
+          "name": "monitoring_observability",
+          "count": 1,
+          "percentage": 1.0526
+        },
+        {
+          "name": "documentation_templates",
+          "count": 1,
+          "percentage": 1.0526
+        },
+        {
+          "name": "media_entertainment",
+          "count": 1,
+          "percentage": 1.0526
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 46,
+          "percentage": 48.4211
+        },
+        {
+          "name": "developer_tools",
+          "count": 38,
+          "percentage": 40
+        },
+        {
+          "name": "utilities_misc",
+          "count": 25,
+          "percentage": 26.3158
+        },
+        {
+          "name": "security_authentication",
+          "count": 22,
+          "percentage": 23.1579
+        },
+        {
+          "name": "customization_theming",
+          "count": 22,
+          "percentage": 23.1579
+        },
+        {
+          "name": "ad_blocking_privacy",
+          "count": 14,
+          "percentage": 14.7368
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 7,
+          "percentage": 7.3684
+        },
+        {
+          "name": "media_entertainment",
+          "count": 6,
+          "percentage": 6.3158
+        },
+        {
+          "name": "translation_language",
+          "count": 3,
+          "percentage": 3.1579
+        },
+        {
+          "name": "tabs_bookmarks_management",
+          "count": 3,
+          "percentage": 3.1579
+        },
+        {
+          "name": "accessibility",
+          "count": 2,
+          "percentage": 2.1053
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "firefox",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 99,
+      "classifiedCount": 99,
+      "classifiedUniqueRepoCount": 99,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 0.99,
+      "coverageRateWithRepoEntries": 0.99,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 5,
+      "readmeMissingRateEntries": 0.0505,
+      "readmeMissingCountUniqueRepo": 5,
+      "readmeMissingRateUniqueRepo": 0.0505,
+      "avgConfidenceEntries": 0.8828,
+      "avgConfidenceUniqueRepo": 0.8828,
+      "genericCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 38,
+          "percentage": 38.3838
+        },
+        {
+          "name": "privacy_security",
+          "count": 36,
+          "percentage": 36.3636
+        },
+        {
+          "name": "ui_customization",
+          "count": 27,
+          "percentage": 27.2727
+        },
+        {
+          "name": "utilities_misc",
+          "count": 22,
+          "percentage": 22.2222
+        },
+        {
+          "name": "developer_tools",
+          "count": 17,
+          "percentage": 17.1717
+        },
+        {
+          "name": "navigation_search",
+          "count": 14,
+          "percentage": 14.1414
+        },
+        {
+          "name": "content_media",
+          "count": 7,
+          "percentage": 7.0707
+        },
+        {
+          "name": "performance_optimization",
+          "count": 5,
+          "percentage": 5.0505
+        },
+        {
+          "name": "media_entertainment",
+          "count": 3,
+          "percentage": 3.0303
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 3,
+          "percentage": 3.0303
+        },
+        {
+          "name": "language_support",
+          "count": 3,
+          "percentage": 3.0303
+        },
+        {
+          "name": "accessibility",
+          "count": 2,
+          "percentage": 2.0202
+        },
+        {
+          "name": "ad_blocking_content_filtering",
+          "count": 1,
+          "percentage": 1.0101
+        },
+        {
+          "name": "testing_debugging",
+          "count": 1,
+          "percentage": 1.0101
+        },
+        {
+          "name": "automation_workflow",
+          "count": 1,
+          "percentage": 1.0101
+        },
+        {
+          "name": "time_management",
+          "count": 1,
+          "percentage": 1.0101
+        },
+        {
+          "name": "gaming_modding",
+          "count": 1,
+          "percentage": 1.0101
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "privacy_security",
+          "count": 30,
+          "percentage": 30.303
+        },
+        {
+          "name": "customization_theming",
+          "count": 27,
+          "percentage": 27.2727
+        },
+        {
+          "name": "productivity_workflow",
+          "count": 23,
+          "percentage": 23.2323
+        },
+        {
+          "name": "utilities_misc",
+          "count": 23,
+          "percentage": 23.2323
+        },
+        {
+          "name": "developer_tools",
+          "count": 19,
+          "percentage": 19.1919
+        },
+        {
+          "name": "media_entertainment",
+          "count": 13,
+          "percentage": 13.1313
+        },
+        {
+          "name": "tabs_bookmarks_management",
+          "count": 12,
+          "percentage": 12.1212
+        },
+        {
+          "name": "ad_blocking_content_filtering",
+          "count": 4,
+          "percentage": 4.0404
+        },
+        {
+          "name": "translation_language",
+          "count": 3,
+          "percentage": 3.0303
+        },
+        {
+          "name": "social_communication",
+          "count": 2,
+          "percentage": 2.0202
+        },
+        {
+          "name": "navigation_search",
+          "count": 2,
+          "percentage": 2.0202
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 2,
+          "percentage": 2.0202
+        },
+        {
+          "name": "privacy-security",
+          "count": 1,
+          "percentage": 1.0101
+        },
+        {
+          "name": "search-tools",
+          "count": 1,
+          "percentage": 1.0101
+        },
+        {
+          "name": "download-management",
+          "count": 1,
+          "percentage": 1.0101
+        },
+        {
+          "name": "search_tools",
+          "count": 1,
+          "percentage": 1.0101
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "homeassistant",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 100,
+      "classifiedCount": 100,
+      "classifiedUniqueRepoCount": 100,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 1,
+      "coverageRateWithRepoEntries": 1,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 0,
+      "readmeMissingRateEntries": 0,
+      "readmeMissingCountUniqueRepo": 0,
+      "readmeMissingRateUniqueRepo": 0,
+      "avgConfidenceEntries": 0.903,
+      "avgConfidenceUniqueRepo": 0.903,
+      "genericCategories": [
+        {
+          "name": "ui_customization",
+          "count": 78,
+          "percentage": 78
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 27,
+          "percentage": 27
+        },
+        {
+          "name": "utilities_misc",
+          "count": 17,
+          "percentage": 17
+        },
+        {
+          "name": "automation_workflow",
+          "count": 15,
+          "percentage": 15
+        },
+        {
+          "name": "productivity_workflow",
+          "count": 10,
+          "percentage": 10
+        },
+        {
+          "name": "device_integration",
+          "count": 7,
+          "percentage": 7
+        },
+        {
+          "name": "monitoring_observability",
+          "count": 5,
+          "percentage": 5
+        },
+        {
+          "name": "developer_tools",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "security_safety",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "navigation_search",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "data_storage_backup",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "media_entertainment",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "dashboard_ui_cards",
+          "count": 74,
+          "percentage": 74
+        },
+        {
+          "name": "device_integration",
+          "count": 27,
+          "percentage": 27
+        },
+        {
+          "name": "automation_workflow",
+          "count": 23,
+          "percentage": 23
+        },
+        {
+          "name": "utilities_misc",
+          "count": 15,
+          "percentage": 15
+        },
+        {
+          "name": "energy_environment",
+          "count": 3,
+          "percentage": 3
+        },
+        {
+          "name": "monitoring_alerting",
+          "count": 3,
+          "percentage": 3
+        },
+        {
+          "name": "media_entertainment",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "security_safety",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "data_storage_backup",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "navigation_search",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "jetbrains",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 67,
+      "classifiedCount": 67,
+      "classifiedUniqueRepoCount": 67,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 0.67,
+      "coverageRateWithRepoEntries": 0.67,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 3,
+      "readmeMissingRateEntries": 0.0448,
+      "readmeMissingCountUniqueRepo": 3,
+      "readmeMissingRateUniqueRepo": 0.0448,
+      "avgConfidenceEntries": 0.891,
+      "avgConfidenceUniqueRepo": 0.891,
+      "genericCategories": [
+        {
+          "name": "developer_tools",
+          "count": 41,
+          "percentage": 61.194
+        },
+        {
+          "name": "productivity_workflow",
+          "count": 38,
+          "percentage": 56.7164
+        },
+        {
+          "name": "ui_customization",
+          "count": 24,
+          "percentage": 35.8209
+        },
+        {
+          "name": "language_support",
+          "count": 13,
+          "percentage": 19.403
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 10,
+          "percentage": 14.9254
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 4,
+          "percentage": 5.9701
+        },
+        {
+          "name": "utilities_misc",
+          "count": 2,
+          "percentage": 2.9851
+        },
+        {
+          "name": "performance_optimization",
+          "count": 2,
+          "percentage": 2.9851
+        },
+        {
+          "name": "ide_productivity",
+          "count": 2,
+          "percentage": 2.9851
+        },
+        {
+          "name": "education_reference",
+          "count": 1,
+          "percentage": 1.4925
+        },
+        {
+          "name": "monitoring_observability",
+          "count": 1,
+          "percentage": 1.4925
+        },
+        {
+          "name": "privacy_security",
+          "count": 1,
+          "percentage": 1.4925
+        },
+        {
+          "name": "testing_debugging",
+          "count": 1,
+          "percentage": 1.4925
+        },
+        {
+          "name": "build_ci_cd",
+          "count": 1,
+          "percentage": 1.4925
+        },
+        {
+          "name": "data_storage_backup",
+          "count": 1,
+          "percentage": 1.4925
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "ide_productivity",
+          "count": 53,
+          "percentage": 79.1045
+        },
+        {
+          "name": "ui_ux_theming",
+          "count": 21,
+          "percentage": 31.3433
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 18,
+          "percentage": 26.8657
+        },
+        {
+          "name": "language_support",
+          "count": 17,
+          "percentage": 25.3731
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 8,
+          "percentage": 11.9403
+        },
+        {
+          "name": "utilities_misc",
+          "count": 7,
+          "percentage": 10.4478
+        },
+        {
+          "name": "navigation_search",
+          "count": 4,
+          "percentage": 5.9701
+        },
+        {
+          "name": "testing_debugging",
+          "count": 4,
+          "percentage": 5.9701
+        },
+        {
+          "name": "build_ci_cd",
+          "count": 2,
+          "percentage": 2.9851
+        },
+        {
+          "name": "developer_tools",
+          "count": 2,
+          "percentage": 2.9851
+        },
+        {
+          "name": "vcs_collaboration",
+          "count": 1,
+          "percentage": 1.4925
+        },
+        {
+          "name": "performance_optimization",
+          "count": 1,
+          "percentage": 1.4925
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "minecraft",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 100,
+      "classifiedCount": 100,
+      "classifiedUniqueRepoCount": 100,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 1,
+      "coverageRateWithRepoEntries": 1,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 6,
+      "readmeMissingRateEntries": 0.06,
+      "readmeMissingCountUniqueRepo": 6,
+      "readmeMissingRateUniqueRepo": 0.06,
+      "avgConfidenceEntries": 0.877,
+      "avgConfidenceUniqueRepo": 0.877,
+      "genericCategories": [
+        {
+          "name": "ui_customization",
+          "count": 46,
+          "percentage": 46
+        },
+        {
+          "name": "utilities_misc",
+          "count": 35,
+          "percentage": 35
+        },
+        {
+          "name": "developer_tools",
+          "count": 28,
+          "percentage": 28
+        },
+        {
+          "name": "productivity_workflow",
+          "count": 23,
+          "percentage": 23
+        },
+        {
+          "name": "performance_optimization",
+          "count": 21,
+          "percentage": 21
+        },
+        {
+          "name": "world_generation",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "language_support",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "content_media",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "mobs_entities",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "privacy_security",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "mod_framework_library",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "automation_workflow",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "education_reference",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "navigation_search",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "utilities_misc",
+          "count": 45,
+          "percentage": 45
+        },
+        {
+          "name": "ui_quality_of_life",
+          "count": 45,
+          "percentage": 45
+        },
+        {
+          "name": "mod_framework_library",
+          "count": 29,
+          "percentage": 29
+        },
+        {
+          "name": "performance_optimization",
+          "count": 20,
+          "percentage": 20
+        },
+        {
+          "name": "graphics_visuals",
+          "count": 11,
+          "percentage": 11
+        },
+        {
+          "name": "world_generation",
+          "count": 7,
+          "percentage": 7
+        },
+        {
+          "name": "mobs_entities",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "gameplay_mechanics",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "items_blocks",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "multiplayer_server",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "language_support",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "obsidian",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 100,
+      "classifiedCount": 100,
+      "classifiedUniqueRepoCount": 100,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 1,
+      "coverageRateWithRepoEntries": 1,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 0,
+      "readmeMissingRateEntries": 0,
+      "readmeMissingCountUniqueRepo": 0,
+      "readmeMissingRateUniqueRepo": 0,
+      "avgConfidenceEntries": 0.872,
+      "avgConfidenceUniqueRepo": 0.872,
+      "genericCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 86,
+          "percentage": 86
+        },
+        {
+          "name": "ui_customization",
+          "count": 53,
+          "percentage": 53
+        },
+        {
+          "name": "developer_tools",
+          "count": 21,
+          "percentage": 21
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 11,
+          "percentage": 11
+        },
+        {
+          "name": "utilities_misc",
+          "count": 11,
+          "percentage": 11
+        },
+        {
+          "name": "task_project_management",
+          "count": 5,
+          "percentage": 5
+        },
+        {
+          "name": "navigation_search",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "data_storage_backup",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "language_support",
+          "count": 3,
+          "percentage": 3
+        },
+        {
+          "name": "automation_workflow",
+          "count": 3,
+          "percentage": 3
+        },
+        {
+          "name": "content_media",
+          "count": 3,
+          "percentage": 3
+        },
+        {
+          "name": "data_visualization",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "learning_memory",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 83,
+          "percentage": 83
+        },
+        {
+          "name": "ui_customization",
+          "count": 58,
+          "percentage": 58
+        },
+        {
+          "name": "utilities_misc",
+          "count": 29,
+          "percentage": 29
+        },
+        {
+          "name": "developer_tools",
+          "count": 21,
+          "percentage": 21
+        },
+        {
+          "name": "task_project_management",
+          "count": 14,
+          "percentage": 14
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 11,
+          "percentage": 11
+        },
+        {
+          "name": "organization_tagging",
+          "count": 6,
+          "percentage": 6
+        },
+        {
+          "name": "data_visualization",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "templates_snippets",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "note_taking_writing",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "navigation_search",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "publishing_sharing",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "sublime",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 100,
+      "classifiedCount": 100,
+      "classifiedUniqueRepoCount": 100,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 1,
+      "coverageRateWithRepoEntries": 1,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 3,
+      "readmeMissingRateEntries": 0.03,
+      "readmeMissingCountUniqueRepo": 3,
+      "readmeMissingRateUniqueRepo": 0.03,
+      "avgConfidenceEntries": 0.9,
+      "avgConfidenceUniqueRepo": 0.9,
+      "genericCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 66,
+          "percentage": 66
+        },
+        {
+          "name": "developer_tools",
+          "count": 51,
+          "percentage": 51
+        },
+        {
+          "name": "ui_customization",
+          "count": 31,
+          "percentage": 31
+        },
+        {
+          "name": "language_support",
+          "count": 23,
+          "percentage": 23
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 16,
+          "percentage": 16
+        },
+        {
+          "name": "utilities_misc",
+          "count": 9,
+          "percentage": 9
+        },
+        {
+          "name": "navigation_search",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 2,
+          "percentage": 2
+        },
+        {
+          "name": "automation_workflow",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 58,
+          "percentage": 58
+        },
+        {
+          "name": "snippets_templates",
+          "count": 26,
+          "percentage": 26
+        },
+        {
+          "name": "language_support",
+          "count": 24,
+          "percentage": 24
+        },
+        {
+          "name": "ui_theming",
+          "count": 22,
+          "percentage": 22
+        },
+        {
+          "name": "utilities_misc",
+          "count": 20,
+          "percentage": 20
+        },
+        {
+          "name": "build_run_tools",
+          "count": 15,
+          "percentage": 15
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 14,
+          "percentage": 14
+        },
+        {
+          "name": "testing_debugging",
+          "count": 5,
+          "percentage": 5
+        },
+        {
+          "name": "navigation_search",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "ui_customization",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "formatting_styling",
+          "count": 4,
+          "percentage": 4
+        },
+        {
+          "name": "developer_tools",
+          "count": 3,
+          "percentage": 3
+        },
+        {
+          "name": "autocomplete",
+          "count": 1,
+          "percentage": 1
+        },
+        {
+          "name": "vcs_collaboration",
+          "count": 1,
+          "percentage": 1
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "vscode",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 90,
+      "classifiedCount": 90,
+      "classifiedUniqueRepoCount": 90,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 0.9,
+      "coverageRateWithRepoEntries": 0.9,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 0,
+      "readmeMissingRateEntries": 0,
+      "readmeMissingCountUniqueRepo": 0,
+      "readmeMissingRateUniqueRepo": 0,
+      "avgConfidenceEntries": 0.9111,
+      "avgConfidenceUniqueRepo": 0.9111,
+      "genericCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 61,
+          "percentage": 67.7778
+        },
+        {
+          "name": "developer_tools",
+          "count": 57,
+          "percentage": 63.3333
+        },
+        {
+          "name": "language_support",
+          "count": 25,
+          "percentage": 27.7778
+        },
+        {
+          "name": "ui_customization",
+          "count": 13,
+          "percentage": 14.4444
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 11,
+          "percentage": 12.2222
+        },
+        {
+          "name": "testing_debugging",
+          "count": 7,
+          "percentage": 7.7778
+        },
+        {
+          "name": "utilities_misc",
+          "count": 4,
+          "percentage": 4.4444
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 3,
+          "percentage": 3.3333
+        },
+        {
+          "name": "automation_workflow",
+          "count": 2,
+          "percentage": 2.2222
+        },
+        {
+          "name": "data_storage_backup",
+          "count": 2,
+          "percentage": 2.2222
+        },
+        {
+          "name": "development_tools",
+          "count": 1,
+          "percentage": 1.1111
+        },
+        {
+          "name": "monitoring_observability",
+          "count": 1,
+          "percentage": 1.1111
+        },
+        {
+          "name": "navigation_search",
+          "count": 1,
+          "percentage": 1.1111
+        },
+        {
+          "name": "documentation_templates",
+          "count": 1,
+          "percentage": 1.1111
+        },
+        {
+          "name": "content_media",
+          "count": 1,
+          "percentage": 1.1111
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "productivity_workflow",
+          "count": 52,
+          "percentage": 57.7778
+        },
+        {
+          "name": "language_support",
+          "count": 42,
+          "percentage": 46.6667
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 20,
+          "percentage": 22.2222
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 17,
+          "percentage": 18.8889
+        },
+        {
+          "name": "utilities_misc",
+          "count": 15,
+          "percentage": 16.6667
+        },
+        {
+          "name": "testing_debugging",
+          "count": 13,
+          "percentage": 14.4444
+        },
+        {
+          "name": "ui_theming",
+          "count": 10,
+          "percentage": 11.1111
+        },
+        {
+          "name": "developer_tools",
+          "count": 9,
+          "percentage": 10
+        },
+        {
+          "name": "ui_customization",
+          "count": 4,
+          "percentage": 4.4444
+        },
+        {
+          "name": "snippets_templates",
+          "count": 4,
+          "percentage": 4.4444
+        },
+        {
+          "name": "navigation_search",
+          "count": 4,
+          "percentage": 4.4444
+        },
+        {
+          "name": "formatting_styling",
+          "count": 3,
+          "percentage": 3.3333
+        },
+        {
+          "name": "cloud_remote_dev",
+          "count": 2,
+          "percentage": 2.2222
+        },
+        {
+          "name": "notebook_support",
+          "count": 1,
+          "percentage": 1.1111
+        },
+        {
+          "name": "vcs_collaboration",
+          "count": 1,
+          "percentage": 1.1111
+        },
+        {
+          "name": "documentation_templates",
+          "count": 1,
+          "percentage": 1.1111
+        },
+        {
+          "name": "debugging",
+          "count": 1,
+          "percentage": 1.1111
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    },
+    {
+      "platform": "wordpress",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "top100WithGithubRepo": 91,
+      "classifiedCount": 91,
+      "classifiedUniqueRepoCount": 91,
+      "classifiedDuplicateEntryCount": 0,
+      "coverageRateEntries": 0.91,
+      "coverageRateWithRepoEntries": 0.91,
+      "coverageRateUniqueRepo": 1,
+      "readmeMissingCountEntries": 12,
+      "readmeMissingRateEntries": 0.1319,
+      "readmeMissingCountUniqueRepo": 12,
+      "readmeMissingRateUniqueRepo": 0.1319,
+      "avgConfidenceEntries": 0.8593,
+      "avgConfidenceUniqueRepo": 0.8593,
+      "genericCategories": [
+        {
+          "name": "developer_tools",
+          "count": 44,
+          "percentage": 48.3516
+        },
+        {
+          "name": "productivity_workflow",
+          "count": 41,
+          "percentage": 45.0549
+        },
+        {
+          "name": "ui_customization",
+          "count": 37,
+          "percentage": 40.6593
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 18,
+          "percentage": 19.7802
+        },
+        {
+          "name": "utilities_misc",
+          "count": 11,
+          "percentage": 12.0879
+        },
+        {
+          "name": "performance_optimization",
+          "count": 8,
+          "percentage": 8.7912
+        },
+        {
+          "name": "navigation_search",
+          "count": 7,
+          "percentage": 7.6923
+        },
+        {
+          "name": "privacy_security",
+          "count": 6,
+          "percentage": 6.5934
+        },
+        {
+          "name": "automation_workflow",
+          "count": 5,
+          "percentage": 5.4945
+        },
+        {
+          "name": "content_media",
+          "count": 5,
+          "percentage": 5.4945
+        },
+        {
+          "name": "language_support",
+          "count": 4,
+          "percentage": 4.3956
+        },
+        {
+          "name": "data_storage_backup",
+          "count": 2,
+          "percentage": 2.1978
+        },
+        {
+          "name": "testing_debugging",
+          "count": 2,
+          "percentage": 2.1978
+        },
+        {
+          "name": "seo_marketing",
+          "count": 2,
+          "percentage": 2.1978
+        },
+        {
+          "name": "monitoring_observability",
+          "count": 2,
+          "percentage": 2.1978
+        },
+        {
+          "name": "ecommerce_payments",
+          "count": 2,
+          "percentage": 2.1978
+        },
+        {
+          "name": "media_storage_backup",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "shipping_logistics",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "social_media",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "code_quality_linting",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "education_reference",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "security_privacy",
+          "count": 1,
+          "percentage": 1.0989
+        }
+      ],
+      "specificCategories": [
+        {
+          "name": "developer_tools",
+          "count": 46,
+          "percentage": 50.5495
+        },
+        {
+          "name": "integrations_connectors",
+          "count": 39,
+          "percentage": 42.8571
+        },
+        {
+          "name": "utilities_misc",
+          "count": 30,
+          "percentage": 32.967
+        },
+        {
+          "name": "design_themes_ui",
+          "count": 28,
+          "percentage": 30.7692
+        },
+        {
+          "name": "content_editor_blocks",
+          "count": 19,
+          "percentage": 20.8791
+        },
+        {
+          "name": "security_privacy",
+          "count": 7,
+          "percentage": 7.6923
+        },
+        {
+          "name": "performance_caching",
+          "count": 6,
+          "percentage": 6.5934
+        },
+        {
+          "name": "ecommerce_payments",
+          "count": 3,
+          "percentage": 3.2967
+        },
+        {
+          "name": "seo_marketing",
+          "count": 2,
+          "percentage": 2.1978
+        },
+        {
+          "name": "forms_leads",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "backups_migration",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "shipping_logistics",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "social_media",
+          "count": 1,
+          "percentage": 1.0989
+        },
+        {
+          "name": "analytics_tracking",
+          "count": 1,
+          "percentage": 1.0989
+        }
+      ],
+      "missingClassificationCount": 0,
+      "missingClassificationSample": []
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.MattCzyr/NaturesCompass",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/15d05aac-620b-496c-b19d-fe9b3e0a53a8",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:04Z"
+  },
+  "packages": [
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "eskatos/gradle-command-action",
+      "SPDXID": "SPDXRef-githubactions-eskatos-gradle-command-action-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/eskatos/gradle-command-action@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.MattCzyr/NaturesCompass",
+      "SPDXID": "SPDXRef-github-MattCzyr-NaturesCompass-master-5aac88",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/MattCzyr/NaturesCompass",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/MattCzyr/NaturesCompass@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-MattCzyr-NaturesCompass-master-5aac88",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MattCzyr-NaturesCompass-master-5aac88",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MattCzyr-NaturesCompass-master-5aac88",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MattCzyr-NaturesCompass-master-5aac88",
+      "relatedSpdxElement": "SPDXRef-githubactions-eskatos-gradle-command-action-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-MattCzyr-NaturesCompass-master-5aac88",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

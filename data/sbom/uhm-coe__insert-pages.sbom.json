@@ -1,0 +1,113 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.uhm-coe/insert-pages",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/9bfc2f52-254a-4a2c-8dfc-0ccd1c5b4bf0",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:31Z"
+  },
+  "packages": [
+    {
+      "name": "@wordpress/scripts",
+      "SPDXID": "SPDXRef-npm-wordpress-scripts-31.0.0-81ebf3",
+      "versionInfo": "^31.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wordpress/scripts@%5E31.0.0"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "SPDXID": "SPDXRef-npm-clsx-2.1.1-952cfd",
+      "versionInfo": "^2.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/clsx@%5E2.1.1"
+        }
+      ]
+    },
+    {
+      "name": "@wordpress/components",
+      "SPDXID": "SPDXRef-npm-wordpress-components-30.8.0-3539aa",
+      "versionInfo": "^30.8.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wordpress/components@%5E30.8.0"
+        }
+      ]
+    },
+    {
+      "name": "@wordpress/prettier-config",
+      "SPDXID": "SPDXRef-npm-wordpress-prettier-config-4.35.0-efbb2e",
+      "versionInfo": "^4.35.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wordpress/prettier-config@%5E4.35.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.uhm-coe/insert-pages",
+      "SPDXID": "SPDXRef-github-uhm-coe-insert-pages-master-8c16de",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/uhm-coe/insert-pages",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/uhm-coe/insert-pages@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-uhm-coe-insert-pages-master-8c16de",
+      "relatedSpdxElement": "SPDXRef-npm-wordpress-scripts-31.0.0-81ebf3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-uhm-coe-insert-pages-master-8c16de",
+      "relatedSpdxElement": "SPDXRef-npm-clsx-2.1.1-952cfd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-uhm-coe-insert-pages-master-8c16de",
+      "relatedSpdxElement": "SPDXRef-npm-wordpress-components-30.8.0-3539aa",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-uhm-coe-insert-pages-master-8c16de",
+      "relatedSpdxElement": "SPDXRef-npm-wordpress-prettier-config-4.35.0-efbb2e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-uhm-coe-insert-pages-master-8c16de",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

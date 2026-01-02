@@ -1,0 +1,231 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.afragen/embed-pdf-viewer",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/0432a1bf-41f8-41b3-aada-ceb0f43496d1",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:48Z"
+  },
+  "packages": [
+    {
+      "name": "@wordpress/scripts",
+      "SPDXID": "SPDXRef-npm-wordpress-scripts-12.1.1-ede723",
+      "versionInfo": "12.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "GPL-2.0-or-later",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wordpress/scripts@12.1.1"
+        }
+      ]
+    },
+    {
+      "name": "build",
+      "SPDXID": "SPDXRef-npm-build-0.1.4-18687d",
+      "versionInfo": "^0.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/build@%5E0.1.4"
+        }
+      ]
+    },
+    {
+      "name": "classnames",
+      "SPDXID": "SPDXRef-npm-classnames-2.2.6-9c8754",
+      "versionInfo": "^2.2.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/classnames@%5E2.2.6"
+        }
+      ]
+    },
+    {
+      "name": "dealerdirect/phpcodesniffer-composer-installer",
+      "SPDXID": "SPDXRef-composer-dealerdirect-phpcodesniffer-composer-installer-1.0.0-75c946",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/dealerdirect/phpcodesniffer-composer-installer@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "phpcsstandards/phpcsextra",
+      "SPDXID": "SPDXRef-composer-phpcsstandards-phpcsextra-1.2.1-75c946",
+      "versionInfo": "1.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcsstandards/phpcsextra@1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "wp-coding-standards/wpcs",
+      "SPDXID": "SPDXRef-composer-wp-coding-standards-wpcs-3.1.0-75c946",
+      "versionInfo": "3.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/wp-coding-standards/wpcs@3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "phpcsstandards/phpcsutils",
+      "SPDXID": "SPDXRef-composer-phpcsstandards-phpcsutils-1.0.12-75c946",
+      "versionInfo": "1.0.12",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcsstandards/phpcsutils@1.0.12"
+        }
+      ]
+    },
+    {
+      "name": "squizlabs/php_codesniffer",
+      "SPDXID": "SPDXRef-composer-squizlabs-phpcodesniffer-3.10.3-75c946",
+      "versionInfo": "3.10.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2012, Squiz Pty Ltd (ABN 77 084 670 600), copyright 1994-1997 Squiz Pty Ltd, copyright 1994-1997 The PHP Group, copyright 1997 Squiz Pty Ltd, copyright 1997~1994 The PHP Group, copyright 2006-2012 Squiz Pty Ltd, copyright 2006-2014 Squiz Pty Ltd, copyright 2006-2015 Squiz Pty Ltd, copyright 2006-2017 Squiz Pty Ltd, copyright 2006-2018 Squiz Pty Ltd, copyright 2006-2019 Squiz Pty Ltd, copyright 2006-2020 Squiz Pty Ltd, copyright 2006-2023 Squiz Pty Ltd, copyright 2007-2014 Manuel Pichler, copyright 2007-2014 Mayflower GmbH, copyright 2009-2014 Florian Grandel, copyright 2010-2014 Alexander Obuhovich, copyright 2010-2014 Andy Grunwald, copyright 2010-2014 Squiz Pty Ltd, copyright 2010-2014 Stefano Kowalke, copyright 2012-2014 Christian Weiske, copyright 2013-2014 Foo Inc., copyright 2013-2014 Roman Levishchenko, copyright 2014 Arroba IT, copyright 2017 Juliette Reinders Folmer, copyright 2018 Juliette Reinders Folmer, copyright 2018-2019 Juliette Reinders Folmer, copyright 2019 Juliette Reinders Folmer, copyright 2019 Matthew Peveler, copyright 2019 Squiz Pty Ltd, copyright 2019-2024 PHPCSStandards, copyright 2020 Squiz Pty Ltd, copyright 2020-2021 Squiz Pty Ltd, copyright 2021 Squiz Pty Ltd, copyright 2021-2023 WoltLab GmbH., copyright 2022 Juliette Reinders Folmer, copyright 2022 Squiz Pty Ltd, copyright 2022-2024 PHPCSStandards, copyright 2023 Juliette Reinders Folmer, copyright 2023 PHPCSStandards, copyright 2024 Juliette Reinders Folmer, copyright 2024 PHPCSStandards, copyright 2024 PHPCSStandards and contributors, copyright 2024 Squiz Pty Ltd, copyright The PHP Group, Greg Sherwood <gsherwood@squiz.net> copyright 2010-2014 mediaSELF Sp. z",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/squizlabs/php_codesniffer@3.10.3"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@master"
+        }
+      ]
+    },
+    {
+      "name": "10up/action-wordpress-plugin-asset-update",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-asset-update-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-asset-update@stable"
+        }
+      ]
+    },
+    {
+      "name": "com.github.afragen/embed-pdf-viewer",
+      "SPDXID": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "versionInfo": "develop",
+      "downloadLocation": "git+https://github.com/afragen/embed-pdf-viewer",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/afragen/embed-pdf-viewer@develop"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-npm-wordpress-scripts-12.1.1-ede723",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-npm-build-0.1.4-18687d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-npm-classnames-2.2.6-9c8754",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-composer-dealerdirect-phpcodesniffer-composer-installer-1.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-composer-phpcsstandards-phpcsextra-1.2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-composer-wp-coding-standards-wpcs-3.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-composer-phpcsstandards-phpcsutils-1.0.12-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-composer-squizlabs-phpcodesniffer-3.10.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-asset-update-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-afragen-embed-pdf-viewer-develop-402b5d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

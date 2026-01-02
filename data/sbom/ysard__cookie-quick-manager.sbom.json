@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ysard/cookie-quick-manager",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/4e54dfee-3c5c-44ba-9d36-178246ce5c7f",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:58Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.ysard/cookie-quick-manager",
+      "SPDXID": "SPDXRef-github-ysard-cookie-quick-manager-fpi-80eefb",
+      "versionInfo": "fpi",
+      "downloadLocation": "git+https://github.com/ysard/cookie-quick-manager",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ysard/cookie-quick-manager@fpi"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ysard-cookie-quick-manager-fpi-80eefb",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

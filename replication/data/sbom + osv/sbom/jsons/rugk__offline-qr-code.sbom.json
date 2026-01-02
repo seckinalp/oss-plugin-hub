@@ -1,0 +1,170 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.rugk/offline-qr-code",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/915093b8-6640-4ca0-ad4f-d0ffe23610a9",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:14Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "kewisch/action-web-ext",
+      "SPDXID": "SPDXRef-githubactions-kewisch-action-web-ext-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/kewisch/action-web-ext@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "codacy/codacy-analysis-cli-action",
+      "SPDXID": "SPDXRef-githubactions-codacy-codacy-analysis-cli-action-1.1.0-75c946",
+      "versionInfo": "1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/codacy/codacy-analysis-cli-action@1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/upload-sarif",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-upload-sarif-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/upload-sarif@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/analyze",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/init",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/init@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.rugk/offline-qr-code",
+      "SPDXID": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/rugk/offline-qr-code",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/rugk/offline-qr-code@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relatedSpdxElement": "SPDXRef-githubactions-kewisch-action-web-ext-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relatedSpdxElement": "SPDXRef-githubactions-codacy-codacy-analysis-cli-action-1.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-upload-sarif-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-rugk-offline-qr-code-main-46d0ba",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

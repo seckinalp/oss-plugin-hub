@@ -1,0 +1,612 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.valendesigns/option-tree",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/7708d1d7-72ba-47ec-928b-1eab1c203cab",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:21Z"
+  },
+  "packages": [
+    {
+      "name": "grunt",
+      "SPDXID": "SPDXRef-npm-grunt-1.0.3-05476e",
+      "versionInfo": "^1.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt@%5E1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "grunt-contrib-clean",
+      "SPDXID": "SPDXRef-npm-grunt-contrib-clean-2.0.0-3a3d28",
+      "versionInfo": "~2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt-contrib-clean@~2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "grunt-contrib-copy",
+      "SPDXID": "SPDXRef-npm-grunt-contrib-copy-1.0.0-4f99e5",
+      "versionInfo": "^1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt-contrib-copy@%5E1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "grunt-wp-deploy",
+      "SPDXID": "SPDXRef-npm-grunt-wp-deploy-2.0.0-96f54b",
+      "versionInfo": "~2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt-wp-deploy@~2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "ralouphie/getallheaders",
+      "SPDXID": "SPDXRef-composer-ralouphie-getallheaders-2.0.5-75c946",
+      "versionInfo": "2.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/ralouphie/getallheaders@2.0.5"
+        }
+      ]
+    },
+    {
+      "name": "phpcompatibility/php-compatibility",
+      "SPDXID": "SPDXRef-composer-phpcompatibility-php-compatibility-9.1.1-75c946",
+      "versionInfo": "9.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-or-later",
+      "copyrightText": "Copyright (c) 2007 Free Software Foundation, Inc. <http://fsf.org/>, copyright 2009 Florian Grandel, copyright 2012 Ben Selby, copyright 2012 Cu.be Solutions bvba, copyright 2012-2018 PHPCompatibility, copyright 2013 Cu.be Solutions bvba, copyright 2014 Cu.be Solutions bvba, copyright 2015 Declan Kelly",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcompatibility/php-compatibility@9.1.1"
+        }
+      ]
+    },
+    {
+      "name": "symfony/debug",
+      "SPDXID": "SPDXRef-composer-symfony-debug-3.4.25-75c946",
+      "versionInfo": "3.4.25",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/debug@3.4.25"
+        }
+      ]
+    },
+    {
+      "name": "psr/http-message",
+      "SPDXID": "SPDXRef-composer-psr-http-message-1.0.1-75c946",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 PHP Framework Interoperability Group",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/psr/http-message@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "symfony/polyfill-mbstring",
+      "SPDXID": "SPDXRef-composer-symfony-polyfill-mbstring-1.11.0-75c946",
+      "versionInfo": "1.11.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Fabien Potencier <fabien@symfony.com>, Copyright (c) 2015-2019 Fabien Potencier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/polyfill-mbstring@1.11.0"
+        }
+      ]
+    },
+    {
+      "name": "guzzlehttp/promises",
+      "SPDXID": "SPDXRef-composer-guzzlehttp-promises-1.3.1-75c946",
+      "versionInfo": "1.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2015-2016 Michael Dowling, https://github.com/mtdowling <mtdowling@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/guzzlehttp/promises@1.3.1"
+        }
+      ]
+    },
+    {
+      "name": "phpcompatibility/phpcompatibility-wp",
+      "SPDXID": "SPDXRef-composer-phpcompatibility-phpcompatibility-wp-2.0.0-75c946",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-or-later",
+      "copyrightText": "Copyright (c) 2007 Free Software Foundation, Inc. <http://fsf.org/>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcompatibility/phpcompatibility-wp@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "phpcompatibility/phpcompatibility-paragonie",
+      "SPDXID": "SPDXRef-composer-phpcompatibility-phpcompatibility-paragonie-1.0.1-75c946",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-or-later",
+      "copyrightText": "Copyright (c) 2007 Free Software Foundation, Inc. <http://fsf.org/>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcompatibility/phpcompatibility-paragonie@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "symfony/console",
+      "SPDXID": "SPDXRef-composer-symfony-console-3.4.25-75c946",
+      "versionInfo": "3.4.25",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Fabien Potencier <fabien@symfony.com>, Copyright (c) 2004-2019 Fabien Potencier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/console@3.4.25"
+        }
+      ]
+    },
+    {
+      "name": "brainmaestro/composer-git-hooks",
+      "SPDXID": "SPDXRef-composer-brainmaestro-composer-git-hooks-2.6.1-75c946",
+      "versionInfo": "2.6.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Ezinwa Okpoechi",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/brainmaestro/composer-git-hooks@2.6.1"
+        }
+      ]
+    },
+    {
+      "name": "xwp/wp-dev-lib",
+      "SPDXID": "SPDXRef-composer-xwp-wp-dev-lib-1.1.1-75c946",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2017 XWP, Copyright (c) 2017, XWP, Copyright (c) 2017, XWP <https://xwp.co/>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/xwp/wp-dev-lib@1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "symfony/polyfill-ctype",
+      "SPDXID": "SPDXRef-composer-symfony-polyfill-ctype-1.11.0-75c946",
+      "versionInfo": "1.11.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/polyfill-ctype@1.11.0"
+        }
+      ]
+    },
+    {
+      "name": "squizlabs/php_codesniffer",
+      "SPDXID": "SPDXRef-composer-squizlabs-phpcodesniffer-3.4.2-75c946",
+      "versionInfo": "3.4.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/squizlabs/php_codesniffer@3.4.2"
+        }
+      ]
+    },
+    {
+      "name": "dealerdirect/phpcodesniffer-composer-installer",
+      "SPDXID": "SPDXRef-composer-dealerdirect-phpcodesniffer-composer-installer-0.5.0-75c946",
+      "versionInfo": "0.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2016-2018 Dealerdirect B.V., copyright 2016-2018 Dealerdirect B.V.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/dealerdirect/phpcodesniffer-composer-installer@0.5.0"
+        }
+      ]
+    },
+    {
+      "name": "symfony/yaml",
+      "SPDXID": "SPDXRef-composer-symfony-yaml-3.4.25-75c946",
+      "versionInfo": "3.4.25",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Fabien Potencier <fabien@symfony.com>, Copyright (c) 2004-2019 Fabien Potencier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/yaml@3.4.25"
+        }
+      ]
+    },
+    {
+      "name": "symfony/stopwatch",
+      "SPDXID": "SPDXRef-composer-symfony-stopwatch-3.4.25-75c946",
+      "versionInfo": "3.4.25",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Fabien Potencier <fabien@symfony.com>, Copyright (c) 2004-2019 Fabien Potencier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/stopwatch@3.4.25"
+        }
+      ]
+    },
+    {
+      "name": "php-coveralls/php-coveralls",
+      "SPDXID": "SPDXRef-composer-php-coveralls-php-coveralls-2.1.0-75c946",
+      "versionInfo": "2.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Kitamura Satoshi",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/php-coveralls/php-coveralls@2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "psr/log",
+      "SPDXID": "SPDXRef-composer-psr-log-1.1.0-75c946",
+      "versionInfo": "1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 PHP Framework Interoperability Group",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/psr/log@1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "slowprog/composer-copy-file",
+      "SPDXID": "SPDXRef-composer-slowprog-composer-copy-file-0.2.1-75c946",
+      "versionInfo": "0.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/slowprog/composer-copy-file@0.2.1"
+        }
+      ]
+    },
+    {
+      "name": "wp-coding-standards/wpcs",
+      "SPDXID": "SPDXRef-composer-wp-coding-standards-wpcs-2.1.0-75c946",
+      "versionInfo": "2.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2009 John Godley and contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/wp-coding-standards/wpcs@2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "symfony/config",
+      "SPDXID": "SPDXRef-composer-symfony-config-3.4.25-75c946",
+      "versionInfo": "3.4.25",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Fabien Potencier <fabien@symfony.com>, Copyright (c) 2004-2019 Fabien Potencier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/config@3.4.25"
+        }
+      ]
+    },
+    {
+      "name": "symfony/filesystem",
+      "SPDXID": "SPDXRef-composer-symfony-filesystem-3.4.25-75c946",
+      "versionInfo": "3.4.25",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Fabien Potencier <fabien@symfony.com>, Copyright (c) 2004-2019 Fabien Potencier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/filesystem@3.4.25"
+        }
+      ]
+    },
+    {
+      "name": "guzzlehttp/guzzle",
+      "SPDXID": "SPDXRef-composer-guzzlehttp-guzzle-6.3.3-75c946",
+      "versionInfo": "6.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2011-2018 Michael Dowling, https://github.com/mtdowling <mtdowling@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/guzzlehttp/guzzle@6.3.3"
+        }
+      ]
+    },
+    {
+      "name": "guzzlehttp/psr7",
+      "SPDXID": "SPDXRef-composer-guzzlehttp-psr7-1.5.2-75c946",
+      "versionInfo": "1.5.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/guzzlehttp/psr7@1.5.2"
+        }
+      ]
+    },
+    {
+      "name": "com.github.valendesigns/option-tree",
+      "SPDXID": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/valendesigns/option-tree",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/valendesigns/option-tree@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-1.0.3-05476e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-clean-2.0.0-3a3d28",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-copy-1.0.0-4f99e5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-wp-deploy-2.0.0-96f54b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-debug-3.4.25-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-psr-http-message-1.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-console-3.4.25-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-brainmaestro-composer-git-hooks-2.6.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-php-coveralls-php-coveralls-2.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-slowprog-composer-copy-file-0.2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-filesystem-3.4.25-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-guzzlehttp-guzzle-6.3.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-ralouphie-getallheaders-2.0.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-guzzlehttp-promises-1.3.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-phpcompatibility-phpcompatibility-wp-2.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-phpcompatibility-phpcompatibility-paragonie-1.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-xwp-wp-dev-lib-1.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-dealerdirect-phpcodesniffer-composer-installer-0.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-yaml-3.4.25-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-stopwatch-3.4.25-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-polyfill-mbstring-1.11.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-squizlabs-phpcodesniffer-3.4.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-psr-log-1.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-config-3.4.25-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-guzzlehttp-psr7-1.5.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-phpcompatibility-php-compatibility-9.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-polyfill-ctype-1.11.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relatedSpdxElement": "SPDXRef-composer-wp-coding-standards-wpcs-2.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-valendesigns-option-tree-master-01dac3",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

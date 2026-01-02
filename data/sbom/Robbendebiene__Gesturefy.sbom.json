@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Robbendebiene/Gesturefy",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/387b67f5-eef2-43a5-83e1-fe4324d4c9da",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:52Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.Robbendebiene/Gesturefy",
+      "SPDXID": "SPDXRef-github-Robbendebiene-Gesturefy-master-062b29",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/Robbendebiene/Gesturefy",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Robbendebiene/Gesturefy@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Robbendebiene-Gesturefy-master-062b29",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

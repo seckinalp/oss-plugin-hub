@@ -1,0 +1,114 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.bernie-g/geckolib",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d1f48133-d368-4356-9250-e316bbb12c33",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:42Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/analyze",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@2"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/init",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/init@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.bernie-g/geckolib",
+      "SPDXID": "SPDXRef-github-bernie-g-geckolib-main-59ce00",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/bernie-g/geckolib",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/bernie-g/geckolib@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-bernie-g-geckolib-main-59ce00",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bernie-g-geckolib-main-59ce00",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bernie-g-geckolib-main-59ce00",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bernie-g-geckolib-main-59ce00",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-bernie-g-geckolib-main-59ce00",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

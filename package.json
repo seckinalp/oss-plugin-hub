@@ -51,7 +51,18 @@
     "update-stats:chrome": "node scripts/update-github-stats.js --platform chrome",
     "update-stats:chrome:force": "node scripts/update-github-stats.js --platform chrome --force",
     "fetch-all": "npm run fetch-all-sources && npm run update-stats",
-    "generate-analytics": "node scripts/generate-analytics-summary.js"
+    "generate-analytics": "node scripts/generate-analytics-summary.js",
+    "generate-github-analytics": "node scripts/generate-github-analytics.js",
+    "analyze-repo-duplicates": "node scripts/analyze-repo-duplicates.js",
+    "fetch-sbom": "node scripts/fetch-sbom.js",
+    "fetch-missing-sboms": "node scripts/fetch-missing-sboms.js",
+    "fetch-openssf-scorecard": "node scripts/fetch-openssf-scorecard.js",
+    "fetch-codeql": "node scripts/fetch-codeql-analysis.js",
+    "scan-osv": "node scripts/scan-osv-from-sbom.js",
+    "analyze-vulnerabilities": "node scripts/analyze-osv-vulnerabilities.js",
+    "view-vulnerability-report": "node scripts/view-vulnerability-report.js",
+    "vulnerability-summary": "node scripts/generate-vulnerability-summary.js",
+    "enrich-vulnerability-data": "node scripts/enrich-with-vulnerability-data.js"
   },
   "dependencies": {
     "dotenv": "17.2.3",

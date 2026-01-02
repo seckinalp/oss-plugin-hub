@@ -1,0 +1,133 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Aizistral-Studios/No-Chat-Reports",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/bd8aa265-369f-4761-9b18-7af543aed1f8",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:39Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/wrapper-validation-action",
+      "SPDXID": "SPDXRef-githubactions-gradle-wrapper-validation-action-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/wrapper-validation-action@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "wangchucheng/git-repo-sync",
+      "SPDXID": "SPDXRef-githubactions-wangchucheng-git-repo-sync-0.1.0-75c946",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/wangchucheng/git-repo-sync@0.1.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.Aizistral-Studios/No-Chat-Reports",
+      "SPDXID": "SPDXRef-github-Aizistral-Studios-No-Chat-Reports-1.21-Unified-ad8b5b",
+      "versionInfo": "1.21-Unified",
+      "downloadLocation": "git+https://github.com/Aizistral-Studios/No-Chat-Reports",
+      "filesAnalyzed": false,
+      "licenseDeclared": "WTFPL",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Aizistral-Studios/No-Chat-Reports@1.21-Unified"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-Aizistral-Studios-No-Chat-Reports-1.21-Unified-ad8b5b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Aizistral-Studios-No-Chat-Reports-1.21-Unified-ad8b5b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Aizistral-Studios-No-Chat-Reports-1.21-Unified-ad8b5b",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradle-wrapper-validation-action-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Aizistral-Studios-No-Chat-Reports-1.21-Unified-ad8b5b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Aizistral-Studios-No-Chat-Reports-1.21-Unified-ad8b5b",
+      "relatedSpdxElement": "SPDXRef-githubactions-wangchucheng-git-repo-sync-0.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Aizistral-Studios-No-Chat-Reports-1.21-Unified-ad8b5b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

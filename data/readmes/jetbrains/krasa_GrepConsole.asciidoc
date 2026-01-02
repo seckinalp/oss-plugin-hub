@@ -1,0 +1,54 @@
+==== https://plugins.jetbrains.com/plugin/7125[Grep Console - IntelliJ plugin] 
+image::https://img.shields.io/badge/donate-paypal-black.svg[link="https://www.paypal.me/VojtechKrasa"]
+
+== Features
+
+- grep output into a new console tab
+- change colors of matching text or lines
+- filter out unwanted lines
+- change output or execute any action using custom groovy scripts or plugins
+- fold output
+- clear console
+- play sounds
+- tail files - by folder/wildcard/newest - using a Run Configuration or manually
+- toggle highlight of all occurrences of the selected text in the editor
+- highlight editor according to console settings
+
+- new Logcat is not supported https://github.com/krasa/GrepConsole/issues/267[#267]
+- JS/NPM/GoLand/... Terminals are not supported -  https://youtrack.jetbrains.com/issue/IDEA-216442[IDEA-216442]
+
+---
+
+image::screenshotColors.png[]
+image::screenshotGrepSubConsole.png[]
+
+---
+
+=== Extensions
+
+- using https://plugins.jetbrains.com/plugin/7282-liveplugin[LivePlugin]: (https://github.com/krasa/GrepConsole/blob/master/extension.avi?raw=true[avi])
+
+image::extension.gif[]
+
+- plugin example: https://github.com/krasa/GrepConsole-Extension-Example
+
+---
+
+== Development notes
+
+- configure `Build and run using` for faster Hot Swap:
+
+image::gradleSetup.png[]
+
+
+Inspired by http://marian.schedenig.name/projects/grep-console/[Grep Console plugin for Eclipse].
+Used http://plugins.jetbrains.com/plugin/6027?pr=idea[Remote call plugin] implementation for http integration.
+
+---
+
+image::https://www.yourkit.com/images/yklogo.png[]
+
+YourKit supports open source projects with its full-featured Java Profiler.
+YourKit, LLC is the creator of https://www.yourkit.com/java/profiler/[YourKit Java Profiler]
+and https://www.yourkit.com/.net/profiler/[YourKit .NET Profiler],
+innovative and intelligent tools for profiling Java and .NET applications.

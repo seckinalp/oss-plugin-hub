@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.maruohon/malilib",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/04b8753e-ffbb-4453-be91-156a08e02cb0",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:05Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.maruohon/malilib",
+      "SPDXID": "SPDXRef-github-maruohon-malilib-ornithe1.12.2-1417b8",
+      "versionInfo": "ornithe/1.12.2",
+      "downloadLocation": "git+https://github.com/maruohon/malilib",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/maruohon/malilib@ornithe%2F1.12.2"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-maruohon-malilib-ornithe1.12.2-1417b8",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

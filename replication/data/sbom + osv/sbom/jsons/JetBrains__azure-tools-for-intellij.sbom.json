@@ -1,0 +1,3756 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.JetBrains/azure-tools-for-intellij",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/02916d7d-d662-4153-ba06-3bca632f8a32",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:25Z"
+  },
+  "packages": [
+    {
+      "name": "org.apache.commons:commons-text",
+      "SPDXID": "SPDXRef-maven-org.apache.commons-commons-text-1.10.0-75c946",
+      "versionInfo": "1.10.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2014-2022 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.commons/commons-text@1.10.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-containerapps-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerapps-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-containerapps-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-cognitiveservices-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-cognitiveservices-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-cognitiveservices-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.squareup.okhttp3:okhttp",
+      "SPDXID": "SPDXRef-maven-com.squareup.okhttp3-okhttp-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.squareup.okhttp3/okhttp"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-cosmos-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-cosmos-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-cosmos-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-redis-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-redis-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-redis-lib"
+        }
+      ]
+    },
+    {
+      "name": "actions/stale",
+      "SPDXID": "SPDXRef-githubactions-actions-stale-9..-75c946",
+      "versionInfo": "9.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/stale@9.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "org.bouncycastle:bcpkix-jdk15on",
+      "SPDXID": "SPDXRef-maven-org.bouncycastle-bcpkix-jdk15on-1.60-75c946",
+      "versionInfo": "1.60",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) 2008 VeriSign, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.bouncycastle/bcpkix-jdk15on@1.60"
+        }
+      ]
+    },
+    {
+      "name": "com.spotify:docker-client",
+      "SPDXID": "SPDXRef-maven-com.spotify-docker-client-8.16.0-75c946",
+      "versionInfo": "8.16.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.spotify/docker-client@8.16.0"
+        }
+      ]
+    },
+    {
+      "name": "org.jsoup:jsoup",
+      "SPDXID": "SPDXRef-maven-org.jsoup-jsoup-1.15.3-75c946",
+      "versionInfo": "1.15.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2009-2022 Jonathan Hedley <https://jsoup.org/>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jsoup/jsoup@1.15.3"
+        }
+      ]
+    },
+    {
+      "name": "org.xerial.snappy:snappy-java",
+      "SPDXID": "SPDXRef-maven-org.xerial.snappy-snappy-java-1.1.10.4-75c946",
+      "versionInfo": "1.1.10.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.xerial.snappy/snappy-java@1.1.10.4"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-source-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-source-plugin-2.2.1-75c946",
+      "versionInfo": "2.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2002-2012 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-source-plugin@2.2.1"
+        }
+      ]
+    },
+    {
+      "name": "org.jmockit:jmockit",
+      "SPDXID": "SPDXRef-maven-org.jmockit-jmockit-1.34-75c946",
+      "versionInfo": "1.34",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jmockit/jmockit@1.34"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azuretools-core",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azuretools-core-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azuretools-core@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.tomakehurst:wiremock",
+      "SPDXID": "SPDXRef-maven-com.github.tomakehurst-wiremock-2.27.2-75c946",
+      "versionInfo": "2.27.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "(c) 2017 Joachim Wester, (c) 2019 Denis Pushkarev, (c) JS Foundation and other contributors, (c) Sindre Sorhus, Copyright (c) 2012-2013 TJ Holowaychuk, Copyright (c) 2012-2014 Roman Shtylman, Copyright (c) 2013-2018 Viacheslav Lotsmanov, Copyright (c) 2013-present, Facebook, Inc., Copyright (c) 2014-2015, Jon Schlinkert., Copyright (c) 2014-present, Facebook, Inc., Copyright (c) 2015 Andreas Lubbe, Copyright (c) 2015 Douglas Christopher Wilson, Copyright (c) 2015 Tiancheng Timothy Gu, Copyright (c) 2015-present, Facebook, Inc., Copyright (c) 2016 Gregory Jacobs <greg@greg-jacobs.com>, Copyright (c) 2016-present, Facebook, Inc., Copyright (c) 2017 Jed Watson., copyright (c) 2019 Denis Pushkarev, Copyright (c) Facebook, Inc. and its affiliates., Copyright 2015-2018 Gabor Lenard, Copyright 2015, Yahoo! Inc., copyright 2016, Copyright Angel Marin, Paul Johnston 2000 - 2009. Other contributors Greg Holt, Andrew Kepert, Ydnar, Lostinet, Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors, Copyright Joyent, Inc. and other Node contributors., Copyright jQuery Foundation and other contributors <https://jquery.org/>, Copyright Paul Johnston 2000 - 2002. Other contributors Greg Holt, Andrew Kepert, Ydnar, Lostinet",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.github.tomakehurst/wiremock@2.27.2"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-servlets",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-servlets-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-servlets@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-test",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-test-1.9.10-75c946",
+      "versionInfo": "1.9.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-test@1.9.10"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty.websocket:websocket-client",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty.websocket-websocket-client-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty.websocket/websocket-client@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azure-explorer-common",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azure-explorer-common-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azure-explorer-common@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azure-toolkit-ide-cosmos-spark-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-cosmos-spark-lib-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azure-toolkit-ide-cosmos-spark-lib@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azure-toolkit-ide-sqlserver-spark-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-sqlserver-spark-lib-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azure-toolkit-ide-sqlserver-spark-lib@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-stdlib-1.9.10-75c946",
+      "versionInfo": "1.9.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@1.9.10"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-libs",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-libs-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-libs@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "org.aspectj:aspectjrt",
+      "SPDXID": "SPDXRef-maven-org.aspectj-aspectjrt-1.9.20.1-75c946",
+      "versionInfo": "1.9.20.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "EPL-2.0",
+      "copyrightText": "(c) Copyright 1999-2001 Xerox Corporation, 2002 Palo A lto Research Center, Incorporated, Copyright (c) 2000-2005 INRIA, France Telecom",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.aspectj/aspectjrt@1.9.20.1"
+        }
+      ]
+    },
+    {
+      "name": "org.codehaus.mojo:aspectj-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.codehaus.mojo-aspectj-maven-plugin-1.14.0-75c946",
+      "versionInfo": "1.14.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND MIT",
+      "copyrightText": "Copyright 2005-2006 The Codehaus.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.codehaus.mojo/aspectj-maven-plugin@1.14.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.avro:avro",
+      "SPDXID": "SPDXRef-maven-org.apache.avro-avro-1.11.3-75c946",
+      "versionInfo": "1.11.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2009-2023 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.avro/avro@1.11.3"
+        }
+      ]
+    },
+    {
+      "name": "xml-apis:xml-apis",
+      "SPDXID": "SPDXRef-maven-xml-apis-xml-apis-2.0.2-75c946",
+      "versionInfo": "2.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 1994-2001 World Wide Web Consortium, http://www.w3.org/'> World Wide Web Consortium, Copyright (c) 2001-2002 The Apache Software Foundation, Copyright (c) World Wide Web Consortium, (Massachusetts Institute of Technology, Institut National de Recherche en Informatique et en Automatique, Keio University), Copyright (c) World Wide Web Consortium, Massachusetts Institute of Technology, Institut National de Recherche en Informatique",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/xml-apis/xml-apis@2.0.2"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-server",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-server-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-server@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "io.cucumber:cucumber-java",
+      "SPDXID": "SPDXRef-maven-io.cucumber-cucumber-java-7.9.0-75c946",
+      "versionInfo": "7.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/io.cucumber/cucumber-java@7.9.0"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-proxy",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-proxy-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-proxy@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "io.cucumber:cucumber-junit",
+      "SPDXID": "SPDXRef-maven-io.cucumber-cucumber-junit-7.9.0-75c946",
+      "versionInfo": "7.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/io.cucumber/cucumber-junit@7.9.0"
+        }
+      ]
+    },
+    {
+      "name": "org.assertj:assertj-core",
+      "SPDXID": "SPDXRef-maven-org.assertj-assertj-core-3.19.0-75c946",
+      "versionInfo": "3.19.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.assertj/assertj-core@3.19.0"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-servlet",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-servlet-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-servlet@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-util",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-util-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-util@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-common-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-common-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-common-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:hdinsight-node-common",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-hdinsight-node-common-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/hdinsight-node-common@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "com.jcraft:jsch",
+      "SPDXID": "SPDXRef-maven-com.jcraft-jsch-0.1.55-75c946",
+      "versionInfo": "0.1.55",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.jcraft/jsch@0.1.55"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.hadoop:hadoop-common",
+      "SPDXID": "SPDXRef-maven-org.apache.hadoop-hadoop-common-3.3.3-75c946",
+      "versionInfo": "3.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2006",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.hadoop/hadoop-common@3.3.3"
+        }
+      ]
+    },
+    {
+      "name": "org.htmlunit:htmlunit",
+      "SPDXID": "SPDXRef-maven-org.htmlunit-htmlunit-3.9.0-75c946",
+      "versionInfo": "3.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "(c) 2002-2023 Gargoyle Software Inc., Copyright (c) 2014-2016 GitHub, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.htmlunit/htmlunit@3.9.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azure-toolkit-ide-hdinsight-spark-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-hdinsight-spark-lib-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azure-toolkit-ide-hdinsight-spark-lib@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azure-toolkit-ide-synapse-spark-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-synapse-spark-lib-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azure-toolkit-ide-synapse-spark-lib@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "org.projectlombok:lombok",
+      "SPDXID": "SPDXRef-maven-org.projectlombok-lombok-1.18.36-75c946",
+      "versionInfo": "1.18.36",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT AND BSD-3-Clause",
+      "copyrightText": "(c) 2009-2021 The Project Lombok Authors, Copyright (c) 2000-2011 INRIA, France Telecom, Copyright (c) 2009-2021 The Project Lombok Authors, Copyright (c) 2010 Reinier Zwitserloot",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.projectlombok/lombok@1.18.36"
+        }
+      ]
+    },
+    {
+      "name": "com.fasterxml.woodstox:woodstox-core",
+      "SPDXID": "SPDXRef-maven-com.fasterxml.woodstox-woodstox-core-6.4.0-75c946",
+      "versionInfo": "6.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright (c) 2001-2013 Oracle and/or its affiliates, Copyright (c) 2013 Oracle and/or its affiliates",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.fasterxml.woodstox/woodstox-core@6.4.0"
+        }
+      ]
+    },
+    {
+      "name": "commons-logging:commons-logging",
+      "SPDXID": "SPDXRef-maven-commons-logging-commons-logging-1.2-75c946",
+      "versionInfo": "1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2003-2014 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/commons-logging/commons-logging@1.2"
+        }
+      ]
+    },
+    {
+      "name": "com.google.code.gson:gson",
+      "SPDXID": "SPDXRef-maven-com.google.code.gson-gson-2.9.0-75c946",
+      "versionInfo": "2.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.code.gson/gson@2.9.0"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-io",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-io-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-io@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-webapp",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-webapp-9.4.53.v20231009-75c946",
+      "versionInfo": "9.4.53.v20231009",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008-2022 Mort Bay Consulting Pty Ltd, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-webapp@9.4.53.v20231009"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-containerregistry-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-containerregistry-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-containerregistry-lib"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.tycho:tycho-p2-director-plugin",
+      "SPDXID": "SPDXRef-maven-org.eclipse.tycho-tycho-p2-director-plugin-2.5.0-75c946",
+      "versionInfo": "2.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "EPL-1.0",
+      "copyrightText": "Copyright (c) 2010, 2012 SAP SE and others",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.tycho/tycho-p2-director-plugin@2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "com.google.code.gson:gson",
+      "SPDXID": "SPDXRef-maven-com.google.code.gson-gson-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.google.code.gson/gson"
+        }
+      ]
+    },
+    {
+      "name": "com.azure.resourcemanager:azure-resourcemanager-hdinsight",
+      "SPDXID": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-hdinsight-1.0.0-75c946",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.azure.resourcemanager/azure-resourcemanager-hdinsight@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-keyvault-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-keyvault-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-keyvault-lib"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/download-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/download-artifact@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/setup-gradle",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-setup-gradle-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/setup-gradle@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "jlumbroso/free-disk-space",
+      "SPDXID": "SPDXRef-githubactions-jlumbroso-free-disk-space-1.3.1-75c946",
+      "versionInfo": "1.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/jlumbroso/free-disk-space@1.3.1"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-dotnet",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-dotnet-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-dotnet@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/cache",
+      "SPDXID": "SPDXRef-githubactions-actions-cache-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/cache@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "org.codehaus.mojo:findbugs-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.codehaus.mojo-findbugs-maven-plugin-3.0.1-75c946",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.codehaus.mojo/findbugs-maven-plugin@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.tycho:tycho-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.eclipse.tycho-tycho-maven-plugin-2.5.0-75c946",
+      "versionInfo": "2.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "copyrightText": "Copyright (c) 2008, 2011 Sonatype Inc. and others.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.tycho/tycho-maven-plugin@2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.tycho:target-platform-configuration",
+      "SPDXID": "SPDXRef-maven-org.eclipse.tycho-target-platform-configuration-2.5.0-75c946",
+      "versionInfo": "2.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.tycho/target-platform-configuration@2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.tycho:tycho-compiler-plugin",
+      "SPDXID": "SPDXRef-maven-org.eclipse.tycho-tycho-compiler-plugin-2.5.0-75c946",
+      "versionInfo": "2.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.tycho/tycho-compiler-plugin@2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "\n              com.puppycrawl.tools:checkstyle",
+      "SPDXID": "SPDXRef-maven-com.puppycrawl.tools-checkstyle-8.30-75c946",
+      "versionInfo": "8.30",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20com.puppycrawl.tools/checkstyle@8.30"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.m2e:lifecycle-mapping",
+      "SPDXID": "SPDXRef-maven-org.eclipse.m2e-lifecycle-mapping-1.0.0-75c946",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.m2e/lifecycle-mapping@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-checkstyle-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-checkstyle-plugin-3.1.0-75c946",
+      "versionInfo": "3.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-checkstyle-plugin@3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-appservice-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-appservice-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-appservice-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-springcloud-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-springcloud-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-springcloud-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-servicelinker-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-servicelinker-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-servicelinker-lib"
+        }
+      ]
+    },
+    {
+      "name": "NCrontab.Signed",
+      "SPDXID": "SPDXRef-nuget-NCrontab.Signed-3.3.3-75c946",
+      "versionInfo": "3.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-1.1 AND Apache-2.0",
+      "copyrightText": "(c) Microsoft 2023, Copyright (c) 2001 The OpenSymphony Group, Copyright (c) 2008 Atif Aziz, Copyright 2008, Atif Aziz, Portions Copyright (c) 2001 The OpenSymphony Group, Portions Copyright 2001 The OpenSymphony Group",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/NCrontab.Signed@3.3.3"
+        }
+      ]
+    },
+    {
+      "name": "CronExpressionDescriptor",
+      "SPDXID": "SPDXRef-nuget-CronExpressionDescriptor-2.41.0-75c946",
+      "versionInfo": "2.41.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/CronExpressionDescriptor@2.41.0"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-stdlib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib"
+        }
+      ]
+    },
+    {
+      "name": "net.minidev:json-smart",
+      "SPDXID": "SPDXRef-maven-net.minidev-json-smart-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/net.minidev/json-smart"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-server",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-server-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-server"
+        }
+      ]
+    },
+    {
+      "name": "org.assertj:assertj-core",
+      "SPDXID": "SPDXRef-maven-org.assertj-assertj-core-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.assertj/assertj-core"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-webapp",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-webapp-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-webapp"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.zookeeper:zookeeper",
+      "SPDXID": "SPDXRef-maven-org.apache.zookeeper-zookeeper-3.7.2-75c946",
+      "versionInfo": "3.7.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.zookeeper/zookeeper@3.7.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-client-runtime",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-client-runtime-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-client-runtime"
+        }
+      ]
+    },
+    {
+      "name": "org.htmlunit:htmlunit",
+      "SPDXID": "SPDXRef-maven-org.htmlunit-htmlunit-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.htmlunit/htmlunit"
+        }
+      ]
+    },
+    {
+      "name": "org.xerial.snappy:snappy-java",
+      "SPDXID": "SPDXRef-maven-org.xerial.snappy-snappy-java-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.xerial.snappy/snappy-java"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azuretools:spark-localrun-mock",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azuretools-spark-localrun-mock-0.1.1-75c946",
+      "versionInfo": "0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azuretools/spark-localrun-mock@0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.spark:spark-streaming_2.12",
+      "SPDXID": "SPDXRef-maven-org.apache.spark-spark-streaming2.12-3.4.0-75c946",
+      "versionInfo": "3.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2023 Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.spark/spark-streaming_2.12@3.4.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.spark:spark-mllib_2.12",
+      "SPDXID": "SPDXRef-maven-org.apache.spark-spark-mllib2.12-3.4.0-75c946",
+      "versionInfo": "3.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2023 Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.spark/spark-mllib_2.12@3.4.0"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-maven-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-maven-plugin"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-servlet",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-servlet-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-servlet"
+        }
+      ]
+    },
+    {
+      "name": "org.jetbrains.kotlin:kotlin-test",
+      "SPDXID": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-test-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jetbrains.kotlin/kotlin-test"
+        }
+      ]
+    },
+    {
+      "name": "commons-logging:commons-logging",
+      "SPDXID": "SPDXRef-maven-commons-logging-commons-logging-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/commons-logging/commons-logging"
+        }
+      ]
+    },
+    {
+      "name": "io.cucumber:cucumber-junit",
+      "SPDXID": "SPDXRef-maven-io.cucumber-cucumber-junit-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/io.cucumber/cucumber-junit"
+        }
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.dataformat:jackson-dataformat-xml",
+      "SPDXID": "SPDXRef-maven-com.fasterxml.jackson.dataformat-jackson-dataformat-xml-2.15.2-75c946",
+      "versionInfo": "2.15.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2007-, Tatu Saloranta (tatu.saloranta@iki.fi)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-xml@2.15.2"
+        }
+      ]
+    },
+    {
+      "name": "org.jmockit:jmockit",
+      "SPDXID": "SPDXRef-maven-org.jmockit-jmockit-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jmockit/jmockit"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-io",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-io-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-io"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.spark:spark-sql_2.12",
+      "SPDXID": "SPDXRef-maven-org.apache.spark-spark-sql2.12-3.4.0-75c946",
+      "versionInfo": "3.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2023 Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.spark/spark-sql_2.12@3.4.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-data-lake-store-sdk",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-data-lake-store-sdk-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-data-lake-store-sdk"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azure-explorer-common",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azure-explorer-common-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azure-explorer-common"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-servlets",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-servlets-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-servlets"
+        }
+      ]
+    },
+    {
+      "name": "xml-apis:xml-apis",
+      "SPDXID": "SPDXRef-maven-xml-apis-xml-apis-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/xml-apis/xml-apis"
+        }
+      ]
+    },
+    {
+      "name": "org.eclipse.jetty:jetty-proxy",
+      "SPDXID": "SPDXRef-maven-org.eclipse.jetty-jetty-proxy-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.eclipse.jetty/jetty-proxy"
+        }
+      ]
+    },
+    {
+      "name": "com.github.tomakehurst:wiremock",
+      "SPDXID": "SPDXRef-maven-com.github.tomakehurst-wiremock-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.github.tomakehurst/wiremock"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.spark:spark-core_2.12",
+      "SPDXID": "SPDXRef-maven-org.apache.spark-spark-core2.12-3.4.0-75c946",
+      "versionInfo": "3.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "(c) 2008-2021 SpryMedia Ltd - datatables.net/license, (c) 2011-2017 SpryMedia Ltd - datatables.net/license, (c) JS Foundation and other contributors, Copyright (c) 2005 - 2010, James Auldridge, Copyright (c) 2011-2017 Almende B.V, http://almende.com, Copyright (c) 2012-2013 Chris Pettitt, Copyright (c) 2014 M. Alsup, Copyright (c) 2016 Federico Zivolo and contributors, Copyright (c) 2016 Jorik Tangelder, Copyright 1995-2018 Mort Bay Consulting Pty Ltd., Copyright 1996 Aki Yoshida, Copyright 2006, Dean Edwards, Copyright 2008 Google Inc., Copyright 2008-2021 SpryMedia Ltd., Copyright 2011-2019 The Bootstrap Authors, Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors), Copyright 2011-2019 Twitter, Inc., copyright 2014 Waybury. https://useiconic.com/open, Copyright 2023 Apache Software Foundation, copyright Alexey Shildyakov, Copyright Mort Bay Consulting Pty Ltd",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.spark/spark-core_2.12@3.4.0"
+        }
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "SPDXID": "SPDXRef-maven-com.fasterxml.jackson.core-jackson-databind-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.fasterxml.jackson.core/jackson-databind"
+        }
+      ]
+    },
+    {
+      "name": "org.jsoup:jsoup",
+      "SPDXID": "SPDXRef-maven-org.jsoup-jsoup-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.jsoup/jsoup"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.hadoop:hadoop-common",
+      "SPDXID": "SPDXRef-maven-org.apache.hadoop-hadoop-common-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.hadoop/hadoop-common"
+        }
+      ]
+    },
+    {
+      "name": "io.cucumber:cucumber-java",
+      "SPDXID": "SPDXRef-maven-io.cucumber-cucumber-java-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/io.cucumber/cucumber-java"
+        }
+      ]
+    },
+    {
+      "name": "com.fasterxml.jackson.module:jackson-module-scala_2.11",
+      "SPDXID": "SPDXRef-maven-com.fasterxml.jackson.module-jackson-module-scala2.11-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.fasterxml.jackson.module/jackson-module-scala_2.11"
+        }
+      ]
+    },
+    {
+      "name": "org.slf4j:slf4j-api",
+      "SPDXID": "SPDXRef-maven-org.slf4j-slf4j-api-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.slf4j/slf4j-api"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.commons:commons-lang3",
+      "SPDXID": "SPDXRef-maven-org.apache.commons-commons-lang3-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.commons/commons-lang3"
+        }
+      ]
+    },
+    {
+      "name": "net.alchim31.maven:scala-maven-plugin",
+      "SPDXID": "SPDXRef-maven-net.alchim31.maven-scala-maven-plugin-4.8.1-75c946",
+      "versionInfo": "4.8.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/net.alchim31.maven/scala-maven-plugin@4.8.1"
+        }
+      ]
+    },
+    {
+      "name": "org.codehaus.groovy:groovy-templates",
+      "SPDXID": "SPDXRef-maven-org.codehaus.groovy-groovy-templates-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.codehaus.groovy/groovy-templates"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-compiler-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-3.13.0-75c946",
+      "versionInfo": "3.13.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2001-2024 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-compiler-plugin@3.13.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-dependency-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-dependency-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-dependency-plugin"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.sqlserver:mssql-jdbc",
+      "SPDXID": "SPDXRef-maven-com.microsoft.sqlserver-mssql-jdbc-9.4.0.jre8-75c946",
+      "versionInfo": "9.4.0.jre8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) 2008 VeriSign, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.sqlserver/mssql-jdbc@9.4.0.jre8"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-compiler-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-compiler-plugin"
+        }
+      ]
+    },
+    {
+      "name": "org.codehaus.mojo:exec-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.codehaus.mojo-exec-maven-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.codehaus.mojo/exec-maven-plugin"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-compiler-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-3.5.1-75c946",
+      "versionInfo": "3.5.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-compiler-plugin@3.5.1"
+        }
+      ]
+    },
+    {
+      "name": "org.codehaus.mojo:exec-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.codehaus.mojo-exec-maven-plugin-3.0.0-75c946",
+      "versionInfo": "3.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.codehaus.mojo/exec-maven-plugin@3.0.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-jar-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-jar-plugin-3.1.0-75c946",
+      "versionInfo": "3.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-jar-plugin@3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-resources-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-resources-plugin-3.0.2-75c946",
+      "versionInfo": "3.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-resources-plugin@3.0.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-applicationinsights-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-applicationinsights-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-applicationinsights-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-containerservice-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerservice-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-containerservice-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-cosmos-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-cosmos-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-cosmos-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-eventhubs-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-eventhubs-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-eventhubs-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.squareup.okhttp3:okhttp",
+      "SPDXID": "SPDXRef-maven-com.squareup.okhttp3-okhttp-4.12.0-75c946",
+      "versionInfo": "4.12.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.squareup.okhttp3/okhttp@4.12.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-containerregistry-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerregistry-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-containerregistry-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-applicationinsights-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-applicationinsights-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-applicationinsights-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-database-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-database-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-database-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-redis-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-redis-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-redis-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-vm-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-vm-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-vm-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-cognitiveservices-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-cognitiveservices-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-cognitiveservices-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-containerapps-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerapps-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-containerapps-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-servicebus-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-servicebus-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-servicebus-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-keyvault-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-keyvault-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-keyvault-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-checkstyle-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-checkstyle-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-checkstyle-plugin"
+        }
+      ]
+    },
+    {
+      "name": "com.squareup.okio:okio",
+      "SPDXID": "SPDXRef-maven-com.squareup.okio-okio-3.6.0-75c946",
+      "versionInfo": "3.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.squareup.okio/okio@3.6.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-common-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-common-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-common-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-arm-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-arm-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-arm-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-storage-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-storage-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-storage-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "io.kubernetes:client-java",
+      "SPDXID": "SPDXRef-maven-io.kubernetes-client-java-19.0.0-75c946",
+      "versionInfo": "19.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/io.kubernetes/client-java@19.0.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-containerservice-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-containerservice-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-containerservice-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-eventhubs-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-eventhubs-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-eventhubs-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-servicebus-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-servicebus-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-servicebus-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-springcloud-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-springcloud-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-springcloud-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azuretools:azuretools-core",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azuretools-azuretools-core-3.95.0-75c946",
+      "versionInfo": "3.95.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azuretools/azuretools-core@3.95.0"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azuretools:hdinsight-node-common",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azuretools-hdinsight-node-common-3.95.0-75c946",
+      "versionInfo": "3.95.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azuretools/hdinsight-node-common@3.95.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.commons:commons-compress",
+      "SPDXID": "SPDXRef-maven-org.apache.commons-commons-compress-1.26.0-75c946",
+      "versionInfo": "1.26.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2002-2024 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.commons/commons-compress@1.26.0"
+        }
+      ]
+    },
+    {
+      "name": "org.glassfish.jaxb:jaxb-runtime",
+      "SPDXID": "SPDXRef-maven-org.glassfish.jaxb-jaxb-runtime-2.3.2-75c946",
+      "versionInfo": "2.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 1997, 2018 Oracle and/or its affiliates, Copyright (c) 2013, 2018 Oracle and/or its affiliates, Copyright (c) 2014, 2018 Oracle and/or its affiliates, Copyright (c) 2018 Oracle and/or its affiliates",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@2.3.2"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-shade-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-shade-plugin-2.3-75c946",
+      "versionInfo": "2.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-shade-plugin@2.3"
+        }
+      ]
+    },
+    {
+      "name": "org.commonjava.maven.plugins:directory-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.commonjava.maven.plugins-directory-maven-plugin-0.3.1-75c946",
+      "versionInfo": "0.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2011 Red Hat, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.commonjava.maven.plugins/directory-maven-plugin@0.3.1"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-storage-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-storage-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-storage-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azuretools:azure-explorer-common",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azuretools-azure-explorer-common-3.95.0-75c946",
+      "versionInfo": "3.95.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azuretools/azure-explorer-common@3.95.0"
+        }
+      ]
+    },
+    {
+      "name": "net.java.dev.jna:jna",
+      "SPDXID": "SPDXRef-maven-net.java.dev.jna-jna-5.13.0-75c946",
+      "versionInfo": "5.13.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 OR LGPL-2.1-or-later",
+      "copyrightText": "Copyright (c) 1991, 1999 Free Software Foundation, Inc., Copyright 2008-2018 Timothy Wall, copyrighted by the Free Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/net.java.dev.jna/jna@5.13.0"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.maven.plugins:maven-dependency-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-dependency-plugin-2.1-75c946",
+      "versionInfo": "2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2001-2006 The Apache Software Foundation., Copyright 2002-2009 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-dependency-plugin@2.1"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.felix:maven-bundle-plugin",
+      "SPDXID": "SPDXRef-maven-org.apache.felix-maven-bundle-plugin-5.1.7-75c946",
+      "versionInfo": "5.1.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2006-2022 The Apache Software Foundation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.felix/maven-bundle-plugin@5.1.7"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-common-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-common-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-common-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-appservice-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-appservice-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-appservice-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-arm-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-arm-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-arm-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-libs",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-libs-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-libs@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "jakarta.xml.bind:jakarta.xml.bind-api",
+      "SPDXID": "SPDXRef-maven-jakarta.xml.bind-jakarta.xml.bind-api-2.3.2-75c946",
+      "versionInfo": "2.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2003, 2018 Oracle and/or its affiliates, Copyright (c) 2003, 2018 Oracle and/or its affiliates. All rights reserved., Copyright (c) 2003, 2021 Oracle and/or its affiliates. All rights reserved., Copyright (c) 2003, 2024 Oracle and/or its affiliates. All rights reserved., Copyright (c) 2009, 2021 Oracle and/or its affiliates. All rights reserved., Copyright (c) 2017, 2018 Oracle and/or its affiliates, Copyright (c) 2018 Oracle and/or its affiliates, Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved., Copyright (c) 2020, 2021 Oracle and/or its affiliates. All rights reserved., Copyright © 2019, ${current.year} Eclipse Foundation. All rights reserved.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@2.3.2"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-redis-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-redis-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-redis-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-springcloud-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-springcloud-lib-0.52.2-75c946",
+      "versionInfo": "0.52.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-springcloud-lib@0.52.2"
+        }
+      ]
+    },
+    {
+      "name": "org.codehaus.mojo:cobertura-maven-plugin",
+      "SPDXID": "SPDXRef-maven-org.codehaus.mojo-cobertura-maven-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.codehaus.mojo/cobertura-maven-plugin"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:applicationinsights-core",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-applicationinsights-core-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/applicationinsights-core"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-storage-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-storage-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-storage-lib"
+        }
+      ]
+    },
+    {
+      "name": "org.mockito:mockito-core",
+      "SPDXID": "SPDXRef-maven-org.mockito-mockito-core-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.mockito/mockito-core"
+        }
+      ]
+    },
+    {
+      "name": "org.projectlombok:lombok",
+      "SPDXID": "SPDXRef-maven-org.projectlombok-lombok-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.projectlombok/lombok"
+        }
+      ]
+    },
+    {
+      "name": "junit:junit",
+      "SPDXID": "SPDXRef-maven-junit-junit-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/junit/junit"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.httpcomponents:httpclient",
+      "SPDXID": "SPDXRef-maven-org.apache.httpcomponents-httpclient-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.httpcomponents/httpclient"
+        }
+      ]
+    },
+    {
+      "name": "com.jcraft:jsch",
+      "SPDXID": "SPDXRef-maven-com.jcraft-jsch-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.jcraft/jsch"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-appservice-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-appservice-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-appservice-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-compute-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-compute-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-compute-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:azuretools-core",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-azuretools-core-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/azuretools-core"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-applicationinsights-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-applicationinsights-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-applicationinsights-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-containerapps-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-containerapps-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-containerapps-lib"
+        }
+      ]
+    },
+    {
+      "name": "CitizenMatt.ReSharper.LiveTemplateCompiler",
+      "SPDXID": "SPDXRef-nuget-CitizenMatt.ReSharper.LiveTemplateCompiler-3.7.0-75c946",
+      "versionInfo": "3.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "(c) 2005 - 2020 Giacomo Stelluti Scala & Contributors, Copyright (c) 2005 - 2020 Giacomo Stelluti Scala & Contributors, Copyright 2020 Matt Ellis, Copyright Matt Ellis 2025",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/CitizenMatt.ReSharper.LiveTemplateCompiler@3.7.0"
+        }
+      ]
+    },
+    {
+      "name": "commons-codec:commons-codec",
+      "SPDXID": "SPDXRef-maven-commons-codec-commons-codec-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/commons-codec/commons-codec"
+        }
+      ]
+    },
+    {
+      "name": "redis.clients:jedis",
+      "SPDXID": "SPDXRef-maven-redis.clients-jedis-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/redis.clients/jedis"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:applicationinsights-web",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-applicationinsights-web-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/applicationinsights-web"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-ide-containerregistry-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerregistry-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-ide-containerregistry-lib"
+        }
+      ]
+    },
+    {
+      "name": "org.mockito:mockito-inline",
+      "SPDXID": "SPDXRef-maven-org.mockito-mockito-inline-3.10.0-75c946",
+      "versionInfo": "3.10.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2007 Mockito",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.mockito/mockito-inline@3.10.0"
+        }
+      ]
+    },
+    {
+      "name": "io.reactivex:rxjava",
+      "SPDXID": "SPDXRef-maven-io.reactivex-rxjava-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/io.reactivex/rxjava"
+        }
+      ]
+    },
+    {
+      "name": "commons-net:commons-net",
+      "SPDXID": "SPDXRef-maven-commons-net-commons-net-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/commons-net/commons-net"
+        }
+      ]
+    },
+    {
+      "name": "org.apache.commons:commons-exec",
+      "SPDXID": "SPDXRef-maven-org.apache.commons-commons-exec-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.commons/commons-exec"
+        }
+      ]
+    },
+    {
+      "name": "com.azure:azure-core-management",
+      "SPDXID": "SPDXRef-maven-com.azure-azure-core-management-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.azure/azure-core-management"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.rest:client-runtime",
+      "SPDXID": "SPDXRef-maven-com.microsoft.rest-client-runtime-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.rest/client-runtime"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-auth-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-auth-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-auth-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.azure.resourcemanager:azure-resourcemanager-redis",
+      "SPDXID": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-redis-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.azure.resourcemanager/azure-resourcemanager-redis"
+        }
+      ]
+    },
+    {
+      "name": "commons-io:commons-io",
+      "SPDXID": "SPDXRef-maven-commons-io-commons-io-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/commons-io/commons-io"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.hdinsight:hdinsight-node-common",
+      "SPDXID": "SPDXRef-maven-com.microsoft.hdinsight-hdinsight-node-common-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.hdinsight/hdinsight-node-common"
+        }
+      ]
+    },
+    {
+      "name": "com.azure.resourcemanager:azure-resourcemanager-cosmos",
+      "SPDXID": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-cosmos-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.azure.resourcemanager/azure-resourcemanager-cosmos"
+        }
+      ]
+    },
+    {
+      "name": "com.azure.resourcemanager:azure-resourcemanager-synapse",
+      "SPDXID": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-synapse-1.0.0-beta.7-75c946",
+      "versionInfo": "1.0.0-beta.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) 2008 VeriSign, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.azure.resourcemanager/azure-resourcemanager-synapse@1.0.0-beta.7"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-postgre-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-postgre-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-postgre-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-mysql-single-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-mysql-single-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-mysql-single-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-postgre-single-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-postgre-single-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-postgre-single-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-sqlserver-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-sqlserver-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-sqlserver-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.microsoft.azure:azure-toolkit-mysql-lib",
+      "SPDXID": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-mysql-lib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/com.microsoft.azure/azure-toolkit-mysql-lib"
+        }
+      ]
+    },
+    {
+      "name": "com.github.JetBrains/azure-tools-for-intellij",
+      "SPDXID": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "versionInfo": "develop",
+      "downloadLocation": "git+https://github.com/JetBrains/azure-tools-for-intellij",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/JetBrains/azure-tools-for-intellij@develop"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.fasterxml.jackson.module-jackson-module-scala2.11-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-common-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-util-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.code.gson-gson-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-redis-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-keyvault-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-servlets-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-appservice-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-applicationinsights-web-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.mockito-mockito-inline-3.10.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-postgre-single-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-synapse-spark-lib-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.zookeeper-zookeeper-3.7.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerservice-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerapps-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.squareup.okio-okio-3.6.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-storage-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-containerservice-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-mysql-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-proxy-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-dependency-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.puppycrawl.tools-checkstyle-8.30-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-stdlib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-data-lake-store-sdk-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.mockito-mockito-core-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-maven-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.fasterxml.jackson.dataformat-jackson-dataformat-xml-2.15.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-eventhubs-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-commons-codec-commons-codec-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-commons-io-commons-io-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-postgre-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-cosmos-spark-lib-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-io.cucumber-cucumber-java-7.9.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-webapp-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.htmlunit-htmlunit-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-redis-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-dependency-plugin-2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-junit-junit-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-dotnet-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-test-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-resources-plugin-3.0.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.glassfish.jaxb-jaxb-runtime-2.3.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-redis-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-nuget-CitizenMatt.ReSharper.LiveTemplateCompiler-3.7.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jmockit-jmockit-1.34-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.avro-avro-1.11.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-common-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-io-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-xml-apis-xml-apis-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jsoup-jsoup-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-cosmos-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.squareup.okhttp3-okhttp-4.12.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.fasterxml.woodstox-woodstox-core-6.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-webapp-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.tycho-tycho-maven-plugin-2.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-net.minidev-json-smart-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.spark-spark-core2.12-3.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-checkstyle-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-springcloud-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-net.java.dev.jna-jna-5.13.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-containerregistry-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-shade-plugin-2.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azuretools-azure-explorer-common-3.95.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-storage-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-compute-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-io.reactivex-rxjava-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-commons-net-commons-net-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-cosmos-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-sqlserver-spark-lib-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-servlet-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-nuget-NCrontab.Signed-3.3.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.spark-spark-streaming2.12-3.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-vm-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.commonjava.maven.plugins-directory-maven-plugin-0.3.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-springcloud-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.projectlombok-lombok-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-cognitiveservices-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-hdinsight-node-common-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azure-explorer-common-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-applicationinsights-core-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.github.tomakehurst-wiremock-2.27.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.codehaus.mojo-aspectj-maven-plugin-1.14.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.github.tomakehurst-wiremock-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-net.alchim31.maven-scala-maven-plugin-4.8.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-common-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.commons-commons-compress-1.26.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-appservice-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-sqlserver-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-appservice-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerregistry-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-arm-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-libs-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azuretools-core-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-hdinsight-node-common-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-servlets-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azure-explorer-common-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azure-toolkit-ide-hdinsight-spark-lib-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-io.cucumber-cucumber-junit-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.slf4j-slf4j-api-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-servicebus-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.httpcomponents-httpclient-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.azure-azure-core-management-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerapps-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-test-1.9.10-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-proxy-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-io.cucumber-cucumber-junit-7.9.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.tycho-tycho-p2-director-plugin-2.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-checkstyle-plugin-3.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-servlet-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-auth-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.jcraft-jsch-0.1.55-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.htmlunit-htmlunit-3.9.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-jlumbroso-free-disk-space-1.3.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.tycho-target-platform-configuration-2.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-cognitiveservices-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azuretools-azuretools-core-3.95.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-applicationinsights-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.commons-commons-exec-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.xerial.snappy-snappy-java-1.1.10.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty.websocket-websocket-client-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.google.code.gson-gson-2.9.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.xerial.snappy-snappy-java-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.sqlserver-mssql-jdbc-9.4.0.jre8-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.codehaus.mojo-exec-maven-plugin-3.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-applicationinsights-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-cosmos-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azuretools-spark-localrun-mock-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-commons-logging-commons-logging-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.fasterxml.jackson.core-jackson-databind-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-database-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-io.kubernetes-client-java-19.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-storage-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-mysql-single-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-redis-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jsoup-jsoup-1.15.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-libs-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-xml-apis-xml-apis-2.0.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.m2e-lifecycle-mapping-1.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jmockit-jmockit-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-io-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.codehaus.mojo-cobertura-maven-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.hadoop-hadoop-common-3.3.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-commons-logging-commons-logging-1.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-cache-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-3.5.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-servicebus-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.felix-maven-bundle-plugin-5.1.7-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.jcraft-jsch-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.assertj-assertj-core-3.19.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-servicelinker-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-jakarta.xml.bind-jakarta.xml.bind-api-2.3.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.bouncycastle-bcpkix-jdk15on-1.60-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.spark-spark-sql2.12-3.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-containerregistry-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.codehaus.groovy-groovy-templates-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.squareup.okhttp3-okhttp-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.spark-spark-mllib2.12-3.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-io.cucumber-cucumber-java-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azuretools-hdinsight-node-common-3.95.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.rest-client-runtime-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.spotify-docker-client-8.16.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-client-runtime-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.hadoop-hadoop-common-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-jar-plugin-3.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-applicationinsights-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-synapse-1.0.0-beta.7-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.jetbrains.kotlin-kotlin-stdlib-1.9.10-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.aspectj-aspectjrt-1.9.20.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.projectlombok-lombok-1.18.36-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-setup-gradle-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.tycho-tycho-compiler-plugin-2.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-source-plugin-2.2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.codehaus.mojo-exec-maven-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-arm-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-containerapps-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-redis.clients-jedis-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.commons-commons-text-1.10.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.codehaus.mojo-findbugs-maven-plugin-3.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-server-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-ide-eventhubs-lib-0.52.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-stale-9..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.hdinsight-azuretools-core-0.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.eclipse.jetty-jetty-server-9.4.53.v20231009-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-compiler-plugin-3.13.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.apache.commons-commons-lang3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.azure.resourcemanager-azure-resourcemanager-hdinsight-1.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-keyvault-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-com.microsoft.azure-azure-toolkit-springcloud-lib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-nuget-CronExpressionDescriptor-2.41.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relatedSpdxElement": "SPDXRef-maven-org.assertj-assertj-core-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-JetBrains-azure-tools-for-intellij-develop-b9877d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,654 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.935Z",
+  "source": "valendesigns__option-tree.osv.json",
+  "summary": {
+    "totalVulnerabilities": 7,
+    "uniqueVulnerabilities": 7,
+    "affectedPackages": 2,
+    "stalePackages": 7,
+    "stalePackagesOldFix": 3,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 7
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 7
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-25mq-v84q-4j7r",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-31090"
+      ],
+      "summary": "CURLOPT_HTTPAUTH option not cleared on change of origin",
+      "details": "### Impact\n\n`Authorization` headers on requests are sensitive information. When using our Curl handler, it is possible to use the `CURLOPT_HTTPAUTH` option to specify an `Authorization` header. On making a request which responds with a redirect to a URI with a different origin, if we choose to follow it, we should remove the `CURLOPT_HTTPAUTH` and `CURLOPT_USERPWD` options before continuing, stopping curl from appending the `Authorization` header to the new request. Previously, we would only consider a change in host. Now, we consider any change in host, port or scheme to be a change in origin.\n\n### Patches\n\nAffected Guzzle 7 users should upgrade to Guzzle 7.4.5 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.8 or 7.4.5. Note that a partial fix was implemented in Guzzle 7.4.2, where a change in host would trigger removal of the curl-added Authorization header, however this earlier fix did not cover change in scheme or change in port.\n\n### Workarounds\n\nIf you do not require or expect redirects to be followed, one should simply disable redirects all together. Alternatively, one can specify to use the Guzzle stream handler backend, rather than curl.\n\n### References\n\n* [RFC9110 Section 15.4](https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx)\n* [CVE-2022-27776](https://curl.se/docs/CVE-2022-27776.html)\n\n### For more information\n\nIf you have any questions or comments about this advisory, please get in touch with us in `#guzzle` on the [PHP HTTP Slack](https://php-http.slack.com/). Do not report additional security advisories in that public channel, however - please follow our [vulnerability reporting process](https://github.com/guzzle/guzzle/security/policy).\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-212",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-06-21T16:57:10Z",
+        "modifiedDate": "2024-02-16T08:21:48.242166Z",
+        "daysSincePublished": 1275
+      },
+      "affected": {
+        "package": "guzzlehttp/guzzle",
+        "version": "6.3.3",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.3.3",
+        "fixedIn": "6.5.8",
+        "recommendation": "Upgrade to 6.5.8 or later",
+        "fixAvailableSince": "2024-02-16T08:21:48.242Z",
+        "daysSinceFix": 670,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/security/advisories/GHSA-25mq-v84q-4j7r"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31090"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/commit/1dd98b0564cb3f6bd16ce683cb755f94c10fbd82"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31090.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/guzzle/guzzle"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/blob/6.5.8/CHANGELOG.md"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/blob/7.4.5/CHANGELOG.md"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202305-24"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.debian.org/security/2022/dsa-5246"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cwmx-hcrq-mhc3",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-drupal-2022-29248",
+        "CVE-2022-29248",
+        "DRUPAL-CORE-2022-010"
+      ],
+      "summary": "Cross-domain cookie leakage in Guzzle",
+      "details": "### Impact\n\nPrevious version of Guzzle contain a vulnerability with the cookie middleware. The vulnerability is that it is not checked if the cookie domain equals the domain of the server which sets the cookie via the `Set-Cookie` header, allowing a malicious server to set cookies for unrelated domains. For example an attacker at `www.example.com` might set a session cookie for `api.example.net`, logging the Guzzle client into their account and retrieving private API requests from the security log of their account.\n\nNote that our cookie middleware is disabled by default, so most library consumers will not be affected by this issue. Only those who manually add the cookie middleware to the handler stack or construct the client with `['cookies' => true]` are affected. Moreover, those who do not use the same Guzzle client to call multiple domains and have disabled redirect forwarding are not affected by this vulnerability.\n\n### Patches\n\nAffected Guzzle 7 users should upgrade to Guzzle 7.4.3 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.6 or 7.4.3.\n\n### Workarounds\n\nIf you do not need support for cookies, turn off the cookie middleware. It is already off by default, but if you have turned it on and no longer need it, turn it off.\n\n### References\n\n* [RFC6265 Section 5.3](https://datatracker.ietf.org/doc/html/rfc6265#section-5.3)\n* [RFC9110 Section 15.4](https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx)\n\n### For more information\n\nIf you have any questions or comments about this advisory, please get in touch with us in `#guzzle` on the [PHP HTTP Slack](https://php-http.slack.com/). Do not report additional security advisories in that public channel, however - please follow our [vulnerability reporting process](https://github.com/guzzle/guzzle/security/policy).\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-565",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-05-25T18:09:55Z",
+        "modifiedDate": "2025-12-10T23:41:02.272273Z",
+        "daysSincePublished": 1302
+      },
+      "affected": {
+        "package": "guzzlehttp/guzzle",
+        "version": "6.3.3",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.3.3",
+        "fixedIn": "6.5.6",
+        "recommendation": "Upgrade to 6.5.6 or later",
+        "fixAvailableSince": "2025-12-10T23:41:02.272Z",
+        "daysSinceFix": 6,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/security/advisories/GHSA-cwmx-hcrq-mhc3"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-29248"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/pull/3018"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/commit/74a8602c6faec9ef74b7a9391ac82c5e65b1cdab"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-29248.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/guzzle/guzzle"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.debian.org/security/2022/dsa-5246"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.drupal.org/sa-core-2022-010"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f2wf-25xc-69c9",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-drupal-2022-31042",
+        "BIT-drupal-2022-31043",
+        "CVE-2022-31042",
+        "CVE-2022-31043",
+        "DRUPAL-CORE-2022-011",
+        "GHSA-w248-ffj2-4v5q"
+      ],
+      "summary": "Failure to strip the Cookie header on change in host or HTTP downgrade",
+      "details": "### Impact\n\n`Cookie` headers on requests are sensitive information. On making a request using the `https` scheme to a server which responds with a redirect to a URI with the `http` scheme, or on making a request to a server which responds with a redirect to a a URI to a different host, we should not forward the `Cookie` header on. Prior to this fix, only cookies that were managed by our cookie middleware would be safely removed, and any `Cookie` header manually added to the initial request would not be stripped. We now always strip it, and allow the cookie middleware to re-add any cookies that it deems should be there.\n\n### Patches\n\nAffected Guzzle 7 users should upgrade to Guzzle 7.4.4 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.7 or 7.4.4.\n\n### Workarounds\n\nAn alternative approach would be to use your own redirect middleware, rather than ours, if you are unable to upgrade. If you do not require or expect redirects to be followed, one should simply disable redirects all together.\n\n### References\n\n* [RFC9110 Section 15.4](https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx)\n\n### For more information\n\nIf you have any questions or comments about this advisory, please get in touch with us in `#guzzle` on the [PHP HTTP Slack](https://php-http.slack.com/). Do not report additional security advisories in that public channel, however - please follow our [vulnerability reporting process](https://github.com/guzzle/guzzle/security/policy).\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-212",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-06-09T23:47:25Z",
+        "modifiedDate": "2025-12-10T23:40:57.755467Z",
+        "daysSincePublished": 1286
+      },
+      "affected": {
+        "package": "guzzlehttp/guzzle",
+        "version": "6.3.3",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.3.3",
+        "fixedIn": "6.5.7",
+        "recommendation": "Upgrade to 6.5.7 or later",
+        "fixAvailableSince": "2025-12-10T23:40:57.755Z",
+        "daysSinceFix": 6,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/security/advisories/GHSA-f2wf-25xc-69c9"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31042"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/commit/e3ff079b22820c2029d4c2a87796b6a0b8716ad8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31042.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/guzzle/guzzle"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.debian.org/security/2022/dsa-5246"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.drupal.org/sa-core-2022-011"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q559-8m2m-g699",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-31091"
+      ],
+      "summary": "Change in port should be considered a change in origin",
+      "details": "### Impact\n\n`Authorization` and `Cookie` headers on requests are sensitive information. On making a request which responds with a redirect to a URI with a different port, if we choose to follow it, we should remove the `Authorization` and `Cookie` headers from the request, before containing. Previously, we would only consider a change in host or scheme downgrade. Now, we consider any change in host, port or scheme to be a change in origin.\n\n### Patches\n\nAffected Guzzle 7 users should upgrade to Guzzle 7.4.5 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.8 or 7.4.5.\n\n### Workarounds\n\nAn alternative approach would be to use your own redirect middleware, rather than ours, if you are unable to upgrade. If you do not require or expect redirects to be followed, one should simply disable redirects all together.\n\n### References\n\n* [RFC9110 Section 15.4](https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx)\n* [CVE-2022-27776](https://curl.se/docs/CVE-2022-27776.html)\n\n### For more information\n\nIf you have any questions or comments about this advisory, please get in touch with us in `#guzzle` on the [PHP HTTP Slack](https://php-http.slack.com/). Do not report additional security advisories in that public channel, however please follow our [vulnerability reporting process](https://github.com/guzzle/guzzle/security/policy).\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-06-21T20:07:16Z",
+        "modifiedDate": "2023-11-08T04:09:25.594961Z",
+        "daysSincePublished": 1275
+      },
+      "affected": {
+        "package": "guzzlehttp/guzzle",
+        "version": "6.3.3",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.3.3",
+        "fixedIn": "6.5.8",
+        "recommendation": "Upgrade to 6.5.8 or later",
+        "fixAvailableSince": "2023-11-08T04:09:25.594Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/security/advisories/GHSA-q559-8m2m-g699"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31091"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/commit/1dd98b0564cb3f6bd16ce683cb755f94c10fbd82"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31091.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/guzzle/guzzle"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202305-24"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.debian.org/security/2022/dsa-5246"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w248-ffj2-4v5q",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-drupal-2022-31042",
+        "BIT-drupal-2022-31043",
+        "CVE-2022-31042",
+        "CVE-2022-31043",
+        "DRUPAL-CORE-2022-011",
+        "GHSA-f2wf-25xc-69c9"
+      ],
+      "summary": "Fix failure to strip Authorization header on HTTP downgrade",
+      "details": "### Impact\n\n`Authorization` headers on requests are sensitive information. On making a request using the `https` scheme to a server which responds with a redirect to a URI with the `http` scheme, we should not forward the `Authorization` header on. This is much the same as to how we don't forward on the header if the host changes. Prior to this fix, `https` to `http` downgrades did not result in the `Authorization` header being removed, only changes to the host.\n\n### Patches\n\nAffected Guzzle 7 users should upgrade to Guzzle 7.4.4 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.7 or 7.4.4.\n\n### Workarounds\n\nAn alternative approach would be to use your own redirect middleware, rather than ours, if you are unable to upgrade. If you do not require or expect redirects to be followed, one should simply disable redirects all together.\n\n### References\n\n* [RFC9110 Section 15.4](https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx)\n\n### For more information\n\nIf you have any questions or comments about this advisory, please get in touch with us in `#guzzle` on the [PHP HTTP Slack](https://php-http.slack.com/). Do not report additional security advisories in that public channel, however - please follow our [vulnerability reporting process](https://github.com/guzzle/guzzle/security/policy).\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-212",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-863",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-06-09T23:47:23Z",
+        "modifiedDate": "2025-12-10T23:40:57.755467Z",
+        "daysSincePublished": 1286
+      },
+      "affected": {
+        "package": "guzzlehttp/guzzle",
+        "version": "6.3.3",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.3.3",
+        "fixedIn": "6.5.7",
+        "recommendation": "Upgrade to 6.5.7 or later",
+        "fixAvailableSince": "2025-12-10T23:40:57.755Z",
+        "daysSinceFix": 6,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/security/advisories/GHSA-w248-ffj2-4v5q"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31043"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/guzzle/commit/e3ff079b22820c2029d4c2a87796b6a0b8716ad8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/guzzle/CVE-2022-31043.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/guzzle/guzzle"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.debian.org/security/2022/dsa-5246"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.drupal.org/sa-core-2022-011"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html#name-redirection-3xx"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q7rv-6hp3-vh96",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-drupal-2022-24775",
+        "CVE-2022-24775",
+        "DRUPAL-CORE-2022-006"
+      ],
+      "summary": "Improper Input Validation in guzzlehttp/psr7",
+      "details": "### Impact\n\nImproper header parsing. An attacker could sneak in a carriage return character (`\\r`) and pass untrusted values in both the header names and values.\n\n### Patches\n\nThe issue is patched in 1.8.4 and 2.1.1.\n\n### Workarounds\n\nThere are no known workarounds.\n\n### References\n\n* https://www.rfc-editor.org/rfc/rfc7230#section-3.2.4\n",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-03-25T19:26:33Z",
+        "modifiedDate": "2025-12-10T23:41:07.135584Z",
+        "daysSincePublished": 1363
+      },
+      "affected": {
+        "package": "guzzlehttp/psr7",
+        "version": "1.5.2",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.5.2",
+        "fixedIn": "1.8.4",
+        "recommendation": "Upgrade to 1.8.4 or later",
+        "fixAvailableSince": "2025-12-10T23:41:07.135Z",
+        "daysSinceFix": 6,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/psr7/security/advisories/GHSA-q7rv-6hp3-vh96"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24775"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/psr7/pull/485/commits/e55afaa3fc138c89adf3b55a8ba20dc60d17f1f1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/psr7/pull/486/commits/9a96d9db668b485361ed9de7b5bf1e54895df1dc"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/psr7/CVE-2022-24775.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/guzzle/psr7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.drupal.org/sa-core-2022-006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.rfc-editor.org/rfc/rfc7230#section-3.2.4"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-wxmh-65f7-jcvw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-29197"
+      ],
+      "summary": "Improper header name validation in guzzlehttp/psr7",
+      "details": "### Impact\n\nImproper header parsing. An attacker could sneak in a newline (`\\n`) into both the header names and values. While the specification states that `\\r\\n\\r\\n` is used to terminate the header list, many servers in the wild will also accept `\\n\\n`.\n\n### Patches\n\nThe issue is patched in 1.9.1 and 2.4.5.\n\n### Workarounds\n\nThere are no known workarounds.\n\n### References\n\n* https://www.rfc-editor.org/rfc/rfc7230#section-3.2.4\n",
+      "cwes": [
+        {
+          "id": "CWE-436",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-04-19T18:25:53Z",
+        "modifiedDate": "2025-01-14T11:42:26.139863Z",
+        "daysSincePublished": 973
+      },
+      "affected": {
+        "package": "guzzlehttp/psr7",
+        "version": "1.5.2",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.5.2",
+        "fixedIn": "1.9.1",
+        "recommendation": "Upgrade to 1.9.1 or later",
+        "fixAvailableSince": "2025-01-14T11:42:26.139Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/psr7/security/advisories/GHSA-q7rv-6hp3-vh96"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/guzzle/psr7/security/advisories/GHSA-wxmh-65f7-jcvw"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-29197"
+        },
+        {
+          "type": "WEB",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-24775"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/guzzlehttp/psr7/CVE-2023-29197.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/guzzle/psr7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2023/12/msg00028.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FJANWDXJZE5BGLN4MQ4FEHV5LJ6CMKQF"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O35UN4IK6VS2LXSRWUDFWY7NI73RKY2U"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.rfc-editor.org/rfc/rfc7230#section-3.2.4"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "guzzlehttp/guzzle",
+      "currentVersion": "6.3.3",
+      "fixedIn": "6.5.8",
+      "vulnerabilities": [
+        "GHSA-25mq-v84q-4j7r",
+        "GHSA-cwmx-hcrq-mhc3",
+        "GHSA-f2wf-25xc-69c9",
+        "GHSA-q559-8m2m-g699",
+        "GHSA-w248-ffj2-4v5q"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 6.5.8 or later",
+      "fixAvailableSince": "2024-02-16T08:21:48.242Z",
+      "daysSinceFix": 670,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "guzzlehttp/psr7",
+      "currentVersion": "1.5.2",
+      "fixedIn": "1.8.4",
+      "vulnerabilities": [
+        "GHSA-q7rv-6hp3-vh96",
+        "GHSA-wxmh-65f7-jcvw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.8.4 or later",
+      "fixAvailableSince": "2025-12-10T23:41:07.135Z",
+      "daysSinceFix": 6,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "3 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "7 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

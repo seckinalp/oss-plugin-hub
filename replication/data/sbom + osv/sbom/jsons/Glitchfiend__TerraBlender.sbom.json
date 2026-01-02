@@ -1,0 +1,95 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Glitchfiend/TerraBlender",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/3d2313f8-5e91-4e8a-90b1-873bf40a857f",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:50Z"
+  },
+  "packages": [
+    {
+      "name": "gradle/gradle-build-action",
+      "SPDXID": "SPDXRef-githubactions-gradle-gradle-build-action-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/gradle-build-action@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.Glitchfiend/TerraBlender",
+      "SPDXID": "SPDXRef-github-Glitchfiend-TerraBlender-1.21.9-8ef1d1",
+      "versionInfo": "1.21.9",
+      "downloadLocation": "git+https://github.com/Glitchfiend/TerraBlender",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Glitchfiend/TerraBlender@1.21.9"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-Glitchfiend-TerraBlender-1.21.9-8ef1d1",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Glitchfiend-TerraBlender-1.21.9-8ef1d1",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradle-gradle-build-action-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Glitchfiend-TerraBlender-1.21.9-8ef1d1",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Glitchfiend-TerraBlender-1.21.9-8ef1d1",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

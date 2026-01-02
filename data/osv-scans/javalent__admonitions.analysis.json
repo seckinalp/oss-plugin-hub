@@ -1,0 +1,457 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.267Z",
+  "source": "javalent__admonitions.osv.json",
+  "summary": {
+    "totalVulnerabilities": 5,
+    "uniqueVulnerabilities": 4,
+    "affectedPackages": 5,
+    "stalePackages": 5,
+    "stalePackagesOldFix": 5,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 5
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 5
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "1.1.11",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.11",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-grv7-fg5c-xmjg",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4068"
+      ],
+      "summary": "Uncontrolled resource consumption in braces",
+      "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+      "cwes": [
+        {
+          "id": "CWE-1050",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-07-15T22:12:28.795792Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "braces",
+        "version": "3.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.2",
+        "fixedIn": "3.0.3",
+        "recommendation": "Upgrade to 3.0.3 or later",
+        "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+        "daysSinceFix": 519,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/issues/35"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/37"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/40"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/braces"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-67mh-4wv8-2f99",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [],
+      "summary": "esbuild enables any website to send any requests to the development server and read the response",
+      "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e => console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r => r.text()).then(content => console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+      "cwes": [
+        {
+          "id": "CWE-346",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-10T17:48:07Z",
+        "modifiedDate": "2025-02-10T17:48:08Z",
+        "daysSincePublished": 310
+      },
+      "affected": {
+        "package": "esbuild",
+        "version": "0.13.15",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.13.15",
+        "fixedIn": "0.25.0",
+        "recommendation": "Upgrade to 0.25.0 or later",
+        "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+        "daysSinceFix": 310,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/evanw/esbuild"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-67mh-4wv8-2f99",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [],
+      "summary": "esbuild enables any website to send any requests to the development server and read the response",
+      "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e => console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r => r.text()).then(content => console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+      "cwes": [
+        {
+          "id": "CWE-346",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-10T17:48:07Z",
+        "modifiedDate": "2025-02-10T17:48:08Z",
+        "daysSincePublished": 310
+      },
+      "affected": {
+        "package": "esbuild",
+        "version": "0.15.18",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.15.18",
+        "fixedIn": "0.25.0",
+        "recommendation": "Upgrade to 0.25.0 or later",
+        "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+        "daysSinceFix": 310,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/evanw/esbuild"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8266-84wp-wv5c",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-45047"
+      ],
+      "summary": "Svelte has a potential mXSS vulnerability due to improper HTML escaping",
+      "details": "### Summary\n\nA potential XSS vulnerability exists in Svelte for versions prior to 4.2.19.\n\n### Details\n\nSvelte improperly escapes HTML on server-side rendering. It converts strings according to the following rules:\n\n- If the string is an attribute value:\n    - `\"` -> `&quot;`\n    - `&` -> `&amp;`\n    - Other characters -> No conversion\n- Otherwise:\n    - `<` -> `&lt;`\n    - `&` -> `&amp;`\n    - Other characters -> No conversion\n\nThe assumption is that attributes will always stay as such, but in some situation the final DOM tree rendered on browsers is different from what Svelte expects on server-side rendering. This may be leveraged to perform XSS attacks. More specifically, this can occur when injecting malicious content into an attribute within a `<noscript>` tag.\n\n### PoC\n\nA vulnerable page (`+page.svelte`):\n```html\n<script>\nimport { page } from \"$app/stores\"\n\n// user input\nlet href = $page.url.searchParams.get(\"href\") ?? \"https://example.com\";\n</script>\n\n<noscript>\n  <a href={href}>test</a>\n</noscript>\n```\n\nIf a user accesses the following URL,\n```\nhttp://localhost:4173/?href=</noscript><script>alert(123)</script>\n```\nthen, `alert(123)` will be executed.\n\n### Impact\n\nXSS, when using an attribute within a noscript tag",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-08-30T16:49:10Z",
+        "modifiedDate": "2024-08-30T20:01:23Z",
+        "daysSincePublished": 474
+      },
+      "affected": {
+        "package": "svelte",
+        "version": "4.2.17",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.2.17",
+        "fixedIn": "4.2.19",
+        "recommendation": "Upgrade to 4.2.19 or later",
+        "fixAvailableSince": "2024-08-30T20:01:23.000Z",
+        "daysSinceFix": 474,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/sveltejs/svelte/security/advisories/GHSA-8266-84wp-wv5c"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45047"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sveltejs/svelte/commit/83e96e044deb5ecbae2af361ae9e31d3e1ac43a3"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/sveltejs/svelte"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "brace-expansion",
+      "currentVersion": "1.1.11",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "braces",
+      "currentVersion": "3.0.2",
+      "fixedIn": "3.0.3",
+      "vulnerabilities": [
+        "GHSA-grv7-fg5c-xmjg"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.3 or later",
+      "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+      "daysSinceFix": 519,
+      "monthsSinceFix": 17,
+      "isOldFix": true
+    },
+    {
+      "package": "esbuild",
+      "currentVersion": "0.13.15",
+      "fixedIn": "0.25.0",
+      "vulnerabilities": [
+        "GHSA-67mh-4wv8-2f99"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.25.0 or later",
+      "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+      "daysSinceFix": 310,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "esbuild",
+      "currentVersion": "0.15.18",
+      "fixedIn": "0.25.0",
+      "vulnerabilities": [
+        "GHSA-67mh-4wv8-2f99"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.25.0 or later",
+      "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+      "daysSinceFix": 310,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "svelte",
+      "currentVersion": "4.2.17",
+      "fixedIn": "4.2.19",
+      "vulnerabilities": [
+        "GHSA-8266-84wp-wv5c"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.2.19 or later",
+      "fixAvailableSince": "2024-08-30T20:01:23.000Z",
+      "daysSinceFix": 474,
+      "monthsSinceFix": 15,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "5 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "5 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

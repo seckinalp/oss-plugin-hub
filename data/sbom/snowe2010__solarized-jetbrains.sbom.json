@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.snowe2010/solarized-jetbrains",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/196bf63a-f6cd-4b87-886f-a9eb6b6d045f",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:24Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.snowe2010/solarized-jetbrains",
+      "SPDXID": "SPDXRef-github-snowe2010-solarized-jetbrains-master-e788d9",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/snowe2010/solarized-jetbrains",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/snowe2010/solarized-jetbrains@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-snowe2010-solarized-jetbrains-master-e788d9",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

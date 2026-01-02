@@ -1,0 +1,129 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.695Z",
+  "source": "redhat-developer__vscode-java.osv.json",
+  "summary": {
+    "totalVulnerabilities": 1,
+    "uniqueVulnerabilities": 1,
+    "affectedPackages": 1,
+    "stalePackages": 1,
+    "stalePackagesOldFix": 0,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 1
+    },
+    "recentVulnerabilities": 1,
+    "hasFixAvailable": 1
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-j288-q9x7-2f5v",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-48924"
+      ],
+      "summary": "Apache Commons Lang is vulnerable to Uncontrolled Recursion when processing long inputs",
+      "details": "Uncontrolled Recursion vulnerability in Apache Commons Lang.\n\nThis issue affects Apache Commons Lang: Starting with commons-lang:commons-lang 2.0 to 2.6, and, from org.apache.commons:commons-lang3 3.0 before 3.18.0.\n\nThe methods ClassUtils.getClass(...) can throw StackOverflowError on very long inputs. Because an Error is usually not handled by applications and libraries, a StackOverflowError could cause an application to stop.\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-674",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-11T15:31:37Z",
+        "modifiedDate": "2025-11-05T20:34:04.566048Z",
+        "daysSincePublished": 159
+      },
+      "affected": {
+        "package": "org.apache.commons:commons-lang3",
+        "version": "3.5",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.5",
+        "fixedIn": "3.18.0",
+        "recommendation": "Upgrade to 3.18.0 or later",
+        "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+        "daysSinceFix": 41,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48924"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/commons-lang/commit/b424803abdb2bec818e4fbcb251ce031c22aca53"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/commons-lang"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/bgv0lpswokgol11tloxnjfzdl7yrc1g1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00000.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00026.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00032.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00036.html"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2025/07/11/1"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "org.apache.commons:commons-lang3",
+      "currentVersion": "3.5",
+      "fixedIn": "3.18.0",
+      "vulnerabilities": [
+        "GHSA-j288-q9x7-2f5v"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.18.0 or later",
+      "fixAvailableSince": "2025-11-05T20:34:04.566Z",
+      "daysSinceFix": 41,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "1 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "1 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

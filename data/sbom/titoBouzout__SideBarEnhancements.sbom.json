@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.titoBouzout/SideBarEnhancements",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/f376ac64-9aa4-4124-83e7-12f7a4404e9f",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:54Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.titoBouzout/SideBarEnhancements",
+      "SPDXID": "SPDXRef-github-titoBouzout-SideBarEnhancements-st3-4ca1b0",
+      "versionInfo": "st3",
+      "downloadLocation": "git+https://github.com/titoBouzout/SideBarEnhancements",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/titoBouzout/SideBarEnhancements@st3"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-titoBouzout-SideBarEnhancements-st3-4ca1b0",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,4872 @@
+{
+  "generatedAt": "2025-12-24T16:14:43.167Z",
+  "source": {
+    "scorecardDir": "scorecard-local",
+    "top100Dir": "data/*/top100.json",
+    "scorecardVersion": "v5.1.1-45-g40bbc9c9",
+    "scorecardCommit": "40bbc9c958aa66327fb026b2136f1951298ca0f8",
+    "scorecardFileCount": 645,
+    "scorecardDuplicateRepoCount": 0,
+    "platformsDetected": [
+      "chrome",
+      "firefox",
+      "homeassistant",
+      "jetbrains",
+      "minecraft",
+      "obsidian",
+      "sublime",
+      "vscode",
+      "wordpress"
+    ]
+  },
+  "notes": {
+    "scorecardScale": "0-10",
+    "notApplicableScore": -1,
+    "notApplicableMeaning": "check not applicable for the repo",
+    "coverageDefinition": "scorecardMatches / uniqueRepoCount"
+  },
+  "platforms": [
+    {
+      "platform": "chrome",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 95,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 76,
+      "coverageRate": 0.8,
+      "scorecardDateRange": {
+        "min": "2025-12-17T17:33:38.000Z",
+        "max": "2025-12-17T18:22:40.000Z"
+      },
+      "scoreStats": {
+        "count": 76,
+        "min": 1.1,
+        "max": 6.4,
+        "mean": 3.4579,
+        "median": 3.3,
+        "stdev": 1.1796,
+        "p10": 2.3,
+        "p25": 2.7,
+        "p75": 4.3,
+        "p90": 5
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 7,
+          "rate": 0.0921
+        },
+        {
+          "range": "2-3",
+          "count": 24,
+          "rate": 0.3158
+        },
+        {
+          "range": "3-4",
+          "count": 22,
+          "rate": 0.2895
+        },
+        {
+          "range": "4-5",
+          "count": 15,
+          "rate": 0.1974
+        },
+        {
+          "range": "5-6",
+          "count": 4,
+          "rate": 0.0526
+        },
+        {
+          "range": "6-7",
+          "count": 4,
+          "rate": 0.0526
+        },
+        {
+          "range": "7-8",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 71,
+          "min": 6,
+          "max": 10,
+          "mean": 9.8421,
+          "median": 10,
+          "stdev": 0.6699,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 67,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 9,
+          "mean": 0.4868,
+          "median": 0,
+          "stdev": 1.5087,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 2
+        },
+        "CI-Tests": {
+          "totalCount": 76,
+          "applicableCount": 48,
+          "naCount": 28,
+          "naRate": 0.3684,
+          "zeroCount": 29,
+          "perfectCount": 10,
+          "min": 0,
+          "max": 10,
+          "mean": 3.1667,
+          "median": 0,
+          "stdev": 4.2492,
+          "p10": 0,
+          "p25": 0,
+          "p75": 7.25,
+          "p90": 10
+        },
+        "CII-Best-Practices": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 75,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 2,
+          "mean": 0.0263,
+          "median": 0,
+          "stdev": 0.2279,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 48,
+          "perfectCount": 4,
+          "min": 0,
+          "max": 10,
+          "mean": 1.4342,
+          "median": 0,
+          "stdev": 2.7546,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 6
+        },
+        "Contributors": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 21,
+          "perfectCount": 34,
+          "min": 0,
+          "max": 10,
+          "mean": 5.4605,
+          "median": 4.5,
+          "stdev": 4.3391,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 76,
+          "applicableCount": 29,
+          "naCount": 47,
+          "naRate": 0.6184,
+          "zeroCount": 2,
+          "perfectCount": 27,
+          "min": 0,
+          "max": 10,
+          "mean": 9.3103,
+          "median": 10,
+          "stdev": 2.534,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 53,
+          "perfectCount": 23,
+          "min": 0,
+          "max": 10,
+          "mean": 3.0263,
+          "median": 0,
+          "stdev": 4.594,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Fuzzing": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 76,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 7,
+          "perfectCount": 57,
+          "min": 0,
+          "max": 10,
+          "mean": 8.9211,
+          "median": 10,
+          "stdev": 2.8643,
+          "p10": 9,
+          "p25": 9.75,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 35,
+          "perfectCount": 35,
+          "min": 0,
+          "max": 10,
+          "mean": 4.8421,
+          "median": 2,
+          "stdev": 4.8722,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 76,
+          "applicableCount": 1,
+          "naCount": 75,
+          "naRate": 0.9868,
+          "zeroCount": 0,
+          "perfectCount": 1,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 76,
+          "applicableCount": 30,
+          "naCount": 46,
+          "naRate": 0.6053,
+          "zeroCount": 18,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 7,
+          "mean": 1.4333,
+          "median": 0,
+          "stdev": 2.2164,
+          "p10": 0,
+          "p25": 0,
+          "p75": 2,
+          "p90": 5
+        },
+        "SAST": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 70,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.5921,
+          "median": 0,
+          "stdev": 2.0595,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 67,
+          "perfectCount": 8,
+          "min": 0,
+          "max": 10,
+          "mean": 1.1711,
+          "median": 0,
+          "stdev": 3.197,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 9.5
+        },
+        "Signed-Releases": {
+          "totalCount": 76,
+          "applicableCount": 41,
+          "naCount": 35,
+          "naRate": 0.4605,
+          "zeroCount": 40,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 0.1951,
+          "median": 0,
+          "stdev": 1.2341,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 76,
+          "applicableCount": 29,
+          "naCount": 47,
+          "naRate": 0.6184,
+          "zeroCount": 21,
+          "perfectCount": 4,
+          "min": 0,
+          "max": 10,
+          "mean": 2.6207,
+          "median": 0,
+          "stdev": 4.2541,
+          "p10": 0,
+          "p25": 0,
+          "p75": 9,
+          "p90": 10
+        },
+        "Vulnerabilities": {
+          "totalCount": 76,
+          "applicableCount": 76,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 23,
+          "perfectCount": 37,
+          "min": 0,
+          "max": 10,
+          "mean": 6.2237,
+          "median": 9,
+          "stdev": 4.468,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "facebook/react",
+          "score": 6.4
+        },
+        {
+          "repo": "ghostery/ghostery-extension",
+          "score": 6.4
+        },
+        {
+          "repo": "tabwrangler/tabwrangler",
+          "score": 6.1
+        },
+        {
+          "repo": "keepassxreboot/keepassxc-browser",
+          "score": 6
+        },
+        {
+          "repo": "code-charity/youtube",
+          "score": 5.5
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "chatziko/location-guard",
+          "score": 1.1
+        },
+        {
+          "repo": "keifufu/WebNowPlaying",
+          "score": 1.4
+        },
+        {
+          "repo": "GorvGoyl/Notion-Boost-browser-extension",
+          "score": 1.5
+        },
+        {
+          "repo": "betafish-inc/adblock-releases",
+          "score": 1.5
+        },
+        {
+          "repo": "ovity/octotree",
+          "score": 1.6
+        }
+      ],
+      "missingScorecardCount": 19,
+      "missingScorecardSample": [
+        "languagetool-org/languagetool",
+        "Authenticator-Extension/Authenticator",
+        "darkreader/darkreader",
+        "Anarios/return-youtube-dislike",
+        "night/betterttv",
+        "EFForg/https-everywhere",
+        "GoogleChrome/lighthouse",
+        "tulios/json-viewer",
+        "reduxjs/redux-devtools",
+        "mozilla/pdf.js"
+      ]
+    },
+    {
+      "platform": "firefox",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 99,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 84,
+      "coverageRate": 0.8485,
+      "scorecardDateRange": {
+        "min": "2025-12-17T17:33:38.000Z",
+        "max": "2025-12-17T18:56:29.000Z"
+      },
+      "scoreStats": {
+        "count": 84,
+        "min": 1.1,
+        "max": 7.1,
+        "mean": 3.0762,
+        "median": 2.8,
+        "stdev": 1.0427,
+        "p10": 2.13,
+        "p25": 2.5,
+        "p75": 3.625,
+        "p90": 4.27
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 7,
+          "rate": 0.0833
+        },
+        {
+          "range": "2-3",
+          "count": 38,
+          "rate": 0.4524
+        },
+        {
+          "range": "3-4",
+          "count": 26,
+          "rate": 0.3095
+        },
+        {
+          "range": "4-5",
+          "count": 8,
+          "rate": 0.0952
+        },
+        {
+          "range": "5-6",
+          "count": 3,
+          "rate": 0.0357
+        },
+        {
+          "range": "6-7",
+          "count": 1,
+          "rate": 0.0119
+        },
+        {
+          "range": "7-8",
+          "count": 1,
+          "rate": 0.0119
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 80,
+          "min": 4,
+          "max": 10,
+          "mean": 9.8333,
+          "median": 10,
+          "stdev": 0.8428,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 77,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 0.4167,
+          "median": 0,
+          "stdev": 1.4574,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 84,
+          "applicableCount": 60,
+          "naCount": 24,
+          "naRate": 0.2857,
+          "zeroCount": 48,
+          "perfectCount": 7,
+          "min": 0,
+          "max": 10,
+          "mean": 1.5667,
+          "median": 0,
+          "stdev": 3.4077,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 10
+        },
+        "CII-Best-Practices": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 82,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 2,
+          "mean": 0.0476,
+          "median": 0,
+          "stdev": 0.3049,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 49,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 1.0714,
+          "median": 0,
+          "stdev": 1.8503,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 3
+        },
+        "Contributors": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 38,
+          "perfectCount": 26,
+          "min": 0,
+          "max": 10,
+          "mean": 4.131,
+          "median": 3,
+          "stdev": 4.3501,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 84,
+          "applicableCount": 25,
+          "naCount": 59,
+          "naRate": 0.7024,
+          "zeroCount": 0,
+          "perfectCount": 25,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 71,
+          "perfectCount": 13,
+          "min": 0,
+          "max": 10,
+          "mean": 1.5476,
+          "median": 0,
+          "stdev": 3.6168,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 10
+        },
+        "Fuzzing": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 84,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 11,
+          "perfectCount": 67,
+          "min": 0,
+          "max": 10,
+          "mean": 8.619,
+          "median": 10,
+          "stdev": 3.3555,
+          "p10": 0,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 55,
+          "perfectCount": 18,
+          "min": 0,
+          "max": 10,
+          "mean": 2.5476,
+          "median": 0,
+          "stdev": 4.0837,
+          "p10": 0,
+          "p25": 0,
+          "p75": 4.25,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 84,
+          "applicableCount": 1,
+          "naCount": 83,
+          "naRate": 0.9881,
+          "zeroCount": 0,
+          "perfectCount": 1,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 84,
+          "applicableCount": 26,
+          "naCount": 58,
+          "naRate": 0.6905,
+          "zeroCount": 17,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 9,
+          "mean": 1,
+          "median": 0,
+          "stdev": 1.9215,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1.75,
+          "p90": 3
+        },
+        "SAST": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 80,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.3571,
+          "median": 0,
+          "stdev": 1.6449,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 77,
+          "perfectCount": 5,
+          "min": 0,
+          "max": 10,
+          "mean": 0.8095,
+          "median": 0,
+          "stdev": 2.6881,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 84,
+          "applicableCount": 35,
+          "naCount": 49,
+          "naRate": 0.5833,
+          "zeroCount": 35,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 84,
+          "applicableCount": 25,
+          "naCount": 59,
+          "naRate": 0.7024,
+          "zeroCount": 16,
+          "perfectCount": 3,
+          "min": 0,
+          "max": 10,
+          "mean": 3.28,
+          "median": 0,
+          "stdev": 4.3956,
+          "p10": 0,
+          "p25": 0,
+          "p75": 9,
+          "p90": 9.6
+        },
+        "Vulnerabilities": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 18,
+          "perfectCount": 56,
+          "min": 0,
+          "max": 10,
+          "mean": 7.369,
+          "median": 10,
+          "stdev": 4.1627,
+          "p10": 0,
+          "p25": 5,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "AprilSylph/XKit-Rewritten",
+          "score": 7.1
+        },
+        {
+          "repo": "facebook/react",
+          "score": 6.4
+        },
+        {
+          "repo": "cloudflare/pp-browser-extension",
+          "score": 5.8
+        },
+        {
+          "repo": "filips123/PWAsForFirefox",
+          "score": 5.3
+        },
+        {
+          "repo": "mbnuqw/sidebery",
+          "score": 5
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "chatziko/location-guard",
+          "score": 1.1
+        },
+        {
+          "repo": "kkapsner/CanvasBlocker",
+          "score": 1.3
+        },
+        {
+          "repo": "kdevspace/firefox-yandex-search-ext",
+          "score": 1.5
+        },
+        {
+          "repo": "marklieberman/foxygestures",
+          "score": 1.5
+        },
+        {
+          "repo": "54ac/stream-detector",
+          "score": 1.6
+        }
+      ],
+      "missingScorecardCount": 15,
+      "missingScorecardSample": [
+        "mozilla/contain-facebook",
+        "mozilla/multi-account-containers",
+        "Cookie-AutoDelete/Cookie-AutoDelete",
+        "Authenticator-Extension/Authenticator",
+        "Robbendebiene/Gesturefy",
+        "Vulpelo/hide-youtube-shorts",
+        "younesaassila/ttv-lol-pro",
+        "reduxjs/redux-devtools",
+        "m-khvoinitsky/dark-background-light-text-extension",
+        "SimpleSAMLphp/SAML-tracer"
+      ]
+    },
+    {
+      "platform": "homeassistant",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 100,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 63,
+      "coverageRate": 0.63,
+      "scorecardDateRange": {
+        "min": "2025-12-17T18:57:21.000Z",
+        "max": "2025-12-17T19:51:43.000Z"
+      },
+      "scoreStats": {
+        "count": 63,
+        "min": 1.6,
+        "max": 6.8,
+        "mean": 3.1286,
+        "median": 2.8,
+        "stdev": 0.9966,
+        "p10": 2.1,
+        "p25": 2.5,
+        "p75": 3.9,
+        "p90": 4.48
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 3,
+          "rate": 0.0476
+        },
+        {
+          "range": "2-3",
+          "count": 33,
+          "rate": 0.5238
+        },
+        {
+          "range": "3-4",
+          "count": 14,
+          "rate": 0.2222
+        },
+        {
+          "range": "4-5",
+          "count": 10,
+          "rate": 0.1587
+        },
+        {
+          "range": "5-6",
+          "count": 2,
+          "rate": 0.0317
+        },
+        {
+          "range": "6-7",
+          "count": 1,
+          "rate": 0.0159
+        },
+        {
+          "range": "7-8",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 63,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 56,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 6,
+          "mean": 0.3968,
+          "median": 0,
+          "stdev": 1.2667,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0.8
+        },
+        "CI-Tests": {
+          "totalCount": 63,
+          "applicableCount": 53,
+          "naCount": 10,
+          "naRate": 0.1587,
+          "zeroCount": 31,
+          "perfectCount": 10,
+          "min": 0,
+          "max": 10,
+          "mean": 3.1698,
+          "median": 0,
+          "stdev": 4.1012,
+          "p10": 0,
+          "p25": 0,
+          "p75": 6,
+          "p90": 10
+        },
+        "CII-Best-Practices": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 63,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 28,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 1.5556,
+          "median": 1,
+          "stdev": 2.2167,
+          "p10": 0,
+          "p25": 0,
+          "p75": 2,
+          "p90": 5
+        },
+        "Contributors": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 23,
+          "perfectCount": 21,
+          "min": 0,
+          "max": 10,
+          "mean": 4.5238,
+          "median": 3,
+          "stdev": 4.2608,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 63,
+          "applicableCount": 54,
+          "naCount": 9,
+          "naRate": 0.1429,
+          "zeroCount": 2,
+          "perfectCount": 52,
+          "min": 0,
+          "max": 10,
+          "mean": 9.6296,
+          "median": 10,
+          "stdev": 1.8885,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 46,
+          "perfectCount": 17,
+          "min": 0,
+          "max": 10,
+          "mean": 2.6984,
+          "median": 0,
+          "stdev": 4.4388,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Fuzzing": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 63,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 9,
+          "perfectCount": 51,
+          "min": 0,
+          "max": 10,
+          "mean": 8.5238,
+          "median": 10,
+          "stdev": 3.4863,
+          "p10": 0,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 36,
+          "perfectCount": 18,
+          "min": 0,
+          "max": 10,
+          "mean": 3.3492,
+          "median": 0,
+          "stdev": 4.4406,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 63,
+          "applicableCount": 2,
+          "naCount": 61,
+          "naRate": 0.9683,
+          "zeroCount": 0,
+          "perfectCount": 2,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 63,
+          "applicableCount": 54,
+          "naCount": 9,
+          "naRate": 0.1429,
+          "zeroCount": 44,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 5,
+          "mean": 0.6481,
+          "median": 0,
+          "stdev": 1.4293,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 3
+        },
+        "SAST": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 61,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.2381,
+          "median": 0,
+          "stdev": 1.3883,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 63,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 63,
+          "applicableCount": 62,
+          "naCount": 1,
+          "naRate": 0.0159,
+          "zeroCount": 62,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 63,
+          "applicableCount": 54,
+          "naCount": 9,
+          "naRate": 0.1429,
+          "zeroCount": 51,
+          "perfectCount": 2,
+          "min": 0,
+          "max": 10,
+          "mean": 0.5185,
+          "median": 0,
+          "stdev": 2.1494,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Vulnerabilities": {
+          "totalCount": 63,
+          "applicableCount": 63,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 22,
+          "perfectCount": 23,
+          "min": 0,
+          "max": 10,
+          "mean": 5.1429,
+          "median": 6,
+          "stdev": 4.4001,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "NemesisRE/kiosk-mode",
+          "score": 6.8
+        },
+        {
+          "repo": "zanna-37/hass-swipe-navigation",
+          "score": 5
+        },
+        {
+          "repo": "nielsfaber/alarmo",
+          "score": 5
+        },
+        {
+          "repo": "custom-cards/button-card",
+          "score": 4.9
+        },
+        {
+          "repo": "slipx06/sunsynk-power-flow-card",
+          "score": 4.8
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "benct/lovelace-multiple-entity-row",
+          "score": 1.6
+        },
+        {
+          "repo": "ulic75/power-flow-card",
+          "score": 1.8
+        },
+        {
+          "repo": "madmicio/LG-WebOS-Remote-Control",
+          "score": 1.8
+        },
+        {
+          "repo": "wassy92x/lovelace-digital-clock",
+          "score": 2
+        },
+        {
+          "repo": "dbuezas/lovelace-plotly-graph-card",
+          "score": 2
+        }
+      ],
+      "missingScorecardCount": 37,
+      "missingScorecardSample": [
+        "adizanni/floor3d-card",
+        "ciotlosm/lovelace-thermostat-dark-card",
+        "decompil3d/lovelace-hourly-weather",
+        "denysdovhan/vacuum-card",
+        "dylandoamaral/uptime-card",
+        "FamousWolf/week-planner-card",
+        "flixlix/energy-flow-card-plus",
+        "flixlix/energy-period-selector-plus",
+        "flixlix/power-flow-card-plus",
+        "idaho/hassio-trash-card"
+      ]
+    },
+    {
+      "platform": "jetbrains",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 67,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 42,
+      "coverageRate": 0.6269,
+      "scorecardDateRange": {
+        "min": "2025-12-17T19:52:11.000Z",
+        "max": "2025-12-17T20:37:40.000Z"
+      },
+      "scoreStats": {
+        "count": 42,
+        "min": 0.9,
+        "max": 7.8,
+        "mean": 3.3786,
+        "median": 3.3,
+        "stdev": 1.1939,
+        "p10": 2.3,
+        "p25": 2.7,
+        "p75": 3.775,
+        "p90": 4.83
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 1,
+          "rate": 0.0238
+        },
+        {
+          "range": "1-2",
+          "count": 1,
+          "rate": 0.0238
+        },
+        {
+          "range": "2-3",
+          "count": 14,
+          "rate": 0.3333
+        },
+        {
+          "range": "3-4",
+          "count": 17,
+          "rate": 0.4048
+        },
+        {
+          "range": "4-5",
+          "count": 5,
+          "rate": 0.119
+        },
+        {
+          "range": "5-6",
+          "count": 2,
+          "rate": 0.0476
+        },
+        {
+          "range": "6-7",
+          "count": 1,
+          "rate": 0.0238
+        },
+        {
+          "range": "7-8",
+          "count": 1,
+          "rate": 0.0238
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 7,
+          "min": 4,
+          "max": 10,
+          "mean": 8.8095,
+          "median": 9,
+          "stdev": 1.3136,
+          "p10": 9,
+          "p25": 9,
+          "p75": 9,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 38,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 5,
+          "mean": 0.4524,
+          "median": 0,
+          "stdev": 1.4007,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 42,
+          "applicableCount": 27,
+          "naCount": 15,
+          "naRate": 0.3571,
+          "zeroCount": 18,
+          "perfectCount": 3,
+          "min": 0,
+          "max": 10,
+          "mean": 2,
+          "median": 0,
+          "stdev": 3.4319,
+          "p10": 0,
+          "p25": 0,
+          "p75": 3,
+          "p90": 8.2
+        },
+        "CII-Best-Practices": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 42,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 27,
+          "perfectCount": 2,
+          "min": 0,
+          "max": 10,
+          "mean": 1.0238,
+          "median": 0,
+          "stdev": 2.2834,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 2
+        },
+        "Contributors": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 8,
+          "perfectCount": 22,
+          "min": 0,
+          "max": 10,
+          "mean": 6.3095,
+          "median": 10,
+          "stdev": 4.1317,
+          "p10": 0,
+          "p25": 3,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 42,
+          "applicableCount": 18,
+          "naCount": 24,
+          "naRate": 0.5714,
+          "zeroCount": 0,
+          "perfectCount": 18,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 37,
+          "perfectCount": 5,
+          "min": 0,
+          "max": 10,
+          "mean": 1.1905,
+          "median": 0,
+          "stdev": 3.2384,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 9
+        },
+        "Fuzzing": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 42,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 2,
+          "perfectCount": 37,
+          "min": 0,
+          "max": 10,
+          "mean": 9.4524,
+          "median": 10,
+          "stdev": 2.1292,
+          "p10": 9.1,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 20,
+          "perfectCount": 13,
+          "min": 0,
+          "max": 10,
+          "mean": 3.9524,
+          "median": 1,
+          "stdev": 4.4559,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 42,
+          "applicableCount": 5,
+          "naCount": 37,
+          "naRate": 0.881,
+          "zeroCount": 0,
+          "perfectCount": 5,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 42,
+          "applicableCount": 19,
+          "naCount": 23,
+          "naRate": 0.5476,
+          "zeroCount": 17,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.8421,
+          "median": 0,
+          "stdev": 2.5394,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 1.2
+        },
+        "SAST": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 40,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.4048,
+          "median": 0,
+          "stdev": 1.8395,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 37,
+          "perfectCount": 5,
+          "min": 0,
+          "max": 10,
+          "mean": 1.1905,
+          "median": 0,
+          "stdev": 3.2384,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 9
+        },
+        "Signed-Releases": {
+          "totalCount": 42,
+          "applicableCount": 17,
+          "naCount": 25,
+          "naRate": 0.5952,
+          "zeroCount": 17,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 42,
+          "applicableCount": 18,
+          "naCount": 24,
+          "naRate": 0.5714,
+          "zeroCount": 17,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.5556,
+          "median": 0,
+          "stdev": 2.2906,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Vulnerabilities": {
+          "totalCount": 42,
+          "applicableCount": 42,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 2,
+          "perfectCount": 36,
+          "min": 0,
+          "max": 10,
+          "mean": 9.1667,
+          "median": 10,
+          "stdev": 2.5347,
+          "p10": 9,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "flutter/flutter-intellij",
+          "score": 7.8
+        },
+        {
+          "repo": "aws/aws-toolkit-jetbrains",
+          "score": 6.3
+        },
+        {
+          "repo": "SonarSource/sonarlint-intellij",
+          "score": 5.2
+        },
+        {
+          "repo": "catppuccin/jetbrains",
+          "score": 5
+        },
+        {
+          "repo": "kalessil/phpinspectionsea",
+          "score": 4.9
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "krasa/EclipseCodeFormatter",
+          "score": 0.9
+        },
+        {
+          "repo": "alibaba/p3c",
+          "score": 1.8
+        },
+        {
+          "repo": "thvardhan/Gradianto",
+          "score": 2
+        },
+        {
+          "repo": "batya239/NyanProgressBar",
+          "score": 2.1
+        },
+        {
+          "repo": "vsch/idea-multimarkdown",
+          "score": 2.3
+        }
+      ],
+      "missingScorecardCount": 25,
+      "missingScorecardSample": [
+        "izhangzhihao/intellij-rainbow-brackets",
+        "BashSupport/BashSupport",
+        "JetBrains/ideavim",
+        "SeeSharpSoft/intellij-csv-validator",
+        "JetBrains/idea-gitignore",
+        "JetBrains/intellij-community",
+        "JetBrains/intellij-plugins",
+        "wakatime/jetbrains-wakatime",
+        "JetBrains/azure-tools-for-intellij",
+        "JetBrains/intellij-scala"
+      ]
+    },
+    {
+      "platform": "minecraft",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 100,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 93,
+      "coverageRate": 0.93,
+      "scorecardDateRange": {
+        "min": "2025-12-17T20:38:29.000Z",
+        "max": "2025-12-17T21:10:35.000Z"
+      },
+      "scoreStats": {
+        "count": 93,
+        "min": 2,
+        "max": 5.8,
+        "mean": 3.4624,
+        "median": 3.6,
+        "stdev": 0.7319,
+        "p10": 2.5,
+        "p25": 2.8,
+        "p75": 4,
+        "p90": 4.4
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "2-3",
+          "count": 25,
+          "rate": 0.2688
+        },
+        {
+          "range": "3-4",
+          "count": 41,
+          "rate": 0.4409
+        },
+        {
+          "range": "4-5",
+          "count": 25,
+          "rate": 0.2688
+        },
+        {
+          "range": "5-6",
+          "count": 2,
+          "rate": 0.0215
+        },
+        {
+          "range": "6-7",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "7-8",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 1,
+          "perfectCount": 18,
+          "min": 0,
+          "max": 10,
+          "mean": 8.6667,
+          "median": 9,
+          "stdev": 1.798,
+          "p10": 7.2,
+          "p25": 9,
+          "p75": 9,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 91,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 3,
+          "mean": 0.043,
+          "median": 0,
+          "stdev": 0.3251,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 93,
+          "applicableCount": 71,
+          "naCount": 22,
+          "naRate": 0.2366,
+          "zeroCount": 47,
+          "perfectCount": 7,
+          "min": 0,
+          "max": 10,
+          "mean": 2.169,
+          "median": 0,
+          "stdev": 3.5245,
+          "p10": 0,
+          "p25": 0,
+          "p75": 3.5,
+          "p90": 9
+        },
+        "CII-Best-Practices": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 93,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 48,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 5,
+          "mean": 0.8387,
+          "median": 0,
+          "stdev": 1.11,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 2
+        },
+        "Contributors": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 26,
+          "perfectCount": 43,
+          "min": 0,
+          "max": 10,
+          "mean": 5.6882,
+          "median": 6,
+          "stdev": 4.3378,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 93,
+          "applicableCount": 55,
+          "naCount": 38,
+          "naRate": 0.4086,
+          "zeroCount": 0,
+          "perfectCount": 55,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 91,
+          "perfectCount": 2,
+          "min": 0,
+          "max": 10,
+          "mean": 0.2151,
+          "median": 0,
+          "stdev": 1.4506,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Fuzzing": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 93,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 3,
+          "perfectCount": 64,
+          "min": 0,
+          "max": 10,
+          "mean": 9.3978,
+          "median": 10,
+          "stdev": 1.7728,
+          "p10": 9,
+          "p25": 9,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 26,
+          "perfectCount": 39,
+          "min": 0,
+          "max": 10,
+          "mean": 5.6989,
+          "median": 6,
+          "stdev": 4.295,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 93,
+          "applicableCount": 22,
+          "naCount": 71,
+          "naRate": 0.7634,
+          "zeroCount": 0,
+          "perfectCount": 22,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 93,
+          "applicableCount": 57,
+          "naCount": 36,
+          "naRate": 0.3871,
+          "zeroCount": 55,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.193,
+          "median": 0,
+          "stdev": 1.3171,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "SAST": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 90,
+          "perfectCount": 2,
+          "min": 0,
+          "max": 10,
+          "mean": 0.2688,
+          "median": 0,
+          "stdev": 1.532,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 92,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 4,
+          "mean": 0.043,
+          "median": 0,
+          "stdev": 0.4125,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 93,
+          "applicableCount": 51,
+          "naCount": 42,
+          "naRate": 0.4516,
+          "zeroCount": 49,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 0.3137,
+          "median": 0,
+          "stdev": 1.5529,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 93,
+          "applicableCount": 55,
+          "naCount": 38,
+          "naRate": 0.4086,
+          "zeroCount": 49,
+          "perfectCount": 2,
+          "min": 0,
+          "max": 10,
+          "mean": 1.0182,
+          "median": 0,
+          "stdev": 2.9139,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 5.4
+        },
+        "Vulnerabilities": {
+          "totalCount": 93,
+          "applicableCount": 93,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 1,
+          "perfectCount": 92,
+          "min": 0,
+          "max": 10,
+          "mean": 9.8925,
+          "median": 10,
+          "stdev": 1.0314,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "RaphiMC/ImmediatelyFast",
+          "score": 5.8
+        },
+        {
+          "repo": "MrCrayfish/Configured",
+          "score": 5.1
+        },
+        {
+          "repo": "tr7zw/NotEnoughAnimations",
+          "score": 4.6
+        },
+        {
+          "repo": "Glitchfiend/BiomesOPlenty",
+          "score": 4.6
+        },
+        {
+          "repo": "CaffeineMC/sodium",
+          "score": 4.5
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "blackd/libIPN",
+          "score": 2
+        },
+        {
+          "repo": "SuperMartijn642/SuperMartijn642sConfigLib",
+          "score": 2.1
+        },
+        {
+          "repo": "blackd/Inventory-Profiles",
+          "score": 2.1
+        },
+        {
+          "repo": "PaperMC/Starlight",
+          "score": 2.3
+        },
+        {
+          "repo": "Fuzss/visualworkbench",
+          "score": 2.3
+        }
+      ],
+      "missingScorecardCount": 7,
+      "missingScorecardSample": [
+        "FabricMC/fabric",
+        "Snownee/Jade",
+        "Jerozgen/LanguageReload",
+        "RelativityMC/C2ME-fabric",
+        "opekope2/OptiGUI",
+        "Jaredlll08/Controlling",
+        "Jaredlll08/Searchables"
+      ]
+    },
+    {
+      "platform": "obsidian",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 100,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 84,
+      "coverageRate": 0.84,
+      "scorecardDateRange": {
+        "min": "2025-12-17T21:10:59.000Z",
+        "max": "2025-12-17T22:01:55.000Z"
+      },
+      "scoreStats": {
+        "count": 84,
+        "min": 1.3,
+        "max": 5.2,
+        "mean": 2.7821,
+        "median": 2.75,
+        "stdev": 0.7007,
+        "p10": 2.03,
+        "p25": 2.375,
+        "p75": 3.1,
+        "p90": 3.67
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 8,
+          "rate": 0.0952
+        },
+        {
+          "range": "2-3",
+          "count": 46,
+          "rate": 0.5476
+        },
+        {
+          "range": "3-4",
+          "count": 26,
+          "rate": 0.3095
+        },
+        {
+          "range": "4-5",
+          "count": 3,
+          "rate": 0.0357
+        },
+        {
+          "range": "5-6",
+          "count": 1,
+          "rate": 0.0119
+        },
+        {
+          "range": "6-7",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "7-8",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 84,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 83,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 3,
+          "mean": 0.0357,
+          "median": 0,
+          "stdev": 0.3254,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 84,
+          "applicableCount": 66,
+          "naCount": 18,
+          "naRate": 0.2143,
+          "zeroCount": 54,
+          "perfectCount": 4,
+          "min": 0,
+          "max": 10,
+          "mean": 1.0152,
+          "median": 0,
+          "stdev": 2.6024,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 4.5
+        },
+        "CII-Best-Practices": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 84,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 46,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 1.131,
+          "median": 0,
+          "stdev": 1.8373,
+          "p10": 0,
+          "p25": 0,
+          "p75": 2,
+          "p90": 3
+        },
+        "Contributors": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 23,
+          "perfectCount": 25,
+          "min": 0,
+          "max": 10,
+          "mean": 4.5119,
+          "median": 3,
+          "stdev": 3.9385,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 84,
+          "applicableCount": 63,
+          "naCount": 21,
+          "naRate": 0.25,
+          "zeroCount": 0,
+          "perfectCount": 63,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 75,
+          "perfectCount": 9,
+          "min": 0,
+          "max": 10,
+          "mean": 1.0714,
+          "median": 0,
+          "stdev": 3.0929,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 7
+        },
+        "Fuzzing": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 83,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.119,
+          "median": 0,
+          "stdev": 1.0846,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 13,
+          "perfectCount": 70,
+          "min": 0,
+          "max": 10,
+          "mean": 8.4405,
+          "median": 10,
+          "stdev": 3.6133,
+          "p10": 0,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 54,
+          "perfectCount": 16,
+          "min": 0,
+          "max": 10,
+          "mean": 2.5119,
+          "median": 0,
+          "stdev": 3.9716,
+          "p10": 0,
+          "p25": 0,
+          "p75": 4.25,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 84,
+          "applicableCount": 0,
+          "naCount": 84,
+          "naRate": 1,
+          "zeroCount": 0,
+          "perfectCount": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "stdev": null,
+          "p10": null,
+          "p25": null,
+          "p75": null,
+          "p90": null
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 84,
+          "applicableCount": 63,
+          "naCount": 21,
+          "naRate": 0.25,
+          "zeroCount": 51,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 4,
+          "mean": 0.3492,
+          "median": 0,
+          "stdev": 0.8574,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 1
+        },
+        "SAST": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 82,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 0.1786,
+          "median": 0,
+          "stdev": 1.146,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 84,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 84,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 84,
+          "applicableCount": 63,
+          "naCount": 21,
+          "naRate": 0.25,
+          "zeroCount": 60,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 9,
+          "mean": 0.4286,
+          "median": 0,
+          "stdev": 1.9166,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Vulnerabilities": {
+          "totalCount": 84,
+          "applicableCount": 84,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 21,
+          "perfectCount": 29,
+          "min": 0,
+          "max": 10,
+          "mean": 5.0833,
+          "median": 4.5,
+          "stdev": 4.2151,
+          "p10": 0,
+          "p25": 0.75,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "zsviczian/obsidian-excalidraw-plugin",
+          "score": 5.2
+        },
+        {
+          "repo": "platers/obsidian-linter",
+          "score": 4.7
+        },
+        {
+          "repo": "vrtmrz/obsidian-livesync",
+          "score": 4.4
+        },
+        {
+          "repo": "FlorianWoelki/obsidian-iconize",
+          "score": 4
+        },
+        {
+          "repo": "artisticat1/obsidian-latex-suite",
+          "score": 3.9
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "Reocin/obsidian-markdown-formatting-assistant-plugin",
+          "score": 1.3
+        },
+        {
+          "repo": "aidenlx/obsidian-icon-shortcodes",
+          "score": 1.4
+        },
+        {
+          "repo": "tnichols217/obsidian-columns",
+          "score": 1.6
+        },
+        {
+          "repo": "nathonius/obsidian-collapse-all",
+          "score": 1.6
+        },
+        {
+          "repo": "visini/obsidian-icons-plugin",
+          "score": 1.6
+        }
+      ],
+      "missingScorecardCount": 16,
+      "missingScorecardSample": [
+        "hans/obsidian-citation-plugin",
+        "lumoe/obsidian-rollover-daily-todos",
+        "gavvvr/obsidian-imgur-plugin",
+        "pyrochlore/obsidian-tracker",
+        "st3v3nmw/obsidian-spaced-repetition",
+        "hadynz/obsidian-kindle-plugin",
+        "obsidian-tasks-group/obsidian-tasks",
+        "George-debug/obsidian-timeline",
+        "uphy/obsidian-reminder",
+        "Taitava/obsidian-shellcommands"
+      ]
+    },
+    {
+      "platform": "sublime",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 100,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 92,
+      "coverageRate": 0.92,
+      "scorecardDateRange": {
+        "min": "2025-12-17T22:02:26.000Z",
+        "max": "2025-12-17T22:49:48.000Z"
+      },
+      "scoreStats": {
+        "count": 92,
+        "min": 1.2,
+        "max": 4.4,
+        "mean": 2.8076,
+        "median": 2.7,
+        "stdev": 0.523,
+        "p10": 2.2,
+        "p25": 2.6,
+        "p75": 3,
+        "p90": 3.49
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 3,
+          "rate": 0.0326
+        },
+        {
+          "range": "2-3",
+          "count": 62,
+          "rate": 0.6739
+        },
+        {
+          "range": "3-4",
+          "count": 24,
+          "rate": 0.2609
+        },
+        {
+          "range": "4-5",
+          "count": 3,
+          "rate": 0.0326
+        },
+        {
+          "range": "5-6",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "6-7",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "7-8",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 89,
+          "min": 8,
+          "max": 10,
+          "mean": 9.9565,
+          "median": 10,
+          "stdev": 0.2516,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 91,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 3,
+          "mean": 0.0326,
+          "median": 0,
+          "stdev": 0.3111,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 92,
+          "applicableCount": 81,
+          "naCount": 11,
+          "naRate": 0.1196,
+          "zeroCount": 73,
+          "perfectCount": 4,
+          "min": 0,
+          "max": 10,
+          "mean": 0.6543,
+          "median": 0,
+          "stdev": 2.278,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CII-Best-Practices": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 92,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 32,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 1.8587,
+          "median": 1,
+          "stdev": 2.014,
+          "p10": 0,
+          "p25": 0,
+          "p75": 3,
+          "p90": 4
+        },
+        "Contributors": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 21,
+          "perfectCount": 37,
+          "min": 0,
+          "max": 10,
+          "mean": 5.587,
+          "median": 6,
+          "stdev": 4.0544,
+          "p10": 0,
+          "p25": 3,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 92,
+          "applicableCount": 5,
+          "naCount": 87,
+          "naRate": 0.9457,
+          "zeroCount": 0,
+          "perfectCount": 5,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 90,
+          "perfectCount": 2,
+          "min": 0,
+          "max": 10,
+          "mean": 0.2174,
+          "median": 0,
+          "stdev": 1.4583,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Fuzzing": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 92,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 35,
+          "perfectCount": 53,
+          "min": 0,
+          "max": 10,
+          "mean": 6.1522,
+          "median": 10,
+          "stdev": 4.8251,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 87,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.25,
+          "median": 0,
+          "stdev": 1.2303,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Packaging": {
+          "totalCount": 92,
+          "applicableCount": 0,
+          "naCount": 92,
+          "naRate": 1,
+          "zeroCount": 0,
+          "perfectCount": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "stdev": null,
+          "p10": null,
+          "p25": null,
+          "p75": null,
+          "p90": null
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 92,
+          "applicableCount": 6,
+          "naCount": 86,
+          "naRate": 0.9348,
+          "zeroCount": 6,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "SAST": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 92,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 92,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 92,
+          "applicableCount": 2,
+          "naCount": 90,
+          "naRate": 0.9783,
+          "zeroCount": 2,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 92,
+          "applicableCount": 5,
+          "naCount": 87,
+          "naRate": 0.9457,
+          "zeroCount": 5,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Vulnerabilities": {
+          "totalCount": 92,
+          "applicableCount": 92,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 2,
+          "perfectCount": 86,
+          "min": 0,
+          "max": 10,
+          "mean": 9.6304,
+          "median": 10,
+          "stdev": 1.6986,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "SublimeText/PowerShell",
+          "score": 4.4
+        },
+        {
+          "repo": "jonlabelle/SublimeJsPrettier",
+          "score": 4.3
+        },
+        {
+          "repo": "SublimeText/material-theme",
+          "score": 4
+        },
+        {
+          "repo": "squ1b3r/Djaneiro",
+          "score": 3.9
+        },
+        {
+          "repo": "zam1024t/LocalizedMenu",
+          "score": 3.8
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "csscomb/sublime-csscomb",
+          "score": 1.2
+        },
+        {
+          "repo": "victorporof/Sublime-HTMLPrettify",
+          "score": 1.3
+        },
+        {
+          "repo": "ThomasKliszowski/json_reindent",
+          "score": 1.9
+        },
+        {
+          "repo": "titoBouzout/SideBarEnhancements",
+          "score": 2.2
+        },
+        {
+          "repo": "eliquious/Python-Auto-Complete",
+          "score": 2.2
+        }
+      ],
+      "missingScorecardCount": 8,
+      "missingScorecardSample": [
+        "SublimeText/AFileIcon",
+        "akalongman/sublimetext-codeformatter",
+        "ryboe/CSS3",
+        "Benvie/JavaScriptNext.tmLanguage",
+        "SublimeText/Less",
+        "benmatselby/sublime-phpcs",
+        "driade/phpfmt8",
+        "facebookarchive/sublime-react"
+      ]
+    },
+    {
+      "platform": "vscode",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 90,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 56,
+      "coverageRate": 0.6222,
+      "scorecardDateRange": {
+        "min": "2025-12-17T22:51:58.000Z",
+        "max": "2025-12-17T23:57:47.000Z"
+      },
+      "scoreStats": {
+        "count": 56,
+        "min": 1.1,
+        "max": 7.7,
+        "mean": 4.2964,
+        "median": 3.8,
+        "stdev": 1.6764,
+        "p10": 2.45,
+        "p25": 3.075,
+        "p75": 5.825,
+        "p90": 6.65
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 2,
+          "rate": 0.0357
+        },
+        {
+          "range": "2-3",
+          "count": 11,
+          "rate": 0.1964
+        },
+        {
+          "range": "3-4",
+          "count": 18,
+          "rate": 0.3214
+        },
+        {
+          "range": "4-5",
+          "count": 4,
+          "rate": 0.0714
+        },
+        {
+          "range": "5-6",
+          "count": 8,
+          "rate": 0.1429
+        },
+        {
+          "range": "6-7",
+          "count": 10,
+          "rate": 0.1786
+        },
+        {
+          "range": "7-8",
+          "count": 3,
+          "rate": 0.0536
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 51,
+          "min": 8,
+          "max": 10,
+          "mean": 9.875,
+          "median": 10,
+          "stdev": 0.4252,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 32,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 2.625,
+          "median": 0,
+          "stdev": 3.4308,
+          "p10": 0,
+          "p25": 0,
+          "p75": 6.5,
+          "p90": 8
+        },
+        "CI-Tests": {
+          "totalCount": 56,
+          "applicableCount": 54,
+          "naCount": 2,
+          "naRate": 0.0357,
+          "zeroCount": 35,
+          "perfectCount": 11,
+          "min": 0,
+          "max": 10,
+          "mean": 2.8519,
+          "median": 0,
+          "stdev": 4.1962,
+          "p10": 0,
+          "p25": 0,
+          "p75": 6.75,
+          "p90": 10
+        },
+        "CII-Best-Practices": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 56,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 56,
+          "applicableCount": 55,
+          "naCount": 1,
+          "naRate": 0.0179,
+          "zeroCount": 13,
+          "perfectCount": 12,
+          "min": 0,
+          "max": 10,
+          "mean": 4.3818,
+          "median": 3,
+          "stdev": 3.9657,
+          "p10": 0,
+          "p25": 1,
+          "p75": 9,
+          "p90": 10
+        },
+        "Contributors": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 4,
+          "perfectCount": 34,
+          "min": 0,
+          "max": 10,
+          "mean": 7.4107,
+          "median": 10,
+          "stdev": 3.4732,
+          "p10": 3,
+          "p25": 3,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 56,
+          "applicableCount": 38,
+          "naCount": 18,
+          "naRate": 0.3214,
+          "zeroCount": 0,
+          "perfectCount": 38,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 19,
+          "perfectCount": 37,
+          "min": 0,
+          "max": 10,
+          "mean": 6.6071,
+          "median": 10,
+          "stdev": 4.7347,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Fuzzing": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 56,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 1,
+          "perfectCount": 44,
+          "min": 0,
+          "max": 10,
+          "mean": 9.625,
+          "median": 10,
+          "stdev": 1.357,
+          "p10": 9,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 31,
+          "perfectCount": 17,
+          "min": 0,
+          "max": 10,
+          "mean": 3.6071,
+          "median": 0,
+          "stdev": 4.5461,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 56,
+          "applicableCount": 0,
+          "naCount": 56,
+          "naRate": 1,
+          "zeroCount": 0,
+          "perfectCount": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "stdev": null,
+          "p10": null,
+          "p25": null,
+          "p75": null,
+          "p90": null
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 56,
+          "applicableCount": 39,
+          "naCount": 17,
+          "naRate": 0.3036,
+          "zeroCount": 26,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 1.0513,
+          "median": 0,
+          "stdev": 2.264,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 4
+        },
+        "SAST": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 47,
+          "perfectCount": 3,
+          "min": 0,
+          "max": 10,
+          "mean": 1.2321,
+          "median": 0,
+          "stdev": 3.053,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 8
+        },
+        "Security-Policy": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 33,
+          "perfectCount": 23,
+          "min": 0,
+          "max": 10,
+          "mean": 4.1071,
+          "median": 0,
+          "stdev": 4.9196,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Signed-Releases": {
+          "totalCount": 56,
+          "applicableCount": 29,
+          "naCount": 27,
+          "naRate": 0.4821,
+          "zeroCount": 29,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 56,
+          "applicableCount": 38,
+          "naCount": 18,
+          "naRate": 0.3214,
+          "zeroCount": 33,
+          "perfectCount": 2,
+          "min": 0,
+          "max": 10,
+          "mean": 1.1842,
+          "median": 0,
+          "stdev": 3.0595,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 8
+        },
+        "Vulnerabilities": {
+          "totalCount": 56,
+          "applicableCount": 56,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 20,
+          "perfectCount": 13,
+          "min": 0,
+          "max": 10,
+          "mean": 4.5893,
+          "median": 4,
+          "stdev": 4.2375,
+          "p10": 0,
+          "p25": 0,
+          "p75": 9,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "dotnet/vscode-dotnet-runtime",
+          "score": 7.7
+        },
+        {
+          "repo": "microsoft/vscode-python-debugger",
+          "score": 7.6
+        },
+        {
+          "repo": "PowerShell/vscode-powershell",
+          "score": 7.3
+        },
+        {
+          "repo": "microsoft/vscode-copilot-chat",
+          "score": 6.9
+        },
+        {
+          "repo": "Microsoft/vscode-maven",
+          "score": 6.9
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "SudoKillMe/vscode-extensions-open-in-browser",
+          "score": 1.1
+        },
+        {
+          "repo": "aaron-bond/better-comments",
+          "score": 1.4
+        },
+        {
+          "repo": "vscode-django/vscode-django",
+          "score": 2
+        },
+        {
+          "repo": "DonJayamanne/gitHistoryVSCode",
+          "score": 2.3
+        },
+        {
+          "repo": "ChristianKohler/NpmIntellisense",
+          "score": 2.4
+        }
+      ],
+      "missingScorecardCount": 34,
+      "missingScorecardSample": [
+        "Microsoft/vscode-python",
+        "microsoft/pylance-release",
+        "Microsoft/vscode-jupyter",
+        "Microsoft/vscode-cpptools",
+        "Microsoft/vscode-jupyter-cell-tags",
+        "redhat-developer/vscode-java",
+        "microsoft/vscode-docker",
+        "microsoft/vscode-cpptools",
+        "Microsoft/vscode-remote-release",
+        "dotnet/vscode-csharp"
+      ]
+    },
+    {
+      "platform": "wordpress",
+      "top100Total": 100,
+      "top100WithRepo": 100,
+      "uniqueRepoCount": 91,
+      "missingRepoCount": 0,
+      "nonGithubRepoCount": 0,
+      "scorecardMatches": 71,
+      "coverageRate": 0.7802,
+      "scorecardDateRange": {
+        "min": "2025-12-17T23:59:06.000Z",
+        "max": "2025-12-18T00:49:01.000Z"
+      },
+      "scoreStats": {
+        "count": 71,
+        "min": 1,
+        "max": 5.9,
+        "mean": 2.9254,
+        "median": 2.7,
+        "stdev": 0.9288,
+        "p10": 2.2,
+        "p25": 2.4,
+        "p75": 3.4,
+        "p90": 4
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "1-2",
+          "count": 6,
+          "rate": 0.0845
+        },
+        {
+          "range": "2-3",
+          "count": 39,
+          "rate": 0.5493
+        },
+        {
+          "range": "3-4",
+          "count": 17,
+          "rate": 0.2394
+        },
+        {
+          "range": "4-5",
+          "count": 7,
+          "rate": 0.0986
+        },
+        {
+          "range": "5-6",
+          "count": 2,
+          "rate": 0.0282
+        },
+        {
+          "range": "6-7",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "7-8",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 0,
+          "perfectCount": 70,
+          "min": 1,
+          "max": 10,
+          "mean": 9.8732,
+          "median": 10,
+          "stdev": 1.0606,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 66,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 3,
+          "mean": 0.2113,
+          "median": 0,
+          "stdev": 0.7676,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 71,
+          "applicableCount": 50,
+          "naCount": 21,
+          "naRate": 0.2958,
+          "zeroCount": 39,
+          "perfectCount": 6,
+          "min": 0,
+          "max": 10,
+          "mean": 1.44,
+          "median": 0,
+          "stdev": 3.269,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 10
+        },
+        "CII-Best-Practices": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 71,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 39,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 1.0845,
+          "median": 0,
+          "stdev": 1.8746,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 3
+        },
+        "Contributors": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 18,
+          "perfectCount": 26,
+          "min": 0,
+          "max": 10,
+          "mean": 5.1408,
+          "median": 3,
+          "stdev": 4.0812,
+          "p10": 0,
+          "p25": 1.5,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 71,
+          "applicableCount": 10,
+          "naCount": 61,
+          "naRate": 0.8592,
+          "zeroCount": 0,
+          "perfectCount": 10,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 53,
+          "perfectCount": 18,
+          "min": 0,
+          "max": 10,
+          "mean": 2.5352,
+          "median": 0,
+          "stdev": 4.3503,
+          "p10": 0,
+          "p25": 0,
+          "p75": 5,
+          "p90": 10
+        },
+        "Fuzzing": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 71,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 31,
+          "perfectCount": 38,
+          "min": 0,
+          "max": 10,
+          "mean": 5.6056,
+          "median": 10,
+          "stdev": 4.9376,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 50,
+          "perfectCount": 8,
+          "min": 0,
+          "max": 10,
+          "mean": 2.0704,
+          "median": 0,
+          "stdev": 3.636,
+          "p10": 0,
+          "p25": 0,
+          "p75": 2,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 71,
+          "applicableCount": 0,
+          "naCount": 71,
+          "naRate": 1,
+          "zeroCount": 0,
+          "perfectCount": 0,
+          "min": null,
+          "max": null,
+          "mean": null,
+          "median": null,
+          "stdev": null,
+          "p10": null,
+          "p25": null,
+          "p75": null,
+          "p90": null
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 71,
+          "applicableCount": 13,
+          "naCount": 58,
+          "naRate": 0.8169,
+          "zeroCount": 10,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 4,
+          "mean": 0.6154,
+          "median": 0,
+          "stdev": 1.2733,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 2.6
+        },
+        "SAST": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 70,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 7,
+          "mean": 0.0986,
+          "median": 0,
+          "stdev": 0.8249,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 70,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.1408,
+          "median": 0,
+          "stdev": 1.1784,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 71,
+          "applicableCount": 13,
+          "naCount": 58,
+          "naRate": 0.8169,
+          "zeroCount": 13,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 71,
+          "applicableCount": 10,
+          "naCount": 61,
+          "naRate": 0.8592,
+          "zeroCount": 10,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "stdev": 0,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Vulnerabilities": {
+          "totalCount": 71,
+          "applicableCount": 71,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 15,
+          "perfectCount": 49,
+          "min": 0,
+          "max": 10,
+          "mean": 7.3803,
+          "median": 10,
+          "stdev": 4.1567,
+          "p10": 0,
+          "p25": 4,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "Codeinwp/otter-blocks",
+          "score": 5.9
+        },
+        {
+          "repo": "johnbillion/query-monitor",
+          "score": 5.8
+        },
+        {
+          "repo": "uhm-coe/insert-pages",
+          "score": 4.7
+        },
+        {
+          "repo": "Codeinwp/wp-menu-icons",
+          "score": 4.6
+        },
+        {
+          "repo": "picandocodigo/List-Category-Posts",
+          "score": 4.4
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "mwilliamson/mammoth-wordpress-plugin",
+          "score": 1
+        },
+        {
+          "repo": "cyrillbolliger/conditional-featured-image",
+          "score": 1
+        },
+        {
+          "repo": "philbuchanan/Accordion-Blocks",
+          "score": 1.1
+        },
+        {
+          "repo": "miya0001/simple-map",
+          "score": 1.3
+        },
+        {
+          "repo": "awesomemotive/wp-mail-smtp",
+          "score": 1.8
+        }
+      ],
+      "missingScorecardCount": 20,
+      "missingScorecardSample": [
+        "WordPress/gutenberg",
+        "WordPress/performance",
+        "torounit/custom-post-type-permalinks",
+        "10up/ads-txt",
+        "vektor-inc/vk-block-patterns",
+        "vektor-inc/vk-blocks",
+        "ocean90/public-post-preview",
+        "yoast/yoast-test-helper",
+        "swissspidy/performant-translations",
+        "ConnectThink/WP-SCSS"
+      ]
+    }
+  ],
+  "overall": {
+    "platformEntryTotals": {
+      "totalTop100Entries": 900,
+      "totalEntriesWithRepo": 900,
+      "totalScorecardMatches": 661,
+      "coverageRate": 0.7344
+    },
+    "uniqueRepos": {
+      "repoCount": 822,
+      "scorecardMatches": 645,
+      "coverageRate": 0.7847,
+      "scorecardDateRange": {
+        "min": "2025-12-17T17:33:38.000Z",
+        "max": "2025-12-18T00:49:01.000Z"
+      },
+      "scoreStats": {
+        "count": 645,
+        "min": 0.9,
+        "max": 7.8,
+        "mean": 3.2084,
+        "median": 2.9,
+        "stdev": 1.0767,
+        "p10": 2.2,
+        "p25": 2.6,
+        "p75": 3.7,
+        "p90": 4.5
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 1,
+          "rate": 0.0016
+        },
+        {
+          "range": "1-2",
+          "count": 36,
+          "rate": 0.0558
+        },
+        {
+          "range": "2-3",
+          "count": 286,
+          "rate": 0.4434
+        },
+        {
+          "range": "3-4",
+          "count": 200,
+          "rate": 0.3101
+        },
+        {
+          "range": "4-5",
+          "count": 77,
+          "rate": 0.1194
+        },
+        {
+          "range": "5-6",
+          "count": 24,
+          "rate": 0.0372
+        },
+        {
+          "range": "6-7",
+          "count": 16,
+          "rate": 0.0248
+        },
+        {
+          "range": "7-8",
+          "count": 5,
+          "rate": 0.0078
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 1,
+          "perfectCount": 519,
+          "min": 0,
+          "max": 10,
+          "mean": 9.6667,
+          "median": 10,
+          "stdev": 1.0457,
+          "p10": 9,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 587,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 9,
+          "mean": 0.4341,
+          "median": 0,
+          "stdev": 1.5494,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 645,
+          "applicableCount": 500,
+          "naCount": 145,
+          "naRate": 0.2248,
+          "zeroCount": 367,
+          "perfectCount": 60,
+          "min": 0,
+          "max": 10,
+          "mean": 1.884,
+          "median": 0,
+          "stdev": 3.5342,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 10
+        },
+        "CII-Best-Practices": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 643,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 2,
+          "mean": 0.0062,
+          "median": 0,
+          "stdev": 0.1112,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 645,
+          "applicableCount": 644,
+          "naCount": 1,
+          "naRate": 0.0016,
+          "zeroCount": 318,
+          "perfectCount": 21,
+          "min": 0,
+          "max": 10,
+          "mean": 1.5388,
+          "median": 1,
+          "stdev": 2.4182,
+          "p10": 0,
+          "p25": 0,
+          "p75": 2,
+          "p90": 5
+        },
+        "Contributors": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 175,
+          "perfectCount": 262,
+          "min": 0,
+          "max": 10,
+          "mean": 5.3318,
+          "median": 6,
+          "stdev": 4.2208,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 645,
+          "applicableCount": 290,
+          "naCount": 355,
+          "naRate": 0.5504,
+          "zeroCount": 4,
+          "perfectCount": 286,
+          "min": 0,
+          "max": 10,
+          "mean": 9.8621,
+          "median": 10,
+          "stdev": 1.1663,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 522,
+          "perfectCount": 123,
+          "min": 0,
+          "max": 10,
+          "mean": 1.907,
+          "median": 0,
+          "stdev": 3.9285,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 10
+        },
+        "Fuzzing": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 644,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.0155,
+          "median": 0,
+          "stdev": 0.3934,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 109,
+          "perfectCount": 469,
+          "min": 0,
+          "max": 10,
+          "mean": 8.2062,
+          "median": 10,
+          "stdev": 3.7129,
+          "p10": 0,
+          "p25": 9,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 385,
+          "perfectCount": 158,
+          "min": 0,
+          "max": 10,
+          "mean": 3.1039,
+          "median": 0,
+          "stdev": 4.2993,
+          "p10": 0,
+          "p25": 0,
+          "p75": 9,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 645,
+          "applicableCount": 31,
+          "naCount": 614,
+          "naRate": 0.9519,
+          "zeroCount": 0,
+          "perfectCount": 31,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 645,
+          "applicableCount": 300,
+          "naCount": 345,
+          "naRate": 0.5349,
+          "zeroCount": 240,
+          "perfectCount": 3,
+          "min": 0,
+          "max": 10,
+          "mean": 0.66,
+          "median": 0,
+          "stdev": 1.7198,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 3
+        },
+        "SAST": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 616,
+          "perfectCount": 9,
+          "min": 0,
+          "max": 10,
+          "mean": 0.3457,
+          "median": 0,
+          "stdev": 1.6603,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 601,
+          "perfectCount": 40,
+          "min": 0,
+          "max": 10,
+          "mean": 0.6682,
+          "median": 0,
+          "stdev": 2.4812,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 645,
+          "applicableCount": 326,
+          "naCount": 319,
+          "naRate": 0.4946,
+          "zeroCount": 323,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 0.0736,
+          "median": 0,
+          "stdev": 0.7639,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 645,
+          "applicableCount": 290,
+          "naCount": 355,
+          "naRate": 0.5504,
+          "zeroCount": 259,
+          "perfectCount": 12,
+          "min": 0,
+          "max": 10,
+          "mean": 0.9862,
+          "median": 0,
+          "stdev": 2.8599,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 8
+        },
+        "Vulnerabilities": {
+          "totalCount": 645,
+          "applicableCount": 645,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 119,
+          "perfectCount": 414,
+          "min": 0,
+          "max": 10,
+          "mean": 7.3132,
+          "median": 10,
+          "stdev": 4.0685,
+          "p10": 0,
+          "p25": 4,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "flutter/flutter-intellij",
+          "score": 7.8
+        },
+        {
+          "repo": "dotnet/vscode-dotnet-runtime",
+          "score": 7.7
+        },
+        {
+          "repo": "microsoft/vscode-python-debugger",
+          "score": 7.6
+        },
+        {
+          "repo": "PowerShell/vscode-powershell",
+          "score": 7.3
+        },
+        {
+          "repo": "AprilSylph/XKit-Rewritten",
+          "score": 7.1
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "krasa/EclipseCodeFormatter",
+          "score": 0.9
+        },
+        {
+          "repo": "mwilliamson/mammoth-wordpress-plugin",
+          "score": 1
+        },
+        {
+          "repo": "cyrillbolliger/conditional-featured-image",
+          "score": 1
+        },
+        {
+          "repo": "philbuchanan/Accordion-Blocks",
+          "score": 1.1
+        },
+        {
+          "repo": "SudoKillMe/vscode-extensions-open-in-browser",
+          "score": 1.1
+        }
+      ]
+    },
+    "platformEntries": {
+      "entryCount": 661,
+      "scorecardDateRange": {
+        "min": "2025-12-17T17:33:38.000Z",
+        "max": "2025-12-18T00:49:01.000Z"
+      },
+      "scoreStats": {
+        "count": 661,
+        "min": 0.9,
+        "max": 7.8,
+        "mean": 3.211,
+        "median": 3,
+        "stdev": 1.0795,
+        "p10": 2.2,
+        "p25": 2.6,
+        "p75": 3.7,
+        "p90": 4.5
+      },
+      "scoreHistogram": [
+        {
+          "range": "0-1",
+          "count": 1,
+          "rate": 0.0015
+        },
+        {
+          "range": "1-2",
+          "count": 37,
+          "rate": 0.056
+        },
+        {
+          "range": "2-3",
+          "count": 292,
+          "rate": 0.4418
+        },
+        {
+          "range": "3-4",
+          "count": 205,
+          "rate": 0.3101
+        },
+        {
+          "range": "4-5",
+          "count": 80,
+          "rate": 0.121
+        },
+        {
+          "range": "5-6",
+          "count": 24,
+          "rate": 0.0363
+        },
+        {
+          "range": "6-7",
+          "count": 17,
+          "rate": 0.0257
+        },
+        {
+          "range": "7-8",
+          "count": 5,
+          "rate": 0.0076
+        },
+        {
+          "range": "8-9",
+          "count": 0,
+          "rate": 0
+        },
+        {
+          "range": "9-10",
+          "count": 0,
+          "rate": 0
+        }
+      ],
+      "checkStats": {
+        "Binary-Artifacts": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 1,
+          "perfectCount": 533,
+          "min": 0,
+          "max": 10,
+          "mean": 9.6672,
+          "median": 10,
+          "stdev": 1.0442,
+          "p10": 9,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Branch-Protection": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 601,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 9,
+          "mean": 0.4357,
+          "median": 0,
+          "stdev": 1.5453,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "CI-Tests": {
+          "totalCount": 661,
+          "applicableCount": 510,
+          "naCount": 151,
+          "naRate": 0.2284,
+          "zeroCount": 374,
+          "perfectCount": 62,
+          "min": 0,
+          "max": 10,
+          "mean": 1.898,
+          "median": 0,
+          "stdev": 3.5476,
+          "p10": 0,
+          "p25": 0,
+          "p75": 1,
+          "p90": 10
+        },
+        "CII-Best-Practices": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 658,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 2,
+          "mean": 0.0091,
+          "median": 0,
+          "stdev": 0.1344,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Code-Review": {
+          "totalCount": 661,
+          "applicableCount": 660,
+          "naCount": 1,
+          "naRate": 0.0015,
+          "zeroCount": 330,
+          "perfectCount": 21,
+          "min": 0,
+          "max": 10,
+          "mean": 1.5182,
+          "median": 0.5,
+          "stdev": 2.4111,
+          "p10": 0,
+          "p25": 0,
+          "p75": 2,
+          "p90": 5
+        },
+        "Contributors": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 182,
+          "perfectCount": 268,
+          "min": 0,
+          "max": 10,
+          "mean": 5.3162,
+          "median": 6,
+          "stdev": 4.2299,
+          "p10": 0,
+          "p25": 0,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dangerous-Workflow": {
+          "totalCount": 661,
+          "applicableCount": 297,
+          "naCount": 364,
+          "naRate": 0.5507,
+          "zeroCount": 4,
+          "perfectCount": 293,
+          "min": 0,
+          "max": 10,
+          "mean": 9.8653,
+          "median": 10,
+          "stdev": 1.1527,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Dependency-Update-Tool": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 535,
+          "perfectCount": 126,
+          "min": 0,
+          "max": 10,
+          "mean": 1.9062,
+          "median": 0,
+          "stdev": 3.9279,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 10
+        },
+        "Fuzzing": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 660,
+          "perfectCount": 1,
+          "min": 0,
+          "max": 10,
+          "mean": 0.0151,
+          "median": 0,
+          "stdev": 0.3887,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "License": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 112,
+          "perfectCount": 481,
+          "min": 0,
+          "max": 10,
+          "mean": 8.2027,
+          "median": 10,
+          "stdev": 3.7171,
+          "p10": 0,
+          "p25": 9,
+          "p75": 10,
+          "p90": 10
+        },
+        "Maintained": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 394,
+          "perfectCount": 165,
+          "min": 0,
+          "max": 10,
+          "mean": 3.1346,
+          "median": 0,
+          "stdev": 4.3209,
+          "p10": 0,
+          "p25": 0,
+          "p75": 9,
+          "p90": 10
+        },
+        "Packaging": {
+          "totalCount": 661,
+          "applicableCount": 31,
+          "naCount": 630,
+          "naRate": 0.9531,
+          "zeroCount": 0,
+          "perfectCount": 31,
+          "min": 10,
+          "max": 10,
+          "mean": 10,
+          "median": 10,
+          "stdev": 0,
+          "p10": 10,
+          "p25": 10,
+          "p75": 10,
+          "p90": 10
+        },
+        "Pinned-Dependencies": {
+          "totalCount": 661,
+          "applicableCount": 307,
+          "naCount": 354,
+          "naRate": 0.5356,
+          "zeroCount": 244,
+          "perfectCount": 3,
+          "min": 0,
+          "max": 10,
+          "mean": 0.658,
+          "median": 0,
+          "stdev": 1.7037,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 2.4
+        },
+        "SAST": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 632,
+          "perfectCount": 9,
+          "min": 0,
+          "max": 10,
+          "mean": 0.3374,
+          "median": 0,
+          "stdev": 1.6409,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Security-Policy": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 615,
+          "perfectCount": 42,
+          "min": 0,
+          "max": 10,
+          "mean": 0.6823,
+          "median": 0,
+          "stdev": 2.5061,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Signed-Releases": {
+          "totalCount": 661,
+          "applicableCount": 334,
+          "naCount": 327,
+          "naRate": 0.4947,
+          "zeroCount": 331,
+          "perfectCount": 0,
+          "min": 0,
+          "max": 8,
+          "mean": 0.0719,
+          "median": 0,
+          "stdev": 0.7548,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 0
+        },
+        "Token-Permissions": {
+          "totalCount": 661,
+          "applicableCount": 297,
+          "naCount": 364,
+          "naRate": 0.5507,
+          "zeroCount": 262,
+          "perfectCount": 14,
+          "min": 0,
+          "max": 10,
+          "mean": 1.0909,
+          "median": 0,
+          "stdev": 2.9941,
+          "p10": 0,
+          "p25": 0,
+          "p75": 0,
+          "p90": 8.4
+        },
+        "Vulnerabilities": {
+          "totalCount": 661,
+          "applicableCount": 661,
+          "naCount": 0,
+          "naRate": 0,
+          "zeroCount": 124,
+          "perfectCount": 421,
+          "min": 0,
+          "max": 10,
+          "mean": 7.2844,
+          "median": 10,
+          "stdev": 4.0847,
+          "p10": 0,
+          "p25": 4,
+          "p75": 10,
+          "p90": 10
+        }
+      },
+      "topRepos": [
+        {
+          "repo": "flutter/flutter-intellij",
+          "score": 7.8
+        },
+        {
+          "repo": "dotnet/vscode-dotnet-runtime",
+          "score": 7.7
+        },
+        {
+          "repo": "microsoft/vscode-python-debugger",
+          "score": 7.6
+        },
+        {
+          "repo": "PowerShell/vscode-powershell",
+          "score": 7.3
+        },
+        {
+          "repo": "AprilSylph/XKit-Rewritten",
+          "score": 7.1
+        }
+      ],
+      "bottomRepos": [
+        {
+          "repo": "krasa/EclipseCodeFormatter",
+          "score": 0.9
+        },
+        {
+          "repo": "mwilliamson/mammoth-wordpress-plugin",
+          "score": 1
+        },
+        {
+          "repo": "cyrillbolliger/conditional-featured-image",
+          "score": 1
+        },
+        {
+          "repo": "philbuchanan/Accordion-Blocks",
+          "score": 1.1
+        },
+        {
+          "repo": "SudoKillMe/vscode-extensions-open-in-browser",
+          "score": 1.1
+        }
+      ]
+    }
+  },
+  "unmatchedScorecards": {
+    "count": 0,
+    "sample": []
+  }
+}

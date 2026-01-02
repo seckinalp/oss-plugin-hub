@@ -1,0 +1,121 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.673Z",
+  "source": "PowerShell__vscode-powershell.osv.json",
+  "summary": {
+    "totalVulnerabilities": 1,
+    "uniqueVulnerabilities": 1,
+    "affectedPackages": 1,
+    "stalePackages": 1,
+    "stalePackagesOldFix": 0,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 1
+    },
+    "recentVulnerabilities": 1,
+    "hasFixAvailable": 1
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-869p-cjfg-cm3x",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-65945"
+      ],
+      "summary": "auth0/node-jws Improperly Verifies HMAC Signature",
+      "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions <=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+      "cwes": [
+        {
+          "id": "CWE-347",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-04T16:54:15Z",
+        "modifiedDate": "2025-12-05T12:36:54.291980Z",
+        "daysSincePublished": 13
+      },
+      "affected": {
+        "package": "jws",
+        "version": "3.2.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.2.2",
+        "fixedIn": "3.2.3",
+        "recommendation": "Upgrade to 3.2.3 or later",
+        "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+        "daysSinceFix": 12,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/auth0/node-jws"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "jws",
+      "currentVersion": "3.2.2",
+      "fixedIn": "3.2.3",
+      "vulnerabilities": [
+        "GHSA-869p-cjfg-cm3x"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.2.3 or later",
+      "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+      "daysSinceFix": 12,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "1 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "1 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

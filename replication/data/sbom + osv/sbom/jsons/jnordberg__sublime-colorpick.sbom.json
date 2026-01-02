@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.jnordberg/sublime-colorpick",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/6944d525-bb27-4137-9745-3c61b35c7b2d",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:26Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.jnordberg/sublime-colorpick",
+      "SPDXID": "SPDXRef-github-jnordberg-sublime-colorpick-master-a84aea",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/jnordberg/sublime-colorpick",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/jnordberg/sublime-colorpick@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-jnordberg-sublime-colorpick-master-a84aea",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

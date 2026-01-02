@@ -1,0 +1,133 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.thedarkcolour/KotlinForForge",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/0cbbd858-5505-41a1-8b5f-3c81d8ef1bfa",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:07Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/setup-gradle",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-setup-gradle-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/setup-gradle@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/wrapper-validation",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-wrapper-validation-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/wrapper-validation@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/cache",
+      "SPDXID": "SPDXRef-githubactions-actions-cache-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/cache@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.thedarkcolour/KotlinForForge",
+      "SPDXID": "SPDXRef-github-thedarkcolour-KotlinForForge-6.x-270243",
+      "versionInfo": "6.x",
+      "downloadLocation": "git+https://github.com/thedarkcolour/KotlinForForge",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-2.1",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/thedarkcolour/KotlinForForge@6.x"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-thedarkcolour-KotlinForForge-6.x-270243",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-setup-gradle-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thedarkcolour-KotlinForForge-6.x-270243",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-wrapper-validation-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thedarkcolour-KotlinForForge-6.x-270243",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-cache-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thedarkcolour-KotlinForForge-6.x-270243",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thedarkcolour-KotlinForForge-6.x-270243",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-thedarkcolour-KotlinForForge-6.x-270243",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

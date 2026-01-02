@@ -1,0 +1,95 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ChrisAntaki/disable-webrtc-firefox",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/91e71de7-a0ea-4baf-8600-4fccf5a62fb1",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:14Z"
+  },
+  "packages": [
+    {
+      "name": "gulp-rename",
+      "SPDXID": "SPDXRef-npm-gulp-rename-1.2.2-1c41cc",
+      "versionInfo": "^1.2.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-rename@%5E1.2.2"
+        }
+      ]
+    },
+    {
+      "name": "gulp",
+      "SPDXID": "SPDXRef-npm-gulp-3.8.11-93713b",
+      "versionInfo": "^3.8.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp@%5E3.8.11"
+        }
+      ]
+    },
+    {
+      "name": "gulp-image-resize",
+      "SPDXID": "SPDXRef-npm-gulp-image-resize-0.6.0-0c36a4",
+      "versionInfo": "^0.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-image-resize@%5E0.6.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.ChrisAntaki/disable-webrtc-firefox",
+      "SPDXID": "SPDXRef-github-ChrisAntaki-disable-webrtc-firefox-main-32e012",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/ChrisAntaki/disable-webrtc-firefox",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MPL-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ChrisAntaki/disable-webrtc-firefox@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-ChrisAntaki-disable-webrtc-firefox-main-32e012",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-rename-1.2.2-1c41cc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ChrisAntaki-disable-webrtc-firefox-main-32e012",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-3.8.11-93713b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ChrisAntaki-disable-webrtc-firefox-main-32e012",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-image-resize-0.6.0-0c36a4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ChrisAntaki-disable-webrtc-firefox-main-32e012",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

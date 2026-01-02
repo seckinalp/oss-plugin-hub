@@ -1,0 +1,190 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.PinkGoosik/visuality",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/f4d8c2d8-1672-4313-80c9-20075185e188",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:00Z"
+  },
+  "packages": [
+    {
+      "name": "gradle/wrapper-validation-action",
+      "SPDXID": "SPDXRef-githubactions-gradle-wrapper-validation-action-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/wrapper-validation-action@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "Kir-Antipov/mc-publish",
+      "SPDXID": "SPDXRef-githubactions-Kir-Antipov-mc-publish-3.3.0-75c946",
+      "versionInfo": "3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/Kir-Antipov/mc-publish@3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "BrycensRanch/read-properties-action",
+      "SPDXID": "SPDXRef-githubactions-BrycensRanch-read-properties-action-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/BrycensRanch/read-properties-action@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "AButler/upload-release-assets",
+      "SPDXID": "SPDXRef-githubactions-AButler-upload-release-assets-3.0.-75c946",
+      "versionInfo": "3.0.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/AButler/upload-release-assets@3.0.%2A"
+        }
+      ]
+    },
+    {
+      "name": "fjogeleit/http-request-action",
+      "SPDXID": "SPDXRef-githubactions-fjogeleit-http-request-action-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/fjogeleit/http-request-action@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.PinkGoosik/visuality",
+      "SPDXID": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "versionInfo": "1.21.9",
+      "downloadLocation": "git+https://github.com/PinkGoosik/visuality",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/PinkGoosik/visuality@1.21.9"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-fjogeleit-http-request-action-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradle-wrapper-validation-action-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-Kir-Antipov-mc-publish-3.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-BrycensRanch-read-properties-action-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relatedSpdxElement": "SPDXRef-githubactions-AButler-upload-release-assets-3.0.-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-PinkGoosik-visuality-1.21.9-e9dacc",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

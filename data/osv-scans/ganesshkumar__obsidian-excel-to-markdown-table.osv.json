@@ -1,0 +1,745 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/ganesshkumar__obsidian-excel-to-markdown-table.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "braces",
+            "version": "3.0.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "aliases": [
+                "CVE-2024-4068",
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-grv7-fg5c-xmjg/GHSA-grv7-fg5c-xmjg.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "braces",
+                    "purl": "pkg:npm/braces"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4068"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1050",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-10T20:17:26Z",
+                "nvd_published_at": "2024-05-14T15:42:48Z",
+                "severity": "HIGH"
+              },
+              "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+              "id": "GHSA-grv7-fg5c-xmjg",
+              "modified": "2024-07-15T22:12:28.795792Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/issues/35"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/37"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/40"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/braces"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+                }
+              ],
+              "related": [
+                "CGA-g3x5-7mr7-wr8m",
+                "CGA-hq78-8245-675v",
+                "CGA-jrqh-c82g-rxvm",
+                "CGA-p4gw-wx75-2mg4",
+                "CGA-w95g-rrw2-66h4",
+                "CGA-wr9w-hw24-rqg5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Uncontrolled resource consumption in braces"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "esbuild",
+            "version": "0.13.12",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "aliases": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.24.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-67mh-4wv8-2f99/GHSA-67mh-4wv8-2f99.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "esbuild",
+                    "purl": "pkg:npm/esbuild"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.25.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-346"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T17:48:07Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e =\u003e console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r =\u003e r.text()).then(content =\u003e console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+              "id": "GHSA-67mh-4wv8-2f99",
+              "modified": "2025-02-10T17:48:08Z",
+              "published": "2025-02-10T17:48:07Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/evanw/esbuild"
+                }
+              ],
+              "related": [
+                "CGA-4v28-58cf-ggx7",
+                "CGA-5qqq-3383-mhjr",
+                "CGA-75rh-2q2q-wm52",
+                "CGA-m983-9xr3-349j",
+                "CGA-mhg6-chj9-5v88",
+                "CGA-rjff-7jch-vw6j",
+                "CGA-w25f-r54p-vh94"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "esbuild enables any website to send any requests to the development server and read the response"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "micromatch",
+            "version": "4.0.4",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "aliases": [
+                "CVE-2024-4067",
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-952p-6rrq-rcjv/GHSA-952p-6rrq-rcjv.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "micromatch",
+                    "purl": "pkg:npm/micromatch"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-4067"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-21T22:58:52Z",
+                "nvd_published_at": "2024-05-14T15:42:47Z",
+                "severity": "MODERATE"
+              },
+              "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+              "id": "GHSA-952p-6rrq-rcjv",
+              "modified": "2024-08-28T13:12:26Z",
+              "published": "2024-05-14T18:30:54Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/issues/243"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/266"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/micromatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+                }
+              ],
+              "related": [
+                "CGA-6q83-777j-gp5r",
+                "CGA-7j2f-jxvw-gx52",
+                "CGA-9hv5-rmvp-37vw",
+                "CGA-9qj8-ph43-6pq5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in micromatch"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "moment",
+            "version": "2.29.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wc69-rhjr-hc9g"
+              ],
+              "aliases": [
+                "CVE-2022-31129",
+                "GHSA-wc69-rhjr-hc9g"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wc69-rhjr-hc9g/GHSA-wc69-rhjr-hc9g.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "moment",
+                    "purl": "pkg:npm/moment"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.18.0"
+                        },
+                        {
+                          "fixed": "2.29.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wc69-rhjr-hc9g/GHSA-wc69-rhjr-hc9g.json"
+                  },
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Moment.js",
+                    "purl": "pkg:nuget/Moment.js"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.18.0"
+                        },
+                        {
+                          "fixed": "2.29.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.19.2",
+                    "2.19.3",
+                    "2.19.4",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.22.1",
+                    "2.22.2",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.25.2",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.28.0",
+                    "2.29.0",
+                    "2.29.1",
+                    "2.29.2",
+                    "2.29.3"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-31129"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T18:38:49Z",
+                "nvd_published_at": "2022-07-06T18:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\n* using string-to-date parsing in moment (more specifically rfc2822 parsing, which is tried by default) has quadratic (N^2) complexity on specific inputs\n* noticeable slowdown is observed with inputs above 10k characters\n* users who pass user-provided strings without sanity length checks to moment constructor are vulnerable to (Re)DoS attacks\n\n### Patches\nThe problem is patched in 2.29.4, the patch can be applied to all affected versions with minimal tweaking.\n\n### Workarounds\nIn general, given the proliferation of ReDoS attacks, it makes sense to limit the length of the user input to something sane, like 200 characters or less. I haven't seen legitimate cases of date-time strings longer than that, so all moment users who do pass a user-originating string to constructor are encouraged to apply such a rudimentary filter, that would help with this but also most future ReDoS vulnerabilities.\n\n### References\nThere is an excellent writeup of the issue here: https://github.com/moment/moment/pull/6015#issuecomment-1152961973=\n\n### Details\nThe issue is rooted in the code that removes legacy comments (stuff inside parenthesis) from strings during rfc2822 parsing. `moment(\"(\".repeat(500000))` will take a few minutes to process, which is unacceptable.",
+              "id": "GHSA-wc69-rhjr-hc9g",
+              "modified": "2025-11-04T17:01:02.311117Z",
+              "published": "2022-07-06T18:38:49Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/security/advisories/GHSA-wc69-rhjr-hc9g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31129"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015#issuecomment-1152961973"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/4bbb9f3ccbe231de40207503f344fe5ce97584f4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/bfd4f2375d5c1a2106246721d693a9611dddfbfe"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/dc0d180e90d8a84f7ff13572363330a22b3ea504"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/commit/9a3b5894f3d5d602948ac8a02e4ee528a49ca3a3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20241108-0002"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20221014-0003"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZMX5YHELQVCGKKQVFXIYOTBMN23YYSRO"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IWY24RJA3SBJGA5N4CU4VBPHJPPPJL5O"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZMX5YHELQVCGKKQVFXIYOTBMN23YYSRO"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/IWY24RJA3SBJGA5N4CU4VBPHJPPPJL5O"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/f0952b67-f2ff-44a9-a9cd-99e0a87cb633"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moment/moment"
+                }
+              ],
+              "related": [
+                "CVE-2023-22467"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Moment.js vulnerable to Inefficient Regular Expression Complexity"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "semver",
+            "version": "7.3.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c2qf-rxjj-qqgw"
+              ],
+              "aliases": [
+                "CVE-2022-25883",
+                "GHSA-c2qf-rxjj-qqgw"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.5.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.3.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-25883"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-22T16:52:56Z",
+                "nvd_published_at": "2023-06-21T05:15:09Z",
+                "severity": "HIGH"
+              },
+              "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+              "id": "GHSA-c2qf-rxjj-qqgw",
+              "modified": "2024-12-06T20:34:31Z",
+              "published": "2023-06-21T06:30:28Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/564"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/585"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/593"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-semver"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20241025-0004"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+                }
+              ],
+              "related": [
+                "CGA-xmx9-rvv8-j9xq"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "semver vulnerable to Regular Expression Denial of Service"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

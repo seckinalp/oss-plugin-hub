@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.jaredlll08/Clumps",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/01ea916e-dc93-459e-b53a-4c93f8ab9bab",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T12:02:19Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.jaredlll08/Clumps",
+      "SPDXID": "SPDXRef-github-jaredlll08-Clumps-1.21.10-0c8390",
+      "versionInfo": "1.21.10",
+      "downloadLocation": "git+https://github.com/jaredlll08/Clumps",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/jaredlll08/Clumps@1.21.10"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-jaredlll08-Clumps-1.21.10-0c8390",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

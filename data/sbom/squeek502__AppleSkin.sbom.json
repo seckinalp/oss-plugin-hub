@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.squeek502/AppleSkin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/647e6c39-166d-4ac2-baed-693bdf595160",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:31Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.squeek502/AppleSkin",
+      "SPDXID": "SPDXRef-github-squeek502-AppleSkin-1.16-forge-79edfc",
+      "versionInfo": "1.16-forge",
+      "downloadLocation": "git+https://github.com/squeek502/AppleSkin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Unlicense",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/squeek502/AppleSkin@1.16-forge"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-squeek502-AppleSkin-1.16-forge-79edfc",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

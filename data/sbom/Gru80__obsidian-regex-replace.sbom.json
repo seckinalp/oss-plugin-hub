@@ -1,0 +1,209 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Gru80/obsidian-regex-replace",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/5887efea-5502-42c2-ade8-7188ea3ae718",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:32Z"
+  },
+  "packages": [
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-14.14.37-7715cf",
+      "versionInfo": "^14.14.37",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E14.14.37"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-4.2.4-85ddb8",
+      "versionInfo": "^4.2.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E4.2.4"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-2.32.1-54d602",
+      "versionInfo": "^2.32.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@%5E2.32.1"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-npm-tslib-2.2.0-8c5b8b",
+      "versionInfo": "^2.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@%5E2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-typescript",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-typescript-8.2.1-ef7791",
+      "versionInfo": "^8.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-typescript@%5E8.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-11.2.1-4ef3af",
+      "versionInfo": "^11.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@%5E11.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.5.0-bb27cf",
+      "versionInfo": "^5.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/eslint-plugin@%5E5.5.0"
+        }
+      ]
+    },
+    {
+      "name": "obsidian",
+      "SPDXID": "SPDXRef-npm-obsidian-0.12.17-18c209",
+      "versionInfo": "^0.12.17",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian@%5E0.12.17"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-18.0.0-bc7022",
+      "versionInfo": "^18.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@%5E18.0.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.Gru80/obsidian-regex-replace",
+      "SPDXID": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/Gru80/obsidian-regex-replace",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Gru80/obsidian-regex-replace@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-14.14.37-7715cf",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-4.2.4-85ddb8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-2.32.1-54d602",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-tslib-2.2.0-8c5b8b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-typescript-8.2.1-ef7791",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-11.2.1-4ef3af",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.5.0-bb27cf",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-0.12.17-18c209",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-18.0.0-bc7022",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Gru80-obsidian-regex-replace-master-eb23d9",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

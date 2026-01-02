@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.jdavisclark/JsFormat",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/95bc56af-02b0-41cf-b86e-1a88a86dd3d5",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:37Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.jdavisclark/JsFormat",
+      "SPDXID": "SPDXRef-github-jdavisclark-JsFormat-master-b9c4a5",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/jdavisclark/JsFormat",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/jdavisclark/JsFormat@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-jdavisclark-JsFormat-master-b9c4a5",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

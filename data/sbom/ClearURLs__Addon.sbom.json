@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ClearURLs/Addon",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/dfa867db-00c6-47d3-b97f-b85f31581293",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:36Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.ClearURLs/Addon",
+      "SPDXID": "SPDXRef-github-ClearURLs-Addon-master-35e708",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/ClearURLs/Addon",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ClearURLs/Addon@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ClearURLs-Addon-master-35e708",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

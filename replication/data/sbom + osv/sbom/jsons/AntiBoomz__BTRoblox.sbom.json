@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.AntiBoomz/BTRoblox",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a2ea477d-b446-4bef-b216-0fffc2920edb",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:12Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.AntiBoomz/BTRoblox",
+      "SPDXID": "SPDXRef-github-AntiBoomz-BTRoblox-master-92d30a",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/AntiBoomz/BTRoblox",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/AntiBoomz/BTRoblox@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-AntiBoomz-BTRoblox-master-92d30a",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

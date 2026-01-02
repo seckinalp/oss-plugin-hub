@@ -1,0 +1,766 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.277Z",
+  "source": "JetBrains__azure-tools-for-intellij.osv.json",
+  "summary": {
+    "totalVulnerabilities": 8,
+    "uniqueVulnerabilities": 8,
+    "affectedPackages": 7,
+    "stalePackages": 8,
+    "stalePackagesOldFix": 1,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 7
+    },
+    "recentVulnerabilities": 2,
+    "hasFixAvailable": 8
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-4cx2-fc23-5wg6",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/S:P/R:U/RE:M/U:Amber",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-8916"
+      ],
+      "summary": "Bouncy Castle for Java bcpkix, bcprov, bcpkix-fips on All (API modules) allows Excessive Allocation",
+      "details": "Allocation of Resources Without Limits or Throttling vulnerability in Legion of the Bouncy Castle Inc. Bouncy Castle for Java bcpkix, bcprov, bcpkix-fips on All (API modules) allows Excessive Allocation. This vulnerability is associated with program files  https://github.Com/bcgit/bc-java/blob/main/pkix/src/main/java/org/bouncycastle/pkix/jcajce/PKIXCertP... https://github.Com/bcgit/bc-java/blob/main/pkix/src/main/java/org/bouncycastle/pkix/jcajce/PKIXCertPathReviewer.java ,  https://github.Com/bcgit/bc-java/blob/main/prov/src/main/java/org/bouncycastle/x509/PKIXCertPathRevi... https://github.Com/bcgit/bc-java/blob/main/prov/src/main/java/org/bouncycastle/x509/PKIXCertPathReviewer.java .\n\nThis issue affects Bouncy Castle for Java: from BC 1.44 through 1.78, from BCPKIX FIPS 1.0.0 through 1.0.7, from BCPKIX FIPS 2.0.0 through 2.0.7.",
+      "cwes": [
+        {
+          "id": "CWE-770",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-08-13T12:31:30Z",
+        "modifiedDate": "2025-10-17T14:20:44.810668Z",
+        "daysSincePublished": 126
+      },
+      "affected": {
+        "package": "org.bouncycastle:bcpkix-jdk15on",
+        "version": "1.60",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.60",
+        "fixedIn": "1.79",
+        "recommendation": "Upgrade to 1.79 or later",
+        "fixAvailableSince": "2025-10-17T14:20:44.810Z",
+        "daysSinceFix": 61,
+        "monthsSinceFix": 2,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8916"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/bcgit/bc-java/commit/310b30a4fbf36d13f6cc201ffa7771715641e67e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/bcgit/bc-java/commit/ff444a479942d88de64004dc82c3ee32a9e9075a"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/bcgit/bc-java"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/bcgit/bc-java/wiki/CVE%E2%80%902025%E2%80%908916"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r7pg-v2c8-mfg3",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-47561"
+      ],
+      "summary": "Apache Avro Java SDK: Arbitrary Code Execution when reading Avro Data (Java SDK)",
+      "details": "Schema parsing in the Java SDK of Apache Avro 1.11.3 and previous versions allows bad actors to execute arbitrary code.\nUsers are recommended to upgrade to version 1.11.4 or 1.12.0, which fix this issue.",
+      "cwes": [
+        {
+          "id": "CWE-502",
+          "name": "Deserialization of Untrusted Data"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-10-03T12:30:48Z",
+        "modifiedDate": "2025-07-10T23:44:42.719245Z",
+        "daysSincePublished": 440
+      },
+      "affected": {
+        "package": "org.apache.avro:avro",
+        "version": "1.11.3",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.11.3",
+        "fixedIn": "1.11.4",
+        "recommendation": "Upgrade to 1.11.4 or later",
+        "fixAvailableSince": "2025-07-10T23:44:42.719Z",
+        "daysSinceFix": 159,
+        "monthsSinceFix": 5,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47561"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/avro/pull/2934"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/avro/pull/2980"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/avro/commit/8f89868d29272e3afea2ff8de8c85cb81a57d900"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/avro/commit/f6b3bd7e50e6e09fedddb98c61558c022ba31285"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/avro"
+        },
+        {
+          "type": "WEB",
+          "url": "https://issues.apache.org/jira/browse/AVRO-3985"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/c2v7mhqnmq0jmbwxqq3r5jbj1xg43h5x"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241011-0003"
+        },
+        {
+          "type": "WEB",
+          "url": "https://thehackernews.com/2024/10/critical-apache-avro-sdk-flaw-allows.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.openwall.com/lists/oss-security/2024/10/03/1"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2024/10/03/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f5fw-25gw-5m92",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-23454"
+      ],
+      "summary": "Apache Hadoop: Temporary File Local Information Disclosure",
+      "details": "Apache Hadoop’s `RunJar.run()` does not set permissions for temporary directory by default. If sensitive data will be present in this file, all the other local users may be able to view the content. This is because, on unix-like systems, the system temporary directory is shared between all local users. As such, files written in this directory, without setting the correct posix permissions explicitly, may be viewable by all other local users.",
+      "cwes": [
+        {
+          "id": "CWE-269",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-378",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-25T09:30:46Z",
+        "modifiedDate": "2025-09-05T16:59:47.705794Z",
+        "daysSincePublished": 448
+      },
+      "affected": {
+        "package": "org.apache.hadoop:hadoop-common",
+        "version": "3.3.3",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.3.3",
+        "fixedIn": "3.4.0",
+        "recommendation": "Upgrade to 3.4.0 or later",
+        "fixAvailableSince": "2025-09-05T16:59:47.705Z",
+        "daysSinceFix": 103,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23454"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/hadoop/commit/8c2836402fbb2f619f1fef4ef625a8542e853a64"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/hadoop"
+        },
+        {
+          "type": "WEB",
+          "url": "https://issues.apache.org/jira/browse/HADOOP-19031"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/xlo7q8kn4tsjvx059r789oz19hzgfkfs"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241101-0002"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2024/09/25/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g8m5-722r-8whq",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-8184"
+      ],
+      "summary": "Eclipse Jetty's ThreadLimitHandler.getRemote() vulnerable to remote DoS attacks",
+      "details": "### Impact\nRemote DOS attack can cause out of memory \n\n### Description\nThere exists a security vulnerability in Jetty's `ThreadLimitHandler.getRemote()` which\ncan be exploited by unauthorized users to cause remote denial-of-service (DoS) attack.  By\nrepeatedly sending crafted requests, attackers can trigger OutofMemory errors and exhaust the\nserver's memory.\n\n### Affected Versions\n\n* Jetty 12.0.0-12.0.8 (Supported)\n* Jetty 11.0.0-11.0.23 (EOL)\n* Jetty 10.0.0-10.0.23 (EOL)\n* Jetty 9.3.12-9.4.55 (EOL)\n\n### Patched Versions\n\n* Jetty 12.0.9\n* Jetty 11.0.24\n* Jetty 10.0.24\n* Jetty 9.4.56\n\n### Workarounds\n\nDo not use `ThreadLimitHandler`.  \nConsider use of `QoSHandler` instead to artificially limit resource utilization.\n\n### References\n\nJetty 12 - https://github.com/jetty/jetty.project/pull/11723",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        },
+        {
+          "id": "CWE-770",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-10-14T21:08:38Z",
+        "modifiedDate": "2025-11-03T23:05:59.283307Z",
+        "daysSincePublished": 428
+      },
+      "affected": {
+        "package": "org.eclipse.jetty:jetty-server",
+        "version": "9.4.53.v20231009",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "9.4.53.v20231009",
+        "fixedIn": "12.0.9",
+        "recommendation": "Upgrade to 12.0.9 or later",
+        "fixAvailableSince": "2025-11-03T23:05:59.283Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-g8m5-722r-8whq"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8184"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jetty/jetty.project/pull/11723"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/30"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00001.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-q4rv-gq96-w7c5",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-13009"
+      ],
+      "summary": "**UNSUPPORTED WHEN ASSIGNED** GzipHandler causes part of request body to be seen as request body of a separate request",
+      "details": "In Eclipse Jetty versions 9.4.0 to 9.4.56 a buffer can be incorrectly released when confronted with a gzip error when inflating a request body. This can result in corrupted and/or inadvertent sharing of data between requests.",
+      "cwes": [
+        {
+          "id": "CWE-404",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-05-08T19:28:34Z",
+        "modifiedDate": "2025-05-08T19:57:34.204933Z",
+        "daysSincePublished": 223
+      },
+      "affected": {
+        "package": "org.eclipse.jetty:jetty-server",
+        "version": "9.4.53.v20231009",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "9.4.53.v20231009",
+        "fixedIn": "9.4.57.v20241219",
+        "recommendation": "Upgrade to 9.4.57.v20241219 or later",
+        "fixAvailableSince": "2025-05-08T19:57:34.204Z",
+        "daysSinceFix": 223,
+        "monthsSinceFix": 7,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-q4rv-gq96-w7c5"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13009"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/48"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j26w-f9rq-mr2q",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-9823",
+        "GHSA-7hcf-ppf8-5w5h"
+      ],
+      "summary": "Eclipse Jetty has a denial of service vulnerability on DosFilter",
+      "details": "Description\nThere exists a security vulnerability in Jetty's DosFilter which can be exploited by unauthorized users to cause remote denial-of-service (DoS) attack on the server using DosFilter. By repeatedly sending crafted requests, attackers can trigger OutofMemory errors and exhaust the server's memory finally.\n\n\nVulnerability details\nThe Jetty DoSFilter (Denial of Service Filter) is a security filter designed to protect web applications against certain types of Denial of Service (DoS) attacks and other abusive behavior. It helps to mitigate excessive resource consumption by limiting the rate at which clients can make requests to the server.  The DoSFilter monitors and tracks client request patterns, including request rates, and can take actions such as blocking or delaying requests from clients that exceed predefined thresholds.  The internal tracking of requests in DoSFilter is the source of this OutOfMemory condition.\n\n\nImpact\nUsers of the DoSFilter may be subject to DoS attacks that will ultimately exhaust the memory of the server if they have not configured session passivation or an aggressive session inactivation timeout.\n\n\nPatches\nThe DoSFilter has been patched in all active releases to no longer support the session tracking mode, even if configured.\n\n\nPatched releases:\n\n  *  9.4.54\n  *  10.0.18\n  *  11.0.18\n  *  12.0.3",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-10-14T15:30:46Z",
+        "modifiedDate": "2025-11-03T21:57:43.448096Z",
+        "daysSincePublished": 429
+      },
+      "affected": {
+        "package": "org.eclipse.jetty:jetty-servlets",
+        "version": "9.4.53.v20231009",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "9.4.53.v20231009",
+        "fixedIn": "12.0.3",
+        "recommendation": "Upgrade to 12.0.3 or later",
+        "fixAvailableSince": "2025-11-03T21:57:43.448Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-7hcf-ppf8-5w5h"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9823"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jetty/jetty.project/issues/1256"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jetty/jetty.project"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/39"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00001.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20250306-0006"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m494-w24q-6f7w",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-59250"
+      ],
+      "summary": "JDBC Driver for SQL Server has improper input validation issue",
+      "details": "Improper input validation in JDBC Driver for SQL Server allows an unauthorized attacker to perform spoofing over a network.",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-14T18:30:35Z",
+        "modifiedDate": "2025-11-24T18:15:29.342807Z",
+        "daysSincePublished": 64
+      },
+      "affected": {
+        "package": "com.microsoft.sqlserver:mssql-jdbc",
+        "version": "9.4.0.jre8",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "9.4.0.jre8",
+        "fixedIn": "10.2.4.jre11",
+        "recommendation": "Upgrade to 10.2.4.jre11 or later",
+        "fixAvailableSince": "2025-11-24T18:15:29.342Z",
+        "daysSinceFix": 23,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59250"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/pull/2798"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/pull/2800"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/pull/2801"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/pull/2802"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/pull/2803"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/pull/2807"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/commit/9732e1bbc6ec44166fda2cddab31ce1c86c873dd#diff-45367b99a1951943bfecfc7765e80df687967aa56286a5b2e039f77cd9a0e118"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/microsoft/mssql-jdbc"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/microsoft/mssql-jdbc/blob/main/CHANGELOG.md"
+        },
+        {
+          "type": "WEB",
+          "url": "https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix"
+        },
+        {
+          "type": "WEB",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-59250"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-r978-9m6m-6gm6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-zookeeper-2024-23944",
+        "CVE-2024-23944"
+      ],
+      "summary": "Apache ZooKeeper vulnerable to information disclosure in persistent watchers handling",
+      "details": "Information disclosure in persistent watchers handling in Apache ZooKeeper due to missing ACL check. It allows an attacker to monitor child znodes by attaching a persistent watcher (addWatch command) to a parent which the attacker has already access to. ZooKeeper server doesn't do ACL check when the persistent watcher is triggered and as a consequence, the full path of znodes that a watch event gets triggered upon is exposed to the owner of the watcher. It's important to note that only the path is exposed by this vulnerability, not the data of znode, but since znode path can contain sensitive information like user name or login ID, this issue is potentially critical.\n\nUsers are recommended to upgrade to version 3.9.2, 3.8.4 which fixes the issue.",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-862",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-03-15T12:30:37Z",
+        "modifiedDate": "2025-07-03T16:14:55.159008Z",
+        "daysSincePublished": 642
+      },
+      "affected": {
+        "package": "org.apache.zookeeper:zookeeper",
+        "version": "3.7.2",
+        "ecosystem": "Maven"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.7.2",
+        "fixedIn": "3.8.4",
+        "recommendation": "Upgrade to 3.8.4 or later",
+        "fixAvailableSince": "2025-07-03T16:14:55.159Z",
+        "daysSinceFix": 167,
+        "monthsSinceFix": 5,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23944"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/zookeeper/commit/29c7b9462681f47c2ac12e609341cf9f52abac5c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/zookeeper/commit/65b91d2d9a56157285c2a86b106e67c26520b01d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/apache/zookeeper/commit/daf7cfd04005cff1a4f7cab5ab13d41db88d0cd8"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/apache/zookeeper"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread/96s5nqssj03rznz9hv58txdb2k1lr79k"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2024/03/14/2"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "org.apache.avro:avro",
+      "currentVersion": "1.11.3",
+      "fixedIn": "1.11.4",
+      "vulnerabilities": [
+        "GHSA-r7pg-v2c8-mfg3"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.11.4 or later",
+      "fixAvailableSince": "2025-07-10T23:44:42.719Z",
+      "daysSinceFix": 159,
+      "monthsSinceFix": 5,
+      "isOldFix": false
+    },
+    {
+      "package": "org.bouncycastle:bcpkix-jdk15on",
+      "currentVersion": "1.60",
+      "fixedIn": "1.79",
+      "vulnerabilities": [
+        "GHSA-4cx2-fc23-5wg6"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 1.79 or later",
+      "fixAvailableSince": "2025-10-17T14:20:44.810Z",
+      "daysSinceFix": 61,
+      "monthsSinceFix": 2,
+      "isOldFix": false
+    },
+    {
+      "package": "org.apache.hadoop:hadoop-common",
+      "currentVersion": "3.3.3",
+      "fixedIn": "3.4.0",
+      "vulnerabilities": [
+        "GHSA-f5fw-25gw-5m92"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.4.0 or later",
+      "fixAvailableSince": "2025-09-05T16:59:47.705Z",
+      "daysSinceFix": 103,
+      "monthsSinceFix": 3,
+      "isOldFix": false
+    },
+    {
+      "package": "org.eclipse.jetty:jetty-server",
+      "currentVersion": "9.4.53.v20231009",
+      "fixedIn": "12.0.9",
+      "vulnerabilities": [
+        "GHSA-g8m5-722r-8whq",
+        "GHSA-q4rv-gq96-w7c5"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 12.0.9 or later",
+      "fixAvailableSince": "2025-11-03T23:05:59.283Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "org.eclipse.jetty:jetty-servlets",
+      "currentVersion": "9.4.53.v20231009",
+      "fixedIn": "12.0.3",
+      "vulnerabilities": [
+        "GHSA-j26w-f9rq-mr2q"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 12.0.3 or later",
+      "fixAvailableSince": "2025-11-03T21:57:43.448Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "com.microsoft.sqlserver:mssql-jdbc",
+      "currentVersion": "9.4.0.jre8",
+      "fixedIn": "10.2.4.jre11",
+      "vulnerabilities": [
+        "GHSA-m494-w24q-6f7w"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 10.2.4.jre11 or later",
+      "fixAvailableSince": "2025-11-24T18:15:29.342Z",
+      "daysSinceFix": 23,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "org.apache.zookeeper:zookeeper",
+      "currentVersion": "3.7.2",
+      "fixedIn": "3.8.4",
+      "vulnerabilities": [
+        "GHSA-r978-9m6m-6gm6"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.8.4 or later",
+      "fixAvailableSince": "2025-07-03T16:14:55.159Z",
+      "daysSinceFix": 167,
+      "monthsSinceFix": 5,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "2 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "1 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "8 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.mechatroner/vscode_rainbow_csv",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/e5b13ac9-3ff3-4e86-a110-334f5eab899f",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:51:07Z"
+  },
+  "packages": [
+    {
+      "name": "webpack-cli",
+      "SPDXID": "SPDXRef-npm-webpack-cli-5.1.4-f731fb",
+      "versionInfo": "^5.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/webpack-cli@%5E5.1.4"
+        }
+      ]
+    },
+    {
+      "name": "@types/vscode",
+      "SPDXID": "SPDXRef-npm-types-vscode-1.95.0-5d1081",
+      "versionInfo": "^1.95.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/vscode@%5E1.95.0"
+        }
+      ]
+    },
+    {
+      "name": "@vscode/test-web",
+      "SPDXID": "SPDXRef-npm-vscode-test-web-0.0.64-2a7f36",
+      "versionInfo": "^0.0.64",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40vscode/test-web@%5E0.0.64"
+        }
+      ]
+    },
+    {
+      "name": "eslint",
+      "SPDXID": "SPDXRef-npm-eslint-9.15.0-8451df",
+      "versionInfo": "^9.15.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint@%5E9.15.0"
+        }
+      ]
+    },
+    {
+      "name": "@vscode/test-electron",
+      "SPDXID": "SPDXRef-npm-vscode-test-electron-2.4.1-edf2a7",
+      "versionInfo": "^2.4.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40vscode/test-electron@%5E2.4.1"
+        }
+      ]
+    },
+    {
+      "name": "assert",
+      "SPDXID": "SPDXRef-npm-assert-2.1.0-91a56f",
+      "versionInfo": "^2.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/assert@%5E2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "globals",
+      "SPDXID": "SPDXRef-npm-globals-15.12.0-aa71ee",
+      "versionInfo": "^15.12.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/globals@%5E15.12.0"
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "SPDXID": "SPDXRef-npm-process-0.11.10-e9b451",
+      "versionInfo": "^0.11.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/process@%5E0.11.10"
+        }
+      ]
+    },
+    {
+      "name": "webpack",
+      "SPDXID": "SPDXRef-npm-webpack-5.96.1-24bb9b",
+      "versionInfo": "^5.96.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/webpack@%5E5.96.1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.mechatroner/vscode_rainbow_csv",
+      "SPDXID": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/mechatroner/vscode_rainbow_csv",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/mechatroner/vscode_rainbow_csv@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-webpack-cli-5.1.4-f731fb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-types-vscode-1.95.0-5d1081",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-vscode-test-web-0.0.64-2a7f36",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-9.15.0-8451df",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-vscode-test-electron-2.4.1-edf2a7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-assert-2.1.0-91a56f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-globals-15.12.0-aa71ee",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-process-0.11.10-e9b451",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relatedSpdxElement": "SPDXRef-npm-webpack-5.96.1-24bb9b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-mechatroner-vscoderainbowcsv-master-94e547",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

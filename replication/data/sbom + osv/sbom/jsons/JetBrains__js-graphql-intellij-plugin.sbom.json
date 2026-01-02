@@ -1,0 +1,78 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.JetBrains/js-graphql-intellij-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/4c01d4d7-8db8-493c-bc42-377dace5381a",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:32Z"
+  },
+  "packages": [
+    {
+      "name": "@octokit/graphql-schema",
+      "SPDXID": "SPDXRef-npm-octokit-graphql-schema-14.53.0-d1ebab",
+      "versionInfo": "^14.53.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40octokit/graphql-schema@%5E14.53.0"
+        }
+      ]
+    },
+    {
+      "name": "docusaurus",
+      "SPDXID": "SPDXRef-npm-docusaurus-1.7.2-e4929f",
+      "versionInfo": "1.7.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2017-present, Facebook, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/docusaurus@1.7.2"
+        }
+      ]
+    },
+    {
+      "name": "com.github.JetBrains/js-graphql-intellij-plugin",
+      "SPDXID": "SPDXRef-github-JetBrains-js-graphql-intellij-plugin-master-a0f49b",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/JetBrains/js-graphql-intellij-plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/JetBrains/js-graphql-intellij-plugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-js-graphql-intellij-plugin-master-a0f49b",
+      "relatedSpdxElement": "SPDXRef-npm-octokit-graphql-schema-14.53.0-d1ebab",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-js-graphql-intellij-plugin-master-a0f49b",
+      "relatedSpdxElement": "SPDXRef-npm-docusaurus-1.7.2-e4929f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-JetBrains-js-graphql-intellij-plugin-master-a0f49b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

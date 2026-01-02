@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ken107/read-aloud",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/b0e23eaa-123b-4649-87bf-b7d9e3f3619e",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:08Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.ken107/read-aloud",
+      "SPDXID": "SPDXRef-github-ken107-read-aloud-master-d87541",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/ken107/read-aloud",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ken107/read-aloud@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ken107-read-aloud-master-d87541",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

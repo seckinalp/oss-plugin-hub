@@ -1,0 +1,75 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.arallsopp/hass-hue-icons",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a8ec2e69-ad4e-4c23-a548-1824cf44fc5d",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:42Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "hacs/action",
+      "SPDXID": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/hacs/action@main"
+        }
+      ]
+    },
+    {
+      "name": "com.github.arallsopp/hass-hue-icons",
+      "SPDXID": "SPDXRef-github-arallsopp-hass-hue-icons-main-17f824",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/arallsopp/hass-hue-icons",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/arallsopp/hass-hue-icons@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-arallsopp-hass-hue-icons-main-17f824",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-arallsopp-hass-hue-icons-main-17f824",
+      "relatedSpdxElement": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-arallsopp-hass-hue-icons-main-17f824",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

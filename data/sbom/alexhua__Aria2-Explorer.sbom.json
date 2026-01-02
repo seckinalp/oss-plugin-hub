@@ -1,0 +1,114 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.alexhua/Aria2-Explorer",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/3794ec21-0f67-47b6-93e6-7b80296a27c2",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:12Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "cardinalby/webext-buildtools-chrome-crx-action",
+      "SPDXID": "SPDXRef-githubactions-cardinalby-webext-buildtools-chrome-crx-action-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/cardinalby/webext-buildtools-chrome-crx-action@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "cardinalby/webext-buildtools-pack-extension-dir-action",
+      "SPDXID": "SPDXRef-githubactions-cardinalby-webext-buildtools-pack-extension-dir-action-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/cardinalby/webext-buildtools-pack-extension-dir-action@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "marvinpinto/action-automatic-releases",
+      "SPDXID": "SPDXRef-githubactions-marvinpinto-action-automatic-releases-latest-75c946",
+      "versionInfo": "latest",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/marvinpinto/action-automatic-releases@latest"
+        }
+      ]
+    },
+    {
+      "name": "com.github.alexhua/Aria2-Explorer",
+      "SPDXID": "SPDXRef-github-alexhua-Aria2-Explorer-master-eacc3f",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/alexhua/Aria2-Explorer",
+      "filesAnalyzed": false,
+      "licenseDeclared": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/alexhua/Aria2-Explorer@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-alexhua-Aria2-Explorer-master-eacc3f",
+      "relatedSpdxElement": "SPDXRef-githubactions-cardinalby-webext-buildtools-chrome-crx-action-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-alexhua-Aria2-Explorer-master-eacc3f",
+      "relatedSpdxElement": "SPDXRef-githubactions-cardinalby-webext-buildtools-pack-extension-dir-action-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-alexhua-Aria2-Explorer-master-eacc3f",
+      "relatedSpdxElement": "SPDXRef-githubactions-marvinpinto-action-automatic-releases-latest-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-alexhua-Aria2-Explorer-master-eacc3f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-alexhua-Aria2-Explorer-master-eacc3f",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

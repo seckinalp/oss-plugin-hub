@@ -1,0 +1,114 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.picandocodigo/List-Category-Posts",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/5616bb44-4efd-4836-afac-367d56f31db6",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:18Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@master"
+        }
+      ]
+    },
+    {
+      "name": "10up/action-wordpress-plugin-deploy",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-deploy@stable"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "shivammathur/setup-php",
+      "SPDXID": "SPDXRef-githubactions-shivammathur-setup-php-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/shivammathur/setup-php@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.picandocodigo/List-Category-Posts",
+      "SPDXID": "SPDXRef-github-picandocodigo-List-Category-Posts-master-a1d5d1",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/picandocodigo/List-Category-Posts",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/picandocodigo/List-Category-Posts@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-picandocodigo-List-Category-Posts-master-a1d5d1",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-picandocodigo-List-Category-Posts-master-a1d5d1",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-picandocodigo-List-Category-Posts-master-a1d5d1",
+      "relatedSpdxElement": "SPDXRef-githubactions-shivammathur-setup-php-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-picandocodigo-List-Category-Posts-master-a1d5d1",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-picandocodigo-List-Category-Posts-master-a1d5d1",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

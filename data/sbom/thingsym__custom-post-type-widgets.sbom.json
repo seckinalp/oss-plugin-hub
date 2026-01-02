@@ -1,0 +1,1001 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.thingsym/custom-post-type-widgets",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d3973a3f-be83-4676-aaeb-270dbf00b1c9",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:54Z"
+  },
+  "packages": [
+    {
+      "name": "10up/action-wordpress-plugin-deploy",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-deploy@stable"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "10up/action-wordpress-plugin-asset-update",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-asset-update-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-asset-update@stable"
+        }
+      ]
+    },
+    {
+      "name": "shivammathur/setup-php",
+      "SPDXID": "SPDXRef-githubactions-shivammathur-setup-php-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/shivammathur/setup-php@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "symfony/deprecation-contracts",
+      "SPDXID": "SPDXRef-composer-symfony-deprecation-contracts-3.3.0-75c946",
+      "versionInfo": "3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/deprecation-contracts@3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "phpunit/php-code-coverage",
+      "SPDXID": "SPDXRef-composer-phpunit-php-code-coverage-7.0.15-75c946",
+      "versionInfo": "7.0.15",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) JS Foundation and other contributors, (c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2009-2019, Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) Federico Zivolo 2019, Copyright 2011-2019 The Bootstrap Authors, Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors), Copyright 2011-2019 Twitter, Inc.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpunit/php-code-coverage@7.0.15"
+        }
+      ]
+    },
+    {
+      "name": "phpunit/php-token-stream",
+      "SPDXID": "SPDXRef-composer-phpunit-php-token-stream-4.0.4-75c946",
+      "versionInfo": "4.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpunit/php-token-stream@4.0.4"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/type",
+      "SPDXID": "SPDXRef-composer-sebastian-type-1.1.4-75c946",
+      "versionInfo": "1.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/type@1.1.4"
+        }
+      ]
+    },
+    {
+      "name": "symfony/polyfill-mbstring",
+      "SPDXID": "SPDXRef-composer-symfony-polyfill-mbstring-1.28.0-75c946",
+      "versionInfo": "1.28.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Fabien Potencier <fabien@symfony.com>, Copyright (c) 2015-present Fabien Potencier",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/polyfill-mbstring@1.28.0"
+        }
+      ]
+    },
+    {
+      "name": "phpstan/phpstan",
+      "SPDXID": "SPDXRef-composer-phpstan-phpstan-1.10.41-75c946",
+      "versionInfo": "1.10.41",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpstan/phpstan@1.10.41"
+        }
+      ]
+    },
+    {
+      "name": "doctrine/instantiator",
+      "SPDXID": "SPDXRef-composer-doctrine-instantiator-1.5.0-75c946",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 Doctrine Project",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/doctrine/instantiator@1.5.0"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/exporter",
+      "SPDXID": "SPDXRef-composer-sebastian-exporter-3.1.5-75c946",
+      "versionInfo": "3.1.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/exporter@3.1.5"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/object-enumerator",
+      "SPDXID": "SPDXRef-composer-sebastian-object-enumerator-3.0.4-75c946",
+      "versionInfo": "3.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2016-2017, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/object-enumerator@3.0.4"
+        }
+      ]
+    },
+    {
+      "name": "composer/xdebug-handler",
+      "SPDXID": "SPDXRef-composer-composer-xdebug-handler-3.0.3-75c946",
+      "versionInfo": "3.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) John Stevenson <john-stevenson@blueyonder.co.uk>, Copyright (c) 2017 Composer",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/composer/xdebug-handler@3.0.3"
+        }
+      ]
+    },
+    {
+      "name": "psr/container",
+      "SPDXID": "SPDXRef-composer-psr-container-2.0.2-75c946",
+      "versionInfo": "2.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013-2016, Copyright (c) 2013-2016 container-interop, Copyright (c) 2016 PHP Framework Interoperability Group",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/psr/container@2.0.2"
+        }
+      ]
+    },
+    {
+      "name": "psr/log",
+      "SPDXID": "SPDXRef-composer-psr-log-3.0.0-75c946",
+      "versionInfo": "3.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 PHP Framework Interoperability Group",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/psr/log@3.0.0"
+        }
+      ]
+    },
+    {
+      "name": "phpcompatibility/phpcompatibility-paragonie",
+      "SPDXID": "SPDXRef-composer-phpcompatibility-phpcompatibility-paragonie-1.3.2-75c946",
+      "versionInfo": "1.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcompatibility/phpcompatibility-paragonie@1.3.2"
+        }
+      ]
+    },
+    {
+      "name": "phpunit/php-file-iterator",
+      "SPDXID": "SPDXRef-composer-phpunit-php-file-iterator-2.0.5-75c946",
+      "versionInfo": "2.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2009-2018, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpunit/php-file-iterator@2.0.5"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/comparator",
+      "SPDXID": "SPDXRef-composer-sebastian-comparator-3.0.5-75c946",
+      "versionInfo": "3.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2002-2018, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/comparator@3.0.5"
+        }
+      ]
+    },
+    {
+      "name": "phpmd/phpmd",
+      "SPDXID": "SPDXRef-composer-phpmd-phpmd-2.14.1-75c946",
+      "versionInfo": "2.14.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpmd/phpmd@2.14.1"
+        }
+      ]
+    },
+    {
+      "name": "wp-coding-standards/wpcs",
+      "SPDXID": "SPDXRef-composer-wp-coding-standards-wpcs-2.3.0-75c946",
+      "versionInfo": "2.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2009 John Godley and contributors.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/wp-coding-standards/wpcs@2.3.0"
+        }
+      ]
+    },
+    {
+      "name": "phpcompatibility/php-compatibility",
+      "SPDXID": "SPDXRef-composer-phpcompatibility-php-compatibility-9.3.5-75c946",
+      "versionInfo": "9.3.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "LGPL-3.0-or-later",
+      "copyrightText": "Copyright (c) 2007 Free Software Foundation, Inc. <http://fsf.org/>, copyright 2009-2019 PHPCompatibility, copyright 2012-2019 PHPCompatibility",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcompatibility/php-compatibility@9.3.5"
+        }
+      ]
+    },
+    {
+      "name": "composer/pcre",
+      "SPDXID": "SPDXRef-composer-composer-pcre-3.1.1-75c946",
+      "versionInfo": "3.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2021 Composer",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/composer/pcre@3.1.1"
+        }
+      ]
+    },
+    {
+      "name": "symfony/polyfill-ctype",
+      "SPDXID": "SPDXRef-composer-symfony-polyfill-ctype-1.28.0-75c946",
+      "versionInfo": "1.28.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/polyfill-ctype@1.28.0"
+        }
+      ]
+    },
+    {
+      "name": "symfony/config",
+      "SPDXID": "SPDXRef-composer-symfony-config-6.3.8-75c946",
+      "versionInfo": "6.3.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/config@6.3.8"
+        }
+      ]
+    },
+    {
+      "name": "yoast/phpunit-polyfills",
+      "SPDXID": "SPDXRef-composer-yoast-phpunit-polyfills-1.1.0-75c946",
+      "versionInfo": "1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/yoast/phpunit-polyfills@1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "phpunit/php-timer",
+      "SPDXID": "SPDXRef-composer-phpunit-php-timer-2.1.3-75c946",
+      "versionInfo": "2.1.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2010-2019, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpunit/php-timer@2.1.3"
+        }
+      ]
+    },
+    {
+      "name": "phar-io/version",
+      "SPDXID": "SPDXRef-composer-phar-io-version-3.2.1-75c946",
+      "versionInfo": "3.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Arne Blankerts <arne@blankerts.de> , Sebastian Heuer <sebastian@phpeople.de> , Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2016-2017 Arne Blankerts <arne@blankerts.de> , Sebastian Heuer <sebastian@phpeople.de> and contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phar-io/version@3.2.1"
+        }
+      ]
+    },
+    {
+      "name": "squizlabs/php_codesniffer",
+      "SPDXID": "SPDXRef-composer-squizlabs-phpcodesniffer-3.7.2-75c946",
+      "versionInfo": "3.7.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2012, Squiz Pty Ltd (ABN 77 084 670 600), copyright 1994-1997 Squiz Pty Ltd, copyright 1994-1997 The PHP Group, copyright 1997 Squiz Pty Ltd, copyright 1997~1994 The PHP Group, copyright 2006-2012 Squiz Pty Ltd, copyright 2006-2014 Squiz Pty Ltd, copyright 2006-2015 Squiz Pty Ltd, copyright 2006-2017 Squiz Pty Ltd, copyright 2006-2018 Squiz Pty Ltd, copyright 2006-2019 Squiz Pty Ltd, copyright 2006-2020 Squiz Pty Ltd, copyright 2007-2014 Manuel Pichler, copyright 2007-2014 Mayflower GmbH, copyright 2009-2014 Florian Grandel, copyright 2010-2014 Alexander Obuhovich, copyright 2010-2014 Andy Grunwald, copyright 2010-2014 Squiz Pty Ltd, copyright 2010-2014 Stefano Kowalke, copyright 2012-2014 Christian Weiske, copyright 2013-2014 Foo Inc., copyright 2013-2014 Roman Levishchenko, copyright 2014 Arroba IT, copyright 2017 Juliette Reinders Folmer, copyright 2018 Juliette Reinders Folmer, copyright 2018-2019 Juliette Reinders Folmer, copyright 2019 Juliette Reinders Folmer, copyright 2019 Matthew Peveler, copyright 2019 Squiz Pty Ltd, copyright 2020 Squiz Pty Ltd, copyright 2020-2021 Squiz Pty Ltd, copyright 2021 Squiz Pty Ltd, copyright 2022 Squiz Pty Ltd, copyright 2023 Squiz Pty Ltd, copyright The PHP Group, Greg Sherwood <gsherwood@squiz.net> copyright 2010-2014 mediaSELF Sp. z",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/squizlabs/php_codesniffer@3.7.2"
+        }
+      ]
+    },
+    {
+      "name": "symfony/service-contracts",
+      "SPDXID": "SPDXRef-composer-symfony-service-contracts-3.3.0-75c946",
+      "versionInfo": "3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/service-contracts@3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/global-state",
+      "SPDXID": "SPDXRef-composer-sebastian-global-state-3.0.3-75c946",
+      "versionInfo": "3.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/global-state@3.0.3"
+        }
+      ]
+    },
+    {
+      "name": "pdepend/pdepend",
+      "SPDXID": "SPDXRef-composer-pdepend-pdepend-2.15.1-75c946",
+      "versionInfo": "2.15.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/pdepend/pdepend@2.15.1"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/recursion-context",
+      "SPDXID": "SPDXRef-composer-sebastian-recursion-context-3.0.1-75c946",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2002-2017, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/recursion-context@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/resource-operations",
+      "SPDXID": "SPDXRef-composer-sebastian-resource-operations-2.0.2-75c946",
+      "versionInfo": "2.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2015-2018, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/resource-operations@2.0.2"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/version",
+      "SPDXID": "SPDXRef-composer-sebastian-version-2.0.1-75c946",
+      "versionInfo": "2.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2013-2015, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/version@2.0.1"
+        }
+      ]
+    },
+    {
+      "name": "theseer/tokenizer",
+      "SPDXID": "SPDXRef-composer-theseer-tokenizer-1.2.1-75c946",
+      "versionInfo": "1.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2017 Arne Blankerts <arne@blankerts.de> and contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/theseer/tokenizer@1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "myclabs/deep-copy",
+      "SPDXID": "SPDXRef-composer-myclabs-deep-copy-1.11.1-75c946",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 My C-Sense",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/myclabs/deep-copy@1.11.1"
+        }
+      ]
+    },
+    {
+      "name": "phar-io/manifest",
+      "SPDXID": "SPDXRef-composer-phar-io-manifest-2.0.3-75c946",
+      "versionInfo": "2.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Arne Blankerts <arne@blankerts.de> , Sebastian Heuer <sebastian@phpeople.de> , Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2016-2019 Arne Blankerts <arne@blankerts.de> , Sebastian Heuer <sebastian@phpeople.de> , Sebastian Bergmann <sebastian@phpunit.de> , and contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phar-io/manifest@2.0.3"
+        }
+      ]
+    },
+    {
+      "name": "phpcompatibility/phpcompatibility-wp",
+      "SPDXID": "SPDXRef-composer-phpcompatibility-phpcompatibility-wp-2.1.4-75c946",
+      "versionInfo": "2.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpcompatibility/phpcompatibility-wp@2.1.4"
+        }
+      ]
+    },
+    {
+      "name": "phpunit/phpunit",
+      "SPDXID": "SPDXRef-composer-phpunit-phpunit-8.5.34-75c946",
+      "versionInfo": "8.5.34",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpunit/phpunit@8.5.34"
+        }
+      ]
+    },
+    {
+      "name": "symfony/filesystem",
+      "SPDXID": "SPDXRef-composer-symfony-filesystem-6.3.1-75c946",
+      "versionInfo": "6.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/filesystem@6.3.1"
+        }
+      ]
+    },
+    {
+      "name": "symfony/var-exporter",
+      "SPDXID": "SPDXRef-composer-symfony-var-exporter-6.3.6-75c946",
+      "versionInfo": "6.3.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/var-exporter@6.3.6"
+        }
+      ]
+    },
+    {
+      "name": "symfony/dependency-injection",
+      "SPDXID": "SPDXRef-composer-symfony-dependency-injection-6.3.8-75c946",
+      "versionInfo": "6.3.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/dependency-injection@6.3.8"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/code-unit-reverse-lookup",
+      "SPDXID": "SPDXRef-composer-sebastian-code-unit-reverse-lookup-1.0.2-75c946",
+      "versionInfo": "1.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2016-2017, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/code-unit-reverse-lookup@1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/object-reflector",
+      "SPDXID": "SPDXRef-composer-sebastian-object-reflector-1.1.2-75c946",
+      "versionInfo": "1.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2017, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/object-reflector@1.1.2"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/diff",
+      "SPDXID": "SPDXRef-composer-sebastian-diff-3.0.4-75c946",
+      "versionInfo": "3.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/diff@3.0.4"
+        }
+      ]
+    },
+    {
+      "name": "phpunit/php-text-template",
+      "SPDXID": "SPDXRef-composer-phpunit-php-text-template-1.2.1-75c946",
+      "versionInfo": "1.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/phpunit/php-text-template@1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "sebastian/environment",
+      "SPDXID": "SPDXRef-composer-sebastian-environment-4.2.4-75c946",
+      "versionInfo": "4.2.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "copyrightText": "(c) Sebastian Bergmann <sebastian@phpunit.de>, Copyright (c) 2014-2019, Sebastian Bergmann <sebastian@phpunit.de>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/sebastian/environment@4.2.4"
+        }
+      ]
+    },
+    {
+      "name": "com.github.thingsym/custom-post-type-widgets",
+      "SPDXID": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/thingsym/custom-post-type-widgets",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/thingsym/custom-post-type-widgets@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpmd-phpmd-2.14.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpcompatibility-php-compatibility-9.3.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-composer-pcre-3.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-config-6.3.8-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-pdepend-pdepend-2.15.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-resource-operations-2.0.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-version-2.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-githubactions-shivammathur-setup-php-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-composer-xdebug-handler-3.0.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-psr-log-3.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpunit-php-file-iterator-2.0.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-squizlabs-phpcodesniffer-3.7.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-recursion-context-3.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpunit-phpunit-8.5.34-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-dependency-injection-6.3.8-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpunit-php-token-stream-4.0.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-psr-container-2.0.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-myclabs-deep-copy-1.11.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-object-enumerator-3.0.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpcompatibility-phpcompatibility-paragonie-1.3.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-polyfill-ctype-1.28.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phar-io-version-3.2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phar-io-manifest-2.0.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-code-unit-reverse-lookup-1.0.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-yoast-phpunit-polyfills-1.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpunit-php-timer-2.1.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-polyfill-mbstring-1.28.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-doctrine-instantiator-1.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-diff-3.0.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-deprecation-contracts-3.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpunit-php-code-coverage-7.0.15-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpstan-phpstan-1.10.41-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-comparator-3.0.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-object-reflector-1.1.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-wp-coding-standards-wpcs-2.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-service-contracts-3.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-global-state-3.0.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-theseer-tokenizer-1.2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-var-exporter-6.3.6-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpunit-php-text-template-1.2.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-environment-4.2.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-type-1.1.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-sebastian-exporter-3.1.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-phpcompatibility-phpcompatibility-wp-2.1.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-filesystem-6.3.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-asset-update-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-thingsym-custom-post-type-widgets-master-b6bb03",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

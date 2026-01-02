@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.philc/vimium",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/b23ef422-fc0e-4eee-a0a8-cb3ad04b1643",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:44Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.philc/vimium",
+      "SPDXID": "SPDXRef-github-philc-vimium-master-718ccd",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/philc/vimium",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/philc/vimium@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-philc-vimium-master-718ccd",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

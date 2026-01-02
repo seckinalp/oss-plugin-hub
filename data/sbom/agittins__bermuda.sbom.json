@@ -1,0 +1,422 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.agittins/bermuda",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/7b857a55-261b-4a47-911b-976663c9e6ca",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:47:59Z"
+  },
+  "packages": [
+    {
+      "name": "home-assistant/actions/hassfest",
+      "SPDXID": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/home-assistant/actions/hassfest@master"
+        }
+      ]
+    },
+    {
+      "name": "hacs/action",
+      "SPDXID": "SPDXRef-githubactions-hacs-action-22.5.0-75c946",
+      "versionInfo": "22.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/hacs/action@22.5.0"
+        }
+      ]
+    },
+    {
+      "name": "astral-sh/setup-uv",
+      "SPDXID": "SPDXRef-githubactions-astral-sh-setup-uv-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/astral-sh/setup-uv@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-python",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-python-5.6.0-75c946",
+      "versionInfo": "5.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-python@5.6.0"
+        }
+      ]
+    },
+    {
+      "name": "aiousbwatcher",
+      "SPDXID": "SPDXRef-pypi-aiousbwatcher-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/aiousbwatcher"
+        }
+      ]
+    },
+    {
+      "name": "homeassistant",
+      "SPDXID": "SPDXRef-pypi-homeassistant-75c946",
+      "versionInfo": ">= 2025.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/homeassistant"
+        }
+      ]
+    },
+    {
+      "name": "aiofiles",
+      "SPDXID": "SPDXRef-pypi-aiofiles-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/aiofiles"
+        }
+      ]
+    },
+    {
+      "name": "pyserial-asyncio",
+      "SPDXID": "SPDXRef-pypi-pyserial-asyncio-0.6-75c946",
+      "versionInfo": "0.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "(c) 2015-2017 Chris Liechti <cliechti@gmx.net>, (c) 2016",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyserial-asyncio@0.6"
+        }
+      ]
+    },
+    {
+      "name": "colorlog",
+      "SPDXID": "SPDXRef-pypi-colorlog-6.9.0-75c946",
+      "versionInfo": "6.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2021 Sam Clements <sam@borntyping.co.uk>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/colorlog@6.9.0"
+        }
+      ]
+    },
+    {
+      "name": "ruff",
+      "SPDXID": "SPDXRef-pypi-ruff-0.12.7-75c946",
+      "versionInfo": "0.12.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "0BSD AND Apache-2.0 AND BSD-3-Clause AND MIT",
+      "copyrightText": "(c) Copyright 2000 Guido van Rossum, (c) Copyright CNRI, Copyright (c) 1999-2003 Steve Purcell, Copyright (c) 2000 Bastian Kleineidam, Copyright (c) 2000 Luke Kenneth Casson Leighton <lkcl@samba.org>, Copyright (c) 2001 Python Software Foundation, Copyright (c) 2001-2021 Vinay Sajip, Copyright (c) 2001-2022 Vinay Sajip, Copyright (c) 2003 Python Software Foundation, Copyright (c) 2006-2009 Johann C. Rocholl <johann@rocholl.net>, Copyright (c) 2009-2014 Florent Xicluna <florent.xicluna@gmail.com>, Copyright (c) 2011-2013 Tarek Ziade <tarek@ziade.org>, Copyright (c) 2011-2014 Vinay Sajip, Copyright (c) 2012 GreenSteam, <http://greensteam.dk/>, Copyright (c) 2012-2016 Ian Cordasco <graffatcolmingov@gmail.com>, Copyright (c) 2012-2018 Steven Myint, Copyright (c) 2013 Florent Xicluna <florent.xicluna@gmail.com>, Copyright (c) 2013 Timothy Edmund Crosley, Copyright (c) 2014 Elijah Andrews, Copyright (c) 2014-2020 Amir Rachum, <http://amir.rachum.com/>, Copyright (c) 2014-2020 Ian Lee <IanLee1521@gmail.com>, Copyright (c) 2015 Jukka Lehtosalo and contributors, Copyright (c) 2016 Joseph Kahn, Copyright (c) 2016 Lukasz Langa, Copyright (c) 2017 Adam Johnson, Copyright (c) 2017 Anthony Sottile, Copyright (c) 2017 Thomas Grainger, Copyright (c) 2017 Tyler Wince, Copyright (c) 2018 Anthony Sottile, Copyright (c) 2018 Nikita Sobolev, Copyright (c) 2019 - Present S. Co1, Copyright (c) 2019 Afonasev Evgeniy, Copyright (c) 2019 Anthony Sottile, Copyright (c) 2019 Dylan Turner, Copyright (c) 2019 EclecticIQ., Copyright (c) 2019 Nathan Hoad, Copyright (c) 2019-2022 Ilya Kamenshchikov, Copyright (c) 2020 Adam Johnson, Copyright (c) 2020 Gram <gram@orsinium.dev>, Copyright (c) 2020 Jon Dufresne, Copyright (c) 2020 Martin Thoma, Copyright (c) 2020 RustPython Team, Copyright (c) 2020 Sambhav Kothari, <https://github.com/samj1912>, Copyright (c) 2021 Dominic Davis-Foster, Copyright (c) 2021 Joao Palmeiro, Copyright (c) 2021 Rodolphe Pelloux-Prayer, Copyright (c) 2021-2023, Copyright (c) 2021-2023 import os, Copyright (c) 2021, 2022 import os, Copyright (c) 2021, 2023 option, Copyright (c) 2021, Sondre Lillebo Gundersen, Copyright (c) 2022 - 2023 Ruff, Copyright (c) 2022 Anthony Shaw, Copyright (c) 2022 Charles Marsh, Copyright (c) 2022 Cooper Lees, Copyright (c) 2022 Zac Hatfield-Dodds, Copyright (c) 2022- 2023 Ruff, Copyright (c) 2022-2023 Ruff, Copyright (c) 2022, 2023 Ruff, Copyright (c) 2022,2023 Ruff, Copyright (c) 2023, Copyright (c) 2023 Adam Johnson, Copyright (c) 2023 import os, COPYRIGHT (c) 2023 import os, Copyright (c) 2023 Jelle Zijlstra, Copyright (c) 2023 jsh9, Copyright (c) 2023 Korijn van Golen, Copyright (c) 2023 Ruff, Copyright (c) Individual contributors, Copyright (c) Microsoft Corporation, Copyright (c) Rome Tools, Inc. and its affiliates, Copyright 2005-2011 Divmod, Inc., Copyright 2008 by Armin Ronacher, Copyright 2013-2014 Florent Xicluna, Copyright 2020 The TensorFlow Authors, Copyright 2021-2023, Copyright 2023, Copyright 2023 .trim, Copyright 2023 import os",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/ruff@0.12.7"
+        }
+      ]
+    },
+    {
+      "name": "pip",
+      "SPDXID": "SPDXRef-pypi-pip-75c946",
+      "versionInfo": ">= 24.1.1,< 25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pip"
+        }
+      ]
+    },
+    {
+      "name": "pyserial",
+      "SPDXID": "SPDXRef-pypi-pyserial-3.5-75c946",
+      "versionInfo": "3.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "(c) 2001-2009 cliechti@gmx.net, (c) 2001-2011 cliechti@gmx.net, (c) 2001-2015 Chris Liechti <cliechti@gmx.net>, (c) 2001-2015 cliechti@gmx.net, (c) 2001-2016 Chris Liechti <cliechti@gmx.net>, (c) 2001-2020 Chris Liechti <cliechti@gmx.net>, (c) 2002 cliechti@gmx.net, (c) 2002-2003 cliechti@gmx.net, (c) 2002-2015 Chris Liechti <cliechti@gmx.net>, (c) 2002-2015 cliechti@gmx.net, (c) 2002-2020 Chris Liechti <cliechti@gmx.net>, (c) 2008-2015 Chris Liechti <cliechti@gmx.net>, (c) 2009-2015 Chris Liechti <cliechti@gmx.net>, (c) 2010 cliechti@gmx.net, (c) 2010-2015 Chris Liechti <cliechti@gmx.net>, (c) 2011 Chris Liechti <cliechti@gmx.net>, (c) 2011-2015 Chris Liechti <cliechti@gmx.net>, (c) 2013-2020 SPDX-License-Identifier BSD-3-Clause, (c) 2015 Chris Liechti <cliechti@gmx.net>, (c) 2015-2016 Chris Liechti <cliechti@gmx.net>, (c) 2016 Chris Liechti <cliechti@gmx.net>, (c) 2017 Chris Liechti <cliechti@gmx.net>, (c) 2017 Guillaume Galeazzi <guillaume.g@leazzi.ch>, (c) 2019 Google LLC, Copyright (c) 2001-2020 Chris Liechti, Copyright (c) 2001-2020 Chris Liechti <cliechti@gmx.net>, copyright u'2001-2020, Chris Liechti",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyserial@3.5"
+        }
+      ]
+    },
+    {
+      "name": "pyudev",
+      "SPDXID": "SPDXRef-pypi-pyudev-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyudev"
+        }
+      ]
+    },
+    {
+      "name": "pre-commit",
+      "SPDXID": "SPDXRef-pypi-pre-commit-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pre-commit"
+        }
+      ]
+    },
+    {
+      "name": "pytest-homeassistant-custom-component",
+      "SPDXID": "SPDXRef-pypi-pytest-homeassistant-custom-component-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest-homeassistant-custom-component"
+        }
+      ]
+    },
+    {
+      "name": "crazy-max/ghaction-github-labeler",
+      "SPDXID": "SPDXRef-githubactions-crazy-max-ghaction-github-labeler-5.3.0-75c946",
+      "versionInfo": "5.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/crazy-max/ghaction-github-labeler@5.3.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "release-drafter/release-drafter",
+      "SPDXID": "SPDXRef-githubactions-release-drafter-release-drafter-6.1.0-75c946",
+      "versionInfo": "6.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/release-drafter/release-drafter@6.1.0"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-2.3.2-75c946",
+      "versionInfo": "2.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@2.3.2"
+        }
+      ]
+    },
+    {
+      "name": "sigstore/gh-action-sigstore-python",
+      "SPDXID": "SPDXRef-githubactions-sigstore-gh-action-sigstore-python-3.0.1-75c946",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/sigstore/gh-action-sigstore-python@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.agittins/bermuda",
+      "SPDXID": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/agittins/bermuda",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/agittins/bermuda@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-astral-sh-setup-uv-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-aiousbwatcher-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-pip-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-pyudev-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-pre-commit-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-pytest-homeassistant-custom-component-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-crazy-max-ghaction-github-labeler-5.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-python-5.6.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-pyserial-asyncio-0.6-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-colorlog-6.9.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-sigstore-gh-action-sigstore-python-3.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-hacs-action-22.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-homeassistant-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-aiofiles-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-ruff-0.12.7-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-pypi-pyserial-3.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-release-drafter-release-drafter-6.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-2.3.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-agittins-bermuda-main-675b1d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

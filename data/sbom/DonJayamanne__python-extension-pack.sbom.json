@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.DonJayamanne/python-extension-pack",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/c39d0b83-bcbf-4926-bb75-60b74032585a",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:51:24Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.DonJayamanne/python-extension-pack",
+      "SPDXID": "SPDXRef-github-DonJayamanne-python-extension-pack-master-d80a90",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/DonJayamanne/python-extension-pack",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/DonJayamanne/python-extension-pack@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-DonJayamanne-python-extension-pack-master-d80a90",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

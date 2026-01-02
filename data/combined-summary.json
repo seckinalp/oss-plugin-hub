@@ -1,0 +1,2131 @@
+{
+  "generatedAt": "2025-12-25T09:32:59.477Z",
+  "sources": [
+    {
+      "key": "analyticsSummary",
+      "path": "data/analytics-summary.json",
+      "sizeBytes": 38417,
+      "sha256": "baed9d836e0fb14ea2288cbb1aa9b16fcfb957ba1567ce7636c204b86882d865"
+    },
+    {
+      "key": "languageLicenseSummary",
+      "path": "data/top100-language-license-summary.json",
+      "sizeBytes": 4175,
+      "sha256": "ef919322719486da1bcd7a90b12e322d78438fb39f4784eac9cbd00db213df9e"
+    },
+    {
+      "key": "coverageSummary",
+      "path": "data/top100-coverage-summary.json",
+      "sizeBytes": 10741,
+      "sha256": "fc35738189725ec7c827346a5e635099e7aba5a576829a6ec2823f2b8c23f6f3"
+    }
+  ],
+  "analyticsSummary": {
+    "generatedAt": "2025-12-25T09:32:52.882Z",
+    "platforms": [
+      {
+        "platform": "chrome",
+        "osTotalPlugins": 7459,
+        "totalPluginsAll": 246379,
+        "top100Count": 100,
+        "totalStars": 791751,
+        "avgStars": 7917.51,
+        "totalDownloads": 233670000,
+        "avgDownloads": 2336700,
+        "totalIssues": 33724,
+        "avgIssues": 337.24,
+        "issueDensity": 0.04259419943896503,
+        "totalForks": 120128,
+        "avgForks": 1201.28,
+        "category": "Browser",
+        "top100WithDownloads": 100,
+        "top100Downloads": 233670000,
+        "avgGovernanceScore": 1.08,
+        "avgCoreTeamRatio": 6.247216425038621,
+        "issueEfficiency": 0.6960938960081374,
+        "abandonmentRate": 0.26,
+        "starConcentration": 3287.6748638189547,
+        "ownerShare": 17.99,
+        "avgProdDeps": 11.77,
+        "avgDevDeps": 18.86,
+        "avgWorkflowCount": 2.49,
+        "avgCommitFrequency": 4.17,
+        "avgRepoSize": 215586.66,
+        "avgStaleDepRatio": 0.5852666157016009,
+        "abandonedCount": 26,
+        "avgRepoSizeKb": 215586.66,
+        "coreTeamRatio": 624.7216425038621,
+        "starConcentrationIndex": 3287.6748638189547,
+        "ossAvailabilityIndex": 10.530938960081375,
+        "topLanguages": [
+          {
+            "name": "JavaScript",
+            "count": 66,
+            "percentage": 66
+          },
+          {
+            "name": "TypeScript",
+            "count": 26,
+            "percentage": 26
+          },
+          {
+            "name": "Java",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "Unknown",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "HTML",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "CoffeeScript",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "CSS",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 31,
+            "percentage": 31
+          },
+          {
+            "name": "MIT License",
+            "count": 24,
+            "percentage": 24
+          },
+          {
+            "name": "Other",
+            "count": 16,
+            "percentage": 16
+          },
+          {
+            "name": "No License",
+            "count": 7,
+            "percentage": 7.000000000000001
+          },
+          {
+            "name": "Apache License 2.0",
+            "count": 6,
+            "percentage": 6
+          },
+          {
+            "name": "Mozilla Public License 2.0",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "count": 3,
+            "percentage": 3
+          },
+          {
+            "name": "GNU Lesser General Public License v2.1",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "GNU General Public License v2.0",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "GNU Affero General Public License v3.0",
+            "count": 2,
+            "percentage": 2
+          }
+        ],
+        "avgPrFrictionDays": 34.74062499999999,
+        "reposWithPrFriction": 96,
+        "sbom": {
+          "total": 100,
+          "available": 88,
+          "notFound": 11,
+          "rateLimited": 0,
+          "errors": 1,
+          "missing": 0,
+          "coverage": 0.88
+        },
+        "downloadConcentration": {
+          "totalDownloads": 233670000,
+          "top1": {
+            "name": "uBlock Origin",
+            "repo": "gorhill/uBlock",
+            "downloads": 24000000,
+            "percentage": 10.270894851713956
+          },
+          "top2": {
+            "name": "AdGuard AdBlocker",
+            "repo": "AdguardTeam/AdguardBrowserExtension",
+            "downloads": 16000000,
+            "percentage": 6.84726323447597
+          },
+          "top5Percentage": 33.380408268070354,
+          "top10Percentage": 52.63833611503402
+        }
+      },
+      {
+        "platform": "jetbrains",
+        "osTotalPlugins": 5849,
+        "totalPluginsAll": 10003,
+        "top100Count": 100,
+        "totalStars": 501545,
+        "avgStars": 5015.45,
+        "totalDownloads": 587304466,
+        "avgDownloads": 5873044.66,
+        "totalIssues": 9213,
+        "avgIssues": 92.13,
+        "issueDensity": 0.018369239051331386,
+        "totalForks": 138394,
+        "avgForks": 1383.94,
+        "category": "IDE",
+        "top100WithDownloads": 100,
+        "top100Downloads": 587304466,
+        "avgGovernanceScore": 1.26,
+        "avgCoreTeamRatio": 1.2230683720322575,
+        "issueEfficiency": 0.4671213736729606,
+        "abandonmentRate": 0.18,
+        "starConcentration": 1331.3887258394182,
+        "ownerShare": 14.03273576200315,
+        "avgProdDeps": 2.25,
+        "avgDevDeps": 1.21,
+        "avgWorkflowCount": 2.71,
+        "avgCommitFrequency": 110.09,
+        "avgRepoSize": 1190476.64,
+        "avgStaleDepRatio": 0.14583333333333334,
+        "abandonedCount": 18,
+        "avgRepoSizeKb": 1190476.64,
+        "coreTeamRatio": 122.30683720322575,
+        "starConcentrationIndex": 1331.3887258394182,
+        "ossAvailabilityIndex": 8.641213736729606,
+        "topLanguages": [
+          {
+            "name": "Java",
+            "count": 62,
+            "percentage": 62
+          },
+          {
+            "name": "Kotlin",
+            "count": 25,
+            "percentage": 25
+          },
+          {
+            "name": "Unknown",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "Python",
+            "count": 3,
+            "percentage": 3
+          },
+          {
+            "name": "C#",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "Makefile",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Scala",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "JavaScript",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "Apache License 2.0",
+            "count": 42,
+            "percentage": 42
+          },
+          {
+            "name": "MIT License",
+            "count": 25,
+            "percentage": 25
+          },
+          {
+            "name": "No License",
+            "count": 16,
+            "percentage": 16
+          },
+          {
+            "name": "Other",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "GNU Lesser General Public License v3.0",
+            "count": 3,
+            "percentage": 3
+          },
+          {
+            "name": "BSD 2-Clause \"Simplified\" License",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "ISC License",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "GNU Affero General Public License v3.0",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 6.075567010309281,
+        "reposWithPrFriction": 97,
+        "sbom": {
+          "total": 100,
+          "available": 88,
+          "notFound": 12,
+          "rateLimited": 0,
+          "errors": 0,
+          "missing": 0,
+          "coverage": 0.88
+        },
+        "downloadConcentration": {
+          "totalDownloads": 587304466,
+          "top1": {
+            "name": "Kotlin",
+            "repo": "JetBrains/intellij-community",
+            "downloads": 35972198,
+            "percentage": 6.124965853741695
+          },
+          "top2": {
+            "name": "Dart",
+            "repo": "JetBrains/intellij-plugins",
+            "downloads": 25036419,
+            "percentage": 4.262936934656309
+          },
+          "top5Percentage": 22.28565958154999,
+          "top10Percentage": 37.855923097986455
+        }
+      },
+      {
+        "platform": "firefox",
+        "osTotalPlugins": 7862,
+        "totalPluginsAll": 110320,
+        "top100Count": 100,
+        "totalStars": 479809,
+        "avgStars": 4798.09,
+        "totalDownloads": 17242577,
+        "avgDownloads": 172425.77,
+        "totalIssues": 12156,
+        "avgIssues": 121.56,
+        "issueDensity": 0.025335081251081158,
+        "totalForks": 81394,
+        "avgForks": 813.94,
+        "category": "Browser",
+        "top100WithDownloads": 100,
+        "top100Downloads": 17242577,
+        "avgGovernanceScore": 1.06,
+        "avgCoreTeamRatio": 0.7989860832425393,
+        "issueEfficiency": 0.6278087291111728,
+        "abandonmentRate": 0.43,
+        "starConcentration": 1231.690233754369,
+        "ownerShare": 31.57228852636911,
+        "avgProdDeps": 2.99,
+        "avgDevDeps": 9.25,
+        "avgWorkflowCount": 1.08,
+        "avgCommitFrequency": 0.61,
+        "avgRepoSize": 32652.22,
+        "avgStaleDepRatio": 0.4473404928862398,
+        "abandonedCount": 43,
+        "avgRepoSizeKb": 32652.22,
+        "coreTeamRatio": 79.89860832425393,
+        "starConcentrationIndex": 1231.690233754369,
+        "ossAvailabilityIndex": 8.418087291111728,
+        "topLanguages": [
+          {
+            "name": "JavaScript",
+            "count": 72,
+            "percentage": 72
+          },
+          {
+            "name": "TypeScript",
+            "count": 16,
+            "percentage": 16
+          },
+          {
+            "name": "Unknown",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "HTML",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "Makefile",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "CSS",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Java",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "CoffeeScript",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Shell",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "C#",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "MIT License",
+            "count": 27,
+            "percentage": 27
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 24,
+            "percentage": 24
+          },
+          {
+            "name": "Mozilla Public License 2.0",
+            "count": 20,
+            "percentage": 20
+          },
+          {
+            "name": "No License",
+            "count": 11,
+            "percentage": 11
+          },
+          {
+            "name": "Other",
+            "count": 7,
+            "percentage": 7.000000000000001
+          },
+          {
+            "name": "GNU Affero General Public License v3.0",
+            "count": 3,
+            "percentage": 3
+          },
+          {
+            "name": "Apache License 2.0",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "The Unlicense",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "University of Illinois/NCSA Open Source License",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "BSD 2-Clause \"Simplified\" License",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 20.876304347826085,
+        "reposWithPrFriction": 92,
+        "sbom": {
+          "total": 100,
+          "available": 75,
+          "notFound": 24,
+          "rateLimited": 0,
+          "errors": 1,
+          "missing": 0,
+          "coverage": 0.75
+        },
+        "downloadConcentration": {
+          "totalDownloads": 17242577,
+          "top1": {
+            "name": "uBlock Origin",
+            "repo": "gorhill/uBlock",
+            "downloads": 9938941,
+            "percentage": 57.64185365099428
+          },
+          "top2": {
+            "name": "Facebook Container",
+            "repo": "mozilla/contain-facebook",
+            "downloads": 861910,
+            "percentage": 4.998730758169153
+          },
+          "top5Percentage": 72.36072658976671,
+          "top10Percentage": 79.9624325296619
+        }
+      },
+      {
+        "platform": "vscode",
+        "osTotalPlugins": 25136,
+        "totalPluginsAll": 86145,
+        "top100Count": 100,
+        "totalStars": 184466,
+        "avgStars": 1844.66,
+        "totalDownloads": 2950813730,
+        "avgDownloads": 29508137.3,
+        "totalIssues": 32550,
+        "avgIssues": 325.5,
+        "issueDensity": 0.17645528173213493,
+        "totalForks": 35166,
+        "avgForks": 351.66,
+        "category": "IDE",
+        "top100WithDownloads": 100,
+        "top100Downloads": 2950813730,
+        "avgGovernanceScore": 1.73,
+        "avgCoreTeamRatio": 31.301574064067026,
+        "issueEfficiency": 0.5093176651414582,
+        "abandonmentRate": 0.24,
+        "starConcentration": 419.2126915325131,
+        "ownerShare": 7.437942097026604,
+        "avgProdDeps": 6.27,
+        "avgDevDeps": 19.26,
+        "avgWorkflowCount": 3.31,
+        "avgCommitFrequency": 1.43,
+        "avgRepoSize": 85755.56,
+        "avgStaleDepRatio": 0.6557589995615556,
+        "abandonedCount": 24,
+        "avgRepoSizeKb": 85755.56,
+        "coreTeamRatio": 3130.1574064067026,
+        "starConcentrationIndex": 419.2126915325131,
+        "ossAvailabilityIndex": 10.133176651414582,
+        "topLanguages": [
+          {
+            "name": "TypeScript",
+            "count": 69,
+            "percentage": 69
+          },
+          {
+            "name": "Unknown",
+            "count": 12,
+            "percentage": 12
+          },
+          {
+            "name": "JavaScript",
+            "count": 8,
+            "percentage": 8
+          },
+          {
+            "name": "Dockerfile",
+            "count": 6,
+            "percentage": 6
+          },
+          {
+            "name": "Python",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "Java",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "C++",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Rust",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "MIT License",
+            "count": 60,
+            "percentage": 60
+          },
+          {
+            "name": "Other",
+            "count": 29,
+            "percentage": 28.999999999999996
+          },
+          {
+            "name": "Creative Commons Attribution 4.0 International",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "Eclipse Public License 2.0",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "No License",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 13.412100000000004,
+        "reposWithPrFriction": 100,
+        "sbom": {
+          "total": 100,
+          "available": 98,
+          "notFound": 2,
+          "rateLimited": 0,
+          "errors": 0,
+          "missing": 0,
+          "coverage": 0.98
+        },
+        "downloadConcentration": {
+          "totalDownloads": 2950813730,
+          "top1": {
+            "name": "Python",
+            "repo": "Microsoft/vscode-python",
+            "downloads": 188638413,
+            "percentage": 6.392759091574378
+          },
+          "top2": {
+            "name": "Pylance",
+            "repo": "microsoft/pylance-release",
+            "downloads": 156525374,
+            "percentage": 5.304481689530434
+          },
+          "top5Percentage": 21.198732527247664,
+          "top10Percentage": 32.853532303443636
+        }
+      },
+      {
+        "platform": "obsidian",
+        "osTotalPlugins": 2656,
+        "totalPluginsAll": 2656,
+        "top100Count": 100,
+        "totalStars": 91575,
+        "avgStars": 915.75,
+        "totalDownloads": 38734337,
+        "avgDownloads": 387343.37,
+        "totalIssues": 8972,
+        "avgIssues": 89.72,
+        "issueDensity": 0.09797433797433798,
+        "totalForks": 6932,
+        "avgForks": 69.32,
+        "category": "Specialized",
+        "top100WithDownloads": 100,
+        "top100Downloads": 38734337,
+        "avgGovernanceScore": 0.81,
+        "avgCoreTeamRatio": 6.143444238721479,
+        "issueEfficiency": 0.523025828668823,
+        "abandonmentRate": 0.47,
+        "starConcentration": 267.4325369378425,
+        "ownerShare": 31.370738124405158,
+        "avgProdDeps": 6.06,
+        "avgDevDeps": 19.06,
+        "avgWorkflowCount": 1.13,
+        "avgCommitFrequency": 0.23,
+        "avgRepoSize": 7291.78,
+        "avgStaleDepRatio": 0.7752691752691752,
+        "abandonedCount": 47,
+        "avgRepoSizeKb": 7291.78,
+        "coreTeamRatio": 614.3444238721479,
+        "starConcentrationIndex": 267.4325369378425,
+        "ossAvailabilityIndex": 7.170258286688229,
+        "topLanguages": [
+          {
+            "name": "TypeScript",
+            "count": 91,
+            "percentage": 91
+          },
+          {
+            "name": "JavaScript",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "Unknown",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "CSS",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Python",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Sass",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "MIT License",
+            "count": 65,
+            "percentage": 65
+          },
+          {
+            "name": "No License",
+            "count": 15,
+            "percentage": 15
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 14,
+            "percentage": 14.000000000000002
+          },
+          {
+            "name": "GNU Affero General Public License v3.0",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Mozilla Public License 2.0",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 18.940631578947368,
+        "reposWithPrFriction": 95,
+        "sbom": {
+          "total": 100,
+          "available": 88,
+          "notFound": 7,
+          "rateLimited": 4,
+          "errors": 1,
+          "missing": 0,
+          "coverage": 0.88
+        },
+        "downloadConcentration": {
+          "totalDownloads": 38734337,
+          "top1": {
+            "name": "Excalidraw",
+            "repo": "zsviczian/obsidian-excalidraw-plugin",
+            "downloads": 4905718,
+            "percentage": 12.665036708902491
+          },
+          "top2": {
+            "name": "Tasks",
+            "repo": "obsidian-tasks-group/obsidian-tasks",
+            "downloads": 2929239,
+            "percentage": 7.562383215698258
+          },
+          "top5Percentage": 35.41305741208375,
+          "top10Percentage": 50.53566038835259
+        }
+      },
+      {
+        "platform": "homeassistant",
+        "osTotalPlugins": 2389,
+        "totalPluginsAll": 5187,
+        "top100Count": 100,
+        "totalStars": 71025,
+        "avgStars": 710.25,
+        "totalDownloads": 4356695,
+        "avgDownloads": 43566.95,
+        "totalIssues": 5513,
+        "avgIssues": 55.13,
+        "issueDensity": 0.07762055614220345,
+        "totalForks": 8487,
+        "avgForks": 84.87,
+        "category": "Specialized",
+        "top100WithDownloads": 100,
+        "top100Downloads": 4356695,
+        "avgGovernanceScore": 0.95,
+        "avgCoreTeamRatio": 0,
+        "issueEfficiency": 0.7072242887916491,
+        "abandonmentRate": 0.34,
+        "starConcentration": 210.24409585295086,
+        "ownerShare": 30.784025352204154,
+        "avgProdDeps": 4.44,
+        "avgDevDeps": 12.74,
+        "avgWorkflowCount": 3.18,
+        "avgCommitFrequency": 0,
+        "avgRepoSize": 7337.27,
+        "avgStaleDepRatio": 0.6347508707139855,
+        "abandonedCount": 34,
+        "avgRepoSizeKb": 7337.27,
+        "coreTeamRatio": 0,
+        "starConcentrationIndex": 210.24409585295086,
+        "ossAvailabilityIndex": 11.20224288791649,
+        "topLanguages": [
+          {
+            "name": "TypeScript",
+            "count": 56,
+            "percentage": 56.00000000000001
+          },
+          {
+            "name": "Python",
+            "count": 24,
+            "percentage": 24
+          },
+          {
+            "name": "JavaScript",
+            "count": 18,
+            "percentage": 18
+          },
+          {
+            "name": "Unknown",
+            "count": 2,
+            "percentage": 2
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "MIT License",
+            "count": 61,
+            "percentage": 61
+          },
+          {
+            "name": "No License",
+            "count": 17,
+            "percentage": 17
+          },
+          {
+            "name": "Apache License 2.0",
+            "count": 14,
+            "percentage": 14.000000000000002
+          },
+          {
+            "name": "Other",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "GNU Lesser General Public License v2.1",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 16.710408163265313,
+        "reposWithPrFriction": 98,
+        "sbom": {
+          "total": 100,
+          "available": 87,
+          "notFound": 13,
+          "rateLimited": 0,
+          "errors": 0,
+          "missing": 0,
+          "coverage": 0.87
+        },
+        "downloadConcentration": {
+          "totalDownloads": 4356695,
+          "top1": {
+            "name": "mini-graph-card\",",
+            "repo": "kalkih/mini-graph-card",
+            "downloads": 206990,
+            "percentage": 4.751078512496284
+          },
+          "top2": {
+            "name": "lovelace-mushroom\",",
+            "repo": "piitaya/lovelace-mushroom",
+            "downloads": 191493,
+            "percentage": 4.395373098185666
+          },
+          "top5Percentage": 19.927261375882406,
+          "top10Percentage": 30.501125279598412
+        }
+      },
+      {
+        "platform": "sublime",
+        "osTotalPlugins": 4694,
+        "totalPluginsAll": 5581,
+        "top100Count": 100,
+        "totalStars": 59452,
+        "avgStars": 594.52,
+        "totalDownloads": 49475544,
+        "avgDownloads": 494755.44,
+        "totalIssues": 1786,
+        "avgIssues": 17.86,
+        "issueDensity": 0.030041041512480656,
+        "totalForks": 7912,
+        "avgForks": 79.12,
+        "category": "IDE",
+        "top100WithDownloads": 100,
+        "top100Downloads": 49475544,
+        "avgGovernanceScore": 0.46,
+        "avgCoreTeamRatio": 0,
+        "issueEfficiency": 0.6747001797838902,
+        "abandonmentRate": 0.79,
+        "starConcentration": 161.92646693603558,
+        "ownerShare": 5.931996557364204,
+        "avgProdDeps": 0.27,
+        "avgDevDeps": 0.45,
+        "avgWorkflowCount": 0.21,
+        "avgCommitFrequency": 0,
+        "avgRepoSize": 1448.54,
+        "avgStaleDepRatio": 0.06638888888888889,
+        "abandonedCount": 79,
+        "avgRepoSizeKb": 1448.54,
+        "coreTeamRatio": 0,
+        "starConcentrationIndex": 161.92646693603558,
+        "ossAvailabilityIndex": 7.417001797838902,
+        "topLanguages": [
+          {
+            "name": "Python",
+            "count": 59,
+            "percentage": 59
+          },
+          {
+            "name": "Unknown",
+            "count": 20,
+            "percentage": 20
+          },
+          {
+            "name": "JavaScript",
+            "count": 8,
+            "percentage": 8
+          },
+          {
+            "name": "CSS",
+            "count": 3,
+            "percentage": 3
+          },
+          {
+            "name": "Jupyter Notebook",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Shell",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "CoffeeScript",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "HTML",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "XSLT",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Less",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "MIT License",
+            "count": 51,
+            "percentage": 51
+          },
+          {
+            "name": "No License",
+            "count": 36,
+            "percentage": 36
+          },
+          {
+            "name": "Other",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 3,
+            "percentage": 3
+          },
+          {
+            "name": "Do What The F*ck You Want To Public License",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "GNU General Public License v2.0",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "Apache License 2.0",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 19.314777777777774,
+        "reposWithPrFriction": 90,
+        "sbom": {
+          "total": 100,
+          "available": 68,
+          "notFound": 32,
+          "rateLimited": 0,
+          "errors": 0,
+          "missing": 0,
+          "coverage": 0.68
+        },
+        "downloadConcentration": {
+          "totalDownloads": 49475544,
+          "top1": {
+            "name": "SideBarEnhancements",
+            "repo": "titoBouzout/SideBarEnhancements",
+            "downloads": 2926089,
+            "percentage": 5.91421288869507
+          },
+          "top2": {
+            "name": "HTML5",
+            "repo": "mrmartineau/HTML5",
+            "downloads": 1661610,
+            "percentage": 3.358447155224812
+          },
+          "top5Percentage": 18.394271723419557,
+          "top10Percentage": 31.42759784510909
+        }
+      },
+      {
+        "platform": "wordpress",
+        "osTotalPlugins": 3986,
+        "totalPluginsAll": 59000,
+        "top100Count": 100,
+        "totalStars": 31718,
+        "avgStars": 317.18,
+        "totalDownloads": 7180000,
+        "avgDownloads": 71800,
+        "totalIssues": 11260,
+        "avgIssues": 112.6,
+        "issueDensity": 0.355003468062299,
+        "totalForks": 9336,
+        "avgForks": 93.36,
+        "category": "CMS",
+        "top100WithDownloads": 99,
+        "top100Downloads": 7180000,
+        "avgGovernanceScore": 0.93,
+        "avgCoreTeamRatio": 0.2721708878084749,
+        "issueEfficiency": 0.6582762315963506,
+        "abandonmentRate": 0.34,
+        "starConcentration": 88.09240790157831,
+        "ownerShare": 28.285551280735707,
+        "avgProdDeps": 0.96,
+        "avgDevDeps": 8.88,
+        "avgWorkflowCount": 2.59,
+        "avgCommitFrequency": 3.96,
+        "avgRepoSize": 18583.58,
+        "avgStaleDepRatio": 0.6276094648385669,
+        "abandonedCount": 34,
+        "avgRepoSizeKb": 18583.58,
+        "coreTeamRatio": 27.217088780847494,
+        "starConcentrationIndex": 88.09240790157831,
+        "ossAvailabilityIndex": 10.102762315963506,
+        "topLanguages": [
+          {
+            "name": "PHP",
+            "count": 88,
+            "percentage": 88
+          },
+          {
+            "name": "JavaScript",
+            "count": 9,
+            "percentage": 9
+          },
+          {
+            "name": "Shell",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "SCSS",
+            "count": 1,
+            "percentage": 1
+          },
+          {
+            "name": "CSS",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "GNU General Public License v2.0",
+            "count": 41,
+            "percentage": 41
+          },
+          {
+            "name": "No License",
+            "count": 37,
+            "percentage": 37
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 10,
+            "percentage": 10
+          },
+          {
+            "name": "Other",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "MIT License",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "Apache License 2.0",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "GNU Affero General Public License v3.0",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 48.05804347826086,
+        "reposWithPrFriction": 92,
+        "sbom": {
+          "total": 100,
+          "available": 78,
+          "notFound": 22,
+          "rateLimited": 0,
+          "errors": 0,
+          "missing": 0,
+          "coverage": 0.78
+        },
+        "downloadConcentration": {
+          "totalDownloads": 7180000,
+          "top1": {
+            "name": "Custom Post Type UI",
+            "repo": "WebDevStudios/custom-post-type-ui",
+            "downloads": 1000000,
+            "percentage": 13.92757660167131
+          },
+          "top2": {
+            "name": "WooCommerce Legacy REST API",
+            "repo": "woocommerce/woocommerce-legacy-rest-api",
+            "downloads": 400000,
+            "percentage": 5.571030640668524
+          },
+          "top5Percentage": 33.42618384401114,
+          "top10Percentage": 47.353760445682454
+        }
+      },
+      {
+        "platform": "minecraft",
+        "osTotalPlugins": 26089,
+        "totalPluginsAll": 98600,
+        "top100Count": 100,
+        "totalStars": 30385,
+        "avgStars": 303.85,
+        "totalDownloads": 2217620403,
+        "avgDownloads": 22176204.03,
+        "totalIssues": 5332,
+        "avgIssues": 53.32,
+        "issueDensity": 0.17548132302122757,
+        "totalForks": 6984,
+        "avgForks": 69.84,
+        "category": "Gaming",
+        "top100WithDownloads": 100,
+        "top100Downloads": 2217620403,
+        "avgGovernanceScore": 0.8,
+        "avgCoreTeamRatio": 1.8994738267124485,
+        "issueEfficiency": 0.6566161556503952,
+        "abandonmentRate": 0.03,
+        "starConcentration": 68.79948570217648,
+        "ownerShare": 40.46258000558575,
+        "avgProdDeps": 3.16,
+        "avgDevDeps": 0.09,
+        "avgWorkflowCount": 1.24,
+        "avgCommitFrequency": 0.38,
+        "avgRepoSize": 15791.37,
+        "avgStaleDepRatio": 0.05555555555555555,
+        "abandonedCount": 3,
+        "avgRepoSizeKb": 15791.37,
+        "coreTeamRatio": 189.94738267124484,
+        "starConcentrationIndex": 68.79948570217648,
+        "ossAvailabilityIndex": 8.606161556503952,
+        "topLanguages": [
+          {
+            "name": "Java",
+            "count": 86,
+            "percentage": 86
+          },
+          {
+            "name": "Kotlin",
+            "count": 9,
+            "percentage": 9
+          },
+          {
+            "name": "Unknown",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "GLSL",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "topLicenses": [
+          {
+            "name": "Other",
+            "count": 26,
+            "percentage": 26
+          },
+          {
+            "name": "MIT License",
+            "count": 24,
+            "percentage": 24
+          },
+          {
+            "name": "GNU Lesser General Public License v3.0",
+            "count": 23,
+            "percentage": 23
+          },
+          {
+            "name": "Apache License 2.0",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "GNU Lesser General Public License v2.1",
+            "count": 5,
+            "percentage": 5
+          },
+          {
+            "name": "No License",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "Mozilla Public License 2.0",
+            "count": 4,
+            "percentage": 4
+          },
+          {
+            "name": "GNU General Public License v3.0",
+            "count": 3,
+            "percentage": 3
+          },
+          {
+            "name": "GNU Affero General Public License v3.0",
+            "count": 2,
+            "percentage": 2
+          },
+          {
+            "name": "The Unlicense",
+            "count": 1,
+            "percentage": 1
+          }
+        ],
+        "avgPrFrictionDays": 17.141326530612243,
+        "reposWithPrFriction": 98,
+        "sbom": {
+          "total": 100,
+          "available": 63,
+          "notFound": 37,
+          "rateLimited": 0,
+          "errors": 0,
+          "missing": 0,
+          "coverage": 0.63
+        },
+        "downloadConcentration": {
+          "totalDownloads": 2217620403,
+          "top1": {
+            "name": "Fabric API",
+            "repo": "FabricMC/fabric",
+            "downloads": 86755692,
+            "percentage": 3.9121074049750253
+          },
+          "top2": {
+            "name": "Sodium",
+            "repo": "CaffeineMC/sodium",
+            "downloads": 82656542,
+            "percentage": 3.7272628754759882
+          },
+          "top5Percentage": 15.429705847633294,
+          "top10Percentage": 25.936130242214407
+        }
+      }
+    ],
+    "aggregate": {
+      "osTotalPlugins": 86120,
+      "totalPluginsAll": 623871,
+      "totalTop100": 900,
+      "top100TotalDownloads": 6106397752,
+      "totalStars": 2241726,
+      "totalDownloads": 6106397752,
+      "totalIssues": 120506,
+      "totalForks": 414733,
+      "avgStarsPerPlugin": 2490.806666666667,
+      "avgDownloadsPerPlugin": 6784886.391111111,
+      "platformCount": 9,
+      "sbom": {
+        "total": 900,
+        "available": 733,
+        "coverage": 0.8144444444444444,
+        "notFound": 160,
+        "errors": 3,
+        "rateLimited": 4,
+        "missing": 0
+      },
+      "downloadConcentration": {
+        "totalDownloads": 6106397752,
+        "top1": {
+          "name": "Python",
+          "repo": "Microsoft/vscode-python",
+          "downloads": 188638413,
+          "percentage": 3.08919301790022
+        },
+        "top2": {
+          "name": "Pylance",
+          "repo": "microsoft/pylance-release",
+          "downloads": 156525374,
+          "percentage": 2.563301317028259
+        },
+        "top5Percentage": 10.243929979751504,
+        "top10Percentage": 16.66472795138026
+      }
+    },
+    "overview": {
+      "platforms": 9,
+      "topPlugins": 900,
+      "totalStars": 2241726,
+      "totalDownloads": 6106397752,
+      "totalIssues": 120506,
+      "totalForks": 414733,
+      "avgStarsPerPlugin": 2490.806666666667,
+      "avgDownloadsPerPlugin": 6784886.391111111,
+      "avgRepoSizeKb": 174991.5133333333,
+      "avgWorkflowCount": 1.9933333333333334,
+      "avgGovernanceScore": 1.0088888888888887
+    },
+    "researchMetrics": {
+      "avgGovernanceScore": 1.0088888888888887,
+      "avgCoreTeamRatio": 5.320659321958095,
+      "issueEfficiency": 0.6133538164916487,
+      "abandonmentRate": 0.3422222222222222,
+      "starConcentration": 785.1623898084264,
+      "ownerCommitShare": 23.096428633965985,
+      "avgProdDeps": 4.2411111111111115,
+      "avgDevDeps": 9.977777777777778,
+      "avgWorkflowCount": 1.9933333333333334,
+      "avgCommitFrequency": 13.43,
+      "avgRepoSizeKb": 174991.5133333333,
+      "avgStaleDepRatio": 0.4437525996387669,
+      "downloadEntropy": 1.688172747152459,
+      "avgPrFrictionDays": 21.69664265411099
+    },
+    "distribution": {
+      "topLanguages": [
+        {
+          "language": "TypeScript",
+          "count": 258,
+          "percentage": 28.666666666666668
+        },
+        {
+          "language": "JavaScript",
+          "count": 186,
+          "percentage": 20.666666666666668
+        },
+        {
+          "language": "Java",
+          "count": 152,
+          "percentage": 16.88888888888889
+        },
+        {
+          "language": "Python",
+          "count": 89,
+          "percentage": 9.88888888888889
+        },
+        {
+          "language": "PHP",
+          "count": 88,
+          "percentage": 9.777777777777779
+        },
+        {
+          "language": "Unknown",
+          "count": 51,
+          "percentage": 5.666666666666666
+        },
+        {
+          "language": "Kotlin",
+          "count": 34,
+          "percentage": 3.7777777777777777
+        },
+        {
+          "language": "CSS",
+          "count": 7,
+          "percentage": 0.7777777777777778
+        },
+        {
+          "language": "Dockerfile",
+          "count": 6,
+          "percentage": 0.6666666666666667
+        },
+        {
+          "language": "HTML",
+          "count": 5,
+          "percentage": 0.5555555555555556
+        }
+      ],
+      "topLicenses": [
+        {
+          "license": "MIT License",
+          "count": 341,
+          "percentage": 37.888888888888886
+        },
+        {
+          "license": "No License",
+          "count": 145,
+          "percentage": 16.11111111111111
+        },
+        {
+          "license": "Other",
+          "count": 98,
+          "percentage": 10.888888888888888
+        },
+        {
+          "license": "GNU General Public License v3.0",
+          "count": 90,
+          "percentage": 10
+        },
+        {
+          "license": "Apache License 2.0",
+          "count": 72,
+          "percentage": 8
+        },
+        {
+          "license": "GNU General Public License v2.0",
+          "count": 44,
+          "percentage": 4.888888888888889
+        },
+        {
+          "license": "Mozilla Public License 2.0",
+          "count": 30,
+          "percentage": 3.3333333333333335
+        },
+        {
+          "license": "GNU Lesser General Public License v3.0",
+          "count": 26,
+          "percentage": 2.888888888888889
+        },
+        {
+          "license": "GNU Affero General Public License v3.0",
+          "count": 13,
+          "percentage": 1.4444444444444444
+        },
+        {
+          "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+          "count": 10,
+          "percentage": 1.1111111111111112
+        }
+      ],
+      "topTopics": [
+        {
+          "topic": "home-assistant",
+          "count": 71,
+          "percentage": 7.888888888888888
+        },
+        {
+          "topic": "obsidian-plugin",
+          "count": 58,
+          "percentage": 6.444444444444445
+        },
+        {
+          "topic": "chrome-extension",
+          "count": 52,
+          "percentage": 5.777777777777778
+        },
+        {
+          "topic": "intellij",
+          "count": 46,
+          "percentage": 5.111111111111112
+        },
+        {
+          "topic": "hacktoberfest",
+          "count": 44,
+          "percentage": 4.888888888888889
+        },
+        {
+          "topic": "lovelace",
+          "count": 42,
+          "percentage": 4.666666666666667
+        },
+        {
+          "topic": "obsidian-md",
+          "count": 41,
+          "percentage": 4.555555555555555
+        },
+        {
+          "topic": "firefox",
+          "count": 41,
+          "percentage": 4.555555555555555
+        },
+        {
+          "topic": "homeassistant",
+          "count": 41,
+          "percentage": 4.555555555555555
+        },
+        {
+          "topic": "minecraft",
+          "count": 41,
+          "percentage": 4.555555555555555
+        }
+      ]
+    },
+    "insights": {}
+  },
+  "languageLicenseSummary": {
+    "generatedAt": "2025-12-24T16:38:18.477Z",
+    "source": {
+      "top100Dir": "data/*/top100.json",
+      "repoNormalization": "owner/repo (github only, suffix .git removed)"
+    },
+    "entryCount": 900,
+    "entryWithRepoCount": 900,
+    "uniqueRepoCount": 822,
+    "duplicateEntryCount": 78,
+    "notes": {
+      "topLanguages": "uniqueRepo",
+      "topLicenses": "uniqueRepo"
+    },
+    "topLanguages": [
+      {
+        "name": "TypeScript",
+        "count": 251,
+        "percentage": 30.5353
+      },
+      {
+        "name": "JavaScript",
+        "count": 169,
+        "percentage": 20.5596
+      },
+      {
+        "name": "Java",
+        "count": 120,
+        "percentage": 14.5985
+      },
+      {
+        "name": "Python",
+        "count": 89,
+        "percentage": 10.8273
+      },
+      {
+        "name": "PHP",
+        "count": 80,
+        "percentage": 9.7324
+      },
+      {
+        "name": "Unknown",
+        "count": 46,
+        "percentage": 5.5961
+      },
+      {
+        "name": "Kotlin",
+        "count": 32,
+        "percentage": 3.8929
+      },
+      {
+        "name": "CSS",
+        "count": 7,
+        "percentage": 0.8516
+      },
+      {
+        "name": "HTML",
+        "count": 5,
+        "percentage": 0.6083
+      },
+      {
+        "name": "Shell",
+        "count": 3,
+        "percentage": 0.365
+      }
+    ],
+    "topLicenses": [
+      {
+        "name": "MIT License",
+        "count": 334,
+        "percentage": 40.6326
+      },
+      {
+        "name": "No License",
+        "count": 129,
+        "percentage": 15.6934
+      },
+      {
+        "name": "Other",
+        "count": 87,
+        "percentage": 10.5839
+      },
+      {
+        "name": "GNU General Public License v3.0",
+        "count": 82,
+        "percentage": 9.9757
+      },
+      {
+        "name": "Apache License 2.0",
+        "count": 51,
+        "percentage": 6.2044
+      },
+      {
+        "name": "GNU General Public License v2.0",
+        "count": 37,
+        "percentage": 4.5012
+      },
+      {
+        "name": "Mozilla Public License 2.0",
+        "count": 27,
+        "percentage": 3.2847
+      },
+      {
+        "name": "GNU Lesser General Public License v3.0",
+        "count": 27,
+        "percentage": 3.2847
+      },
+      {
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "count": 12,
+        "percentage": 1.4599
+      },
+      {
+        "name": "GNU Affero General Public License v3.0",
+        "count": 12,
+        "percentage": 1.4599
+      }
+    ],
+    "topLanguagesEntries": [
+      {
+        "name": "TypeScript",
+        "count": 258,
+        "percentage": 28.6667
+      },
+      {
+        "name": "JavaScript",
+        "count": 186,
+        "percentage": 20.6667
+      },
+      {
+        "name": "Java",
+        "count": 152,
+        "percentage": 16.8889
+      },
+      {
+        "name": "Python",
+        "count": 89,
+        "percentage": 9.8889
+      },
+      {
+        "name": "PHP",
+        "count": 89,
+        "percentage": 9.8889
+      },
+      {
+        "name": "Unknown",
+        "count": 51,
+        "percentage": 5.6667
+      },
+      {
+        "name": "Kotlin",
+        "count": 34,
+        "percentage": 3.7778
+      },
+      {
+        "name": "CSS",
+        "count": 7,
+        "percentage": 0.7778
+      },
+      {
+        "name": "Dockerfile",
+        "count": 6,
+        "percentage": 0.6667
+      },
+      {
+        "name": "HTML",
+        "count": 5,
+        "percentage": 0.5556
+      }
+    ],
+    "topLicensesEntries": [
+      {
+        "name": "MIT License",
+        "count": 341,
+        "percentage": 37.8889
+      },
+      {
+        "name": "No License",
+        "count": 145,
+        "percentage": 16.1111
+      },
+      {
+        "name": "Other",
+        "count": 98,
+        "percentage": 10.8889
+      },
+      {
+        "name": "GNU General Public License v3.0",
+        "count": 90,
+        "percentage": 10
+      },
+      {
+        "name": "Apache License 2.0",
+        "count": 72,
+        "percentage": 8
+      },
+      {
+        "name": "GNU General Public License v2.0",
+        "count": 45,
+        "percentage": 5
+      },
+      {
+        "name": "Mozilla Public License 2.0",
+        "count": 30,
+        "percentage": 3.3333
+      },
+      {
+        "name": "GNU Lesser General Public License v3.0",
+        "count": 27,
+        "percentage": 3
+      },
+      {
+        "name": "GNU Affero General Public License v3.0",
+        "count": 13,
+        "percentage": 1.4444
+      },
+      {
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "count": 12,
+        "percentage": 1.3333
+      }
+    ]
+  },
+  "coverageSummary": {
+    "generatedAt": "2025-12-24T17:57:53.933Z",
+    "source": {
+      "top100Dir": "data/*/top100.json",
+      "osvDir": "data/osv-scans",
+      "scorecardDir": "scorecard-local",
+      "repoNormalization": "owner/repo (github only, suffix .git removed)"
+    },
+    "overall": {
+      "top100Total": 900,
+      "entryRepoCount": 900,
+      "uniqueRepoCount": 822,
+      "duplicateEntryCount": 78,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 582,
+        "analyzedEntryCount": 619,
+        "coverageRateUniqueRepo": 0.708,
+        "coverageRateEntries": 0.6878,
+        "affectedUniqueCount": 285,
+        "cleanUniqueCount": 297,
+        "affectedRate": 0.4897,
+        "highRiskUniqueCount": 22,
+        "highRiskRate": 0.0378,
+        "totals": {
+          "totalVulnerabilities": 6277,
+          "critical": 2,
+          "high": 55,
+          "medium": 537,
+          "low": 5683,
+          "stalePackages": 6181,
+          "oldFixesAvailable": 4265,
+          "recentVulnerabilities": 1065
+        },
+        "avgVulnerabilitiesPerRepo": 10.7852,
+        "avgVulnerabilitiesPerAffectedRepo": 22.0246
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 645,
+        "analyzedEntryCount": 673,
+        "coverageRateUniqueRepo": 0.7847,
+        "coverageRateEntries": 0.7478
+      }
+    },
+    "platforms": [
+      {
+        "platform": "chrome",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 95,
+        "duplicateEntryCount": 5,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 74,
+          "analyzedEntryCount": 79,
+          "coverageRateUniqueRepo": 0.7789,
+          "coverageRateEntries": 0.79,
+          "affectedUniqueCount": 45,
+          "cleanUniqueCount": 29,
+          "affectedRate": 0.6081,
+          "highRiskUniqueCount": 5,
+          "highRiskRate": 0.0676,
+          "totals": {
+            "totalVulnerabilities": 1476,
+            "critical": 1,
+            "high": 21,
+            "medium": 143,
+            "low": 1311,
+            "stalePackages": 1447,
+            "oldFixesAvailable": 947,
+            "recentVulnerabilities": 243
+          },
+          "avgVulnerabilitiesPerRepo": 19.9459,
+          "avgVulnerabilitiesPerAffectedRepo": 32.8
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 76,
+          "analyzedEntryCount": 80,
+          "coverageRateUniqueRepo": 0.8,
+          "coverageRateEntries": 0.8
+        }
+      },
+      {
+        "platform": "firefox",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 99,
+        "duplicateEntryCount": 1,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 68,
+          "analyzedEntryCount": 68,
+          "coverageRateUniqueRepo": 0.6869,
+          "coverageRateEntries": 0.68,
+          "affectedUniqueCount": 32,
+          "cleanUniqueCount": 36,
+          "affectedRate": 0.4706,
+          "highRiskUniqueCount": 2,
+          "highRiskRate": 0.0294,
+          "totals": {
+            "totalVulnerabilities": 1019,
+            "critical": 0,
+            "high": 3,
+            "medium": 86,
+            "low": 930,
+            "stalePackages": 992,
+            "oldFixesAvailable": 683,
+            "recentVulnerabilities": 180
+          },
+          "avgVulnerabilitiesPerRepo": 14.9853,
+          "avgVulnerabilitiesPerAffectedRepo": 31.8438
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 84,
+          "analyzedEntryCount": 85,
+          "coverageRateUniqueRepo": 0.8485,
+          "coverageRateEntries": 0.85
+        }
+      },
+      {
+        "platform": "homeassistant",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 100,
+        "duplicateEntryCount": 0,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 74,
+          "analyzedEntryCount": 74,
+          "coverageRateUniqueRepo": 0.74,
+          "coverageRateEntries": 0.74,
+          "affectedUniqueCount": 49,
+          "cleanUniqueCount": 25,
+          "affectedRate": 0.6622,
+          "highRiskUniqueCount": 1,
+          "highRiskRate": 0.0135,
+          "totals": {
+            "totalVulnerabilities": 811,
+            "critical": 1,
+            "high": 0,
+            "medium": 43,
+            "low": 767,
+            "stalePackages": 792,
+            "oldFixesAvailable": 627,
+            "recentVulnerabilities": 114
+          },
+          "avgVulnerabilitiesPerRepo": 10.9595,
+          "avgVulnerabilitiesPerAffectedRepo": 16.551
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 63,
+          "analyzedEntryCount": 63,
+          "coverageRateUniqueRepo": 0.63,
+          "coverageRateEntries": 0.63
+        }
+      },
+      {
+        "platform": "jetbrains",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 67,
+        "duplicateEntryCount": 33,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 48,
+          "analyzedEntryCount": 48,
+          "coverageRateUniqueRepo": 0.7164,
+          "coverageRateEntries": 0.48,
+          "affectedUniqueCount": 7,
+          "cleanUniqueCount": 41,
+          "affectedRate": 0.1458,
+          "highRiskUniqueCount": 0,
+          "highRiskRate": 0,
+          "totals": {
+            "totalVulnerabilities": 101,
+            "critical": 0,
+            "high": 0,
+            "medium": 2,
+            "low": 99,
+            "stalePackages": 96,
+            "oldFixesAvailable": 78,
+            "recentVulnerabilities": 8
+          },
+          "avgVulnerabilitiesPerRepo": 2.1042,
+          "avgVulnerabilitiesPerAffectedRepo": 14.4286
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 42,
+          "analyzedEntryCount": 44,
+          "coverageRateUniqueRepo": 0.6269,
+          "coverageRateEntries": 0.44
+        }
+      },
+      {
+        "platform": "minecraft",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 100,
+        "duplicateEntryCount": 0,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 54,
+          "analyzedEntryCount": 54,
+          "coverageRateUniqueRepo": 0.54,
+          "coverageRateEntries": 0.54,
+          "affectedUniqueCount": 3,
+          "cleanUniqueCount": 51,
+          "affectedRate": 0.0556,
+          "highRiskUniqueCount": 0,
+          "highRiskRate": 0,
+          "totals": {
+            "totalVulnerabilities": 157,
+            "critical": 0,
+            "high": 0,
+            "medium": 25,
+            "low": 132,
+            "stalePackages": 157,
+            "oldFixesAvailable": 89,
+            "recentVulnerabilities": 43
+          },
+          "avgVulnerabilitiesPerRepo": 2.9074,
+          "avgVulnerabilitiesPerAffectedRepo": 52.3333
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 93,
+          "analyzedEntryCount": 93,
+          "coverageRateUniqueRepo": 0.93,
+          "coverageRateEntries": 0.93
+        }
+      },
+      {
+        "platform": "obsidian",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 100,
+        "duplicateEntryCount": 0,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 78,
+          "analyzedEntryCount": 78,
+          "coverageRateUniqueRepo": 0.78,
+          "coverageRateEntries": 0.78,
+          "affectedUniqueCount": 61,
+          "cleanUniqueCount": 17,
+          "affectedRate": 0.7821,
+          "highRiskUniqueCount": 1,
+          "highRiskRate": 0.0128,
+          "totals": {
+            "totalVulnerabilities": 708,
+            "critical": 0,
+            "high": 1,
+            "medium": 66,
+            "low": 641,
+            "stalePackages": 694,
+            "oldFixesAvailable": 527,
+            "recentVulnerabilities": 113
+          },
+          "avgVulnerabilitiesPerRepo": 9.0769,
+          "avgVulnerabilitiesPerAffectedRepo": 11.6066
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 84,
+          "analyzedEntryCount": 84,
+          "coverageRateUniqueRepo": 0.84,
+          "coverageRateEntries": 0.84
+        }
+      },
+      {
+        "platform": "sublime",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 100,
+        "duplicateEntryCount": 0,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 60,
+          "analyzedEntryCount": 60,
+          "coverageRateUniqueRepo": 0.6,
+          "coverageRateEntries": 0.6,
+          "affectedUniqueCount": 4,
+          "cleanUniqueCount": 56,
+          "affectedRate": 0.0667,
+          "highRiskUniqueCount": 2,
+          "highRiskRate": 0.0333,
+          "totals": {
+            "totalVulnerabilities": 155,
+            "critical": 0,
+            "high": 8,
+            "medium": 3,
+            "low": 144,
+            "stalePackages": 154,
+            "oldFixesAvailable": 129,
+            "recentVulnerabilities": 4
+          },
+          "avgVulnerabilitiesPerRepo": 2.5833,
+          "avgVulnerabilitiesPerAffectedRepo": 38.75
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 92,
+          "analyzedEntryCount": 92,
+          "coverageRateUniqueRepo": 0.92,
+          "coverageRateEntries": 0.92
+        }
+      },
+      {
+        "platform": "vscode",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 90,
+        "duplicateEntryCount": 10,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 78,
+          "analyzedEntryCount": 88,
+          "coverageRateUniqueRepo": 0.8667,
+          "coverageRateEntries": 0.88,
+          "affectedUniqueCount": 59,
+          "cleanUniqueCount": 19,
+          "affectedRate": 0.7564,
+          "highRiskUniqueCount": 5,
+          "highRiskRate": 0.0641,
+          "totals": {
+            "totalVulnerabilities": 1043,
+            "critical": 0,
+            "high": 7,
+            "medium": 74,
+            "low": 962,
+            "stalePackages": 1035,
+            "oldFixesAvailable": 681,
+            "recentVulnerabilities": 216
+          },
+          "avgVulnerabilitiesPerRepo": 13.3718,
+          "avgVulnerabilitiesPerAffectedRepo": 17.678
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 56,
+          "analyzedEntryCount": 60,
+          "coverageRateUniqueRepo": 0.6222,
+          "coverageRateEntries": 0.6
+        }
+      },
+      {
+        "platform": "wordpress",
+        "top100Total": 100,
+        "entryRepoCount": 100,
+        "uniqueRepoCount": 91,
+        "duplicateEntryCount": 9,
+        "vulnerability": {
+          "analyzedUniqueRepoCount": 62,
+          "analyzedEntryCount": 70,
+          "coverageRateUniqueRepo": 0.6813,
+          "coverageRateEntries": 0.7,
+          "affectedUniqueCount": 36,
+          "cleanUniqueCount": 26,
+          "affectedRate": 0.5806,
+          "highRiskUniqueCount": 6,
+          "highRiskRate": 0.0968,
+          "totals": {
+            "totalVulnerabilities": 1094,
+            "critical": 0,
+            "high": 15,
+            "medium": 127,
+            "low": 952,
+            "stalePackages": 1089,
+            "oldFixesAvailable": 675,
+            "recentVulnerabilities": 209
+          },
+          "avgVulnerabilitiesPerRepo": 17.6452,
+          "avgVulnerabilitiesPerAffectedRepo": 30.3889
+        },
+        "scorecard": {
+          "analyzedUniqueRepoCount": 71,
+          "analyzedEntryCount": 72,
+          "coverageRateUniqueRepo": 0.7802,
+          "coverageRateEntries": 0.72
+        }
+      }
+    ]
+  }
+}

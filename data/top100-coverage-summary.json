@@ -1,0 +1,370 @@
+{
+  "generatedAt": "2025-12-24T17:57:53.933Z",
+  "source": {
+    "top100Dir": "data/*/top100.json",
+    "osvDir": "data/osv-scans",
+    "scorecardDir": "scorecard-local",
+    "repoNormalization": "owner/repo (github only, suffix .git removed)"
+  },
+  "overall": {
+    "top100Total": 900,
+    "entryRepoCount": 900,
+    "uniqueRepoCount": 822,
+    "duplicateEntryCount": 78,
+    "vulnerability": {
+      "analyzedUniqueRepoCount": 582,
+      "analyzedEntryCount": 619,
+      "coverageRateUniqueRepo": 0.708,
+      "coverageRateEntries": 0.6878,
+      "affectedUniqueCount": 285,
+      "cleanUniqueCount": 297,
+      "affectedRate": 0.4897,
+      "highRiskUniqueCount": 22,
+      "highRiskRate": 0.0378,
+      "totals": {
+        "totalVulnerabilities": 6277,
+        "critical": 2,
+        "high": 55,
+        "medium": 537,
+        "low": 5683,
+        "stalePackages": 6181,
+        "oldFixesAvailable": 4265,
+        "recentVulnerabilities": 1065
+      },
+      "avgVulnerabilitiesPerRepo": 10.7852,
+      "avgVulnerabilitiesPerAffectedRepo": 22.0246
+    },
+    "scorecard": {
+      "analyzedUniqueRepoCount": 645,
+      "analyzedEntryCount": 673,
+      "coverageRateUniqueRepo": 0.7847,
+      "coverageRateEntries": 0.7478
+    }
+  },
+  "platforms": [
+    {
+      "platform": "chrome",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 95,
+      "duplicateEntryCount": 5,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 74,
+        "analyzedEntryCount": 79,
+        "coverageRateUniqueRepo": 0.7789,
+        "coverageRateEntries": 0.79,
+        "affectedUniqueCount": 45,
+        "cleanUniqueCount": 29,
+        "affectedRate": 0.6081,
+        "highRiskUniqueCount": 5,
+        "highRiskRate": 0.0676,
+        "totals": {
+          "totalVulnerabilities": 1476,
+          "critical": 1,
+          "high": 21,
+          "medium": 143,
+          "low": 1311,
+          "stalePackages": 1447,
+          "oldFixesAvailable": 947,
+          "recentVulnerabilities": 243
+        },
+        "avgVulnerabilitiesPerRepo": 19.9459,
+        "avgVulnerabilitiesPerAffectedRepo": 32.8
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 76,
+        "analyzedEntryCount": 80,
+        "coverageRateUniqueRepo": 0.8,
+        "coverageRateEntries": 0.8
+      }
+    },
+    {
+      "platform": "firefox",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 99,
+      "duplicateEntryCount": 1,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 68,
+        "analyzedEntryCount": 68,
+        "coverageRateUniqueRepo": 0.6869,
+        "coverageRateEntries": 0.68,
+        "affectedUniqueCount": 32,
+        "cleanUniqueCount": 36,
+        "affectedRate": 0.4706,
+        "highRiskUniqueCount": 2,
+        "highRiskRate": 0.0294,
+        "totals": {
+          "totalVulnerabilities": 1019,
+          "critical": 0,
+          "high": 3,
+          "medium": 86,
+          "low": 930,
+          "stalePackages": 992,
+          "oldFixesAvailable": 683,
+          "recentVulnerabilities": 180
+        },
+        "avgVulnerabilitiesPerRepo": 14.9853,
+        "avgVulnerabilitiesPerAffectedRepo": 31.8438
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 84,
+        "analyzedEntryCount": 85,
+        "coverageRateUniqueRepo": 0.8485,
+        "coverageRateEntries": 0.85
+      }
+    },
+    {
+      "platform": "homeassistant",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 100,
+      "duplicateEntryCount": 0,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 74,
+        "analyzedEntryCount": 74,
+        "coverageRateUniqueRepo": 0.74,
+        "coverageRateEntries": 0.74,
+        "affectedUniqueCount": 49,
+        "cleanUniqueCount": 25,
+        "affectedRate": 0.6622,
+        "highRiskUniqueCount": 1,
+        "highRiskRate": 0.0135,
+        "totals": {
+          "totalVulnerabilities": 811,
+          "critical": 1,
+          "high": 0,
+          "medium": 43,
+          "low": 767,
+          "stalePackages": 792,
+          "oldFixesAvailable": 627,
+          "recentVulnerabilities": 114
+        },
+        "avgVulnerabilitiesPerRepo": 10.9595,
+        "avgVulnerabilitiesPerAffectedRepo": 16.551
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 63,
+        "analyzedEntryCount": 63,
+        "coverageRateUniqueRepo": 0.63,
+        "coverageRateEntries": 0.63
+      }
+    },
+    {
+      "platform": "jetbrains",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 67,
+      "duplicateEntryCount": 33,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 48,
+        "analyzedEntryCount": 48,
+        "coverageRateUniqueRepo": 0.7164,
+        "coverageRateEntries": 0.48,
+        "affectedUniqueCount": 7,
+        "cleanUniqueCount": 41,
+        "affectedRate": 0.1458,
+        "highRiskUniqueCount": 0,
+        "highRiskRate": 0,
+        "totals": {
+          "totalVulnerabilities": 101,
+          "critical": 0,
+          "high": 0,
+          "medium": 2,
+          "low": 99,
+          "stalePackages": 96,
+          "oldFixesAvailable": 78,
+          "recentVulnerabilities": 8
+        },
+        "avgVulnerabilitiesPerRepo": 2.1042,
+        "avgVulnerabilitiesPerAffectedRepo": 14.4286
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 42,
+        "analyzedEntryCount": 44,
+        "coverageRateUniqueRepo": 0.6269,
+        "coverageRateEntries": 0.44
+      }
+    },
+    {
+      "platform": "minecraft",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 100,
+      "duplicateEntryCount": 0,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 54,
+        "analyzedEntryCount": 54,
+        "coverageRateUniqueRepo": 0.54,
+        "coverageRateEntries": 0.54,
+        "affectedUniqueCount": 3,
+        "cleanUniqueCount": 51,
+        "affectedRate": 0.0556,
+        "highRiskUniqueCount": 0,
+        "highRiskRate": 0,
+        "totals": {
+          "totalVulnerabilities": 157,
+          "critical": 0,
+          "high": 0,
+          "medium": 25,
+          "low": 132,
+          "stalePackages": 157,
+          "oldFixesAvailable": 89,
+          "recentVulnerabilities": 43
+        },
+        "avgVulnerabilitiesPerRepo": 2.9074,
+        "avgVulnerabilitiesPerAffectedRepo": 52.3333
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 93,
+        "analyzedEntryCount": 93,
+        "coverageRateUniqueRepo": 0.93,
+        "coverageRateEntries": 0.93
+      }
+    },
+    {
+      "platform": "obsidian",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 100,
+      "duplicateEntryCount": 0,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 78,
+        "analyzedEntryCount": 78,
+        "coverageRateUniqueRepo": 0.78,
+        "coverageRateEntries": 0.78,
+        "affectedUniqueCount": 61,
+        "cleanUniqueCount": 17,
+        "affectedRate": 0.7821,
+        "highRiskUniqueCount": 1,
+        "highRiskRate": 0.0128,
+        "totals": {
+          "totalVulnerabilities": 708,
+          "critical": 0,
+          "high": 1,
+          "medium": 66,
+          "low": 641,
+          "stalePackages": 694,
+          "oldFixesAvailable": 527,
+          "recentVulnerabilities": 113
+        },
+        "avgVulnerabilitiesPerRepo": 9.0769,
+        "avgVulnerabilitiesPerAffectedRepo": 11.6066
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 84,
+        "analyzedEntryCount": 84,
+        "coverageRateUniqueRepo": 0.84,
+        "coverageRateEntries": 0.84
+      }
+    },
+    {
+      "platform": "sublime",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 100,
+      "duplicateEntryCount": 0,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 60,
+        "analyzedEntryCount": 60,
+        "coverageRateUniqueRepo": 0.6,
+        "coverageRateEntries": 0.6,
+        "affectedUniqueCount": 4,
+        "cleanUniqueCount": 56,
+        "affectedRate": 0.0667,
+        "highRiskUniqueCount": 2,
+        "highRiskRate": 0.0333,
+        "totals": {
+          "totalVulnerabilities": 155,
+          "critical": 0,
+          "high": 8,
+          "medium": 3,
+          "low": 144,
+          "stalePackages": 154,
+          "oldFixesAvailable": 129,
+          "recentVulnerabilities": 4
+        },
+        "avgVulnerabilitiesPerRepo": 2.5833,
+        "avgVulnerabilitiesPerAffectedRepo": 38.75
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 92,
+        "analyzedEntryCount": 92,
+        "coverageRateUniqueRepo": 0.92,
+        "coverageRateEntries": 0.92
+      }
+    },
+    {
+      "platform": "vscode",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 90,
+      "duplicateEntryCount": 10,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 78,
+        "analyzedEntryCount": 88,
+        "coverageRateUniqueRepo": 0.8667,
+        "coverageRateEntries": 0.88,
+        "affectedUniqueCount": 59,
+        "cleanUniqueCount": 19,
+        "affectedRate": 0.7564,
+        "highRiskUniqueCount": 5,
+        "highRiskRate": 0.0641,
+        "totals": {
+          "totalVulnerabilities": 1043,
+          "critical": 0,
+          "high": 7,
+          "medium": 74,
+          "low": 962,
+          "stalePackages": 1035,
+          "oldFixesAvailable": 681,
+          "recentVulnerabilities": 216
+        },
+        "avgVulnerabilitiesPerRepo": 13.3718,
+        "avgVulnerabilitiesPerAffectedRepo": 17.678
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 56,
+        "analyzedEntryCount": 60,
+        "coverageRateUniqueRepo": 0.6222,
+        "coverageRateEntries": 0.6
+      }
+    },
+    {
+      "platform": "wordpress",
+      "top100Total": 100,
+      "entryRepoCount": 100,
+      "uniqueRepoCount": 91,
+      "duplicateEntryCount": 9,
+      "vulnerability": {
+        "analyzedUniqueRepoCount": 62,
+        "analyzedEntryCount": 70,
+        "coverageRateUniqueRepo": 0.6813,
+        "coverageRateEntries": 0.7,
+        "affectedUniqueCount": 36,
+        "cleanUniqueCount": 26,
+        "affectedRate": 0.5806,
+        "highRiskUniqueCount": 6,
+        "highRiskRate": 0.0968,
+        "totals": {
+          "totalVulnerabilities": 1094,
+          "critical": 0,
+          "high": 15,
+          "medium": 127,
+          "low": 952,
+          "stalePackages": 1089,
+          "oldFixesAvailable": 675,
+          "recentVulnerabilities": 209
+        },
+        "avgVulnerabilitiesPerRepo": 17.6452,
+        "avgVulnerabilitiesPerAffectedRepo": 30.3889
+      },
+      "scorecard": {
+        "analyzedUniqueRepoCount": 71,
+        "analyzedEntryCount": 72,
+        "coverageRateUniqueRepo": 0.7802,
+        "coverageRateEntries": 0.72
+      }
+    }
+  ]
+}

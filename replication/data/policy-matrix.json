@@ -1,0 +1,58 @@
+{
+  "rows": [
+    {
+      "platform": "Chrome",
+      "review_type": "Automated / risk-based",
+      "source_packaging_policy": "Packaged extensions; remote code restricted",
+      "primary_trust_signal": "Policy compliance checks"
+    },
+    {
+      "platform": "Firefox",
+      "review_type": "Manual initial, automated updates",
+      "source_packaging_policy": "Submitted source required for review",
+      "primary_trust_signal": "Human code review"
+    },
+    {
+      "platform": "VS Code",
+      "review_type": "Automated",
+      "source_packaging_policy": "Marketplace package; optional source link",
+      "primary_trust_signal": "Verified publisher identity"
+    },
+    {
+      "platform": "JetBrains",
+      "review_type": "Hybrid (automated + manual)",
+      "source_packaging_policy": "Marketplace package with verifier checks",
+      "primary_trust_signal": "Plugin verifier report"
+    },
+    {
+      "platform": "Sublime",
+      "review_type": "PR-based listing",
+      "source_packaging_policy": "Git-hosted packages tracked by tags",
+      "primary_trust_signal": "Community PR merge"
+    },
+    {
+      "platform": "WordPress",
+      "review_type": "Manual",
+      "source_packaging_policy": "SVN-hosted plugins; GPL-compatible",
+      "primary_trust_signal": "SVN history and review checks"
+    },
+    {
+      "platform": "Modrinth",
+      "review_type": "Manual moderation",
+      "source_packaging_policy": "Packaged mods with metadata manifest",
+      "primary_trust_signal": "Moderation decision"
+    },
+    {
+      "platform": "Obsidian",
+      "review_type": "Manual initial",
+      "source_packaging_policy": "Bundled JavaScript plugins",
+      "primary_trust_signal": "Desktop security audit"
+    },
+    {
+      "platform": "Home Assistant (HACS)",
+      "review_type": "PR-based + automated checks",
+      "source_packaging_policy": "GitHub release + manifest file",
+      "primary_trust_signal": "Manifest validation"
+    }
+  ]
+}

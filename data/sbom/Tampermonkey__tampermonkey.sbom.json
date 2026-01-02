@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Tampermonkey/tampermonkey",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/9d8e5910-3a51-4c75-ae1a-621067040fb4",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:43:57Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.Tampermonkey/tampermonkey",
+      "SPDXID": "SPDXRef-github-Tampermonkey-tampermonkey-master-01b63d",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/Tampermonkey/tampermonkey",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Tampermonkey/tampermonkey@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Tampermonkey-tampermonkey-master-01b63d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

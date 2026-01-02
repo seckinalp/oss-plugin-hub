@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.gildas-lormeau/JSONVue",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/30b023c8-c92f-4e04-be0c-c34fb2cd679d",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:36Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.gildas-lormeau/JSONVue",
+      "SPDXID": "SPDXRef-github-gildas-lormeau-JSONVue-master-bbd08c",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/gildas-lormeau/JSONVue",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/gildas-lormeau/JSONVue@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-gildas-lormeau-JSONVue-master-bbd08c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

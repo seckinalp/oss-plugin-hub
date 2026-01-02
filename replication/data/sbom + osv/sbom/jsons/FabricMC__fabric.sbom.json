@@ -1,0 +1,152 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.FabricMC/fabric",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/6caeddcd-55a8-42e7-9485-80172591d1ba",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:44Z"
+  },
+  "packages": [
+    {
+      "name": "FabricMCBot/publish-checkstyle-report",
+      "SPDXID": "SPDXRef-githubactions-FabricMCBot-publish-checkstyle-report-4627c82002aa370b6cb2a3140f34c7a8c55a5297-75c946",
+      "versionInfo": "4627c82002aa370b6cb2a3140f34c7a8c55a5297",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/FabricMCBot/publish-checkstyle-report@4627c82002aa370b6cb2a3140f34c7a8c55a5297"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/wrapper-validation",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-wrapper-validation-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/wrapper-validation@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "FabricMC/fabric-action-scripts",
+      "SPDXID": "SPDXRef-githubactions-FabricMC-fabric-action-scripts-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/FabricMC/fabric-action-scripts@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.FabricMC/fabric",
+      "SPDXID": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "versionInfo": "1.21.11",
+      "downloadLocation": "git+https://github.com/FabricMC/fabric",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/FabricMC/fabric@1.21.11"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-wrapper-validation-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "relatedSpdxElement": "SPDXRef-githubactions-FabricMC-fabric-action-scripts-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "relatedSpdxElement": "SPDXRef-githubactions-FabricMCBot-publish-checkstyle-report-4627c82002aa370b6cb2a3140f34c7a8c55a5297-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-FabricMC-fabric-1.21.11-edc2e7",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

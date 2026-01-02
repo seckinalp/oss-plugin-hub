@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.uipoet/sublime-jshint",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/4788e5d0-54bd-486e-ab4a-b2970cc2699e",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:37Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.uipoet/sublime-jshint",
+      "SPDXID": "SPDXRef-github-uipoet-sublime-jshint-master-c06d00",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/uipoet/sublime-jshint",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/uipoet/sublime-jshint@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-uipoet-sublime-jshint-master-c06d00",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

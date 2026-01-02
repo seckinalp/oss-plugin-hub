@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.rotemdan/ExportCookies",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/b84df1b1-3a69-4ea9-9af8-1dbb2b562aa0",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:31Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.rotemdan/ExportCookies",
+      "SPDXID": "SPDXRef-github-rotemdan-ExportCookies-master-283519",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/rotemdan/ExportCookies",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/rotemdan/ExportCookies@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-rotemdan-ExportCookies-master-283519",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

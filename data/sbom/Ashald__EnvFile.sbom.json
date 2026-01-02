@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ashald/EnvFile",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/c270249a-ee67-4df2-b775-874e4450d5c5",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:34Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.ashald/EnvFile",
+      "SPDXID": "SPDXRef-github-ashald-EnvFile-develop-da2b78",
+      "versionInfo": "develop",
+      "downloadLocation": "git+https://github.com/ashald/EnvFile",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ashald/EnvFile@develop"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ashald-EnvFile-develop-da2b78",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

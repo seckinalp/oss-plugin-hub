@@ -1,0 +1,190 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.opekope2/OptiGUI",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/37b1a0ac-e9be-4f42-b98f-9a8b5c552e1a",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:03Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-6.0.0-75c946",
+      "versionInfo": "6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-5.0.0-75c946",
+      "versionInfo": "5.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@5.0.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-5.0.0-75c946",
+      "versionInfo": "5.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@5.0.0"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/wrapper-validation",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-wrapper-validation-5.0.0-75c946",
+      "versionInfo": "5.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/wrapper-validation@5.0.0"
+        }
+      ]
+    },
+    {
+      "name": "SebRollen/toml-action",
+      "SPDXID": "SPDXRef-githubactions-SebRollen-toml-action-1.2.0-75c946",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/SebRollen/toml-action@1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "Kir-Antipov/mc-publish",
+      "SPDXID": "SPDXRef-githubactions-Kir-Antipov-mc-publish-3.3.0-75c946",
+      "versionInfo": "3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/Kir-Antipov/mc-publish@3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "geekyeggo/delete-artifact",
+      "SPDXID": "SPDXRef-githubactions-geekyeggo-delete-artifact-5.1.0-75c946",
+      "versionInfo": "5.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/geekyeggo/delete-artifact@5.1.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/download-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-download-artifact-6.0.0-75c946",
+      "versionInfo": "6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/download-artifact@6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.opekope2/OptiGUI",
+      "SPDXID": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "versionInfo": "dev",
+      "downloadLocation": "git+https://github.com/opekope2/OptiGUI",
+      "filesAnalyzed": false,
+      "licenseDeclared": "LGPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/opekope2/OptiGUI@dev"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-Kir-Antipov-mc-publish-3.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-geekyeggo-delete-artifact-5.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-download-artifact-6.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-6.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-5.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-5.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-wrapper-validation-5.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relatedSpdxElement": "SPDXRef-githubactions-SebRollen-toml-action-1.2.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-opekope2-OptiGUI-dev-50cd7b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

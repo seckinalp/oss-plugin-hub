@@ -1,0 +1,286 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.frenck/spook",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/937cd5dc-99ce-45d5-86e3-125decb4f168",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:05Z"
+  },
+  "packages": [
+    {
+      "name": "homeassistant",
+      "SPDXID": "SPDXRef-pypi-homeassistant-75c946",
+      "versionInfo": ">= 2025.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/homeassistant"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-node",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-node-6.1.0-75c946",
+      "versionInfo": "6.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-node@6.1.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-pages-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-pages-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-pages-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/deploy-pages",
+      "SPDXID": "SPDXRef-githubactions-actions-deploy-pages-4.0.5-75c946",
+      "versionInfo": "4.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/deploy-pages@4.0.5"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-6.0.1-75c946",
+      "versionInfo": "6.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@6.0.1"
+        }
+      ]
+    },
+    {
+      "name": "hacs/action",
+      "SPDXID": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/hacs/action@main"
+        }
+      ]
+    },
+    {
+      "name": "home-assistant/actions/hassfest",
+      "SPDXID": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/home-assistant/actions/hassfest@master"
+        }
+      ]
+    },
+    {
+      "name": "micnncim/action-label-syncer",
+      "SPDXID": "SPDXRef-githubactions-micnncim-action-label-syncer-1.3.0-75c946",
+      "versionInfo": "1.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/micnncim/action-label-syncer@1.3.0"
+        }
+      ]
+    },
+    {
+      "name": "jesusvasquez333/verify-pr-label-action",
+      "SPDXID": "SPDXRef-githubactions-jesusvasquez333-verify-pr-label-action-1.4.0-75c946",
+      "versionInfo": "1.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/jesusvasquez333/verify-pr-label-action@1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "astral-sh/setup-uv",
+      "SPDXID": "SPDXRef-githubactions-astral-sh-setup-uv-7.1.5-75c946",
+      "versionInfo": "7.1.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/astral-sh/setup-uv@7.1.5"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-2.5.0-75c946",
+      "versionInfo": "2.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "sigstore/gh-action-sigstore-python",
+      "SPDXID": "SPDXRef-githubactions-sigstore-gh-action-sigstore-python-3.2.0-75c946",
+      "versionInfo": "3.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/sigstore/gh-action-sigstore-python@3.2.0"
+        }
+      ]
+    },
+    {
+      "name": "release-drafter/release-drafter",
+      "SPDXID": "SPDXRef-githubactions-release-drafter-release-drafter-6.1.0-75c946",
+      "versionInfo": "6.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/release-drafter/release-drafter@6.1.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.frenck/spook",
+      "SPDXID": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/frenck/spook",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/frenck/spook@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-pypi-homeassistant-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-6.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-6.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-astral-sh-setup-uv-7.1.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-pages-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-deploy-pages-4.0.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-micnncim-action-label-syncer-1.3.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-jesusvasquez333-verify-pr-label-action-1.4.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-2.5.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-sigstore-gh-action-sigstore-python-3.2.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relatedSpdxElement": "SPDXRef-githubactions-release-drafter-release-drafter-6.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-frenck-spook-main-ba4b2c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

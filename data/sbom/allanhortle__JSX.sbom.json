@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.allanhortle/JSX",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/f40151b3-cc34-4591-9c58-1c7520918c18",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:39Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.allanhortle/JSX",
+      "SPDXID": "SPDXRef-github-allanhortle-JSX-master-b31599",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/allanhortle/JSX",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/allanhortle/JSX@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-allanhortle-JSX-master-b31599",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

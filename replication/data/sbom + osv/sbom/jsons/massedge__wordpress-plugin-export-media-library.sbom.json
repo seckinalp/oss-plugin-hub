@@ -1,0 +1,120 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.massedge/wordpress-plugin-export-media-library",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d14654fd-2147-435f-b07c-cfd47e88088a",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:29Z"
+  },
+  "packages": [
+    {
+      "name": "maennchen/zipstream-php",
+      "SPDXID": "SPDXRef-composer-maennchen-zipstream-php-2.2.6-75c946",
+      "versionInfo": "2.2.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2007-2009 Paul Duncan <pabs@pablotron.org>, Copyright (c) 2014 Jesse G. Donat <donatj@gmail.com>, Copyright (c) 2014 Jonatan Mannchen <jonatan@maennchen.ch>, Copyright (c) 2018 Nicolas CARPi <nicolas.carpi@curie.fr>, copyright 2022 Nicolas CARPi",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/maennchen/zipstream-php@2.2.6"
+        }
+      ]
+    },
+    {
+      "name": "myclabs/php-enum",
+      "SPDXID": "SPDXRef-composer-myclabs-php-enum-1.8.4-75c946",
+      "versionInfo": "1.8.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2015 My C-Labs",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/myclabs/php-enum@1.8.4"
+        }
+      ]
+    },
+    {
+      "name": "symfony/polyfill-mbstring",
+      "SPDXID": "SPDXRef-composer-symfony-polyfill-mbstring-1.27.0-75c946",
+      "versionInfo": "1.27.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/symfony/polyfill-mbstring@1.27.0"
+        }
+      ]
+    },
+    {
+      "name": "psr/http-message",
+      "SPDXID": "SPDXRef-composer-psr-http-message-1.1-75c946",
+      "versionInfo": "1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 PHP Framework Interoperability Group",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/psr/http-message@1.1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.massedge/wordpress-plugin-export-media-library",
+      "SPDXID": "SPDXRef-github-massedge-wordpress-plugin-export-media-library-master-b026c4",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/massedge/wordpress-plugin-export-media-library",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/massedge/wordpress-plugin-export-media-library@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-massedge-wordpress-plugin-export-media-library-master-b026c4",
+      "relatedSpdxElement": "SPDXRef-composer-maennchen-zipstream-php-2.2.6-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-massedge-wordpress-plugin-export-media-library-master-b026c4",
+      "relatedSpdxElement": "SPDXRef-composer-myclabs-php-enum-1.8.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-massedge-wordpress-plugin-export-media-library-master-b026c4",
+      "relatedSpdxElement": "SPDXRef-composer-symfony-polyfill-mbstring-1.27.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-massedge-wordpress-plugin-export-media-library-master-b026c4",
+      "relatedSpdxElement": "SPDXRef-composer-psr-http-message-1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-massedge-wordpress-plugin-export-media-library-master-b026c4",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

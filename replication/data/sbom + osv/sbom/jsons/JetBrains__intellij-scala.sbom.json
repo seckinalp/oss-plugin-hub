@@ -1,0 +1,254 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.JetBrains/intellij-scala",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/59d61342-0df5-407e-a663-d18707413b4d",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:27Z"
+  },
+  "packages": [
+    {
+      "name": "mock",
+      "SPDXID": "SPDXRef-pypi-mock-1.0.1-75c946",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "(c) 2009 Jeremy Ashkenas, DocumentCloud Inc., (c) Copyright 2007-2012, Michael Foord the mock team., Copyright (c) 2003-2012, Michael Foord, Copyright (c) 2007-2012 Michael Foord, Copyright 2007-2011 by the Sphinx team, Copyright 2010, John Resig, Copyright 2010, The Dojo Foundation, copyright u'2007-2012, Michael Foord",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mock@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "pyhamcrest",
+      "SPDXID": "SPDXRef-pypi-pyhamcrest-1.8.0-75c946",
+      "versionInfo": "1.8.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright 2011 hamcrest.org, Copyright 2012 hamcrest.org, Copyright 2013 hamcrest.org",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyhamcrest@1.8.0"
+        }
+      ]
+    },
+    {
+      "name": "pytz",
+      "SPDXID": "SPDXRef-pypi-pytz-75c946",
+      "versionInfo": ">= 2014",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytz"
+        }
+      ]
+    },
+    {
+      "name": "pytest",
+      "SPDXID": "SPDXRef-pypi-pytest-2.6.4-75c946",
+      "versionInfo": "2.6.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2010 by Armin Ronacher., Copyright 2010 by Armin Ronacher. :license Flask Design License, Copyright Holger Krekel and others, 2004-2014, copyright u'2014",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest@2.6.4"
+        }
+      ]
+    },
+    {
+      "name": "pyformance",
+      "SPDXID": "SPDXRef-pypi-pyformance-0.3.2-75c946",
+      "versionInfo": "0.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyformance@0.3.2"
+        }
+      ]
+    },
+    {
+      "name": "requests",
+      "SPDXID": "SPDXRef-pypi-requests-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/requests"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "coursier/cache-action",
+      "SPDXID": "SPDXRef-githubactions-coursier-cache-action-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/coursier/cache-action@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "sbt/setup-sbt",
+      "SPDXID": "SPDXRef-githubactions-sbt-setup-sbt-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/sbt/setup-sbt@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "jetbrains-junie/junie-workflows/.github/workflows/ej-issue.yml",
+      "SPDXID": "SPDXRef-githubactions-jetbrains-juniejunie-workflows.githubworkflows-ej-issue.yml-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/jetbrains-junie/junie-workflows/.github/workflows/ej-issue.yml@main"
+        }
+      ]
+    },
+    {
+      "name": "com.github.JetBrains/intellij-scala",
+      "SPDXID": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "versionInfo": "idea253.x",
+      "downloadLocation": "git+https://github.com/JetBrains/intellij-scala",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/JetBrains/intellij-scala@idea253.x"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-pypi-pyhamcrest-1.8.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-pypi-pytz-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-pypi-pytest-2.6.4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-pypi-requests-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-githubactions-sbt-setup-sbt-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-githubactions-jetbrains-juniejunie-workflows.githubworkflows-ej-issue.yml-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-pypi-mock-1.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-pypi-pyformance-0.3.2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relatedSpdxElement": "SPDXRef-githubactions-coursier-cache-action-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-JetBrains-intellij-scala-idea253.x-4694e4",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.akaalias/obsidian-extract-pdf-highlights",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/0b2f1108-595f-45ad-8436-705d7e66f031",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:18Z"
+  },
+  "packages": [
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-9.0.0-4a08d8",
+      "versionInfo": "^9.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@%5E9.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-typescript",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-typescript-6.0.0-b58df8",
+      "versionInfo": "^6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-typescript@%5E6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-2.32.1-fb651f",
+      "versionInfo": "^2.32.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@%5E2.32.1"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-npm-tslib-2.0.3-1887af",
+      "versionInfo": "^2.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@%5E2.0.3"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-4.0.3-b2c4ab",
+      "versionInfo": "^4.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E4.0.3"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-14.14.2-02cd86",
+      "versionInfo": "^14.14.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E14.14.2"
+        }
+      ]
+    },
+    {
+      "name": "node-ensure",
+      "SPDXID": "SPDXRef-npm-node-ensure-0.0.0-c61877",
+      "versionInfo": "^0.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/node-ensure@%5E0.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-15.1.0-e95cef",
+      "versionInfo": "^15.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@%5E15.1.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.akaalias/obsidian-extract-pdf-highlights",
+      "SPDXID": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/akaalias/obsidian-extract-pdf-highlights",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/akaalias/obsidian-extract-pdf-highlights@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-9.0.0-4a08d8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-typescript-6.0.0-b58df8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-2.32.1-fb651f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-tslib-2.0.3-1887af",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-4.0.3-b2c4ab",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-14.14.2-02cd86",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-node-ensure-0.0.0-c61877",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-15.1.0-e95cef",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-akaalias-obsidian-extract-pdf-highlights-master-06e04c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

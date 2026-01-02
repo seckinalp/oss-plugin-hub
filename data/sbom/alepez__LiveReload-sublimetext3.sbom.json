@@ -1,0 +1,132 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.alepez/LiveReload-sublimetext3",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/8764743d-bb92-493b-9866-824b55ec8e66",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:40Z"
+  },
+  "packages": [
+    {
+      "name": "grunt",
+      "SPDXID": "SPDXRef-npm-grunt-0.4.0rc8-d0386d",
+      "versionInfo": "~0.4.0rc8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt@~0.4.0rc8"
+        }
+      ]
+    },
+    {
+      "name": "grunt-contrib-uglify",
+      "SPDXID": "SPDXRef-npm-grunt-contrib-uglify-0.1.1rc6-7c1c79",
+      "versionInfo": "~0.1.1rc6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt-contrib-uglify@~0.1.1rc6"
+        }
+      ]
+    },
+    {
+      "name": "grunt-contrib-watch",
+      "SPDXID": "SPDXRef-npm-grunt-contrib-watch-0.2.0-089ed5",
+      "versionInfo": "~0.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt-contrib-watch@~0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "grunt-contrib-qunit",
+      "SPDXID": "SPDXRef-npm-grunt-contrib-qunit-0.1.1-e06f1d",
+      "versionInfo": "~0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/grunt-contrib-qunit@~0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "snockets",
+      "SPDXID": "SPDXRef-npm-snockets-1.3.8-dfca5d",
+      "versionInfo": "~1.3.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/snockets@~1.3.8"
+        }
+      ]
+    },
+    {
+      "name": "com.github.alepez/LiveReload-sublimetext3",
+      "SPDXID": "SPDXRef-github-alepez-LiveReload-sublimetext3-master-3a3f7d",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/alepez/LiveReload-sublimetext3",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/alepez/LiveReload-sublimetext3@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-alepez-LiveReload-sublimetext3-master-3a3f7d",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-0.4.0rc8-d0386d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-alepez-LiveReload-sublimetext3-master-3a3f7d",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-uglify-0.1.1rc6-7c1c79",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-alepez-LiveReload-sublimetext3-master-3a3f7d",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-watch-0.2.0-089ed5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-alepez-LiveReload-sublimetext3-master-3a3f7d",
+      "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-qunit-0.1.1-e06f1d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-alepez-LiveReload-sublimetext3-master-3a3f7d",
+      "relatedSpdxElement": "SPDXRef-npm-snockets-1.3.8-dfca5d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-alepez-LiveReload-sublimetext3-master-3a3f7d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

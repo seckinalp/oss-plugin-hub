@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.chriskempson/base16",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/486497e0-1dd6-41ff-bfbe-37ff8c2d8346",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:23Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.chriskempson/base16",
+      "SPDXID": "SPDXRef-github-chriskempson-base16-main-137c58",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/chriskempson/base16",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/chriskempson/base16@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-chriskempson-base16-main-137c58",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

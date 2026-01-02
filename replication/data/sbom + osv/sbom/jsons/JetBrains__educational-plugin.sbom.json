@@ -1,0 +1,77 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.JetBrains/educational-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/c1cfc93a-ae87-4f70-bb4f-1bafedf848ed",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:24Z"
+  },
+  "packages": [
+    {
+      "name": "requests",
+      "SPDXID": "SPDXRef-pypi-requests-75c946",
+      "versionInfo": "~> 2.24.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/requests"
+        }
+      ]
+    },
+    {
+      "name": "tqdm",
+      "SPDXID": "SPDXRef-pypi-tqdm-75c946",
+      "versionInfo": "~> 4.48.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/tqdm"
+        }
+      ]
+    },
+    {
+      "name": "com.github.JetBrains/educational-plugin",
+      "SPDXID": "SPDXRef-github-JetBrains-educational-plugin-master-eab377",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/JetBrains/educational-plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/JetBrains/educational-plugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-educational-plugin-master-eab377",
+      "relatedSpdxElement": "SPDXRef-pypi-requests-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-educational-plugin-master-eab377",
+      "relatedSpdxElement": "SPDXRef-pypi-tqdm-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-JetBrains-educational-plugin-master-eab377",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.illusivesoulworks/polymorph",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/4d466096-5207-499f-94b8-a38038a30c12",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:06Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.illusivesoulworks/polymorph",
+      "SPDXID": "SPDXRef-github-illusivesoulworks-polymorph-1.21.x-ae512a",
+      "versionInfo": "1.21.x",
+      "downloadLocation": "git+https://github.com/illusivesoulworks/polymorph",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/illusivesoulworks/polymorph@1.21.x"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-illusivesoulworks-polymorph-1.21.x-ae512a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-illusivesoulworks-polymorph-1.21.x-ae512a",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

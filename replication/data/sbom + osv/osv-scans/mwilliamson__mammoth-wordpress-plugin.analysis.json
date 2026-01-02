@@ -1,0 +1,902 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.549Z",
+  "source": "mwilliamson__mammoth-wordpress-plugin.osv.json",
+  "summary": {
+    "totalVulnerabilities": 10,
+    "uniqueVulnerabilities": 9,
+    "affectedPackages": 7,
+    "stalePackages": 10,
+    "stalePackagesOldFix": 9,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 10
+    },
+    "recentVulnerabilities": 1,
+    "hasFixAvailable": 10
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-36fh-84j7-cv5h",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-48285"
+      ],
+      "summary": "JSZip contains Path Traversal via loadAsync",
+      "details": "loadAsync in JSZip before 3.8.0 allows Directory Traversal via a crafted ZIP archive.",
+      "cwes": [
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-01-29T06:30:52Z",
+        "modifiedDate": "2024-11-18T16:26:28Z",
+        "daysSincePublished": 1053
+      },
+      "affected": {
+        "package": "jszip",
+        "version": "3.7.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.7.1",
+        "fixedIn": "3.8.0",
+        "recommendation": "Upgrade to 3.8.0 or later",
+        "fixAvailableSince": "2024-11-18T16:26:28.000Z",
+        "daysSinceFix": 394,
+        "monthsSinceFix": 13,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48285"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Stuk/jszip/commit/2edab366119c9ee948357c02f1206c28566cdf15"
+        },
+        {
+          "type": "WEB",
+          "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/244499"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/Stuk/jszip"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Stuk/jszip/compare/v3.7.1...v3.8.0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0005"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.mend.io/vulnerability-database/WS-2023-0004"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-rmjr-87wv-gf87",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:H/SI:N/SA:H/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-11849"
+      ],
+      "summary": "Mammoth is vulnerable to Directory Traversal",
+      "details": "Versions of the package mammoth from 0.3.25 and before 1.11.0; versions of the package mammoth from 0.3.25 and before 1.11.0; versions of the package mammoth before 1.11.0; versions of the package org.zwobble.mammoth:mammoth before 1.11.0 are vulnerable to Directory Traversal due to the lack of path or file type validation when processing a docx file containing an image with an external link (r:link attribute instead of embedded r:embed). The library resolves the URI to a file path and after reading, the content is encoded as base64 and included in the HTML output as a data URI. An attacker can read arbitrary files on the system where the conversion is performed or cause an excessive resources consumption by crafting a docx file that links to special device files such as /dev/random or /dev/zero.",
+      "cwes": [
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-10-17T06:31:11Z",
+        "modifiedDate": "2025-10-17T18:27:42.736888Z",
+        "daysSincePublished": 61
+      },
+      "affected": {
+        "package": "mammoth",
+        "version": "1.7.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.7.0",
+        "fixedIn": "1.11.0",
+        "recommendation": "Upgrade to 1.11.0 or later",
+        "fixAvailableSince": "2025-10-17T18:27:42.736Z",
+        "daysSinceFix": 61,
+        "monthsSinceFix": 2,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11849"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mwilliamson/mammoth.js/commit/c54aaeb43a7941317c1f3c119ffa92090f988820"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/AudunWA/4d690d9ae5efdafe7cf71d9c2ee90a10"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/mwilliamson/java-mammoth"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-DOTNET-MAMMOTH-13561968"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGZWOBBLEMAMMOTH-13561969"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-MAMMOTH-13554470"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-PYTHON-MAMMOTH-13561967"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f8q6-p94x-37v3",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-3517"
+      ],
+      "summary": "minimatch ReDoS vulnerability",
+      "details": "A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-10-18T12:00:32Z",
+        "modifiedDate": "2024-02-14T18:15:16Z",
+        "daysSincePublished": 1156
+      },
+      "affected": {
+        "package": "minimatch",
+        "version": "0.3.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.3.0",
+        "fixedIn": "3.0.5",
+        "recommendation": "Upgrade to 3.0.5 or later",
+        "fixAvailableSince": "2024-02-14T18:15:16.000Z",
+        "daysSinceFix": 672,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3517"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/grafana/grafana-image-renderer/issues/329"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodejs/node/issues/42510"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/minimatch/commit/a8763f4388e51956be62dc6025cec1126beeb5e6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/isaacs/minimatch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00011.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vh95-rmgr-6w4m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2020-7598"
+      ],
+      "summary": "Prototype Pollution in minimist",
+      "details": "Affected versions of `minimist` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  \nParsing the argument `--__proto__.y=Polluted` adds a `y` property with value `Polluted` to all objects. The argument `--__proto__=Polluted` raises and uncaught error and crashes the application.  \nThis is exploitable if attackers have control over the arguments being passed to `minimist`.\n\n\n## Recommendation\n\nUpgrade to versions 0.2.1, 1.2.3 or later.",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "5 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2020-04-03T21:48:32Z",
+        "modifiedDate": "2025-01-14T08:57:16.325412Z",
+        "daysSincePublished": 2083
+      },
+      "affected": {
+        "package": "minimist",
+        "version": "0.0.10",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.0.10",
+        "fixedIn": "0.2.1",
+        "recommendation": "Upgrade to 0.2.1 or later",
+        "fixAvailableSince": "2025-01-14T08:57:16.325Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7598"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/10bd4cdf49d9686d48214be9d579a9cdfda37c68"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/38a4d1caead72ef99e824bb420a2528eec03d9ab"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/substack/minimist"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/1179"
+        },
+        {
+          "type": "WEB",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xvch-5gv4-984h",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-44906"
+      ],
+      "summary": "Prototype Pollution in minimist",
+      "details": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-03-18T00:01:09Z",
+        "modifiedDate": "2025-01-14T10:12:15.693708Z",
+        "daysSincePublished": 1370
+      },
+      "affected": {
+        "package": "minimist",
+        "version": "0.0.10",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.0.10",
+        "fixedIn": "1.2.6",
+        "recommendation": "Upgrade to 1.2.6 or later",
+        "fixAvailableSince": "2025-01-14T10:12:15.693Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/issues/11"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/substack/minimist/issues/164"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/pull/24"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/substack/minimist"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+        },
+        {
+          "type": "WEB",
+          "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-34r7-q49f-h37c",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2015-8857"
+      ],
+      "summary": "Incorrect Handling of Non-Boolean Comparisons During Minification in uglify-js",
+      "details": "Versions of `uglify-js` prior to 2.4.24 are affected by a vulnerability which may cause crafted JavaScript to have altered functionality after minification.\n\n## Recommendation\n\nUpgrade UglifyJS to version >= 2.4.24.",
+      "cwes": [
+        {
+          "id": "CWE-1254",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-670",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "8 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2017-10-24T18:33:36Z",
+        "modifiedDate": "2024-02-16T08:16:42.823655Z",
+        "daysSincePublished": 2976
+      },
+      "affected": {
+        "package": "uglify-js",
+        "version": "2.2.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.2.5",
+        "fixedIn": "2.4.24",
+        "recommendation": "Upgrade to 2.4.24 or later",
+        "fixAvailableSince": "2024-02-16T08:16:42.823Z",
+        "daysSinceFix": 670,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8857"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mishoo/UglifyJS2/issues/751"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/lautis/uglifier/commit/4677bfe38142937ff952f95605bcec4618892c3e"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/mishoo/UglifyJS2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/uglifier/CVE-2015-8857.yml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://web.archive.org/web/20200227190830/http://www.securityfocus.com/bid/96410"
+        },
+        {
+          "type": "WEB",
+          "url": "https://zyan.scripts.mit.edu/blog/backdooring-js"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2016/04/20/11"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hxm2-r34f-qmc5",
+      "severity": "LOW",
+      "severityScore": 3,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2016-10540"
+      ],
+      "summary": "Regular Expression Denial of Service in minimatch",
+      "details": "Affected versions of `minimatch` are vulnerable to regular expression denial of service attacks when user input is passed into the `pattern` argument of `minimatch(path, pattern)`.\n\n\n## Proof of Concept\n```js\nvar minimatch = require(“minimatch”);\n\n// utility function for generating long strings\nvar genstr = function (len, chr) {\n  var result = “”;\n  for (i=0; i<=len; i++) {\n    result = result + chr;\n  }\n  return result;\n}\n\nvar exploit = “[!” + genstr(1000000, “\\\\”) + “A”;\n\n// minimatch exploit.\nconsole.log(“starting minimatch”);\nminimatch(“foo”, exploit);\nconsole.log(“finishing minimatch”);\n```\n\n\n## Recommendation\n\nUpdate to version 3.0.2 or later.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "7 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2018-10-09T00:40:41Z",
+        "modifiedDate": "2023-11-08T03:58:11.455886Z",
+        "daysSincePublished": 2626
+      },
+      "affected": {
+        "package": "minimatch",
+        "version": "0.3.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.3.0",
+        "fixedIn": "3.0.2",
+        "recommendation": "Upgrade to 3.0.2 or later",
+        "fixAvailableSince": "2023-11-08T03:58:11.455Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10540"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-hxm2-r34f-qmc5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/118"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qg8p-v9q4-gh34",
+      "severity": "LOW",
+      "severityScore": 3,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2016-10541"
+      ],
+      "summary": "Potential Command Injection in shell-quote",
+      "details": "Affected versions of `shell-quote` do not properly escape command line arguments, which may result in command injection if the library is used to escape user input destined for use as command line arguments.\n\n\n\n## Proof of Concept:\n\nThe following characters are not escaped properly: `>`,`;`,`{`,`}`\n\nBash has a neat but not well known feature known as \"Bash Brace Expansion\", wherein a sub-command can be executed without spaces by running it between a set of `{}` and using the `,` instead of ` ` to seperate arguments. Because of this, full command injection is possible even though it was initially thought to be impossible. \n\n```\n   const quote = require('shell-quote').quote;\n   console.log(quote(['a;{echo,test,123,234}']));\n   // Actual                    \"a;{echo,test,123,234}\"\n   // Expected                  \"a\\;\\{echo,test,123,234\\}\"\n   // Functional Equivalent     \"a; echo 'test' '123' '1234'\"\n```\n\n\n\n## Recommendation\n\nUpdate to version 1.6.1 or later.",
+      "cwes": [
+        {
+          "id": "CWE-78",
+          "name": "OS Command Injection"
+        },
+        {
+          "id": "CWE-94",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "6 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2019-02-18T23:58:29Z",
+        "modifiedDate": "2023-11-08T03:58:11.517851Z",
+        "daysSincePublished": 2493
+      },
+      "affected": {
+        "package": "shell-quote",
+        "version": "0.0.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.0.1",
+        "fixedIn": "1.6.1",
+        "recommendation": "Upgrade to 1.6.1 or later",
+        "fixAvailableSince": "2023-11-08T03:58:11.517Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10541"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-qg8p-v9q4-gh34"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/117"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c9f4-xj24-8jqx",
+      "severity": "LOW",
+      "severityScore": 3,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2015-8858"
+      ],
+      "summary": "Regular Expression Denial of Service in uglify-js",
+      "details": "Versions of `uglify-js` prior to 2.6.0 are affected by a regular expression denial of service vulnerability when malicious inputs are passed into the `parse()` method.\n\n\n### Proof of Concept\n\n```\nvar u = require('uglify-js');\nvar genstr = function (len, chr) {\n    var result = \"\";\n    for (i=0; i<=len; i++) {\n        result = result + chr;\n    }\n\n    return result;\n}\n\nu.parse(\"var a = \" + genstr(process.argv[2], \"1\") + \".1ee7;\");\n```\n\n### Results\n```\n$ time node test.js 10000\nreal\t0m1.091s\nuser\t0m1.047s\nsys\t0m0.039s\n\n$ time node test.js 80000\nreal\t0m6.486s\nuser\t0m6.229s\nsys\t0m0.094s\n```\n\n\n## Recommendation\n\nUpdate to version 2.6.0 or later.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "8 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2017-10-24T18:33:36Z",
+        "modifiedDate": "2023-11-08T03:58:03.623951Z",
+        "daysSincePublished": 2976
+      },
+      "affected": {
+        "package": "uglify-js",
+        "version": "2.2.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.2.5",
+        "fixedIn": "2.6.0",
+        "recommendation": "Upgrade to 2.6.0 or later",
+        "fixAvailableSince": "2023-11-08T03:58:03.623Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8858"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-c9f4-xj24-8jqx"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/48"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2016/04/20/11"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.securityfocus.com/bid/96409"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c9f4-xj24-8jqx",
+      "severity": "LOW",
+      "severityScore": 3,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2015-8858"
+      ],
+      "summary": "Regular Expression Denial of Service in uglify-js",
+      "details": "Versions of `uglify-js` prior to 2.6.0 are affected by a regular expression denial of service vulnerability when malicious inputs are passed into the `parse()` method.\n\n\n### Proof of Concept\n\n```\nvar u = require('uglify-js');\nvar genstr = function (len, chr) {\n    var result = \"\";\n    for (i=0; i<=len; i++) {\n        result = result + chr;\n    }\n\n    return result;\n}\n\nu.parse(\"var a = \" + genstr(process.argv[2], \"1\") + \".1ee7;\");\n```\n\n### Results\n```\n$ time node test.js 10000\nreal\t0m1.091s\nuser\t0m1.047s\nsys\t0m0.039s\n\n$ time node test.js 80000\nreal\t0m6.486s\nuser\t0m6.229s\nsys\t0m0.094s\n```\n\n\n## Recommendation\n\nUpdate to version 2.6.0 or later.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "8 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2017-10-24T18:33:36Z",
+        "modifiedDate": "2023-11-08T03:58:03.623951Z",
+        "daysSincePublished": 2976
+      },
+      "affected": {
+        "package": "uglify-js",
+        "version": "2.4.24",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.4.24",
+        "fixedIn": "2.6.0",
+        "recommendation": "Upgrade to 2.6.0 or later",
+        "fixAvailableSince": "2023-11-08T03:58:03.623Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8858"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/advisories/GHSA-c9f4-xj24-8jqx"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/48"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.openwall.com/lists/oss-security/2016/04/20/11"
+        },
+        {
+          "type": "WEB",
+          "url": "http://www.securityfocus.com/bid/96409"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "jszip",
+      "currentVersion": "3.7.1",
+      "fixedIn": "3.8.0",
+      "vulnerabilities": [
+        "GHSA-36fh-84j7-cv5h"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.8.0 or later",
+      "fixAvailableSince": "2024-11-18T16:26:28.000Z",
+      "daysSinceFix": 394,
+      "monthsSinceFix": 13,
+      "isOldFix": true
+    },
+    {
+      "package": "mammoth",
+      "currentVersion": "1.7.0",
+      "fixedIn": "1.11.0",
+      "vulnerabilities": [
+        "GHSA-rmjr-87wv-gf87"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.11.0 or later",
+      "fixAvailableSince": "2025-10-17T18:27:42.736Z",
+      "daysSinceFix": 61,
+      "monthsSinceFix": 2,
+      "isOldFix": false
+    },
+    {
+      "package": "minimatch",
+      "currentVersion": "0.3.0",
+      "fixedIn": "3.0.5",
+      "vulnerabilities": [
+        "GHSA-f8q6-p94x-37v3",
+        "GHSA-hxm2-r34f-qmc5"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.5 or later",
+      "fixAvailableSince": "2024-02-14T18:15:16.000Z",
+      "daysSinceFix": 672,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "minimist",
+      "currentVersion": "0.0.10",
+      "fixedIn": "0.2.1",
+      "vulnerabilities": [
+        "GHSA-vh95-rmgr-6w4m",
+        "GHSA-xvch-5gv4-984h"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.2.1 or later",
+      "fixAvailableSince": "2025-01-14T08:57:16.325Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "shell-quote",
+      "currentVersion": "0.0.1",
+      "fixedIn": "1.6.1",
+      "vulnerabilities": [
+        "GHSA-qg8p-v9q4-gh34"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.6.1 or later",
+      "fixAvailableSince": "2023-11-08T03:58:11.517Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    },
+    {
+      "package": "uglify-js",
+      "currentVersion": "2.2.5",
+      "fixedIn": "2.4.24",
+      "vulnerabilities": [
+        "GHSA-34r7-q49f-h37c",
+        "GHSA-c9f4-xj24-8jqx"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.4.24 or later",
+      "fixAvailableSince": "2024-02-16T08:16:42.823Z",
+      "daysSinceFix": 670,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "uglify-js",
+      "currentVersion": "2.4.24",
+      "fixedIn": "2.6.0",
+      "vulnerabilities": [
+        "GHSA-c9f4-xj24-8jqx"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.6.0 or later",
+      "fixAvailableSince": "2023-11-08T03:58:03.623Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "1 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "9 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "10 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

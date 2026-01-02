@@ -1,0 +1,59 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.pichillilorenzo/JavaScript-Completions",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/f6a449bd-bb5f-4750-b434-246e14c244ac",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:35Z"
+  },
+  "packages": [
+    {
+      "name": "jsdoc",
+      "SPDXID": "SPDXRef-npm-jsdoc-3.4.3-4d4d62",
+      "versionInfo": "3.4.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright (c) 2006 Google Inc., Copyright (c) 2008-2011 Pivotal Labs., Copyright (c) 2010 Adam Abrons and Misko Hevery (http://getangular.com)., Copyright (c) 2010-2011, Google Inc., copyright (c) 2011-present Michael Mathews <micmath@gmail.com> and the contributors, Copyright (c) 2011-present Michael Mathews <micmath@gmail.com> and the contributors, Copyright (c) 2012 Marijn Haverbeke <marijnh@gmail.com>, Copyright (c) 2016 Yoshihide Jimbo.",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/jsdoc@3.4.3"
+        }
+      ]
+    },
+    {
+      "name": "com.github.pichillilorenzo/JavaScript-Completions",
+      "SPDXID": "SPDXRef-github-pichillilorenzo-JavaScript-Completions-master-dac603",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/pichillilorenzo/JavaScript-Completions",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/pichillilorenzo/JavaScript-Completions@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-pichillilorenzo-JavaScript-Completions-master-dac603",
+      "relatedSpdxElement": "SPDXRef-npm-jsdoc-3.4.3-4d4d62",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-pichillilorenzo-JavaScript-Completions-master-dac603",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

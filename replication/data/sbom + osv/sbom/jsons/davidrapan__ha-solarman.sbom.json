@@ -1,0 +1,133 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.davidrapan/ha-solarman",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d6461137-8631-433f-bb89-b219b54b24f2",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:04Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/stale",
+      "SPDXID": "SPDXRef-githubactions-actions-stale-9..-75c946",
+      "versionInfo": "9.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/stale@9.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "hacs/action",
+      "SPDXID": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/hacs/action@main"
+        }
+      ]
+    },
+    {
+      "name": "home-assistant/actions/hassfest",
+      "SPDXID": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/home-assistant/actions/hassfest@master"
+        }
+      ]
+    },
+    {
+      "name": "com.github.davidrapan/ha-solarman",
+      "SPDXID": "SPDXRef-github-davidrapan-ha-solarman-main-1ceb3c",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/davidrapan/ha-solarman",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/davidrapan/ha-solarman@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-davidrapan-ha-solarman-main-1ceb3c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-davidrapan-ha-solarman-main-1ceb3c",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-davidrapan-ha-solarman-main-1ceb3c",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-stale-9..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-davidrapan-ha-solarman-main-1ceb3c",
+      "relatedSpdxElement": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-davidrapan-ha-solarman-main-1ceb3c",
+      "relatedSpdxElement": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-davidrapan-ha-solarman-main-1ceb3c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

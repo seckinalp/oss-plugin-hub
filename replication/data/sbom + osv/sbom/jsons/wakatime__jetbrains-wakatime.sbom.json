@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.wakatime/jetbrains-wakatime",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/451645c4-57e5-4ab7-8524-193ebdcecba6",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:24Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.wakatime/jetbrains-wakatime",
+      "SPDXID": "SPDXRef-github-wakatime-jetbrains-wakatime-master-43f323",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/wakatime/jetbrains-wakatime",
+      "filesAnalyzed": false,
+      "licenseDeclared": "BSD-3-Clause",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/wakatime/jetbrains-wakatime@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-wakatime-jetbrains-wakatime-master-43f323",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

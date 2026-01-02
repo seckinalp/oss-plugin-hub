@@ -18,6 +18,10 @@ export interface Top100Plugin {
   topics?: string[];
   license?: string;
   isTop100: boolean;
+  sbomPath?: string;
+  sbomStatus?: string;
+  sbomFetchedAt?: string;
+  sbomError?: string;
 }
 
 export interface PlatformAnalytics {

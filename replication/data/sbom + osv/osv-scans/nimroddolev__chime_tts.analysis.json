@@ -1,0 +1,299 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.571Z",
+  "source": "nimroddolev__chime_tts.osv.json",
+  "summary": {
+    "totalVulnerabilities": 4,
+    "uniqueVulnerabilities": 4,
+    "affectedPackages": 1,
+    "stalePackages": 4,
+    "stalePackagesOldFix": 4,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 4
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 4
+  },
+  "vulnerabilities": [
+    {
+      "id": "PYSEC-2023-214",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-41893",
+        "GHSA-qhhj-7hrc-gqj5"
+      ],
+      "summary": "No summary available",
+      "details": "Home assistant is an open source home automation. The audit team’s analyses confirmed that the `redirect_uri` and `client_id` are alterable when logging in. Consequently, the code parameter utilized to fetch the `access_token` post-authentication will be sent to the URL specified in the aforementioned parameters. Since an arbitrary URL is permitted and `homeassistant.local` represents the preferred, default domain likely used and trusted by many users, an attacker could leverage this weakness to manipulate a user and retrieve account access. Notably, this attack strategy is plausible if the victim has exposed their Home Assistant to the Internet, since after acquiring the victim’s `access_token` the adversary would need to utilize it directly towards the instance to achieve any pertinent malicious actions. To achieve this compromise attempt, the attacker must send a link with a `redirect_uri` that they control to the victim’s own Home Assistant instance. In the eventuality the victim authenticates via said link, the attacker would obtain code sent to the specified URL in `redirect_uri`, which can then be leveraged to fetch an `access_token`. Pertinently, an attacker could increase the efficacy of this strategy by registering a near identical domain to `homeassistant.local`, which at first glance may appear legitimate and thereby obfuscate any malicious intentions. This issue has been addressed in version 2023.9.0 and all users are advised to upgrade. There are no known workarounds for this vulnerability.",
+      "cwes": [],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-10-20T00:15:00Z",
+        "modifiedDate": "2023-11-08T04:13:27.136730Z",
+        "daysSincePublished": 789
+      },
+      "affected": {
+        "package": "homeassistant",
+        "version": "2023.7.3",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2023.7.3",
+        "fixedIn": "2023.9.0",
+        "recommendation": "Upgrade to 2023.9.0 or later",
+        "fixAvailableSince": "2023-11-08T04:13:27.136Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://www.home-assistant.io/blog/2023/10/19/security-audits-of-home-assistant/"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://github.com/home-assistant/core/security/advisories/GHSA-qhhj-7hrc-gqj5"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jqpc-rc7g-vf83",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-50715"
+      ],
+      "summary": "User accounts disclosed to unauthenticated actors on the LAN",
+      "details": "### Summary\n\nThe login page discloses all active user accounts to any unauthenticated browsing request originating on the Local Area Network.\n\n### Details\n\nStarting the [Home Assistant 2023.12 release](https://www.home-assistant.io/blog/2023/12/06/release-202312/), the login page returns all currently active user accounts to browsing requests from the Local Area Network. Tests showed that this occurs when:\n\n- The request is not authenticated and\n- The request originated locally, meaning on the Home Assistant host local subnet or any other private subnet (`10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, fd00::/8, ::ffff:10.0.0.0/104, ::ffff:172.16.0.0/108, ::ffff:192.168.0.0/112`)\n\nThe rationale behind this is to make the login more user-friendly (see [release blog post](https://www.home-assistant.io/blog/2023/12/06/release-202312/)) and an experience better aligned with other applications that have multiple user-profiles.\n\nHowever, as a result, all accounts are displayed regardless of them having logged in or not and for any device that navigates to the server. This disclosure is mitigated by the fact that it only occurs for requests originating from a LAN address. But note that this applies to the local subnet where Home Assistant resides and to any private subnet that can reach it.\n\n### PoC\n\n1. Place a Home Assistant instance on a private subnet, i.e., 192.168.1.0/24.\n2. Create a few users, let's say, three.\n3. From any (or another) private subnet on the LAN, like 192.168.2.0/24, open an incognito browser window (to ensure that the browser has no cookies from Home Assistant and therefore is demonstrably unauthenticated) and navigate to the Home Assistant URL.\n4. The login page will display all three users, including their profile photo.\n\n### Impact\n\nThe following CVSS string could be shaped to describe the overall impact of this issue:\nAV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N\n\nAs seen, the Exploitability metrics are high, and the Impact metrics are low. This is fitting because the problem does not constitute a critical one, but at the same time, it is trivial to exploit. Still, since the mitigation can be so easily implemented in code to eliminate a typical case of information disclosure, it would certainly be worth pursuing.\n",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-12-15T23:19:28Z",
+        "modifiedDate": "2024-02-16T08:10:33.440087Z",
+        "daysSincePublished": 732
+      },
+      "affected": {
+        "package": "homeassistant",
+        "version": "2023.7.3",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2023.7.3",
+        "fixedIn": "2023.12.3",
+        "recommendation": "Upgrade to 2023.12.3 or later",
+        "fixAvailableSince": "2024-02-16T08:10:33.440Z",
+        "daysSinceFix": 670,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/core/security/advisories/GHSA-jqpc-rc7g-vf83"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-50715"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/core/commit/dbfc5ea8f96bde6cd165892f5a6a6f9a65731c76"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/home-assistant/core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m3pm-rpgg-5wj6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-25305"
+      ],
+      "summary": "Home Assistant does not correctly validate SSL for outgoing requests in core and used libs",
+      "details": "## Summary\n\nProblem: Potential man-in-the-middle attacks due to missing SSL certificate verification in the project codebase and used third-party libraries.\n\n## Details\n\nIn the past, `aiohttp-session`/`request` had the parameter `verify_ssl` to control SSL certificate verification. This was a boolean value. In `aiohttp` 3.0, this parameter was deprecated in favor of the `ssl` parameter. Only when `ssl` is set to `None` or provided with a correct configured SSL context the standard SSL certificate verification will happen.\n\nWhen migrating integrations in Home Assistant and libraries used by Home Assistant, in some cases the `verify_ssl` parameter value was just moved to the new `ssl` parameter. This resulted in these integrations and 3rd party libraries using `request.ssl = True`, which unintentionally turned off SSL certificate verification and opened up a man-in-the-middle attack vector.\n\nExample:\nhttps://github.com/home-assistant/core/blob/c4411914c2e906105b765c00af5740bd0880e946/homeassistant/components/discord/notify.py#L84\n\nWhen you scan the libraries used by the integrations in Home Assistant, you will find more issues like this.\n\nThe general handling in Home Assistant looks good, as `homeassistant.helpers.aoihttp_client._async_get_connector` handles it correctly.\n\n## PoC\n\n1. Check that expired.badssl.com:443 gives an SSL error in when connecting with curl or browser.\n2. Add the integration adguard with the setting `host=expired.badssl.com`, `port=443`, `use-ssl=true`, `verify-ssl=true`.\n3. Check the logs - you get a HTTP 403 response.\n\nExpected behavior:\n1. The integration log shows an `ssl.SSLCertVerificationError`.\n\nThe following code shows the problem with `ssl=True`. No exception is raised when `ssl=True` (Python 3.11.6).\n\n```\nimport asyncio\nfrom ssl import SSLCertVerificationError\n\nimport aiohttp\n\nBAD_URL = \"https://expired.badssl.com/\"\n\n\nasync def run_request(verify_ssl, result_placeholder: str):\n    async with aiohttp.ClientSession() as session:\n        exception_fired: bool = False\n        try:\n            await session.request(\"OPTIONS\", BAD_URL, ssl=verify_ssl)\n        except SSLCertVerificationError:\n            exception_fired = True\n        except Exception as error:\n            print(error)\n        else:\n            exception_fired = False\n        print(result_placeholder.format(exception_result=exception_fired))\n\n\n# Case 1: ssl=False --> expected result: No exception\nasyncio.run(run_request(False, \"Test case 1: expected result: False - result: {exception_result}\"))\n\n# Case 2: ssl=None --> expected result: Exception\nasyncio.run(run_request(None, \"Test case 2: expected result: True - result: {exception_result}\"))\n\n# Case 3: ssl=True --> expected result: No Exception\nasyncio.run(run_request(True, \"Test case 3: expected result: False - result: {exception_result}\"))\n\n```",
+      "cwes": [
+        {
+          "id": "CWE-347",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-940",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-02-18T19:25:24Z",
+        "modifiedDate": "2025-02-18T23:12:00.700995Z",
+        "daysSincePublished": 302
+      },
+      "affected": {
+        "package": "homeassistant",
+        "version": "2023.7.3",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2023.7.3",
+        "fixedIn": "2024.1.6",
+        "recommendation": "Upgrade to 2024.1.6 or later",
+        "fixAvailableSince": "2025-02-18T23:12:00.700Z",
+        "daysSinceFix": 301,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/core/security/advisories/GHSA-m3pm-rpgg-5wj6"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25305"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/core/commit/8c6547f1b64f4a3d9f10090b97383353c9367892"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/home-assistant/core"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qhhj-7hrc-gqj5",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2023-41893",
+        "PYSEC-2023-214"
+      ],
+      "summary": "Home Assistant vulnerable to account takeover via auth_callback login",
+      "details": "[_Part of the Cure53 security audit of Home Assistant._](https://www.home-assistant.io/blog/2023/10/19/security-audits-of-home-assistant/)\n\nThe audit team’s analyses confirmed that the `redirect_uri` and `client_id` are alterable when logging in. Consequently, the code parameter utilized to fetch the `access_token` post-authentication will be sent to the URL specified in the aforementioned parameters.\n\nSince an arbitrary URL is permitted and `homeassistant.local` represents the preferred, default domain likely used and trusted by many users, an attacker could leverage this weakness to manipulate a user and retrieve account access. Notably, this attack strategy is plausible if the victim has exposed their Home Assistant to the Internet, since after acquiring the victim’s `access_token`, the adversary would need to utilize it directly towards the instance to achieve any pertinent malicious actions.\n\nTo achieve this compromise attempt, the attacker must send a link with a `redirect_uri` that they control to the victim’s own Home Assistant instance. In the eventuality the victim authenticates via the said link, the attacker would obtain code sent to the specified URL in `redirect_uri`, which can then be leveraged to fetch an `access_token`.\n\nAn attacker could increase the efficacy of this strategy by registering a nearly identical domain to `homeassistant.local`, which at first glance may appear legitimate and thereby obfuscate any malicious intentions.\n\nNonetheless, owing to the requirements for victim interaction and Home Assistant instance exposure to the Internet, this severity rating was consequently downgraded to Low.",
+      "cwes": [
+        {
+          "id": "CWE-200",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-10-26T21:46:22Z",
+        "modifiedDate": "2024-09-20T21:24:05.724892Z",
+        "daysSincePublished": 782
+      },
+      "affected": {
+        "package": "homeassistant",
+        "version": "2023.7.3",
+        "ecosystem": "PyPI"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2023.7.3",
+        "fixedIn": "2023.9.0",
+        "recommendation": "Upgrade to 2023.9.0 or later",
+        "fixAvailableSince": "2024-09-20T21:24:05.724Z",
+        "daysSinceFix": 452,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/home-assistant/core/security/advisories/GHSA-qhhj-7hrc-gqj5"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-41893"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/home-assistant/core"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/pypa/advisory-database/tree/main/vulns/homeassistant/PYSEC-2023-214.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.home-assistant.io/blog/2023/10/19/security-audits-of-home-assistant"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "homeassistant",
+      "currentVersion": "2023.7.3",
+      "fixedIn": "2023.9.0",
+      "vulnerabilities": [
+        "PYSEC-2023-214",
+        "GHSA-jqpc-rc7g-vf83",
+        "GHSA-m3pm-rpgg-5wj6",
+        "GHSA-qhhj-7hrc-gqj5"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2023.9.0 or later",
+      "fixAvailableSince": "2023-11-08T04:13:27.136Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "4 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "4 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

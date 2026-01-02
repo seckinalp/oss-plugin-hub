@@ -1,0 +1,95 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.srusskih/SublimeJEDI",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/dc949785-49b9-4bbe-943e-d4107cb18d8f",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:36Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/create-release",
+      "SPDXID": "SPDXRef-githubactions-actions-create-release-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/create-release@1"
+        }
+      ]
+    },
+    {
+      "name": "mathieudutour/github-tag-action",
+      "SPDXID": "SPDXRef-githubactions-mathieudutour-github-tag-action-6.0-75c946",
+      "versionInfo": "6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/mathieudutour/github-tag-action@6.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.srusskih/SublimeJEDI",
+      "SPDXID": "SPDXRef-github-srusskih-SublimeJEDI-master-286b1e",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/srusskih/SublimeJEDI",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/srusskih/SublimeJEDI@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-srusskih-SublimeJEDI-master-286b1e",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-srusskih-SublimeJEDI-master-286b1e",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-create-release-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-srusskih-SublimeJEDI-master-286b1e",
+      "relatedSpdxElement": "SPDXRef-githubactions-mathieudutour-github-tag-action-6.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-srusskih-SublimeJEDI-master-286b1e",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

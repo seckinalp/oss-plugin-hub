@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.adblockplus/adblockpluschrome",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/fcacdd50-fb95-47da-a276-1b4769918bb2",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:43:59Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.adblockplus/adblockpluschrome",
+      "SPDXID": "SPDXRef-github-adblockplus-adblockpluschrome-master-bbcfd4",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/adblockplus/adblockpluschrome",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/adblockplus/adblockpluschrome@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-adblockplus-adblockpluschrome-master-bbcfd4",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

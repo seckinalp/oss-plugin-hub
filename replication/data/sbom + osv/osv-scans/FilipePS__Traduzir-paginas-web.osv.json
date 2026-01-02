@@ -1,0 +1,411 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/FilipePS__Traduzir-paginas-web.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "form-data",
+            "version": "4.0.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "aliases": [
+                "CVE-2025-7783",
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "max_severity": "9.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-7783"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-330"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-07-21T19:04:54Z",
+                "nvd_published_at": "2025-07-18T17:15:44Z",
+                "severity": "CRITICAL"
+              },
+              "details": "### Summary\n\nform-data uses `Math.random()` to select a boundary value for multipart form-encoded data. This can lead to a security issue if an attacker:\n1. can observe other values produced by Math.random in the target application, and\n2. can control one field of a request made using form-data\n\nBecause the values of Math.random() are pseudo-random and predictable (see: https://blog.securityevaluators.com/hacking-the-javascript-lottery-80cc437e3b7f), an attacker who can observe a few sequential values can determine the state of the PRNG and predict future values, includes those used to generate form-data's boundary value. The allows the attacker to craft a value that contains a boundary value, allowing them to inject additional parameters into the request.\n\nThis is largely the same vulnerability as was [recently found in `undici`](https://hackerone.com/reports/2913312) by [`parrot409`](https://hackerone.com/parrot409?type=user) -- I'm not affiliated with that researcher but want to give credit where credit is due! My PoC is largely based on their work.\n\n### Details\n\nThe culprit is this line here: https://github.com/form-data/form-data/blob/426ba9ac440f95d1998dac9a5cd8d738043b048f/lib/form_data.js#L347\n\nAn attacker who is able to predict the output of Math.random() can predict this boundary value, and craft a payload that contains the boundary value, followed by another, fully attacker-controlled field. This is roughly equivalent to any sort of improper escaping vulnerability, with the caveat that the attacker must find a way to observe other Math.random() values generated by the application to solve for the state of the PRNG. However, Math.random() is used in all sorts of places that might be visible to an attacker (including by form-data itself, if the attacker can arrange for the vulnerable application to make a request to an attacker-controlled server using form-data, such as a user-controlled webhook -- the attacker could observe the boundary values from those requests to observe the Math.random() outputs). A common example would be a `x-request-id` header added by the server. These sorts of headers are often used for distributed tracing, to correlate errors across the frontend and backend. `Math.random()` is a fine place to get these sorts of IDs (in fact, [opentelemetry uses Math.random for this purpose](https://github.com/open-telemetry/opentelemetry-js/blob/2053f0d3a44631ade77ea04f656056a2c8a2ae76/packages/opentelemetry-sdk-trace-base/src/platform/node/RandomIdGenerator.ts#L22))\n\n### PoC\n\nPoC here: https://github.com/benweissmann/CVE-2025-7783-poc\n\nInstructions are in that repo. It's based on the PoC from https://hackerone.com/reports/2913312 but simplified somewhat; the vulnerable application has a more direct side-channel from which to observe Math.random() values (a separate endpoint that happens to include a randomly-generated request ID). \n\n### Impact\n\nFor an application to be vulnerable, it must:\n- Use `form-data` to send data including user-controlled data to some other system. The attacker must be able to do something malicious by adding extra parameters (that were not intended to be user-controlled) to this request. Depending on the target system's handling of repeated parameters, the attacker might be able to overwrite values in addition to appending values (some multipart form handlers deal with repeats by overwriting values instead of representing them as an array)\n- Reveal values of Math.random(). It's easiest if the attacker can observe multiple sequential values, but more complex math could recover the PRNG state to some degree of confidence with non-sequential values. \n\nIf an application is vulnerable, this allows an attacker to make arbitrary requests to internal systems.",
+              "id": "GHSA-fjxv-7rqg-78g4",
+              "modified": "2025-11-03T21:34:08Z",
+              "published": "2025-07-21T19:04:54Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7783"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benweissmann/CVE-2025-7783-poc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/form-data/form-data"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
+                }
+              ],
+              "related": [
+                "CGA-35hh-78jw-8mmq",
+                "CGA-9m6x-qcrx-9xfj",
+                "CGA-cvhq-qgx3-vfx9",
+                "CGA-g2fp-rgfq-2hjj",
+                "CGA-h6v7-23w8-2vw8",
+                "CGA-mp9r-pq3p-q3qc",
+                "CGA-pgwm-362h-3mjh",
+                "CGA-qvfw-fcfj-g5xq",
+                "CGA-rvcj-gcgm-25q3",
+                "CGA-xvgg-cqm9-vxh5",
+                "CVE-2025-7783"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "form-data uses unsafe random function in form-data for choosing boundary"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "formidable",
+            "version": "2.1.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-75v8-2h7p-7m2m"
+              ],
+              "aliases": [
+                "CVE-2025-46653",
+                "GHSA-75v8-2h7p-7m2m"
+              ],
+              "max_severity": "3.1"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-75v8-2h7p-7m2m/GHSA-75v8-2h7p-7m2m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "formidable",
+                    "purl": "pkg:npm/formidable"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.1.1-canary.20211030"
+                        },
+                        {
+                          "fixed": "3.5.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/04/GHSA-75v8-2h7p-7m2m/GHSA-75v8-2h7p-7m2m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "formidable",
+                    "purl": "pkg:npm/formidable"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.1.0"
+                        },
+                        {
+                          "fixed": "2.1.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-46653"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-338"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-04-29T14:07:17Z",
+                "nvd_published_at": "2025-04-26T21:15:14Z",
+                "severity": "LOW"
+              },
+              "details": "Formidable (aka node-formidable) 2.x before 2.1.3 and 3.x before 3.5.3 relies on hexoid to prevent guessing of filenames for untrusted executable content; however, hexoid is documented as not \"cryptographically secure.\" (Also, there is a scenario in which only the last two characters of a hexoid string need to be guessed, but this is not often relevant.) NOTE: this does not imply that, in a typical use case, attackers will be able to exploit any hexoid behavior to upload and execute their own content.",
+              "id": "GHSA-75v8-2h7p-7m2m",
+              "modified": "2025-05-27T18:49:20Z",
+              "published": "2025-04-26T21:31:26Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46653"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-formidable/formidable/commit/022c2c5577dfe14d2947f10909d81b03b6070bf5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-formidable/formidable/commit/37a3e89fca1ed68ec674a539f13aafd62221ddaa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/node-formidable/formidable"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-formidable/formidable/blob/d0fbec13edc8add54a1afb9ce1a8d3db803f8d47/CHANGELOG.md?plain=1#L10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/zast-ai/vulnerability-reports/blob/main/formidable/file_upload/report.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/formidable/v/2.1.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/formidable/v/3.5.3"
+                }
+              ],
+              "related": [
+                "CGA-46j9-9j5c-pxr2",
+                "CGA-mhcj-4483-mj2g"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Formidable relies on hexoid to prevent guessing of filenames for untrusted executable content"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "postcss",
+            "version": "7.0.39",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7fh5-64p2-3v2j"
+              ],
+              "aliases": [
+                "CVE-2023-44270",
+                "GHSA-7fh5-64p2-3v2j"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-7fh5-64p2-3v2j/GHSA-7fh5-64p2-3v2j.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "postcss",
+                    "purl": "pkg:npm/postcss"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "8.4.31"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2023-44270"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-144",
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-03T15:04:58Z",
+                "nvd_published_at": "2023-09-29T22:15:11Z",
+                "severity": "MODERATE"
+              },
+              "details": "An issue was discovered in PostCSS before 8.4.31. It affects linters using PostCSS to parse external Cascading Style Sheets (CSS). There may be `\\r` discrepancies, as demonstrated by `@font-face{ font:(\\r/*);}` in a rule.\n\nThis vulnerability affects linters using PostCSS to parse external untrusted CSS. An attacker can prepare CSS in such a way that it will contains parts parsed by PostCSS as a CSS comment. After processing by PostCSS, it will be included in the PostCSS output in CSS nodes (rules, properties) despite being originally included in a comment.",
+              "id": "GHSA-7fh5-64p2-3v2j",
+              "modified": "2025-11-04T16:45:01Z",
+              "published": "2023-09-30T00:31:10Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44270"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/github/advisory-database/issues/2820"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/commit/58cc860b4c1707510c9cd1bc1fa30b423a9ad6c5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/postcss/postcss"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/blob/main/lib/tokenize.js#L25"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/releases/tag/8.4.31"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "PostCSS line return parsing error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

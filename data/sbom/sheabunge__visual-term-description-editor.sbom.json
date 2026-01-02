@@ -1,0 +1,57 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.sheabunge/visual-term-description-editor",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/ccf0f09b-dde2-4f01-ae04-6f6596af981c",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:53Z"
+  },
+  "packages": [
+    {
+      "name": "composer/installers",
+      "SPDXID": "SPDXRef-composer-composer-installers-1.12.0-75c946",
+      "versionInfo": "1.12.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/composer/installers@1.12.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.sheabunge/visual-term-description-editor",
+      "SPDXID": "SPDXRef-github-sheabunge-visual-term-description-editor-master-8baefd",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/sheabunge/visual-term-description-editor",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/sheabunge/visual-term-description-editor@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-sheabunge-visual-term-description-editor-master-8baefd",
+      "relatedSpdxElement": "SPDXRef-composer-composer-installers-1.12.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-sheabunge-visual-term-description-editor-master-8baefd",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

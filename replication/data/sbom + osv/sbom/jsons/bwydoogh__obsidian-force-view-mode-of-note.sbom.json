@@ -1,0 +1,189 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.bwydoogh/obsidian-force-view-mode-of-note",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/8611eb29-960b-4409-83ad-e1a3c75c617d",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:50Z"
+  },
+  "packages": [
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-18.0.0-0dc9aa",
+      "versionInfo": "^18.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@%5E18.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-11.2.1-51d24b",
+      "versionInfo": "^11.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@%5E11.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-typescript",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-typescript-8.3.2-bfde90",
+      "versionInfo": "^8.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-typescript@%5E8.3.2"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-14.18.18-c7c9e5",
+      "versionInfo": "^14.18.18",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E14.18.18"
+        }
+      ]
+    },
+    {
+      "name": "obsidian",
+      "SPDXID": "SPDXRef-npm-obsidian-latest-87cda0",
+      "versionInfo": "latest",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian@latest"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-2.75.1-22b5b4",
+      "versionInfo": "^2.75.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@%5E2.75.1"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-npm-tslib-2.4.0-30d7b6",
+      "versionInfo": "^2.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@%5E2.4.0"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-4.7.2-234deb",
+      "versionInfo": "^4.7.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E4.7.2"
+        }
+      ]
+    },
+    {
+      "name": "com.github.bwydoogh/obsidian-force-view-mode-of-note",
+      "SPDXID": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/bwydoogh/obsidian-force-view-mode-of-note",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/bwydoogh/obsidian-force-view-mode-of-note@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-18.0.0-0dc9aa",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-11.2.1-51d24b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-typescript-8.3.2-bfde90",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-14.18.18-c7c9e5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-latest-87cda0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-2.75.1-22b5b4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-tslib-2.4.0-30d7b6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-4.7.2-234deb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-bwydoogh-obsidian-force-view-mode-of-note-master-f4e44c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.MisterPeModder/ShulkerBoxTooltip",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/295d0ab6-fc2c-476b-a89d-da21192d5b60",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:59Z"
+  },
+  "packages": [
+    {
+      "name": "actions/download-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-download-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/download-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/setup-gradle",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-setup-gradle-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/setup-gradle@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "gradle/actions/wrapper-validation",
+      "SPDXID": "SPDXRef-githubactions-gradleactions-wrapper-validation-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/gradle/actions/wrapper-validation@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "christian-draeger/read-properties",
+      "SPDXID": "SPDXRef-githubactions-christian-draeger-read-properties-1.1.1-75c946",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/christian-draeger/read-properties@1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.MisterPeModder/ShulkerBoxTooltip",
+      "SPDXID": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "versionInfo": "1.21.x",
+      "downloadLocation": "git+https://github.com/MisterPeModder/ShulkerBoxTooltip",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/MisterPeModder/ShulkerBoxTooltip@1.21.x"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-christian-draeger-read-properties-1.1.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-download-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-setup-gradle-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relatedSpdxElement": "SPDXRef-githubactions-gradleactions-wrapper-validation-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-MisterPeModder-ShulkerBoxTooltip-1.21.x-4b9dfb",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

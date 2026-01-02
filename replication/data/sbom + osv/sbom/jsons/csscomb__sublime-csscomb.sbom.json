@@ -1,0 +1,58 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.csscomb/sublime-csscomb",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/65fe3e03-6e01-4589-958f-fba3620c92f7",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:27Z"
+  },
+  "packages": [
+    {
+      "name": "csscomb",
+      "SPDXID": "SPDXRef-npm-csscomb-4.2.0-b7cc7a",
+      "versionInfo": "4.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013 Mikhail Troshev, http://mishanga.pro",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/csscomb@4.2.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.csscomb/sublime-csscomb",
+      "SPDXID": "SPDXRef-github-csscomb-sublime-csscomb-master-3cd1dc",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/csscomb/sublime-csscomb",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/csscomb/sublime-csscomb@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-csscomb-sublime-csscomb-master-3cd1dc",
+      "relatedSpdxElement": "SPDXRef-npm-csscomb-4.2.0-b7cc7a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-csscomb-sublime-csscomb-master-3cd1dc",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

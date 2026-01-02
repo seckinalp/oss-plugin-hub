@@ -1,0 +1,303 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.zachowj/hass-node-red",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/fc3290ee-b286-4762-b977-fbb28a2767d4",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:12Z"
+  },
+  "packages": [
+    {
+      "name": "actions/stale",
+      "SPDXID": "SPDXRef-githubactions-actions-stale-10..-75c946",
+      "versionInfo": "10.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/stale@10.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "pre-commit",
+      "SPDXID": "SPDXRef-pypi-pre-commit-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pre-commit"
+        }
+      ]
+    },
+    {
+      "name": "homeassistant",
+      "SPDXID": "SPDXRef-pypi-homeassistant-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/homeassistant"
+        }
+      ]
+    },
+    {
+      "name": "hassil",
+      "SPDXID": "SPDXRef-pypi-hassil-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/hassil"
+        }
+      ]
+    },
+    {
+      "name": "colorlog",
+      "SPDXID": "SPDXRef-pypi-colorlog-6.10.1-75c946",
+      "versionInfo": "6.10.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012-2021 Sam Clements <sam@borntyping.co.uk>, Copyright (c) 2012-2025 Sam Clements <sam@borntyping.co.uk>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/colorlog@6.10.1"
+        }
+      ]
+    },
+    {
+      "name": "pytest-homeassistant-custom-component",
+      "SPDXID": "SPDXRef-pypi-pytest-homeassistant-custom-component-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest-homeassistant-custom-component"
+        }
+      ]
+    },
+    {
+      "name": "hacs/action",
+      "SPDXID": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/hacs/action@main"
+        }
+      ]
+    },
+    {
+      "name": "home-assistant/actions/hassfest",
+      "SPDXID": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/home-assistant/actions/hassfest@master"
+        }
+      ]
+    },
+    {
+      "name": "pre-commit/action",
+      "SPDXID": "SPDXRef-githubactions-pre-commit-action-3.0.1-75c946",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/pre-commit/action@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-python",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-python-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-python@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "GoogleCloudPlatform/release-please-action",
+      "SPDXID": "SPDXRef-githubactions-GoogleCloudPlatform-release-please-action-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/GoogleCloudPlatform/release-please-action@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/github-script",
+      "SPDXID": "SPDXRef-githubactions-actions-github-script-8..-75c946",
+      "versionInfo": "8.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/github-script@8.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "astral-sh/setup-uv",
+      "SPDXID": "SPDXRef-githubactions-astral-sh-setup-uv-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/astral-sh/setup-uv@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.zachowj/hass-node-red",
+      "SPDXID": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/zachowj/hass-node-red",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/zachowj/hass-node-red@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-stale-10..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-pypi-hassil-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-home-assistantactions-hassfest-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-pre-commit-action-3.0.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-python-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-github-script-8..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-pypi-pre-commit-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-pypi-homeassistant-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-pypi-colorlog-6.10.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-pypi-pytest-homeassistant-custom-component-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-GoogleCloudPlatform-release-please-action-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relatedSpdxElement": "SPDXRef-githubactions-astral-sh-setup-uv-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-zachowj-hass-node-red-main-168df9",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

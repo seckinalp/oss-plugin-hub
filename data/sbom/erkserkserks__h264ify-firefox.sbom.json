@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.erkserkserks/h264ify-firefox",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/2964b61a-8229-4873-8ba9-83a249942bec",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:58Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.erkserkserks/h264ify-firefox",
+      "SPDXID": "SPDXRef-github-erkserkserks-h264ify-firefox-master-7a7a80",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/erkserkserks/h264ify-firefox",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/erkserkserks/h264ify-firefox@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-erkserkserks-h264ify-firefox-master-7a7a80",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.codota/tabnine-intellij",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/8ebe3742-d222-4739-83c4-06693818b18d",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:38Z"
+  },
+  "packages": [
+    {
+      "name": "dsaltares/fetch-gh-release-asset",
+      "SPDXID": "SPDXRef-githubactions-dsaltares-fetch-gh-release-asset-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/dsaltares/fetch-gh-release-asset@master"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/cache",
+      "SPDXID": "SPDXRef-githubactions-actions-cache-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/cache@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-java",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-java@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@2"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@master"
+        }
+      ]
+    },
+    {
+      "name": "scacap/action-surefire-report",
+      "SPDXID": "SPDXRef-githubactions-scacap-action-surefire-report-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/scacap/action-surefire-report@1"
+        }
+      ]
+    },
+    {
+      "name": "snyk/actions/gradle-jdk11",
+      "SPDXID": "SPDXRef-githubactions-snykactions-gradle-jdk11-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/snyk/actions/gradle-jdk11@master"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/analyze",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@2"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/autobuild",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-autobuild-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/autobuild@2"
+        }
+      ]
+    },
+    {
+      "name": "github/codeql-action/init",
+      "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/github/codeql-action/init@2"
+        }
+      ]
+    },
+    {
+      "name": "voxmedia/github-action-slack-notify-build",
+      "SPDXID": "SPDXRef-githubactions-voxmedia-github-action-slack-notify-build-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/voxmedia/github-action-slack-notify-build@1"
+        }
+      ]
+    },
+    {
+      "name": "usehaystack/jira-pr-link-action",
+      "SPDXID": "SPDXRef-githubactions-usehaystack-jira-pr-link-action-4-75c946",
+      "versionInfo": "4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/usehaystack/jira-pr-link-action@4"
+        }
+      ]
+    },
+    {
+      "name": "google-github-actions/auth",
+      "SPDXID": "SPDXRef-githubactions-google-github-actions-auth-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/google-github-actions/auth@1"
+        }
+      ]
+    },
+    {
+      "name": "rtCamp/action-slack-notify",
+      "SPDXID": "SPDXRef-githubactions-rtCamp-action-slack-notify-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/rtCamp/action-slack-notify@2"
+        }
+      ]
+    },
+    {
+      "name": "google-github-actions/upload-cloud-storage",
+      "SPDXID": "SPDXRef-githubactions-google-github-actions-upload-cloud-storage-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/google-github-actions/upload-cloud-storage@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/create-release",
+      "SPDXID": "SPDXRef-githubactions-actions-create-release-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/create-release@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-release-asset",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-release-asset-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-release-asset@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.codota/tabnine-intellij",
+      "SPDXID": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/codota/tabnine-intellij",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/codota/tabnine-intellij@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-java-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-cache-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-voxmedia-github-action-slack-notify-build-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-create-release-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-scacap-action-surefire-report-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-autobuild-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-google-github-actions-auth-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-rtCamp-action-slack-notify-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-google-github-actions-upload-cloud-storage-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-dsaltares-fetch-gh-release-asset-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-snykactions-gradle-jdk11-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-usehaystack-jira-pr-link-action-4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-release-asset-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-codota-tabnine-intellij-master-6b3a5a",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

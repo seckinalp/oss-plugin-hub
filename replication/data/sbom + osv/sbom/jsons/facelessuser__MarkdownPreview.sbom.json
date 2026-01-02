@@ -1,0 +1,149 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.facelessuser/MarkdownPreview",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/0bef5c97-7a0b-43bc-919b-3693cab95ea6",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:41Z"
+  },
+  "packages": [
+    {
+      "name": "mkdocs-pymdownx-material-extras",
+      "SPDXID": "SPDXRef-pypi-mkdocs-pymdownx-material-extras-75c946",
+      "versionInfo": ">= 2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mkdocs-pymdownx-material-extras"
+        }
+      ]
+    },
+    {
+      "name": "mkdocs-minify-plugin",
+      "SPDXID": "SPDXRef-pypi-mkdocs-minify-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mkdocs-minify-plugin"
+        }
+      ]
+    },
+    {
+      "name": "mkdocs-git-revision-date-localized-plugin",
+      "SPDXID": "SPDXRef-pypi-mkdocs-git-revision-date-localized-plugin-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/mkdocs-git-revision-date-localized-plugin"
+        }
+      ]
+    },
+    {
+      "name": "pyspelling",
+      "SPDXID": "SPDXRef-pypi-pyspelling-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyspelling"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-python",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-python-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-python@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.facelessuser/MarkdownPreview",
+      "SPDXID": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/facelessuser/MarkdownPreview",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/facelessuser/MarkdownPreview@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "relatedSpdxElement": "SPDXRef-pypi-mkdocs-pymdownx-material-extras-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "relatedSpdxElement": "SPDXRef-pypi-mkdocs-minify-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "relatedSpdxElement": "SPDXRef-pypi-mkdocs-git-revision-date-localized-plugin-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "relatedSpdxElement": "SPDXRef-pypi-pyspelling-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-python-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-facelessuser-MarkdownPreview-master-f9fcd2",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

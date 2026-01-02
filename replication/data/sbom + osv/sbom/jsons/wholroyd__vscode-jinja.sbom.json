@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.wholroyd/vscode-jinja",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/8fcb6419-2ee1-44f7-a449-14e2011499aa",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:51:19Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.wholroyd/vscode-jinja",
+      "SPDXID": "SPDXRef-github-wholroyd-vscode-jinja-master-388703",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/wholroyd/vscode-jinja",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/wholroyd/vscode-jinja@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-wholroyd-vscode-jinja-master-388703",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

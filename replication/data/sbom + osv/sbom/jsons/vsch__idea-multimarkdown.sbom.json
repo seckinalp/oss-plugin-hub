@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.vsch/idea-multimarkdown",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/cb75d1d0-c160-40ca-82db-e3c8384b98e1",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:37Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.vsch/idea-multimarkdown",
+      "SPDXID": "SPDXRef-github-vsch-idea-multimarkdown-master-f636f6",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/vsch/idea-multimarkdown",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/vsch/idea-multimarkdown@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-vsch-idea-multimarkdown-master-f636f6",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

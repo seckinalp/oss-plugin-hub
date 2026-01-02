@@ -1,0 +1,57 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.RTO-Websites/dynamic-conditions",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/02ac8ccc-c358-452d-a89d-6751a8373eae",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:21Z"
+  },
+  "packages": [
+    {
+      "name": "ext-json",
+      "SPDXID": "SPDXRef-composer-ext-json-75c946",
+      "versionInfo": ">= 0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/ext-json"
+        }
+      ]
+    },
+    {
+      "name": "com.github.RTO-Websites/dynamic-conditions",
+      "SPDXID": "SPDXRef-github-RTO-Websites-dynamic-conditions-master-1b030f",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/RTO-Websites/dynamic-conditions",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/RTO-Websites/dynamic-conditions@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-RTO-Websites-dynamic-conditions-master-1b030f",
+      "relatedSpdxElement": "SPDXRef-composer-ext-json-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-RTO-Websites-dynamic-conditions-master-1b030f",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

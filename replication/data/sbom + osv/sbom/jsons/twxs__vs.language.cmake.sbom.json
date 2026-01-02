@@ -1,0 +1,152 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.twxs/vs.language.cmake",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/fe0f07b9-bb62-4a89-bce4-353b0951dc04",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T12:00:36Z"
+  },
+  "packages": [
+    {
+      "name": "vscode",
+      "SPDXID": "SPDXRef-npm-vscode-1.0.3-0d290d",
+      "versionInfo": "^1.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/vscode@%5E1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-6.0.47-bd384a",
+      "versionInfo": "^6.0.47",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E6.0.47"
+        }
+      ]
+    },
+    {
+      "name": "mocha",
+      "SPDXID": "SPDXRef-npm-mocha-3.1.2-825f5c",
+      "versionInfo": "^3.1.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mocha@%5E3.1.2"
+        }
+      ]
+    },
+    {
+      "name": "opener",
+      "SPDXID": "SPDXRef-npm-opener-1.4.2-32b45b",
+      "versionInfo": "^1.4.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/opener@%5E1.4.2"
+        }
+      ]
+    },
+    {
+      "name": "@types/mocha",
+      "SPDXID": "SPDXRef-npm-types-mocha-2.2.33-29d53c",
+      "versionInfo": "^2.2.33",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/mocha@%5E2.2.33"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-2.0.9-9d80b2",
+      "versionInfo": "^2.0.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E2.0.9"
+        }
+      ]
+    },
+    {
+      "name": "com.github.twxs/vs.language.cmake",
+      "SPDXID": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/twxs/vs.language.cmake",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/twxs/vs.language.cmake@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "relatedSpdxElement": "SPDXRef-npm-vscode-1.0.3-0d290d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-6.0.47-bd384a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "relatedSpdxElement": "SPDXRef-npm-mocha-3.1.2-825f5c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "relatedSpdxElement": "SPDXRef-npm-opener-1.4.2-32b45b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "relatedSpdxElement": "SPDXRef-npm-types-mocha-2.2.33-29d53c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-2.0.9-9d80b2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-twxs-vs.language.cmake-master-bc084c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

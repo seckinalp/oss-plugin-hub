@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.xifangczy/cat-catch",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/1c25aeb6-ea80-46e2-a463-72d3d71df8c7",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:42Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.xifangczy/cat-catch",
+      "SPDXID": "SPDXRef-github-xifangczy-cat-catch-master-79eb9d",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/xifangczy/cat-catch",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/xifangczy/cat-catch@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-xifangczy-cat-catch-master-79eb9d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

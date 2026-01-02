@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.JetBrains/idea-php-dotenv-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/1526543b-36ba-4a04-ac6f-0151a473c0fb",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:13Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.JetBrains/idea-php-dotenv-plugin",
+      "SPDXID": "SPDXRef-github-JetBrains-idea-php-dotenv-plugin-master-dd1144",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/JetBrains/idea-php-dotenv-plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/JetBrains/idea-php-dotenv-plugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-JetBrains-idea-php-dotenv-plugin-master-dd1144",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

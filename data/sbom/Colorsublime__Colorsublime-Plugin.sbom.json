@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Colorsublime/Colorsublime-Plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/2b12bb4a-54a7-40d9-8958-e6835bf5e239",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:26Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.Colorsublime/Colorsublime-Plugin",
+      "SPDXID": "SPDXRef-github-Colorsublime-Colorsublime-Plugin-master-07899c",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/Colorsublime/Colorsublime-Plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Colorsublime/Colorsublime-Plugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Colorsublime-Colorsublime-Plugin-master-07899c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

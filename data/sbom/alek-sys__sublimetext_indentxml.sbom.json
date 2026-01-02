@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.alek-sys/sublimetext_indentxml",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/c8fd8200-44f2-499e-92a0-7366785e3a7e",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:34Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.alek-sys/sublimetext_indentxml",
+      "SPDXID": "SPDXRef-github-alek-sys-sublimetextindentxml-master-65bcc5",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/alek-sys/sublimetext_indentxml",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/alek-sys/sublimetext_indentxml@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-alek-sys-sublimetextindentxml-master-65bcc5",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.volca/markdown-preview",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a2d82d75-0f6a-4181-99f7-1443ad6e28d5",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:26Z"
+  },
+  "packages": [
+    {
+      "name": "katex",
+      "SPDXID": "SPDXRef-npm-katex-0.16.10-2ca878",
+      "versionInfo": "^0.16.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/katex@%5E0.16.10"
+        }
+      ]
+    },
+    {
+      "name": "marked-highlight",
+      "SPDXID": "SPDXRef-npm-marked-highlight-2.2.1-76e1b5",
+      "versionInfo": "^2.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/marked-highlight@%5E2.2.1"
+        }
+      ]
+    },
+    {
+      "name": "marked",
+      "SPDXID": "SPDXRef-npm-marked-15.0.8-3d8fdd",
+      "versionInfo": "^15.0.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/marked@%5E15.0.8"
+        }
+      ]
+    },
+    {
+      "name": "mermaid",
+      "SPDXID": "SPDXRef-npm-mermaid-11.6.0-c6bacc",
+      "versionInfo": "11.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Cure53 and other contributors, Copyright (c) 2009-2010, Design Science, Inc. <www.mathjax.org>, Copyright (c) 2013-2014 Ralf S. Engelschall (http://engelschall.com), Copyright (c) 2014 - 2022 Knut Sveidqvist, Copyright (c) 2014-2017 Khan Academy <www.khanacademy.org>, Copyright (c) 2016-2025, The Cytoscape Consortium, Copyright (c) Microsoft Corporation, Copyright 2021 TypeFox GmbH, Copyright 2021-2022 TypeFox GmbH, Copyright 2022 TypeFox GmbH, Copyright 2023 TypeFox GmbH, Copyright 2024 TypeFox GmbH, Copyright Gaetan Renaudeau, Copyright i-Vis Research Group, Bilkent University, 2007, Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors, Copyright Joyent, Inc. and other Node contributors, copyright Koen Bok, Copyright OpenJS Foundation and other contributors <https://openjsf.org/>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mermaid@11.6.0"
+        }
+      ]
+    },
+    {
+      "name": "gulp-rename",
+      "SPDXID": "SPDXRef-npm-gulp-rename-2.0.0-52e4e1",
+      "versionInfo": "^2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-rename@%5E2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "jquery",
+      "SPDXID": "SPDXRef-npm-jquery-3.6.4-cb8322",
+      "versionInfo": "^3.6.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/jquery@%5E3.6.4"
+        }
+      ]
+    },
+    {
+      "name": "gulp",
+      "SPDXID": "SPDXRef-npm-gulp-4.0.2-79f479",
+      "versionInfo": "^4.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp@%5E4.0.2"
+        }
+      ]
+    },
+    {
+      "name": "com.github.volca/markdown-preview",
+      "SPDXID": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/volca/markdown-preview",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/volca/markdown-preview@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relatedSpdxElement": "SPDXRef-npm-katex-0.16.10-2ca878",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relatedSpdxElement": "SPDXRef-npm-marked-highlight-2.2.1-76e1b5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relatedSpdxElement": "SPDXRef-npm-marked-15.0.8-3d8fdd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relatedSpdxElement": "SPDXRef-npm-mermaid-11.6.0-c6bacc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-rename-2.0.0-52e4e1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relatedSpdxElement": "SPDXRef-npm-jquery-3.6.4-cb8322",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-4.0.2-79f479",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-volca-markdown-preview-master-59baf3",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

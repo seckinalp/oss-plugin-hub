@@ -1,0 +1,95 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.SublimeLinter/SublimeLinter-eslint",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/62c903fd-6d29-4f36-b60c-325ab63ae293",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T12:00:00Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3"
+        }
+      ]
+    },
+    {
+      "name": "TrueBrain/actions-flake8",
+      "SPDXID": "SPDXRef-githubactions-TrueBrain-actions-flake8-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/TrueBrain/actions-flake8@2"
+        }
+      ]
+    },
+    {
+      "name": "kaste/upgrade-messages-test-action",
+      "SPDXID": "SPDXRef-githubactions-kaste-upgrade-messages-test-action-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/kaste/upgrade-messages-test-action@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.SublimeLinter/SublimeLinter-eslint",
+      "SPDXID": "SPDXRef-github-SublimeLinter-SublimeLinter-eslint-master-5e2207",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/SublimeLinter/SublimeLinter-eslint",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/SublimeLinter/SublimeLinter-eslint@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-SublimeLinter-SublimeLinter-eslint-master-5e2207",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-SublimeLinter-SublimeLinter-eslint-master-5e2207",
+      "relatedSpdxElement": "SPDXRef-githubactions-TrueBrain-actions-flake8-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-SublimeLinter-SublimeLinter-eslint-master-5e2207",
+      "relatedSpdxElement": "SPDXRef-githubactions-kaste-upgrade-messages-test-action-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-SublimeLinter-SublimeLinter-eslint-master-5e2207",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

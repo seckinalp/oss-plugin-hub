@@ -1,0 +1,836 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Makin-Things/weather-radar-card",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a567ae65-5d53-4cbf-a7de-db177462cf10",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:47:28Z"
+  },
+  "packages": [
+    {
+      "name": "@material/mwc-slider",
+      "SPDXID": "SPDXRef-npm-material-mwc-slider-0.25.3-84b687",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-slider@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "eslint-config-airbnb-base",
+      "SPDXID": "SPDXRef-npm-eslint-config-airbnb-base-14.2.1-f7a789",
+      "versionInfo": "^14.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-config-airbnb-base@%5E14.2.1"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-5.2.0-df6151",
+      "versionInfo": "^5.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-node-resolve@%5E5.2.0"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-10.1.0-72c76a",
+      "versionInfo": "^10.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-commonjs@%5E10.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@lit-labs/scoped-registry-mixin",
+      "SPDXID": "SPDXRef-npm-lit-labs-scoped-registry-mixin-1.0.0-660ae7",
+      "versionInfo": "^1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40lit-labs/scoped-registry-mixin@%5E1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "safe-buffer",
+      "SPDXID": "SPDXRef-npm-safe-buffer-5.2.1-79551b",
+      "versionInfo": "^5.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/safe-buffer@%5E5.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-list",
+      "SPDXID": "SPDXRef-npm-material-mwc-list-0.25.3-023a05",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-list@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "randombytes",
+      "SPDXID": "SPDXRef-npm-randombytes-2.1.0-441eeb",
+      "versionInfo": "^2.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/randombytes@%5E2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-notched-outline",
+      "SPDXID": "SPDXRef-npm-material-mwc-notched-outline-0.25.3-1e8bb2",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-notched-outline@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-typescript2",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-typescript2-0.30.0-20fd1f",
+      "versionInfo": "^0.30.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-typescript2@%5E0.30.0"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-terser",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-terser-7.0.2-8601c2",
+      "versionInfo": "^7.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-terser@%5E7.0.2"
+        }
+      ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "SPDXID": "SPDXRef-npm-eslint-config-prettier-8.3.0-9e9d91",
+      "versionInfo": "^8.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-config-prettier@%5E8.3.0"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-menu",
+      "SPDXID": "SPDXRef-npm-material-mwc-menu-0.25.3-109117",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-menu@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-textfield",
+      "SPDXID": "SPDXRef-npm-material-mwc-textfield-0.25.3-c05e8a",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-textfield@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-parser-5.38.1-a4c987",
+      "versionInfo": "^5.38.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/parser@%5E5.38.1"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-select",
+      "SPDXID": "SPDXRef-npm-material-mwc-select-0.25.3-b38f26",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-select@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-2.79.1-0d2ae6",
+      "versionInfo": "^2.79.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@%5E2.79.1"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-serve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-serve-1.1.0-ca8046",
+      "versionInfo": "^1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-serve@%5E1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-4.8.3-5906e7",
+      "versionInfo": "^4.8.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E4.8.3"
+        }
+      ]
+    },
+    {
+      "name": "eslint-plugin-import",
+      "SPDXID": "SPDXRef-npm-eslint-plugin-import-2.24.0-200e1d",
+      "versionInfo": "^2.24.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-plugin-import@%5E2.24.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint",
+      "SPDXID": "SPDXRef-npm-eslint-7.32.0-eb9673",
+      "versionInfo": "^7.32.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint@%5E7.32.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "SPDXID": "SPDXRef-npm-eslint-plugin-prettier-4.2.1-abeffb",
+      "versionInfo": "^4.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-plugin-prettier@%5E4.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.38.1-6c15f1",
+      "versionInfo": "^5.38.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/eslint-plugin@%5E5.38.1"
+        }
+      ]
+    },
+    {
+      "name": "@babel/plugin-proposal-class-properties",
+      "SPDXID": "SPDXRef-npm-babel-plugin-proposal-class-properties-7.18.6-16d576",
+      "versionInfo": "^7.18.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/plugin-proposal-class-properties@%5E7.18.6"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-switch",
+      "SPDXID": "SPDXRef-npm-material-mwc-switch-0.25.3-cf5896",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-switch@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "serialize-javascript",
+      "SPDXID": "SPDXRef-npm-serialize-javascript-6.0.0-464c5a",
+      "versionInfo": "^6.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/serialize-javascript@%5E6.0.0"
+        }
+      ]
+    },
+    {
+      "name": "prettier",
+      "SPDXID": "SPDXRef-npm-prettier-2.7.1-1d1a6c",
+      "versionInfo": "^2.7.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prettier@%5E2.7.1"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-babel",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-babel-4.4.0-66c325",
+      "versionInfo": "^4.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-babel@%5E4.4.0"
+        }
+      ]
+    },
+    {
+      "name": "home-assistant-js-websocket",
+      "SPDXID": "SPDXRef-npm-home-assistant-js-websocket-5.11.1-c18ed2",
+      "versionInfo": "^5.11.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/home-assistant-js-websocket@%5E5.11.1"
+        }
+      ]
+    },
+    {
+      "name": "lit",
+      "SPDXID": "SPDXRef-npm-lit-2.2.2-160cc9",
+      "versionInfo": "^2.2.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lit@%5E2.2.2"
+        }
+      ]
+    },
+    {
+      "name": "tsutils",
+      "SPDXID": "SPDXRef-npm-tsutils-3.21.0-4564e1",
+      "versionInfo": "^3.21.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tsutils@%5E3.21.0"
+        }
+      ]
+    },
+    {
+      "name": "@babel/core",
+      "SPDXID": "SPDXRef-npm-babel-core-7.19.1-b9f77b",
+      "versionInfo": "^7.19.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/core@%5E7.19.1"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-ripple",
+      "SPDXID": "SPDXRef-npm-material-mwc-ripple-0.25.3-8e6541",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-ripple@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "@babel/plugin-proposal-decorators",
+      "SPDXID": "SPDXRef-npm-babel-plugin-proposal-decorators-7.19.1-84fd19",
+      "versionInfo": "^7.19.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/plugin-proposal-decorators@%5E7.19.1"
+        }
+      ]
+    },
+    {
+      "name": "custom-card-helpers",
+      "SPDXID": "SPDXRef-npm-custom-card-helpers-1.9.0-14ab90",
+      "versionInfo": "^1.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/custom-card-helpers@%5E1.9.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-json",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-json-4.1.0-7618cf",
+      "versionInfo": "^4.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-json@%5E4.1.0"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-npm-tslib-2.3.1-10a156",
+      "versionInfo": "^2.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@%5E2.3.1"
+        }
+      ]
+    },
+    {
+      "name": "@material/mwc-formfield",
+      "SPDXID": "SPDXRef-npm-material-mwc-formfield-0.25.3-b477e2",
+      "versionInfo": "^0.25.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40material/mwc-formfield@%5E0.25.3"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "hacs/action",
+      "SPDXID": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/hacs/action@main"
+        }
+      ]
+    },
+    {
+      "name": "svenstaro/upload-release-action",
+      "SPDXID": "SPDXRef-githubactions-svenstaro-upload-release-action-1-release-75c946",
+      "versionInfo": "1-release",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/svenstaro/upload-release-action@1-release"
+        }
+      ]
+    },
+    {
+      "name": "com.github.Makin-Things/weather-radar-card",
+      "SPDXID": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/Makin-Things/weather-radar-card",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Makin-Things/weather-radar-card@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-slider-0.25.3-84b687",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-config-airbnb-base-14.2.1-f7a789",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-5.2.0-df6151",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-10.1.0-72c76a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-lit-labs-scoped-registry-mixin-1.0.0-660ae7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-safe-buffer-5.2.1-79551b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-list-0.25.3-023a05",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-randombytes-2.1.0-441eeb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-notched-outline-0.25.3-1e8bb2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-typescript2-0.30.0-20fd1f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-terser-7.0.2-8601c2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-config-prettier-8.3.0-9e9d91",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-menu-0.25.3-109117",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-textfield-0.25.3-c05e8a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-parser-5.38.1-a4c987",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-select-0.25.3-b38f26",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-2.79.1-0d2ae6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-serve-1.1.0-ca8046",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-4.8.3-5906e7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-import-2.24.0-200e1d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-7.32.0-eb9673",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-prettier-4.2.1-abeffb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.38.1-6c15f1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-babel-plugin-proposal-class-properties-7.18.6-16d576",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-switch-0.25.3-cf5896",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-serialize-javascript-6.0.0-464c5a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-prettier-2.7.1-1d1a6c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-babel-4.4.0-66c325",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-home-assistant-js-websocket-5.11.1-c18ed2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-lit-2.2.2-160cc9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-tsutils-3.21.0-4564e1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-babel-core-7.19.1-b9f77b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-ripple-0.25.3-8e6541",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-babel-plugin-proposal-decorators-7.19.1-84fd19",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-custom-card-helpers-1.9.0-14ab90",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-json-4.1.0-7618cf",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-tslib-2.3.1-10a156",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-npm-material-mwc-formfield-0.25.3-b477e2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relatedSpdxElement": "SPDXRef-githubactions-svenstaro-upload-release-action-1-release-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Makin-Things-weather-radar-card-master-981683",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

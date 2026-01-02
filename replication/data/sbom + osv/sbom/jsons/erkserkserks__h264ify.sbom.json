@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.erkserkserks/h264ify",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/168c0685-8815-4e78-91c8-6bb4f1131a64",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:44:28Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.erkserkserks/h264ify",
+      "SPDXID": "SPDXRef-github-erkserkserks-h264ify-master-a3652c",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/erkserkserks/h264ify",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/erkserkserks/h264ify@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-erkserkserks-h264ify-master-a3652c",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

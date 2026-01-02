@@ -1,0 +1,817 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.slipx06/sunsynk-power-flow-card",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/471d8aa5-bbe6-47ff-b0a2-05cdf3389c26",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:47:49Z"
+  },
+  "packages": [
+    {
+      "name": "@types/lodash.merge",
+      "SPDXID": "SPDXRef-npm-types-lodash.merge-4.6.9-3fb2de",
+      "versionInfo": "^4.6.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/lodash.merge@%5E4.6.9"
+        }
+      ]
+    },
+    {
+      "name": "@babel/cli",
+      "SPDXID": "SPDXRef-npm-babel-cli-7.24.6-d399e5",
+      "versionInfo": "^7.24.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/cli@%5E7.24.6"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-4.17.2-141b9f",
+      "versionInfo": "^4.17.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@%5E4.17.2"
+        }
+      ]
+    },
+    {
+      "name": "lint-staged",
+      "SPDXID": "SPDXRef-npm-lint-staged-16.1.6-c2e660",
+      "versionInfo": "^16.1.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lint-staged@%5E16.1.6"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-json",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-json-6.1.0-760b12",
+      "versionInfo": "^6.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-json@%5E6.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-terser",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-terser-0.4.4-41ebd4",
+      "versionInfo": "^0.4.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-terser@%5E0.4.4"
+        }
+      ]
+    },
+    {
+      "name": "typescript-eslint",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-8.1.0-ab3af7",
+      "versionInfo": "^8.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript-eslint@%5E8.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-28.0.0-0befee",
+      "versionInfo": "^28.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@%5E28.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@babel/plugin-transform-template-literals",
+      "SPDXID": "SPDXRef-npm-babel-plugin-transform-template-literals-7.24.1-ce7a6d",
+      "versionInfo": "^7.24.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/plugin-transform-template-literals@%5E7.24.1"
+        }
+      ]
+    },
+    {
+      "name": "babel-preset-minify",
+      "SPDXID": "SPDXRef-npm-babel-preset-minify-0.5.2-f6e729",
+      "versionInfo": "^0.5.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/babel-preset-minify@%5E0.5.2"
+        }
+      ]
+    },
+    {
+      "name": "custom-card-helpers",
+      "SPDXID": "SPDXRef-npm-custom-card-helpers-1.9.0-a5b2ac",
+      "versionInfo": "^1.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/custom-card-helpers@%5E1.9.0"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-typescript2",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-typescript2-0.36.0-02aed7",
+      "versionInfo": "^0.36.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-typescript2@%5E0.36.0"
+        }
+      ]
+    },
+    {
+      "name": "globals",
+      "SPDXID": "SPDXRef-npm-globals-16.0.0-502a6d",
+      "versionInfo": "^16.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/globals@%5E16.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@babel/core",
+      "SPDXID": "SPDXRef-npm-babel-core-7.24.6-acbd83",
+      "versionInfo": "^7.24.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/core@%5E7.24.6"
+        }
+      ]
+    },
+    {
+      "name": "@eslint/js",
+      "SPDXID": "SPDXRef-npm-eslint-js-9.3.0-df4598",
+      "versionInfo": "^9.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40eslint/js@%5E9.3.0"
+        }
+      ]
+    },
+    {
+      "name": "@babel/plugin-proposal-class-properties",
+      "SPDXID": "SPDXRef-npm-babel-plugin-proposal-class-properties-7.18.6-d2f3f4",
+      "versionInfo": "^7.18.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/plugin-proposal-class-properties@%5E7.18.6"
+        }
+      ]
+    },
+    {
+      "name": "npm",
+      "SPDXID": "SPDXRef-npm-npm-11.0.0-8ef9f6",
+      "versionInfo": "^11.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/npm@%5E11.0.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "SPDXID": "SPDXRef-npm-eslint-config-prettier-10.0.1-fe37c8",
+      "versionInfo": "^10.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-config-prettier@%5E10.0.1"
+        }
+      ]
+    },
+    {
+      "name": "@lit-labs/scoped-registry-mixin",
+      "SPDXID": "SPDXRef-npm-lit-labs-scoped-registry-mixin-1.0.3-779505",
+      "versionInfo": "^1.0.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40lit-labs/scoped-registry-mixin@%5E1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "@babel/preset-env",
+      "SPDXID": "SPDXRef-npm-babel-preset-env-7.24.6-eb182b",
+      "versionInfo": "^7.24.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/preset-env@%5E7.24.6"
+        }
+      ]
+    },
+    {
+      "name": "lit",
+      "SPDXID": "SPDXRef-npm-lit-3.1.3-7eaf31",
+      "versionInfo": "^3.1.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lit@%5E3.1.3"
+        }
+      ]
+    },
+    {
+      "name": "prettier",
+      "SPDXID": "SPDXRef-npm-prettier-3.6.2-499b8a",
+      "versionInfo": "^3.6.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prettier@%5E3.6.2"
+        }
+      ]
+    },
+    {
+      "name": "eslint",
+      "SPDXID": "SPDXRef-npm-eslint-9.31.0-c766c6",
+      "versionInfo": "^9.31.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint@%5E9.31.0"
+        }
+      ]
+    },
+    {
+      "name": "@babel/plugin-proposal-decorators",
+      "SPDXID": "SPDXRef-npm-babel-plugin-proposal-decorators-7.24.1-b961c5",
+      "versionInfo": "^7.24.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40babel/plugin-proposal-decorators@%5E7.24.1"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-eslint",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-eslint-9.0.5-b46cfa",
+      "versionInfo": "^9.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-eslint@%5E9.0.5"
+        }
+      ]
+    },
+    {
+      "name": "rollup-plugin-serve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-serve-3.0.0-10d8de",
+      "versionInfo": "^3.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup-plugin-serve@%5E3.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-16.0.0-ba68d5",
+      "versionInfo": "^16.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@%5E16.0.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "SPDXID": "SPDXRef-npm-eslint-plugin-prettier-5.5.4-de310f",
+      "versionInfo": "^5.5.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-plugin-prettier@%5E5.5.4"
+        }
+      ]
+    },
+    {
+      "name": "husky",
+      "SPDXID": "SPDXRef-npm-husky-9.0.0-48f644",
+      "versionInfo": "^9.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/husky@%5E9.0.0"
+        }
+      ]
+    },
+    {
+      "name": "lodash.merge",
+      "SPDXID": "SPDXRef-npm-lodash.merge-4.6.2-1aa6dc",
+      "versionInfo": "^4.6.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lodash.merge@%5E4.6.2"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-5.4.5-cb5d67",
+      "versionInfo": "^5.4.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E5.4.5"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-babel",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-babel-6.0.4-a99e1f",
+      "versionInfo": "^6.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-babel@%5E6.0.4"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-eslint-plugin-8.1.0-d5d4bf",
+      "versionInfo": "^8.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/eslint-plugin@%5E8.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-parser-8.2.0-384a7f",
+      "versionInfo": "^8.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/parser@%5E8.2.0"
+        }
+      ]
+    },
+    {
+      "name": "hacs/action",
+      "SPDXID": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "versionInfo": "main",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/hacs/action@main"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "dudo/tag_check",
+      "SPDXID": "SPDXRef-githubactions-dudo-tagcheck-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/dudo/tag_check@master"
+        }
+      ]
+    },
+    {
+      "name": "EndBug/latest-tag",
+      "SPDXID": "SPDXRef-githubactions-EndBug-latest-tag-latest-75c946",
+      "versionInfo": "latest",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/EndBug/latest-tag@latest"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-node",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-node-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-node@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "totaldebug/sphinx-publish-action",
+      "SPDXID": "SPDXRef-githubactions-totaldebug-sphinx-publish-action-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/totaldebug/sphinx-publish-action@master"
+        }
+      ]
+    },
+    {
+      "name": "com.github.slipx06/sunsynk-power-flow-card",
+      "SPDXID": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/slipx06/sunsynk-power-flow-card",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/slipx06/sunsynk-power-flow-card@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-types-lodash.merge-4.6.9-3fb2de",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-babel-cli-7.24.6-d399e5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-4.17.2-141b9f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-lint-staged-16.1.6-c2e660",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-json-6.1.0-760b12",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-terser-0.4.4-41ebd4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-8.1.0-ab3af7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-28.0.0-0befee",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-babel-plugin-transform-template-literals-7.24.1-ce7a6d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-babel-preset-minify-0.5.2-f6e729",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-custom-card-helpers-1.9.0-a5b2ac",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-typescript2-0.36.0-02aed7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-globals-16.0.0-502a6d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-babel-core-7.24.6-acbd83",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-js-9.3.0-df4598",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-babel-plugin-proposal-class-properties-7.18.6-d2f3f4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-npm-11.0.0-8ef9f6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-config-prettier-10.0.1-fe37c8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-lit-labs-scoped-registry-mixin-1.0.3-779505",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-babel-preset-env-7.24.6-eb182b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-lit-3.1.3-7eaf31",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-prettier-3.6.2-499b8a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-9.31.0-c766c6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-babel-plugin-proposal-decorators-7.24.1-b961c5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-eslint-9.0.5-b46cfa",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-serve-3.0.0-10d8de",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-16.0.0-ba68d5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-prettier-5.5.4-de310f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-husky-9.0.0-48f644",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-lodash.merge-4.6.2-1aa6dc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-5.4.5-cb5d67",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-babel-6.0.4-a99e1f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-eslint-plugin-8.1.0-d5d4bf",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-parser-8.2.0-384a7f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-githubactions-EndBug-latest-tag-latest-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-githubactions-totaldebug-sphinx-publish-action-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-githubactions-hacs-action-main-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relatedSpdxElement": "SPDXRef-githubactions-dudo-tagcheck-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-slipx06-sunsynk-power-flow-card-main-2c9a45",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

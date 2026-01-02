@@ -1,0 +1,58 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.JetBrains/Rplugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/5891937c-59ee-4551-ae8a-b72a63aab14b",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:41Z"
+  },
+  "packages": [
+    {
+      "name": "github-pages",
+      "SPDXID": "SPDXRef-gem-github-pages-75c946",
+      "versionInfo": ">= 0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:gem/github-pages"
+        }
+      ]
+    },
+    {
+      "name": "com.github.JetBrains/Rplugin",
+      "SPDXID": "SPDXRef-github-JetBrains-Rplugin-master-eeb09b",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/JetBrains/Rplugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/JetBrains/Rplugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-JetBrains-Rplugin-master-eeb09b",
+      "relatedSpdxElement": "SPDXRef-gem-github-pages-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-JetBrains-Rplugin-master-eeb09b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

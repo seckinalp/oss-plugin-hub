@@ -1,0 +1,56 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Snownee/Jade",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/5393739a-7b12-45bd-a4e2-9e4328379bb5",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:38Z"
+  },
+  "packages": [
+    {
+      "name": "dessant/label-actions",
+      "SPDXID": "SPDXRef-githubactions-dessant-label-actions-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/dessant/label-actions@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.Snownee/Jade",
+      "SPDXID": "SPDXRef-github-Snownee-Jade-1.21.11-fabric-2b8bd0",
+      "versionInfo": "1.21.11-fabric",
+      "downloadLocation": "git+https://github.com/Snownee/Jade",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Snownee/Jade@1.21.11-fabric"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-Snownee-Jade-1.21.11-fabric-2b8bd0",
+      "relatedSpdxElement": "SPDXRef-githubactions-dessant-label-actions-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Snownee-Jade-1.21.11-fabric-2b8bd0",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

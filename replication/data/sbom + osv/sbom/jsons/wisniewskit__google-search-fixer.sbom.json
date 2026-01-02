@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.wisniewskit/google-search-fixer",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/cf19b6cc-857f-4fc6-98d3-8170703f2a3e",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:51Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.wisniewskit/google-search-fixer",
+      "SPDXID": "SPDXRef-github-wisniewskit-google-search-fixer-master-a5f7a9",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/wisniewskit/google-search-fixer",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/wisniewskit/google-search-fixer@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-wisniewskit-google-search-fixer-master-a5f7a9",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

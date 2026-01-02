@@ -1,0 +1,2803 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/alibaba__p3c.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "com.google.guava:guava",
+            "version": "20.0",
+            "ecosystem": "Maven"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5mg8-w23w-74h3"
+              ],
+              "aliases": [
+                "CGA-7rjh-334q-pq8g",
+                "CVE-2020-8908",
+                "GHSA-5mg8-w23w-74h3"
+              ],
+              "max_severity": "3.3"
+            },
+            {
+              "ids": [
+                "GHSA-7g45-4rm6-3mm3"
+              ],
+              "aliases": [
+                "CGA-g8pm-vcpp-9jxq",
+                "CVE-2023-2976",
+                "GHSA-7g45-4rm6-3mm3"
+              ],
+              "max_severity": "5.5"
+            },
+            {
+              "ids": [
+                "GHSA-mvr2-9pj6-7w5j"
+              ],
+              "aliases": [
+                "CGA-8223-gxg7-8cjf",
+                "CVE-2018-10237",
+                "GHSA-mvr2-9pj6-7w5j"
+              ],
+              "max_severity": "5.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/03/GHSA-5mg8-w23w-74h3/GHSA-5mg8-w23w-74h3.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.guava:guava",
+                    "purl": "pkg:maven/com.google.guava/guava"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "32.0.0-android"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "10.0",
+                    "10.0-rc1",
+                    "10.0-rc2",
+                    "10.0-rc3",
+                    "10.0.1",
+                    "11.0",
+                    "11.0-rc1",
+                    "11.0.1",
+                    "11.0.2",
+                    "12.0",
+                    "12.0-rc1",
+                    "12.0-rc2",
+                    "12.0.1",
+                    "13.0",
+                    "13.0-rc1",
+                    "13.0-rc2",
+                    "13.0.1",
+                    "14.0",
+                    "14.0-rc1",
+                    "14.0-rc2",
+                    "14.0-rc3",
+                    "14.0.1",
+                    "15.0",
+                    "15.0-rc1",
+                    "16.0",
+                    "16.0-rc1",
+                    "16.0.1",
+                    "17.0",
+                    "17.0-rc1",
+                    "17.0-rc2",
+                    "18.0",
+                    "18.0-rc1",
+                    "18.0-rc2",
+                    "19.0",
+                    "19.0-rc1",
+                    "19.0-rc2",
+                    "19.0-rc3",
+                    "20.0",
+                    "20.0-rc1",
+                    "21.0",
+                    "21.0-rc1",
+                    "21.0-rc2",
+                    "22.0",
+                    "22.0-android",
+                    "22.0-rc1",
+                    "22.0-rc1-android",
+                    "23.0",
+                    "23.0-android",
+                    "23.0-rc1",
+                    "23.0-rc1-android",
+                    "23.1-android",
+                    "23.1-jre",
+                    "23.2-android",
+                    "23.2-jre",
+                    "23.3-android",
+                    "23.3-jre",
+                    "23.4-android",
+                    "23.4-jre",
+                    "23.5-android",
+                    "23.5-jre",
+                    "23.6-android",
+                    "23.6-jre",
+                    "23.6.1-android",
+                    "23.6.1-jre",
+                    "24.0-android",
+                    "24.0-jre",
+                    "24.1-android",
+                    "24.1-jre",
+                    "24.1.1-android",
+                    "24.1.1-jre",
+                    "25.0-android",
+                    "25.0-jre",
+                    "25.1-android",
+                    "25.1-jre",
+                    "26.0-android",
+                    "26.0-jre",
+                    "27.0-android",
+                    "27.0-jre",
+                    "27.0.1-android",
+                    "27.0.1-jre",
+                    "27.1-android",
+                    "27.1-jre",
+                    "28.0-android",
+                    "28.0-jre",
+                    "28.1-android",
+                    "28.1-jre",
+                    "28.2-android",
+                    "28.2-jre",
+                    "29.0-android",
+                    "29.0-jre",
+                    "30.0-android",
+                    "30.0-jre",
+                    "30.1-android",
+                    "30.1-jre",
+                    "30.1.1-android",
+                    "30.1.1-jre",
+                    "31.0-android",
+                    "31.0-jre",
+                    "31.0.1-android",
+                    "31.0.1-jre",
+                    "31.1-android",
+                    "31.1-jre",
+                    "r03",
+                    "r05",
+                    "r06",
+                    "r07",
+                    "r08",
+                    "r09"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CGA-7rjh-334q-pq8g",
+                "CVE-2020-8908"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-173",
+                  "CWE-200",
+                  "CWE-378",
+                  "CWE-732"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-25T17:01:09Z",
+                "nvd_published_at": "2020-12-10T23:15:00Z",
+                "severity": "LOW"
+              },
+              "details": "A temp directory creation vulnerability exists in Guava prior to version 32.0.0 allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava `com.google.common.io.Files.createTempDir()`. The permissions granted to the directory created default to the standard unix-like /tmp ones, leaving the files open. Maintainers recommend explicitly changing the permissions after the creation of the directory, or removing uses of the vulnerable method.\n",
+              "id": "GHSA-5mg8-w23w-74h3",
+              "modified": "2025-02-20T05:28:20.657499Z",
+              "published": "2021-03-25T17:04:19Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8908"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/issues/4011"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/issues/4011#issuecomment-1578991974"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/commit/fec0dbc4634006a6162cfd4d0d09c962073ddf40"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604@%3Ctorque-dev.db.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd5d58088812cf8e677d99b07f73c654014c524c94e7fedbdee047604%40%3Ctorque-dev.db.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5@%3Cissues.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd2704306ec729ccac726e50339b8a8f079515cc29ccb77713b16e7c5%40%3Cissues.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95@%3Cgithub.arrow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95%40%3Cgithub.arrow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f@%3Cdev.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rcafc3a637d82bdc9a24036b2ddcad1e519dd0e6f848fcc3d606fd78f%40%3Cdev.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97@%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc607bc52f3507b8b9c28c6a747c3122f51ac24afe80af2a670785b97%40%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a@%3Ctorque-dev.db.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc2dbc4633a6eea1fcbce6831876cfa17b73759a98c65326d1896cb1a%40%3Ctorque-dev.db.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3@%3Ctorque-dev.db.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbc7642b9800249553f13457e46b813bea1aec99d2bc9106510e00ff3%40%3Ctorque-dev.db.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf@%3Ccommits.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb8c0f1b7589864396690fe42a91a71dea9412e86eec66dc85bbacaaf%40%3Ccommits.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322@%3Cgitbox.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2364f4cf4d274eab5a7ecfaf64bf575cedf8b0173551997c749d322%40%3Cgitbox.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3@%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-COMGOOGLEGUAVA-1015415"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220210-0003"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594@%3Cdev.myfaces.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfc27e2727a20a574f39273e0432aa97486a332f9b3068f6ac1346594%40%3Cdev.myfaces.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625@%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf9f0fa84b8ae1a285f0210bafec6de2a9eba083007d04640b82aa625%40%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e@%3Cyarn-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf00b688ffa620c990597f829ff85fdbba8bf73ee7bfb34783e1f0d4e%40%3Cyarn-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85@%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reebbd63c25bc1a946caa419cec2be78079f8449d1af48e52d47c9e85%40%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27@%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re120f6b3d2f8222121080342c5801fdafca2f5188ceeb3b49c8a1d27%40%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf@%3Cdev.pig.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd7e12d56d49d73e2b8549694974b07561b79b05455f7f781954231bf%40%3Cdev.pig.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra7ab308481ee729f998691e8e3e02e93b1dedfc98f6b1cd3d86923b3%40%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6%40%3Ccommits.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc@%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3dd8881de891598d622227e9840dd7c2ef1d08abbb49e9690c7ae1bc%40%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748%40%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2fe45d96eea8434b91592ca08109118f6308d60f6d0e21d52438cfb4%40%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6@%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r294be9d31c0312d2c0837087204b5d4bf49d0552890e6eec716fa6a6%40%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e@%3Ccommits.ws.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r215b3d50f56faeb2f9383505f3e62faa9f549bb23e8a9848b78a968e%40%3Ccommits.ws.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r161b87f8037bbaff400194a63cd2016c9a69f5949f06dcc79beeab54%40%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r07ed3e4417ad043a27bee7bb33322e9bfc7d7e6d1719b8e3dfd95c14%40%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r037fed1d0ebde50c9caf8d99815db3093c344c3f651c5a49a09824ce@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r007add131977f4f576c232b25e024249a3d16f66aad14a4b52819d21%40%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/google/guava"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba@%3Cissues.maven.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba%40%3Cissues.maven.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09@%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7b0e81d8367264d6cad98766a469d64d11248eb654417809bfdacf09%40%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c@%3Cissues.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r79e47ed555bdb1180e528420a7a2bb898541367a29a3bc6bbf0baf2c%40%3Cissues.hive.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222@%3Ccommits.ws.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r68d86f4b06c808204f62bcb254fcb5b0432528ee8d37a07ef4bc8222%40%3Ccommits.ws.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6874dfe26eefc41b7c9a5e4a0487846fc4accf8c78ff948b24a1104a%40%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199@%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5d61b98ceb7bba939a651de5900dbd67be3817db6bfcc41c6e04e199%40%3Cyarn-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44@%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5b3d93dfdfb7708e796e8762ab40edbde8ff8add48aba53e5ea26f44%40%3Cissues.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r58a8775205ab1839dba43054b09a9ab3b25b423a4170b2413c4067ac%40%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27@%3Cyarn-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r49549a8322f62cd3acfa4490d25bfba0be04f3f9ff4d14fe36199d27%40%3Cyarn-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4776f62dfae4a0006658542f43034a7fc199350e35a66d4e18164ee6@%3Ccommits.cxf.apache.org%3E"
+                }
+              ],
+              "related": [
+                "CGA-3f7x-7jf4-vmjh",
+                "CGA-4jpf-w26h-cg9j",
+                "CGA-9wv6-wh8w-g624",
+                "CGA-c59f-3389-82hg",
+                "CGA-c5f6-f2ff-f6g9",
+                "CGA-cffm-4mv2-8x2h",
+                "CGA-f85c-8jfc-2g85",
+                "CGA-gpmg-5xqr-j8wx",
+                "CGA-m9rw-cj52-34gw",
+                "CGA-mh7m-jqq7-vcwx",
+                "CGA-v8xq-jj26-jf85",
+                "CGA-vm4c-5phc-7w2r"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Information Disclosure in Guava"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-7g45-4rm6-3mm3/GHSA-7g45-4rm6-3mm3.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.guava:guava",
+                    "purl": "pkg:maven/com.google.guava/guava"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0"
+                        },
+                        {
+                          "fixed": "32.0.0-android"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "10.0",
+                    "10.0-rc1",
+                    "10.0-rc2",
+                    "10.0-rc3",
+                    "10.0.1",
+                    "11.0",
+                    "11.0-rc1",
+                    "11.0.1",
+                    "11.0.2",
+                    "12.0",
+                    "12.0-rc1",
+                    "12.0-rc2",
+                    "12.0.1",
+                    "13.0",
+                    "13.0-rc1",
+                    "13.0-rc2",
+                    "13.0.1",
+                    "14.0",
+                    "14.0-rc1",
+                    "14.0-rc2",
+                    "14.0-rc3",
+                    "14.0.1",
+                    "15.0",
+                    "15.0-rc1",
+                    "16.0",
+                    "16.0-rc1",
+                    "16.0.1",
+                    "17.0",
+                    "17.0-rc1",
+                    "17.0-rc2",
+                    "18.0",
+                    "18.0-rc1",
+                    "18.0-rc2",
+                    "19.0",
+                    "19.0-rc1",
+                    "19.0-rc2",
+                    "19.0-rc3",
+                    "20.0",
+                    "20.0-rc1",
+                    "21.0",
+                    "21.0-rc1",
+                    "21.0-rc2",
+                    "22.0",
+                    "22.0-android",
+                    "22.0-rc1",
+                    "22.0-rc1-android",
+                    "23.0",
+                    "23.0-android",
+                    "23.0-rc1",
+                    "23.0-rc1-android",
+                    "23.1-android",
+                    "23.1-jre",
+                    "23.2-android",
+                    "23.2-jre",
+                    "23.3-android",
+                    "23.3-jre",
+                    "23.4-android",
+                    "23.4-jre",
+                    "23.5-android",
+                    "23.5-jre",
+                    "23.6-android",
+                    "23.6-jre",
+                    "23.6.1-android",
+                    "23.6.1-jre",
+                    "24.0-android",
+                    "24.0-jre",
+                    "24.1-android",
+                    "24.1-jre",
+                    "24.1.1-android",
+                    "24.1.1-jre",
+                    "25.0-android",
+                    "25.0-jre",
+                    "25.1-android",
+                    "25.1-jre",
+                    "26.0-android",
+                    "26.0-jre",
+                    "27.0-android",
+                    "27.0-jre",
+                    "27.0.1-android",
+                    "27.0.1-jre",
+                    "27.1-android",
+                    "27.1-jre",
+                    "28.0-android",
+                    "28.0-jre",
+                    "28.1-android",
+                    "28.1-jre",
+                    "28.2-android",
+                    "28.2-jre",
+                    "29.0-android",
+                    "29.0-jre",
+                    "30.0-android",
+                    "30.0-jre",
+                    "30.1-android",
+                    "30.1-jre",
+                    "30.1.1-android",
+                    "30.1.1-jre",
+                    "31.0-android",
+                    "31.0-jre",
+                    "31.0.1-android",
+                    "31.0.1-jre",
+                    "31.1-android",
+                    "31.1-jre"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CGA-g8pm-vcpp-9jxq",
+                "CVE-2023-2976"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-379",
+                  "CWE-552"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-14T21:01:07Z",
+                "nvd_published_at": "2023-06-14T18:15:09Z",
+                "severity": "MODERATE"
+              },
+              "details": "Use of Java's default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.\n\nEven though the security vulnerability is fixed in version 32.0.0, maintainers recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows.",
+              "id": "GHSA-7g45-4rm6-3mm3",
+              "modified": "2025-11-04T17:01:34.109082Z",
+              "published": "2023-06-14T18:30:38Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2976"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/issues/2575"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/issues/6532"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/commit/feb83a1c8fd2e7670b244d5afd23cba5aca43284"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/google/guava"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/releases/tag/v32.0.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230818-0008"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20241108-0002"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01006.html"
+                }
+              ],
+              "related": [
+                "CGA-3qxr-rw2h-5f86",
+                "CGA-5wxh-2846-4r2x",
+                "CGA-6p73-mwqp-2hp8",
+                "CGA-7xcf-rqw8-qr59",
+                "CGA-955j-7j6c-gqwh",
+                "CGA-cwxg-jg7f-p246",
+                "CGA-gghr-qw4h-4xq9",
+                "CGA-jf73-gm5w-p8jg",
+                "CGA-jwxg-cjjq-4858",
+                "CGA-pp53-gp7c-m793",
+                "CGA-pq38-jvh7-23gx",
+                "CGA-px7h-7xf8-q54x",
+                "CGA-q6xm-fh5w-65wh",
+                "CGA-x223-m8f5-c9vm"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Guava vulnerable to insecure use of temporary directory"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-mvr2-9pj6-7w5j/GHSA-mvr2-9pj6-7w5j.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.guava:guava",
+                    "purl": "pkg:maven/com.google.guava/guava"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "11.0"
+                        },
+                        {
+                          "fixed": "24.1.1-android"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "11.0",
+                    "11.0.1",
+                    "11.0.2",
+                    "12.0",
+                    "12.0-rc1",
+                    "12.0-rc2",
+                    "12.0.1",
+                    "13.0",
+                    "13.0-rc1",
+                    "13.0-rc2",
+                    "13.0.1",
+                    "14.0",
+                    "14.0-rc1",
+                    "14.0-rc2",
+                    "14.0-rc3",
+                    "14.0.1",
+                    "15.0",
+                    "15.0-rc1",
+                    "16.0",
+                    "16.0-rc1",
+                    "16.0.1",
+                    "17.0",
+                    "17.0-rc1",
+                    "17.0-rc2",
+                    "18.0",
+                    "18.0-rc1",
+                    "18.0-rc2",
+                    "19.0",
+                    "19.0-rc1",
+                    "19.0-rc2",
+                    "19.0-rc3",
+                    "20.0",
+                    "20.0-rc1",
+                    "21.0",
+                    "21.0-rc1",
+                    "21.0-rc2",
+                    "22.0",
+                    "22.0-android",
+                    "22.0-rc1",
+                    "22.0-rc1-android",
+                    "23.0",
+                    "23.0-android",
+                    "23.0-rc1",
+                    "23.0-rc1-android",
+                    "23.1-android",
+                    "23.1-jre",
+                    "23.2-android",
+                    "23.2-jre",
+                    "23.3-android",
+                    "23.3-jre",
+                    "23.4-android",
+                    "23.4-jre",
+                    "23.5-android",
+                    "23.5-jre",
+                    "23.6-android",
+                    "23.6-jre",
+                    "23.6.1-android",
+                    "23.6.1-jre",
+                    "24.0-android",
+                    "24.0-jre",
+                    "24.1-android",
+                    "24.1-jre"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-mvr2-9pj6-7w5j/GHSA-mvr2-9pj6-7w5j.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.guava:guava-jdk5",
+                    "purl": "pkg:maven/com.google.guava/guava-jdk5"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "17.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "13.0",
+                    "14.0.1",
+                    "14.0.1-rc1",
+                    "16.0",
+                    "16.0-rc1",
+                    "17.0",
+                    "17.0-rc1",
+                    "17.0-rc2"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-mvr2-9pj6-7w5j/GHSA-mvr2-9pj6-7w5j.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.googlecode.guava-osgi:guava-osgi",
+                    "purl": "pkg:maven/com.googlecode.guava-osgi/guava-osgi"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "11.0.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "10.0.0",
+                    "10.0.1",
+                    "11.0.0",
+                    "11.0.1",
+                    "3.0.0",
+                    "4.0.0",
+                    "5.0.0",
+                    "6.0.0",
+                    "7.0.0",
+                    "8.0.0",
+                    "9.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-mvr2-9pj6-7w5j/GHSA-mvr2-9pj6-7w5j.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "de.mhus.ports:vaadin-shared-deps",
+                    "purl": "pkg:maven/de.mhus.ports/vaadin-shared-deps"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "7.4.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.3.1",
+                    "1.3.4",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "6.2.0",
+                    "7.0.0",
+                    "7.1.0",
+                    "7.2.0",
+                    "7.4.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-mvr2-9pj6-7w5j/GHSA-mvr2-9pj6-7w5j.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.hudsonci.lib.guava:guava",
+                    "purl": "pkg:maven/org.hudsonci.lib.guava/guava"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "14.0.1-h-3"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "14.0.1-h-1",
+                    "14.0.1-h-2",
+                    "14.0.1-h-3"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-mvr2-9pj6-7w5j/GHSA-mvr2-9pj6-7w5j.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.sonatype.sisu:sisu-guava",
+                    "purl": "pkg:maven/org.sonatype.sisu/sisu-guava"
+                  },
+                  "versions": [
+                    "0.11.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CGA-8223-gxg7-8cjf",
+                "CVE-2018-10237"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-11T18:34:57Z",
+                "nvd_published_at": "2018-04-26T21:29:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "Unbounded memory allocation in Google Guava 11.0 through 24.x before 24.1.1 allows remote attackers to conduct denial of service attacks against servers that depend on this library and deserialize attacker-provided data, because the AtomicDoubleArray class (when serialized with Java serialization) and the CompoundOrdering class (when serialized with GWT serialization) perform eager allocation without appropriate checks on what a client has sent and whether the data size is reasonable.",
+              "id": "GHSA-mvr2-9pj6-7w5j",
+              "modified": "2024-10-22T05:29:03.107335Z",
+              "published": "2020-06-15T20:35:11Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-10237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2423"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r223bc776a077d0795786c38cbc6e7dd808fce1a9161b00ba9c0a5d55@%3Cissues.lucene.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r22c8173b804cd4a420c43064ba4e363d0022aa421008b1989f7354d4@%3Cissues.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r27eb79a87a760335226dbfa6a7b7bffea539a535f8e80c41e482106d@%3Cdev.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2ea4e5e5aa8ad73b001a466c582899620961f47d77a40af712c1fdf9@%3Cdev.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r30e7d7b6bfa630dacc41649a0e96dad75165d50474c1241068aa0f94@%3Cissues.storm.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r352e40ca9874d1beb4ad95403792adca7eb295e6bc3bd7b65fabcc21@%3Ccommits.samza.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r38e2ab87528d3c904e7fac496e8fd766b9277656ff95b97d6b6b6dcd@%3Cdev.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3c3b33ee5bef0c67391d27a97cbfd89d44f328cf072b601b58d4e748@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r43491b25b2e5c368c34b106a82eff910a5cea3e90de82ad75cc16540@%3Cdev.syncope.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r50fc0bcc734dd82e691d36d209258683141bfc0083739a77e56ad92d@%3Cdev.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r841c5e14e1b55281523ebcde661ece00b38a0569e00ef5e12bd5f6ba@%3Cissues.maven.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r95799427b335807a4c54776908125c3e66597b65845ae50096d9278a@%3Cdev.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra0adb9653c7de9539b93cc8434143b655f753b9f60580ff260becb2b@%3Cusers.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra4f44016926dcb034b3b230280a18102062f94ae55b8a31bb92fed84@%3Cissues.lucene.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra8906723927aef2a599398c238eacfc845b74d812e0093ec2fc70a7d@%3Cissues.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb3da574c34bc6bd37972d2266af3093b90d7e437460423c24f477919@%3Cissues.lucene.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc78f6e84f82cc662860e96526d8ab969f34dbe12dc560e22d9d147a3@%3Cdev.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc8467f357b943ceaa86f289f8bc1a5d1c7955b75d3bac1426f2d4ac1@%3Ccommon-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd01f5ff0164c468ec7abc96ff7646cea3cce6378da2e4aa29c6bcb95@%3Cgithub.arrow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd0c8ec6e044aa2958dd0549ebf8ecead7f5968c9474ba73a504161b2@%3Cdev.cxf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdc56c15693c236e31e1e95f847b8e5e74fc0a05741d47488e7fc8c45@%3Cissues.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220629-0008"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2424"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2425"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2428"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2598"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2643"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2740"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2741"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2742"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2743"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2927"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:2858"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:3149"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/google/guava"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/guava/wiki/CVE-2018-10237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/d/topic/guava-announce/xqWALw4W1vs/discussion"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/053d9ce4d579b02203db18545fee5e33f35f2932885459b74d1e4272@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/19fa48533bc7ea1accf6b12746a74ed888ae6e49a5cf81ae4f807495@%3Ccommon-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/33c6bccfeb7adf644d4d79894ca8f09370be6ed4b20632c2e228d085@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3d5dbdd92ac9ceaef90e40f78599f9109f2f345252e0ac9d98e7e084@%3Cgitbox.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3ddd79c801edd99c0978e83dbe2168ebd36fd42acfa5dac38fb03dd6@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/cc48fe770c45a74dc3b37ed0817393e0c96701fc49bc431ed922f3cc@%3Chdfs-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ff8dcfe29377088ab655fda9d585dccd5b1f07fabd94ae84fd60a7f8@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cdev.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cuser.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securitytracker.com/id/1041707"
+                }
+              ],
+              "related": [
+                "CGA-4jxw-mwcp-83m9"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Denial of Service in Google Guava"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "junit:junit",
+            "version": "4.11",
+            "ecosystem": "Maven"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-269g-pwp5-87pp"
+              ],
+              "aliases": [
+                "CVE-2020-15250",
+                "GHSA-269g-pwp5-87pp"
+              ],
+              "max_severity": "4.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/10/GHSA-269g-pwp5-87pp/GHSA-269g-pwp5-87pp.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "junit:junit",
+                    "purl": "pkg:maven/junit/junit"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.7"
+                        },
+                        {
+                          "fixed": "4.13.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "4.10",
+                    "4.11",
+                    "4.11-beta-1",
+                    "4.12",
+                    "4.12-beta-1",
+                    "4.12-beta-2",
+                    "4.12-beta-3",
+                    "4.13",
+                    "4.13-beta-1",
+                    "4.13-beta-2",
+                    "4.13-beta-3",
+                    "4.13-rc-1",
+                    "4.13-rc-2",
+                    "4.7",
+                    "4.8",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.9"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2020-15250"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200",
+                  "CWE-732"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-10-12T17:32:34Z",
+                "nvd_published_at": "2020-10-12T18:15:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Vulnerability\n\nThe JUnit4 test rule [TemporaryFolder](https://junit.org/junit4/javadoc/4.13/org/junit/rules/TemporaryFolder.html) contains a local information disclosure vulnerability.\n\nExample of vulnerable code:\n```java\npublic static class HasTempFolder {\n    @Rule\n    public TemporaryFolder folder = new TemporaryFolder();\n\n    @Test\n    public void testUsingTempFolder() throws IOException {\n        folder.getRoot(); // Previous file permissions: `drwxr-xr-x`; After fix:`drwx------`\n        File createdFile= folder.newFile(\"myfile.txt\"); // unchanged/irrelevant file permissions\n        File createdFolder= folder.newFolder(\"subfolder\"); // unchanged/irrelevant file permissions\n        // ...\n    }\n}\n```\n\n### Impact\n\nOn Unix like systems, the system's temporary directory is shared between all users on that system. Because of this, when files and directories are written into this directory they are, by default, readable by other users on that same system.\n\nThis vulnerability **does not** allow other users to overwrite the contents of these directories or files. This is purely an information disclosure vulnerability.\n\nWhen analyzing the impact of this vulnerability, here are the important questions to ask:\n\n1. Do the JUnit tests write sensitive information, like API keys or passwords, into the temporary folder?\n    - If yes, this vulnerability impacts you, but only if you also answer 'yes' to question 2.\n    - If no, this vulnerability does not impact you.\n2. Do the JUnit tests ever execute in an environment where the OS has other untrusted users. \n    _This may apply in CI/CD environments but normally won't be 'yes' for personal developer machines._\n    - If yes, and you answered 'yes' to question 1, this vulnerability impacts you.\n    - If no, this vulnerability does not impact you.\n\n### Patches\n\nBecause certain JDK file system APIs were only added in JDK 1.7, this this fix is dependent upon the version of the JDK you are using.\n - Java 1.7 and higher users: this vulnerability is fixed in 4.13.1.\n - Java 1.6 and lower users: **no patch is available, you must use the workaround below.**\n\n### Workarounds\n\nIf you are unable to patch, or are stuck running on Java 1.6, specifying the `java.io.tmpdir` system environment variable to a directory that is exclusively owned by the executing user will fix this vulnerability.\n\n### References\n- [CWE-200: Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)\n- Fix commit https://github.com/junit-team/junit4/commit/610155b8c22138329f0723eec22521627dbc52ae\n\n#### Similar Vulnerabilities\n - Google Guava - https://github.com/google/guava/issues/4011\n - Apache Ant - https://nvd.nist.gov/vuln/detail/CVE-2020-1945\n - JetBrains Kotlin Compiler - https://nvd.nist.gov/vuln/detail/CVE-2020-15824\n\n### For more information\nIf you have any questions or comments about this advisory, please pen an issue in [junit-team/junit4](https://github.com/junit-team/junit4/issues).",
+              "id": "GHSA-269g-pwp5-87pp",
+              "modified": "2024-03-15T05:20:38.405881Z",
+              "published": "2020-10-12T17:33:00Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/security/advisories/GHSA-269g-pwp5-87pp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15250"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/issues/1676"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/commit/610155b8c22138329f0723eec22521627dbc52ae"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra1bdb9efae84794e8ffa2f8474be8290ba57830eefe9714b95da714b@%3Cdev.pdfbox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/raebf13f53cd5d23d990712e3d11c80da9a7bae94a6284050f148ed99@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2771949c676ca984e58a5cd5ca79c2634dee1945e0406e48e0f8457@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2ffe2993f4dccc48d832e1a0f1c419477781b6ea16e725ca2276dbb@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb33212dab7beccaf1ffef9b88610047c644f644c7a0ebdc44d77e381@%3Ccommits.turbine.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbaec90e699bc7c7bd9a053f76707a36fda48b6d558f31dc79147dbf9@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc49cf1547ef6cac1be4b3c92339b2cae0acacf5acaba13cfa429a872@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdbdd30510a7c4d0908fd22075c02b75bbc2e0d977ec22249ef3133cb@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rde385b8b53ed046600ef68dd6b4528dea7566aaddb02c3e702cc28bc@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rde8e70b95c992378e8570e4df400c6008a9839eabdfb8f800a3e5af6@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdef7d1380c86e7c0edf8a0f89a2a8db86fce5e363457d56b722691b4@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rea812d8612fdc46842a2a57248cad4b01ddfdb1e9b037c49e68fdbfb@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reb700e60b9642eafa4b7922bfee80796394135aa09c7a239ef9f7486@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf2ec93f4ca9a97d1958eb4a31b1830f723419ce9bf2018a6e5741d5b@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf6e5d894d4b03bef537c9d6641272e0197c047c0d1982b4e176d0353@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf797d119cc3f51a8d7c3c5cbe50cb4524c8487282b986edde83a9467@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/11/msg00003.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/junit-team/junit4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/blob/7852b90cfe1cea1e0cdaa19d490c83f0d8684b50/doc/ReleaseNotes4.13.1.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://junit.org/junit4/javadoc/4.13/org/junit/rules/TemporaryFolder.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r01110833b63616ddbef59ae4e10c0fbd0060f0a51206defd4cb4d917@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r09cfbb5aedd76023691bbce9ca4ce2e16bb07dd37554a17efc19935d@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1209986f79359b518d09513ff05a88e5b3c398540e775edea76a4774@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r29d703d1986d9b871466ff24082a1828ac8ad27bb0965a93a383872e@%3Cpluto-scm.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2b78f23bc2711a76a7fc73ad67b7fcd6817c5cfccefd6f30a4f54943@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r30f502d2f79e8d635361adb8108dcbb73095163fcbd776ee7984a094@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r500517c23200fb2fdb0b82770a62dd6c88b3521cfb01cfd0c76e3f8b@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5f8841507576f595bb783ccec6a7cb285ea90d4e6f5043eae0e61a41@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r687f489b10b0d14e46f626aa88476545e1a2600b24c4ebd3c0d2a10b@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r717877028482c55acf604d7a0106af4ca05da4208c708fb157b53672@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r742b44fd75215fc75963b8ecc22b2e4372e68d67d3d859d2b5e8743f@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8b02dc6f18df11ff39eedb3038f1e31e6f90a779b1959bae65107279@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r925eaae7dd8f77dd61eefc49c1fcf54bd9ecfe605486870d7b1e9390@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r934208a520b38f5cf0cae199b6b076bfe7d081809528b0eff2459e40@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r95f8ef60c4b3a5284b647bb3132cda08e6fadad888a66b84f49da0b0@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9710067c7096b83cb6ae8f53a2f6f94e9c042d1bf1d6929f8f2a2b7a@%3Ccommits.knox.apache.org%3E"
+                }
+              ],
+              "related": [
+                "CVE-2020-15250"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "TemporaryFolder on unix-like systems does not limit access to created files"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "log4j:log4j",
+            "version": "1.2.17",
+            "ecosystem": "Maven"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2qrg-x229-3v8q"
+              ],
+              "aliases": [
+                "CVE-2019-17571",
+                "GHSA-2qrg-x229-3v8q"
+              ],
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GHSA-65fg-84f6-3jq3"
+              ],
+              "aliases": [
+                "CVE-2022-23305",
+                "GHSA-65fg-84f6-3jq3"
+              ],
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GHSA-f7vh-qwp3-x37m"
+              ],
+              "aliases": [
+                "CVE-2022-23307",
+                "GHSA-f7vh-qwp3-x37m"
+              ],
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GHSA-fp5r-v3w9-4333"
+              ],
+              "aliases": [
+                "CVE-2021-4104",
+                "GHSA-fp5r-v3w9-4333"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-vp98-w2p3-mv35"
+              ],
+              "aliases": [
+                "CVE-2023-26464",
+                "GHSA-vp98-w2p3-mv35"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-w9p3-5cr8-m3jj"
+              ],
+              "aliases": [
+                "CVE-2022-23302",
+                "GHSA-w9p3-5cr8-m3jj"
+              ],
+              "max_severity": "8.8"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-2qrg-x229-3v8q/GHSA-2qrg-x229-3v8q.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "log4j:log4j",
+                    "purl": "pkg:maven/log4j/log4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.2"
+                        },
+                        {
+                          "last_affected": "1.2.17"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.13",
+                    "1.2.14",
+                    "1.2.15",
+                    "1.2.16",
+                    "1.2.17",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-2qrg-x229-3v8q/GHSA-2qrg-x229-3v8q.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.zenframework.z8.dependencies.commons:log4j-1.2.17",
+                    "purl": "pkg:maven/org.zenframework.z8.dependencies.commons/log4j-1.2.17"
+                  },
+                  "versions": [
+                    "2.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2019-17571"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-12-27T22:02:37Z",
+                "nvd_published_at": "2019-12-20T17:15:00Z",
+                "severity": "CRITICAL"
+              },
+              "details": "Included in Log4j 1.2 is a SocketServer class that is vulnerable to deserialization of untrusted data which can be exploited to remotely execute arbitrary code when combined with a deserialization gadget when listening to untrusted network traffic for log data. This affects Log4j versions 1.2 up to 1.2.17.\n\nUsers are advised to migrate to `org.apache.logging.log4j:log4j-core`.",
+              "id": "GHSA-2qrg-x229-3v8q",
+              "modified": "2024-03-10T05:17:36.915276Z",
+              "published": "2020-01-06T18:43:49Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17571"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd3a9511eebab60e23f224841390a3f8cd5358cff605c5f7042171e47@%3Cdev.tinkerpop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rcd71280585425dad7e232f239c5709e425efdd0d3de4a92f808a4767@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rca24a281000fb681d7e26e5c031a21eb4b0593a7735f781b53dae4e2@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc628307962ae1b8cc2d21b8e4b7dd6d7755b2dd52fa56a151a27e4fd@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc1eaed7f7d774d5d02f66e49baced31e04827a1293d61a70bd003ca7@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc17d8491beee51607693019857e41e769795366b85be00aa2f4b3159@%3Cnotifications.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbf4ce74b0d1fa9810dec50ba3ace0caeea677af7c27a97111c06ccb7@%3Cusers.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbf4ce74b0d1fa9810dec50ba3ace0caeea677af7c27a97111c06ccb7@%3Cdev.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbdf18e39428b5c80fc35113470198b1fe53b287a76a46b0f8780b5fd@%3Cdev.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbd19de368abf0764e4383ec44d527bc9870176f488a494f09a40500d@%3Ccommon-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbc45eb0f53fd6242af3e666c2189464f848a851d408289840cecc6e3@%3Ccommits.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb3c94619728c8f8c176d8e175e0a1086ca737ecdfcd5a2214bb768bc@%3Ccommits.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb1b29aee737e1c37fe1d48528cb0febac4f5deed51f5412e6fdfe2bf@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/raedd12dc24412b3780432bf202a2618a21a727788543e5337a458ead@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra9611a8431cb62369bce8909d7645597e1dd45c24b448836b1e54940@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra54fa49be3e773d99ccc9c2a422311cf77e3ecd3b8594ee93043a6b1@%3Cdev.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra38785cfc0e7f17f8e24bebf775dd032c033fadcaea29e5bc9fffc60@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra18a903f785aed9403aea38bc6f36844a056283c00dcfc6936b6318c@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9fb3238cfc3222f2392ca6517353aadae18f76866157318ac562e706@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9dc2505651788ac668299774d9e7af4dc616be2f56fdc684d1170882@%3Cusers.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9d2e28e71f91ba0b6f4114c8ecd96e2b1f7e0d06bdf8eb768c183aa9@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9d0d03f2e7d9e13c68b530f81d02b0fec33133edcf27330d8089fcfb@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9a9e3b42cd5d1c4536a14ef04f75048dec8e2740ac6a138ea912177f@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r944183c871594fe9a555b8519a7c945bbcf6714d72461aa6c929028f@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r90c23eb8c82835fa82df85ae5e88c81fd9241e20a22971b0fb8f2c34@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r909b8e3a36913944d3b7bafe9635d4ca84f8f0e2cd146a1784f667c2@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8e3f7da12bf5750b0a02e69a78a61073a2ac950eed7451ce70a65177@%3Ccommits.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2020/dsa-4686"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4495-1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20200110-0001"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/01/msg00008.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfdf65fa675c64a64459817344e0e6c44d51ee264beea6e5851fb60dc@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf9c19bcc2f7a98a880fa3e3456c003d331812b55836b34ef648063c9@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf77f79699c8d7e430c14cf480f12ed1297e6e8cf2ed379a425941e80@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf53eeefb7e7e524deaacb9f8671cbf01b8a253e865fb94e7656722c0@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf2567488cfc9212b42e34c6393cfa1c14e30e4838b98dda84d71041f@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf1b434e11834a4449cd7addb69ed0aef0923112b5938182b363a968c@%3Cnotifications.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rec34b1cccf907898e7cb36051ffac3ccf1ea89d0b261a2a3b3fb267f@%3Ccommits.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reaf6b996f74f12b4557bc221abe88f58270ac583942fa41293c61f94@%3Cpluto-scm.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re8c21ed9dd218c217d242ffa90778428e446b082b5e1c29f567e8374@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re36da78e4f3955ba6c1c373a2ab85a4deb215ca74b85fcd66142fea1@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdf2a0d94c3b5b523aeff7741ae71347415276062811b687f30ea6573@%3Ccommits.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdec0d8ac1f03e6905b0de2df1d5fcdb98b94556e4f6cccf7519fdb26@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdb7ddf28807e27c7801f6e56a0dfb31092d34c61bdd4fa2de9182119@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rda4849c6823dd3e83c7a356eb883180811d5c28359fe46865fd151c3@%3Cusers.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd882ab6b642fe59cbbe94dc02bd197342058208f482e57b537940a4b@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd7805c1bf9388968508c6c8f84588773216e560055ddcc813d19f347@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd6254837403e8cbfc7018baa9be29705f3f06bd007c83708f9a97679@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd5dbeee4808c0f2b9b51479b50de3cc6adb1072c332a200d9107f13e@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3d666e4e8905157f3c046d31398b04f2bfd4519e31f266de108c6919@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3cf50d05ce8cec8c09392624b7bae750e7643dae60ef2438641ee015@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3c575cabc7386e646fb12cb82b0b38ae5a6ade8a800f827107824495@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3bf7b982dfa0779f8a71f843d2aa6b4184a53e6be7f149ee079387fd@%3Cdev.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3a85514a518f3080ab1fc2652cfe122c2ccf67cfb32356acb1b08fe8@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3784834e80df2f284577a5596340fb84346c91a2dea6a073e65e3397@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r356d57d6225f91fdc30f8b0a2bed229d1ece55e16e552878c5fa809a@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3543ead2317dcd3306f69ee37b07dd383dbba6e2f47ff11eb55879ad@%3Cusers.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2ff63f210842a3c5e42f03a35d8f3a345134d073c80a04077341c211@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2ce8d26154bea939536e6cf27ed02d3192bf5c5d04df885a80fe89b3@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2756fd570b6709d55a61831ca028405bcb3e312175a60bc5d911c81f@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2721aba31a8562639c4b937150897e24f78f747cdbda8641c0f659fe@%3Cusers.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r26244f9f7d9a8a27a092eb0b2a0ca9395e88fcde8b5edaeca7ce569c@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1b7734dfdfd938640f2f5fb6f4231a267145c71ed60cc7faa1cbac07@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1b103833cb5bc8466e24ff0ecc5e75b45a705334ab6a444e64e840a0@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r18f1c010b554a3a2d761e8ffffd8674fd4747bcbcf16c643d708318c@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r189aaeaad897f7d6b96f7c43a8ef2dfb9f6e9f8c1cc9ad182ce9b9ae@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r13d4b5c60ff63f3c4fab51d6ff266655be503b8a1884e2f2fab67c3a@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r107c8737db39ec9ec4f4e7147b249e29be79170b9ef4b80528105a2d@%3Cdev.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r05755112a8c164abc1004bb44f198b1e3d8ca3d546a8f13ebd3aa05f@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/eea03d504b36e8f870e8321d908e1def1addda16adda04327fe7c125%40%3Cdev.logging.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/8ab32b4c9f1826f20add7c40be08909de9f58a89dc1de9c09953f5ac@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/752ec92cd1e334a639e79bfbd689a4ec2c6579ec5bb41b53ffdf358d@%3Cdev.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6114ce566200d76e3cc45c521a62c2c5a4eac15738248f58a99f622c@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/564f03b4e9511fcba29c68fc0299372dadbdb002718fa8edcc4325e4@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/479471e6debd608c837b9815b76eab24676657d4444fcfd5ef96d6e6@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/44491fb9cc19acc901f7cff34acb7376619f15638439416e3e14761c@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/277b4b5c2b0e06a825ccec565fa65bd671f35a4d58e3e2ec5d0618e1@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8d78a0fbb56d505461e29868d1026e98c402e6a568c13a6da67896a2@%3Cdev.jena.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8c6300245c0bcef095e9f07b48157e2c6471df0816db3408fcf1d748@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8c392ca48bb7e50754e4bc05865e9731b23d568d18a520fe3d8c1f75@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8a1cfd4705258c106e488091fcec85f194c82f2bbde6bd151e201870@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8890b8f18f1de821595792b58b968a89692a255bc20d86d395270740@%3Ccommits.druid.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8418a0dff1729f19cf1024937e23a2db4c0f94f2794a423f5c10e8e7@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8244fd0831db894d5e89911ded9c72196d395a90ae655414d23ed0dd@%3Cusers.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7f462c69d5ded4c0223e014d95a3496690423c5f6f05c09e2f2a407a@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7bcdc710857725c311b856c0b82cee6207178af5dcde1bd43d289826@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7a1acc95373105169bd44df710c2f462cad31fb805364d2958a5ee03@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r746fbc3fc13aee292ae6851f7a5080f592fa3a67b983c6887cdb1fc5@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r71e26f9c2d5826c6f95ad60f7d052d75e1e70b0d2dd853db6fc26d5f@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6d34da5a0ca17ab08179a30c971446c7421af0e96f6d60867eabfc52@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6b45a2fcc8e98ac93a179183dbb7f340027bdb8e3ab393418076b153@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6aec6b8f70167fa325fb98b3b5c9ce0ffaed026e697b69b85ac24628@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r696507338dd5f44efc23d98cafe30f217cf3ba78e77ed1324c7a5179@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r681b4432d0605f327b68b9f8a42662993e699d04614de4851c35ffd1@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6236b5f8646d48af8b66d5050f288304016840788e508c883356fe0e@%3Clog4j-user.logging.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r61db8e7dcb56dc000a5387a88f7a473bacec5ee01b9ff3f55308aacc@%3Cusers.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r61db8e7dcb56dc000a5387a88f7a473bacec5ee01b9ff3f55308aacc@%3Cdev.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r61590890edcc64140e0c606954b29a063c3d08a2b41d447256d51a78@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5c084578b3e3b40bd903c9d9e525097421bcd88178e672f612102eb2@%3Cjira.kafka.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r594411f4bddebaf48a4c70266d0b7849e0d82bb72826f61b3a35bba7@%3Cissues.bookkeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r52a5129df402352adc34d052bab9234c8ef63596306506a89fdc7328@%3Cusers.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4b25538be50126194cc646836c718b1a4d8f71bd9c912af5b59134ad@%3Cdev.tika.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4ac89cbecd9e298ae9fafb5afda6fa77ac75c78d1ac957837e066c4e@%3Cuser.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r48efc7cb5aeb4e1f67aaa06fb4b5479a5635d12f07d0b93fc2d08809@%3Ccommits.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r48d5019bd42e0770f7e5351e420a63a41ff1f16924942442c6aff6a8@%3Ccommits.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00022.html"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Deserialization of Untrusted Data in Log4j"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-65fg-84f6-3jq3/GHSA-65fg-84f6-3jq3.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "log4j:log4j",
+                    "purl": "pkg:maven/log4j/log4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.2.17"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.1.3",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.13",
+                    "1.2.14",
+                    "1.2.15",
+                    "1.2.16",
+                    "1.2.17",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-65fg-84f6-3jq3/GHSA-65fg-84f6-3jq3.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.zenframework.z8.dependencies.commons:log4j-1.2.17",
+                    "purl": "pkg:maven/org.zenframework.z8.dependencies.commons/log4j-1.2.17"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "2.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-23305"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-89"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-19T22:31:49Z",
+                "nvd_published_at": "2022-01-18T16:15:00Z",
+                "severity": "CRITICAL"
+              },
+              "details": "By design, the JDBCAppender in Log4j 1.2.x accepts an SQL statement as a configuration parameter where the values to be inserted are converters from PatternLayout. The message converter, %m, is likely to always be included. This allows attackers to manipulate the SQL by entering crafted strings into input fields or headers of an application that are logged allowing unintended SQL queries to be executed. Note this issue only affects Log4j 1.x when specifically configured to use the JDBCAppender, which is not the default. Beginning in version 2.0-beta8, the JDBCAppender was re-introduced with proper support for parameterized SQL queries and further customization over the columns written to in logs. Apache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.",
+              "id": "GHSA-65fg-84f6-3jq3",
+              "modified": "2024-02-16T08:18:09.971724Z",
+              "published": "2022-01-21T23:26:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23305"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/logging-log4j1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/pt6lh3pbsvxqlwlp4c5l798dv2hkc85y"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logging.apache.org/log4j/1.2/index.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220217-0007"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2022/01/18/4"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "SQL Injection in Log4j 1.2.x"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-f7vh-qwp3-x37m/GHSA-f7vh-qwp3-x37m.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "log4j:log4j",
+                    "purl": "pkg:maven/log4j/log4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.2.17"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.1.3",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.13",
+                    "1.2.14",
+                    "1.2.15",
+                    "1.2.16",
+                    "1.2.17",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-f7vh-qwp3-x37m/GHSA-f7vh-qwp3-x37m.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.zenframework.z8.dependencies.commons:log4j-1.2.17",
+                    "purl": "pkg:maven/org.zenframework.z8.dependencies.commons/log4j-1.2.17"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "2.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-23307"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-20T22:48:35Z",
+                "nvd_published_at": "2022-01-18T16:15:00Z",
+                "severity": "CRITICAL"
+              },
+              "details": "CVE-2020-9493 identified a deserialization issue that was present in Apache Chainsaw. Prior to Chainsaw V2.0 Chainsaw was a component of Apache Log4j 1.2.x where the same issue exists.\n\nUsers are advised to migrate from `log4j:log4j` to `org.apache.logging.log4j:log4j` for an updated version of the library.",
+              "id": "GHSA-f7vh-qwp3-x37m",
+              "modified": "2024-02-16T08:22:45.374390Z",
+              "published": "2022-01-19T00:01:15Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23307"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/rg4yyc89vs3dw6kpy3r92xop9loywyhh"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logging.apache.org/log4j/1.2/index.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Deserialization of Untrusted Data in Apache Log4j"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-fp5r-v3w9-4333/GHSA-fp5r-v3w9-4333.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "log4j:log4j",
+                    "purl": "pkg:maven/log4j/log4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.2.0"
+                        },
+                        {
+                          "last_affected": "1.2.17"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.13",
+                    "1.2.14",
+                    "1.2.15",
+                    "1.2.16",
+                    "1.2.17",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-fp5r-v3w9-4333/GHSA-fp5r-v3w9-4333.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.zenframework.z8.dependencies.commons:log4j-1.2.17",
+                    "purl": "pkg:maven/org.zenframework.z8.dependencies.commons/log4j-1.2.17"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "2.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2021-4104"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-12-14T19:47:27Z",
+                "nvd_published_at": "2021-12-14T12:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "JMSAppender in Log4j 1.2 is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration. The attacker can provide TopicBindingName and TopicConnectionFactoryBindingName configurations causing JMSAppender to perform JNDI requests that result in remote code execution in a similar fashion to CVE-2021-44228. Note this issue only affects Log4j 1.2 when specifically configured to use JMSAppender, which is not the default. Apache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.",
+              "id": "GHSA-fp5r-v3w9-4333",
+              "modified": "2024-02-16T08:10:41.694989Z",
+              "published": "2021-12-14T19:49:31Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2021-4104"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/logging-log4j2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0033"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202209-02"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202310-16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202312-02"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202312-04"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20211223-0007"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.cve.org/CVERecord?id=CVE-2021-44228"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.kb.cert.org/vuls/id/930724"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2022/01/18/3"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "JMSAppender in Log4j 1.2 is vulnerable to deserialization of untrusted data"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-vp98-w2p3-mv35/GHSA-vp98-w2p3-mv35.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.logging.log4j:log4j-core",
+                    "purl": "pkg:maven/org.apache.logging.log4j/log4j-core"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.4"
+                        },
+                        {
+                          "fixed": "2.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.0-alpha1",
+                    "2.0-alpha2",
+                    "2.0-beta1",
+                    "2.0-beta2",
+                    "2.0-beta3",
+                    "2.0-beta4",
+                    "2.0-beta5",
+                    "2.0-beta6",
+                    "2.0-beta7",
+                    "2.0-beta8",
+                    "2.0-beta9",
+                    "2.0-rc1",
+                    "2.0-rc2"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-vp98-w2p3-mv35/GHSA-vp98-w2p3-mv35.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "log4j:log4j",
+                    "purl": "pkg:maven/log4j/log4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.4"
+                        },
+                        {
+                          "fixed": "2.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.1.3",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.13",
+                    "1.2.14",
+                    "1.2.15",
+                    "1.2.16",
+                    "1.2.17",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2023-26464"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-03-10T23:48:32Z",
+                "nvd_published_at": "2023-03-10T14:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "** UNSUPPORTED WHEN ASSIGNED ** When using the Chainsaw or SocketAppender components with Log4j 1.x on JRE less than 1.7, an attacker that manages to cause a logging entry involving a specially-crafted (ie deeply nested) hashmap or hashtable (depending on which logging component is in use) to be processed could exhaust the available memory in the virtual machine and achieve Denial of Service when the object is deserialized. This issue affects Apache Log4j before 2. Affected users are recommended to update to Log4j 2.x. NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+              "id": "GHSA-vp98-w2p3-mv35",
+              "modified": "2025-09-02T22:39:27.476162Z",
+              "published": "2023-03-10T15:30:43Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26464"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/logging-log4j2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/wkx6grrcjkh86crr49p4blc1v1nflj3t"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230505-0008"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Apache Log4j 1.x (EOL) allows Denial of Service (DoS)"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-w9p3-5cr8-m3jj/GHSA-w9p3-5cr8-m3jj.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "log4j:log4j",
+                    "purl": "pkg:maven/log4j/log4j"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.2.17"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.1.3",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.13",
+                    "1.2.14",
+                    "1.2.15",
+                    "1.2.16",
+                    "1.2.17",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-w9p3-5cr8-m3jj/GHSA-w9p3-5cr8-m3jj.json"
+                  },
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.zenframework.z8.dependencies.commons:log4j-1.2.17",
+                    "purl": "pkg:maven/org.zenframework.z8.dependencies.commons/log4j-1.2.17"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "2.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-23302"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-19T22:31:40Z",
+                "nvd_published_at": "2022-01-18T16:15:00Z",
+                "severity": "HIGH"
+              },
+              "details": "JMSSink in all versions of Log4j 1.x is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration or if the configuration references an LDAP service the attacker has access to. The attacker can provide a TopicConnectionFactoryBindingName configuration causing JMSSink to perform JNDI requests that result in remote code execution in a similar fashion to CVE-2021-4104. Note this issue only affects Log4j 1.x when specifically configured to use JMSSink, which is not the default. Apache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.",
+              "id": "GHSA-w9p3-5cr8-m3jj",
+              "modified": "2025-07-09T15:32:40.105014Z",
+              "published": "2022-01-21T23:27:14Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23302"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/logging-log4j1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/bsr3l5qz4g0myrjhy9h67bcxodpkwj4w"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logging.apache.org/log4j/1.2/index.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220217-0006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vicarius.io/vsociety/posts/cve-2022-23302-detect-log4j-1217-vulnerability"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vicarius.io/vsociety/posts/cve-2022-23302-mitigate-log4j-1217-vulnerability"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2022/01/18/3"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Deserialization of Untrusted Data in Log4j 1.x"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

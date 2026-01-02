@@ -1,0 +1,73 @@
+= IntelliJ AsciiDoc Plugin
+Alexander Schwartz
+:experimental:
+:homepage-url: https://intellij-asciidoc-plugin.ahus1.de/
+:github: https://github.com/asciidoctor/asciidoctor-intellij-plugin
+
+image:{github}/actions/workflows/build.yml/badge.svg?branch=main[Build Status (GitHub Workflow Build), link={github}/actions?query=workflow%3ABuild+branch%3Amain]
+image:https://img.shields.io/jetbrains/plugin/v/7391-asciidoc.svg[JetBrains Plugins,link=https://plugins.jetbrains.com/plugin/7391-asciidoc]
+image:https://img.shields.io/jetbrains/plugin/d/7391-asciidoc.svg[Downloads,link=https://plugins.jetbrains.com/plugin/7391-asciidoc]
+
+A plugin for the IntelliJ platform (IntelliJ IDEA, RubyMine, etc.) that provides support for the http://www.asciidoc.org[AsciiDoc] markup language.
+It also supports https://antora.org/[Antora], the documentation CMS build with AsciiDoc.
+
+////
+image::https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg[float=left,width=200]
+
+*This plugin joined https://hacktoberfest.digitalocean.com/[Hacktoberfest]!
+Issues that can give you a good start are https://github.com/asciidoctor/asciidoctor-intellij-plugin/issues?q=is%3Aissue+is%3Aopen+label%3AHacktoberfest[have the label "Hacktoberfest"] and maintainers are willing to help.*
+////
+
+*To contribute as a developer, some issues are labeled with "`link:https://github.com/asciidoctor/asciidoctor-intellij-plugin/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22[good first issue]`".* Maintainers are willing to help.
+
+For more advanced topics, see tickets marked as "`link:https://github.com/asciidoctor/asciidoctor-intellij-plugin/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22[help wanted]`". Feel free to choose these or any other ticket to participate, or create pull requests without a prior ticket.
+
+== Installation
+
+You can install the plugin (named "`AsciiDoc`") from the plugins section inside your JetBrains IDE or download it from the https://plugins.jetbrains.com/plugin/7391[JetBrains Plugin Repository].
+
+The most advanced and recommended preview modes (and default for new installations) are JavaFX and JCEF.
+
+Refer to the link:{homepage-url}/docs/users-guide/installation.html[installation] for a detailed overview of the features.
+
+== Features
+
+* Recognizes the AsciiDoc file extension (.adoc, .asciidoc, .ad)
+* Provides a two-pane AsciiDoc preview editor based on https://asciidoctor.org/[Asciidoctor] with a live preview.
+* Toolbar and context menu for basic formatting and to create tables.
+* Convert AsciiDoc to Microsoft Word (DOCX) by using pandoc.
+* Refactor Markdown to AsciiDoc: Right-click on a file, or use the Refactor menu, and the Markdown document will be replaced by the AsciiDoc equivalent.
+Also, supports undo if the user is not happy with the result!
+
+Refer to the link:{homepage-url}/docs/users-guide/features.html[Features list] for a detailed overview of the features.
+
+If you are missing features, please don't hesitate to let me know on Twitter: http://www.twitter.com/ahus1de[@ahus1de] or create an issue in the GitHub issue tracker!
+
+Refer to the link:CHANGELOG.adoc[CHANGELOG] for a list of changes in previous releases.
+
+== Dependencies
+
+This project uses AsciidoctorJ and JRuby for the rendering of the AsciiDoc content.
+
+For the conversion of Markdown to AsciiDoc, we use Pegdown and the https://github.com/bodiam/markdown-to-asciidoc[Markdown to AsciiDoc] converter.
+
+== Building, Contributing, Code of Conduct
+
+Issues that can give you a good start are https://github.com/asciidoctor/asciidoctor-intellij-plugin/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22[have the label "`good first issue`"] and maintainers are willing to help.
+Feel free to choose these or any other ticket to contribute, or even create pull requests without a prior ticket.
+
+Please have a look at the {homepage-url}/docs/contributors-guide/index.html["`Contributor Guide`"].
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the link:https://github.com/asciidoctor/.github/blob/main/CODE-OF-CONDUCT.md[Asciidoctor Community Code of Conduct].
+
+== Copyright and Licensing
+
+Copyright (C) 2013-2020 Julien Viet, Erik Pragt, Alexander Schwartz and the individual contributors.
+Released under the Apache License, Version 2.0 (see link:LICENSE[LICENSE]).
+
+== Credits
+
+An early version of the plugin is based on the https://github.com/nicoulaj/idea-markdown[Intellij Markdown plugin by Julien Nicoulaud].
+Later versions took inspiration from the JetBrains Markdown plugin.
+
+Also, great help was received from Erik Pragt, Harro Lissenberg, Alexander Schwartz and Dan Allen.
+Thank you all for your support!

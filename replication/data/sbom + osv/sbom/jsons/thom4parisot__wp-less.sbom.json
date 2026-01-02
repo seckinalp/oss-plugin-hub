@@ -1,0 +1,153 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.thom4parisot/wp-less",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/eb48a0fd-8178-4de6-84ef-64243b4421dd",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:53:04Z"
+  },
+  "packages": [
+    {
+      "name": "leafo/lessphp",
+      "SPDXID": "SPDXRef-composer-leafo-lessphp-75c946",
+      "versionInfo": "~> 0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/leafo/lessphp"
+        }
+      ]
+    },
+    {
+      "name": "oyejorge/less.php",
+      "SPDXID": "SPDXRef-composer-oyejorge-less.php-75c946",
+      "versionInfo": "~> 1.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/oyejorge/less.php"
+        }
+      ]
+    },
+    {
+      "name": "wikimedia/less.php",
+      "SPDXID": "SPDXRef-composer-wikimedia-less.php-75c946",
+      "versionInfo": "~> 3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:composer/wikimedia/less.php"
+        }
+      ]
+    },
+    {
+      "name": "10up/action-wordpress-plugin-deploy",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-deploy@stable"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "php-actions/composer",
+      "SPDXID": "SPDXRef-githubactions-php-actions-composer-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/php-actions/composer@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.thom4parisot/wp-less",
+      "SPDXID": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/thom4parisot/wp-less",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/thom4parisot/wp-less@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "relatedSpdxElement": "SPDXRef-composer-leafo-lessphp-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "relatedSpdxElement": "SPDXRef-composer-oyejorge-less.php-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "relatedSpdxElement": "SPDXRef-composer-wikimedia-less.php-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "relatedSpdxElement": "SPDXRef-githubactions-php-actions-composer-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-thom4parisot-wp-less-master-8c588a",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

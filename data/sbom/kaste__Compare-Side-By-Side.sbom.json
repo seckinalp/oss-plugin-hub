@@ -1,0 +1,76 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.kaste/Compare-Side-By-Side",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/2908d6ac-baf9-4623-b30d-113e52563f99",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:26Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "kaste/upgrade-messages-test-action",
+      "SPDXID": "SPDXRef-githubactions-kaste-upgrade-messages-test-action-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/kaste/upgrade-messages-test-action@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.kaste/Compare-Side-By-Side",
+      "SPDXID": "SPDXRef-github-kaste-Compare-Side-By-Side-master-a08bc7",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/kaste/Compare-Side-By-Side",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/kaste/Compare-Side-By-Side@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-kaste-Compare-Side-By-Side-master-a08bc7",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-kaste-Compare-Side-By-Side-master-a08bc7",
+      "relatedSpdxElement": "SPDXRef-githubactions-kaste-upgrade-messages-test-action-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-kaste-Compare-Side-By-Side-master-a08bc7",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.WordPress/debug-bar",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/5d2dbcaa-84d7-4e1f-90f5-0fc29f45dde0",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:53:09Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@master"
+        }
+      ]
+    },
+    {
+      "name": "10up/action-wordpress-plugin-deploy",
+      "SPDXID": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "versionInfo": "stable",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/10up/action-wordpress-plugin-deploy@stable"
+        }
+      ]
+    },
+    {
+      "name": "com.github.WordPress/debug-bar",
+      "SPDXID": "SPDXRef-github-WordPress-debug-bar-trunk-dca8a5",
+      "versionInfo": "trunk",
+      "downloadLocation": "git+https://github.com/WordPress/debug-bar",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/WordPress/debug-bar@trunk"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-WordPress-debug-bar-trunk-dca8a5",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-WordPress-debug-bar-trunk-dca8a5",
+      "relatedSpdxElement": "SPDXRef-githubactions-10up-action-wordpress-plugin-deploy-stable-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-WordPress-debug-bar-trunk-dca8a5",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

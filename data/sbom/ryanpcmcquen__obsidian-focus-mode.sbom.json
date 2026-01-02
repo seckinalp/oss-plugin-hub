@@ -1,0 +1,190 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ryanpcmcquen/obsidian-focus-mode",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/baac8006-c997-4345-a52a-33943f43a1bf",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:39Z"
+  },
+  "packages": [
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-11.2.1-de86eb",
+      "versionInfo": "^11.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@%5E11.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-typescript",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-typescript-8.3.3-a608fb",
+      "versionInfo": "^8.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-typescript@%5E8.3.3"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-14.18.33-42b207",
+      "versionInfo": "^14.18.33",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E14.18.33"
+        }
+      ]
+    },
+    {
+      "name": "obsidian",
+      "SPDXID": "SPDXRef-npm-obsidian-0.15.1-e5814b",
+      "versionInfo": "^0.15.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian@%5E0.15.1"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "SPDXID": "SPDXRef-npm-rollup-2.75.6-9beca9",
+      "versionInfo": "^2.75.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rollup@%5E2.75.6"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-npm-tslib-2.4.1-e80672",
+      "versionInfo": "^2.4.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@%5E2.4.1"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-4.7.4-44608f",
+      "versionInfo": "^4.7.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E4.7.4"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-18.0.0-2b92b9",
+      "versionInfo": "^18.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@%5E18.0.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.ryanpcmcquen/obsidian-focus-mode",
+      "SPDXID": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/ryanpcmcquen/obsidian-focus-mode",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MPL-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ryanpcmcquen/obsidian-focus-mode@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-11.2.1-de86eb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-typescript-8.3.3-a608fb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-14.18.33-42b207",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-0.15.1-e5814b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-2.75.6-9beca9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-tslib-2.4.1-e80672",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-4.7.4-44608f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-18.0.0-2b92b9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ryanpcmcquen-obsidian-focus-mode-master-9bd472",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

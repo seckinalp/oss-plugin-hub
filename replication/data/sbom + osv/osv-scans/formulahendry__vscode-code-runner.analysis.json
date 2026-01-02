@@ -1,0 +1,1845 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.171Z",
+  "source": "formulahendry__vscode-code-runner.osv.json",
+  "summary": {
+    "totalVulnerabilities": 18,
+    "uniqueVulnerabilities": 15,
+    "affectedPackages": 17,
+    "stalePackages": 18,
+    "stalePackagesOldFix": 17,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 0,
+      "LOW": 17
+    },
+    "recentVulnerabilities": 1,
+    "hasFixAvailable": 18
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-h6ch-v84p-w6p9",
+      "severity": "HIGH",
+      "severityScore": 7.5,
+      "cvssScores": [],
+      "aliases": [],
+      "summary": "Regular Expression Denial of Service (ReDoS)",
+      "details": "A vulnerability was found in diff before v3.5.0, the affected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) attacks.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "6 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2019-06-13T18:58:54Z",
+        "modifiedDate": "2021-02-24T19:27:02Z",
+        "daysSincePublished": 2379
+      },
+      "affected": {
+        "package": "diff",
+        "version": "3.4.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.4.0",
+        "fixedIn": "3.5.0",
+        "recommendation": "Upgrade to 3.5.0 or later",
+        "fixAvailableSince": "2021-02-24T19:27:02.000Z",
+        "daysSinceFix": 1757,
+        "monthsSinceFix": 58,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/kpdecker/jsdiff/commit/2aec4298639bf30fb88a00b356bf404d3551b8c0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1552148"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/npm:diff:20180305"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/1631"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.whitesourcesoftware.com/vulnerability-database/WS-2018-0590"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-93q8-gq69-wqmw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-3807"
+      ],
+      "summary": "Inefficient Regular Expression Complexity in chalk/ansi-regex",
+      "details": "ansi-regex is vulnerable to Inefficient Regular Expression Complexity which could lead to a denial of service when parsing invalid ANSI escape codes.\n\n**Proof of Concept**\n```js\nimport ansiRegex from 'ansi-regex';\nfor(var i = 1; i <= 50000; i++) {\n    var time = Date.now();\n    var attack_str = \"\\u001B[\"+\";\".repeat(i*10000);\n    ansiRegex().test(attack_str)\n    var time_cost = Date.now() - time;\n    console.log(\"attack_str.length: \" + attack_str.length + \": \" + time_cost+\" ms\")\n}\n```\nThe ReDOS is mainly due to the sub-patterns `[[\\\\]()#;?]*` and `(?:;[-a-zA-Z\\\\d\\\\/#&.:=?%@~_]*)*`",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-697",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-09-20T20:20:09Z",
+        "modifiedDate": "2023-11-08T04:06:25.310142Z",
+        "daysSincePublished": 1548
+      },
+      "affected": {
+        "package": "ansi-regex",
+        "version": "3.0.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.0",
+        "fixedIn": "6.0.1",
+        "recommendation": "Upgrade to 6.0.1 or later",
+        "fixAvailableSince": "2023-11-08T04:06:25.310Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3807"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/issues/38#issuecomment-924086311"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/issues/38#issuecomment-925924774"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/419250fa510bf31b4cc672e76537a64f9332e1f1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/75a657da7af875b2e2724fd6331bf0a4b23d3c9a"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/c3c0b3f2736b9c01feec0fef33980c43720dcde8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://app.snyk.io/vuln/SNYK-JS-ANSIREGEX-1583908"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/chalk/ansi-regex"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/releases/tag/v6.0.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20221014-0002"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-93q8-gq69-wqmw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-3807"
+      ],
+      "summary": "Inefficient Regular Expression Complexity in chalk/ansi-regex",
+      "details": "ansi-regex is vulnerable to Inefficient Regular Expression Complexity which could lead to a denial of service when parsing invalid ANSI escape codes.\n\n**Proof of Concept**\n```js\nimport ansiRegex from 'ansi-regex';\nfor(var i = 1; i <= 50000; i++) {\n    var time = Date.now();\n    var attack_str = \"\\u001B[\"+\";\".repeat(i*10000);\n    ansiRegex().test(attack_str)\n    var time_cost = Date.now() - time;\n    console.log(\"attack_str.length: \" + attack_str.length + \": \" + time_cost+\" ms\")\n}\n```\nThe ReDOS is mainly due to the sub-patterns `[[\\\\]()#;?]*` and `(?:;[-a-zA-Z\\\\d\\\\/#&.:=?%@~_]*)*`",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-697",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-09-20T20:20:09Z",
+        "modifiedDate": "2023-11-08T04:06:25.310142Z",
+        "daysSincePublished": 1548
+      },
+      "affected": {
+        "package": "ansi-regex",
+        "version": "4.1.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.0",
+        "fixedIn": "6.0.1",
+        "recommendation": "Upgrade to 6.0.1 or later",
+        "fixAvailableSince": "2023-11-08T04:06:25.310Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3807"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/issues/38#issuecomment-924086311"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/issues/38#issuecomment-925924774"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/419250fa510bf31b4cc672e76537a64f9332e1f1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/75a657da7af875b2e2724fd6331bf0a4b23d3c9a"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/commit/c3c0b3f2736b9c01feec0fef33980c43720dcde8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://app.snyk.io/vuln/SNYK-JS-ANSIREGEX-1583908"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/chalk/ansi-regex"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/chalk/ansi-regex/releases/tag/v6.0.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20221014-0002"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-v6h2-p8h4-qcjw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-5889"
+      ],
+      "summary": "brace-expansion Regular Expression Denial of Service vulnerability",
+      "details": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is `a5b98a4f30d7813266b221435e1eaaf25a1b0ac5`. It is recommended to upgrade the affected component.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "Last Year",
+        "isRecent": false,
+        "publishedDate": "2025-06-09T21:30:51Z",
+        "modifiedDate": "2025-06-11T20:54:10Z",
+        "daysSincePublished": 190
+      },
+      "affected": {
+        "package": "brace-expansion",
+        "version": "1.1.11",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.1.11",
+        "fixedIn": "2.0.2",
+        "recommendation": "Upgrade to 2.0.2 or later",
+        "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+        "daysSinceFix": 188,
+        "monthsSinceFix": 6,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5889"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/0b6a9781e18e9d2769bb2931f4856d1360243ed2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/15f9b3c75ebf5988198241fecaebdc45eff28a9f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/36603d5f3599a37af9e85eda30acd7d28599c36e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/juliangruber/brace-expansion/commit/c3c73c8b088defc70851843be88ccc3af08e7217"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/juliangruber/brace-expansion"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.311660"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?submit.585717"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-grv7-fg5c-xmjg",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4068"
+      ],
+      "summary": "Uncontrolled resource consumption in braces",
+      "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+      "cwes": [
+        {
+          "id": "CWE-1050",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-07-15T22:12:28.795792Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "braces",
+        "version": "3.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.2",
+        "fixedIn": "3.0.3",
+        "recommendation": "Upgrade to 3.0.3 or later",
+        "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+        "daysSinceFix": 519,
+        "monthsSinceFix": 17,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/issues/35"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/37"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/pull/40"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/braces"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3xgq-45jj-v275",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-21538"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in cross-spawn",
+      "details": "Versions of the package cross-spawn before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-11-08T06:30:47Z",
+        "modifiedDate": "2025-05-19T19:56:26Z",
+        "daysSincePublished": 404
+      },
+      "affected": {
+        "package": "cross-spawn",
+        "version": "6.0.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "6.0.5",
+        "fixedIn": "7.0.5",
+        "recommendation": "Upgrade to 7.0.5 or later",
+        "fixAvailableSince": "2025-05-19T19:56:26.000Z",
+        "daysSinceFix": 212,
+        "monthsSinceFix": 7,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21538"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/issues/165"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/pull/160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/moxystudio/node-cross-spawn/commit/d35c865b877d2f9ded7c1ed87521c2fdb689c8dd"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/moxystudio/node-cross-spawn"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-gxpj-cx7g-858c",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2017-16137"
+      ],
+      "summary": "Regular Expression Denial of Service in debug",
+      "details": "Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. \n\nAs it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.\n\nThis was later re-introduced in version v3.2.0, and then repatched in versions 3.2.7 and 4.3.1.\n\n## Recommendation\n\nVersion 2.x.x: Update to version 2.6.9 or later.\nVersion 3.1.x: Update to version 3.1.0 or later.\nVersion 3.2.x: Update to version 3.2.7 or later.\nVersion 4.x.x: Update to version 4.3.1 or later.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "7 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2018-08-09T20:18:07Z",
+        "modifiedDate": "2024-03-25T19:01:23Z",
+        "daysSincePublished": 2686
+      },
+      "affected": {
+        "package": "debug",
+        "version": "3.2.6",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.2.6",
+        "fixedIn": "2.6.9",
+        "recommendation": "Upgrade to 2.6.9 or later",
+        "fixAvailableSince": "2024-03-25T19:01:23.000Z",
+        "daysSinceFix": 632,
+        "monthsSinceFix": 21,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16137"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/debug-js/debug/issues/797"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/visionmedia/debug/issues/501"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/visionmedia/debug/pull/504"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/debug-js/debug/commit/4e2150207c568adb9ead8f4c4528016081c88020"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/debug-js/debug/commit/71169065b5262f9858ac78cc0b688c84a438f290"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/debug-js/debug/commit/b6d12fdbc63b483e5c969da33ea6adc09946b5ac"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/debug-js/debug/commit/f53962e944a87e6ca9bb622a2a12dffc22a9bb5a"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/visionmedia/debug"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3@%3Ccommits.netbeans.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63@%3Cnotifications.netbeans.apache.org%3E"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-2j2x-2gpw-g8fm",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2020-36632"
+      ],
+      "summary": "flat vulnerable to Prototype Pollution",
+      "details": "flat helps flatten/unflatten nested Javascript objects. A vulnerability, which was classified as critical, was found in hughsk flat up to 5.0.0. This affects the function unflatten of the file index.js. The manipulation leads to improperly controlled modification of object prototype attributes ('prototype pollution'). It is possible to initiate the attack remotely. Upgrading to version 5.0.1 can address this issue. The name of the patch is 20ef0ef55dfa028caddaedbcb33efbdb04d18e13. It is recommended to upgrade the affected component. The identifier VDB-216777 was assigned to this vulnerability.",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-12-25T21:30:22Z",
+        "modifiedDate": "2023-11-08T04:03:48.649741Z",
+        "daysSincePublished": 1087
+      },
+      "affected": {
+        "package": "flat",
+        "version": "4.1.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.1.0",
+        "fixedIn": "5.0.1",
+        "recommendation": "Upgrade to 5.0.1 or later",
+        "fixAvailableSince": "2023-11-08T04:03:48.649Z",
+        "daysSinceFix": 770,
+        "monthsSinceFix": 25,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-36632"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/hughsk/flat/issues/105"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/hughsk/flat/pull/106"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/hughsk/flat/commit/20ef0ef55dfa028caddaedbcb33efbdb04d18e13"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/hughsk/flat"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/hughsk/flat/releases/tag/5.0.1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?ctiid.216777"
+        },
+        {
+          "type": "WEB",
+          "url": "https://vuldb.com/?id.216777"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-mh29-5h37-fv8m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-64718"
+      ],
+      "summary": "js-yaml has prototype pollution in merge (<<)",
+      "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-11-14T14:29:48Z",
+        "modifiedDate": "2025-11-17T15:20:43Z",
+        "daysSincePublished": 33
+      },
+      "affected": {
+        "package": "js-yaml",
+        "version": "3.13.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.13.1",
+        "fixedIn": "4.1.1",
+        "recommendation": "Upgrade to 4.1.1 or later",
+        "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+        "daysSinceFix": 30,
+        "monthsSinceFix": 1,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/nodeca/js-yaml"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-952p-6rrq-rcjv",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-4067"
+      ],
+      "summary": "Regular Expression Denial of Service (ReDoS) in micromatch",
+      "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-05-14T18:30:54Z",
+        "modifiedDate": "2024-08-28T13:12:26Z",
+        "daysSincePublished": 582
+      },
+      "affected": {
+        "package": "micromatch",
+        "version": "4.0.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.0.2",
+        "fixedIn": "4.0.8",
+        "recommendation": "Upgrade to 4.0.8 or later",
+        "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+        "daysSinceFix": 476,
+        "monthsSinceFix": 15,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/issues/243"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/247"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/pull/266"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+        },
+        {
+          "type": "WEB",
+          "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/micromatch/micromatch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-f8q6-p94x-37v3",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-3517"
+      ],
+      "summary": "minimatch ReDoS vulnerability",
+      "details": "A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        },
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-10-18T12:00:32Z",
+        "modifiedDate": "2024-02-14T18:15:16Z",
+        "daysSincePublished": 1156
+      },
+      "affected": {
+        "package": "minimatch",
+        "version": "3.0.4",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.4",
+        "fixedIn": "3.0.5",
+        "recommendation": "Upgrade to 3.0.5 or later",
+        "fixAvailableSince": "2024-02-14T18:15:16.000Z",
+        "daysSinceFix": 672,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3517"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/grafana/grafana-image-renderer/issues/329"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/nodejs/node/issues/42510"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/isaacs/minimatch/commit/a8763f4388e51956be62dc6025cec1126beeb5e6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/isaacs/minimatch"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00011.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-vh95-rmgr-6w4m",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2020-7598"
+      ],
+      "summary": "Prototype Pollution in minimist",
+      "details": "Affected versions of `minimist` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  \nParsing the argument `--__proto__.y=Polluted` adds a `y` property with value `Polluted` to all objects. The argument `--__proto__=Polluted` raises and uncaught error and crashes the application.  \nThis is exploitable if attackers have control over the arguments being passed to `minimist`.\n\n\n## Recommendation\n\nUpgrade to versions 0.2.1, 1.2.3 or later.",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "5 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2020-04-03T21:48:32Z",
+        "modifiedDate": "2025-01-14T08:57:16.325412Z",
+        "daysSincePublished": 2083
+      },
+      "affected": {
+        "package": "minimist",
+        "version": "0.0.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.0.8",
+        "fixedIn": "0.2.1",
+        "recommendation": "Upgrade to 0.2.1 or later",
+        "fixAvailableSince": "2025-01-14T08:57:16.325Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7598"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/10bd4cdf49d9686d48214be9d579a9cdfda37c68"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/38a4d1caead72ef99e824bb420a2528eec03d9ab"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/substack/minimist"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/1179"
+        },
+        {
+          "type": "WEB",
+          "url": "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-xvch-5gv4-984h",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-44906"
+      ],
+      "summary": "Prototype Pollution in minimist",
+      "details": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-03-18T00:01:09Z",
+        "modifiedDate": "2025-01-14T10:12:15.693708Z",
+        "daysSincePublished": 1370
+      },
+      "affected": {
+        "package": "minimist",
+        "version": "0.0.8",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.0.8",
+        "fixedIn": "1.2.6",
+        "recommendation": "Upgrade to 1.2.6 or later",
+        "fixAvailableSince": "2025-01-14T10:12:15.693Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/issues/11"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/substack/minimist/issues/164"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/pull/24"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/substack/minimist"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+        },
+        {
+          "type": "WEB",
+          "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hj48-42vr-x3v9",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2021-23343"
+      ],
+      "summary": "Regular Expression Denial of Service in path-parse",
+      "details": "Affected versions of npm package `path-parse` are vulnerable to Regular Expression Denial of Service (ReDoS) via splitDeviceRe, splitTailRe, and splitPathRe regular expressions. ReDoS exhibits polynomial worst-case time complexity.",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-08-10T15:33:47Z",
+        "modifiedDate": "2025-01-14T08:57:22.791123Z",
+        "daysSincePublished": 1590
+      },
+      "affected": {
+        "package": "path-parse",
+        "version": "1.0.5",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.0.5",
+        "fixedIn": "1.0.7",
+        "recommendation": "Upgrade to 1.0.7 or later",
+        "fixAvailableSince": "2025-01-14T08:57:22.791Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23343"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jbgutierrez/path-parse/issues/8"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jbgutierrez/path-parse/pull/10"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/jbgutierrez/path-parse/commit/eca63a7b9a473bf6978a2f5b7b3343662d1506f7"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/jbgutierrez/path-parse"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.apache.org/thread.html/r6a32cb3eda3b19096ad48ef1e7aa8f26e005f2f63765abb69ce08b85@%3Cdev.myfaces.apache.org%3E"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1279028"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-PATHPARSE-1077067"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25883"
+      ],
+      "summary": "semver vulnerable to Regular Expression Denial of Service",
+      "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-21T06:30:28Z",
+        "modifiedDate": "2024-12-06T20:34:31Z",
+        "daysSincePublished": 910
+      },
+      "affected": {
+        "package": "semver",
+        "version": "5.5.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.5.0",
+        "fixedIn": "7.5.2",
+        "recommendation": "Upgrade to 7.5.2 or later",
+        "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+        "daysSinceFix": 375,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/564"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/585"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/593"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/npm/node-semver"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241025-0004"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-c2qf-rxjj-qqgw",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2022-25883"
+      ],
+      "summary": "semver vulnerable to Regular Expression Denial of Service",
+      "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-06-21T06:30:28Z",
+        "modifiedDate": "2024-12-06T20:34:31Z",
+        "daysSincePublished": 910
+      },
+      "affected": {
+        "package": "semver",
+        "version": "5.7.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "5.7.0",
+        "fixedIn": "7.5.2",
+        "recommendation": "Upgrade to 7.5.2 or later",
+        "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+        "daysSinceFix": 375,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/564"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/585"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/pull/593"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/npm/node-semver"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.netapp.com/advisory/ntap-20241025-0004"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p9pc-299p-vxgp",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2020-7608"
+      ],
+      "summary": "yargs-parser Vulnerable to Prototype Pollution",
+      "details": "Affected versions of `yargs-parser` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  \nParsing the argument `--foo.__proto__.bar baz'` adds a `bar` property with value `baz` to all objects. This is only exploitable if attackers have control over the arguments being passed to `yargs-parser`.\n\n\n\n## Recommendation\n\nUpgrade to versions 13.1.2, 15.0.1, 18.1.1 or later.",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        },
+        {
+          "id": "CWE-915",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "5 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2020-09-04T18:00:54Z",
+        "modifiedDate": "2025-01-14T08:57:10.212240Z",
+        "daysSincePublished": 1930
+      },
+      "affected": {
+        "package": "yargs-parser",
+        "version": "11.1.1",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "11.1.1",
+        "fixedIn": "13.1.2",
+        "recommendation": "Upgrade to 13.1.2 or later",
+        "fixAvailableSince": "2025-01-14T08:57:10.212Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7608"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yargs/yargs-parser/commit/1c417bd0b42b09c475ee881e36d292af4fa2cc36"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yargs/yargs-parser/commit/63810ca1ae1a24b08293a4d971e70e058c7a41e2"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/yargs/yargs-parser"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-YARGSPARSER-560381"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/1500"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-p9pc-299p-vxgp",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2020-7608"
+      ],
+      "summary": "yargs-parser Vulnerable to Prototype Pollution",
+      "details": "Affected versions of `yargs-parser` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  \nParsing the argument `--foo.__proto__.bar baz'` adds a `bar` property with value `baz` to all objects. This is only exploitable if attackers have control over the arguments being passed to `yargs-parser`.\n\n\n\n## Recommendation\n\nUpgrade to versions 13.1.2, 15.0.1, 18.1.1 or later.",
+      "cwes": [
+        {
+          "id": "CWE-1321",
+          "name": "Improperly Controlled Modification of Object Prototype Attributes (Prototype Pollution)"
+        },
+        {
+          "id": "CWE-915",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "5 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2020-09-04T18:00:54Z",
+        "modifiedDate": "2025-01-14T08:57:10.212240Z",
+        "daysSincePublished": 1930
+      },
+      "affected": {
+        "package": "yargs-parser",
+        "version": "13.0.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "13.0.0",
+        "fixedIn": "13.1.2",
+        "recommendation": "Upgrade to 13.1.2 or later",
+        "fixAvailableSince": "2025-01-14T08:57:10.212Z",
+        "daysSinceFix": 337,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7608"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yargs/yargs-parser/commit/1c417bd0b42b09c475ee881e36d292af4fa2cc36"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/yargs/yargs-parser/commit/63810ca1ae1a24b08293a4d971e70e058c7a41e2"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/yargs/yargs-parser"
+        },
+        {
+          "type": "WEB",
+          "url": "https://snyk.io/vuln/SNYK-JS-YARGSPARSER-560381"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.npmjs.com/advisories/1500"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "ansi-regex",
+      "currentVersion": "3.0.0",
+      "fixedIn": "6.0.1",
+      "vulnerabilities": [
+        "GHSA-93q8-gq69-wqmw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 6.0.1 or later",
+      "fixAvailableSince": "2023-11-08T04:06:25.310Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    },
+    {
+      "package": "ansi-regex",
+      "currentVersion": "4.1.0",
+      "fixedIn": "6.0.1",
+      "vulnerabilities": [
+        "GHSA-93q8-gq69-wqmw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 6.0.1 or later",
+      "fixAvailableSince": "2023-11-08T04:06:25.310Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    },
+    {
+      "package": "brace-expansion",
+      "currentVersion": "1.1.11",
+      "fixedIn": "2.0.2",
+      "vulnerabilities": [
+        "GHSA-v6h2-p8h4-qcjw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.0.2 or later",
+      "fixAvailableSince": "2025-06-11T20:54:10.000Z",
+      "daysSinceFix": 188,
+      "monthsSinceFix": 6,
+      "isOldFix": true
+    },
+    {
+      "package": "braces",
+      "currentVersion": "3.0.2",
+      "fixedIn": "3.0.3",
+      "vulnerabilities": [
+        "GHSA-grv7-fg5c-xmjg"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.3 or later",
+      "fixAvailableSince": "2024-07-15T22:12:28.795Z",
+      "daysSinceFix": 519,
+      "monthsSinceFix": 17,
+      "isOldFix": true
+    },
+    {
+      "package": "cross-spawn",
+      "currentVersion": "6.0.5",
+      "fixedIn": "7.0.5",
+      "vulnerabilities": [
+        "GHSA-3xgq-45jj-v275"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.0.5 or later",
+      "fixAvailableSince": "2025-05-19T19:56:26.000Z",
+      "daysSinceFix": 212,
+      "monthsSinceFix": 7,
+      "isOldFix": true
+    },
+    {
+      "package": "debug",
+      "currentVersion": "3.2.6",
+      "fixedIn": "2.6.9",
+      "vulnerabilities": [
+        "GHSA-gxpj-cx7g-858c"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 2.6.9 or later",
+      "fixAvailableSince": "2024-03-25T19:01:23.000Z",
+      "daysSinceFix": 632,
+      "monthsSinceFix": 21,
+      "isOldFix": true
+    },
+    {
+      "package": "diff",
+      "currentVersion": "3.4.0",
+      "fixedIn": "3.5.0",
+      "vulnerabilities": [
+        "GHSA-h6ch-v84p-w6p9"
+      ],
+      "severity": "HIGH",
+      "recommendation": "Upgrade to 3.5.0 or later",
+      "fixAvailableSince": "2021-02-24T19:27:02.000Z",
+      "daysSinceFix": 1757,
+      "monthsSinceFix": 58,
+      "isOldFix": true
+    },
+    {
+      "package": "flat",
+      "currentVersion": "4.1.0",
+      "fixedIn": "5.0.1",
+      "vulnerabilities": [
+        "GHSA-2j2x-2gpw-g8fm"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.0.1 or later",
+      "fixAvailableSince": "2023-11-08T04:03:48.649Z",
+      "daysSinceFix": 770,
+      "monthsSinceFix": 25,
+      "isOldFix": true
+    },
+    {
+      "package": "js-yaml",
+      "currentVersion": "3.13.1",
+      "fixedIn": "4.1.1",
+      "vulnerabilities": [
+        "GHSA-mh29-5h37-fv8m"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.1.1 or later",
+      "fixAvailableSince": "2025-11-17T15:20:43.000Z",
+      "daysSinceFix": 30,
+      "monthsSinceFix": 1,
+      "isOldFix": false
+    },
+    {
+      "package": "micromatch",
+      "currentVersion": "4.0.2",
+      "fixedIn": "4.0.8",
+      "vulnerabilities": [
+        "GHSA-952p-6rrq-rcjv"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 4.0.8 or later",
+      "fixAvailableSince": "2024-08-28T13:12:26.000Z",
+      "daysSinceFix": 476,
+      "monthsSinceFix": 15,
+      "isOldFix": true
+    },
+    {
+      "package": "minimatch",
+      "currentVersion": "3.0.4",
+      "fixedIn": "3.0.5",
+      "vulnerabilities": [
+        "GHSA-f8q6-p94x-37v3"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.0.5 or later",
+      "fixAvailableSince": "2024-02-14T18:15:16.000Z",
+      "daysSinceFix": 672,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "minimist",
+      "currentVersion": "0.0.8",
+      "fixedIn": "0.2.1",
+      "vulnerabilities": [
+        "GHSA-vh95-rmgr-6w4m",
+        "GHSA-xvch-5gv4-984h"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 0.2.1 or later",
+      "fixAvailableSince": "2025-01-14T08:57:16.325Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "path-parse",
+      "currentVersion": "1.0.5",
+      "fixedIn": "1.0.7",
+      "vulnerabilities": [
+        "GHSA-hj48-42vr-x3v9"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.0.7 or later",
+      "fixAvailableSince": "2025-01-14T08:57:22.791Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "semver",
+      "currentVersion": "5.5.0",
+      "fixedIn": "7.5.2",
+      "vulnerabilities": [
+        "GHSA-c2qf-rxjj-qqgw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.5.2 or later",
+      "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+      "daysSinceFix": 375,
+      "monthsSinceFix": 12,
+      "isOldFix": true
+    },
+    {
+      "package": "semver",
+      "currentVersion": "5.7.0",
+      "fixedIn": "7.5.2",
+      "vulnerabilities": [
+        "GHSA-c2qf-rxjj-qqgw"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 7.5.2 or later",
+      "fixAvailableSince": "2024-12-06T20:34:31.000Z",
+      "daysSinceFix": 375,
+      "monthsSinceFix": 12,
+      "isOldFix": true
+    },
+    {
+      "package": "yargs-parser",
+      "currentVersion": "11.1.1",
+      "fixedIn": "13.1.2",
+      "vulnerabilities": [
+        "GHSA-p9pc-299p-vxgp"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 13.1.2 or later",
+      "fixAvailableSince": "2025-01-14T08:57:10.212Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "yargs-parser",
+      "currentVersion": "13.0.0",
+      "fixedIn": "13.1.2",
+      "vulnerabilities": [
+        "GHSA-p9pc-299p-vxgp"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 13.1.2 or later",
+      "fixAvailableSince": "2025-01-14T08:57:10.212Z",
+      "daysSinceFix": 337,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "1 HIGH severity vulnerabilities detected. Update as soon as possible."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "1 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "HIGH",
+      "message": "17 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "18 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

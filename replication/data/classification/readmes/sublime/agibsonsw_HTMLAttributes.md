@@ -1,0 +1,22 @@
+These are fairly straight-forward HTML attribute completions for 
+Sublime Text, including most HTML5 attributes.
+
+It includes completion of many standard values. For example, typing 
+the letter 'c' in the type="" attribute will complete "checkbox". 
+If you Backspace and enter the letter 't' it will be replaced 
+with "text". "text/css" and "text/javascript" for the type- 
+attribute are inserted by typing 'j' or 'cs' within the quotes.
+
+There are two versions for some boolean attributes. For example:
+CHECKED, or 
+checked="checked"
+
+Depending on your settings you may need to press Ctrl-Space to 
+display the completions within an opening HTML-tag. I just type 
+1 or 2 letters and press the Tab key! This uses the fuzzy-search 
+feature of ST, and ST will also 'learn' about your preferences. 
+With a little practice you can fill-in attributes extremely 
+quickly.
+
+Note: The Emmet (formerly ZenCoding) package uses a different 
+approach, so it may not sit comfortably with HTMLAttributes.

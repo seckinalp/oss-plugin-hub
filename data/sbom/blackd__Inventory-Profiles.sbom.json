@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.blackd/Inventory-Profiles",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/5b94a7b9-6e32-4cbd-91dd-687933587ad6",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:10Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.blackd/Inventory-Profiles",
+      "SPDXID": "SPDXRef-github-blackd-Inventory-Profiles-all-in-one-66deae",
+      "versionInfo": "all-in-one",
+      "downloadLocation": "git+https://github.com/blackd/Inventory-Profiles",
+      "filesAnalyzed": false,
+      "licenseDeclared": "AGPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/blackd/Inventory-Profiles@all-in-one"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-blackd-Inventory-Profiles-all-in-one-66deae",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

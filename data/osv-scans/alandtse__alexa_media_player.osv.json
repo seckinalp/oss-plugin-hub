@@ -1,0 +1,2717 @@
+Warning: --sbom has been deprecated in favor of -L
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/alandtse__alexa_media_player.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "aiohttp",
+            "version": "3.11.16",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9548-qrrj-x5pj"
+              ],
+              "aliases": [
+                "CVE-2025-53643",
+                "GHSA-9548-qrrj-x5pj"
+              ],
+              "max_severity": "1.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-9548-qrrj-x5pj/GHSA-9548-qrrj-x5pj.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.12.14"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.14.4",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.16.2",
+                    "0.16.3",
+                    "0.16.4",
+                    "0.16.5",
+                    "0.16.6",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.17.2",
+                    "0.17.3",
+                    "0.17.4",
+                    "0.18.0",
+                    "0.18.1",
+                    "0.18.2",
+                    "0.18.3",
+                    "0.18.4",
+                    "0.19.0",
+                    "0.2",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.21.0",
+                    "0.21.1",
+                    "0.21.2",
+                    "0.21.4",
+                    "0.21.5",
+                    "0.21.6",
+                    "0.22.0",
+                    "0.22.0a0",
+                    "0.22.0b0",
+                    "0.22.0b1",
+                    "0.22.0b2",
+                    "0.22.0b3",
+                    "0.22.0b4",
+                    "0.22.0b5",
+                    "0.22.0b6",
+                    "0.22.1",
+                    "0.22.2",
+                    "0.22.3",
+                    "0.22.4",
+                    "0.22.5",
+                    "0.3",
+                    "0.4",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "0.4.4",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.10.0",
+                    "3.10.0b1",
+                    "3.10.0rc0",
+                    "3.10.1",
+                    "3.10.10",
+                    "3.10.11",
+                    "3.10.11rc0",
+                    "3.10.2",
+                    "3.10.3",
+                    "3.10.4",
+                    "3.10.5",
+                    "3.10.6",
+                    "3.10.6rc0",
+                    "3.10.6rc1",
+                    "3.10.6rc2",
+                    "3.10.7",
+                    "3.10.8",
+                    "3.10.9",
+                    "3.11.0",
+                    "3.11.0b0",
+                    "3.11.0b1",
+                    "3.11.0b2",
+                    "3.11.0b3",
+                    "3.11.0b4",
+                    "3.11.0b5",
+                    "3.11.0rc0",
+                    "3.11.0rc1",
+                    "3.11.0rc2",
+                    "3.11.1",
+                    "3.11.10",
+                    "3.11.11",
+                    "3.11.12",
+                    "3.11.13",
+                    "3.11.14",
+                    "3.11.15",
+                    "3.11.16",
+                    "3.11.17",
+                    "3.11.18",
+                    "3.11.2",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.11.5",
+                    "3.11.6",
+                    "3.11.7",
+                    "3.11.8",
+                    "3.11.9",
+                    "3.12.0",
+                    "3.12.0b0",
+                    "3.12.0b1",
+                    "3.12.0b2",
+                    "3.12.0b3",
+                    "3.12.0rc0",
+                    "3.12.0rc1",
+                    "3.12.1",
+                    "3.12.10",
+                    "3.12.11",
+                    "3.12.12",
+                    "3.12.13",
+                    "3.12.1rc0",
+                    "3.12.2",
+                    "3.12.3",
+                    "3.12.4",
+                    "3.12.6",
+                    "3.12.7",
+                    "3.12.7rc0",
+                    "3.12.8",
+                    "3.12.9",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1",
+                    "3.9.2",
+                    "3.9.3",
+                    "3.9.4",
+                    "3.9.4rc0",
+                    "3.9.5"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-53643"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-444"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-07-14T19:33:31Z",
+                "nvd_published_at": "2025-07-14T21:15:27Z",
+                "severity": "LOW"
+              },
+              "details": "### Summary\nThe Python parser is vulnerable to a request smuggling vulnerability due to not parsing trailer sections of an HTTP request.\n\n### Impact\nIf a pure Python version of aiohttp is installed (i.e. without the usual C extensions) or AIOHTTP_NO_EXTENSIONS is enabled, then an attacker may be able to execute a request smuggling attack to bypass certain firewalls or proxy protections.\n\n----\n\nPatch: https://github.com/aio-libs/aiohttp/commit/e8d774f635dc6d1cd3174d0e38891da5de0e2b6a",
+              "id": "GHSA-9548-qrrj-x5pj",
+              "modified": "2025-07-15T01:17:07.184086Z",
+              "published": "2025-07-14T19:33:31Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-9548-qrrj-x5pj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53643"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/e8d774f635dc6d1cd3174d0e38891da5de0e2b6a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aio-libs/aiohttp"
+                }
+              ],
+              "related": [
+                "CGA-9qh3-hfch-g4rf",
+                "CGA-f59m-6vrr-qp9v"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": " AIOHTTP is vulnerable to HTTP Request/Response Smuggling through incorrect parsing of chunked trailer sections"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "filelock",
+            "version": "3.12.4",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-w853-jp5j-5j7f"
+              ],
+              "aliases": [
+                "CVE-2025-68146",
+                "GHSA-w853-jp5j-5j7f"
+              ],
+              "max_severity": "6.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-w853-jp5j-5j7f/GHSA-w853-jp5j-5j7f.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "filelock",
+                    "purl": "pkg:pypi/filelock"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.20.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.10",
+                    "2.0.11",
+                    "2.0.12",
+                    "2.0.13",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "3.0.0",
+                    "3.0.10",
+                    "3.0.12",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.6",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.10.0",
+                    "3.10.1",
+                    "3.10.2",
+                    "3.10.3",
+                    "3.10.4",
+                    "3.10.5",
+                    "3.10.6",
+                    "3.10.7",
+                    "3.11.0",
+                    "3.12.0",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.3",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.1",
+                    "3.13.2",
+                    "3.13.3",
+                    "3.13.4",
+                    "3.14.0",
+                    "3.15.0",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.16.0",
+                    "3.16.1",
+                    "3.17.0",
+                    "3.18.0",
+                    "3.19.1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.20.0",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.5.0",
+                    "3.5.1",
+                    "3.6.0",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.9.0",
+                    "3.9.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-68146"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-362",
+                  "CWE-367",
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-16T20:52:55Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nA Time-of-Check-Time-of-Use (TOCTOU) race condition allows local attackers to corrupt or truncate arbitrary user files through symlink attacks. The vulnerability exists in both Unix and Windows lock file creation where filelock checks if a file exists before opening it with O_TRUNC. An attacker can create a symlink pointing to a victim file in the time gap between the check and open, causing os.open() to follow the symlink and truncate the target file.\n\n**Who is impacted:**\n\nAll users of filelock on Unix, Linux, macOS, and Windows systems. The vulnerability cascades to dependent libraries:\n\n- **virtualenv users**: Configuration files can be overwritten with virtualenv metadata, leaking sensitive paths\n- **PyTorch users**: CPU ISA cache or model checkpoints can be corrupted, causing crashes or ML pipeline failures\n- **poetry/tox users**: through using virtualenv or filelock on their own.\n\nAttack requires local filesystem access and ability to create symlinks (standard user permissions on Unix; Developer Mode on Windows 10+). Exploitation succeeds within 1-3 attempts when lock file paths are predictable.\n\n### Patches\n\nFixed in version **3.20.1**.\n\n**Unix/Linux/macOS fix:** Added O_NOFOLLOW flag to os.open() in UnixFileLock.\\_acquire() to prevent symlink following.\n\n**Windows fix:** Added GetFileAttributesW API check to detect reparse points (symlinks/junctions) before opening files in WindowsFileLock.\\_acquire().\n\n**Users should upgrade to filelock 3.20.1 or later immediately.**\n\n### Workarounds\n\nIf immediate upgrade is not possible:\n\n1. Use SoftFileLock instead of UnixFileLock/WindowsFileLock (note: different locking semantics, may not be suitable for all use cases)\n2. Ensure lock file directories have restrictive permissions (chmod 0700) to prevent untrusted users from creating symlinks\n3. Monitor lock file directories for suspicious symlinks before running trusted applications\n\n**Warning:** These workarounds provide only partial mitigation. The race condition remains exploitable. Upgrading to version 3.20.1 is strongly recommended.\n\n______________________________________________________________________\n\n## Technical Details: How the Exploit Works\n\n### The Vulnerable Code Pattern\n\n**Unix/Linux/macOS** (`src/filelock/_unix.py:39-44`):\n\n```python\ndef _acquire(self) -\u003e None:\n    ensure_directory_exists(self.lock_file)\n    open_flags = os.O_RDWR | os.O_TRUNC  # (1) Prepare to truncate\n    if not Path(self.lock_file).exists():  # (2) CHECK: Does file exist?\n        open_flags |= os.O_CREAT\n    fd = os.open(self.lock_file, open_flags, ...)  # (3) USE: Open and truncate\n```\n\n**Windows** (`src/filelock/_windows.py:19-28`):\n\n```python\ndef _acquire(self) -\u003e None:\n    raise_on_not_writable_file(self.lock_file)  # (1) Check writability\n    ensure_directory_exists(self.lock_file)\n    flags = os.O_RDWR | os.O_CREAT | os.O_TRUNC  # (2) Prepare to truncate\n    fd = os.open(self.lock_file, flags, ...)  # (3) Open and truncate\n```\n\n### The Race Window\n\nThe vulnerability exists in the gap between operations:\n\n**Unix variant:**\n\n```\nTime    Victim Thread                          Attacker Thread\n----    -------------                          ---------------\nT0      Check: lock_file exists? → False\nT1                                             ↓ RACE WINDOW\nT2                                             Create symlink: lock → victim_file\nT3      Open lock_file with O_TRUNC\n        → Follows symlink\n        → Opens victim_file\n        → Truncates victim_file to 0 bytes! ☠️\n```\n\n**Windows variant:**\n\n```\nTime    Victim Thread                          Attacker Thread\n----    -------------                          ---------------\nT0      Check: lock_file writable?\nT1                                             ↓ RACE WINDOW\nT2                                             Create symlink: lock → victim_file\nT3      Open lock_file with O_TRUNC\n        → Follows symlink/junction\n        → Opens victim_file\n        → Truncates victim_file to 0 bytes! ☠️\n```\n\n### Step-by-Step Attack Flow\n\n**1. Attacker Setup:**\n\n```python\n# Attacker identifies target application using filelock\nlock_path = \"/tmp/myapp.lock\"  # Predictable lock path\nvictim_file = \"/home/victim/.ssh/config\"  # High-value target\n```\n\n**2. Attacker Creates Race Condition:**\n\n```python\nimport os\nimport threading\n\n\ndef attacker_thread():\n    # Remove any existing lock file\n    try:\n        os.unlink(lock_path)\n    except FileNotFoundError:\n        pass\n\n    # Create symlink pointing to victim file\n    os.symlink(victim_file, lock_path)\n    print(f\"[Attacker] Created: {lock_path} → {victim_file}\")\n\n\n# Launch attack\nthreading.Thread(target=attacker_thread).start()\n```\n\n**3. Victim Application Runs:**\n\n```python\nfrom filelock import UnixFileLock\n\n# Normal application code\nlock = UnixFileLock(\"/tmp/myapp.lock\")\nlock.acquire()  # ← VULNERABILITY TRIGGERED HERE\n# At this point, /home/victim/.ssh/config is now 0 bytes!\n```\n\n**4. What Happens Inside os.open():**\n\nOn Unix systems, when `os.open()` is called:\n\n```c\n// Linux kernel behavior (simplified)\nint open(const char *pathname, int flags) {\n    struct file *f = path_lookup(pathname);  // Resolves symlinks by default!\n\n    if (flags \u0026 O_TRUNC) {\n        truncate_file(f);  // ← Truncates the TARGET of the symlink\n    }\n\n    return file_descriptor;\n}\n```\n\nWithout `O_NOFOLLOW` flag, the kernel follows the symlink and truncates the target file.\n\n### Why the Attack Succeeds Reliably\n\n**Timing Characteristics:**\n\n- **Check operation** (Path.exists()): ~100-500 nanoseconds\n- **Symlink creation** (os.symlink()): ~1-10 microseconds\n- **Race window**: ~1-5 microseconds (very small but exploitable)\n- **Thread scheduling quantum**: ~1-10 milliseconds\n\n**Success factors:**\n\n1. **Tight loop**: Running attack in a loop hits the race window within 1-3 attempts\n2. **CPU scheduling**: Modern OS thread schedulers frequently context-switch during I/O operations\n3. **No synchronization**: No atomic file creation prevents the race\n4. **Symlink speed**: Creating symlinks is extremely fast (metadata-only operation)\n\n### Real-World Attack Scenarios\n\n**Scenario 1: virtualenv Exploitation**\n\n```python\n# Victim runs: python -m venv /tmp/myenv\n# Attacker racing to create:\nos.symlink(\"/home/victim/.bashrc\", \"/tmp/myenv/pyvenv.cfg\")\n\n# Result: /home/victim/.bashrc overwritten with:\n# home = /usr/bin/python3\n# include-system-site-packages = false\n# version = 3.11.2\n# ← Original .bashrc contents LOST + virtualenv metadata LEAKED to attacker\n```\n\n**Scenario 2: PyTorch Cache Poisoning**\n\n```python\n# Victim runs: import torch\n# PyTorch checks CPU capabilities, uses filelock on cache\n# Attacker racing to create:\nos.symlink(\"/home/victim/.torch/compiled_model.pt\", \"/home/victim/.cache/torch/cpu_isa_check.lock\")\n\n# Result: Trained ML model checkpoint truncated to 0 bytes\n# Impact: Weeks of training lost, ML pipeline DoS\n```\n\n### Why Standard Defenses Don't Help\n\n**File permissions don't prevent this:**\n\n- Attacker doesn't need write access to victim_file\n- os.open() with O_TRUNC follows symlinks using the *victim's* permissions\n- The victim process truncates its own file\n\n**Directory permissions help but aren't always feasible:**\n\n- Lock files often created in shared /tmp directory (mode 1777)\n- Applications may not control lock file location\n- Many apps use predictable paths in user-writable directories\n\n**File locking doesn't prevent this:**\n\n- The truncation happens *during* the open() call, before any lock is acquired\n- fcntl.flock() only prevents concurrent lock acquisition, not symlink attacks\n\n### Exploitation Proof-of-Concept Results\n\nFrom empirical testing with the provided PoCs:\n\n**Simple Direct Attack** (`filelock_simple_poc.py`):\n\n- Success rate: 33% per attempt (1 in 3 tries)\n- Average attempts to success: 2.1\n- Target file reduced to 0 bytes in \\\u003c100ms\n\n**virtualenv Attack** (`weaponized_virtualenv.py`):\n\n- Success rate: ~90% on first attempt (deterministic timing)\n- Information leaked: File paths, Python version, system configuration\n- Data corruption: Complete loss of original file contents\n\n**PyTorch Attack** (`weaponized_pytorch.py`):\n\n- Success rate: 25-40% per attempt\n- Impact: Application crashes, model loading failures\n- Recovery: Requires cache rebuild or model retraining\n\n**Discovered and reported by:** George Tsigourakos (@tsigouris007)",
+              "id": "GHSA-w853-jp5j-5j7f",
+              "modified": "2025-12-16T21:22:37.339159Z",
+              "published": "2025-12-16T20:52:55Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tox-dev/filelock/security/advisories/GHSA-w853-jp5j-5j7f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tox-dev/filelock/commit/4724d7f8c3393ec1f048c93933e6e3e6ec321f0e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/tox-dev/filelock"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tox-dev/filelock/releases/tag/3.20.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-attribute-constants"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pubs.opengroup.org/onlinepubs/9699919799/functions/open.html"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "filelock has a TOCTOU race condition which allows symlink attacks during lock file creation"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "h2",
+            "version": "4.2.0",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-847f-9342-265h"
+              ],
+              "aliases": [
+                "CVE-2025-57804",
+                "GHSA-847f-9342-265h"
+              ],
+              "max_severity": "6.9"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/08/GHSA-847f-9342-265h/GHSA-847f-9342-265h.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "h2",
+                    "purl": "pkg:pypi/h2"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.3.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "1.0.0",
+                    "1.1.0",
+                    "1.1.1",
+                    "2.0.0",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.1.5",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.2.6",
+                    "2.2.7",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.2.0",
+                    "4.0.0",
+                    "4.1.0",
+                    "4.2.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-57804"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-93"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-08-25T20:44:43Z",
+                "nvd_published_at": "2025-08-25T21:15:37Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nHTTP/2 request splitting vulnerability allows attackers to perform request smuggling attacks by injecting CRLF characters into headers. This occurs when servers downgrade HTTP/2 requests to HTTP/1.1 without properly validating header names/values, enabling attackers to manipulate request boundaries and bypass security controls.",
+              "id": "GHSA-847f-9342-265h",
+              "modified": "2025-11-03T21:50:25.428424Z",
+              "published": "2025-08-25T20:44:43Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-hyper/h2/security/advisories/GHSA-847f-9342-265h"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57804"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-hyper/h2/commit/035e9899f95e3709af098f578bfc3cd302298e3a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/python-hyper/h2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00004.html"
+                }
+              ],
+              "related": [
+                "CGA-gx9p-ww82-5jv2"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "h2 allows HTTP Request Smuggling due to illegal characters in headers"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "homeassistant",
+            "version": "2025.4.4",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mq77-rv97-285m"
+              ],
+              "aliases": [
+                "CVE-2025-62172",
+                "GHSA-mq77-rv97-285m"
+              ],
+              "max_severity": "8.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2025.10.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-mq77-rv97-285m/GHSA-mq77-rv97-285m.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "homeassistant",
+                    "purl": "pkg:pypi/homeassistant"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2025.1.0"
+                        },
+                        {
+                          "fixed": "2025.10.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "2025.1.0",
+                    "2025.1.1",
+                    "2025.1.2",
+                    "2025.1.3",
+                    "2025.1.4",
+                    "2025.10.0",
+                    "2025.10.0b0",
+                    "2025.10.0b1",
+                    "2025.10.0b2",
+                    "2025.10.0b4",
+                    "2025.10.0b5",
+                    "2025.10.0b6",
+                    "2025.10.0b7",
+                    "2025.10.1",
+                    "2025.2.0",
+                    "2025.2.0b0",
+                    "2025.2.0b1",
+                    "2025.2.0b10",
+                    "2025.2.0b11",
+                    "2025.2.0b12",
+                    "2025.2.0b2",
+                    "2025.2.0b3",
+                    "2025.2.0b4",
+                    "2025.2.0b5",
+                    "2025.2.0b6",
+                    "2025.2.0b7",
+                    "2025.2.0b8",
+                    "2025.2.0b9",
+                    "2025.2.1",
+                    "2025.2.2",
+                    "2025.2.3",
+                    "2025.2.4",
+                    "2025.2.5",
+                    "2025.3.0",
+                    "2025.3.0b0",
+                    "2025.3.0b1",
+                    "2025.3.0b2",
+                    "2025.3.0b3",
+                    "2025.3.0b4",
+                    "2025.3.0b5",
+                    "2025.3.0b6",
+                    "2025.3.0b7",
+                    "2025.3.0b8",
+                    "2025.3.1",
+                    "2025.3.2",
+                    "2025.3.3",
+                    "2025.3.4",
+                    "2025.4.0",
+                    "2025.4.0b0",
+                    "2025.4.0b1",
+                    "2025.4.0b10",
+                    "2025.4.0b11",
+                    "2025.4.0b12",
+                    "2025.4.0b13",
+                    "2025.4.0b14",
+                    "2025.4.0b15",
+                    "2025.4.0b2",
+                    "2025.4.0b3",
+                    "2025.4.0b4",
+                    "2025.4.0b5",
+                    "2025.4.0b6",
+                    "2025.4.0b7",
+                    "2025.4.0b8",
+                    "2025.4.0b9",
+                    "2025.4.1",
+                    "2025.4.2",
+                    "2025.4.3",
+                    "2025.4.4",
+                    "2025.5.0",
+                    "2025.5.0b0",
+                    "2025.5.0b1",
+                    "2025.5.0b10",
+                    "2025.5.0b2",
+                    "2025.5.0b3",
+                    "2025.5.0b4",
+                    "2025.5.0b5",
+                    "2025.5.0b6",
+                    "2025.5.0b7",
+                    "2025.5.0b8",
+                    "2025.5.0b9",
+                    "2025.5.1",
+                    "2025.5.2",
+                    "2025.5.3",
+                    "2025.6.0",
+                    "2025.6.0b0",
+                    "2025.6.0b1",
+                    "2025.6.0b2",
+                    "2025.6.0b3",
+                    "2025.6.0b4",
+                    "2025.6.0b5",
+                    "2025.6.0b6",
+                    "2025.6.0b7",
+                    "2025.6.0b8",
+                    "2025.6.0b9",
+                    "2025.6.1",
+                    "2025.6.2",
+                    "2025.6.3",
+                    "2025.7.0",
+                    "2025.7.0b0",
+                    "2025.7.0b1",
+                    "2025.7.0b2",
+                    "2025.7.0b3",
+                    "2025.7.0b4",
+                    "2025.7.0b5",
+                    "2025.7.0b6",
+                    "2025.7.0b7",
+                    "2025.7.0b8",
+                    "2025.7.0b9",
+                    "2025.7.1",
+                    "2025.7.2",
+                    "2025.7.3",
+                    "2025.7.4",
+                    "2025.8.0",
+                    "2025.8.0b0",
+                    "2025.8.0b1",
+                    "2025.8.0b2",
+                    "2025.8.0b3",
+                    "2025.8.0b4",
+                    "2025.8.0b5",
+                    "2025.8.1",
+                    "2025.8.2",
+                    "2025.8.3",
+                    "2025.9.0",
+                    "2025.9.0b0",
+                    "2025.9.0b1",
+                    "2025.9.0b2",
+                    "2025.9.0b3",
+                    "2025.9.0b4",
+                    "2025.9.0b5",
+                    "2025.9.0b6",
+                    "2025.9.1",
+                    "2025.9.2",
+                    "2025.9.3",
+                    "2025.9.4"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-62172"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-10-14T19:36:53Z",
+                "nvd_published_at": "2025-10-14T16:15:41Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\nAn authenticated party can add a malicious name to the Energy entity, allowing for Cross-Site Scripting attacks against anyone who can see the Energy dashboard, when they hover over any information point (The blue bar in the picture below)\n\u003cimg width=\"955\" height=\"568\" alt=\"1_cens\" src=\"https://github.com/user-attachments/assets/ed855216-c306-4b50-affc-cda100e72b74\" /\u003e\n\n\nAn alternative, and more impactful scenario, is that the entity gets a malicious name from the provider of the Entity (in this case the energy provider: Tibber), and gets exploited that way, through the default name.\n\n\n### Details\nThe incriminating entity in my scenario is from the Tibber integration, as shown in the screenshot below:\n\u003cimg width=\"822\" height=\"309\" alt=\"2_cens\" src=\"https://github.com/user-attachments/assets/d0d5a7aa-8d0c-4dcb-825b-e4cb8ea8885b\" /\u003e\n\n\nThe exploit should be possible regardless of the Energy integration, as the user can name the entity themselves and as such pick a malicious name. The default name given by the Energy integration can also be taken directly from their system, and be vulnerable that way. The execution happens within the energy dashboard, when hovering over a data point:\n\n\u003cimg width=\"1547\" height=\"575\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6e5880c2-cde4-4a96-b573-73756c69d0d8\" /\u003e\n\n\n**Update found after issue was reported:**\nI found that the issue presents itself for any entity with a html-entity in the name, which is included and rendered in the graph view. Following is an example for a speaker:\n\u003cimg width=\"423\" height=\"96\" alt=\"11_cens\" src=\"https://github.com/user-attachments/assets/3b4d43dd-d9e0-466b-85c0-277af3195acf\" /\u003e\n\n##### Source code\nThe relevant source code is added in a comment, but copy pasted here as well:\n\nThe offending line of code rendering the payload appears to be:\nhttps://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-devices-graph-card.ts#L110\nWhere the parameter marked with bold and italic is the vulnerable value:\nreturn \\`${title}${params.marker} **_${params.seriesName}_**: ${value}\\`;\n\n\nFrom the trace below, we can see that the only change done to the friendly_name of an entity is replacing underscores with spaces (_computeObjectId(entityId).replace(/_/g, \" \")_).\nWe can also determine that any power entity will have it's name used if there is one, and fall back to the friendly name if it cannot find one:\n```\ndata.push({\n  id: `${compare ? \"compare-\" : \"\"}${statId}-${type}`,\n  type: \"bar\",\n  cursor: \"default\",\n  name:\n    type in labels\n      ? labels[type]\n      : getStatisticLabel(\n          this.hass,\n          statId,\n          statisticsMetaData[statId]\n        ),\n```\n(https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-usage-graph-card.ts#L467-L478)\n\n\nThe value comes from:\n\n1. https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-usage-graph-card.ts#L467-L478 \n(This is the relevant call: _getStatisticLabel(this.hass, statId, statisticsMetaData[statId];_)\n\n2. getStatisticLabel is defined here: https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/data/recorder.ts#L329-L339 (This is the relevant call: _computeStateName(entity);_)\n\n3. computeStateName is defined here: https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/common/entity/compute_state_name.ts\n\n\n-----\n\n### PoC\n1. Set up a new energy provider with a price sensor.\n2. Give the price sensor a malicious name \n\u003cimg width=\"814\" height=\"100\" alt=\"4_cens\" src=\"https://github.com/user-attachments/assets/64bf7a00-47a2-46db-ae0f-b93e328837d2\" /\u003e\n\u003cimg width=\"459\" height=\"325\" alt=\"5_cens\" src=\"https://github.com/user-attachments/assets/e43e1c4f-bb4e-45b4-b46a-a6fc32b689ba\" /\u003e\n\n\n3. Configure the energy dashboard to get data from the price sensor\n\u003cimg width=\"582\" height=\"394\" alt=\"image\" src=\"https://github.com/user-attachments/assets/74c99ab8-0842-4c1b-b2e9-994827d89609\" /\u003e\n\n\u003cimg width=\"1678\" height=\"241\" alt=\"7_cens\" src=\"https://github.com/user-attachments/assets/24f4c83a-3c0a-4dea-9e1c-9c6b070fb28f\" /\u003e\n\n\n\u003cimg width=\"329\" height=\"497\" alt=\"8_cens\" src=\"https://github.com/user-attachments/assets/ccb7f90a-4745-4fb4-9efa-f30b3324cb3a\" /\u003e\n\n\n5. Look at the data and hover the data point for code to execute. (You may have to trigger data ingestion or add a false data point to be able to hover a data point when testing, you need at least one datapoint to trigger the vulnerability)\n\u003cimg width=\"1547\" height=\"575\" alt=\"9_cens\" src=\"https://github.com/user-attachments/assets/087cdf78-a503-427d-8e0c-bb5db24de5c8\" /\u003e\n\n\n### Impact\nIt is possible to exploit this over the internet, by using an energy provider, like Tibber, with a malicious name, and relying on the default naming in Home Assistant being used. This is actually how I found this bug:\n\u003cimg width=\"453\" height=\"152\" alt=\"10_cens\" src=\"https://github.com/user-attachments/assets/45451efb-2688-4589-a988-88d1fc0b4e25\" /\u003e\n\nThis means that a malicious employee or someone with access to your electricity provider can attack your Home Assistant instance from your electricity provider. I am unsure if you consider this a sanitization and escaping issue in the respective integrations or not, but I believe a central fix in the form of fixing the Energy Dashboard is more appropriate, rather than to rely on every integration properly handling user input.",
+              "id": "GHSA-mq77-rv97-285m",
+              "modified": "2025-10-22T19:01:00.313854Z",
+              "published": "2025-10-14T19:36:53Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/home-assistant/core/security/advisories/GHSA-mq77-rv97-285m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62172"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/home-assistant/core"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/common/entity/compute_state_name.ts"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/data/recorder.ts#L329-L339"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-devices-graph-card.ts#L110"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/home-assistant/frontend/blob/c13a80ce5e7ae39f0262444e2b6295a074a96732/src/panels/lovelace/cards/energy/hui-energy-usage-graph-card.ts#L467-L478"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Home Assistant has Stored XSS vulnerability in Energy dashboard from Energy Entity Name"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "requests",
+            "version": "2.32.3",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9hjg-9r4m-mvj7"
+              ],
+              "aliases": [
+                "CVE-2024-47081",
+                "GHSA-9hjg-9r4m-mvj7"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-9hjg-9r4m-mvj7/GHSA-9hjg-9r4m-mvj7.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.32.4"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.12.0",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.12.5",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.16.0",
+                    "2.16.1",
+                    "2.16.2",
+                    "2.16.3",
+                    "2.16.4",
+                    "2.16.5",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.17.3",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.18.3",
+                    "2.18.4",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.27.1",
+                    "2.28.0",
+                    "2.28.1",
+                    "2.28.2",
+                    "2.29.0",
+                    "2.3.0",
+                    "2.30.0",
+                    "2.31.0",
+                    "2.32.0",
+                    "2.32.1",
+                    "2.32.2",
+                    "2.32.3",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0",
+                    "2.9.1",
+                    "2.9.2"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-47081"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-522"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-09T19:06:08Z",
+                "nvd_published_at": "2025-06-09T18:15:24Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nDue to a URL parsing issue, Requests releases prior to 2.32.4 may leak .netrc credentials to third parties for specific maliciously-crafted URLs.\n\n### Workarounds\nFor older versions of Requests, use of the .netrc file can be disabled with `trust_env=False` on your Requests Session ([docs](https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env)).\n\n### References\nhttps://github.com/psf/requests/pull/6965\nhttps://seclists.org/fulldisclosure/2025/Jun/2",
+              "id": "GHSA-9hjg-9r4m-mvj7",
+              "modified": "2025-06-09T19:27:13.389930Z",
+              "published": "2025-06-09T19:06:08Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/security/advisories/GHSA-9hjg-9r4m-mvj7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47081"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/pull/6965"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/commit/96ba401c1296ab1dda74a2365ef36d88f7d144ef"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/psf/requests"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seclists.org/fulldisclosure/2025/Jun/2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/fulldisclosure/2025/Jun/2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2025/06/03/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2025/06/03/9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2025/06/04/1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2025/06/04/6"
+                }
+              ],
+              "related": [
+                "CGA-24q3-6wm3-783c",
+                "CGA-398v-hm2p-xw79",
+                "CGA-4754-mrr3-695h",
+                "CGA-578p-xq4j-24jg",
+                "CGA-57rv-3w6v-vfm6",
+                "CGA-6r3c-fq5f-jjfh",
+                "CGA-954m-ppvf-6f35",
+                "CGA-99hv-7qh4-6g5w",
+                "CGA-9rjg-3x9h-x532",
+                "CGA-9w68-hrgc-76hj",
+                "CGA-c2r7-2566-pwm6",
+                "CGA-c5vr-px9j-7fpg",
+                "CGA-cff4-qq7g-q7cr",
+                "CGA-cvpx-m598-wh5q",
+                "CGA-fxjq-g46f-7r8q",
+                "CGA-h2m6-v7c4-gf9v",
+                "CGA-hf94-r6q8-78mp",
+                "CGA-j4hh-xq5f-87rc",
+                "CGA-j4pw-wrph-m6cg",
+                "CGA-jgvj-g2p4-w9wq",
+                "CGA-jmr7-vvhv-6h2m",
+                "CGA-mg8p-7vfh-73jf",
+                "CGA-mm5x-7qfp-q7fp",
+                "CGA-p5qm-hr59-m2mh",
+                "CGA-pcg9-4mrr-wqmg",
+                "CGA-r73w-4q8h-cxgr",
+                "CGA-rq3q-962h-6765",
+                "CGA-vq42-r69c-q22r",
+                "CGA-xgx2-r76q-v9mw"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "urllib3",
+            "version": "1.26.20",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2xpw-w6gg-jr37"
+              ],
+              "aliases": [
+                "CVE-2025-66471",
+                "GHSA-2xpw-w6gg-jr37"
+              ],
+              "max_severity": "8.9"
+            },
+            {
+              "ids": [
+                "GHSA-gm62-xv2j-4w53"
+              ],
+              "aliases": [
+                "CVE-2025-66418",
+                "GHSA-gm62-xv2j-4w53"
+              ],
+              "max_severity": "8.9"
+            },
+            {
+              "ids": [
+                "GHSA-pq67-6m6q-mj2v"
+              ],
+              "aliases": [
+                "CVE-2025-50181",
+                "GHSA-pq67-6m6q-mj2v"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-2xpw-w6gg-jr37/GHSA-2xpw-w6gg-jr37.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0"
+                        },
+                        {
+                          "fixed": "2.6.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.10",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.13.1",
+                    "1.14",
+                    "1.15",
+                    "1.15.1",
+                    "1.16",
+                    "1.17",
+                    "1.18",
+                    "1.18.1",
+                    "1.19",
+                    "1.19.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.20",
+                    "1.21",
+                    "1.21.1",
+                    "1.22",
+                    "1.23",
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.17",
+                    "1.26.18",
+                    "1.26.19",
+                    "1.26.2",
+                    "1.26.20",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.8",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.0a1",
+                    "2.0.0a2",
+                    "2.0.0a3",
+                    "2.0.0a4",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.5.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66471"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-409"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-05T18:15:54Z",
+                "nvd_published_at": "2025-12-05T17:16:04Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n\nurllib3's [streaming API](https://urllib3.readthedocs.io/en/2.5.0/advanced-usage.html#streaming-and-i-o) is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once.\n\nWhen streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP `Content-Encoding` header (e.g., `gzip`, `deflate`, `br`, or `zstd`). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation.\n\nThe decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data; CWE-409) on the client side, even if the application only requested a small chunk of data.\n\n\n### Affected usages\n\nApplications and libraries using urllib3 version 2.5.0 and earlier to stream large compressed responses or content from untrusted sources.\n\n`stream()`, `read(amt=256)`, `read1(amt=256)`, `read_chunked(amt=256)`, `readinto(b)` are examples of `urllib3.HTTPResponse` method calls using the affected logic unless decoding is disabled explicitly.\n\n\n### Remediation\n\nUpgrade to at least urllib3 v2.6.0 in which the library avoids decompressing data that exceeds the requested amount.\n\nIf your environment contains a package facilitating the Brotli encoding, upgrade to at least Brotli 1.2.0 or brotlicffi 1.2.0.0 too. These versions are enforced by the `urllib3[brotli]` extra in the patched versions of urllib3.\n\n\n### Credits\n\nThe issue was reported by @Cycloctane.\nSupplemental information was provided by @stamparm during a security audit performed by [7ASecurity](https://7asecurity.com/) and facilitated by [OSTIF](https://ostif.org/).",
+              "id": "GHSA-2xpw-w6gg-jr37",
+              "modified": "2025-12-05T18:52:26.581492Z",
+              "published": "2025-12-05T18:15:54Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66471"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/urllib3/urllib3"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "urllib3 streaming API improperly handles highly compressed data"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-gm62-xv2j-4w53/GHSA-gm62-xv2j-4w53.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.24"
+                        },
+                        {
+                          "fixed": "2.6.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.17",
+                    "1.26.18",
+                    "1.26.19",
+                    "1.26.2",
+                    "1.26.20",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "2.0.0",
+                    "2.0.0a1",
+                    "2.0.0a2",
+                    "2.0.0a3",
+                    "2.0.0a4",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.5.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-66418"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-05T18:15:19Z",
+                "nvd_published_at": "2025-12-05T16:15:51Z",
+                "severity": "HIGH"
+              },
+              "details": "## Impact\n\nurllib3 supports chained HTTP encoding algorithms for response content according to RFC 9110 (e.g., `Content-Encoding: gzip, zstd`).\n\nHowever, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data.\n\n\n## Affected usages\n\nApplications and libraries using urllib3 version 2.5.0 and earlier for HTTP requests to untrusted sources unless they disable content decoding explicitly.\n\n\n## Remediation\n\nUpgrade to at least urllib3 v2.6.0 in which the library limits the number of links to 5.\n\nIf upgrading is not immediately possible, use [`preload_content=False`](https://urllib3.readthedocs.io/en/2.5.0/advanced-usage.html#streaming-and-i-o) and ensure that `resp.headers[\"content-encoding\"]` contains a safe number of encodings before reading the response content.",
+              "id": "GHSA-gm62-xv2j-4w53",
+              "modified": "2025-12-05T18:52:50.341818Z",
+              "published": "2025-12-05T18:15:19Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66418"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/urllib3/urllib3"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "urllib3 allows an unbounded number of links in the decompression chain"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/06/GHSA-pq67-6m6q-mj2v/GHSA-pq67-6m6q-mj2v.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "0.3",
+                    "0.3.1",
+                    "0.4.0",
+                    "0.4.1",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.10",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.13.1",
+                    "1.14",
+                    "1.15",
+                    "1.15.1",
+                    "1.16",
+                    "1.17",
+                    "1.18",
+                    "1.18.1",
+                    "1.19",
+                    "1.19.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.20",
+                    "1.21",
+                    "1.21.1",
+                    "1.22",
+                    "1.23",
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.17",
+                    "1.26.18",
+                    "1.26.19",
+                    "1.26.2",
+                    "1.26.20",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.8",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.0a1",
+                    "2.0.0a2",
+                    "2.0.0a3",
+                    "2.0.0a4",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.0",
+                    "2.4.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-50181"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-06-18T17:50:00Z",
+                "nvd_published_at": "2025-06-19T01:15:24Z",
+                "severity": "MODERATE"
+              },
+              "details": "urllib3 handles redirects and retries using the same mechanism, which is controlled by the `Retry` object. The most common way to disable redirects is at the request level, as follows:\n\n```python\nresp = urllib3.request(\"GET\", \"https://httpbin.org/redirect/1\", redirect=False)\nprint(resp.status)\n# 302\n```\n\nHowever, it is also possible to disable redirects, for all requests, by instantiating a `PoolManager` and specifying `retries` in a way that disable redirects:\n\n```python\nimport urllib3\n\nhttp = urllib3.PoolManager(retries=0)  # should raise MaxRetryError on redirect\nhttp = urllib3.PoolManager(retries=urllib3.Retry(redirect=0))  # equivalent to the above\nhttp = urllib3.PoolManager(retries=False)  # should return the first response\n\nresp = http.request(\"GET\", \"https://httpbin.org/redirect/1\")\n```\n\nHowever, the `retries` parameter is currently ignored, which means all the above examples don't disable redirects.\n\n## Affected usages\n\nPassing `retries` on `PoolManager` instantiation to disable redirects or restrict their number.\n\nBy default, requests and botocore users are not affected.\n\n## Impact\n\nRedirects are often used to exploit SSRF vulnerabilities. An application attempting to mitigate SSRF or open redirect vulnerabilities by disabling redirects at the PoolManager level will remain vulnerable.\n\n## Remediation\n\nYou can remediate this vulnerability with the following steps:\n\n * Upgrade to a patched version of urllib3. If your organization would benefit from the continued support of urllib3 1.x, please contact [sethmichaellarson@gmail.com](mailto:sethmichaellarson@gmail.com) to discuss sponsorship or contribution opportunities.\n * Disable redirects at the `request()` level instead of the `PoolManager()` level.",
+              "id": "GHSA-pq67-6m6q-mj2v",
+              "modified": "2025-06-19T16:15:11.736637Z",
+              "published": "2025-06-18T17:50:00Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-pq67-6m6q-mj2v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-50181"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/f05b1329126d5be6de501f9d1e3e36738bc08857"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/urllib3/urllib3"
+                }
+              ],
+              "related": [
+                "CGA-3hxw-cr3x-p4c5",
+                "CGA-4p7h-xgpg-2mxx",
+                "CGA-4qgw-vjh8-cq98",
+                "CGA-5phw-374r-3675",
+                "CGA-j2ph-8qfq-2q24",
+                "CGA-pfx8-jp22-3rcr"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "urllib3 redirects are not disabled when retries are disabled on PoolManager instantiation"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "uv",
+            "version": "0.6.10",
+            "ecosystem": "PyPI"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8qf3-x8v5-2pj8"
+              ],
+              "aliases": [
+                "CVE-2025-54368",
+                "GHSA-8qf3-x8v5-2pj8"
+              ],
+              "max_severity": "6.8"
+            },
+            {
+              "ids": [
+                "GHSA-pqhf-p39g-3x64"
+              ],
+              "aliases": [
+                "GHSA-pqhf-p39g-3x64"
+              ],
+              "max_severity": "6.8"
+            },
+            {
+              "ids": [
+                "GHSA-w476-p2h3-79g9"
+              ],
+              "aliases": [
+                "GHSA-w476-p2h3-79g9"
+              ],
+              "max_severity": ""
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.8.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/08/GHSA-8qf3-x8v5-2pj8/GHSA-8qf3-x8v5-2pj8.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "uv",
+                    "purl": "pkg:pypi/uv"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.8.6"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.0.5",
+                    "0.1.0",
+                    "0.1.1",
+                    "0.1.10",
+                    "0.1.11",
+                    "0.1.12",
+                    "0.1.13",
+                    "0.1.14",
+                    "0.1.15",
+                    "0.1.16",
+                    "0.1.17",
+                    "0.1.18",
+                    "0.1.19",
+                    "0.1.2",
+                    "0.1.20",
+                    "0.1.21",
+                    "0.1.22",
+                    "0.1.23",
+                    "0.1.24",
+                    "0.1.25",
+                    "0.1.26",
+                    "0.1.27",
+                    "0.1.28",
+                    "0.1.29",
+                    "0.1.3",
+                    "0.1.30",
+                    "0.1.31",
+                    "0.1.32",
+                    "0.1.33",
+                    "0.1.34",
+                    "0.1.35",
+                    "0.1.36",
+                    "0.1.37",
+                    "0.1.38",
+                    "0.1.39",
+                    "0.1.4",
+                    "0.1.40",
+                    "0.1.41",
+                    "0.1.42",
+                    "0.1.43",
+                    "0.1.44",
+                    "0.1.45",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.1.8",
+                    "0.1.9",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.10",
+                    "0.2.11",
+                    "0.2.12",
+                    "0.2.13",
+                    "0.2.14",
+                    "0.2.15",
+                    "0.2.16",
+                    "0.2.17",
+                    "0.2.18",
+                    "0.2.19",
+                    "0.2.2",
+                    "0.2.20",
+                    "0.2.21",
+                    "0.2.22",
+                    "0.2.23",
+                    "0.2.24",
+                    "0.2.25",
+                    "0.2.26",
+                    "0.2.27",
+                    "0.2.28",
+                    "0.2.29",
+                    "0.2.3",
+                    "0.2.30",
+                    "0.2.31",
+                    "0.2.32",
+                    "0.2.33",
+                    "0.2.34",
+                    "0.2.35",
+                    "0.2.36",
+                    "0.2.37",
+                    "0.2.4",
+                    "0.2.5",
+                    "0.2.6",
+                    "0.2.7",
+                    "0.2.8",
+                    "0.2.9",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.3.5",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.10",
+                    "0.4.11",
+                    "0.4.12",
+                    "0.4.13",
+                    "0.4.14",
+                    "0.4.15",
+                    "0.4.16",
+                    "0.4.17",
+                    "0.4.18",
+                    "0.4.19",
+                    "0.4.2",
+                    "0.4.20",
+                    "0.4.21",
+                    "0.4.22",
+                    "0.4.23",
+                    "0.4.24",
+                    "0.4.25",
+                    "0.4.26",
+                    "0.4.27",
+                    "0.4.28",
+                    "0.4.29",
+                    "0.4.3",
+                    "0.4.30",
+                    "0.4.4",
+                    "0.4.5",
+                    "0.4.6",
+                    "0.4.7",
+                    "0.4.8",
+                    "0.4.9",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.10",
+                    "0.5.11",
+                    "0.5.12",
+                    "0.5.13",
+                    "0.5.14",
+                    "0.5.15",
+                    "0.5.16",
+                    "0.5.17",
+                    "0.5.18",
+                    "0.5.19",
+                    "0.5.2",
+                    "0.5.20",
+                    "0.5.21",
+                    "0.5.22",
+                    "0.5.23",
+                    "0.5.24",
+                    "0.5.25",
+                    "0.5.26",
+                    "0.5.27",
+                    "0.5.28",
+                    "0.5.29",
+                    "0.5.3",
+                    "0.5.30",
+                    "0.5.31",
+                    "0.5.4",
+                    "0.5.5",
+                    "0.5.6",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.5.9",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.10",
+                    "0.6.11",
+                    "0.6.12",
+                    "0.6.13",
+                    "0.6.14",
+                    "0.6.15",
+                    "0.6.16",
+                    "0.6.17",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.6.7",
+                    "0.6.8",
+                    "0.6.9",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.10",
+                    "0.7.11",
+                    "0.7.12",
+                    "0.7.13",
+                    "0.7.14",
+                    "0.7.15",
+                    "0.7.16",
+                    "0.7.17",
+                    "0.7.18",
+                    "0.7.19",
+                    "0.7.2",
+                    "0.7.20",
+                    "0.7.21",
+                    "0.7.22",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.7.7",
+                    "0.7.8",
+                    "0.7.9",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-54368"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-436"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-08-07T20:52:44Z",
+                "nvd_published_at": "2025-08-08T00:15:26Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Impact\n\nIn versions 0.8.5 and earlier of uv, remote ZIP archives were handled in a streamwise fashion, and file entries were not reconciled against the archive's central directory. This enabled two parser differentials against other Python package installers:\n\n1. An attacker could contrive a ZIP archive that would extract with legitimate contents on some package installers, and malicious contents on others due to multiple local file entries. The attacker could choose which installer to target.\n2. An attacker could contrive a \"stacked\" ZIP input with multiple internal ZIPs, which would be handled differently by different package installers. The attacker could choose which installer to target.\n\nIn both cases, the outcome is that an attacker can produce a ZIP with a consistent digest that expands differently with different installers.\n\nThe [ZIP standard](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) is ambiguous with respect to these behavior differentials. Consequently, these same differentials may be accepted ZIP parsers other than those used in uv. This advisory is for uv in particular, but all consumers of ZIP-based Python package distributions, e.g., pip, are potentially susceptible to similar parser differentials in other ZIP parsers.\n\nThe practical impact of these differentials is limited by a number of factors:\n\n- To be compromised via this vulnerability, user interaction of some sort is required. In particular, the user must run `uv install $package` with an attacker-controlled `$package`.\n- When using wheel distributions, installation of the malicious package is not sufficient for execution of malicious code, the vicim would need to perform a separate invocation, e.g., `python -c \"import $package\"`.\n- If a ZIP-based source distribution (which are less common than tarball source distributions), is encountered, malicious code can be executed during package resolution or installation. uv may invoke the malicious code when building the source distribution into a wheel.\n- The practical impact of these differentials is limited by a coordinated fix to [Warehouse](https://github.com/pypi/warehouse), PyPI's backend: Warehouse now rejects ZIPs exhibiting these differentials, limiting the ability of an attacker to distribute malicious ZIP distributions via PyPI. As part of that coordinated fix, a review of Warehouse revealed no evidence of exploitation.\n\n## Patches\n\nVersions 0.8.6 and newer of uv address both of the parser differentials above, by refusing to process ZIPs with duplicated local file entries or stacked contents.\n\n## Workarounds\n\nUsers are advised to upgrade to 0.8.6 or newer to address this advisory.\n\nMost users should experience no breaking changes as a result of the patch above. However, users who do experience breakage should carefully review their distributions for signs of malicious intent. Users may choose to set `UV_INSECURE_NO_ZIP_VALIDATION=1` to revert to the previous behavior.\n\n## Attribution\n\nThis vulnerability was discovered separately by two different individuals: Caleb Brown (Google) and Tim Hatch (Netflix).",
+              "id": "GHSA-8qf3-x8v5-2pj8",
+              "modified": "2025-08-08T15:17:37.042876Z",
+              "published": "2025-08-07T20:52:44Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/security/advisories/GHSA-8qf3-x8v5-2pj8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54368"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/commit/7f1eaf48c193e045ca2c62c4581048765c55505f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://astral.sh/blog/uv-security-advisory-cve-2025-54368"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.pypi.org/posts/2025-08-07-wheel-archive-confusion-attacks"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/astral-sh/uv"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "uv allows ZIP payload obfuscation through parsing differentials"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.9.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-pqhf-p39g-3x64/GHSA-pqhf-p39g-3x64.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "uv",
+                    "purl": "pkg:pypi/uv"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.9.6"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.0.5",
+                    "0.1.0",
+                    "0.1.1",
+                    "0.1.10",
+                    "0.1.11",
+                    "0.1.12",
+                    "0.1.13",
+                    "0.1.14",
+                    "0.1.15",
+                    "0.1.16",
+                    "0.1.17",
+                    "0.1.18",
+                    "0.1.19",
+                    "0.1.2",
+                    "0.1.20",
+                    "0.1.21",
+                    "0.1.22",
+                    "0.1.23",
+                    "0.1.24",
+                    "0.1.25",
+                    "0.1.26",
+                    "0.1.27",
+                    "0.1.28",
+                    "0.1.29",
+                    "0.1.3",
+                    "0.1.30",
+                    "0.1.31",
+                    "0.1.32",
+                    "0.1.33",
+                    "0.1.34",
+                    "0.1.35",
+                    "0.1.36",
+                    "0.1.37",
+                    "0.1.38",
+                    "0.1.39",
+                    "0.1.4",
+                    "0.1.40",
+                    "0.1.41",
+                    "0.1.42",
+                    "0.1.43",
+                    "0.1.44",
+                    "0.1.45",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.1.8",
+                    "0.1.9",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.10",
+                    "0.2.11",
+                    "0.2.12",
+                    "0.2.13",
+                    "0.2.14",
+                    "0.2.15",
+                    "0.2.16",
+                    "0.2.17",
+                    "0.2.18",
+                    "0.2.19",
+                    "0.2.2",
+                    "0.2.20",
+                    "0.2.21",
+                    "0.2.22",
+                    "0.2.23",
+                    "0.2.24",
+                    "0.2.25",
+                    "0.2.26",
+                    "0.2.27",
+                    "0.2.28",
+                    "0.2.29",
+                    "0.2.3",
+                    "0.2.30",
+                    "0.2.31",
+                    "0.2.32",
+                    "0.2.33",
+                    "0.2.34",
+                    "0.2.35",
+                    "0.2.36",
+                    "0.2.37",
+                    "0.2.4",
+                    "0.2.5",
+                    "0.2.6",
+                    "0.2.7",
+                    "0.2.8",
+                    "0.2.9",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.3.5",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.10",
+                    "0.4.11",
+                    "0.4.12",
+                    "0.4.13",
+                    "0.4.14",
+                    "0.4.15",
+                    "0.4.16",
+                    "0.4.17",
+                    "0.4.18",
+                    "0.4.19",
+                    "0.4.2",
+                    "0.4.20",
+                    "0.4.21",
+                    "0.4.22",
+                    "0.4.23",
+                    "0.4.24",
+                    "0.4.25",
+                    "0.4.26",
+                    "0.4.27",
+                    "0.4.28",
+                    "0.4.29",
+                    "0.4.3",
+                    "0.4.30",
+                    "0.4.4",
+                    "0.4.5",
+                    "0.4.6",
+                    "0.4.7",
+                    "0.4.8",
+                    "0.4.9",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.10",
+                    "0.5.11",
+                    "0.5.12",
+                    "0.5.13",
+                    "0.5.14",
+                    "0.5.15",
+                    "0.5.16",
+                    "0.5.17",
+                    "0.5.18",
+                    "0.5.19",
+                    "0.5.2",
+                    "0.5.20",
+                    "0.5.21",
+                    "0.5.22",
+                    "0.5.23",
+                    "0.5.24",
+                    "0.5.25",
+                    "0.5.26",
+                    "0.5.27",
+                    "0.5.28",
+                    "0.5.29",
+                    "0.5.3",
+                    "0.5.30",
+                    "0.5.31",
+                    "0.5.4",
+                    "0.5.5",
+                    "0.5.6",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.5.9",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.10",
+                    "0.6.11",
+                    "0.6.12",
+                    "0.6.13",
+                    "0.6.14",
+                    "0.6.15",
+                    "0.6.16",
+                    "0.6.17",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.6.7",
+                    "0.6.8",
+                    "0.6.9",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.10",
+                    "0.7.11",
+                    "0.7.12",
+                    "0.7.13",
+                    "0.7.14",
+                    "0.7.15",
+                    "0.7.16",
+                    "0.7.17",
+                    "0.7.18",
+                    "0.7.19",
+                    "0.7.2",
+                    "0.7.20",
+                    "0.7.21",
+                    "0.7.22",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.7.7",
+                    "0.7.8",
+                    "0.7.9",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.10",
+                    "0.8.11",
+                    "0.8.12",
+                    "0.8.13",
+                    "0.8.14",
+                    "0.8.15",
+                    "0.8.16",
+                    "0.8.17",
+                    "0.8.18",
+                    "0.8.19",
+                    "0.8.2",
+                    "0.8.20",
+                    "0.8.21",
+                    "0.8.22",
+                    "0.8.23",
+                    "0.8.24",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "0.9.5"
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-436"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-10-29T22:12:57Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn versions 0.9.5 and earlier of uv, ZIP archives were handled in a manner that enabled two parsing differentials against other components of the Python packaging ecosystem:\n\n1. Central directory entries in a ZIP archive can contain comment fields. However, uv would assume that these fields were not present, since they aren't widely used. Consequently, a ZIP archive could be constructed where uv would interpret the contents of a central directory comment field as ZIP control structures (such as a new central directory entry), rather than skipping over them.\n2. Both local file entries and central directory entries contain filename fields, which are used to place archive members on disk. These fields are arbitrary sequences of bytes, and may therefore be invalid or ambiguous. For example, they may contain ASCII null bytes, in which case different ZIP extractors behave differently: Python's `zipfile` module truncates the filename at the first null, while uv would skip (not extract) any archive members whose filenames contained nulls. Because of this difference, a ZIP archive could be constructed that would extract differently across different Python package installers.\n\nIn both cases, the outcome is that an attacker may be able to produce a ZIP with a consistent digest that expands differently with different Python package installers.\n\nLike with GHSA-8qf3-x8v5-2pj8, the impact of these differentials is limited by a number of factors:\n\n- To be compromised via this vulnerability, user interaction of some sort is required. In particular, the user must run `uv pip install $package` or similar with an attacker-controlled $package.\nWhen using wheel distributions, installation of the malicious package is not sufficient for execution of malicious code, the vicim would need to perform a separate invocation, e.g., `python -c \"import $package\"`.\n- If a ZIP-based source distribution (which are less common than tarball source distributions), is encountered, malicious code can be executed during package resolution or installation. uv may invoke the malicious code when building the source distribution into a wheel.\n\n### Patches\n\nVersions 0.9.6 and newer of uv address both of the parser differentials above, by properly handling comments in central directory entries and by refusing to process ZIPs that contain filename fields that are unlikely to be interpreted consistently across other ZIP parser implementations.\n\n### Workarounds\n\nUsers are advised to upgrade to 0.9.6 or newer to address this advisory.\n\nMost users should experience no breaking changes as a result of the patch above. However, users who do experience breakage should carefully review their distributions for signs of malicious intent. Users may choose to set `UV_INSECURE_NO_ZIP_VALIDATION=1` to revert to the previous behavior.\n\n### Attribution\n\nThis vulnerability was disclosed by Caleb Brown (Google).",
+              "id": "GHSA-pqhf-p39g-3x64",
+              "modified": "2025-10-29T22:21:31.266626Z",
+              "published": "2025-10-29T22:12:57Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/security/advisories/GHSA-pqhf-p39g-3x64"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/commit/da659fee4898a73dbc75070f3e82d49f745e4628"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/astral-sh/uv"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "uv allows ZIP payload obfuscation through parsing differentials"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.9.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-w476-p2h3-79g9/GHSA-w476-p2h3-79g9.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "uv",
+                    "purl": "pkg:pypi/uv"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.9.5"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.0.5",
+                    "0.1.0",
+                    "0.1.1",
+                    "0.1.10",
+                    "0.1.11",
+                    "0.1.12",
+                    "0.1.13",
+                    "0.1.14",
+                    "0.1.15",
+                    "0.1.16",
+                    "0.1.17",
+                    "0.1.18",
+                    "0.1.19",
+                    "0.1.2",
+                    "0.1.20",
+                    "0.1.21",
+                    "0.1.22",
+                    "0.1.23",
+                    "0.1.24",
+                    "0.1.25",
+                    "0.1.26",
+                    "0.1.27",
+                    "0.1.28",
+                    "0.1.29",
+                    "0.1.3",
+                    "0.1.30",
+                    "0.1.31",
+                    "0.1.32",
+                    "0.1.33",
+                    "0.1.34",
+                    "0.1.35",
+                    "0.1.36",
+                    "0.1.37",
+                    "0.1.38",
+                    "0.1.39",
+                    "0.1.4",
+                    "0.1.40",
+                    "0.1.41",
+                    "0.1.42",
+                    "0.1.43",
+                    "0.1.44",
+                    "0.1.45",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.1.8",
+                    "0.1.9",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.10",
+                    "0.2.11",
+                    "0.2.12",
+                    "0.2.13",
+                    "0.2.14",
+                    "0.2.15",
+                    "0.2.16",
+                    "0.2.17",
+                    "0.2.18",
+                    "0.2.19",
+                    "0.2.2",
+                    "0.2.20",
+                    "0.2.21",
+                    "0.2.22",
+                    "0.2.23",
+                    "0.2.24",
+                    "0.2.25",
+                    "0.2.26",
+                    "0.2.27",
+                    "0.2.28",
+                    "0.2.29",
+                    "0.2.3",
+                    "0.2.30",
+                    "0.2.31",
+                    "0.2.32",
+                    "0.2.33",
+                    "0.2.34",
+                    "0.2.35",
+                    "0.2.36",
+                    "0.2.37",
+                    "0.2.4",
+                    "0.2.5",
+                    "0.2.6",
+                    "0.2.7",
+                    "0.2.8",
+                    "0.2.9",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.3.5",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.10",
+                    "0.4.11",
+                    "0.4.12",
+                    "0.4.13",
+                    "0.4.14",
+                    "0.4.15",
+                    "0.4.16",
+                    "0.4.17",
+                    "0.4.18",
+                    "0.4.19",
+                    "0.4.2",
+                    "0.4.20",
+                    "0.4.21",
+                    "0.4.22",
+                    "0.4.23",
+                    "0.4.24",
+                    "0.4.25",
+                    "0.4.26",
+                    "0.4.27",
+                    "0.4.28",
+                    "0.4.29",
+                    "0.4.3",
+                    "0.4.30",
+                    "0.4.4",
+                    "0.4.5",
+                    "0.4.6",
+                    "0.4.7",
+                    "0.4.8",
+                    "0.4.9",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.10",
+                    "0.5.11",
+                    "0.5.12",
+                    "0.5.13",
+                    "0.5.14",
+                    "0.5.15",
+                    "0.5.16",
+                    "0.5.17",
+                    "0.5.18",
+                    "0.5.19",
+                    "0.5.2",
+                    "0.5.20",
+                    "0.5.21",
+                    "0.5.22",
+                    "0.5.23",
+                    "0.5.24",
+                    "0.5.25",
+                    "0.5.26",
+                    "0.5.27",
+                    "0.5.28",
+                    "0.5.29",
+                    "0.5.3",
+                    "0.5.30",
+                    "0.5.31",
+                    "0.5.4",
+                    "0.5.5",
+                    "0.5.6",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.5.9",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.10",
+                    "0.6.11",
+                    "0.6.12",
+                    "0.6.13",
+                    "0.6.14",
+                    "0.6.15",
+                    "0.6.16",
+                    "0.6.17",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.6.7",
+                    "0.6.8",
+                    "0.6.9",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.10",
+                    "0.7.11",
+                    "0.7.12",
+                    "0.7.13",
+                    "0.7.14",
+                    "0.7.15",
+                    "0.7.16",
+                    "0.7.17",
+                    "0.7.18",
+                    "0.7.19",
+                    "0.7.2",
+                    "0.7.20",
+                    "0.7.21",
+                    "0.7.22",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.7.7",
+                    "0.7.8",
+                    "0.7.9",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.10",
+                    "0.8.11",
+                    "0.8.12",
+                    "0.8.13",
+                    "0.8.14",
+                    "0.8.15",
+                    "0.8.16",
+                    "0.8.17",
+                    "0.8.18",
+                    "0.8.19",
+                    "0.8.2",
+                    "0.8.20",
+                    "0.8.21",
+                    "0.8.22",
+                    "0.8.23",
+                    "0.8.24",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4"
+                  ]
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-843"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-10-21T18:53:27Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              },
+              "details": "### Impact\n\nIn versions 0.9.4 and earlier of uv, tar archives containing PAX headers with file size overrides were not handled properly. As a result, an attacker could contrive a source distribution (as a tar archive) that would extract differently when installed via uv versus other Python package installers.\n\nThe underlying parsing differential here originates with astral-tokio-tar, which disclosed this vulnerability as CVE-2025-62518.\n\nIn practice, the impact of this vulnerability is **low**: only source distributions can be formatted as tar archives, and source distributions execute arbitrary code at build/installation time by definition. Consequently, a parser differential in tar extraction is strictly less powerful than the capabilities already exposed to an attacker who has the ability to control source distributions. \n\nHowever, this particular source of malleability in source distributions is unintentional and not operating by design, and therefore we consider it a vulnerability despite its overlap in capabilities with intended behavior.\n\n### Patches\n\nVersions 0.9.5 and newer of uv address the vulnerability above. Users should upgrade to 0.9.5 or newer.\n\n### Workarounds\n\nUsers are advised to upgrade to version 0.9.5 or newer to address this advisory.\n\nUsers should experience no breaking changes as a result of the patch above.\n\n### References\n\n* See CVE-2025-62518 for the corresponding advisory against astral-tokio-tar",
+              "id": "GHSA-w476-p2h3-79g9",
+              "modified": "2025-10-22T18:39:40.696435Z",
+              "published": "2025-10-21T18:53:27Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/security/advisories/GHSA-w476-p2h3-79g9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/pull/16387"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/commit/ae450662d1546e9853f67a8c61a506d3a892d963"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-j5gw-2vrg-8fgx"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/astral-sh/uv"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/astral-sh/uv/releases/tag/0.9.5"
+                }
+              ],
+              "related": [
+                "CVE-2025-62518"
+              ],
+              "schema_version": "1.7.3",
+              "summary": "uv has differential in tar extraction with PAX headers"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

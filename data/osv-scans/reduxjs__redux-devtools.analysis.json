@@ -1,0 +1,229 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.700Z",
+  "source": "reduxjs__redux-devtools.osv.json",
+  "summary": {
+    "totalVulnerabilities": 2,
+    "uniqueVulnerabilities": 2,
+    "affectedPackages": 2,
+    "stalePackages": 2,
+    "stalePackagesOldFix": 0,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 2
+    },
+    "recentVulnerabilities": 2,
+    "hasFixAvailable": 2
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-vmqv-hx8q-j7mg",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:H/A:L",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-55305"
+      ],
+      "summary": "Electron has ASAR Integrity Bypass via resource modification",
+      "details": "### Impact\nThis only impacts apps that have the `embeddedAsarIntegrityValidation` and `onlyLoadAppFromAsar` [fuses](https://www.electronjs.org/docs/latest/tutorial/fuses) enabled.  Apps without these fuses enabled are not impacted.\n\nSpecifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too.  i.e. the ability to edit files inside the `resources` folder in your app installation on Windows which these fuses are supposed to protect against.\n\n### Workarounds\nThere are no app side workarounds, you must update to a patched version of Electron.\n\n### Fixed Versions\n* `38.0.0-beta.6`\n* `37.3.1`\n* `36.8.1`\n* `35.7.5`\n\n### For more information\nIf you have any questions or comments about this advisory, email us at [security@electronjs.org](mailto:security@electronjs.org)",
+      "cwes": [
+        {
+          "id": "CWE-829",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-94",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-09-03T21:27:37Z",
+        "modifiedDate": "2025-09-05T16:10:10Z",
+        "daysSincePublished": 104
+      },
+      "affected": {
+        "package": "electron",
+        "version": "31.7.7",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "31.7.7",
+        "fixedIn": "35.7.5",
+        "recommendation": "Upgrade to 35.7.5 or later",
+        "fixAvailableSince": "2025-09-05T16:10:10.000Z",
+        "daysSinceFix": 103,
+        "monthsSinceFix": 3,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/security/advisories/GHSA-vmqv-hx8q-j7mg"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55305"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/pull/48101"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/pull/48102"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/pull/48103"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/pull/48104"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/commit/23a02934510fcf951428e14573d9b2d2a3c4f28b"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/commit/2e5a0b7220ebf955c6785cc5adb2e2b1cf77dac1"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/commit/3f92511cdecc39f46b0e86cce40a0c691e301c9d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/electron/electron/commit/fdf29ce83870109d403f5c23ae529dbd0e8f4fee"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/electron/electron"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-869p-cjfg-cm3x",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-65945"
+      ],
+      "summary": "auth0/node-jws Improperly Verifies HMAC Signature",
+      "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions <=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+      "cwes": [
+        {
+          "id": "CWE-347",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-04T16:54:15Z",
+        "modifiedDate": "2025-12-05T12:36:54.291980Z",
+        "daysSincePublished": 13
+      },
+      "affected": {
+        "package": "jws",
+        "version": "3.2.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.2.2",
+        "fixedIn": "3.2.3",
+        "recommendation": "Upgrade to 3.2.3 or later",
+        "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+        "daysSinceFix": 12,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/auth0/node-jws"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "electron",
+      "currentVersion": "31.7.7",
+      "fixedIn": "35.7.5",
+      "vulnerabilities": [
+        "GHSA-vmqv-hx8q-j7mg"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 35.7.5 or later",
+      "fixAvailableSince": "2025-09-05T16:10:10.000Z",
+      "daysSinceFix": 103,
+      "monthsSinceFix": 3,
+      "isOldFix": false
+    },
+    {
+      "package": "jws",
+      "currentVersion": "3.2.2",
+      "fixedIn": "3.2.3",
+      "vulnerabilities": [
+        "GHSA-869p-cjfg-cm3x"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.2.3 or later",
+      "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+      "daysSinceFix": 12,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "2 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "2 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

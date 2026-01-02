@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.amaximus/garbage-collection-card",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/1b0999d9-4ff4-4c6b-95e2-8564742ff999",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:42Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.amaximus/garbage-collection-card",
+      "SPDXID": "SPDXRef-github-amaximus-garbage-collection-card-master-66ae17",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/amaximus/garbage-collection-card",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/amaximus/garbage-collection-card@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-amaximus-garbage-collection-card-master-66ae17",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+## Blade
+
+[Laravel Blade Template](http://www.laravel.com) syntax definitions for [Sublime Text](https://www.sublimetext.com) based on its HTML/CSS/JS syntaxes.
+
+![preview](preview.png)
+
+## Installation
+
+### Package Control
+
+The easiest way to install is using [Package Control](https://packagecontrol.io). It's listed as `Laravel Blade`.
+
+1. Open `Command Palette` using <kbd>ctrl+shift+P</kbd> or menu item `Tools → Command Palette...`
+2. Choose `Package Control: Install Package`
+3. Find `Laravel Blade` and hit <kbd>Enter</kbd>
+4. Restart Sublime Text _(e.g.: if A File Icons is installed)_
+5. Reopen any ```.blade``` files.
+
+### Manual Install
+
+1. Download or clone this repository into ```[install-dir]/Packages/Laravel Blade```
+2. Restart Sublime Text _(e.g.: if A File Icons is installed)_
+3. Reopen any ```.blade``` files.
+
+> [!NOTE]
+>
+> Syntax from `main` branch require Sublime Text 4.
+>
+> For Sublime Text 3 compatible version refer to `st3` branch.
+
+## Supported Frontend Syntax
+
+* [AlpineJS](https://packagecontrol.io/packages/AlpineJS)
+  
+  To use AlpineJS with Blade templates,
+  1. install AlpineJS package
+  2. follow instructions to create [combined _HTML (Blade, AlpineJS)_ syntax](https://github.com/SublimeText/AlpineJS?tab=readme-ov-file#laravel-blade)
+
+## Supported Extensions
+
+* [Blade Extensions Laravel Package](https://github.com/RobinRadic/blade-extensions)
+
+## Snippets
+
+For Blade related snippets, please install [Blade Snippets](https://packagecontrol.io/packages/Blade%20Snippets) package.
+
+## Troubleshooting
+
+### §1 Syntax Definition Parse Errors
+
+Blade extends Sublime Text's HTML syntax definition.
+
+If Blade syntax highlighting doesn't work 
+and console displays syntax errors in _HTML (Blade).sublime-syntax_,
+please make sure to remove any out-dated syntax override.
+
+Steps:
+
+1. call _Menu > Preferences > Browse Packages.._
+2. Look for _HTML_ folder
+3. Remove it or at least delete any syntax definition in it.
+
+### §2 Scripts are not correctly highlighted
+
+Blade relies on JavaScript (`source.js`)
+to scope script blocks and inline scripts.
+
+Make sure to remove related out-dated syntax packages,
+which don't meet least compatibility requirements.
+
+They can be identified by calling 
+e.g. `sublime.find_syntax_by_scope("source.js")` in ST's console.
+
+Known candidates are:
+
+- [JavaScriptNext - ES6 Syntax](https://packagecontrol.io/packages/JavaScriptNext%20-%20ES6%20Syntax)
+- [Naomi](https://github.com/borela/naomi)
+
+## Credits
+
+_It is a fork of great [Medialink/Laravel Blade Highlighter](https://github.com/Medalink/laravel-blade)._

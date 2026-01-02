@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.lawfx/YoutubeNonStop",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/cf4c2814-247d-4e43-b6ab-f570cac03c42",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:23Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.lawfx/YoutubeNonStop",
+      "SPDXID": "SPDXRef-github-lawfx-YoutubeNonStop-master-2819d6",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/lawfx/YoutubeNonStop",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/lawfx/YoutubeNonStop@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-lawfx-YoutubeNonStop-master-2819d6",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

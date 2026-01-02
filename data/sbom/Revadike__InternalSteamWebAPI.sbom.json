@@ -1,0 +1,76 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.Revadike/InternalSteamWebAPI",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d1f519d6-1d38-4645-9e35-65d46b21e580",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:21Z"
+  },
+  "packages": [
+    {
+      "name": "github-wikito-converter",
+      "SPDXID": "SPDXRef-npm-github-wikito-converter-latest-70a530",
+      "versionInfo": "latest",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/github-wikito-converter@latest"
+        }
+      ]
+    },
+    {
+      "name": "steamcommunity",
+      "SPDXID": "SPDXRef-npm-steamcommunity-latest-d54724",
+      "versionInfo": "latest",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/steamcommunity@latest"
+        }
+      ]
+    },
+    {
+      "name": "com.github.Revadike/InternalSteamWebAPI",
+      "SPDXID": "SPDXRef-github-Revadike-InternalSteamWebAPI-master-03a353",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/Revadike/InternalSteamWebAPI",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/Revadike/InternalSteamWebAPI@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-Revadike-InternalSteamWebAPI-master-03a353",
+      "relatedSpdxElement": "SPDXRef-npm-github-wikito-converter-latest-70a530",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-Revadike-InternalSteamWebAPI-master-03a353",
+      "relatedSpdxElement": "SPDXRef-npm-steamcommunity-latest-d54724",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-Revadike-InternalSteamWebAPI-master-03a353",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

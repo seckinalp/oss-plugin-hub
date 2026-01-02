@@ -1,0 +1,94 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.benmatselby/sublime-phpcs",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/59609b9b-4e9a-4185-8e26-1b88ea039b0c",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:44Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2"
+        }
+      ]
+    },
+    {
+      "name": "SublimeText/UnitTesting/actions/run-tests",
+      "SPDXID": "SPDXRef-githubactions-SublimeTextUnitTestingactions-run-tests-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/SublimeText/UnitTesting/actions/run-tests@1"
+        }
+      ]
+    },
+    {
+      "name": "SublimeText/UnitTesting/actions/setup",
+      "SPDXID": "SPDXRef-githubactions-SublimeTextUnitTestingactions-setup-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/SublimeText/UnitTesting/actions/setup@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.benmatselby/sublime-phpcs",
+      "SPDXID": "SPDXRef-github-benmatselby-sublime-phpcs-main-098725",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/benmatselby/sublime-phpcs",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/benmatselby/sublime-phpcs@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-benmatselby-sublime-phpcs-main-098725",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-benmatselby-sublime-phpcs-main-098725",
+      "relatedSpdxElement": "SPDXRef-githubactions-SublimeTextUnitTestingactions-run-tests-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-benmatselby-sublime-phpcs-main-098725",
+      "relatedSpdxElement": "SPDXRef-githubactions-SublimeTextUnitTestingactions-setup-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-benmatselby-sublime-phpcs-main-098725",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

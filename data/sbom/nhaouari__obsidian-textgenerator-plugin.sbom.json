@@ -1,0 +1,2250 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.nhaouari/obsidian-textgenerator-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/40a5a800-b778-49f5-8fc2-35749e89203b",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:41Z"
+  },
+  "packages": [
+    {
+      "name": "prettier",
+      "SPDXID": "SPDXRef-npm-prettier-3.3.3-2dc397",
+      "versionInfo": "^3.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prettier@%5E3.3.3"
+        }
+      ]
+    },
+    {
+      "name": "@rjsf/utils",
+      "SPDXID": "SPDXRef-npm-rjsf-utils-5.20.0-c1601c",
+      "versionInfo": "^5.20.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rjsf/utils@%5E5.20.0"
+        }
+      ]
+    },
+    {
+      "name": "hyperswarm",
+      "SPDXID": "SPDXRef-npm-hyperswarm-4.8.2-2cf65e",
+      "versionInfo": "^4.8.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/hyperswarm@%5E4.8.2"
+        }
+      ]
+    },
+    {
+      "name": "p2pcf",
+      "SPDXID": "SPDXRef-npm-p2pcf-1.3.14-c7e5da",
+      "versionInfo": "^1.3.14",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/p2pcf@%5E1.3.14"
+        }
+      ]
+    },
+    {
+      "name": "koa-proxies",
+      "SPDXID": "SPDXRef-npm-koa-proxies-0.12.4-a65818",
+      "versionInfo": "^0.12.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/koa-proxies@%5E0.12.4"
+        }
+      ]
+    },
+    {
+      "name": "@types/lodash.set",
+      "SPDXID": "SPDXRef-npm-types-lodash.set-4.3.9-b7c392",
+      "versionInfo": "^4.3.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/lodash.set@%5E4.3.9"
+        }
+      ]
+    },
+    {
+      "name": "autoprefixer",
+      "SPDXID": "SPDXRef-npm-autoprefixer-10.4.20-c79b4f",
+      "versionInfo": "^10.4.20",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/autoprefixer@%5E10.4.20"
+        }
+      ]
+    },
+    {
+      "name": "debounce",
+      "SPDXID": "SPDXRef-npm-debounce-2.1.0-ecfdad",
+      "versionInfo": "^2.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/debounce@%5E2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@langchain/anthropic",
+      "SPDXID": "SPDXRef-npm-langchain-anthropic-0.3.8-1ba0d0",
+      "versionInfo": "^0.3.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40langchain/anthropic@%5E0.3.8"
+        }
+      ]
+    },
+    {
+      "name": "esbuild-plugin-define",
+      "SPDXID": "SPDXRef-npm-esbuild-plugin-define-0.5.0-724861",
+      "versionInfo": "^0.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esbuild-plugin-define@%5E0.5.0"
+        }
+      ]
+    },
+    {
+      "name": "live-plugin-manager",
+      "SPDXID": "SPDXRef-npm-live-plugin-manager-0.18.1-4c438c",
+      "versionInfo": "^0.18.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/live-plugin-manager@%5E0.18.1"
+        }
+      ]
+    },
+    {
+      "name": "rss-parser",
+      "SPDXID": "SPDXRef-npm-rss-parser-3.13.0-8cc54a",
+      "versionInfo": "^3.13.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/rss-parser@%5E3.13.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint",
+      "SPDXID": "SPDXRef-npm-eslint-8.57.0-78e8bd",
+      "versionInfo": "^8.57.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint@%5E8.57.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/prismjs",
+      "SPDXID": "SPDXRef-npm-types-prismjs-1.26.4-33b90c",
+      "versionInfo": "^1.26.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/prismjs@%5E1.26.4"
+        }
+      ]
+    },
+    {
+      "name": "usehooks-ts",
+      "SPDXID": "SPDXRef-npm-usehooks-ts-3.1.0-fd4bc6",
+      "versionInfo": "^3.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/usehooks-ts@%5E3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/debug",
+      "SPDXID": "SPDXRef-npm-types-debug-4.1.12-b19355",
+      "versionInfo": "^4.1.12",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/debug@%5E4.1.12"
+        }
+      ]
+    },
+    {
+      "name": "tesseract.js",
+      "SPDXID": "SPDXRef-npm-tesseract.js-4.1.4-73ed4c",
+      "versionInfo": "^4.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tesseract.js@%5E4.1.4"
+        }
+      ]
+    },
+    {
+      "name": "@types/semver",
+      "SPDXID": "SPDXRef-npm-types-semver-7.5.8-061f4c",
+      "versionInfo": "^7.5.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/semver@%5E7.5.8"
+        }
+      ]
+    },
+    {
+      "name": "react-syntax-highlighter",
+      "SPDXID": "SPDXRef-npm-react-syntax-highlighter-15.5.0-398ef2",
+      "versionInfo": "^15.5.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-syntax-highlighter@%5E15.5.0"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/language",
+      "SPDXID": "SPDXRef-npm-codemirror-language-6.10.2-c10855",
+      "versionInfo": "^6.10.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40codemirror/language@%5E6.10.2"
+        }
+      ]
+    },
+    {
+      "name": "@langchain/google-genai",
+      "SPDXID": "SPDXRef-npm-langchain-google-genai-0.2.10-3478d7",
+      "versionInfo": "^0.2.10",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40langchain/google-genai@%5E0.2.10"
+        }
+      ]
+    },
+    {
+      "name": "postcss-import",
+      "SPDXID": "SPDXRef-npm-postcss-import-15.1.0-9bc26d",
+      "versionInfo": "^15.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/postcss-import@%5E15.1.0"
+        }
+      ]
+    },
+    {
+      "name": "func-cache",
+      "SPDXID": "SPDXRef-npm-func-cache-2.2.62-328b7d",
+      "versionInfo": "^2.2.62",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/func-cache@%5E2.2.62"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/view",
+      "SPDXID": "SPDXRef-npm-codemirror-view-6.32.0-e0ab31",
+      "versionInfo": "^6.32.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40codemirror/view@%5E6.32.0"
+        }
+      ]
+    },
+    {
+      "name": "@anthropic-ai/sdk",
+      "SPDXID": "SPDXRef-npm-anthropic-ai-sdk-0.27.3-a9d7ed",
+      "versionInfo": "^0.27.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40anthropic-ai/sdk@%5E0.27.3"
+        }
+      ]
+    },
+    {
+      "name": "langchain",
+      "SPDXID": "SPDXRef-npm-langchain-0.3.9-551d6d",
+      "versionInfo": "^0.3.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/langchain@%5E0.3.9"
+        }
+      ]
+    },
+    {
+      "name": "@radix-ui/react-tooltip",
+      "SPDXID": "SPDXRef-npm-radix-ui-react-tooltip-1.2.3-ef34ec",
+      "versionInfo": "^1.2.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40radix-ui/react-tooltip@%5E1.2.3"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss-animate",
+      "SPDXID": "SPDXRef-npm-tailwindcss-animate-1.0.7-bf0649",
+      "versionInfo": "^1.0.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tailwindcss-animate@%5E1.0.7"
+        }
+      ]
+    },
+    {
+      "name": "@types/tar",
+      "SPDXID": "SPDXRef-npm-types-tar-6.1.13-8ad7cb",
+      "versionInfo": "^6.1.13",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/tar@%5E6.1.13"
+        }
+      ]
+    },
+    {
+      "name": "@mozilla/readability",
+      "SPDXID": "SPDXRef-npm-mozilla-readability-0.4.4-d520ed",
+      "versionInfo": "^0.4.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40mozilla/readability@%5E0.4.4"
+        }
+      ]
+    },
+    {
+      "name": "handlebars-async-helpers",
+      "SPDXID": "SPDXRef-npm-handlebars-async-helpers-1.0.6-97bea1",
+      "versionInfo": "^1.0.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/handlebars-async-helpers@%5E1.0.6"
+        }
+      ]
+    },
+    {
+      "name": "obsidian",
+      "SPDXID": "SPDXRef-npm-obsidian-1.6.6-5cedc7",
+      "versionInfo": "1.6.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian@1.6.6"
+        }
+      ]
+    },
+    {
+      "name": "youtube-transcript",
+      "SPDXID": "SPDXRef-npm-youtube-transcript-1.2.1-24c9c6",
+      "versionInfo": "^1.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/youtube-transcript@%5E1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-16.18.105-4a04fc",
+      "versionInfo": "^16.18.105",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E16.18.105"
+        }
+      ]
+    },
+    {
+      "name": "@langchain/openai",
+      "SPDXID": "SPDXRef-npm-langchain-openai-0.3.16-ac2099",
+      "versionInfo": "^0.3.16",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40langchain/openai@%5E0.3.16"
+        }
+      ]
+    },
+    {
+      "name": "@types/koa__cors",
+      "SPDXID": "SPDXRef-npm-types-koacors-5.0.0-0c6e4a",
+      "versionInfo": "^5.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/koa__cors@%5E5.0.0"
+        }
+      ]
+    },
+    {
+      "name": "debug",
+      "SPDXID": "SPDXRef-npm-debug-2.6.9-fdb60f",
+      "versionInfo": "^2.6.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/debug@%5E2.6.9"
+        }
+      ]
+    },
+    {
+      "name": "@types/react",
+      "SPDXID": "SPDXRef-npm-types-react-18.3.3-4d36a0",
+      "versionInfo": "^18.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/react@%5E18.3.3"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "SPDXID": "SPDXRef-npm-tailwindcss-3.4.9-decbc4",
+      "versionInfo": "^3.4.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tailwindcss@%5E3.4.9"
+        }
+      ]
+    },
+    {
+      "name": "@rjsf/validator-ajv8",
+      "SPDXID": "SPDXRef-npm-rjsf-validator-ajv8-5.20.0-2b3277",
+      "versionInfo": "^5.20.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rjsf/validator-ajv8@%5E5.20.0"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "SPDXID": "SPDXRef-npm-react-dom-18.3.1-93af59",
+      "versionInfo": "^18.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-dom@%5E18.3.1"
+        }
+      ]
+    },
+    {
+      "name": "@langchain/core",
+      "SPDXID": "SPDXRef-npm-langchain-core-0.3.27-21e402",
+      "versionInfo": "^0.3.27",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40langchain/core@%5E0.3.27"
+        }
+      ]
+    },
+    {
+      "name": "@huggingface/inference",
+      "SPDXID": "SPDXRef-npm-huggingface-inference-2.7.0-27dd51",
+      "versionInfo": "2.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40huggingface/inference@2.7.0"
+        }
+      ]
+    },
+    {
+      "name": "react-simple-code-editor",
+      "SPDXID": "SPDXRef-npm-react-simple-code-editor-0.13.1-31f12e",
+      "versionInfo": "^0.13.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-simple-code-editor@%5E0.13.1"
+        }
+      ]
+    },
+    {
+      "name": "lockfile",
+      "SPDXID": "SPDXRef-npm-lockfile-1.0.4-dbf552",
+      "versionInfo": "^1.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lockfile@%5E1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "pretty-error",
+      "SPDXID": "SPDXRef-npm-pretty-error-4.0.0-c1e6c9",
+      "versionInfo": "^4.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/pretty-error@%5E4.0.0"
+        }
+      ]
+    },
+    {
+      "name": "turndown",
+      "SPDXID": "SPDXRef-npm-turndown-7.2.0-21aa04",
+      "versionInfo": "^7.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/turndown@%5E7.2.0"
+        }
+      ]
+    },
+    {
+      "name": "esbuild-plugin-wasm",
+      "SPDXID": "SPDXRef-npm-esbuild-plugin-wasm-1.1.0-5d6b8d",
+      "versionInfo": "^1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esbuild-plugin-wasm@%5E1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/lockfile",
+      "SPDXID": "SPDXRef-npm-types-lockfile-1.0.4-025e0f",
+      "versionInfo": "^1.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/lockfile@%5E1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "moment",
+      "SPDXID": "SPDXRef-npm-moment-2.30.1-43a10a",
+      "versionInfo": "^2.30.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/moment@%5E2.30.1"
+        }
+      ]
+    },
+    {
+      "name": "@langchain/mistralai",
+      "SPDXID": "SPDXRef-npm-langchain-mistralai-0.2.0-284cb1",
+      "versionInfo": "^0.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40langchain/mistralai@%5E0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/mime-types",
+      "SPDXID": "SPDXRef-npm-types-mime-types-2.1.4-77dbfd",
+      "versionInfo": "^2.1.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/mime-types@%5E2.1.4"
+        }
+      ]
+    },
+    {
+      "name": "prettier-eslint",
+      "SPDXID": "SPDXRef-npm-prettier-eslint-16.3.0-2e3ef6",
+      "versionInfo": "^16.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prettier-eslint@%5E16.3.0"
+        }
+      ]
+    },
+    {
+      "name": "@total-typescript/ts-reset",
+      "SPDXID": "SPDXRef-npm-total-typescript-ts-reset-0.5.1-d6fdfa",
+      "versionInfo": "^0.5.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40total-typescript/ts-reset@%5E0.5.1"
+        }
+      ]
+    },
+    {
+      "name": "prismjs",
+      "SPDXID": "SPDXRef-npm-prismjs-1.29.0-6a76ba",
+      "versionInfo": "^1.29.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prismjs@%5E1.29.0"
+        }
+      ]
+    },
+    {
+      "name": "zod",
+      "SPDXID": "SPDXRef-npm-zod-3.23.8-19fac9",
+      "versionInfo": "^3.23.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/zod@%5E3.23.8"
+        }
+      ]
+    },
+    {
+      "name": "@types/lodash.merge",
+      "SPDXID": "SPDXRef-npm-types-lodash.merge-4.6.9-200e20",
+      "versionInfo": "^4.6.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/lodash.merge@%5E4.6.9"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "SPDXID": "SPDXRef-npm-semver-7.6.3-d26e41",
+      "versionInfo": "^7.6.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/semver@%5E7.6.3"
+        }
+      ]
+    },
+    {
+      "name": "@google-ai/generativelanguage",
+      "SPDXID": "SPDXRef-npm-google-ai-generativelanguage-1.1.0-1860b2",
+      "versionInfo": "^1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40google-ai/generativelanguage@%5E1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@react-icons/all-files",
+      "SPDXID": "SPDXRef-npm-react-icons-all-files-4.1.0-b279e9",
+      "versionInfo": "^4.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40react-icons/all-files@%5E4.1.0"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-parser-5.62.0-6f9513",
+      "versionInfo": "^5.62.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/parser@%5E5.62.0"
+        }
+      ]
+    },
+    {
+      "name": "safe-await",
+      "SPDXID": "SPDXRef-npm-safe-await-2.0.0-d2e6cd",
+      "versionInfo": "^2.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/safe-await@%5E2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "react-confirm-alert",
+      "SPDXID": "SPDXRef-npm-react-confirm-alert-3.0.6-57b6b6",
+      "versionInfo": "^3.0.6",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-confirm-alert@%5E3.0.6"
+        }
+      ]
+    },
+    {
+      "name": "tar",
+      "SPDXID": "SPDXRef-npm-tar-6.2.1-e89860",
+      "versionInfo": "^6.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tar@%5E6.2.1"
+        }
+      ]
+    },
+    {
+      "name": "@tabler/icons-react",
+      "SPDXID": "SPDXRef-npm-tabler-icons-react-2.47.0-ee7560",
+      "versionInfo": "^2.47.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40tabler/icons-react@%5E2.47.0"
+        }
+      ]
+    },
+    {
+      "name": "@vanakat/plugin-api",
+      "SPDXID": "SPDXRef-npm-vanakat-plugin-api-0.1.1-e179a8",
+      "versionInfo": "^0.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40vanakat/plugin-api@%5E0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "SPDXID": "SPDXRef-npm-react-18.3.1-a822d3",
+      "versionInfo": "^18.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react@%5E18.3.1"
+        }
+      ]
+    },
+    {
+      "name": "react-markdown",
+      "SPDXID": "SPDXRef-npm-react-markdown-8.0.7-aaf51f",
+      "versionInfo": "^8.0.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/react-markdown@%5E8.0.7"
+        }
+      ]
+    },
+    {
+      "name": "builtin-modules",
+      "SPDXID": "SPDXRef-npm-builtin-modules-3.3.0-b463c4",
+      "versionInfo": "^3.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/builtin-modules@%5E3.3.0"
+        }
+      ]
+    },
+    {
+      "name": "request",
+      "SPDXID": "SPDXRef-npm-request-2.88.2-f83846",
+      "versionInfo": "^2.88.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/request@%5E2.88.2"
+        }
+      ]
+    },
+    {
+      "name": "tailwind-merge",
+      "SPDXID": "SPDXRef-npm-tailwind-merge-1.14.0-d44cd0",
+      "versionInfo": "^1.14.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tailwind-merge@%5E1.14.0"
+        }
+      ]
+    },
+    {
+      "name": "esbuild-plugin-alias",
+      "SPDXID": "SPDXRef-npm-esbuild-plugin-alias-0.2.1-c43bf9",
+      "versionInfo": "^0.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esbuild-plugin-alias@%5E0.2.1"
+        }
+      ]
+    },
+    {
+      "name": "daisyui",
+      "SPDXID": "SPDXRef-npm-daisyui-3.9.4-7295f6",
+      "versionInfo": "^3.9.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/daisyui@%5E3.9.4"
+        }
+      ]
+    },
+    {
+      "name": "@codemirror/state",
+      "SPDXID": "SPDXRef-npm-codemirror-state-6.4.1-49fe32",
+      "versionInfo": "^6.4.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40codemirror/state@%5E6.4.1"
+        }
+      ]
+    },
+    {
+      "name": "@types/react-dom",
+      "SPDXID": "SPDXRef-npm-types-react-dom-18.3.0-294712",
+      "versionInfo": "^18.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/react-dom@%5E18.3.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/koa-proxies",
+      "SPDXID": "SPDXRef-npm-types-koa-proxies-0.11.0-ee7828",
+      "versionInfo": "^0.11.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/koa-proxies@%5E0.11.0"
+        }
+      ]
+    },
+    {
+      "name": "json5",
+      "SPDXID": "SPDXRef-npm-json5-2.2.3-9073ca",
+      "versionInfo": "^2.2.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/json5@%5E2.2.3"
+        }
+      ]
+    },
+    {
+      "name": "lodash.get",
+      "SPDXID": "SPDXRef-npm-lodash.get-4.4.2-01c2e4",
+      "versionInfo": "^4.4.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lodash.get@%5E4.4.2"
+        }
+      ]
+    },
+    {
+      "name": "mime-types",
+      "SPDXID": "SPDXRef-npm-mime-types-2.1.35-2ad4e0",
+      "versionInfo": "^2.1.35",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mime-types@%5E2.1.35"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-5.2.2-1eeebd",
+      "versionInfo": "5.2.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "(c) by W3C, Copyright (c) 1991-2017 Unicode, Inc., Copyright (c) 2018 The Khronos Group Inc., Copyright (c) 2018 WHATWG, Copyright (c) Microsoft Corporation, Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang) Disclaimers, Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@5.2.2"
+        }
+      ]
+    },
+    {
+      "name": "@rjsf/core",
+      "SPDXID": "SPDXRef-npm-rjsf-core-5.20.0-7a5ef8",
+      "versionInfo": "^5.20.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40rjsf/core@%5E5.20.0"
+        }
+      ]
+    },
+    {
+      "name": "electron",
+      "SPDXID": "SPDXRef-npm-electron-27.3.11-1daf96",
+      "versionInfo": "^27.3.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/electron@%5E27.3.11"
+        }
+      ]
+    },
+    {
+      "name": "@types/react-syntax-highlighter",
+      "SPDXID": "SPDXRef-npm-types-react-syntax-highlighter-15.5.13-7562bc",
+      "versionInfo": "^15.5.13",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/react-syntax-highlighter@%5E15.5.13"
+        }
+      ]
+    },
+    {
+      "name": "prettier-plugin-tailwindcss",
+      "SPDXID": "SPDXRef-npm-prettier-plugin-tailwindcss-0.5.14-bd6f9f",
+      "versionInfo": "^0.5.14",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prettier-plugin-tailwindcss@%5E0.5.14"
+        }
+      ]
+    },
+    {
+      "name": "@types/koa",
+      "SPDXID": "SPDXRef-npm-types-koa-2.15.0-be94d9",
+      "versionInfo": "^2.15.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/koa@%5E2.15.0"
+        }
+      ]
+    },
+    {
+      "name": "koa",
+      "SPDXID": "SPDXRef-npm-koa-2.15.3-c1e443",
+      "versionInfo": "^2.15.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/koa@%5E2.15.3"
+        }
+      ]
+    },
+    {
+      "name": "lodash.set",
+      "SPDXID": "SPDXRef-npm-lodash.set-4.3.2-0bba29",
+      "versionInfo": "^4.3.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lodash.set@%5E4.3.2"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "SPDXID": "SPDXRef-npm-fs-extra-11.2.0-1805b2",
+      "versionInfo": "^11.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/fs-extra@%5E11.2.0"
+        }
+      ]
+    },
+    {
+      "name": "@langchain/community",
+      "SPDXID": "SPDXRef-npm-langchain-community-0.2.25-3116cd",
+      "versionInfo": "^0.2.25",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40langchain/community@%5E0.2.25"
+        }
+      ]
+    },
+    {
+      "name": "eslint-plugin-tailwindcss",
+      "SPDXID": "SPDXRef-npm-eslint-plugin-tailwindcss-3.17.4-811434",
+      "versionInfo": "^3.17.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-plugin-tailwindcss@%5E3.17.4"
+        }
+      ]
+    },
+    {
+      "name": "@types/lodash.get",
+      "SPDXID": "SPDXRef-npm-types-lodash.get-4.4.9-f2e87c",
+      "versionInfo": "^4.4.9",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/lodash.get@%5E4.4.9"
+        }
+      ]
+    },
+    {
+      "name": "oxlint",
+      "SPDXID": "SPDXRef-npm-oxlint-0.2.18-084b3f",
+      "versionInfo": "^0.2.18",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/oxlint@%5E0.2.18"
+        }
+      ]
+    },
+    {
+      "name": "lodash.merge",
+      "SPDXID": "SPDXRef-npm-lodash.merge-4.6.2-03bca8",
+      "versionInfo": "^4.6.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lodash.merge@%5E4.6.2"
+        }
+      ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.62.0-0bdbfc",
+      "versionInfo": "^5.62.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40typescript-eslint/eslint-plugin@%5E5.62.0"
+        }
+      ]
+    },
+    {
+      "name": "@tailwindcss/forms",
+      "SPDXID": "SPDXRef-npm-tailwindcss-forms-0.5.7-cf54d3",
+      "versionInfo": "^0.5.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40tailwindcss/forms@%5E0.5.7"
+        }
+      ]
+    },
+    {
+      "name": "@dqbd/tiktoken",
+      "SPDXID": "SPDXRef-npm-dqbd-tiktoken-1.0.15-8338ac",
+      "versionInfo": "^1.0.15",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40dqbd/tiktoken@%5E1.0.15"
+        }
+      ]
+    },
+    {
+      "name": "handlebars",
+      "SPDXID": "SPDXRef-npm-handlebars-4.7.8-5d32e7",
+      "versionInfo": "^4.7.8",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/handlebars@%5E4.7.8"
+        }
+      ]
+    },
+    {
+      "name": "path-browserify",
+      "SPDXID": "SPDXRef-npm-path-browserify-1.0.1-296cfe",
+      "versionInfo": "^1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/path-browserify@%5E1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "@koa/cors",
+      "SPDXID": "SPDXRef-npm-koa-cors-5.0.0-aaaa56",
+      "versionInfo": "^5.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40koa/cors@%5E5.0.0"
+        }
+      ]
+    },
+    {
+      "name": "ansi-to-html",
+      "SPDXID": "SPDXRef-npm-ansi-to-html-0.7.2-85232a",
+      "versionInfo": "^0.7.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/ansi-to-html@%5E0.7.2"
+        }
+      ]
+    },
+    {
+      "name": "postcss-cli",
+      "SPDXID": "SPDXRef-npm-postcss-cli-10.1.0-78391b",
+      "versionInfo": "^10.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/postcss-cli@%5E10.1.0"
+        }
+      ]
+    },
+    {
+      "name": "url-join",
+      "SPDXID": "SPDXRef-npm-url-join-5.0.0-ca753c",
+      "versionInfo": "^5.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/url-join@%5E5.0.0"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-npm-tslib-2.6.2-b8a204",
+      "versionInfo": "2.6.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "0BSD",
+      "copyrightText": "Copyright (c) Microsoft Corporation",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@2.6.2"
+        }
+      ]
+    },
+    {
+      "name": "chromadb",
+      "SPDXID": "SPDXRef-npm-chromadb-1.8.1-8f4038",
+      "versionInfo": "^1.8.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/chromadb@%5E1.8.1"
+        }
+      ]
+    },
+    {
+      "name": "clsx",
+      "SPDXID": "SPDXRef-npm-clsx-2.1.1-03ea31",
+      "versionInfo": "^2.1.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/clsx@%5E2.1.1"
+        }
+      ]
+    },
+    {
+      "name": "obsidian-dataview",
+      "SPDXID": "SPDXRef-npm-obsidian-dataview-0.5.67-d73499",
+      "versionInfo": "^0.5.67",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian-dataview@%5E0.5.67"
+        }
+      ]
+    },
+    {
+      "name": "esbuild",
+      "SPDXID": "SPDXRef-npm-esbuild-0.21.4-9e1159",
+      "versionInfo": "0.21.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2020 Evan Wallace",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esbuild@0.21.4"
+        }
+      ]
+    },
+    {
+      "name": "replicate",
+      "SPDXID": "SPDXRef-npm-replicate-0.30.2-9500dc",
+      "versionInfo": "^0.30.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/replicate@%5E0.30.2"
+        }
+      ]
+    },
+    {
+      "name": "esbuild-wasm",
+      "SPDXID": "SPDXRef-npm-esbuild-wasm-0.21.5-38d791",
+      "versionInfo": "^0.21.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esbuild-wasm@%5E0.21.5"
+        }
+      ]
+    },
+    {
+      "name": "@types/turndown",
+      "SPDXID": "SPDXRef-npm-types-turndown-5.0.5-dfa0a8",
+      "versionInfo": "^5.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/turndown@%5E5.0.5"
+        }
+      ]
+    },
+    {
+      "name": "rutajdash/prettier-cli-action",
+      "SPDXID": "SPDXRef-githubactions-rutajdash-prettier-cli-action-1.0.0-75c946",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/rutajdash/prettier-cli-action@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-node",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-node-3..-75c946",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-node@3.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "pnpm/action-setup",
+      "SPDXID": "SPDXRef-githubactions-pnpm-action-setup-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/pnpm/action-setup@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.nhaouari/obsidian-textgenerator-plugin",
+      "SPDXID": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/nhaouari/obsidian-textgenerator-plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/nhaouari/obsidian-textgenerator-plugin@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-prettier-3.3.3-2dc397",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-rjsf-utils-5.20.0-c1601c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-hyperswarm-4.8.2-2cf65e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-p2pcf-1.3.14-c7e5da",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-koa-proxies-0.12.4-a65818",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-lodash.set-4.3.9-b7c392",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-autoprefixer-10.4.20-c79b4f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-debounce-2.1.0-ecfdad",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-langchain-anthropic-0.3.8-1ba0d0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-esbuild-plugin-define-0.5.0-724861",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-live-plugin-manager-0.18.1-4c438c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-rss-parser-3.13.0-8cc54a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-8.57.0-78e8bd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-prismjs-1.26.4-33b90c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-usehooks-ts-3.1.0-fd4bc6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-debug-4.1.12-b19355",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tesseract.js-4.1.4-73ed4c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-semver-7.5.8-061f4c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-react-syntax-highlighter-15.5.0-398ef2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-codemirror-language-6.10.2-c10855",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-langchain-google-genai-0.2.10-3478d7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-postcss-import-15.1.0-9bc26d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-func-cache-2.2.62-328b7d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-codemirror-view-6.32.0-e0ab31",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-anthropic-ai-sdk-0.27.3-a9d7ed",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-langchain-0.3.9-551d6d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-radix-ui-react-tooltip-1.2.3-ef34ec",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tailwindcss-animate-1.0.7-bf0649",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-tar-6.1.13-8ad7cb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-mozilla-readability-0.4.4-d520ed",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-handlebars-async-helpers-1.0.6-97bea1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-1.6.6-5cedc7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-youtube-transcript-1.2.1-24c9c6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-16.18.105-4a04fc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-langchain-openai-0.3.16-ac2099",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-koacors-5.0.0-0c6e4a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-debug-2.6.9-fdb60f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-react-18.3.3-4d36a0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tailwindcss-3.4.9-decbc4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-rjsf-validator-ajv8-5.20.0-2b3277",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-react-dom-18.3.1-93af59",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-langchain-core-0.3.27-21e402",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-huggingface-inference-2.7.0-27dd51",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-react-simple-code-editor-0.13.1-31f12e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-lockfile-1.0.4-dbf552",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-pretty-error-4.0.0-c1e6c9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-turndown-7.2.0-21aa04",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-esbuild-plugin-wasm-1.1.0-5d6b8d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-lockfile-1.0.4-025e0f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-moment-2.30.1-43a10a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-langchain-mistralai-0.2.0-284cb1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-mime-types-2.1.4-77dbfd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-prettier-eslint-16.3.0-2e3ef6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-total-typescript-ts-reset-0.5.1-d6fdfa",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-prismjs-1.29.0-6a76ba",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-zod-3.23.8-19fac9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-lodash.merge-4.6.9-200e20",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-semver-7.6.3-d26e41",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-google-ai-generativelanguage-1.1.0-1860b2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-react-icons-all-files-4.1.0-b279e9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-parser-5.62.0-6f9513",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-safe-await-2.0.0-d2e6cd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-react-confirm-alert-3.0.6-57b6b6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tar-6.2.1-e89860",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tabler-icons-react-2.47.0-ee7560",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-vanakat-plugin-api-0.1.1-e179a8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-react-18.3.1-a822d3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-react-markdown-8.0.7-aaf51f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-builtin-modules-3.3.0-b463c4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-request-2.88.2-f83846",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tailwind-merge-1.14.0-d44cd0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-esbuild-plugin-alias-0.2.1-c43bf9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-daisyui-3.9.4-7295f6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-codemirror-state-6.4.1-49fe32",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-react-dom-18.3.0-294712",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-koa-proxies-0.11.0-ee7828",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-json5-2.2.3-9073ca",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-lodash.get-4.4.2-01c2e4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-mime-types-2.1.35-2ad4e0",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-5.2.2-1eeebd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-rjsf-core-5.20.0-7a5ef8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-electron-27.3.11-1daf96",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-react-syntax-highlighter-15.5.13-7562bc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-prettier-plugin-tailwindcss-0.5.14-bd6f9f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-koa-2.15.0-be94d9",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-koa-2.15.3-c1e443",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-lodash.set-4.3.2-0bba29",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-fs-extra-11.2.0-1805b2",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-langchain-community-0.2.25-3116cd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-tailwindcss-3.17.4-811434",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-lodash.get-4.4.9-f2e87c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-oxlint-0.2.18-084b3f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-lodash.merge-4.6.2-03bca8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-eslint-plugin-5.62.0-0bdbfc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tailwindcss-forms-0.5.7-cf54d3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-dqbd-tiktoken-1.0.15-8338ac",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-handlebars-4.7.8-5d32e7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-path-browserify-1.0.1-296cfe",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-koa-cors-5.0.0-aaaa56",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-ansi-to-html-0.7.2-85232a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-postcss-cli-10.1.0-78391b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-url-join-5.0.0-ca753c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-tslib-2.6.2-b8a204",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-chromadb-1.8.1-8f4038",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-clsx-2.1.1-03ea31",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-dataview-0.5.67-d73499",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-esbuild-0.21.4-9e1159",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-replicate-0.30.2-9500dc",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-esbuild-wasm-0.21.5-38d791",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-npm-types-turndown-5.0.5-dfa0a8",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-githubactions-rutajdash-prettier-cli-action-1.0.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-3..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relatedSpdxElement": "SPDXRef-githubactions-pnpm-action-setup-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-nhaouari-obsidian-textgenerator-plugin-master-82028f",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/tab-wrangler/localized.svg)](https://crowdin.com/project/tab-wrangler)
+
+<div align="center">
+  <img src="./app/img/icon.png">
+  <h1>
+    Tab Wrangler
+  </h1>
+</div>
+
+A Chrome & Firefox extension that automatically closes tabs you haven't used in a while so you can
+focus on the tabs that matter
+
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+  - [Backup & Restore](#back-up--restore)
+  - [Settings](#settings)
+- [Privacy Policy](#privacy-policy)
+  - [Explanation of Requested Permissions](#explanation-of-requested-permissions)
+- [Contributing](#contributing)
+  - [Translation](#translation)
+  - [Development](#development)
+
+## Installation
+
+- Tab Wrangler for Chrome:
+  https://chromewebstore.google.com/detail/tab-wrangler/egnjhciaieeiiohknchakcodbpgjnchh
+- Tab Wrangler for Firefox: https://addons.mozilla.org/en-US/firefox/addon/tabwrangler/
+
+## Features
+
+- _The Corral_: Stores tabs which have been auto-closed so you can re-open as required.
+- _Exclude list_: Provide the urls or domain names of the sites you never want auto-closed.
+- _Tab Lock_: Pick open tabs to "lock". Locked tabs will not be auto-closed.
+- _Configurable_: Pick how long a tab should be considered ready to close and how many tabs should
+  be open at a minimum.
+- _Smart_: Doesn't autoclose pinned tabs, doesn't close all your tabs, just enough to make your
+  browser usable.
+
+## Usage
+
+1. Click on the icon next to the URL bar
+   - Tab Corral
+     - Stores tabs which have been auto-closed. Restoring tabs with green leaf icons on their right
+       sides will have their full history and scroll positions saved. (Full history restore is
+       limited by the browser to the last 25 closed tabs.)
+   - Tab Lock
+     - Selectively lock tabs which you want to stay open.
+     - See the time remaining before each tab will be checked for auto-closing.
+   - Options
+     - Whitelist certain URLs to never be closed.
+     - Set the amount of time to wait before closing inactive tabs.
+     - Set the ideal number of tabs to have in your browser.
+     - Configure keyboard shortcuts.
+
+### Back up & Restore
+
+You can back up your list of closed tabs as well as the number of tabs Tab Wrangler has closed by
+using the import/export functionality in the Settings tab.
+
+#### Back up / Export
+
+1. Open Tab Wrangler
+2. Switch to the _Settings_ tab
+3. Scroll to _Import / Export_
+4. Click _Export_
+
+#### Restore / Import
+
+If you previously backed up / exported your list of tabs, follow these steps to restore the list in
+Tab Wrangler. **Note: this will overwrite Tab Wrangler's tabs list;** ensure you are not overwriting
+tabs that you wanted to save.
+
+1. Open Tab Wrangler
+2. Switch to the _Settings_ tab
+3. Scroll to _Import / Export_
+4. Click _Import_
+5. Select the file created during back up, it will be named similarly to
+   "TabWranglerExport-6-18-2017.json"
+
+#### Back up file format
+
+The "Back up / Export" button creates a JSON file with saved tabs and other usage data. The JSON
+file has the following format:
+
+```ts
+/**
+ * The `chrome.tabs.Tab` type comes from `@types/chrome`
+ * @see https://github.com/DefinitelyTyped/DefinitelyTyped/blob/d693ab3ced5aa2b8d86838f721006b16414bb21e/types/chrome/index.d.ts#L9406
+ */
+type TabWranglerExportFormat = {
+  savedTabs: Array<chrome.tabs.Tab>,
+  totalTabsRemoved: number,
+  totalTabsUnwrangled: number,
+  totalTabsWrangled: number
+};
+```
+
+### Settings
+
+Tab Wrangler's settings are saved and synced by your browser, like [Chrome sync][0] for example, to
+all of your logged in browser sessions if you have sync enabled. Their possible values and their
+usages are described in the following table:
+
+<!-- prettier-ignore-start -->
+<!-- Maintain vertical table layout with unlimited-length lines, ignore auto-formatting -->
+| Setting               | Default                   | Possible Values                                                  | Description                                                                                            |
+| --------------------- | ------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `corralTabSortOrder`  | `null`                    | `null, 'alpha', 'reverseAlpha', 'chrono', 'reverseChrono', 'domain', 'reverseDomain'` | Saved sort order for closed tabs. When `null`, defaults to `'reverseChrono'`      |
+| `createContextMenu`   | `true`                    | `false`, `true`                                                  | When `true`, create a context menu for accessing Tab Wrangler functionality on click                   |
+| `debounceOnActivated` | `true`                    |                                                                  | Whether to wait 1 second before resetting the active tab's timer                                       |
+| `filterAudio`         | `false`                   |                                                                  | Whether to prevent auto-closing tabs that are playing audio                                            |
+| `lockedIds`           | `[]`                      |                                                                  | Array of tab IDs that have been explicitly locked by the user                                          |
+| `lockTabSortOrder`    | `null`                    | `null, 'chrono', 'reverseChrono', 'tabOrder', 'reverseTabOrder'` | Saved sort order for open tabs. When `null`, defaults to `'tabOrder'`                                  |
+| `maxTabs`             | `1000`                    | `0` <= `maxTabs` <= `1,000+`                                     | Maximum number of wrangled tabs to store - exact number determined by browser storage quota            |
+| `minTabs`             | `20`                      | `0` <= `minTabs`                                                 | Auto-close tabs only if there are more than this number open                                           |
+| `minutesInactive`     | `60`                      | `0` <= `minutesInactive`                                         | How much time (+ `secondsInactive`) before a tab is considered "stale" and ready to close              |
+| `paused`              | `false`                   |                                                                  | Whether TabWrangler is paused (shouldn't count down)                                                   |
+| `purgeClosedTabs`     | `false`                   |                                                                  | Whether to empty the closed tab list when the browser closes                                           |
+| `secondsInactive`     | `0`                       | `0` <= `secondsInactive`                                         | How much time (+ `minutesInactive`) before a tab is considered "stale" and ready to close              |
+| `showBadgeCount`      | `false`                   |                                                                  | Whether to show the length of the closed tab list as a badge on the URL bar icon                       |
+| `theme`               | `'system'`                | `'dark'`, `'light'`, `'system'`                                  | The color theme to use for Tab Wrangler's popup                                                        |
+| `whitelist`           | `['about:', 'chrome://']` |                                                                  | Array of patterns to check against.  If a tab's URL matches a pattern, the tab is never auto-closed    |
+| `wrangleOption`       | `'withDupes'`             | `'exactURLMatch'`, `'hostnameAndTitleMatch'`, `'withDupes'`      | How to handle duplicate entries in the closed tabs list                                                |
+<!-- prettier-ignore-end -->
+
+#### `maxTabs`
+
+The upper bound of `maxTabs` is determined by the [browser's storage quota][8] and can vary. Tab
+Wrangler will display an error message if the setting is adjusted above what is allowed by the
+browser.
+
+## Privacy Policy
+
+Tab Wrangler does not transmit any data about you or your usage of Tab Wrangler. There is no
+tracking, there are no analytics, and there are no advertisements.
+
+Tab Wrangler **does not have** nor does it request the ability to read information on the web
+pages that you visit. Tab Wrangler is able to read the title and current location (the URL) of
+your tabs but not the content inside those tabs.
+
+### Explanation of Requested Permissions
+
+Tab Wrangler's requested permissions are listed in its [manifest.json][manifest.json] under the
+`"permissions"` key.
+
+- [`"alarms"`][7]: Allows creation of alarms to periodically check Tab Wrangler's background script
+  that checks for stale tabs is running and healthy.
+- [`"contextMenus"`][3]: Allows a "Tab Wrangler" menu item when you right click on a webpage that
+  lets you send the tab to the Tab Corral, lock that tab, or lock all tabs on that domain.
+- [`"sessions"`][4]: Allows Tab Wrangler to read and restore the full history of a tab including
+  enabling the back/forward buttons and your scroll position on the page.
+- [`"storage"`][5]: Allows Tab Wrangler to sync your Tab Wrangler settings with your browser
+  account and enables saving your closed tabs to your local computer. _Note: closed tabs are not
+  synced because the "sync" storage area has only a small amount of storage._
+- [`"tabs"`][6]: Allows Tab Wrangler to read the title and location of any current tabs as well
+  as close those tabs and open new tabs. This permission **does not** enable Tab Wrangler to
+  read information on web pages that you visit.
+
+## Contributing
+
+### Translation
+
+[Tab Wrangler's Crowdin Project][1]: the place to contribute and view translations
+
+Tab Wrangler is available in other languages thanks to generous translation help. Any help
+translating Tab Wrangler is greatly appreciated and can be done via Crowdin. Contributors
+include the following:
+
+🇨🇳 Chinese (Simplified) by [yfdyh000](https://crowdin.com/profile/yfdyh000),
+🇹🇼 Chinese (Traditional) by [ingrid123](https://crowdin.com/profile/ingrid123) and [xbddc.ho](https://crowdin.com/profile/xbddc.ho),
+🇫🇷 French by [orpheuslummis](https://crowdin.com/profile/orpheuslummis) and [bkazez](https://crowdin.com/profile/bkazez),
+🇩🇪 German by [johannesfischer](https://crowdin.com/profile/johannesfischer),
+🇭🇺 Hungarian by [kottalovag](https://crowdin.com/profile/kottalovag),
+🇮🇩 Indonesian by [azhe403](https://crowdin.com/profile/azhe403),
+🇰🇷 Korean by [x_nuk](https://crowdin.com/profile/x_nuk),
+🇱🇻 Latvian by [coool](https://crowdin.com/profile/coool),
+🇵🇱 Polish by [imjusttony](https://crowdin.com/profile/imjusttony),
+🇧🇷 Portuguese, Brazilian by [RavenaStar](https://crowdin.com/profile/RavenaStar),
+🇷🇺 Russian by [sdir01](https://crowdin.com/profile/sdir01) and [coool](https://crowdin.com/profile/coool),
+🇪🇸 Spanish by [julianjaramillo](https://crowdin.com/profile/julianjaramillo),
+Tamil by [dineshr](https://crowdin.com/profile/dineshr),
+🇺🇦 Ukrainian by [DepsCian](https://crowdin.com/profile/depscian)
+
+### Development
+
+Pull requests for bug fixes and features are more than welcome. Please check out the
+["Developing" section][2] of the CONTRIBUTING doc to see how to get started. Once your code is
+working and tested, submit a pull request to this primary project and we'll get going.
+
+- Modernized and maintained by [ssorallen](https://github.com/ssorallen) in 2017
+- Rewritten by [JacobSingh](https://github.com/jacobSingh) in 2012
+- Original extension and idea by [jacktasia](https://github.com/jacktasia) in 2010
+
+[0]: https://chrome.google.com/sync
+[1]: https://crowdin.com/project/tab-wrangler
+[2]: CONTRIBUTING.md#developing
+[3]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
+[4]: https://developer.chrome.com/extensions/sessions
+[5]: https://developer.chrome.com/extensions/storage
+[6]: https://developer.chrome.com/extensions/tabs
+[manifest.json]: https://github.com/tabwrangler/tabwrangler/blob/main/app/manifest.json
+[7]: https://developer.chrome.com/docs/extensions/reference/alarms/
+[8]: https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria

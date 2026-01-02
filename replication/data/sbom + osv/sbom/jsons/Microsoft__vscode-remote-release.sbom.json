@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.microsoft/vscode-remote-release",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/34d50fa0-a28c-49db-816e-73884f703b99",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T12:00:46Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.microsoft/vscode-remote-release",
+      "SPDXID": "SPDXRef-github-microsoft-vscode-remote-release-main-a2dfd8",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/microsoft/vscode-remote-release",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/microsoft/vscode-remote-release@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-microsoft-vscode-remote-release-main-a2dfd8",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

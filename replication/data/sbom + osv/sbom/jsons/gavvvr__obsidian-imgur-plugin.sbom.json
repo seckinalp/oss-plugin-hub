@@ -1,0 +1,869 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.gavvvr/obsidian-imgur-plugin",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/2ec04d71-b636-4df9-bab2-e0eeeb687463",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:49:19Z"
+  },
+  "packages": [
+    {
+      "name": "lint-staged",
+      "SPDXID": "SPDXRef-npm-lint-staged-15.4.3-a23d57",
+      "versionInfo": "15.4.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2016 Andrey Okonetchnikov",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lint-staged@15.4.3"
+        }
+      ]
+    },
+    {
+      "name": "electron",
+      "SPDXID": "SPDXRef-npm-electron-32.2.5-c47f21",
+      "versionInfo": "32.2.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013-2020 GitHub Inc., Copyright (c) Electron contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/electron@32.2.5"
+        }
+      ]
+    },
+    {
+      "name": "npm-run-all2",
+      "SPDXID": "SPDXRef-npm-npm-run-all2-7.0.2-ed9756",
+      "versionInfo": "7.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2015 Toru Nagashima, copyright 2015 Toru Nagashima, copyright 2016 Toru Nagashima",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/npm-run-all2@7.0.2"
+        }
+      ]
+    },
+    {
+      "name": "eslint",
+      "SPDXID": "SPDXRef-npm-eslint-9.19.0-10b036",
+      "versionInfo": "9.19.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2013, Joel Feenstra, Copyright (c) Microsoft Corporation, Copyright OpenJS Foundation and other contributors, <www.openjsf.org>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint@9.19.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint-plugin-wdio",
+      "SPDXID": "SPDXRef-npm-eslint-plugin-wdio-9.6.0-4ed737",
+      "versionInfo": "9.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-plugin-wdio@9.6.0"
+        }
+      ]
+    },
+    {
+      "name": "@commitlint/cz-commitlint",
+      "SPDXID": "SPDXRef-npm-commitlint-cz-commitlint-19.6.1-31f933",
+      "versionInfo": "19.6.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40commitlint/cz-commitlint@19.6.1"
+        }
+      ]
+    },
+    {
+      "name": "@wdio/cli",
+      "SPDXID": "SPDXRef-npm-wdio-cli-9.7.1-d555bd",
+      "versionInfo": "9.7.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wdio/cli@9.7.1"
+        }
+      ]
+    },
+    {
+      "name": "vitest",
+      "SPDXID": "SPDXRef-npm-vitest-3.0.4-03b5f6",
+      "versionInfo": "3.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause AND ISC AND MIT",
+      "copyrightText": "(c) 2020-present Andrea Giammarchi, Copyright (c) 2010-2014, Christian Johansen, christian@cjohansen.no, Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>, Copyright (c) 2012-2020 by various contributors, Copyright (c) 2013 Arnout Kazemier and contributors, Copyright (c) 2013 jake luer <jake@alogicalparadox.com>, Copyright (c) 2013 Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com), Copyright (c) 2014 Permission, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2020 Teambition, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Simon Lydell, Copyright (c) 2015 Matteo Collina, Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016 Luigi Pinca and contributors, Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2018 Terkel Gjervig Nielsen, Copyright (c) 2018-2020, Andrea Giammarchi, Copyright (c) 2018, Sinon.JS, Copyright (c) 2020-PRESENT Anthony Fu <https://github.com/antfu>, Copyright (c) 2021 Anthony Fu <https://github.com/antfu>, Copyright (c) 2021-Present Vitest Team, Copyright (c) 2022 Anthony Fu <https://github.com/antfu>, Copyright (c) Denis Malinochkin, Copyright (c) EGOIST, Copyright (c) Feross Aboukhadijeh, Copyright (c) Hiroki Osame <hiroki.osame@gmail.com>, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/vitest@3.0.4"
+        }
+      ]
+    },
+    {
+      "name": "@wdio/globals",
+      "SPDXID": "SPDXRef-npm-wdio-globals-9.7.1-efa451",
+      "versionInfo": "9.7.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wdio/globals@9.7.1"
+        }
+      ]
+    },
+    {
+      "name": "husky",
+      "SPDXID": "SPDXRef-npm-husky-9.1.7-f53fca",
+      "versionInfo": "9.1.7",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2021 typicode",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/husky@9.1.7"
+        }
+      ]
+    },
+    {
+      "name": "webdriverio",
+      "SPDXID": "SPDXRef-npm-webdriverio-9.7.1-050cf4",
+      "versionInfo": "9.7.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2010-2014, Christian Johansen, christian@cjohansen.no, Copyright (c) OpenJS Foundation and other contributors, Copyright by https://github.com/Georgegriff",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/webdriverio@9.7.1"
+        }
+      ]
+    },
+    {
+      "name": "@wdio/mocha-framework",
+      "SPDXID": "SPDXRef-npm-wdio-mocha-framework-9.6.4-dd409e",
+      "versionInfo": "9.6.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wdio/mocha-framework@9.6.4"
+        }
+      ]
+    },
+    {
+      "name": "@vitest/coverage-v8",
+      "SPDXID": "SPDXRef-npm-vitest-coverage-v8-3.0.4-2d9d24",
+      "versionInfo": "3.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2021-Present Vitest Team",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40vitest/coverage-v8@3.0.4"
+        }
+      ]
+    },
+    {
+      "name": "enquirer",
+      "SPDXID": "SPDXRef-npm-enquirer-2.4.1-0355e1",
+      "versionInfo": "2.4.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2016-present, Jon Schlinkert, Copyright (c) 2018-present, Jon Schlinkert (https://github.com/jonschlinkert)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/enquirer@2.4.1"
+        }
+      ]
+    },
+    {
+      "name": "tsx",
+      "SPDXID": "SPDXRef-npm-tsx-4.19.2-1d618b",
+      "versionInfo": "4.19.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) Hiroki Osame <hiroki.osame@gmail.com>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tsx@4.19.2"
+        }
+      ]
+    },
+    {
+      "name": "@wdio/local-runner",
+      "SPDXID": "SPDXRef-npm-wdio-local-runner-9.7.1-92a199",
+      "versionInfo": "9.7.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wdio/local-runner@9.7.1"
+        }
+      ]
+    },
+    {
+      "name": "globals",
+      "SPDXID": "SPDXRef-npm-globals-15.14.0-abcfec",
+      "versionInfo": "15.14.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/globals@15.14.0"
+        }
+      ]
+    },
+    {
+      "name": "wdio-electron-service",
+      "SPDXID": "SPDXRef-npm-wdio-electron-service-7.3.1-4f80df",
+      "versionInfo": "7.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/wdio-electron-service@7.3.1"
+        }
+      ]
+    },
+    {
+      "name": "esbuild",
+      "SPDXID": "SPDXRef-npm-esbuild-0.24.2-73db62",
+      "versionInfo": "0.24.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2020 Evan Wallace",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/esbuild@0.24.2"
+        }
+      ]
+    },
+    {
+      "name": "@wdio/spec-reporter",
+      "SPDXID": "SPDXRef-npm-wdio-spec-reporter-9.6.3-99a1a7",
+      "versionInfo": "9.6.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) OpenJS Foundation and other contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40wdio/spec-reporter@9.6.3"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-5.7.3-087046",
+      "versionInfo": "5.7.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "(c) by W3C, Copyright (c) 1991-2017 Unicode, Inc., Copyright (c) 2018 The Khronos Group Inc., Copyright (c) 2018 WHATWG, Copyright (c) Microsoft Corporation, Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang) Disclaimers",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@5.7.3"
+        }
+      ]
+    },
+    {
+      "name": "@commitlint/cli",
+      "SPDXID": "SPDXRef-npm-commitlint-cli-19.6.1-b37c8c",
+      "versionInfo": "19.6.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40commitlint/cli@19.6.1"
+        }
+      ]
+    },
+    {
+      "name": "obsidian",
+      "SPDXID": "SPDXRef-npm-obsidian-1.7.2-08f4a3",
+      "versionInfo": "1.7.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian@1.7.2"
+        }
+      ]
+    },
+    {
+      "name": "typescript-eslint",
+      "SPDXID": "SPDXRef-npm-typescript-eslint-8.22.0-bf904f",
+      "versionInfo": "8.22.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 typescript-eslint and other contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript-eslint@8.22.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-22.12.0-52db3a",
+      "versionInfo": "22.12.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) Microsoft Corporation, Copyright Node.js contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@22.12.0"
+        }
+      ]
+    },
+    {
+      "name": "prettier",
+      "SPDXID": "SPDXRef-npm-prettier-3.4.2-eaab15",
+      "versionInfo": "3.4.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND ISC AND MIT",
+      "copyrightText": "(c) GraphQL Contributors, Copyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>, Copyright (c) 2010-2024 Google LLC. https://angular.dev/license, Copyright (c) 2011-2015 by Vitaly Puzrin, Copyright (c) 2012 EditorConfig Team, Copyright (c) 2012-2014 by various contributors, Copyright (c) 2012-2014 by Woong Jun and Tim Oxley, Copyright (c) 2012-2014 Raynos, Copyright (c) 2012-2017 by Ingvar Stepanyan, Copyright (c) 2012-2018 Aseem Kishore, and others, Copyright (c) 2012-2022 by various contributors, Copyright (c) 2013 Andrey Sitnik <andrey@sitnik.ru>, Copyright (c) 2013 Dominic Tarr, Copyright (c) 2013 James Halliday, Copyright (c) 2013 Kael Zhang <i@kael.me> , contributors http://kael.me, Copyright (c) 2013 Liucw, Copyright (c) 2013 Mikola Lysenko, Copyright (c) 2014 Alex Bell, Copyright (c) 2014 Stefan Thomas, Copyright (c) 2014 Yehuda Katz and contributors, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2020 Teambition, Copyright (c) 2014-present Sebastian McKenzie and other contributors, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell, Copyright (c) 2015 Brian Donovan, Copyright (c) 2015 Matteo Collina, Copyright (c) 2015 Tilde, Inc., Copyright (c) 2015 Titus Wormer, Copyright (c) 2015 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016 Denys Kniazevych <webschik@gmail.com>, Copyright (c) 2016 Joshua Holbrook, Copyright (c) 2016 Pat Sissons <patricksissons@gmail.com>, Copyright (c) 2016 Thomas Watson Steen, Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2016, Mark Wubben, Copyright (c) 2017 Andrew Powell <andrew@shellscape.org>, Copyright (c) 2017 Evgeny Poberezkin, Copyright (c) 2017 Martin Munoz and contributors, Copyright (c) 2017 Permission, Copyright (c) 2017 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2018-2020, Andrea Giammarchi, Copyright (c) 2019 , KFlash and others, Copyright (c) 2019 typescript-eslint and other contributors, Copyright (c) 2020 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2021 Titus Wormer, Copyright (c) 2021-2024 Oleksii Raspopov, Kostiantyn Denysov, Anton Verinov, Copyright (c) Andrew Powell <andrew@shellscape.org>, Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info), Copyright (c) Denis Malinochkin, Copyright (c) Feross Aboukhadijeh, Copyright (c) Ika <ikatyang@gmail.com> (https://github.com/ikatyang), Copyright (c) Isaac Z. Schlueter, Copyright (c) Isaac Z. Schlueter and Contributors, Copyright (c) James Long and contributors, Copyright (c) James Talmage <james@talmage.io> (https://github.com/jamestalmage), Copyright (c) Meta Platforms, Inc. and affiliates, Copyright (c) Open JS Foundation, Copyright (c) Petka Antonov Benjamin Gruenbaum, Copyright (c) Roy Riojas & Jared Wray, Copyright (c) Roy Riojas and Jared Wray, Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com), Copyright (c) Squirrel Chat et al, Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>, Copyright 2017 Andrey Sitnik <andrey@sitnik.ru>, Copyright 2018 Eemeli Aro <eemeli@gmail.com>, Copyright Joyent, Inc. and other Node contributors, Copyright JS Foundation and other contributors, https://js.foundation, Copyright Mathias Bynens <https://mathiasbynens.be/>, Copyright Node.js contributors",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/prettier@3.4.2"
+        }
+      ]
+    },
+    {
+      "name": "@commitlint/config-conventional",
+      "SPDXID": "SPDXRef-npm-commitlint-config-conventional-19.6.0-2e2406",
+      "versionInfo": "19.6.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40commitlint/config-conventional@19.6.0"
+        }
+      ]
+    },
+    {
+      "name": "commitizen",
+      "SPDXID": "SPDXRef-npm-commitizen-4.3.1-0a832a",
+      "versionInfo": "4.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/commitizen@4.3.1"
+        }
+      ]
+    },
+    {
+      "name": "obsidian-utils",
+      "SPDXID": "SPDXRef-npm-obsidian-utils-0.10.2-15414a",
+      "versionInfo": "0.10.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/obsidian-utils@0.10.2"
+        }
+      ]
+    },
+    {
+      "name": "@vitest/ui",
+      "SPDXID": "SPDXRef-npm-vitest-ui-3.0.4-97c4e5",
+      "versionInfo": "3.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) 2018-present Yuxi, (c) 2024 Eduardo San Martin Morote, Copyright (c) 2021-Present Vitest Team",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40vitest/ui@3.0.4"
+        }
+      ]
+    },
+    {
+      "name": "eslint-plugin-perfectionist",
+      "SPDXID": "SPDXRef-npm-eslint-plugin-perfectionist-4.7.0-edbc45",
+      "versionInfo": "4.7.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "(c) Azat S. (https://azat.io), Copyright 2023 Azat S. <to@azat.io>",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/eslint-plugin-perfectionist@4.7.0"
+        }
+      ]
+    },
+    {
+      "name": "expect-webdriverio",
+      "SPDXID": "SPDXRef-npm-expect-webdriverio-5.0.5-9737df",
+      "versionInfo": "5.0.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2019 Mykola Grybyk",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/expect-webdriverio@5.0.5"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-node",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "EnricoMi/publish-unit-test-result-action",
+      "SPDXID": "SPDXRef-githubactions-EnricoMi-publish-unit-test-result-action-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/EnricoMi/publish-unit-test-result-action@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "pnpm/action-setup",
+      "SPDXID": "SPDXRef-githubactions-pnpm-action-setup-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/pnpm/action-setup@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "SonarSource/sonarcloud-github-action",
+      "SPDXID": "SPDXRef-githubactions-SonarSource-sonarcloud-github-action-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/SonarSource/sonarcloud-github-action@master"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/download-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-download-artifact-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/download-artifact@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/create-release",
+      "SPDXID": "SPDXRef-githubactions-actions-create-release-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/create-release@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-release-asset",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-release-asset-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-release-asset@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.gavvvr/obsidian-imgur-plugin",
+      "SPDXID": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/gavvvr/obsidian-imgur-plugin",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/gavvvr/obsidian-imgur-plugin@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-lint-staged-15.4.3-a23d57",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-electron-32.2.5-c47f21",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-npm-run-all2-7.0.2-ed9756",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-9.19.0-10b036",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-wdio-9.6.0-4ed737",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-commitlint-cz-commitlint-19.6.1-31f933",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-wdio-cli-9.7.1-d555bd",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-vitest-3.0.4-03b5f6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-wdio-globals-9.7.1-efa451",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-husky-9.1.7-f53fca",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-webdriverio-9.7.1-050cf4",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-wdio-mocha-framework-9.6.4-dd409e",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-vitest-coverage-v8-3.0.4-2d9d24",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-enquirer-2.4.1-0355e1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-tsx-4.19.2-1d618b",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-wdio-local-runner-9.7.1-92a199",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-globals-15.14.0-abcfec",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-wdio-electron-service-7.3.1-4f80df",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-esbuild-0.24.2-73db62",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-wdio-spec-reporter-9.6.3-99a1a7",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-5.7.3-087046",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-commitlint-cli-19.6.1-b37c8c",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-1.7.2-08f4a3",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-8.22.0-bf904f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-22.12.0-52db3a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-prettier-3.4.2-eaab15",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-commitlint-config-conventional-19.6.0-2e2406",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-commitizen-4.3.1-0a832a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-obsidian-utils-0.10.2-15414a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-vitest-ui-3.0.4-97c4e5",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-perfectionist-4.7.0-edbc45",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-npm-expect-webdriverio-5.0.5-9737df",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-EnricoMi-publish-unit-test-result-action-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-download-artifact-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-release-asset-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-pnpm-action-setup-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-SonarSource-sonarcloud-github-action-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-create-release-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-gavvvr-obsidian-imgur-plugin-main-7d0fc9",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

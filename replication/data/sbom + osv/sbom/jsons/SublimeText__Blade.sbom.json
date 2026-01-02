@@ -1,0 +1,76 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.SublimeText/Blade",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/3abbf5cf-c1b2-43f0-a701-1b2e86f59ab7",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:40Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "SublimeText/syntax-test-action",
+      "SPDXID": "SPDXRef-githubactions-SublimeText-syntax-test-action-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/SublimeText/syntax-test-action@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.SublimeText/Blade",
+      "SPDXID": "SPDXRef-github-SublimeText-Blade-main-eb935b",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/SublimeText/Blade",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/SublimeText/Blade@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-SublimeText-Blade-main-eb935b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-SublimeText-Blade-main-eb935b",
+      "relatedSpdxElement": "SPDXRef-githubactions-SublimeText-syntax-test-action-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-SublimeText-Blade-main-eb935b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

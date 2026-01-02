@@ -1,0 +1,170 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.photon-wp/material-design-icons-for-elementor",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/937bc41b-f9f6-410f-b857-81f4d5256ae4",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:52:48Z"
+  },
+  "packages": [
+    {
+      "name": "gulp",
+      "SPDXID": "SPDXRef-npm-gulp-4.0.2-859cff",
+      "versionInfo": "^4.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp@%5E4.0.2"
+        }
+      ]
+    },
+    {
+      "name": "gulp-autoprefixer",
+      "SPDXID": "SPDXRef-npm-gulp-autoprefixer-4.1.0-84378d",
+      "versionInfo": "^4.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-autoprefixer@%5E4.1.0"
+        }
+      ]
+    },
+    {
+      "name": "gulp-notify",
+      "SPDXID": "SPDXRef-npm-gulp-notify-3.2.0-10d698",
+      "versionInfo": "^3.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-notify@%5E3.2.0"
+        }
+      ]
+    },
+    {
+      "name": "gulp-plumber",
+      "SPDXID": "SPDXRef-npm-gulp-plumber-1.2.1-26c20f",
+      "versionInfo": "^1.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-plumber@%5E1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "gulp-rename",
+      "SPDXID": "SPDXRef-npm-gulp-rename-1.4.0-a7339f",
+      "versionInfo": "^1.4.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-rename@%5E1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "gulp-sass",
+      "SPDXID": "SPDXRef-npm-gulp-sass-3.2.1-f3ae49",
+      "versionInfo": "^3.2.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/gulp-sass@%5E3.2.1"
+        }
+      ]
+    },
+    {
+      "name": "material-icons-downloader",
+      "SPDXID": "SPDXRef-npm-material-icons-downloader-1.3.0-b6306f",
+      "versionInfo": "^1.3.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/material-icons-downloader@%5E1.3.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.photon-wp/material-design-icons-for-elementor",
+      "SPDXID": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/photon-wp/material-design-icons-for-elementor",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/photon-wp/material-design-icons-for-elementor@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-4.0.2-859cff",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-autoprefixer-4.1.0-84378d",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-notify-3.2.0-10d698",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-plumber-1.2.1-26c20f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-rename-1.4.0-a7339f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relatedSpdxElement": "SPDXRef-npm-gulp-sass-3.2.1-f3ae49",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relatedSpdxElement": "SPDXRef-npm-material-icons-downloader-1.3.0-b6306f",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-photon-wp-material-design-icons-for-elementor-master-ff8d37",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

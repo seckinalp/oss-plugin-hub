@@ -1,0 +1,287 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.bazelbuild/intellij",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/488c6b71-9c48-470e-880a-318ca5b797de",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:48:41Z"
+  },
+  "packages": [
+    {
+      "name": "actions/github-script",
+      "SPDXID": "SPDXRef-githubactions-actions-github-script-8..-75c946",
+      "versionInfo": "8.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/github-script@8.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/labeler",
+      "SPDXID": "SPDXRef-githubactions-actions-labeler-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/labeler@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "redhat-plumbers-in-action/advanced-issue-labeler",
+      "SPDXID": "SPDXRef-githubactions-redhat-plumbers-in-action-advanced-issue-labeler-b80ae64e3e156e9c111b075bfa04b295d54e8e2e-75c946",
+      "versionInfo": "b80ae64e3e156e9c111b075bfa04b295d54e8e2e",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/redhat-plumbers-in-action/advanced-issue-labeler@b80ae64e3e156e9c111b075bfa04b295d54e8e2e"
+        }
+      ]
+    },
+    {
+      "name": "stefanbuck/github-issue-parser",
+      "SPDXID": "SPDXRef-githubactions-stefanbuck-github-issue-parser-25f1485edffc1fee3ea68eb9f59a72e58720ffc4-75c946",
+      "versionInfo": "25f1485edffc1fee3ea68eb9f59a72e58720ffc4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/stefanbuck/github-issue-parser@25f1485edffc1fee3ea68eb9f59a72e58720ffc4"
+        }
+      ]
+    },
+    {
+      "name": "softprops/action-gh-release",
+      "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/softprops/action-gh-release@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/upload-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-5..-75c946",
+      "versionInfo": "5.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/upload-artifact@5.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/download-artifact",
+      "SPDXID": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+      "versionInfo": "6.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/download-artifact@6.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "bazel-contrib/setup-bazel",
+      "SPDXID": "SPDXRef-githubactions-bazel-contrib-setup-bazel-0.15.0-75c946",
+      "versionInfo": "0.15.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/bazel-contrib/setup-bazel@0.15.0"
+        }
+      ]
+    },
+    {
+      "name": "jlumbroso/free-disk-space",
+      "SPDXID": "SPDXRef-githubactions-jlumbroso-free-disk-space-1.3.1-75c946",
+      "versionInfo": "1.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/jlumbroso/free-disk-space@1.3.1"
+        }
+      ]
+    },
+    {
+      "name": "actions-ecosystem/action-remove-labels",
+      "SPDXID": "SPDXRef-githubactions-actions-ecosystem-action-remove-labels-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions-ecosystem/action-remove-labels@1"
+        }
+      ]
+    },
+    {
+      "name": "actions/stale",
+      "SPDXID": "SPDXRef-githubactions-actions-stale-10..-75c946",
+      "versionInfo": "10.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/stale@10.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "numpy",
+      "SPDXID": "SPDXRef-pypi-numpy-2.3.5-75c946",
+      "versionInfo": "2.3.5",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0 AND BSD-3-Clause AND MIT AND Zlib",
+      "copyrightText": "(c) Convert Chebyshev, (c) Jussi Pakkanen, (c) Multiply a Chebyshev, (c) Multiply a Hermite, (c) Multiply a Laguerre, (c) Multiply a Legendre, (c), False, False, False, True, (c), False, False, True, False, (c), True, True, False, False, 2020 Intel Corporation, 2022 Intel Corporation, Copyright (c) 1992-2013 The University of Tennessee and The University of Tennessee Research Foundation, Copyright (c) 1993 by Sun Microsystems, Inc., Copyright (c) 1995, 1996, 1997 Jim Hugunin, hugunin@mit.edu, Copyright (c) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura, Copyright (c) 2000-2013 The University of California Berkeley, Copyright (c) 2002-2017 Free Software Foundation, Inc., Copyright (c) 2003-2005, Jean-Sebastien Roy (js@jeannot.org), Copyright (c) 2003, 2007-14 Massachusetts Institute of Technology, Copyright (c) 2003, 2007-14 Matteo Frigo, Copyright (c) 2004-2018 Max-Planck-Society author Martin Reinecke, Copyright (c) 2004, 2006 The Linux Foundation and its contributors, Copyright (c) 2005-2015, NumPy Developers, Copyright (c) 2005-2017, NumPy Developers, Copyright (c) 2005-2018 NVIDIA Corporation Built, Copyright (c) 2005-2021, NumPy Developers, Copyright (c) 2005-2025, NumPy Developers, Copyright (c) 2006-2013 The University of Colorado Denver, Copyright (c) 2006, University of Georgia and Pierre G.F. Gerard-Marchant, Copyright (c) 2007 Cybozu Labs, Inc., Copyright (c) 2007 Free Software Foundation, Inc. <https://fsf.org/>, Copyright (c) 2007, 2011 David Schultz <das@FreeBSD.ORG>, Copyright (c) 2008 Ian Bicking and Contributors, Copyright (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de>, Copyright (c) 2009 Free Software Foundation, Inc. <https://fsf.org/>, Copyright (c) 2009-2017 The MathJax Consortium, Copyright (c) 2009-2019 Jeff Bezanson, Stefan Karpinski, Viral B. Shah, and other contributors, Copyright (c) 2010 - 2019, Copyright (c) 2010 by Mark Wiebe (mwwiebe@gmail.com) The University of British Columbia, Copyright (c) 2010 The Android Open Source Project, Copyright (c) 2010-2011 by Mark Wiebe (mwwiebe@gmail.com) The University of British Columbia, Copyright (c) 2010-2017 The MathJax Consortium, Copyright (c) 2010-2018 Max-Planck-Society, Copyright (c) 2010-2019 Free Software Foundation, Inc., Copyright (c) 2010-2022 Max-Planck-Society, Copyright (c) 2011 by Enthought, Inc., Copyright (c) 2011 by Mark Wiebe (mwwiebe@gmail.com) The University of British Columbia, Copyright (c) 2011 Enthought, Inc, Copyright (c) 2011-2014, The OpenBLAS Project, Copyright (c) 2011-2015 The MathJax Consortium, Copyright (c) 2011-2017 The MathJax Consortium, Copyright (c) 2012 Google Inc., Copyright (c) 2012 Stephen Montgomery-Smith <stephen@FreeBSD.ORG>, Copyright (c) 2013 Gabriele Svelto <gabriele.svelto@gmail.com>, Copyright (c) 2013 THE PACKAGE'S, Copyright (c) 2013-2017 The MathJax Consortium, Copyright (c) 2014 Mathjax Consortium, Copyright (c) 2014 Ryan Juckett, Copyright (c) 2014-2017 The MathJax Consortium, Copyright (c) 2015 Melissa E. O'Neill, Copyright (c) 2015 Pauli Virtanen, Copyright (c) 2015-2017 Martin Hensel, Copyright (c) 2015-2017 The MathJax Consortium, Copyright (C) 2015-2021 Matthias Klumpp, Copyright (c) 2015-2021 Matthias Klumpp <matthias@tenstral.net>, Copyright (c) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>, Copyright (c) 2016-2017 The MathJax Consortium, Copyright (c) 2017, Copyright (c) 2017 Arseny Maslennikov, Copyright (c) 2017 Dylan Baker, Copyright (c) 2017 Intel Corporation, Copyright (c) 2017-2018 Intel Corporation, Copyright (c) 2017-2023 Intel Corporation, Copyright (c) 2018 Intel Corporation, Copyright (c) 2018 Melissa E. O'Neill, Copyright (c) 2018-2024 Intel Corporation, Copyright (c) 2018, Meson Team, Copyright (c) 2019 Kevin Sheppard, Copyright (c) 2019 NumPy Developers, Copyright (c) 2019 Takao Fujiwara <takao.fujiwara1@gmail.com>, Copyright (c) 2019-2020 Peter Bell, Copyright (c) 2019-2025 Intel Corporation, Copyright (c) 2020-2023 Intel Corporation, Copyright (c) 2020-2024 Intel Corporation, Copyright (c) 2020-2025 Intel Corporation, Copyright (c) 2021 Intel Corporation, Copyright (c) 2021 Intel Corporation project 'existing project, Copyright (c) 2021 Microsoft Corporation, Copyright (C) 2021 Serge Sans Paille, Copyright (c) 2021 Serge Sans Paille SPDX-License-Identifier BSD-3-Clause Authors Raghuveer Devulapalli <raghuveer.devulapalli@intel.com> Serge Sans Paille <serge.guelton@telecom-bretagne.eu>, Copyright (c) 2021 Serge Sans Paille SPDX-License-Identifier BSD-3-Clause Authors Raghuveer Devulapalli <raghuveer.devulapalli@intel.com> Serge Sans Paille <serge.guelton@telecom-bretagne.eu> Liu Zhuan <zhuan.liu@intel.com>, Copyright (c) 2021-2022, Scientific Python project, Copyright (c) 2021-2023 Intel Corporation, Copyright (c) 2021-2024 Intel Corporation, Copyright (c) 2021-2025 Intel Corporation, Copyright (c) 2022 Intel Corporation, Copyright (C) 2022 Intel Corporation, Copyright (c) 2022 Intel Corporation SPDX-License-Identifier BSD-3-Clause Authors Liu Zhuan <zhuan.liu@intel.com> Tang Xi <xi.tang@intel.com>, Copyright (c) 2022 Intel Corporation SPDX-License-Identifier BSD-3-Clause Authors Raghuveer Devulapalli <raghuveer.devulapalli@intel.com>, Copyright (c) 2022 Intel Corporation SPDX-License-Identifier BSD-3-Clause Authors Raghuveer Devulapalli <raghuveer.devulapalli@intel.com> Matthew Sterrett <matthew.sterrett@intel.com>, Copyright (c) 2022-2023 Intel Corporation, Copyright (C) 2022-2023 Intel Corporation, Copyright (c) 2022-2024 Intel Corporation, Copyright (c) 2022, Intel, Copyright (c) 2023 Intel Corporation, Copyright (C) 2023 Intel Corporation, Copyright (c) 2023 Red Hat, Inc, Copyright (c) 2023-2024 Intel Corporation, Copyright (c) 2023-2025 Intel Corporation, Copyright (c) 2023, NumPy Developers, Copyright (c) 2024 Intel Corporation, Copyright (c) 2024 Tan Ping Liang, Peter Bell, Copyright (c) 2024-2025 Intel Corporation, Copyright (c) 2025 Intel Corporation, Copyright (c) Donald Stufft and individual contributors, Copyright (c) The Highway Project Authors, Copyright (c) the JPEG XL Project, Copyright (c) the JPEG XL Project Authors, Copyright (c) the JPEG XL Project Authors. All rights reserved., Copyright © 2017-2023 Intel Corporation, Copyright © 2020-2025 Intel Corporation, Copyright © 2021 Intel Corporation, Copyright © 2021-2023 Intel Corporation, Copyright © 2021-2024 Intel Corporation, Copyright © 2021-2025 Intel Corporation, Copyright © 2022 Intel Corporation, Copyright © 2022-2023 Intel Corporation, Copyright © 2022-2024 Intel Corporation, Copyright © 2023 Intel Corporation, Copyright © 2023-2024 Intel Corporation, Copyright © 2023-2025 Intel Corporation, Copyright © 2024 Intel Corporation, Copyright © 2024-2025 Intel Corporation, Copyright © 2025 Intel Corporation, Copyright 1996-2023 Intel Corporation, Copyright 1999 - 2011 Pearu Peterson, Copyright 1999, 2000, 2001 Regents of the University of California, Copyright 2002 Pearu Peterson, Copyright 2007-2018 by the Sphinx team, Copyright 2010-2012, D. E. Shaw Research, Copyright 2011 - present NumPy Developers, Copyright 2011 - present NumPy Developers. https://numpy.org/doc/stable/f2py/index.html, Copyright 2011 by Enthought, Inc, Copyright 2012-2016 The Meson development team, Copyright 2012-2017 The Meson development team, Copyright 2012-2019 The Meson development team, Copyright 2012-2020 Meson development team, Copyright 2012-2020 The Meson development team, Copyright 2012-2021 The Meson development team, Copyright 2012-2022 The Meson development team, Copyright 2012-2023 The Meson development team, Copyright 2012-2023 The Meson development team from, Copyright 2013 The Meson development team, Copyright 2013-2014 The Meson development team, Copyright 2013-2016 The Meson development team, Copyright 2013-2017 The Meson development team, Copyright 2013-2018 The Meson development team, Copyright 2013-2019 The Meson development team, Copyright 2013-2020 The Meson development team, Copyright 2013-2021 The Meson development team, Copyright 2013-2024 Contributors to the The Meson project, Copyright 2013-2025 The Meson development team, Copyright 2014 Jussi Pakkanen, Copyright 2014 Melissa O'Neill <oneill@pcg-random.org>, Copyright 2014-2016 The Meson development team, Copyright 2014-2017 The Meson development team, Copyright 2014-2019 The Meson development team, Copyright 2014-2021 The Meson development team, Copyright 2015 Robert Kern <robert.kern@gmail.com>, Copyright 2015 The Meson development team, Copyright 2015-2016 The Meson development team, Copyright 2015-2022 The Meson development team, Copyright 2016 The Meson development team, Copyright 2016-2017 The Meson development team, Copyright 2016-2018 The Meson development team, Copyright 2016-2021 The Meson development team, Copyright 2016-2022 The Meson development team, Copyright 2016-2023 The Meson Developers, Copyright 2017 Google Inc., Copyright 2017 Niklas Claesson, Copyright 2017 The Meson development team, Copyright 2017-2021 The Meson development team, Copyright 2017, 2019 The Meson development team, Copyright 2018 The Meson development team, Copyright 2019 Google LLC, Copyright 2019 Red Hat, Inc., Copyright 2019 The meson development team, Copyright 2019 The Meson development team, Copyright 2019-2022 The meson development team, Copyright 2020 Google LLC, Copyright 2020 Intel Corporation, Copyright 2020 The Meson development team, Copyright 2021 Google LLC, Copyright 2021 The Meson development team, Copyright 2021 The Meson development team from, Copyright 2021 The Meson development team SPDX-license-identifier, Copyright 2021-2024 The Meson Developers, Copyright 2022 Google LLC, Copyright 2022 Intel Corporation, Copyright 2022 Mark Bolhuis, Copyright 2022 Mark Bolhuis <mark@bolhuis.dev>, Copyright 2022 The Meson development team, copyright 2022, Victor Stinner, Copyright 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>, Copyright 2023 Google LLC, Copyright 2023 Matthew Kolbe, Copyright 2023 The Meson development team, Copyright 2023 The Meson development team from, Copyright 2023,2024 Arm Limited and/or its affiliates <open-source-office@arm.com>, Copyright 2024 Arm Limited and/or its affiliates, Copyright 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>, Copyright 2024 Google LLC, Copyright 2024 Meson project contributors, Copyright 2024 The Meson development team, Copyright 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>, Copyright 2025 Google LLC, Copyright 2025 The Meson development team, Copyright Absoft Corporation, Copyright Absoft Corporation 1994-1998 mV2 Cray Research, Inc., Copyright Absoft Corporation 1994-2002 Absoft Pro FORTRAN, Copyright Contributors to the pythoncapi_compat project., Copyright Google LLC 2021, Copyright Google LLC 2021 Matthew Kolbe, Copyright Stone Tickle <lattis@mochiro.moe>, copyrighted by all members",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/numpy@2.3.5"
+        }
+      ]
+    },
+    {
+      "name": "com.github.bazelbuild/intellij",
+      "SPDXID": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/bazelbuild/intellij",
+      "filesAnalyzed": false,
+      "licenseDeclared": "Apache-2.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/bazelbuild/intellij@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-stefanbuck-github-issue-parser-25f1485edffc1fee3ea68eb9f59a72e58720ffc4-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-5..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-stale-10..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-pypi-numpy-2.3.5-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-labeler-6..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-bazel-contrib-setup-bazel-0.15.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-jlumbroso-free-disk-space-1.3.1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-ecosystem-action-remove-labels-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-github-script-8..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relatedSpdxElement": "SPDXRef-githubactions-redhat-plumbers-in-action-advanced-issue-labeler-b80ae64e3e156e9c111b075bfa04b295d54e8e2e-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-bazelbuild-intellij-master-2e721b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

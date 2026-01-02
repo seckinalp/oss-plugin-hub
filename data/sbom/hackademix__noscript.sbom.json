@@ -1,0 +1,38 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.hackademix/noscript",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/75898373-1f8f-49b6-be54-b3d67618712a",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:35Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.hackademix/noscript",
+      "SPDXID": "SPDXRef-github-hackademix-noscript-main-fcf04d",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/hackademix/noscript",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/hackademix/noscript@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-hackademix-noscript-main-fcf04d",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

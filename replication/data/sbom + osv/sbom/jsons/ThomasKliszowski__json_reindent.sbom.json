@@ -1,0 +1,100 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.ThomasKliszowski/json_reindent",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/3e37dd28-2a85-4921-8d43-1469fedf0b1a",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:38Z"
+  },
+  "packages": [
+    {
+      "name": "pyyaml",
+      "SPDXID": "SPDXRef-pypi-pyyaml-3.11-75c946",
+      "versionInfo": "3.11",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2006 Kirill Simonov",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyyaml@3.11"
+        }
+      ]
+    },
+    {
+      "name": "pytest-cov",
+      "SPDXID": "SPDXRef-pypi-pytest-cov-2.2.0-75c946",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-2-Clause",
+      "copyrightText": "Copyright (c) 2010 Meme Dough",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest-cov@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "pytest",
+      "SPDXID": "SPDXRef-pypi-pytest-2.8.3-75c946",
+      "versionInfo": "2.8.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2010 by Armin Ronacher., Copyright 2010 by Armin Ronacher. :license Flask Design License, Copyright Holger Krekel and others, 2004-2015, copyright u'2015",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest@2.8.3"
+        }
+      ]
+    },
+    {
+      "name": "com.github.ThomasKliszowski/json_reindent",
+      "SPDXID": "SPDXRef-github-ThomasKliszowski-jsonreindent-master-b21a1b",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/ThomasKliszowski/json_reindent",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/ThomasKliszowski/json_reindent@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-ThomasKliszowski-jsonreindent-master-b21a1b",
+      "relatedSpdxElement": "SPDXRef-pypi-pyyaml-3.11-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ThomasKliszowski-jsonreindent-master-b21a1b",
+      "relatedSpdxElement": "SPDXRef-pypi-pytest-cov-2.2.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-ThomasKliszowski-jsonreindent-master-b21a1b",
+      "relatedSpdxElement": "SPDXRef-pypi-pytest-2.8.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-ThomasKliszowski-jsonreindent-master-b21a1b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

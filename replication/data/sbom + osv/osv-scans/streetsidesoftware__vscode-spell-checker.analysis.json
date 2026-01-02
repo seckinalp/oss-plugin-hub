@@ -1,0 +1,293 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.792Z",
+  "source": "streetsidesoftware__vscode-spell-checker.osv.json",
+  "summary": {
+    "totalVulnerabilities": 3,
+    "uniqueVulnerabilities": 2,
+    "affectedPackages": 3,
+    "stalePackages": 3,
+    "stalePackagesOldFix": 0,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 2
+    },
+    "recentVulnerabilities": 3,
+    "hasFixAvailable": 3
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-4fh9-h7wg-q85m",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-66400"
+      ],
+      "summary": "mdast-util-to-hast has unsanitized class attribute",
+      "details": "### Impact\n\nMultiple (unprefixed) classnames could be added in markdown source by using character references.\nThis could make rendered user supplied markdown `code` elements appear like the rest of the page.\nThe following markdown:\n\n````markdown\n```js&#x20;xss\n```\n````\n\nWould create `<pre><code class=\"language-js xss\"></code></pre>`\nIf your page then applied `.xss` classes (or listeners in JS), those apply to this element.\nFor more info see <https://github.com/ChALkeR/notes/blob/master/Improper-markup-sanitization.md#unsanitized-class-attribute>\n\n### Patches\n\nThe bug was patched. When using regular semver, run `npm install`. For exact ranges, make sure to use `13.2.1`.\n\n### Workarounds\n\nUpdate.\n\n### References\n\n* bug introduced in https://github.com/syntax-tree/mdast-util-to-hast/commit/6fc783ae6abdeb798fd5a68e7f3f21411dde7403\n* bug fixed in https://github.com/syntax-tree/mdast-util-to-hast/commit/ab3a79570a1afbfa7efef5d4a0cd9b5caafbc5d7",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-915",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-02T01:25:46Z",
+        "modifiedDate": "2025-12-02T01:59:16.175729Z",
+        "daysSincePublished": 15
+      },
+      "affected": {
+        "package": "mdast-util-to-hast",
+        "version": "13.2.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "13.2.0",
+        "fixedIn": "13.2.1",
+        "recommendation": "Upgrade to 13.2.1 or later",
+        "fixAvailableSince": "2025-12-02T01:59:16.175Z",
+        "daysSinceFix": 15,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/syntax-tree/mdast-util-to-hast/security/advisories/GHSA-4fh9-h7wg-q85m"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66400"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/syntax-tree/mdast-util-to-hast/commit/6fc783ae6abdeb798fd5a68e7f3f21411dde7403"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/syntax-tree/mdast-util-to-hast/commit/ab3a79570a1afbfa7efef5d4a0cd9b5caafbc5d7"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/syntax-tree/mdast-util-to-hast"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-869p-cjfg-cm3x",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-65945"
+      ],
+      "summary": "auth0/node-jws Improperly Verifies HMAC Signature",
+      "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions <=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+      "cwes": [
+        {
+          "id": "CWE-347",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-04T16:54:15Z",
+        "modifiedDate": "2025-12-05T12:36:54.291980Z",
+        "daysSincePublished": 13
+      },
+      "affected": {
+        "package": "jws",
+        "version": "3.2.2",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.2.2",
+        "fixedIn": "3.2.3",
+        "recommendation": "Upgrade to 3.2.3 or later",
+        "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+        "daysSinceFix": 12,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/auth0/node-jws"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-869p-cjfg-cm3x",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2025-65945"
+      ],
+      "summary": "auth0/node-jws Improperly Verifies HMAC Signature",
+      "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions <=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+      "cwes": [
+        {
+          "id": "CWE-347",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "Very Recent (< 1 month)",
+        "isRecent": true,
+        "publishedDate": "2025-12-04T16:54:15Z",
+        "modifiedDate": "2025-12-05T12:36:54.291980Z",
+        "daysSincePublished": 13
+      },
+      "affected": {
+        "package": "jws",
+        "version": "4.0.0",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.0.0",
+        "fixedIn": "3.2.3",
+        "recommendation": "Upgrade to 3.2.3 or later",
+        "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+        "daysSinceFix": 12,
+        "monthsSinceFix": 0,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/auth0/node-jws"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "jws",
+      "currentVersion": "3.2.2",
+      "fixedIn": "3.2.3",
+      "vulnerabilities": [
+        "GHSA-869p-cjfg-cm3x"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.2.3 or later",
+      "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+      "daysSinceFix": 12,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "jws",
+      "currentVersion": "4.0.0",
+      "fixedIn": "3.2.3",
+      "vulnerabilities": [
+        "GHSA-869p-cjfg-cm3x"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.2.3 or later",
+      "fixAvailableSince": "2025-12-05T12:36:54.291Z",
+      "daysSinceFix": 12,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    },
+    {
+      "package": "mdast-util-to-hast",
+      "currentVersion": "13.2.0",
+      "fixedIn": "13.2.1",
+      "vulnerabilities": [
+        "GHSA-4fh9-h7wg-q85m"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 13.2.1 or later",
+      "fixAvailableSince": "2025-12-02T01:59:16.175Z",
+      "daysSinceFix": 15,
+      "monthsSinceFix": 0,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "3 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "3 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

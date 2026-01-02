@@ -1,0 +1,114 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.amitbl/blocktube",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d2c57196-c1e3-4660-aa4c-9d58f5b7d9a1",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:13Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@3"
+        }
+      ]
+    },
+    {
+      "name": "actions/setup-node",
+      "SPDXID": "SPDXRef-githubactions-actions-setup-node-3-75c946",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/setup-node@3"
+        }
+      ]
+    },
+    {
+      "name": "ncipollo/release-action",
+      "SPDXID": "SPDXRef-githubactions-ncipollo-release-action-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/ncipollo/release-action@1"
+        }
+      ]
+    },
+    {
+      "name": "shogo82148/actions-upload-release-asset",
+      "SPDXID": "SPDXRef-githubactions-shogo82148-actions-upload-release-asset-1-75c946",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/shogo82148/actions-upload-release-asset@1"
+        }
+      ]
+    },
+    {
+      "name": "com.github.amitbl/blocktube",
+      "SPDXID": "SPDXRef-github-amitbl-blocktube-master-dc5297",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/amitbl/blocktube",
+      "filesAnalyzed": false,
+      "licenseDeclared": "GPL-3.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/amitbl/blocktube@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-amitbl-blocktube-master-dc5297",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-amitbl-blocktube-master-dc5297",
+      "relatedSpdxElement": "SPDXRef-githubactions-ncipollo-release-action-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-amitbl-blocktube-master-dc5297",
+      "relatedSpdxElement": "SPDXRef-githubactions-shogo82148-actions-upload-release-asset-1-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-amitbl-blocktube-master-dc5297",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-amitbl-blocktube-master-dc5297",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

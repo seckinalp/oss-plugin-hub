@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.TheSpyder/SyncedSideBar",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/4c1d9b64-06e2-4805-be2f-da4bfad04cfd",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:59:55Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.TheSpyder/SyncedSideBar",
+      "SPDXID": "SPDXRef-github-TheSpyder-SyncedSideBar-master-647614",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/TheSpyder/SyncedSideBar",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/TheSpyder/SyncedSideBar@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-TheSpyder-SyncedSideBar-master-647614",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

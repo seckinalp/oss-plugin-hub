@@ -1,0 +1,584 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.microsoft/pylance-release",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/6c2066dd-87a7-429f-86d5-68d86a836954",
+  "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T12:00:12Z"
+  },
+  "packages": [
+    {
+      "name": "actions/github-script",
+      "SPDXID": "SPDXRef-githubactions-actions-github-script-6.3.3-75c946",
+      "versionInfo": "6.3.3",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/github-script@6.3.3"
+        }
+      ]
+    },
+    {
+      "name": "lee-dohm/team-rotation",
+      "SPDXID": "SPDXRef-githubactions-lee-dohm-team-rotation-1..-75c946",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/lee-dohm/team-rotation@1.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "seaborn",
+      "SPDXID": "SPDXRef-pypi-seaborn-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/seaborn"
+        }
+      ]
+    },
+    {
+      "name": "pillow",
+      "SPDXID": "SPDXRef-pypi-pillow-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pillow"
+        }
+      ]
+    },
+    {
+      "name": "matplotlib",
+      "SPDXID": "SPDXRef-pypi-matplotlib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/matplotlib"
+        }
+      ]
+    },
+    {
+      "name": "cycler",
+      "SPDXID": "SPDXRef-pypi-cycler-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/cycler"
+        }
+      ]
+    },
+    {
+      "name": "scipy",
+      "SPDXID": "SPDXRef-pypi-scipy-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/scipy"
+        }
+      ]
+    },
+    {
+      "name": "scikit-learn",
+      "SPDXID": "SPDXRef-pypi-scikit-learn-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/scikit-learn"
+        }
+      ]
+    },
+    {
+      "name": "pyparsing",
+      "SPDXID": "SPDXRef-pypi-pyparsing-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyparsing"
+        }
+      ]
+    },
+    {
+      "name": "six",
+      "SPDXID": "SPDXRef-pypi-six-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/six"
+        }
+      ]
+    },
+    {
+      "name": "zipp",
+      "SPDXID": "SPDXRef-pypi-zipp-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/zipp"
+        }
+      ]
+    },
+    {
+      "name": "contourpy",
+      "SPDXID": "SPDXRef-pypi-contourpy-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/contourpy"
+        }
+      ]
+    },
+    {
+      "name": "lightgbm",
+      "SPDXID": "SPDXRef-pypi-lightgbm-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/lightgbm"
+        }
+      ]
+    },
+    {
+      "name": "fonttools",
+      "SPDXID": "SPDXRef-pypi-fonttools-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/fonttools"
+        }
+      ]
+    },
+    {
+      "name": "pandas",
+      "SPDXID": "SPDXRef-pypi-pandas-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pandas"
+        }
+      ]
+    },
+    {
+      "name": "joblib",
+      "SPDXID": "SPDXRef-pypi-joblib-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/joblib"
+        }
+      ]
+    },
+    {
+      "name": "packaging",
+      "SPDXID": "SPDXRef-pypi-packaging-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/packaging"
+        }
+      ]
+    },
+    {
+      "name": "kiwisolver",
+      "SPDXID": "SPDXRef-pypi-kiwisolver-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/kiwisolver"
+        }
+      ]
+    },
+    {
+      "name": "importlib-resources",
+      "SPDXID": "SPDXRef-pypi-importlib-resources-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/importlib-resources"
+        }
+      ]
+    },
+    {
+      "name": "threadpoolctl",
+      "SPDXID": "SPDXRef-pypi-threadpoolctl-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/threadpoolctl"
+        }
+      ]
+    },
+    {
+      "name": "numpy",
+      "SPDXID": "SPDXRef-pypi-numpy-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/numpy"
+        }
+      ]
+    },
+    {
+      "name": "python-dateutil",
+      "SPDXID": "SPDXRef-pypi-python-dateutil-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/python-dateutil"
+        }
+      ]
+    },
+    {
+      "name": "tenacity",
+      "SPDXID": "SPDXRef-pypi-tenacity-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/tenacity"
+        }
+      ]
+    },
+    {
+      "name": "pytz",
+      "SPDXID": "SPDXRef-pypi-pytz-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytz"
+        }
+      ]
+    },
+    {
+      "name": "plotly",
+      "SPDXID": "SPDXRef-pypi-plotly-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/plotly"
+        }
+      ]
+    },
+    {
+      "name": "pytest",
+      "SPDXID": "SPDXRef-pypi-pytest-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pytest"
+        }
+      ]
+    },
+    {
+      "name": "zope-event",
+      "SPDXID": "SPDXRef-pypi-zope-event-75c946",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/zope-event"
+        }
+      ]
+    },
+    {
+      "name": "andymckay/labeler",
+      "SPDXID": "SPDXRef-githubactions-andymckay-labeler-master-75c946",
+      "versionInfo": "master",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/andymckay/labeler@master"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "versionInfo": "2.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@2.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "com.github.microsoft/pylance-release",
+      "SPDXID": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "versionInfo": "main",
+      "downloadLocation": "git+https://github.com/microsoft/pylance-release",
+      "filesAnalyzed": false,
+      "licenseDeclared": "CC-BY-4.0",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/microsoft/pylance-release@main"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-fonttools-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-pandas-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-joblib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-kiwisolver-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-six-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-pytest-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-matplotlib-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-threadpoolctl-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-numpy-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-plotly-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-githubactions-lee-dohm-team-rotation-1..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-pillow-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-zope-event-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-seaborn-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-cycler-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-importlib-resources-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-githubactions-andymckay-labeler-master-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-scikit-learn-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-packaging-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-github-script-6.3.3-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-scipy-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-contourpy-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-pyparsing-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-zipp-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-tenacity-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-python-dateutil-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-pytz-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relatedSpdxElement": "SPDXRef-pypi-lightgbm-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-microsoft-pylance-release-main-88816f",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

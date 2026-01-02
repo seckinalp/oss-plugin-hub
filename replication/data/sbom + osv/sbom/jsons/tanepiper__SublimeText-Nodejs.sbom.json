@@ -1,0 +1,95 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.tanepiper/SublimeText-Nodejs",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/e621debd-27e0-44d6-8808-9b92aa11522e",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:50:43Z"
+  },
+  "packages": [
+    {
+      "name": "commander",
+      "SPDXID": "SPDXRef-npm-commander-2.9.0-ece503",
+      "versionInfo": "^2.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/commander@%5E2.9.0"
+        }
+      ]
+    },
+    {
+      "name": "uglify-js",
+      "SPDXID": "SPDXRef-npm-uglify-js-2.6.4-ba0722",
+      "versionInfo": "^2.6.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/uglify-js@%5E2.6.4"
+        }
+      ]
+    },
+    {
+      "name": "lorem-ipsum",
+      "SPDXID": "SPDXRef-npm-lorem-ipsum-1.0.2-04fa80",
+      "versionInfo": "^1.0.2",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lorem-ipsum@%5E1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "com.github.tanepiper/SublimeText-Nodejs",
+      "SPDXID": "SPDXRef-github-tanepiper-SublimeText-Nodejs-master-41c2eb",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/tanepiper/SublimeText-Nodejs",
+      "filesAnalyzed": false,
+      "licenseDeclared": "WTFPL",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/tanepiper/SublimeText-Nodejs@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-tanepiper-SublimeText-Nodejs-master-41c2eb",
+      "relatedSpdxElement": "SPDXRef-npm-commander-2.9.0-ece503",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-tanepiper-SublimeText-Nodejs-master-41c2eb",
+      "relatedSpdxElement": "SPDXRef-npm-uglify-js-2.6.4-ba0722",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-tanepiper-SublimeText-Nodejs-master-41c2eb",
+      "relatedSpdxElement": "SPDXRef-npm-lorem-ipsum-1.0.2-04fa80",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-tanepiper-SublimeText-Nodejs-master-41c2eb",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

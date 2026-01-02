@@ -1,0 +1,414 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.611Z",
+  "source": "olsh__resharper-structured-logging.osv.json",
+  "summary": {
+    "totalVulnerabilities": 4,
+    "uniqueVulnerabilities": 4,
+    "affectedPackages": 3,
+    "stalePackages": 4,
+    "stalePackagesOldFix": 4,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 4
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 4
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-xhg6-9j5j-w4vf",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-48510"
+      ],
+      "summary": "DotNetZip Directory Traversal vulnerability",
+      "details": "Directory Traversal vulnerability in DotNetZip v.1.16.0 and before allows a remote attacker to execute arbitrary code via the src/Zip.Shared/ZipEntry.Extract.cs component.",
+      "cwes": [
+        {
+          "id": "CWE-22",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-11-13T15:31:37Z",
+        "modifiedDate": "2024-11-25T20:25:01.609089Z",
+        "daysSincePublished": 399
+      },
+      "affected": {
+        "package": "DotNetZip",
+        "version": "1.11.0",
+        "ecosystem": "NuGet"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.11.0",
+        "fixedIn": "1.19.0",
+        "recommendation": "Upgrade to 1.19.0 or later",
+        "fixAvailableSince": "2024-11-25T20:25:01.609Z",
+        "daysSinceFix": 386,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-48510"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mihula/ProDotNetZip/pull/21"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/mihula/ProDotNetZip/commit/18486ad6d13742a07a6755ef6edf60d7458f1854"
+        },
+        {
+          "type": "WEB",
+          "url": "https://gist.github.com/thomas-chauchefoin-bentley-systems/855218959116f870f08857cce2aec731"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/haf/DotNetZip.Semverd"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/haf/DotNetZip.Semverd/blob/e487179b33a9a0f2631eed5fb04d2c952ea5377a/src/Zip.Shared/ZipEntry.Extract.cs#L1365-L1410"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.nuget.org/packages/DotNetZip"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-3rq8-h3gj-r5c6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-dotnet-2022-29117",
+        "BIT-dotnet-sdk-2022-29117",
+        "CVE-2022-29117"
+      ],
+      "summary": " .NET Denial of Service Vulnerability",
+      "details": "Microsoft is releasing this security advisory to provide information about a vulnerability in .NET 6.0, .NET 5.0 and .NET Core 3.1. This advisory also provides guidance on what developers can do to update their applications to remove this vulnerability.\n\nA vulnerability exists in .NET 6.0, .NET 5.0 and .NET core 3.1 where a malicious client can manipulate cookies and cause a Denial of Service.\n\n### Affected software\n\n* Any .NET 6.0 application running on .NET 6.0.4 or earlier.\n* Any .NET 5.0 application running .NET 5.0.16 or earlier.\n* Any .NET Core 3.1 application running on .NET Core 3.1.24 or earlier.\n\n#### Affected packages\n\n**.NET Core 3.1**\n\n| Package name                                 | Affected versions | Patched versions |\n|---------------------------------------------------|-------------------|------------------|\n| Microsoft.Owin.Security.Cookies                   | <4.2.2            | 4.2.2             |\n| Microsoft.Owin.Security                           | <4.2.2            | 4.2.2             |\n| Microsoft.AspNetCore.App.Runtime.win-x64          | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.linux-x64        | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.win-x86          | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.osx-x64          | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-x64   | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.linux-arm64      | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.linux-arm        | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.win-arm64        | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.win-arm          | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-arm64 | >=3.0.0,3.1.24    | 3.1.25           |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-arm   | >=3.0.0,3.1.24    | 3.1.25           |\n\n**.NET 5.0**\n\n| Affected packages                                 | Affected versions | Patched versions |\n|---------------------------------------------------|-------------------|------------------|\n| Microsoft.Owin.Security.Cookies                   | < 4.2.2            | 4.2.2             |\n| Microsoft.AspNetCore.App.Runtime.win-x64          | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.linux-x64        | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.win-x86          | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.osx-x64          | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-x64   | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.linux-arm64      | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.linux-arm        | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.win-arm64        | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.win-arm          | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-arm64 | >=5.0.0,5.0.16    | 5.0.17           |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-arm   | >=5.0.0,5.0.16    | 5.0.17           |\n\n**.NET 6.0**\n\n| Affected packages                                 | Affected versions | Patched versions |\n|---------------------------------------------------|-------------------|------------------|\n| Microsoft.Owin.Security.Cookies                   | <4.2.2            | 4.2.2             |\n| Microsoft.AspNetCore.App.Runtime.win-x64          | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.linux-x64        | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.win-x86          | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.osx-x64          | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-x64   | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.linux-arm64      | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.linux-arm        | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.win-arm64        | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.win-arm          | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.osx-arm64        | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-arm64 | >=6.0.0,6.0.4     | 6.0.5            |\n| Microsoft.AspNetCore.App.Runtime.linux-musl-arm   | >=6.0.0,6.0.4     | 6.0.5            |\n\n\n### Patches\n\n* If you're using .NET Core 6.0, you should download and install Runtime 6.0.5 or SDK 6.0.105 (for Visual Studio 2022 v17.0) or SDK 6.0.203 (for Visual Studio 2022 v17.1) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n\n* If you're using .NET 5.0, you should download and install Runtime 5.0.17 or SDK 5.0.214 (for Visual Studio 2019 v16.9) or SDK 5.0.408 (for Visual Studio 2011 v16.11) from https://dotnet.microsoft.com/download/dotnet-core/5.0.\n\n* If you're using .NET Core 3.1, you should download and install Runtime 3.1.25 or SDK 3.1.419 (for Visual Studio 2019 v16.9 or Visual Studio 2011 16.11 or Visual Studio 2022 17.0 or Visual Studio 2022 17.1 ) from https://dotnet.microsoft.com/download/dotnet-core/3.1.\n\n.NET 6.0, .NET 5.0 and .NET Core 3.1 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update & Security and then click Check for Updates.\n\n#### Other Details\n\n- Announcement for this issue can be found at https://github.com/dotnet/announcements/issues/220\n- An Issue for this can be found at https://github.com/dotnet/aspnetcore/issues/41608\n- MSRC details for this can be found at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29117\n",
+      "cwes": [
+        {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption (DoS)"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-08-30T19:32:29Z",
+        "modifiedDate": "2025-01-02T22:01:04.100154Z",
+        "daysSincePublished": 1205
+      },
+      "affected": {
+        "package": "Microsoft.Owin",
+        "version": "3.0.1",
+        "ecosystem": "NuGet"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.1",
+        "fixedIn": "3.1.25",
+        "recommendation": "Upgrade to 3.1.25 or later",
+        "fixAvailableSince": "2025-01-02T22:01:04.100Z",
+        "daysSinceFix": 348,
+        "monthsSinceFix": 11,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-3rq8-h3gj-r5c6"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-29117"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/dotnet/aspnetcore"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/GNXQL7EZORGU4PZCPJ5EPQ4P7IEY3ZZO"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/IBYSBUDJYQ76HK4TULXVIIPCKK2U6WDB"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/W5FPEQ6BTYRGTS6IYCDTZW6YF5HLQ3BY"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GNXQL7EZORGU4PZCPJ5EPQ4P7IEY3ZZO"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IBYSBUDJYQ76HK4TULXVIIPCKK2U6WDB"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W5FPEQ6BTYRGTS6IYCDTZW6YF5HLQ3BY"
+        },
+        {
+          "type": "WEB",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29117"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-hxrm-9w7p-39cc",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-aspnet-core-2020-1045",
+        "CVE-2020-1045"
+      ],
+      "summary": "Cookie parsing failure",
+      "details": "A security feature bypass vulnerability exists in the way Microsoft ASP.NET Core parses encoded cookie names.The ASP.NET Core cookie parser decodes entire cookie strings which could allow a malicious attacker to set a second cookie with the name being percent encoded.The security update addresses the vulnerability by fixing the way the ASP.NET Core cookie parser handles encoded names., aka 'Microsoft ASP.NET Core Security Feature Bypass Vulnerability'.",
+      "cwes": [],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-05-24T17:27:57Z",
+        "modifiedDate": "2024-11-29T05:41:49.773176Z",
+        "daysSincePublished": 1303
+      },
+      "affected": {
+        "package": "Microsoft.Owin",
+        "version": "3.0.1",
+        "ecosystem": "NuGet"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "3.0.1",
+        "fixedIn": "2.1.22",
+        "recommendation": "Upgrade to 2.1.22 or later",
+        "fixAvailableSince": "2024-11-29T05:41:49.773Z",
+        "daysSinceFix": 383,
+        "monthsSinceFix": 12,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1045"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/dotnet/announcements/issues/165"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/dotnet/aspnetcore/issues/25701"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/dotnet/aspnetcore/issues/25701#issuecomment-689434477"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/github/advisory-database/issues/302"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/dotnet/aspnetcore/pull/24264"
+        },
+        {
+          "type": "WEB",
+          "url": "https://access.redhat.com/errata/RHSA-2020:3699"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1.8/3.1.8.md#changes-in-318"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/5LN2FUVBSVPGK7AU3NMLO3YR6CGONQPB"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ASICXQXS4M7MTAF6SGQMCLCA63DLCUT3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5LN2FUVBSVPGK7AU3NMLO3YR6CGONQPB"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ASICXQXS4M7MTAF6SGQMCLCA63DLCUT3"
+        },
+        {
+          "type": "WEB",
+          "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1045"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-RHEL8-DOTNET-1439600"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-5crp-9r3c-p9vr",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-21907"
+      ],
+      "summary": "Improper Handling of Exceptional Conditions in Newtonsoft.Json",
+      "details": "Newtonsoft.Json prior to version 13.0.1 is vulnerable to Insecure Defaults due to improper handling of expressions with high nesting level that lead to StackOverFlow exception or high CPU and RAM usage. Exploiting this vulnerability results in Denial Of Service (DoS). \n\nThe serialization and deserialization path have different properties regarding the issue.\n\nDeserializing methods (like `JsonConvert.DeserializeObject`) will process the input that results in burning the CPU, allocating memory, and consuming a thread of execution. Quite high nesting level (>10kk, or 9.5MB of `{a:{a:{...` input) is needed to achieve the latency over 10 seconds, depending on the hardware.\n\nSerializing methods (like `JsonConvert.Serialize` or `JObject.ToString`) will throw StackOverFlow exception with the nesting level of around 20k.\n\nTo mitigate the issue one either need to update Newtonsoft.Json to 13.0.1 or set `MaxDepth` parameter in the `JsonSerializerSettings`. This can be done globally with the following statement. After that the parsing of the nested input will fail fast with `Newtonsoft.Json.JsonReaderException`:\n\n``` \nJsonConvert.DefaultSettings = () => new JsonSerializerSettings { MaxDepth = 128 };\n```\n\nRepro code:\n```\n//Create a string representation of an highly nested object (JSON serialized)\nint nRep = 25000;\nstring json = string.Concat(Enumerable.Repeat(\"{a:\", nRep)) + \"1\" +\n string.Concat(Enumerable.Repeat(\"}\", nRep));\n\n//Parse this object (leads to high CPU/RAM consumption)\nvar parsedJson = JsonConvert.DeserializeObject(json);\n\n// Methods below all throw stack overflow with nRep around 20k and higher\n// string a = parsedJson.ToString();\n// string b = JsonConvert.SerializeObject(parsedJson);\n```\n\n### Additional affected product and version information\n**The original statement about the problem only affecting IIS applications is misleading.** Any application is affected, however the IIS has a behavior that stops restarting the instance after some time resulting in a harder-to-fix DoS.**",
+      "cwes": [
+        {
+          "id": "CWE-755",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-06-22T15:08:47Z",
+        "modifiedDate": "2024-02-18T05:25:53.096683Z",
+        "daysSincePublished": 1274
+      },
+      "affected": {
+        "package": "Newtonsoft.Json",
+        "version": "9.0.1",
+        "ecosystem": "NuGet"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "9.0.1",
+        "fixedIn": "13.0.1",
+        "recommendation": "Upgrade to 13.0.1 or later",
+        "fixAvailableSince": "2024-02-18T05:25:53.096Z",
+        "daysSinceFix": 668,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/JamesNK/Newtonsoft.Json/issues/2457"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/JamesNK/Newtonsoft.Json/pull/2462"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/JamesNK/Newtonsoft.Json/commit/7e77bbe1beccceac4fc7b174b53abfefac278b66"
+        },
+        {
+          "type": "WEB",
+          "url": "https://alephsecurity.com/2018/10/22/StackOverflowException"
+        },
+        {
+          "type": "WEB",
+          "url": "https://alephsecurity.com/vulns/aleph-2018004"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/JamesNK/Newtonsoft.Json"
+        },
+        {
+          "type": "WEB",
+          "url": "https://security.snyk.io/vuln/SNYK-DOTNET-NEWTONSOFTJSON-2774678"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "DotNetZip",
+      "currentVersion": "1.11.0",
+      "fixedIn": "1.19.0",
+      "vulnerabilities": [
+        "GHSA-xhg6-9j5j-w4vf"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.19.0 or later",
+      "fixAvailableSince": "2024-11-25T20:25:01.609Z",
+      "daysSinceFix": 386,
+      "monthsSinceFix": 12,
+      "isOldFix": true
+    },
+    {
+      "package": "Microsoft.Owin",
+      "currentVersion": "3.0.1",
+      "fixedIn": "3.1.25",
+      "vulnerabilities": [
+        "GHSA-3rq8-h3gj-r5c6",
+        "GHSA-hxrm-9w7p-39cc"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 3.1.25 or later",
+      "fixAvailableSince": "2025-01-02T22:01:04.100Z",
+      "daysSinceFix": 348,
+      "monthsSinceFix": 11,
+      "isOldFix": true
+    },
+    {
+      "package": "Newtonsoft.Json",
+      "currentVersion": "9.0.1",
+      "fixedIn": "13.0.1",
+      "vulnerabilities": [
+        "GHSA-5crp-9r3c-p9vr"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 13.0.1 or later",
+      "fixAvailableSince": "2024-02-18T05:25:53.096Z",
+      "daysSinceFix": 668,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "4 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "4 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

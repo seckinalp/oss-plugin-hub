@@ -1,0 +1,103 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.034Z",
+  "source": "Dart-Code__Dart-Code.osv.json",
+  "summary": {
+    "totalVulnerabilities": 1,
+    "uniqueVulnerabilities": 1,
+    "affectedPackages": 1,
+    "stalePackages": 1,
+    "stalePackagesOldFix": 0,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 0
+    },
+    "recentVulnerabilities": 1,
+    "hasFixAvailable": 1
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-xffm-g5w8-qvg7",
+      "severity": "MEDIUM",
+      "severityScore": 4,
+      "cvssScores": [
+        {
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [],
+      "summary": "@eslint/plugin-kit is vulnerable to Regular Expression Denial of Service attacks through ConfigCommentParser",
+      "details": "### Summary\n\nThe `ConfigCommentParser#parseJSONLikeConfig` API is vulnerable to a Regular Expression Denial of Service (ReDoS) attack in its only argument.\n\n### Details\n\nThe regular expression at [packages/plugin-kit/src/config-comment-parser.js:158](https://github.com/eslint/rewrite/blob/bd4bf23c59f0e4886df671cdebd5abaeb1e0d916/packages/plugin-kit/src/config-comment-parser.js#L158) is vulnerable to a quadratic runtime attack because the grouped expression is not anchored. This can be solved by prepending the regular expression with `[^-a-zA-Z0-9/]`.\n\n### PoC\n\n```javascript\nconst { ConfigCommentParser } = require(\"@eslint/plugin-kit\");\n\nconst str = `${\"A\".repeat(1000000)}?: 1 B: 2`;\n\nconsole.log(\"start\")\nvar parser = new ConfigCommentParser();\nconsole.log(parser.parseJSONLikeConfig(str));\nconsole.log(\"end\")\n\n// run `npm i @eslint/plugin-kit@0.3.3` and `node attack.js`\n// then the program will stuck forever with high CPU usage\n```\n\n### Impact\n\nThis is a Regular Expression Denial of Service attack which may lead to blocking execution and high CPU usage.",
+      "cwes": [
+        {
+          "id": "CWE-1333",
+          "name": "Inefficient Regular Expression Complexity (ReDoS)"
+        }
+      ],
+      "age": {
+        "age": "Recent (< 6 months)",
+        "isRecent": true,
+        "publishedDate": "2025-07-18T20:39:12Z",
+        "modifiedDate": "2025-07-28T17:34:44Z",
+        "daysSincePublished": 151
+      },
+      "affected": {
+        "package": "@eslint/plugin-kit",
+        "version": "0.3.3",
+        "ecosystem": "npm"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "0.3.3",
+        "fixedIn": "0.3.4",
+        "recommendation": "Upgrade to 0.3.4 or later",
+        "fixAvailableSince": "2025-07-28T17:34:44.000Z",
+        "daysSinceFix": 142,
+        "monthsSinceFix": 4,
+        "isOldFix": false
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/eslint/rewrite/security/advisories/GHSA-xffm-g5w8-qvg7"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/eslint/rewrite/commit/b283f64099ad6c6b5043387c091691d21b387805"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/eslint/rewrite"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "@eslint/plugin-kit",
+      "currentVersion": "0.3.3",
+      "fixedIn": "0.3.4",
+      "vulnerabilities": [
+        "GHSA-xffm-g5w8-qvg7"
+      ],
+      "severity": "MEDIUM",
+      "recommendation": "Upgrade to 0.3.4 or later",
+      "fixAvailableSince": "2025-07-28T17:34:44.000Z",
+      "daysSinceFix": 142,
+      "monthsSinceFix": 4,
+      "isOldFix": false
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "message": "1 vulnerabilities were recently discovered (< 6 months old)."
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "1 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

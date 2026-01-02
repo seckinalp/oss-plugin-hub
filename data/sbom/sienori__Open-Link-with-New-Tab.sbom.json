@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.sienori/Open-Link-with-New-Tab",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/a2f07c98-572d-460d-a291-09bc72eccb82",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:46:34Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.sienori/Open-Link-with-New-Tab",
+      "SPDXID": "SPDXRef-github-sienori-Open-Link-with-New-Tab-master-db9ade",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/sienori/Open-Link-with-New-Tab",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/sienori/Open-Link-with-New-Tab@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-sienori-Open-Link-with-New-Tab-master-db9ade",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

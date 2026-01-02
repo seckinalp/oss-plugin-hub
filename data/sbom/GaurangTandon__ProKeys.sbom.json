@@ -1,0 +1,37 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.GaurangTandon/ProKeys",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/d69c9c60-ad47-45f4-95ed-8d2952e0b369",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:45:12Z"
+  },
+  "packages": [
+    {
+      "name": "com.github.GaurangTandon/ProKeys",
+      "SPDXID": "SPDXRef-github-GaurangTandon-ProKeys-master-1dbe32",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/GaurangTandon/ProKeys",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/GaurangTandon/ProKeys@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-GaurangTandon-ProKeys-master-1dbe32",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

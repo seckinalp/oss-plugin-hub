@@ -172,6 +172,10 @@ export interface BasePlugin {
   dependencies?: Dependencies;
   githubStats?: GitHubStats; // GitHub statistics (Phase 2)
   githubDataFetchedAt?: string; // ISO timestamp of when GitHub data was last fetched
+  sbomPath?: string; // Relative path to saved SBOM file
+  sbomStatus?: string; // ok | cached | not_found | forbidden | error | no_repo
+  sbomFetchedAt?: string; // ISO timestamp of SBOM fetch
+  sbomError?: string; // Optional error message when SBOM fetch fails
   
   // Download/Install metrics (for top 100 analysis)
   downloads?: number;           // Total downloads/installs

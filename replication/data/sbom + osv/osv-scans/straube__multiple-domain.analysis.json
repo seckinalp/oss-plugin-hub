@@ -1,0 +1,486 @@
+{
+  "analyzedAt": "2025-12-17T20:07:21.791Z",
+  "source": "straube__multiple-domain.osv.json",
+  "summary": {
+    "totalVulnerabilities": 5,
+    "uniqueVulnerabilities": 5,
+    "affectedPackages": 2,
+    "stalePackages": 5,
+    "stalePackagesOldFix": 5,
+    "severityBreakdown": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 5
+    },
+    "recentVulnerabilities": 0,
+    "hasFixAvailable": 5
+  },
+  "vulnerabilities": [
+    {
+      "id": "GHSA-frqg-7g38-6gcf",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-composer-2021-41116",
+        "CVE-2021-41116"
+      ],
+      "summary": "Improper escaping of command arguments on Windows leading to command injection",
+      "details": "### Impact\nWindows users running Composer to install untrusted dependencies are affected and should definitely upgrade for safety. Other OSs and WSL are not affected. \n\n### Patches\n1.10.23 and 2.1.9 fix the issue\n\n### Workarounds\nNone\n",
+      "cwes": [
+        {
+          "id": "CWE-77",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-10-05T20:23:18Z",
+        "modifiedDate": "2024-02-16T08:08:08.814539Z",
+        "daysSincePublished": 1533
+      },
+      "affected": {
+        "package": "composer/composer",
+        "version": "1.8.5",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.8.5",
+        "fixedIn": "1.10.23",
+        "recommendation": "Upgrade to 1.10.23 or later",
+        "fixAvailableSince": "2024-02-16T08:08:08.814Z",
+        "daysSinceFix": 670,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/security/advisories/GHSA-frqg-7g38-6gcf"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41116"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/commit/ca5e2f8d505fd3bfac6f7c85b82f2740becbc0aa"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/composer/composer/CVE-2021-41116.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/composer/composer"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.sonarsource.com/blog/securing-developer-tools-package-managers"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.tenable.com/security/tns-2022-09"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-h5h8-pc6h-jvvx",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-composer-2021-29472",
+        "CVE-2021-29472"
+      ],
+      "summary": "Composer's missing argument delimiter can lead to code execution via VCS repository URLs or source download URLs on systems with Mercurial",
+      "details": "URLs for Mercurial repositories in the root composer.json and package source download URLs are not sanitized correctly. Specifically crafted URL values allow commands to be executed in the HgDriver if hg/Mercurial is installed on the system.\n\n### Impact\n- The impact to Composer users directly is limited as the composer.json file is typically under their own control and source download URLs can only be supplied by third party Composer repositories they explicitly trust to download and execute source code from, e.g. Composer plugins.\n- The main impact is to services passing user input to Composer, including Packagist.org and Private Packagist. This allowed users to trigger remote command injection. The vulnerability has been patched on Packagist.org and Private Packagist within 12h of receiving the initial vulnerability report and based on a review of logs, to the best of our knowledge, was not abused by anyone.\n- Other services/tools using VcsRepository/VcsDriver or derivatives may also be vulnerable and should upgrade their composer/composer dependency immediately\n\n### Patches\n1.10.22 and 2.0.13 include patches for this issue.",
+      "cwes": [
+        {
+          "id": "CWE-88",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-94",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "4 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2021-04-29T21:52:04Z",
+        "modifiedDate": "2024-02-21T05:26:12.978798Z",
+        "daysSincePublished": 1692
+      },
+      "affected": {
+        "package": "composer/composer",
+        "version": "1.8.5",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.8.5",
+        "fixedIn": "1.10.22",
+        "recommendation": "Upgrade to 1.10.22 or later",
+        "fixAvailableSince": "2024-02-21T05:26:12.978Z",
+        "daysSinceFix": 665,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/security/advisories/GHSA-h5h8-pc6h-jvvx"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-29472"
+        },
+        {
+          "type": "WEB",
+          "url": "https://blog.sonarsource.com/php-supply-chain-attack-on-composer"
+        },
+        {
+          "type": "WEB",
+          "url": "https://getcomposer.org"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/composer/composer/CVE-2021-29472.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/composer/composer"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2021/05/msg00009.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FAQUAMGO4Q4BLNZ2OH4CXQD7UK4IO2GE"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KN3DMFH42BJW45VT6FYF2RXKC26D6VC2"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.debian.org/security/2021/dsa-4907"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-jm6m-4632-36hf",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-composer-2023-43655",
+        "CVE-2023-43655"
+      ],
+      "summary": "Composer Remote Code Execution vulnerability via web-accessible composer.phar",
+      "details": "### Impact\n\nUsers publishing a composer.phar to a public web-accessible server where the composer.phar can be executed as a php file may be impacted if PHP also has `register_argc_argv` enabled in php.ini.\n\n### Patches\n\n2.6.4, 2.2.22 and 1.10.27 patch this vulnerability.\n\n### Workarounds\n\nMake sure `register_argc_argv` is disabled in php.ini, and avoid publishing composer.phar to the web as this really should not happen.",
+      "cwes": [
+        {
+          "id": "CWE-74",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "2 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2023-09-29T20:39:21Z",
+        "modifiedDate": "2025-02-13T19:36:33.563645Z",
+        "daysSincePublished": 809
+      },
+      "affected": {
+        "package": "composer/composer",
+        "version": "1.8.5",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.8.5",
+        "fixedIn": "1.10.27",
+        "recommendation": "Upgrade to 1.10.27 or later",
+        "fixAvailableSince": "2025-02-13T19:36:33.563Z",
+        "daysSinceFix": 307,
+        "monthsSinceFix": 10,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/security/advisories/GHSA-jm6m-4632-36hf"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-43655"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/commit/4fce14795aba98e40b6c4f5047305aba17a6120d"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/commit/955a48e6319c8962e5cd421b07c00ab3c728968c"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/commit/95e091c921037b7b6564942845e7b738f6b95c9c"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/composer/composer"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.debian.org/debian-lts-announce/2024/03/msg00030.html"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/66H2WKFUO255T3BZTL72TNYJYH2XM5FG"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7AWYAUZNH565NWPIKGEIYBWHYNM5JGAE"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KFOPGPW2KS37O3KJWBRGTUWHTXCQXBS2"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-x7cr-6qr6-2hh6",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        }
+      ],
+      "aliases": [
+        "BIT-composer-2022-24828",
+        "CVE-2022-24828"
+      ],
+      "summary": "Missing input validation can lead to command execution in composer",
+      "details": "The Composer method `VcsDriver::getFileContent()` with user-controlled `$file` or `$identifier` arguments is susceptible to an argument injection vulnerability. It can be leveraged to gain arbitrary command execution if the Mercurial or the Git driver are used.\n\nThis led to a vulnerability on Packagist.org and Private Packagist, i.e., using the composer.json `readme` field as a vector for injecting parameters into the `$file` argument for the Mercurial driver or via the `$identifier` argument for the Git and Mercurial drivers.\n\nComposer itself can be attacked through branch names by anyone controlling a Git or Mercurial repository, which is explicitly listed by URL in a project's composer.json.\n\nTo the best of our knowledge, this was not actively exploited. The vulnerability has been patched on Packagist.org and Private Packagist within a day of the vulnerability report.",
+      "cwes": [
+        {
+          "id": "CWE-20",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-88",
+          "name": "Unknown CWE"
+        },
+        {
+          "id": "CWE-94",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "3 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2022-04-22T20:15:38Z",
+        "modifiedDate": "2024-02-21T05:32:42.447669Z",
+        "daysSincePublished": 1334
+      },
+      "affected": {
+        "package": "composer/composer",
+        "version": "1.8.5",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "1.8.5",
+        "fixedIn": "1.10.26",
+        "recommendation": "Upgrade to 1.10.26 or later",
+        "fixAvailableSince": "2024-02-21T05:32:42.447Z",
+        "daysSinceFix": 665,
+        "monthsSinceFix": 22,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/security/advisories/GHSA-x7cr-6qr6-2hh6"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24828"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/composer/composer/commit/2c40c53637c5c7e43fff7c09d3d324d632734709"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/composer/composer/CVE-2022-24828.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/composer/composer"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/625MT3IKWKFVIWLSYZFSXHVUA2LES7YQ"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GWT6LDSRY7SFMTDZWJ4MS2ZBXHL7VQEF"
+        },
+        {
+          "type": "WEB",
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QD7JQWL6C4GVROO25DTXWYWM6BPOPPCG"
+        },
+        {
+          "type": "WEB",
+          "url": "https://www.tenable.com/security/tns-2022-09"
+        }
+      ]
+    },
+    {
+      "id": "GHSA-qq5c-677p-737q",
+      "severity": "LOW",
+      "severityScore": 3.1,
+      "cvssScores": [
+        {
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "type": "CVSS_V3"
+        },
+        {
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "type": "CVSS_V4"
+        }
+      ],
+      "aliases": [
+        "CVE-2024-51736"
+      ],
+      "summary": "Symfony vulnerable to command execution hijack on Windows with Process class",
+      "details": "### Description\n\nOn Windows, when an executable file named `cmd.exe` is located in the current working directory it will be called by the `Process` class when preparing command arguments, leading to possible hijacking.\n\n### Resolution\n\nThe `Process` class now uses the absolute path to `cmd.exe`.\n\nThe patch for this issue is available [here](https://github.com/symfony/symfony/commit/18ecd03eda3917fdf901a48e72518f911c64a1c9) for branch 5.4.\n\n### Credits\n\nWe would like to thank Jordi Boggiano for reporting the issue and Nicolas Grekas for providing the fix.",
+      "cwes": [
+        {
+          "id": "CWE-77",
+          "name": "Unknown CWE"
+        }
+      ],
+      "age": {
+        "age": "1 year(s) old",
+        "isRecent": false,
+        "publishedDate": "2024-11-06T15:22:55Z",
+        "modifiedDate": "2025-03-07T13:40:26.737075Z",
+        "daysSincePublished": 406
+      },
+      "affected": {
+        "package": "symfony/process",
+        "version": "4.2.7",
+        "ecosystem": "Packagist"
+      },
+      "fix": {
+        "isStale": true,
+        "currentVersion": "4.2.7",
+        "fixedIn": "5.4.46",
+        "recommendation": "Upgrade to 5.4.46 or later",
+        "fixAvailableSince": "2025-03-07T13:40:26.737Z",
+        "daysSinceFix": 285,
+        "monthsSinceFix": 9,
+        "isOldFix": true
+      },
+      "references": [
+        {
+          "type": "WEB",
+          "url": "https://github.com/symfony/symfony/security/advisories/GHSA-qq5c-677p-737q"
+        },
+        {
+          "type": "ADVISORY",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-51736"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/symfony/symfony/commit/18ecd03eda3917fdf901a48e72518f911c64a1c9"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/process/CVE-2024-51736.yaml"
+        },
+        {
+          "type": "WEB",
+          "url": "https://github.com/FriendsOfPHP/security-advisories/blob/master/symfony/symfony/CVE-2024-51736.yaml"
+        },
+        {
+          "type": "PACKAGE",
+          "url": "https://github.com/symfony/symfony"
+        },
+        {
+          "type": "WEB",
+          "url": "https://symfony.com/cve-2024-51736"
+        }
+      ]
+    }
+  ],
+  "staleDependencies": [
+    {
+      "package": "composer/composer",
+      "currentVersion": "1.8.5",
+      "fixedIn": "1.10.23",
+      "vulnerabilities": [
+        "GHSA-frqg-7g38-6gcf",
+        "GHSA-h5h8-pc6h-jvvx",
+        "GHSA-jm6m-4632-36hf",
+        "GHSA-x7cr-6qr6-2hh6"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 1.10.23 or later",
+      "fixAvailableSince": "2024-02-16T08:08:08.814Z",
+      "daysSinceFix": 670,
+      "monthsSinceFix": 22,
+      "isOldFix": true
+    },
+    {
+      "package": "symfony/process",
+      "currentVersion": "4.2.7",
+      "fixedIn": "5.4.46",
+      "vulnerabilities": [
+        "GHSA-qq5c-677p-737q"
+      ],
+      "severity": "LOW",
+      "recommendation": "Upgrade to 5.4.46 or later",
+      "fixAvailableSince": "2025-03-07T13:40:26.737Z",
+      "daysSinceFix": 285,
+      "monthsSinceFix": 9,
+      "isOldFix": true
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "message": "5 packages have fixes available for >6 months. Update urgently!"
+    },
+    {
+      "priority": "MEDIUM",
+      "message": "5 packages have known vulnerabilities with available fixes. Update recommended."
+    }
+  ]
+}

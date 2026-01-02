@@ -1,0 +1,211 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.HookyQR/VSCodeBeautify",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/682e881a-0d4f-4e0b-9b70-1a6d152eeea3",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:51:35Z"
+  },
+  "packages": [
+    {
+      "name": "js-beautify",
+      "SPDXID": "SPDXRef-npm-js-beautify-1.9.0-a861e6",
+      "versionInfo": "^1.9.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/js-beautify@%5E1.9.0"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-npm-types-node-8.10.36-f1ad4a",
+      "versionInfo": "^8.10.36",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@%5E8.10.36"
+        }
+      ]
+    },
+    {
+      "name": "expect.js",
+      "SPDXID": "SPDXRef-npm-expect.js-0.3.1-6479db",
+      "versionInfo": "^0.3.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/expect.js@%5E0.3.1"
+        }
+      ]
+    },
+    {
+      "name": "@types/mocha",
+      "SPDXID": "SPDXRef-npm-types-mocha-2.2.42-d05789",
+      "versionInfo": "^2.2.42",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/mocha@%5E2.2.42"
+        }
+      ]
+    },
+    {
+      "name": "vscode",
+      "SPDXID": "SPDXRef-npm-vscode-1.1.18-f08198",
+      "versionInfo": "~1.1.18",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/vscode@~1.1.18"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "SPDXID": "SPDXRef-npm-minimatch-3.0.4-ad2485",
+      "versionInfo": "^3.0.4",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/minimatch@%5E3.0.4"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "SPDXID": "SPDXRef-npm-typescript-2.6.1-95e951",
+      "versionInfo": "^2.6.1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/typescript@%5E2.6.1"
+        }
+      ]
+    },
+    {
+      "name": "editorconfig",
+      "SPDXID": "SPDXRef-npm-editorconfig-0.15.0-d26ebb",
+      "versionInfo": "0.15.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2012 EditorConfig Team",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/editorconfig@0.15.0"
+        }
+      ]
+    },
+    {
+      "name": "mocha",
+      "SPDXID": "SPDXRef-npm-mocha-5.2.0-c15f1a",
+      "versionInfo": "^5.2.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mocha@%5E5.2.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.HookyQR/VSCodeBeautify",
+      "SPDXID": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "versionInfo": "master",
+      "downloadLocation": "git+https://github.com/HookyQR/VSCodeBeautify",
+      "filesAnalyzed": false,
+      "licenseDeclared": "MIT",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/HookyQR/VSCodeBeautify@master"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-js-beautify-1.9.0-a861e6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-types-node-8.10.36-f1ad4a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-expect.js-0.3.1-6479db",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-types-mocha-2.2.42-d05789",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-vscode-1.1.18-f08198",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-minimatch-3.0.4-ad2485",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-typescript-2.6.1-95e951",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-editorconfig-0.15.0-d26ebb",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relatedSpdxElement": "SPDXRef-npm-mocha-5.2.0-c15f1a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-HookyQR-VSCodeBeautify-master-f3043e",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}

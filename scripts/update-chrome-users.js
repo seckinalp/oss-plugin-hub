@@ -9,11 +9,14 @@ const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, '../data');
 const CHROME_DIR = path.join(DATA_DIR, 'chrome');
 const PLUGINS_FILE = path.join(CHROME_DIR, 'plugins.json');
+const MAX_EXTENSIONS = Number.isFinite(parseInt(process.env.CHROME_MAX_EXTENSIONS, 10))
+  ? parseInt(process.env.CHROME_MAX_EXTENSIONS, 10)
+  : null;
 
 /**
  * Fetch from URL
  */
-function fetchURL(url) {
+function fetchURL(url, redirectCount = 0) {
   return new Promise((resolve, reject) => {
     https.get(url, {
       headers: {
@@ -21,6 +24,17 @@ function fetchURL(url) {
       }
     }, (res) => {
       let data = '';
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        if (redirectCount >= 5) {
+          reject(new Error('Too many redirects'));
+          res.resume();
+          return;
+        }
+        const nextUrl = new URL(res.headers.location, url).toString();
+        res.resume();
+        resolve(fetchURL(nextUrl, redirectCount + 1));
+        return;
+      }
       res.on('data', (chunk) => { data += chunk; });
       res.on('end', () => {
         if (res.statusCode === 200) {
@@ -41,7 +55,7 @@ function parseUserCountFromHTML(html) {
   try {
     // Try to find user count in the HTML
     // Format: "30,000+ users" or "2,000,000+ users"
-    const userMatch = html.match(/([0-9,]+)\+ users/i);
+    const userMatch = html.match(/([0-9,]+)\+? users/i);
     if (userMatch) {
       const userStr = userMatch[1].replace(/,/g, '');
       return parseInt(userStr, 10);
@@ -96,17 +110,25 @@ async function main() {
     
     const pluginData = JSON.parse(fs.readFileSync(PLUGINS_FILE, 'utf8'));
     const plugins = pluginData.plugins || [];
+    const targetCount = MAX_EXTENSIONS ? Math.min(MAX_EXTENSIONS, plugins.length) : plugins.length;
     
     console.log(`📦 Loaded ${plugins.length} Chrome extensions\n`);
     console.log('📥 Fetching user counts from Chrome Web Store...');
     console.log('   (This may take a few minutes due to rate limiting)\n');
     
+    if (MAX_EXTENSIONS !== null) {
+      console.log(`?? Limiting fetch to first ${targetCount} extensions\n`);
+    }
     const updatedPlugins = [];
     let successCount = 0;
     
     for (let i = 0; i < plugins.length; i++) {
       const plugin = plugins[i];
-      console.log(`   [${i + 1}/${plugins.length}] ${plugin.name}...`);
+      if (MAX_EXTENSIONS !== null && i >= targetCount) {
+        updatedPlugins.push(plugin);
+        continue;
+      }
+      console.log(`   [${i + 1}/${targetCount}] ${plugin.name}...`);
       
       const users = await fetchExtensionUsers(plugin.extensionId);
       
@@ -128,7 +150,7 @@ async function main() {
       await new Promise(resolve => setTimeout(resolve, 2000)); // 2 second delay
     }
     
-    console.log(`\n✓ Successfully fetched user counts for ${successCount}/${plugins.length} extensions\n`);
+    console.log(`\n✓ Successfully fetched user counts for ${successCount}/${targetCount} extensions\n`);
     
     // Save updated data
     fs.writeFileSync(PLUGINS_FILE, JSON.stringify({ plugins: updatedPlugins }, null, 2));

@@ -1,0 +1,75 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "com.github.MehVahdJukaar/Moonlight",
+  "documentNamespace": "https://spdx.org/spdxdocs/protobom/56aa3f8f-e696-4320-9dce-ebe10d520533",
+  "creationInfo": {
+    "creators": [
+      "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+      "Tool: GitHub.com-Dependency-Graph"
+    ],
+    "created": "2025-12-08T11:58:50Z"
+  },
+  "packages": [
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "versionInfo": "4.*.*",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+        }
+      ]
+    },
+    {
+      "name": "Renato66/auto-label",
+      "SPDXID": "SPDXRef-githubactions-Renato66-auto-label-3.1.0-75c946",
+      "versionInfo": "3.1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:githubactions/Renato66/auto-label@3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "com.github.MehVahdJukaar/Moonlight",
+      "SPDXID": "SPDXRef-github-MehVahdJukaar-Moonlight-1.21-e2333b",
+      "versionInfo": "1.21",
+      "downloadLocation": "git+https://github.com/MehVahdJukaar/Moonlight",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/MehVahdJukaar/Moonlight@1.21"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-github-MehVahdJukaar-Moonlight-1.21-e2333b",
+      "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-github-MehVahdJukaar-Moonlight-1.21-e2333b",
+      "relatedSpdxElement": "SPDXRef-githubactions-Renato66-auto-label-3.1.0-75c946",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-github-MehVahdJukaar-Moonlight-1.21-e2333b",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}
